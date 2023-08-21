@@ -1,0 +1,12 @@
+.hr-issues-intro .pdf {
+  padding-right: 40px;
+  margin-right: 3px;
+}
+.issue-intro-desc .pdf span{
+  padding-right: 8px;
+}
+
+@media only screen and (max-width: 767.9px) {
+
+
+}

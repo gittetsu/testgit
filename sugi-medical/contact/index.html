@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="スギメディカル専用のお問い合わせフォームです。サービスに関するご質問やご不明点、ご相談などお気軽にお問い合わせください。">
+	<title>スギメディカル｜お問い合わせ</title>
+	<link rel="stylesheet" href="/css/reset.css">
+	<link rel="stylesheet" href="/css/common.css">
+	<link rel="stylesheet" href="/css/sugi-medical/sugi-medical-common.css">
+	<link rel="stylesheet" href="/css/sugi-medical/contact.css">
+</head>
+
+<body>
+	<!--#include virtual="/include/medical-header.html" -->
+	<section class="sec-medical-bnr">
+		<div class="inner">
+			<h2 class="main-header-ttl">お問い合わせ<span>Contact</span></h2>
+			<ul class="medical-breadcrumb">
+				<li><a href="https://www.sugi-hd.co.jp/">TOP</a></li>
+				<li>お問い合わせ</li>
+			</ul>
+		</div>
+	</section><!--/.sec-medical-bnr-->
+	<div class="inner">
+		<section class="sec-medi-contact">
+			<h3 class="common-medical-ttl common-ttl mb-sp-20">サービスに関するご質問やご不明点、ご相談などお気軽にお問い合わせください。</h3>
+			<form action="/" class="contact-form">
+				<div class="input-container">
+					<label for="name" class="form-label"><span class="required">必須</span>お名前</label>
+					<div class="input-box">
+						<div class="d-flex">
+							<input type="text" id="surname" name="surname" value="" placeholder="姓" class="name-input error">
+							<input type="text" id="name" name="name" value="" placeholder="名" class="name-input">
+						</div>
+						<p class="err-msg d-flex"><span class="exclamation">！</span><span>必須につき入力をお願いします</span></p>
+					</div>
+				</div>
+				<div class="input-container">
+					<label for="furiName" class="form-label"><span class="any">任意</span>フリガナ</label>
+					<div class="input-box">
+						<div class="d-flex">
+							<input type="text" id="furiSurname" name="furiSurname" value="" placeholder="セイ" class="name-input">
+							<input type="text" id="furiName" name="furiName" value="" placeholder="メイ" class="name-input">
+						</div>
+					</div>
+				</div>
+				<div class="input-container">
+					<label for="phoneNumber" class="form-label"><span class="required">必須</span>電話番号</label>
+					<div class="input-box">
+						<div class="phone-number">
+							<input type="text" id="phoneNumber" name="phoneNumber" value="" placeholder="090" class="ph-input prefix">
+							<span class="dashed"></span>
+							<input type="text" name="phoneNoFirst" value="" placeholder="0000" class="ph-input">
+							<span class="dashed"></span>
+							<input type="text" name="phoneNoLast" value="" placeholder="0000" class="ph-input">
+						</div>
+					</div>
+				</div>
+				<div class="input-container">
+					<label for="mailAddress" class="form-label"><span class="required">必須</span>メールアドレス</label>
+					<div class="input-box">
+						<input type="email" id="mailAddress" name="mailAddress" value="" placeholder="info@example.com">
+					</div>
+				</div>
+				<div class="input-container">
+					<label for="companyName" class="form-label"><span class="required">必須</span>企業名</label>
+					<div class="input-box">
+						<input type="text" id="companyName" name="companyName" value="" placeholder="">
+					</div>
+				</div>
+				<div class="input-container address-gp">
+					<label for="postNumber" class="form-label"><span class="any">任意</span>住所</label>
+					<div class="input-box">
+						<div class="detail-cnt mb-20">
+							<label for="postNumber">郵便番号</label>
+							<div class="phone-number">
+								<div class="d-flex">
+									<input type="text" id="postNumber" name="postNumber" value="" placeholder="000"
+										class="ph-input prefix">
+									<span class="dashed"></span>
+									<input type="text" name="postNoLast" value="" placeholder="0000" class="ph-input">
+								</div>
+							</div>
+						</div>
+						<div class="detail-cnt mb-20">
+							<label for="distriction">都道府県</label>
+							<div class="custom-select">
+								<select id="distriction" name="distriction">
+									<option value="選択してください">選択してください</option>
+								</select>
+								<span class="select-arrow"></span>
+							</div>
+						</div>
+						<div class="city-address mb-20">
+							<label for="city">市区町村・番地</label>
+							<input type="text" id="city" name="city" value="" placeholder="">
+						</div>
+						<div class="city-address">
+							<label for="apartment">マンション・ビル名</label>
+							<input type="text" id="apartment" name="apartment" value="" placeholder="">
+						</div>
+					</div>
+				</div>
+				<div class="input-container desired-area">
+					<label for="areaCheck1" class="form-label"><span class="any">任意</span>支援希望エリア</label>
+					<div class="input-box">
+						<div class="checkbox-gp-list">
+							<div class="check-container">
+								<input type="checkbox" id="areaCheck1" name="areaCheck1" value="">
+								<label for="areaCheck1" class="checkbox-label">関東</label>
+							</div>
+							<div class="check-container">
+								<input type="checkbox" id="areaCheck2" name="areaCheck2" value="">
+								<label for="areaCheck2" class="checkbox-label">中部</label>
+							</div>
+							<div class="check-container">
+								<input type="checkbox" id="areaCheck3" name="areaCheck3" value="">
+								<label for="areaCheck3" class="checkbox-label">関西</label>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="input-container service-label">
+					<div class="form-label mb-sp-30">
+						<label for="serviceCheck1" class="choice-label">
+							<span class="any">任意</span>
+							<span>希望サービスを<br class="pc"><br class="pc">選択してください</span>
+						</label>
+						<p class="multi-select">※複数選択可</p>
+					</div>
+					<div class="input-box">
+						<div class="desired-service mb-30">
+							<p class="gp-ttl">医療機関・介護事業所向け</p>
+							<div class="checkbox-gp-list">
+								<div class="check-container">
+									<input type="checkbox" id="serviceCheck1" name="serviceCheck1" value="">
+									<label for="serviceCheck1" class="checkbox-label">集患対策支援（関東・中部）</label>
+								</div>
+								<div class="check-container">
+									<input type="checkbox" id="serviceCheck2" name="serviceCheck2" value="">
+									<label for="serviceCheck2" class="checkbox-label">地域連携支援</label>
+								</div>
+								<div class="check-container">
+									<input type="checkbox" id="serviceCheck3" name="serviceCheck3" value="">
+									<label for="serviceCheck3" class="checkbox-label">情報提供・各種リサーチ</label>
+								</div>
+								<div class="check-container">
+									<input type="checkbox" id="serviceCheck4" name="serviceCheck4" value="">
+									<label for="serviceCheck4" class="checkbox-label">その他</label>
+								</div>
+							</div>
+							<div class="othercase-input">
+								<label for="otherService">その他の場合</label>
+								<textarea id="otherService" name="otherService" rows="2" class="input-box"></textarea>
+							</div>
+						</div>
+						<div class="desired-service mb-30">
+							<p class="gp-ttl">薬局向け</p>
+							<div class="checkbox-gp-list">
+								<div class="check-container">
+									<input type="checkbox" id="pharmaCheck1" name="pharmaCheck1" value="">
+									<label for="pharmaCheck1" class="checkbox-label">売上創出支援</label>
+								</div>
+								<div class="check-container">
+									<input type="checkbox" id="pharmaCheck2" name="pharmaCheck2" value="">
+									<label for="pharmaCheck2" class="checkbox-label">コスト低減支援</label>
+								</div>
+								<div class="check-container">
+									<input type="checkbox" id="pharmaCheck3" name="pharmaCheck3" value="">
+									<label for="pharmaCheck3" class="checkbox-label">情報提供・各種リサーチ</label>
+								</div>
+								<div class="check-container">
+									<input type="checkbox" id="pharmaCheck4" name="pharmaCheck4" value="">
+									<label for="pharmaCheck4" class="checkbox-label">その他</label>
+								</div>
+							</div>
+							<div class="othercase-input">
+								<label for="otherPharma">その他の場合</label>
+								<textarea id="otherPharma" name="otherPharma" rows="2"></textarea>
+							</div>
+						</div>
+						<div class="desired-service">
+							<p class="gp-ttl">保険者向け</p>
+							<div class="checkbox-gp-list">
+								<div class="check-container">
+									<input type="checkbox" id="insurerCheck1" name="insurerCheck1" value="">
+									<label for="insurerCheck1" class="checkbox-label">わかりやすい情報提供（健保）</label>
+								</div>
+								<div class="check-container">
+									<input type="checkbox" id="insurerCheck2" name="insurerCheck2" value="">
+									<label for="insurerCheck2" class="checkbox-label">特定保健指導</label>
+								</div>
+								<div class="check-container">
+									<input type="checkbox" id="insurerCheck3" name="insurerCheck3" value="">
+									<label for="insurerCheck3" class="checkbox-label">重症化予防</label>
+								</div>
+								<div class="check-container">
+									<input type="checkbox" id="insurerCheck4" name="insurerCheck4" value="">
+									<label for="insurerCheck4" class="checkbox-label">その他</label>
+								</div>
+							</div>
+							<div class="othercase-input">
+								<label for="otherInsurer">その他の場合</label>
+								<textarea id="otherInsurer" name="otherInsurer" rows="2"></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="input-container">
+					<label for="contactDescription" class="form-label"><span class="any">任意</span>お問い合わせ内容</label>
+					<textarea id="contactDescription" name="contactDescription" rows="3" class="input-box"></textarea>
+				</div>
+				<div class="input-container service-label">
+					<div class="form-label">
+						<label for="phoneCheck" class="choice-label">
+							<span class="required">必須</span>
+							<span>お問い合わせに<br class="pc"><br class="pc">対する回答方法</span>
+						</label>
+					</div>
+					<div class="checkbox-gp-list">
+						<div class="check-container">
+							<input type="checkbox" id="phoneCheck" name="phoneCheck" value="">
+							<label for="phoneCheck" class="checkbox-label">電話</label>
+						</div>
+						<div class="check-container">
+							<input type="checkbox" id="mailCheck" name="mailCheck" value="">
+							<label for="mailCheck" class="checkbox-label">メール</label>
+						</div>
+					</div>
+				</div>
+				<div class="input-container aggreement-gp">
+					<label for="agreement" class="req-label mb-20"><span class="required">必須</span>個人情報の取扱いへの同意</label>
+					<div class="description">
+						<p>※個人情報の取り扱いについて</p>
+						<ul class="agreement mb-30">
+							<li>お客様の個人情報は厳重に取り扱い、お問い合わせ対応および当社からの情報提供を目的として利用させていただきます。</li>
+							<li>
+								個人情報の取り扱いにおきましては、当社プライバシーポリシーをご確認ください。
+								<br>
+								<a href="https://www.sugi-hd.co.jp/privacypolicy/index.html" target="_blank"
+									class="policy-link">https://www.sugi-hd.co.jp/<br class="sp">privacypolicy/index.html</a>
+							</li>
+						</ul>
+						<div class="agreement-check mb-40 mb-sp-30">
+							<input type="checkbox" id="agreement" name="agreement" value="">
+							<label for="agreement" class="checkbox-label">同意する</label>
+						</div>
+					</div>
+				</div>
+			</form>
+			<div class="confirm-pg">
+				<a href="#" class="common-btn"><span class="btn-text">確認画面へ</span></a>
+			</div>
+		</section><!-- /.sec-medi-contact -->
+	</div><!-- /.inner -->
+	<section class="sec-medical-contact">
+		<div class="contact-ttl-blk pc">
+			<h3>サービスに関するご質問やご不明点、ご相談などお気軽にお問い合わせください。</h3>
+		</div>
+		<div class="bg-gray">
+			<div class="inner">
+				<div class="ft-contact">
+					<div class="contact-border">
+						<div class="mail-icon">
+							<img src="/img/common/sugi-medical/ico_mail.png" alt="mail">
+						</div>
+						<p class="small-text">サービスに関するご質問やご不明点などお気軽にご相談ください</p>
+					</div>
+					<a href="#" class="email-us-btn">メールでお問い合わせ</a>
+				</div>
+			</div>
+		</div>
+	</section><!--/.sec-medical-contact-->
+	<!--#include virtual="/include/medical-footer.html" -->
+	<script src="/js/common.js"></script>
+</body>
+
+</html>

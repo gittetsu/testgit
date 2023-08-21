@@ -1,0 +1,64 @@
+/* pc */
+
+/* ir-library */
+
+.ir-library .link-gp li {
+  width: 30.91%;
+}
+
+.ir-library .link-gp li a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.ir-library .link-gp li a span:first-child {
+  line-height: 1.8;
+}
+
+.ir-library .link-gp li a:hover {
+  background-color: #048851;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.ir-library .link-arrow {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+
+.ir-library .link-arrow::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  background: #048851;
+  content: '';
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border-radius: 50%;
+}
+
+.ir-library .link-gp li a:hover .link-arrow {
+  background-color: #fff;
+}
+
+.ir-library .link-gp li a:hover .link-arrow::before {
+  width: 8px;
+  height: 8px;
+  background: url(/img/common/ico_arrow_green.svg) no-repeat center/contain;
+}
+
+@media only screen and (max-width: 767.9px) {
+  .ir-library .link-gp li {
+    width: 100%;
+  }
+}

@@ -1,0 +1,172 @@
+.poster-img-blk,
+.sec-recycle-challenge .recycle-blk {
+  justify-content: flex-start;
+}
+
+.bottle-poster-blk .poster-img-blk .poster-left-blk {
+  width: 51.4%;
+  margin-right: 40px;
+}
+
+.bottle-poster-blk .poster-img-blk .poster-right-blk {
+  width: 18%;
+}
+
+.bottle-poster-blk .bottle-sqaush-blk {
+  padding: 30px;
+  border-radius: 5px;
+}
+
+.bottle-poster-blk .bottle-sqaush-blk .bottle-squash-txt {
+  width: 58%;
+}
+
+.bottle-poster-blk .bottle-sqaush-blk .bottle-squash-img {
+  width: 36.2%;
+}
+
+.recycle-area .side-w454 {
+  width: 61.4%;
+}
+
+.recycle-area .accor-side-w246 {
+  width: 33.3%;
+}
+
+.recycle-area .side-w514 {
+  width: 64.3%;
+}
+
+.sec-recycle-challenge .challenge-img01 {
+  width: 100%;
+  margin-right: 40px;
+  max-width: 122px;
+}
+
+.sec-recycle-challenge .challenge-img02 {
+  width: 100%;
+  max-width: 350px;
+}
+
+.recycle-plastic-table {
+  width: 100%;
+}
+
+.recycle-plastic-table .percent-img {
+  display: block;
+  width: 47%;
+  margin: 0 0 0 43%;
+}
+
+
+.water-usage-box {
+  width: 100%;
+  padding: 15px 20px;
+  background-color: #e5f3ed;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.water-usage-box sub,
+.water-usage-box sup {
+  position: relative;
+  line-height: 0;
+  font-size: 75%;
+  vertical-align: baseline;
+}
+
+.water-usage-box sup {
+  top: -0.5em;
+}
+
+.water-usage-box dd {
+  color: #048851;
+  text-align: center;
+}
+
+.water-usage-box dd span {
+  font-size: 1.875rem;
+  font-weight: 700;
+}
+
+
+@media only screen and (max-width: 767.9px) {
+
+  .bottle-poster-blk .poster-img-blk .poster-left-blk {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .bottle-poster-blk .poster-img-blk .poster-right-blk {
+    width: 100%;
+    max-width: 50%;
+  }
+
+  .bottle-poster-blk .bottle-sqaush-blk {
+    padding: 20px;
+  }
+
+  .bottle-poster-blk .bottle-sqaush-blk .bottle-squash-txt {
+    width: 100%;
+  }
+
+  .bottle-poster-blk .bottle-sqaush-blk .bottle-squash-img {
+    width: 100%;
+  }
+
+  .recycle-area .side-w454 {
+    width: 100%;
+  }
+
+  .recycle-area .accor-side-w246 {
+    width: 100%;
+  }
+
+  .recycle-area .side-w514 {
+    width: 100%;
+  }
+
+
+  .sec-recycle-challenge .challenge-img01 {
+    width: 100%;
+    margin-right: 0;
+    max-width: 50%;
+  }
+
+  .sec-recycle-challenge .challenge-img02 {
+    width: 100%;
+    max-width: 100%;
+  }
+
+
+  .recycle-plastic-table {
+    max-width: 100%;
+  }
+
+  .recycle-plastic-table .percent-img {
+    width: 346px;
+    margin-left: 344px;
+    padding-bottom: 10px;
+  }
+
+  .reducing-plastic .side-w246 {
+    width: 100%;
+  }
+
+  .recycle-plastic-table table {
+    margin-bottom: 0;
+  }
+
+  .water-usage-box {
+    padding: 15px 20px;
+  }
+
+  .water-usage-box dd span {
+    font-size: 1.875rem;
+  }
+
+  .sec-reducing-plastic .side-w246 {
+    width: 100%;
+    margin: 0 auto;
+  }
+}

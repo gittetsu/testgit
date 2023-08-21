@@ -1,0 +1,21 @@
+/* sec-strategy */
+.sec-strategy .person-name {
+	font-size: 1.375rem;
+}
+
+.sec-strategy .align-center {
+	align-items: center;
+}
+
+/* Ipad */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+}
+
+/* SP */
+@media only screen and (max-width: 767.9px) {
+	/* sec-strategy */
+	.sec-strategy .person-name {
+		font-size: 1.125rem;
+	}
+}

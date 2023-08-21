@@ -1,0 +1,21 @@
+.w-70 {
+	width: 70%;
+}
+
+.right {
+	text-align: right;
+}
+
+.green-circle {
+	color: #048851;
+	text-align: center;
+}
+
+/* sec-skill-matrix */
+.sec-skill-matrix .table .table-ttl th {
+	padding: 11.6px 14px;
+}
+
+.sec-skill-matrix .w-18 {
+	width: 18%;
+}

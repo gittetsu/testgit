@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="スギナーシングケアのサービス内容、採用情報に関するご質問は専用のお問い合わせフォームをご利用ください。">
+	<title>ナーシングケア｜お問い合わせ</title>
+	<link rel="stylesheet" href="/css/reset.css">
+	<link rel="stylesheet" href="/css/common.css">
+	<link rel="stylesheet" href="/css/sugi-nursingcare/sugi-nursingcare-common.css">
+	<link rel="stylesheet" href="/css/sugi-nursingcare/contact.css">
+</head>
+
+<body>
+	<div class="nursing-care-wrapper">
+		<!--#include virtual="/include/nursing-care-header.html" -->
+		<div class="inner">
+			<section class="sec-nurcare-contact">
+				<div class="common-nursing-ttl mb-sp-40">
+					<span>お問い合わせ</span>
+					<h2>CONTACT</h2>
+				</div>
+				<div class="mb-60">
+					<img src="/img/sugi-nursingcare/img_nurcare_contact.png" alt="お問い合わせ" class="pc">
+					<img src="/img/sugi-nursingcare/img_nurcare_contact_sp.png" alt="お問い合わせ" class="sp">
+				</div>
+				<h3 class="common-nursing-subttl">お問い合わせに関しては下記フォームをご利用ください。</h3>
+				<div class="description">
+					<p class="cnt-text mb-20">内容によりお返事を差し上げられない場合、または、お返事にお時間をいただく場合があります。</p>
+					<p class="notice mb-60 mb-sp-30">
+						※土・日・祝日にいただいたお問い合わせは翌営業日以降の受付となります。
+						<br>
+						※17時以降にいただいたお問い合わせは翌営業日以降の受付となります。
+					</p>
+				</div>
+				<form action="/" class="contact-form mb-40">
+					<div class="input-container">
+						<label for="name" class="form-label"><span class="required">必須</span>お名前</label>
+						<div class="input-box">
+							<div class="d-flex">
+								<input type="text" id="surname" name="surname" value="" placeholder="姓" class="name-input error">
+								<input type="text" id="name" name="name" value="" placeholder="名" class="name-input">
+							</div>
+							<p class="err-msg d-flex"><span class="exclamation">！</span><span>必須につき入力をお願いします</span></p>
+						</div>
+					</div>
+					<div class="input-container">
+						<label for="furiName" class="form-label"><span class="required">必須</span>フリガナ</label>
+						<div class="input-box">
+							<div class="d-flex">
+								<input type="text" id="furiSurname" name="furiSurname" value="" placeholder="セイ" class="name-input">
+								<input type="text" id="furiName" name="furiName" value="" placeholder="メイ" class="name-input">
+							</div>
+						</div>
+					</div>
+					<div class="input-container">
+						<label for="companyName" class="form-label"><span class="any">任意</span>会社名</label>
+						<div class="input-box">
+							<input type="text" id="companyName" name="companyName" value="" placeholder="">
+						</div>
+					</div>
+					<div class="input-container">
+						<label for="phoneNumber" class="form-label"><span class="any">任意</span>電話番号</label>
+						<div class="input-box">
+							<div class="phone-number">
+								<input type="text" id="phoneNumber" name="phoneNumber" value="" placeholder="090"
+									class="ph-input prefix">
+								<span class="dashed"></span>
+								<input type="text" name="phoneNoFirst" value="" placeholder="0000" class="ph-input">
+								<span class="dashed"></span>
+								<input type="text" name="phoneNoLast" value="" placeholder="0000" class="ph-input">
+							</div>
+						</div>
+					</div>
+					<div class="input-container">
+						<label for="mailAddress" class="form-label"><span class="required">必須</span>メールアドレス</label>
+						<div class="input-box">
+							<input type="email" id="mailAddress" name="mailAddress" value="" placeholder="info@example.com">
+						</div>
+					</div>
+					<div class="input-container address-gp">
+						<label for="contactType" class="form-label"><span class="required">必須</span>お問い合わせの種類</label>
+						<div class="input-box">
+							<div class="custom-select">
+								<select id="contactType" name="contactType">
+									<option value="選択してください">選択してください</option>
+								</select>
+								<span class="select-arrow"></span>
+							</div>
+						</div>
+					</div>
+					<div class="input-container">
+						<label for="description" class="form-label"><span class="required">必須</span>お問い合わせ内容</label>
+						<textarea id="description" name="description" rows="3" class="input-box"></textarea>
+					</div>
+					<div class="input-container aggreement-gp">
+						<label for="agreement" class="req-label mb-20"><span class="required">必須</span>個人情報の取扱いへの同意</label>
+						<div class="description">
+							<p>※個人情報の取り扱いについて</p>
+							<ul class="agreement mb-30">
+								<li class="mb-sp-20">お客様の個人情報は厳重に取り扱い、お問い合わせ対応および当社からの情報提供を目的として利用させていただきます。</li>
+								<li>
+									個人情報の取り扱いにおきましては、当社プライバシーポリシーをご確認ください。
+									<br>
+									<a href="https://www.sugi-hd.co.jp/privacypolicy/index.html" target="_blank"
+										class="policy-link">https://www.sugi-hd.co.jp/<br class="sp">privacypolicy/index.html</a>
+								</li>
+							</ul>
+							<div class="agreement-check mb-40 mb-sp-30">
+								<input type="checkbox" id="agreement" name="agreement" value="">
+								<label for="agreement" class="checkbox-label">同意する</label>
+							</div>
+						</div>
+					</div>
+				</form>
+				<div class="confirm-pg">
+					<a href="#" class="common-nursing-button">確認画面へ<span class="arrow"></span></a>
+				</div>
+			</section><!-- /.sec-nurcare-contact -->
+			<section class="sec-nurcare-consult">
+				<div class="inner">
+					<h3 class="common-nursing-subttl">まずは、スギナーシングケアにご相談ください。</h3>
+				</div>
+			</section><!-- /.sec-nurcare-consult -->
+		</div><!-- /.inner -->
+	</div>
+	<div class="sugi-nursing-contact">
+		<div class="inner">
+			<div class="ft-contact-bnr">
+				<div class="ft-bnr-phone">
+					<div class="contact-border">
+						<div class="phone-icon">
+							<img src="/img/common/sugi-nursing/ico_phone.png" alt="phone">
+						</div>
+						<p class="small-text">お急ぎの方はお電話からご相談ください</p>
+					</div>
+					<p class="phone-num-txt">0120-921-771</p>
+					<span class="reception-hour-txt">受付時間：10:00~19:00</span>
+				</div>
+				<div class="ft-bnr-mail">
+					<div class="contact-border">
+						<div class="mail-icon">
+							<img src="/img/common/sugi-nursing/ico_mail.png" alt="mail">
+						</div>
+						<p class="small-text">サービスに関するご質問やご不明点などお気軽にご相談ください</p>
+					</div>
+					<a href="#" class="common-nursing-button">お問い合わせ<span class="arrow"></span></a>
+				</div>
+			</div>
+			<div class="ft-consultation-bnr">
+				<div class="consultation-text">
+					<p class="consultation-main-txt">近くのサービス事業所で直接相談する</p>
+					<span class="small-text">お近くのサービス事業所へ直接ご相談される場合は、 こちらからお調べください。</span>
+				</div>
+				<div class="consultation-list">
+					<ul>
+						<li><a href="#">千葉県</a></li>
+						<li><a href="#">愛知県</a></li>
+						<li><a href="#">神奈川県</a></li>
+						<li><a href="#">大阪府</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--#include virtual="/include/nursing-care-footer.html" -->
+	<script src="/js/common.js"></script>
+</body>
+
+</html>

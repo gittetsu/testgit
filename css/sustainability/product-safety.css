@@ -1,0 +1,19 @@
+.sec-product-safety .product-safety-box {
+  width: 100%;
+  padding: 15px 20px;
+  background-color: #e5f3ed;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.sec-product-safety .product-safety-box dd {
+  color: #048851;
+  text-align: center;
+}
+
+.sec-product-safety .product-safety-box dd span {
+  font-size: 1.875rem;
+  font-weight: 700;
+}
+
+@media only screen and (max-width: 767.9px) {}

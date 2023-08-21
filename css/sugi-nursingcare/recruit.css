@@ -1,0 +1,253 @@
+/* pc */
+
+.nursing-care-wrapper {
+  font-weight: 400;
+}
+
+.nursing-care-wrapper::after {
+  top: -5%;
+  left: 0;
+  width: 100%;
+  background-size: auto;
+}
+
+/* sec-nurcare-gp */
+
+.sec-nurcare-gp {
+  margin-bottom: 120px;
+}
+
+.sec-nurcare-gp .common-nursing-ttl span {
+  font-weight: 500;
+}
+
+.sec-nurcare-gp .common-nursing-ttl h1 {
+  margin: 24px 0 63px 0;
+}
+
+.sec-nurcare-gp .common-nursing-subttl {
+  margin-bottom: 56px;
+}
+
+.sec-nurcare-gp h3.common-nursing-subttl {
+  margin: 63px 0 56px;
+}
+
+.sec-nurcare-gp .nursing-info .label {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.sec-nurcare-gp .description {
+  font-size: 1rem;
+  letter-spacing: 0.64px;
+}
+
+.sec-nurcare-gp .newhome-medical .card-blk {
+  padding: 34px;
+  border: 4px solid #EDEADF;
+  background-color: #fff;
+  border-radius: 6px;
+}
+
+.sec-nurcare-gp .newhome-medical .card-blk .card-ttl {
+  line-height: 1.5;
+  margin-bottom: 24px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.sec-nurcare-gp .newhome-medical .card-blk .card-cnt-list {
+  padding-top: 30px;
+  border-top: 1px solid #EDEADF;
+}
+
+.sec-nurcare-gp .newhome-medical .card-blk .card-cnt-list li {
+  position: relative;
+  margin-bottom: 16px;
+  padding-left: 24px;
+  letter-spacing: 0;
+}
+
+.sec-nurcare-gp .newhome-medical .card-blk .card-cnt-list li:last-child {
+  margin-bottom: 0;
+}
+
+.sec-nurcare-gp .newhome-medical .card-blk .card-cnt-list li::before {
+  position: absolute;
+  top: 14px;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background-color: #E6172C;
+  content: '';
+  border-radius: 50%;
+}
+
+/* sec-nurcare-recruit */
+
+.sec-nurcare-recruit {
+  position: relative;
+  padding: 120px 0;
+  background-color: #EF5B6D;
+}
+
+.sec-nurcare-recruit .colorful-img {
+  position: absolute;
+  top: -85px;
+  right: 13%;
+  width: 100%;
+  max-width: 170px;
+}
+
+.sec-nurcare-recruit h3.common-nursing-subttl {
+  margin-bottom: 56px;
+  color: #fff;
+}
+
+.sec-nurcare-recruit .common-nursing-subttl::after {
+  background: #fff;
+}
+
+.sec-nurcare-recruit .recruitment {
+  display: flex;
+  width: 100%;
+  /* background-color: #fff; */
+  /* border-radius: 8px; */
+}
+
+.sec-nurcare-recruit .recruitment .overview {
+  width: 52%;
+  padding: 53px 57px 53px 40px;
+  background-color: #fff;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+
+.sec-nurcare-recruit .recruitment .description {
+  line-height: 1.657;
+  margin-bottom: 37px;
+}
+
+.sec-nurcare-recruit .recruitment .img-blk {
+  width: 48.2%;
+}
+
+.sec-nurcare-recruit .recruitment .img-blk img {
+  height: 100%;
+}
+
+/* sec-nurcare-consult */
+
+.sec-nurcare-consult {
+  padding-bottom: 56px;
+}
+
+.sec-nurcare-consult h3.common-nursing-subttl {
+  margin: 120px 0 0;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .nursing-care-wrapper::after {
+    top: -2%;
+    left: 0;
+    width: 100%;
+    background-size: auto;
+  }
+}
+
+@media only screen and (max-width: 767.9px) {
+  .nursing-care-wrapper::after {
+    top: -2%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: auto;
+  }
+
+  .sec-nurcare-gp {
+    margin-bottom: 0;
+  }
+
+  .sec-nurcare-gp h3.common-nursing-subttl {
+    margin-top: 0;
+  }
+
+  .sec-nurcare-gp .nursing-info .label {
+    font-size: 1.125rem;
+  }
+
+  .sec-nurcare-gp .newhome-medical .card-blk {
+    padding: 16px;
+  }
+
+  .sec-nurcare-gp .newhome-medical .card-blk .card-ttl {
+    font-size: 1.125rem;
+  }
+
+  .sec-nurcare-gp .newhome-medical .card-blk .card-cnt-list {
+    padding-top: 20px;
+    font-size: 1rem;
+  }
+
+  .sec-nurcare-recruit {
+    padding: 60px 0;
+  }
+
+  .sec-nurcare-recruit .colorful-img {
+    top: -34.5px;
+    right: 5%;
+    max-width: 85px;
+  }
+
+  .sec-nurcare-recruit h3.common-nursing-subttl {
+    margin-bottom: 45px;
+  }
+
+  .sec-nurcare-recruit .recruitment {
+    flex-direction: column;
+    padding: 0;
+    border-radius: 3%;
+  }
+
+  .sec-nurcare-recruit .recruitment .overview {
+    width: 100%;
+    padding: 30px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 8px;
+  }
+
+  .sec-nurcare-recruit .recruitment .recruit-btn {
+    text-align: center;
+  }
+
+  .sec-nurcare-recruit .recruitment .description {
+    font-size: 1rem;
+    margin-bottom: 30px;
+  }
+
+  .sec-nurcare-recruit .recruitment .img-blk {
+    width: 100%;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+
+  .sec-nurcare-recruit .recruitment .img-blk img {
+    height: inherit;
+  }
+
+  .sec-nurcare-recruit .recruitment .recruit-btn .nursing-external-link {
+    padding: 20px 51px 20px 32px;
+    letter-spacing: 0;
+  }
+
+  .sec-nurcare-consult {
+    padding-bottom: 30px;
+  }
+
+  .sec-nurcare-consult h3.common-nursing-subttl {
+    margin: 80px 0 0;
+  }
+}

@@ -1,0 +1,133 @@
+/* pc */
+
+/* sec-ir-news */
+
+.btn-center {
+  text-align: center;
+}
+
+.sec-ir-news .pdf {
+  padding-right: 47px;
+}
+
+.sec-ir-news .pdf::after {
+  margin-left: 10px;
+}
+
+/* sec-growthstrategy */
+
+.sec-growthstrategy .link-gp li {
+  width: 30.91%;
+}
+
+.sec-growthstrategy .link-gp li a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13.2px 20px;
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.sec-growthstrategy .link-gp li a span:first-child {
+  line-height: 1.8;
+}
+
+.sec-growthstrategy .link-gp li a:hover {
+  background-color: #048851;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.sec-growthstrategy .link-gp .link-arrow {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+
+.sec-growthstrategy .link-gp .link-arrow::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  background: #048851;
+  content: '';
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border-radius: 50%;
+}
+
+.sec-growthstrategy .link-gp li a:hover .link-arrow {
+  background-color: #fff;
+}
+
+.sec-growthstrategy .link-gp li a:hover .link-arrow::before {
+  width: 8px;
+  height: 8px;
+  background: url(/img/common/ico_arrow_green.svg) no-repeat center/contain;
+}
+
+/* sec-performance */
+
+.sec-performance.bg-gray {
+  padding: 60px 0;
+}
+
+.sec-performance .d-flex.highlights {
+  justify-content: flex-start;
+}
+
+.sec-performance .highlights li {
+  width: 30.91%;
+  margin-right: 3.63%;
+  text-align: center;
+}
+
+.sec-performance .highlights li:nth-child(3n+0) {
+  margin-right: 0;
+}
+
+.sec-performance .highlights li .tag {
+  display: inline-block;
+  padding: 2.8px 12px;
+  border: 1px solid #000;
+  border-radius: 4px;
+}
+
+.sec-performance .highlights li .text-04 span {
+  font-size: 3.438rem;
+}
+
+/* I-pad */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .sec-performance .d-flex.highlights {
+    justify-content: space-between;
+  }
+
+  .sec-performance .highlights li {
+    width: 49.37%;
+    margin-right: 0;
+  }
+}
+
+/* sp */
+
+@media only screen and (max-width: 767.9px) {
+  .sec-growthstrategy .link-gp li {
+    width: 100%;
+  }
+
+  .sec-growthstrategy .link-gp li:not(:last-child) a {
+    border-bottom: 1px solid transparent;
+  }
+
+  .sec-performance .highlights li {
+    width: 100%;
+    margin-right: 0;
+  }
+}

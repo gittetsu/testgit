@@ -1,0 +1,79 @@
+/* sec-greeting */
+.sec-greeting {
+	margin-bottom: 100px;
+}
+
+.sec-greeting .person-name {
+	font-size: 1.25rem;
+	font-weight: 700;
+	padding-left: 16px;
+}
+
+.sec-greeting .greeting-txt p {
+	padding-bottom: 35px;
+}
+
+.sec-greeting .greeting-txt p:last-child {
+	padding-bottom: 0;
+}
+
+/* sec-philosophy */
+.sec-philosophy {
+	margin-bottom: 100px;
+}
+
+/* sec-company-profile */
+.sec-company-profile {
+	margin-bottom: 100px;
+}
+
+.sec-company-profile .table tr td {
+	vertical-align: top;
+}
+
+.sec-company-profile .table tr td .url-link {
+	color: #048851;
+	text-decoration: underline;
+}
+
+.sec-company-profile .company-location iframe {
+	width: 100%;
+}
+
+.sec-company-profile .guide-text {
+	font-size: 0.875rem;
+	padding-top: 20px;
+}
+
+@media only screen and (max-width: 767.9px) {
+	/* sec-greeting */
+	.sec-greeting {
+		margin-bottom: 50px;
+	}
+
+	.sec-greeting .small-text {
+		font-size: 0.875rem;
+	}
+
+	.sec-greeting .greeting-txt p {
+		font-size: 1rem;
+	}
+
+	/* sec-philosophy */
+	.sec-philosophy {
+		margin-bottom: 50px;
+	}
+
+	.sec-philosophy p {
+		font-size: 1rem;
+	}
+
+	/* sec-company-profile */
+	.sec-company-profile {
+		margin-bottom: 80px;
+	}
+
+	.sec-company-profile .table tr td {
+		font-size: 1rem;
+	}
+}

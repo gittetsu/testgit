@@ -1,0 +1,44 @@
+.table .green-txt {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #048851;
+}
+
+.table .w-380 {
+  width: 380px;
+}
+
+.table .w-80 {
+  width: 80px;
+}
+
+.table .w-100 {
+  width: 100px;
+}
+
+.table .w-190 {
+  width: 190px;
+}
+
+.table .w-250 {
+  width: 250px;
+}
+
+.table .w-270 {
+  width: 270px;
+}
+
+.table .w-300 {
+  width: 300px;
+}
+
+.table .center {
+  text-align: center;
+}
+
+/*I-pad*/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+}
+
+@media only screen and (max-width: 767.9px) {
+}

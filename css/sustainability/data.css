@@ -1,0 +1,11 @@
+.stb-data .js-tab{
+  display: none;
+}
+
+.stb-data .tab-list-02 li a.active + .js-tab {
+  display: block;
+}
+
+.stb-data .sec-data .tab-list-02 li {
+  width: 33.33%;
+}

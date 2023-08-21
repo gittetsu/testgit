@@ -1,0 +1,55 @@
+/* pc */
+
+/* sec-renewable */
+
+.sec-renewable .result-box {
+  width: 380px;
+  padding: 10px 20px;
+  background-color: #e5f3ed;
+  border-radius: 5px;
+}
+
+.sec-renewable .result-box div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sec-renewable .result-box dd {
+  color: #048851;
+  text-align: center;
+}
+
+.sec-renewable .result-box dd span:first-child {
+  font-size: 1.875rem;
+  font-weight: 700;
+}
+
+.sec-renewable .result-box dd span.caption01 {
+  display: block;
+  margin-top: -8px;
+  color: #000;
+}
+
+.sec-renewable .side-w350 .small-text {
+  margin-top: 10px;
+}
+
+/* sec-promo */
+
+.sec-promo .table tr th {
+  width: 30%;
+  text-align: center;
+}
+
+.sec-promo .table tr td {
+  width: 70%;
+}
+
+/* sp */
+
+@media only screen and (max-width: 767.9px) {
+  .sec-renewable .result-box {
+    width: 100%;
+  }
+}

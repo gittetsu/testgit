@@ -1,0 +1,75 @@
+/* officer */
+.officer .side-w246 p {
+  text-align: center;
+}
+
+.officer .side-w524 li {
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 7.5px 0;
+  border-top: 1px solid #e6e6e6;
+}
+
+.officer .side-w524 li:last-child {
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.officer .side-w524 li p.date {
+  width: 23.4%;
+  line-height: 2;
+  color: #048851;
+  text-align: left;
+  letter-spacing: 1.1px;
+}
+
+.officer .side-w524 li p.txt {
+  width: 76.6%;
+  text-align: left;
+}
+
+.officer .list-gp .list-gp-detail {
+  margin-bottom: 60px;
+  padding-bottom: 0;
+  border: none;
+}
+
+@media only screen and (max-width: 767.9px) {
+  .officer .side-w524 li {
+    justify-content: flex-start;
+    padding: 9.5px 0;
+    flex-wrap: nowrap;
+  }
+
+  .officer .side-w524 li p.date {
+    width: 27.8%;
+    margin-right: 4.9%;
+    letter-spacing: 0px;
+    max-width: 80px;
+  }
+
+  .officer .side-w524 li p.txt {
+    width:71%;
+  }
+
+  .officer .list-gp .list-gp-detail {
+    flex-wrap: wrap;
+  }
+
+  .officer .list-gp .list-gp-detail .side-w246 {
+    width: 245px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .officer .list-gp .list-gp-detail .side-w524 {
+    width: 100%;
+  }
+
+  .officer .text-01 {
+    font-size: 1rem;
+  }
+
+  .officer .small-text {
+    font-size: 0.875rem;
+  }
+}

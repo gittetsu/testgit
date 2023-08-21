@@ -1,0 +1,44 @@
+/* news-article */
+.news-article .sec-atricle {
+  margin-bottom: 100px;
+}
+
+.news-article .news-date {
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+}
+
+.news-article .news-date p {
+  margin-right: 20px;
+}
+
+.news-article .news-date span {
+  color: #7FBE26;
+}
+
+.news-article .ref-link a {
+  color: #7FBE26;
+  padding-right: 22px;
+}
+
+.news-article .ref-link a::after {
+  width: 12px;
+  height: 12px;
+  background: url('/img/sugi-medical/ico_external.svg') no-repeat center/cover;
+}
+
+.news-article .btn {
+  text-align: center;
+}
+
+.news-article .contact-us {
+  background-color: #5D5555;
+  padding: 18px;
+}
+
+.news-article .contact-us p {
+  font-size: 1.375rem;
+  line-height: 1.4;
+  color: #fff;
+  text-align: center;
+}

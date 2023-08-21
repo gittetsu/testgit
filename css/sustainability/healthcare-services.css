@@ -1,0 +1,61 @@
+.healthcare-services .common-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
+  width: 100%;
+  padding: 21.5px 40px;
+  background-color: #e5f3ed;
+  border-radius: 8px;
+}
+
+.healthcare-services .common-box .line {
+  width: 100%;
+  margin: 21px 0;
+  border: 1px solid #048851;
+  opacity: 0.3;
+}
+
+.healthcare-services .common-box dt {
+  font-size: 1.125rem;
+}
+
+.healthcare-services .common-box dt,
+.healthcare-services .common-box dd {
+  width: 50%;
+  font-weight: 700;
+}
+
+.healthcare-services .common-box dd {
+  color: #048851;
+  text-align: right;
+}
+
+.healthcare-services .common-box dd span {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-right: 8px;
+  line-height: 1;
+}
+
+/* sec-renewal */
+.healthcare-services .sec-renewal .img-otc {
+  margin: 0 auto;
+  max-width: 565px;
+}
+
+@media only screen and (max-width: 767.9px) {
+  .healthcare-services .common-box {
+    align-items: center;
+    padding: 21px 20px;
+  }
+
+  .healthcare-services .common-box dt {
+    font-size: 1rem;
+  }
+
+  /* sec-renewal */
+  .healthcare-services .sec-renewal .img-otc {
+    max-width: 100%;
+  }
+}

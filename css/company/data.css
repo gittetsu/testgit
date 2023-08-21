@@ -1,0 +1,590 @@
+.cmm-partner-boxlist .pc-none {
+  display: none !important;
+}
+
+.bdr-right-pc {
+  border-right: 1px solid #e0e0e0;
+}
+
+.bdr-right-sp {
+  border-right: unset;
+}
+
+.bdr-bottom-pc {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.bdr-bottom-sp {
+  border-bottom: unset;
+}
+
+.cmm-capital-blk .cmm-capital-ttl-blk {
+  justify-content: flex-start;
+  align-items: center;
+  padding: 12px 10px 12px 30px;
+  background-color: #048851;
+  border-radius: 5px;
+}
+
+.cmm-capital-blk .capital-ttl-cnt {
+  margin-left: 30px;
+}
+
+.cmm-capital-taxo {
+  padding: 2px 8px;
+  border: 1px solid #048851;
+  background-color: #fff;
+  color: #048851;
+  border-radius: 4px;
+}
+
+.employee-info-blk .company-local-community {
+  width: 48%;
+  max-width: 344px;
+}
+
+.management-criteria-img {
+  width: 44%;
+  max-width: 350px;
+}
+
+.cmm-capital-blk .capital-ttl-cnt h3 {
+  color: #fff;
+  font-size: 1.375rem;
+}
+
+.employee-info-blk {
+  margin-top: 24px;
+}
+
+.employee-info-blk .company-emp-number {
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 6px;
+}
+
+.cmm-emp-total-number {
+  line-height: 1;
+  margin-left: 16px;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.partner-emp-list .cmm-partner-empttl {
+  position: relative;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-left: 22px;
+}
+
+.partner-emp-list .cmm-partner-empttl::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background-color: #048851;
+  content: '';
+  transform: translateY(-50%);
+  border-radius: 50%;
+}
+
+.partner-emp-list .cmm-partner-empttl h3 {
+  line-height: 1.7;
+  margin-right: 15px;
+  font-size: 1.375rem;
+  letter-spacing: 2.2px;
+}
+
+.cmm-partner-boxlist {
+  justify-content: flex-start;
+}
+
+.cmm-partner-boxlist .cmm-partner-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 33.3%;
+  padding: 23px 0;
+  border-top: 1px solid #e0e0e0;
+  border-left: 1px solid #e0e0e0;
+}
+
+.bdr-bottom {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.cmm-partner-box .partner-box-inner {
+  flex-direction: column;
+  align-items: center;
+}
+
+.cmm-partner-box .partner-box-inner span {
+  line-height: 1.5;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.company-emp-number .company-store-num {
+  margin: 0 9px 0 16px;
+}
+
+.company-emp-number .company-store-num .cmm-emp-total-number {
+  margin-left: 0;
+}
+
+.employee-info-blk .company-emp-amt .company-store-network01 {
+  position: relative;
+  z-index: -2;
+  margin-top: -41px;
+}
+
+.employee-info-blk .company-emp-amt {
+  width: 65.5%;
+  max-width: 524px;
+}
+
+.company-store-network02 {
+  width: 34%;
+  max-width: 270px;
+}
+
+.store-area-img01 {
+  width: 72%;
+  max-width: 570px;
+}
+
+.store-area-img02 {
+  width: 25%;
+  max-width: 200px;
+}
+
+.cmm-capital-blk:nth-child(3n) .cmm-partner-boxlist .cmm-partner-box {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.cmm-capital-blk:nth-child(3n) .partner-emp-list .profit-box-list .cmm-partner-box {
+  width: 50%;
+}
+
+.bdr-right {
+  border-right: 1px solid #e0e0e0;
+}
+
+.financial-desc {
+  justify-content: flex-start;
+}
+
+.financial-desc .financial-desc-txt {
+  width: 97.7%;
+  letter-spacing: 1.4px;
+}
+
+.cmm-capital-blk:nth-child(4n) .partner-emp-list .cmm-partner-box {
+  width: 50%;
+}
+
+.relation-captial-blk .cmm-partner-boxlist .cmm-partner-box {
+  width: 50%;
+}
+
+.relation-captial-blk .cmm-partner-boxlist .cmm-partner-box:nth-child(3) {
+  border-right: unset;
+}
+
+.health-env-list .health-env-desc {
+  margin-left: 0;
+}
+
+.goal-emp-blk {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 18px;
+}
+
+.goal-emp-blk .goal-blk {
+  padding-left: 5px;
+  font-weight: 400;
+}
+
+.goal-blk span {
+  color: #048851;
+}
+
+.cmm-partner-box .partner-box-inner .goal-emp-blk .cmm-capital-taxo {
+  padding: 8px 8px;
+}
+
+.store-env-list .cmm-partner-boxlist .cmm-partner-box {
+  width: 50%;
+  padding: 20px 20px 20px 30px;
+}
+
+.cmm-partner-boxlist .global-env-blk .partner-box-inner {
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.store-env-list .global-env-blk .cmm-emp-total-number {
+  margin-left: 0;
+}
+
+.global-contribute-list .global-env-blk .partner-box-inner {
+  justify-content: space-between;
+}
+
+.store-env-list .global-env-blk .store-progress-txtblk {
+  width: 32.4%;
+  max-width: 95px;
+}
+
+.store-env-list .global-env-blk .store-progress-graph {
+  width: 65%;
+  margin-left: 3%;
+  max-width: 220px;
+}
+.cmm-partner-box .partner-box-inner .resources-txt {
+  width: 100%;
+  font-size: 0.875rem;
+  letter-spacing: 0;
+}
+.cmm-partner-box .partner-box-inner .resources-txt .financial-desc-txt {
+  font-weight: 400;
+  width: 95.2%;
+  text-align: left;
+}
+.cmm-partner-box .partner-box-inner .partner-sub-ttl {
+  color: #048851;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.health-env-list .partner-sec-row .cmm-partner-box:first-child {
+  width: 66.6%;
+}
+
+.health-env-list .partner-sec-row .cmm-partner-box:last-child {
+  width: 33.3%;
+}
+
+.health-env-list .partner-sec-row .partner-work-env .goal-emp-blk {
+  align-items: center;
+}
+
+.health-env-list .partner-sec-row .partner-work-env .goal-emp-blk .cmm-capital-taxo {
+  padding: 3px 8px;
+}
+
+.sale-dispensing-box {
+  position: relative;
+}
+
+.sale-dispensing-box .dispensing-preapre-img {
+  position: absolute;
+  top: -15px;
+  right: 20px;
+}
+
+@media only screen and (max-width: 767.9px) {
+
+  .cmm-partner-boxlist .pc-none {
+    display: flex !important;
+  }
+
+  .sec-six-captials .small-text,
+  .sec-six-captials .text-04 {
+    font-size: 0.875rem;
+  }
+
+  .bdr-right-pc {
+    border-right: unset;
+  }
+
+  .bdr-right-sp {
+    border-right: 1px solid #e0e0e0;
+  }
+
+  .bdr-bottom-pc {
+    border-bottom: unset;
+  }
+
+  .bdr-bottom-sp {
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  .cmm-capital-blk .cmm-capital-ttl-blk {
+    align-items: flex-start;
+    padding: 12px 10px 12px 30px;
+  }
+
+  .human-capital-ttlblk .capital-ttl-cnt {
+    width: 75%;
+    max-width: 220px;
+  }
+
+  .cmm-capital-blk .capital-ttl-cnt {
+    width: 70%;
+    margin-left: 10%;
+    max-width: 100%;
+  }
+
+  .sale-dispensing-box {
+    flex-direction: column;
+  }
+
+  .cmm-capital-taxo {
+    padding: 2px 8px;
+  }
+
+  .employee-info-blk .company-local-community {
+    width: 100%;
+    margin-bottom: 30px;
+    max-width: 100%;
+  }
+
+  .employee-info-blk .company-local-community .cmm-emp-total-number {
+    margin-left: 16px;
+  }
+
+  .management-criteria-img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .cmm-capital-blk .capital-ttl-cnt h3 {
+    font-size: 1.375rem;
+  }
+
+  .employee-info-blk {
+    margin-top: 24px;
+  }
+
+  .employee-info-blk .company-emp-number {
+    margin-bottom: 6px;
+  }
+
+  .company-num-storeimg {
+    position: absolute;
+    right: 23px;
+    margin-top: -42px;
+  }
+
+  .cmm-emp-total-number {
+    margin-left: 0;
+    font-size: 1.875rem;
+    text-align: center;
+  }
+
+  .partner-emp-list .cmm-partner-empttl {
+    display: block;
+    margin-bottom: 30px;
+    padding-left: 22px;
+  }
+
+  .store-env-list .global-contribute-list .cmm-partner-box {
+    width: 100% !important;
+  }
+
+  .partner-emp-list .cmm-partner-empttl::before {
+    top: 15px;
+    transform: unset;
+  }
+
+  .partner-emp-list .cmm-partner-empttl h3 {
+    margin-right: 15px;
+    font-size: 1.375rem;
+    letter-spacing: 2.2px;
+  }
+
+  .cmm-partner-boxlist {
+    width: 100%;
+  }
+
+  .cmm-partner-boxlist .cmm-partner-box {
+    width: 50%;
+    padding: 20px 7px;
+  }
+
+  .cmm-partner-box .partner-box-inner {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cmm-partner-boxlist .hr-dev-box {
+    justify-content: flex-start;
+    width: 100%;
+    border: unset;
+  }
+
+  .cmm-partner-boxlist .hr-dev-box .hr-dev-inner {
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  .cmm-partner-boxlist .hr-dev-box .hr-dev-inner .cmm-emp-total-number {
+    margin-left: 16px;
+  }
+
+  .cmm-partner-box .partner-box-inner span {
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+
+  .company-emp-number .company-store-num {
+    margin: 0 9px 0 16px;
+  }
+
+  .company-emp-number .company-store-num .cmm-emp-total-number {
+    text-align: left;
+  }
+
+  .employee-info-blk .company-emp-amt .company-store-network01 {
+    margin-top: 0;
+  }
+
+  .employee-info-blk .company-emp-amt {
+    width: 100%;
+    margin-bottom: 30px;
+    max-width: 100%;
+  }
+
+  .company-store-network02 {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .store-area-img01 {
+    width: 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+  }
+
+  .store-area-img02 {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 160px;
+  }
+
+  .cmm-capital-blk:nth-child(3n) .partner-emp-list .profit-box-list .cmm-partner-box {
+    width: 50%;
+  }
+
+  .financial-desc .financial-desc-txt {
+    width: 94.5%;
+    letter-spacing: 1.2px;
+  }
+
+  .cmm-capital-blk:nth-child(4n) .partner-emp-list .cmm-partner-box {
+    width: 50%;
+  }
+
+  .relation-captial-blk .natural-box-list .cmm-partner-box {
+    width: 100%;
+  }
+
+  .goal-emp-blk {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 18px;
+  }
+
+  .goal-emp-blk .goal-blk {
+    margin-top: 10px;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .cmm-partner-box .partner-box-inner .goal-emp-blk .cmm-capital-taxo {
+    width: 100%;
+    padding: 4px 8px;
+    max-width: 102px;
+  }
+
+  .sustain-br-list .cmm-partner-boxlist .cmm-partner-box:last-child {
+    width: 100%;
+  }
+
+  .store-env-list .cmm-partner-boxlist .cmm-partner-box {
+    justify-content: space-between;
+    width: 50%;
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  .cmm-partner-boxlist .global-env-blk {
+    border-right: 1px solid #e0e0e0;
+  }
+
+  .cmm-partner-boxlist .global-env-blk .partner-box-inner {
+    justify-content: space-between;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .global-contribute-list .partner-box-inner .cmm-emp-total-number {
+    font-size: 2.5rem;
+    text-align: left;
+  }
+
+  .store-env-list .global-env-blk .store-progress-txtblk {
+    width: 41.4%;
+    max-width: 92px;
+  }
+
+  .store-env-list .global-env-blk .store-progress-graph {
+    width: 57.7%;
+    margin-left: 0;
+    max-width: 190px;
+  }
+
+  .cmm-partner-box .collection-stores-blk {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .collection-stores-blk .collection-stores,
+  .collection-stores-blk .collection-store-desc {
+    width: 42%;
+  }
+  .cmm-partner-box .partner-box-inner .resources-txt {
+    width: 53%;
+  }
+  .cmm-partner-box .partner-box-inner .resources-txt .financial-desc-txt{
+    width: 87.5%;
+  }
+
+  .cmm-partner-box .partner-box-inner .partner-sub-ttl {
+    font-size: 0.875rem;
+  }
+
+  .health-env-list .partner-sec-row .cmm-partner-box:first-child {
+    width: 50%;
+  }
+
+  .health-env-list .partner-sec-row .cmm-partner-box:last-child {
+    width: 50%;
+  }
+
+
+  .health-env-list .partner-sec-row .partner-work-env .goal-emp-blk .cmm-capital-taxo {
+    padding: 3px 8px;
+  }
+
+
+  .sale-dispensing-box .dispensing-preapre-img {
+    position: unset;
+    margin-top: 10px;
+  }
+
+  .cmm-partner-boxlist .ebitor-box {
+    border-top: unset;
+  }
+
+  .natural-box-list .cmm-partner-box:first {
+    border-bottom: unset !important;
+  }
+}

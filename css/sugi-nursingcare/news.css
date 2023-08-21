@@ -1,0 +1,414 @@
+.news .news-blk {
+  margin-top: 63px;
+  margin-bottom: 100px;
+}
+
+.search-panel {
+  padding: 40px;
+  background-color: #EDEADF;
+}
+
+.search-panel form.search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-panel label {
+  width: 24.24%;
+  letter-spacing: 0px;
+}
+
+.search-panel form.search .search-input {
+  position: relative;
+  width: 71.9%;
+}
+
+.search-panel form.search input[type=text] {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  padding: 12.5px 15px;
+  border: 1px solid #ddd;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 0.875rem;
+  outline: none;
+  border-radius: 3px;
+}
+
+.search-panel form.search .filter-btn {
+  width: 18.7%;
+}
+
+.search-panel form.search .filter-btn button {
+  width: 100%;
+  padding: 14px 0;
+  border: none;
+  background-color: #E6172B;
+  color: #fff;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.search-panel form.search .filter-btn button span {
+  position: relative;
+  padding-left: 20px;
+}
+
+.search-panel form.search .filter-btn button span::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  background: url('/img/news/ico_search_white.png') no-repeat center/contain;
+  content: "";
+  transform: translateY(-50%);
+}
+
+.search-panel form.search input[type=text]::placeholder {
+  color: #969696;
+  font-size: 0.875rem;
+}
+
+.search-panel .search-blk {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  right: 18px;
+  width: 14px;
+  height: 14px;
+  margin: 0;
+  cursor: pointer;
+  transform: translateY(-50%);
+  border-radius: 3px;
+}
+
+.search-panel .search-blk::before {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  background: url('/img/sugi-nursingcare/ico_search_red.png') no-repeat center/contain;
+  content: '';
+}
+
+.search-panel .w-504 {
+  width: 49.42%;
+}
+
+.search-panel .w-482 {
+  width: 47.3%;
+}
+
+.search-panel .select-box-gp {
+  width: 46%;
+}
+
+.search-panel .select-box {
+  width: 47%;
+  padding: 16px 15px 16px 15px;
+  border: 1px solid #dddddd;
+  background: none;
+  background-color: #fff;
+  background-image: url('/img/sugi-nursingcare/ico_down_arrow_red.png');
+  background-size: 10px 6px;
+  background-position: right 11px center;
+  background-repeat: no-repeat;
+  color: #969696;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 0.875rem;
+  outline: none;
+  cursor: pointer;
+  border-radius: 3px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+
+.search-panel .d-flex {
+  align-items: center;
+}
+
+.search-panel .search-box {
+  width: 18.67%;
+}
+
+.search-panel .w-482 form.search .search-input {
+  width: 100%;
+}
+
+.search-panel .w-482 form.search input[type=text] {
+  padding: 12.5px 15px 12.5px 36px;
+  background-color: #048851;
+  color: #fff;
+  font-weight: 700;
+}
+
+.search-panel .w-482 form.search input[type=text]::placeholder {
+  color: #fff;
+}
+
+.search-panel .w-482 .search .search-blk {
+  left: 19.5%;
+}
+
+.search-panel .search-gp {
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.search-panel .tab-gp {
+  justify-content: flex-start;
+}
+
+.search-panel .tab-gp p {
+  width: 19%;
+  margin-right: 2%;
+}
+
+.search-panel .tab-cat-gp {
+  display: flex;
+  flex-wrap: wrap;
+  width: 79%;
+  margin-right: 0;
+}
+
+.search-panel .tab-gp .tab-btn {
+  margin-right: 1%;
+}
+
+.search-panel .tab-gp .tab-btn:last-child {
+  margin-right: 0;
+}
+
+.search-panel .tab-gp .tab-btn a {
+  display: inline-block;
+  padding: 14.5px 13px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  border-radius: 3px;
+}
+
+.search-panel .tab-gp .tab-btn a.active {
+  background-color: #E6172B;
+  color: #fff;
+}
+
+[data-tab-content] {
+  display: none;
+}
+
+.active[data-tab-content] {
+  display: block;
+}
+
+.news .newslist-gp .newslist-header {
+  align-items: center;
+}
+
+.news .newslist-gp .newslist-header .news-sugi {
+  display: flex;
+  align-items: center;
+  height: 20px;
+  padding: 0px 10px;
+  background-color: #FBEBD3;
+  color: #E6172C;
+  border-radius: 10px;
+}
+
+.news .newslist-gp .newslist-header .news-sugi:last-child::after {
+  background-color: transparent;
+}
+
+.news .newslist-gp .news-list .newslist-desc {
+  color: #000;
+}
+
+.news .main-nursing-care {
+  padding-bottom: 0;
+}
+
+.news .newslist-gp .news-list {
+  border-top: 1px solid #e2dece;
+}
+
+.news .newslist-gp .news-list:last-child {
+  border-bottom: 1px solid #e2dece;
+}
+
+.news  .cmn-pagination .cmn-pager a {
+  border: 1px solid #E6172C;
+}
+
+.news .cmn-pagination .cmn-pager-num a {
+  padding: 1px 0;
+  background-color: #EDEADF;
+  color: #E6172C;
+  transition: all 0.2s;
+}
+
+.news .cmn-pagination .cmn-pager-num a:hover,
+.news .cmn-pagination .cmn-pager-prev a:hover,
+.news .cmn-pagination .cmn-pager-first a:hover,
+.news .cmn-pagination .cmn-pager-next a:hover,
+.news .cmn-pagination .cmn-pager-last a:hover {
+  background-color: #E6172C;
+  color: #fff;
+  transition: all 0.2s;
+}
+
+/*I-pad*/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .search-panel {
+    padding: 30px;
+  }
+
+  .search-panel .w-504 {
+    width: 42%;
+  }
+
+  .search-panel .w-482 {
+    width: 54%;
+  }
+
+  .search-panel .select-box-gp {
+    width: 51%;
+  }
+
+  .search-panel form.search input[type=text] {
+    padding: 3.8% 5%;
+  }
+
+  .search-panel .search-blk {
+    right: 18px;
+    width: 12px;
+    height: 12px;
+  }
+
+  .search-panel .search-blk::before {
+    width: 12px;
+    height: 12px;
+  }
+
+  .search-panel .w-482 form.search input[type=text] {
+    padding: 15.3% 2% 15.3% 40%;
+  }
+
+  .search-panel .tab-gp p {
+    width: 18%;
+    margin-right: 2%;
+  }
+
+  .search-panel .tab-gp .tab-btn {
+    margin-bottom: 1.5%;
+  }
+}
+
+@media only screen and (max-width: 767.9px) {
+  .news-search .accordion-ttl {
+    padding: 17px 19px;
+  }
+
+  .news-search .accordion-content {
+    margin: 0;
+    padding: 0;
+    border-top: none;
+  }
+
+  .news-search .search-panel {
+    padding: 20px 20px 10px 20px;
+  }
+
+  .news-search .search-panel .w-504 {
+    width: 100%;
+  }
+
+  .news-search .search-panel .w-482 {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .news-search .search-panel .search-gp {
+    flex-direction: column;
+  }
+
+  .news-search .search-panel form.search {
+    flex-direction: column;
+  }
+
+  .news-search .search-panel form.search .search-input {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .search-panel .w-482 form.search input[type=text] {
+    text-align: center;
+  }
+
+  .search-panel form.search .filter-btn {
+    width: 100%;
+  }
+
+  .news-search .search-panel label {
+    width: 100%;
+    margin-bottom: 8px;
+    text-align: center;
+  }
+
+  .news-search .search-panel .select-box {
+    width: 37.5%;
+  }
+
+  .news-search .search-panel .select-box+.select-box {
+    margin-left: 10px;
+  }
+
+  .news-search .search-panel .search-box {
+    width: 100%;
+  }
+
+  .news-search .search-panel .select-box-gp {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .news-search .search-panel .w-482 .search .search-blk {
+    left: 42%;
+  }
+
+  .search-panel .tab-gp {
+    flex-direction: column;
+  }
+
+  .search-panel .tab-gp p {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .search-panel .tab-gp .tab-btn {
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+
+  .search-panel .tab-cat-gp {
+    width: 100%;
+  }
+
+  .search-panel .tab-gp .tab-btn a {
+    font-size: 0.875rem;
+  }
+  .news .newslist-gp .newslist-header {
+    align-items: flex-start;
+  }
+}

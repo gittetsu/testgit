@@ -1,0 +1,10 @@
+.table .center {
+	text-align: center;
+}
+
+.sec-policy .table .table-ttl th {
+	padding: 11.6px 10px;
+}
+
+@media only screen and (max-width: 767.9px) {
+}

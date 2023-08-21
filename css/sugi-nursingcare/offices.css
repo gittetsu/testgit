@@ -1,0 +1,244 @@
+.office-top-cntblk .office-tab-btn {
+  width: 78.3%;
+  margin: 63px auto 0;
+  max-width: 860px;
+}
+
+.office-top-cntblk .office-tab-btn .cmm-nursing-tab-btn {
+  width: 23.26%;
+}
+
+.sec-prefecture-blk .office-sub-ttl {
+  line-height: 1.8;
+  font-size: 1.75rem;
+  font-weight: 700;
+  border-bottom: 1px solid #dedac8;
+}
+
+.sec-prefecture-blk .office-location-name {
+  padding: 7.5px 20px;
+  background-color: #ef5b6d;
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 700;
+  border-radius: 5px;
+}
+
+.sec-prefecture-blk .unorder-list-gp li {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.sec-prefecture-blk .office-address-box {
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+.office-address-box ul.cmm-address-blk {
+  width: 48%;
+}
+
+ul.cmm-address-blk li {
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 2.2% 0 2.2% 0;
+  border-bottom: 1px solid #dedac8;
+}
+
+.sec-prefecture-blk .office-address-box ul.cmm-address-blk li:first-child {
+  padding: 0 0 2.2% 0;
+}
+
+ul.cmm-address-blk .address-ttl {
+  font-weight: 700;
+}
+
+ul.cmm-address-blk .address-field-ttl {
+  width: 37.1%;
+  line-height: 1.85;
+  margin-right: 6.5%;
+  color: #e6172c;
+  font-weight: 500;
+}
+
+ul.cmm-address-blk .phno-field {
+  line-height: 1.2;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+}
+
+ul.cmm-address-blk .office-number {
+  font-weight: 500;
+}
+
+.address-detail-blk .address-detail-cnt,
+.address-detail-blk .nursing-station-blk {
+  width: 57.2%;
+  max-width: 580px;
+}
+
+.address-detail-blk .map-blk {
+  width: 40.2%;
+  max-width: 490px;
+}
+
+.address-detail-cnt .address-field-ttl {
+  width: 23.1% !important;
+}
+
+.map-blk .office-map iframe {
+  width: 100%;
+  height: 236px;
+}
+
+.address-detail-cnt li:first-child,
+.nursing-station-blk li:first-child {
+  border-top: 1px solid #dedac8;
+}
+
+.address-detail-cnt .address-field-cnt {
+  width: 69%;
+}
+
+.address-detail-blk .nursing-station-blk .address-field-ttl {
+  width: 31.6%;
+  margin-right: 2.3%;
+}
+
+.address-detail-blk .nursing-station-blk .address-field-cnt {
+  width: 66%;
+}
+
+.icon-similar-blk {
+  position: relative;
+  padding: 50px 0 67px;
+}
+
+.similar-icon {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  font-size: 6.25rem;
+  text-align: center;
+  transform: translateX(-50%) rotate(90deg);
+}
+
+/*I-pad*/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+  .office-top-cntblk .office-tab-btn {
+    width: 90%;
+  }
+}
+
+
+@media only screen and (max-width: 767.9px) {
+
+  .nursing-care-wrapper::after {
+    top: -78px;
+    height: 990px;
+  }
+
+  .office-top-cntblk {
+    padding-top: 20px;
+  }
+
+  .office-top-cntblk .office-tab-btn {
+    width: 100%;
+    margin: 40px auto 0;
+  }
+
+  .office-top-cntblk .office-tab-btn .cmm-nursing-tab-btn {
+    width: 48.36%;
+    margin-bottom: 10px;
+  }
+
+  .sec-prefecture-blk .unorder-list-gp {
+    margin-bottom: 20px;
+  }
+
+  .sec-prefecture-blk .unorder-list-gp li {
+    padding-left: 20px;
+  }
+
+  .sec-prefecture-blk .office-sub-ttl {
+    font-size: 1.375rem;
+  }
+
+  .sec-prefecture-blk .office-location-name {
+    padding: 10.5px 20px;
+  }
+
+  .office-address-box ul.cmm-address-blk {
+    width: 100%;
+  }
+
+  .sec-prefecture-blk .office-address-box {
+    margin-bottom: 20px;
+    padding: 13px 30px 30px 30px;
+  }
+
+  ul.cmm-address-blk li {
+    padding: 17px 0 17px 0;
+    font-size: 1rem;
+  }
+
+  .sec-prefecture-blk .office-address-box ul.cmm-address-blk li:first-child {
+    padding: 17px 0 17px 0;
+  }
+
+  ul.cmm-address-blk .address-field-ttl {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 8px;
+  }
+
+  .address-detail-blk .address-detail-cnt,
+  .address-detail-blk .nursing-station-blk {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .address-detail-blk .map-blk {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .address-detail-cnt .address-field-ttl {
+    width: 100% !important;
+    margin-right: 0;
+  }
+
+  .map-blk .office-map iframe {
+    height: 161px;
+  }
+
+  .address-detail-cnt .address-field-cnt {
+    width: 100%;
+  }
+
+  .address-detail-blk .nursing-station-blk .address-field-ttl {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .address-detail-blk .nursing-station-blk .address-field-cnt {
+    width: 100%;
+  }
+
+  .address-detail-blk .map-blk .common-nursing-button {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    padding: 18px 48px 18px 32px;
+    max-width: 212px;
+  }
+
+  .office-map-link {
+    text-align: center;
+  }
+
+}

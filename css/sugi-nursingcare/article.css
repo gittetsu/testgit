@@ -1,0 +1,70 @@
+/* news-article */
+.news-article .sec-atricle {
+  margin-bottom: 100px;
+  margin-top: 63px;
+}
+
+.news-article h2.common-ttl {
+  color: #e6172c;
+}
+
+.news-article .ref {
+  background-color: #e6172b;
+}
+
+.news-article .ref-link {
+  background-color: #eceadf;
+}
+
+.news-article h4.common-ttl {
+  color: #e6172b;
+  border-left: 3px solid #e6172b;
+}
+
+.news-article .news-date {
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.news-article .news-date p {
+  margin-right: 20px;
+}
+
+.news-article .news-date span {
+  color: #e6172c;
+  background-color: #FBEBD3;
+  border-radius: 10px;
+  padding: 0px 10px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 1.4px;
+  height: 20px;
+}
+
+.news-article .ref-link a {
+  color: #e6172b;
+  padding-right: 22px;
+}
+
+.news-article .ref-link a::after {
+  width: 12px;
+  height: 12px;
+  background: url('/img/sugi-nursingcare/ico_external.svg') no-repeat center/cover;
+}
+
+.news-article .btn {
+  text-align: center;
+}
+
+.news-article .contact-us {
+  background-color: #5D5555;
+  padding: 18px;
+}
+
+.news-article .contact-us p {
+  font-size: 1.375rem;
+  line-height: 1.4;
+  color: #fff;
+  text-align: center;
+}

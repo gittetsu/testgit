@@ -1,0 +1,11 @@
+/* pc */
+
+/* sec-eco-indicators */
+
+.sec-eco-indicators table tr .center-position {
+	text-align: center;
+}
+
+.sec-eco-indicators .table tr td, .table tr th {
+	padding: 11.6px 13px;
+}
