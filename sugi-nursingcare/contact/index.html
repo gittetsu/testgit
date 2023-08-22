@@ -34,9 +34,9 @@
 						※17時以降にいただいたお問い合わせは翌営業日以降の受付となります。
 					</p>
 				</div>
-				<form action="/" class="contact-form mb-40">
+				<form action="" class="contact-form mb-40">
 					<div class="input-container">
-						<label for="name" class="form-label"><span class="required">必須</span>お名前</label>
+						<p class="form-label"><span class="required">必須</span>お名前</p>
 						<div class="input-box">
 							<div class="d-flex">
 								<input type="text" id="surname" name="surname" value="" placeholder="姓" class="name-input error">
@@ -46,7 +46,7 @@
 						</div>
 					</div>
 					<div class="input-container">
-						<label for="furiName" class="form-label"><span class="required">必須</span>フリガナ</label>
+						<p class="form-label"><span class="required">必須</span>フリガナ</p>
 						<div class="input-box">
 							<div class="d-flex">
 								<input type="text" id="furiSurname" name="furiSurname" value="" placeholder="セイ" class="name-input">
@@ -61,15 +61,17 @@
 						</div>
 					</div>
 					<div class="input-container">
-						<label for="phoneNumber" class="form-label"><span class="any">任意</span>電話番号</label>
+						<p class="form-label"><span class="any">任意</span>電話番号</p>
 						<div class="input-box">
 							<div class="phone-number">
-								<input type="text" id="phoneNumber" name="phoneNumber" value="" placeholder="090"
-									class="ph-input prefix">
+								<input type="text" id="phoneNumber" name="phoneNumber" value="" maxlength="3" placeholder="090"
+									class="ph-input prefix" oninput="validateNumericInput(this)">
 								<span class="dashed"></span>
-								<input type="text" name="phoneNoFirst" value="" placeholder="0000" class="ph-input">
+								<input type="text" name="phoneNoFirst" value="" maxlength="4" placeholder="0000" class="ph-input"
+									oninput="validateNumericInput(this)">
 								<span class="dashed"></span>
-								<input type="text" name="phoneNoLast" value="" placeholder="0000" class="ph-input">
+								<input type="text" name="phoneNoLast" value="" maxlength="4" placeholder="0000" class="ph-input"
+									oninput="validateNumericInput(this)">
 							</div>
 						</div>
 					</div>
@@ -102,7 +104,6 @@
 								<li class="mb-sp-20">お客様の個人情報は厳重に取り扱い、お問い合わせ対応および当社からの情報提供を目的として利用させていただきます。</li>
 								<li>
 									個人情報の取り扱いにおきましては、当社プライバシーポリシーをご確認ください。
-									<br>
 									<a href="https://www.sugi-hd.co.jp/privacypolicy/index.html" target="_blank"
 										class="policy-link">https://www.sugi-hd.co.jp/<br class="sp">privacypolicy/index.html</a>
 								</li>
@@ -113,10 +114,10 @@
 							</div>
 						</div>
 					</div>
+					<div class="confirm-pg">
+						<button type="submit" class="common-nursing-button">確認画面へ<span class="arrow"></span></button>
+					</div>
 				</form>
-				<div class="confirm-pg">
-					<a href="#" class="common-nursing-button">確認画面へ<span class="arrow"></span></a>
-				</div>
 			</section><!-- /.sec-nurcare-contact -->
 			<section class="sec-nurcare-consult">
 				<div class="inner">
@@ -166,6 +167,7 @@
 	</div>
 	<!--#include virtual="/include/nursing-care-footer.html" -->
 	<script src="/js/common.js"></script>
+	<script src="/js/sugi-nursingcare/contact.js"></script>
 </body>
 
 </html>

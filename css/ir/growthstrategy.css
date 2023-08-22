@@ -18,7 +18,7 @@
 }
 
 .growth-strategy .link-item {
-  display: block;
+  display: inline-block;
   position: relative;
   margin-bottom: 5px;
   padding-left: 20px;
@@ -51,7 +51,7 @@
 
 .ir-link-flex .ir-link {
   display: inline-block;
-  width: 31%;
+  width: 30.91%;
   margin-right: 3.5%;
   padding: 16px 0;
   background-color: #fff;

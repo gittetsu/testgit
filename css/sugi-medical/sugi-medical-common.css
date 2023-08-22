@@ -201,12 +201,12 @@ h3.common-medical-ttl {
   border-left: 3px solid #7FBE26;
 }
 
-.top .external-btn .external-text {
+.external-btn .external-text {
   display: inline-block;
   position: relative;
 }
 
-.top .external-btn .external-text:after {
+.external-btn .external-text:after {
   position: absolute;
   top: 11px;
   right: -42px;
@@ -215,6 +215,10 @@ h3.common-medical-ttl {
   background: url(/img/sugi-medical/ico_external_link.svg) no-repeat center/cover;
   content: '';
   max-width: 11px;
+}
+
+.external-btn:hover .external-text:after {
+  filter: invert(80%) sepia(98%) saturate(6150%) hue-rotate(152deg) brightness(95%) contrast(97%);
 }
 
 /* ft-contact-blk */
@@ -344,8 +348,8 @@ footer.ft-medical .page-top img {
     flex-direction: column;
     justify-content: flex-start;
     height: 100vh;
-    overflow-y: scroll;
     padding-bottom: 300px;
+    overflow-y: scroll;
   }
 
   .sugi-medical-header .nav-menu-list li {
@@ -492,8 +496,8 @@ footer.ft-medical .page-top img {
     flex-direction: column;
     justify-content: flex-start;
     height: 100vh;
-    overflow-y: scroll;
     padding-bottom: 300px;
+    overflow-y: scroll;
   }
 
   .sugi-medical-header .nav-menu-list li {
@@ -574,8 +578,8 @@ footer.ft-medical .page-top img {
 
   .common-btn {
     padding: 17px 59px 17px 20px;
-    letter-spacing: 1.5px;
     font-size: 1rem;
+    letter-spacing: 1.5px;
   }
 
   .common-btn .btn-text:after {
@@ -583,7 +587,7 @@ footer.ft-medical .page-top img {
     right: -37px;
   }
 
-  .top .external-btn .external-text:after {
+  .external-btn .external-text:after {
     top: 8px;
     right: -37px;
   }

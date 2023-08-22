@@ -287,6 +287,13 @@
   top: -15px;
   right: 20px;
 }
+.sec-six-captials sup {
+  position: relative;
+  line-height: 0;
+  font-size: 75%;
+  vertical-align: baseline;
+  top: -0.5em;
+}
 
 @media only screen and (max-width: 767.9px) {
 
@@ -310,6 +317,9 @@
   .bdr-bottom-pc {
     border-bottom: unset;
   }
+  .cmm-capital-blk:nth-child(3n) .cmm-partner-boxlist .bdr-btm-none-sp {
+    border-bottom: unset;
+  }
 
   .bdr-bottom-sp {
     border-bottom: 1px solid #e0e0e0;
@@ -326,8 +336,8 @@
   }
 
   .cmm-capital-blk .capital-ttl-cnt {
-    width: 70%;
-    margin-left: 10%;
+    width: 76%;
+    margin-left: 6%;
     max-width: 100%;
   }
 

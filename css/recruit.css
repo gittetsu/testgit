@@ -1,13 +1,14 @@
 /* sec-recruit */
 .sec-recruit .tab-list-02 li {
   width: 50%;
+  min-width: unset;
 }
 
 .sec-recruit .list-gp .list-gp-detail {
   align-items: flex-start;
-  border: none;
-  padding: 0;
   margin-bottom: 50px;
+  padding: 0;
+  border: none;
 }
 
 .sec-recruit .list-gp .list-gp-detail .w-350 {
@@ -31,7 +32,11 @@
 }
 
 .sec-recruit .list-gp .list-gp-detail .btn {
-  max-width: 322px;
+  max-width: 330px;
+}
+
+.sec-recruit .list-gp .list-gp-detail .btn a {
+  width: 100%;
 }
 
 .sec-recruit .list-gp .list-gp-detail dl dt,
@@ -45,6 +50,7 @@
   width: 31.6%;
   background-color: #f5f8f7;
   font-weight: 700;
+  border-right: 1px solid #cce2d9;
 }
 
 .sec-recruit .list-gp .list-gp-detail dl dd {
@@ -64,16 +70,30 @@
 }
 
 @media only screen and (max-width: 767.9px) {
-  .sec-recruit .list-gp .list-gp-detail .w-350 {
-    padding: 50px 20px;
+  .sec-recruit .list-gp .list-gp-detail {
+    display: block;
   }
 
-  .sec-recruit .w-350 {
-    width: 42%;
+  .sec-recruit .list-gp .list-gp-detail .w-350 {
+    width: 100%;
+    padding: 74px 20px;
   }
 
   .sec-recruit .w-710 {
-    width: 52.75%;
+    width: 100%;
+  }
+
+  .sec-recruit .list-gp .list-gp-detail .w-350 .img-blk {
+    max-width: 201px;
+  }
+  
+  .sec-recruit .list-gp .list-gp-detail .w-350 .img-w220 {
+    max-width: 211px;
+  }
+
+  .sec-recruit .list-gp .list-gp-detail .btn {
+    max-width: 266px;
+    margin: 0 auto;
   }
 
   .sec-recruit .list-gp .list-gp-detail dl dt,
@@ -81,18 +101,26 @@
     width: 100%;
   }
 
+  .sec-recruit .list-gp .list-gp-detail dl dt{
+    border-right: none;
+  }
+
   .sec-recruit .list-gp .list-gp-detail dl dt,
   .sec-recruit .list-gp .list-gp-detail dl dd {
-    padding: 11.5px 5px;
+    padding: 16px 20px;
     letter-spacing: 0.7px;
-    text-align: center;
   }
 
   .sec-recruit .list-gp .list-gp-detail dl dt {
     border-bottom: none;
   }
 
+  .sec-recruit .list-gp .list-gp-detail dl dd{
+    padding: 20px;
+  }
+
   .sec-recruit .list-gp .list-gp-detail dl dd a {
     pointer-events: visible;
+    color: #048851;
   }
 }

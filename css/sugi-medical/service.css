@@ -13,7 +13,7 @@
 .sec-medi-service .service-list .list-item {
   margin-bottom: 80px;
   padding-bottom: 80px;
-  border-bottom: 1px dashed #7FBE26;
+  border-bottom: 1px dashed #7fbe26;
 }
 
 .sec-medi-service .service-list .list-item .service-ttl {
@@ -45,7 +45,7 @@
   height: 29px;
   margin: 0 auto;
   content: '';
-  transform: translateY(-50%);
+  transform: translatey(-50%);
 }
 
 .sec-medi-service .service-list .list-item .service-ico.medical::before {
@@ -58,9 +58,9 @@
 
 .sec-medi-service .service-list .list-item .medical-menu .sub-ttl {
   margin-bottom: 20px;
-  color: #7FBE26;
+  color: #7fbe26;
   font-weight: 700;
-  border-bottom: 1px solid #E5F0D6;
+  border-bottom: 1px solid #e5f0d6;
 }
 
 .sec-medi-service .service-list .list-item .medical-menu .menu-list {
@@ -76,8 +76,8 @@
 .sec-medi-service .service-list .list-item .medical-menu .menu-list li span {
   margin-right: 10px;
   padding: 2px 9px;
-  background-color: #F5FAED;
-  color: #7FBE26;
+  background-color: #f5faed;
+  color: #7fbe26;
   font-weight: 700;
   border-radius: 3px;
 }

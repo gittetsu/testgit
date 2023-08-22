@@ -4,14 +4,14 @@ document.addEventListener("DOMContentLoaded", function (e) {
     let hash = decodeURIComponent(window.location.hash.trim());
     console.log(hash);
     document.querySelector(hash).scrollIntoView();
-    if (hash === "#統合報告書") {
+    if (hash === "#integrated-report") {
       const element = document
         .querySelector(".report #report-id")
         .classList.add("active");
       document.querySelectorAll(".js-tab")[
         document.querySelectorAll(".js-tab").length - 3
       ].style.display = "block";
-    } else if (hash === "#非財務指標") {
+    } else if (hash === "#nonfinancial-indicators") {
       // this.alert("true")
       const element = document
         .querySelector(".indicators #indicators")
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
       document.querySelectorAll(".js-tab")[
         document.querySelectorAll(".js-tab").length - 2
       ].style.display = "block";
-    } else if (hash === "#GRIスタンダード対照表") {
+    } else if (hash === "#GRI-std-comparison") {
       // this.alert("true")
       const element = document
         .querySelector(".comparison-table #comparison-table")

@@ -444,11 +444,11 @@ h6.common-sub-ttl {
   font-size: 0.875rem;
   font-weight: 700;
   cursor: pointer;
-  border-bottom: 3px solid transparent;
+  border-bottom: 1px solid transparent;
 }
 
 .sugi-holding-header .search-gp .search-btn .txt:hover {
-  border-bottom: 3px solid #048851;
+  border-bottom: 1px solid #048851;
 }
 
 .sugi-holding-header .search-gp .search-btn .search-ico {
@@ -482,12 +482,12 @@ h6.common-sub-ttl {
 
 .sugi-holding-header .sub-nav-list .contact:hover span,
 .sugi-holding-header .sub-nav-list .contact.active span {
-  border-bottom: 3px solid #048851;
+  border-bottom: 1px solid #048851;
 }
 
 .sugi-holding-header .sub-nav-list .language:hover span,
 .sugi-holding-header .sub-nav-list .language.active span {
-  border-bottom: 3px solid #048851;
+  border-bottom: 1px solid #048851;
 }
 
 .sugi-holding-header .sub-nav-list .contact span::before {
@@ -1632,6 +1632,7 @@ table tr th:first-child {
 .img-list-detail .external-blk span {
   position: relative;
   padding-right: 23px;
+  font-weight: bold;
 }
 
 .img-list-detail .external-blk span::after {
@@ -1649,6 +1650,7 @@ table tr th:first-child {
 .img-list-detail .txt-blk span {
   position: relative;
   padding-left: 30px;
+  font-weight: bold;
 }
 
 .img-list-detail .txt-blk span::before {
@@ -4206,7 +4208,7 @@ footer .page-top:hover img {
   }
 
   .external-button .external-text:after {
-    top: 8px;
+    top: 5px;
   }
 
   .external-button:hover {

@@ -23,24 +23,20 @@
 
 .issue-gp01::after,
 .issue-gp02::after {
-  display: block;
   position: absolute;
-  right: -47px;
-  bottom: 13px;
-  width: 0;
-  height: 0;
+  top: 0;
+  right: -15px;
+  width: 14px;
+  height: 60px;
   content: '';
-  transform: rotate(-90deg);
-  border-style: solid;
-  border-width: 14px 29px 20px 29px;
 }
 
 .issue-gp01::after {
-  border-color: #6FBA8A transparent transparent transparent;
+  background: url('../../img/sustainability/icon_traingle01.svg') no-repeat center/contain;
 }
 
 .issue-gp02::after {
-  border-color: #00A067 transparent transparent transparent;
+  background: url('../../img/sustainability/icon_traingle02.png') no-repeat center/contain;
 }
 
 .issue-gp01 {
@@ -149,6 +145,16 @@
   border-bottom: 1px solid #e6e6e6;
 }
 
+.sec-key-issues .tbl-main-cntlist .tbl-cntlist-item .materiality-tbl-txt,
+.sec-key-issues .tbl-main-cntlist .tbl-cntlist-item .unorder-list-gp {
+  width: 60%;
+}
+
+#materiality-theme03 .tbl-main-cntlist .tbl-cntlist-item:first-child {
+  padding-top: 15px;
+  border-top: 1px solid #e6e6e6;
+}
+
 .sec-key-issues .tbl-main-cntlist .tbl-cntlist-item:last-child {
   margin-bottom: 0;
   padding-bottom: 0;
@@ -156,10 +162,11 @@
 }
 
 .sec-key-issues .table-btn {
-  width: 140px;
+  width: 100%;
   margin-right: 20px;
   border: 1px solid;
   text-align: center;
+  max-width: 140px;
   border-radius: 3px;
 }
 
@@ -263,12 +270,24 @@
 
 @media only screen and (max-width: 767.9px) {
 
+  .issue-gp01,
+  .issue-gp02 {
+    padding: 7px 0 22px !important;
+  }
+
+  .issue-gp01 {
+    background: url('../../img/sustainability/img_traingle01_bg_sp.png') no-repeat center/100% 100%;
+  }
+
+  .issue-gp02 {
+    background: url('../../img/sustainability/img_traingle02_bg_sp.png') no-repeat center/100% 100%;
+  }
+
   .issue-gp01::after,
   .issue-gp02::after {
-    right: -45px;
-    bottom: 10px;
-    border-width: 16px 27px 18px 27px;
+    background: unset;
   }
+
 
   .related-theme-blk .related-img-blk .issue-related-img {
     width: 27.94%;
@@ -282,8 +301,8 @@
 
   .sec-process .cmm-issue-gp {
     margin-bottom: 31px;
-    padding: 4.8px 0;
-    border-bottom: 1px solid rgba(224, 224, 224, 0.5);
+    padding: 14.8px 0;
+    border-right: unset;
   }
 
   .sec-process .col03 .col03-detail {
@@ -301,35 +320,18 @@
     width: 100%;
   }
 
-  .issue-gp01::after,
-  .issue-gp02::after {
-    right: 0;
-    bottom: -21px;
-    width: 100%;
-    height: 20px;
-    border: none;
-    transform: unset;
-  }
-
-  .issue-gp01::after {
-    background: url('/img/sustainability/icon_issue_gp01.svg') no-repeat center/cover;
-  }
-
-  .issue-gp02::after {
-    background: url('/img/sustainability/icon_issue_gp02.svg') no-repeat center/cover;
-  }
-
   .sec-key-issues .tab-list-02 {
     flex-wrap: wrap;
     width: 100%;
   }
 
   .sec-key-issues .tab-list-02 li {
-    width: 49.6%;
+    width: 50%;
     margin-top: 10px;
     margin-right: 0;
     padding-bottom: 10px;
     border: unset;
+    min-width: 50%;
     border-radius: unset;
     border-bottom: 1px solid #e0e0e0;
   }

@@ -12,7 +12,7 @@
   margin: 20px 0;
   padding-top: 20px;
   padding-left: 20px;
-  border-top: 1px solid #CCE2D9;
+  border-top: 1px solid #cce2d9;
 }
 
 .sec-medi-contact .contact-form .input-container input[type='text'],
@@ -62,7 +62,8 @@
   width: 100%;
 }
 
-.sec-medi-contact .contact-form .input-container label {
+.sec-medi-contact .contact-form .input-container label,
+.sec-medi-contact .contact-form .input-container .form-label {
   display: flex;
   align-items: center;
   font-weight: 700;
@@ -122,7 +123,7 @@
   width: 16px;
   height: 0;
   content: '';
-  transform: translateY(-50%);
+  transform: translatey(-50%);
   border-color: #000;
   border-width: 0 0 2px 0;
   border-style: solid;
@@ -136,7 +137,7 @@
   line-height: 1.5;
   margin-right: 10px;
   padding: 2px 5.9px 2px;
-  background-color: #7FBE26;
+  background-color: #7fbe26;
   color: #fff;
   font-size: 0.75rem;
   border-radius: 3px;
@@ -145,13 +146,13 @@
 .sec-medi-contact .contact-form .input-container .err-msg {
   line-height: 1;
   margin-top: 12px;
-  color: #D6365C;
+  color: #d6365c;
   font-size: 0.813rem;
   font-weight: 500;
 }
 
-.sec-medi-contact .contact-form .input-container .error {
-  border: 1px solid #D6365C;
+.sec-medi-contact .contact-form .input-container input[type='text'].error {
+  border: 1px solid #d6365c;
 }
 
 .sec-medi-contact .contact-form .input-container .err-msg .exclamation {
@@ -163,7 +164,7 @@
   line-height: 1;
   margin-right: 4px;
   padding-left: 2px;
-  background-color: #D6365C;
+  background-color: #d6365c;
   color: #fff;
   font-size: 0.75rem;
   border-radius: 50%;
@@ -172,8 +173,8 @@
 .sec-medi-contact .contact-form .input-container .any {
   margin-right: 10px;
   padding: 0 5.9px 0;
-  background-color: #F5F5F5;
-  color: #9E9E9E;
+  background-color: #f5f5f5;
+  color: #9e9e9e;
   font-size: 0.75rem;
   font-weight: 700;
   border-radius: 3px;
@@ -226,7 +227,7 @@
 }
 
 .sec-medi-contact .contact-form .input-container .checkbox-gp-list input[type="checkbox"]:checked+.checkbox-label:before {
-  border: 1px solid #7FBE26;
+  border: 1px solid #7fbe26;
 }
 
 .sec-medi-contact .contact-form .input-container .checkbox-gp-list input[type="checkbox"]:checked+.checkbox-label:after {
@@ -236,11 +237,11 @@
   width: 5px;
   height: 10px;
   line-height: 1;
-  color: #7FBE26;
+  color: #7fbe26;
   font-family: sans-serif;
   content: '';
   transform: translate(50%, -50%) rotate(40deg);
-  border-color: #7FBE26;
+  border-color: #7fbe26;
   border-width: 0 3px 3px 0;
   border-style: solid;
   pointer-events: none;
@@ -256,6 +257,7 @@
   width: 100%;
   padding: 13px 20px;
   border: 1px solid #ddd;
+  font-family: 'Noto Sans JP', sans-serif;
   font-size: 1rem;
   outline: none;
   border-radius: 3px;
@@ -272,7 +274,7 @@
   width: 8px;
   height: 8px;
   content: '';
-  transform: translateY(-50%);
+  transform: translatey(-50%);
   transform: translate(-50%, -50%) rotate(45deg);
   border-color: #048851;
   border-width: 0 2px 2px 0;
@@ -313,19 +315,25 @@
   margin-top: 0;
 }
 
+.sec-medi-contact .contact-form .input-container.service-label .label-wrapper {
+  width: 23.612%;
+}
+
 .sec-medi-contact .contact-form .input-container.service-label .choice-label {
+  display: flex;
   align-items: flex-start;
   line-height: 1;
+  font-weight: 700;
 }
 
 .sec-medi-contact .contact-form .input-container.service-label .desired-service:not(:last-child) {
   padding-bottom: 30px;
-  border-bottom: 1px dashed #BFBFBF;
+  border-bottom: 1px dashed #bfbfbf;
 }
 
 .sec-medi-contact .contact-form .input-container.service-label .desired-service .gp-ttl {
   margin-bottom: 10px;
-  color: #7FBE26;
+  color: #7fbe26;
   font-weight: 700;
 }
 
@@ -349,7 +357,7 @@
   justify-content: flex-start;
   align-items: center;
   padding: 17px 20px;
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
 }
 
 .sec-medi-contact .contact-form .input-container .agreement-check input[type="checkbox"] {
@@ -379,8 +387,8 @@
 }
 
 .sec-medi-contact .contact-form .input-container .agreement-check input[type="checkbox"]:checked+.checkbox-label:before {
-  background-color: #7FBE26;
-  border-color: #7FBE26;
+  background-color: #7fbe26;
+  border-color: #7fbe26;
 }
 
 .sec-medi-contact .contact-form .input-container .agreement-check input[type="checkbox"]:checked+.checkbox-label:after {
@@ -421,20 +429,27 @@
   left: 0;
   width: 6px;
   height: 6px;
-  background-color: #7FBE26;
+  background-color: #7fbe26;
   content: '';
   border-radius: 50%;
 }
 
 .sec-medi-contact .contact-form .agreement li .policy-link {
-  color: #7FBE26;
+  display: inline-block;
+  color: #7fbe26;
 }
 
 .sec-medi-contact .confirm-pg {
   text-align: center;
 }
 
-/*I-pad*/
+.sec-medi-contact .confirm-pg .common-btn {
+  line-height: 32px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 1rem;
+}
+
+/*i-pad*/
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .sec-medi-contact .contact-form .input-container .form-label {
     width: 30%;
@@ -524,7 +539,7 @@
   .sec-medi-contact .contact-form .input-container .check-container {
     margin-bottom: 10px;
     padding: 10px;
-    border: 1px solid #DDDDDD;
+    border: 1px solid #dddddd;
     border-radius: 3px;
   }
 
@@ -540,7 +555,7 @@
   .sec-medi-contact .contact-form .input-container .checkbox-gp-list .checkbox-label:before {
     width: 20px;
     height: 20px;
-    border: 2px solid #BFBFBF;
+    border: 2px solid #bfbfbf;
   }
 
   .sec-medi-contact .contact-form .input-container .checkbox-gp-list input[type="checkbox"]:checked+.checkbox-label:after,

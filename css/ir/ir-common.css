@@ -10,7 +10,6 @@
 	display: flex;
 	justify-content: space-between;
   padding: 26px 0;
-  color: #048851;
   font-size: 1rem;
   font-weight: 700;
 }
@@ -19,6 +18,7 @@
   position: relative;
 	padding-right: 38px;
   width: 100%;
+  color: #048851;
 }
 
 .fiscal-link-gp .fiscal-link .fiscal-link-pdf+.fiscal-link-pdf {

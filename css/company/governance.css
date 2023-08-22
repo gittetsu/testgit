@@ -7,8 +7,8 @@
 }
 
 .governance .sec-governance .pdf::after {
-  bottom: -6px;
   right: 0;
+  bottom: -7px;
 }
 
 @media only screen and (max-width: 767.9px) {

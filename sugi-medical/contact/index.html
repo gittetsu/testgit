@@ -25,10 +25,10 @@
 	</section><!--/.sec-medical-bnr-->
 	<div class="inner">
 		<section class="sec-medi-contact">
-			<h3 class="common-medical-ttl common-ttl mb-sp-20">サービスに関するご質問やご不明点、ご相談などお気軽にお問い合わせください。</h3>
-			<form action="/" class="contact-form">
+			<h3 class="common-medical-ttl common-ttl mb-sp-30">サービスに関するご質問やご不明点、ご相談などお気軽にお問い合わせください。</h3>
+			<form action="" class="contact-form">
 				<div class="input-container">
-					<label for="name" class="form-label"><span class="required">必須</span>お名前</label>
+					<p class="form-label"><span class="required">必須</span>お名前</p>
 					<div class="input-box">
 						<div class="d-flex">
 							<input type="text" id="surname" name="surname" value="" placeholder="姓" class="name-input error">
@@ -38,7 +38,7 @@
 					</div>
 				</div>
 				<div class="input-container">
-					<label for="furiName" class="form-label"><span class="any">任意</span>フリガナ</label>
+					<p class="form-label"><span class="any">任意</span>フリガナ</p>
 					<div class="input-box">
 						<div class="d-flex">
 							<input type="text" id="furiSurname" name="furiSurname" value="" placeholder="セイ" class="name-input">
@@ -47,14 +47,17 @@
 					</div>
 				</div>
 				<div class="input-container">
-					<label for="phoneNumber" class="form-label"><span class="required">必須</span>電話番号</label>
+					<p class="form-label"><span class="required">必須</span>電話番号</p>
 					<div class="input-box">
 						<div class="phone-number">
-							<input type="text" id="phoneNumber" name="phoneNumber" value="" placeholder="090" class="ph-input prefix">
+							<input type="text" id="phoneNumber" name="phoneNumber" value="" maxlength="3" placeholder="090"
+								class="ph-input prefix" oninput="validateNumericInput(this)">
 							<span class="dashed"></span>
-							<input type="text" name="phoneNoFirst" value="" placeholder="0000" class="ph-input">
+							<input type="text" name="phoneNoFirst" value="" maxlength="4" placeholder="0000" class="ph-input"
+								oninput="validateNumericInput(this)">
 							<span class="dashed"></span>
-							<input type="text" name="phoneNoLast" value="" placeholder="0000" class="ph-input">
+							<input type="text" name="phoneNoLast" value="" maxlength="4" placeholder="0000" class="ph-input"
+								oninput="validateNumericInput(this)">
 						</div>
 					</div>
 				</div>
@@ -71,16 +74,17 @@
 					</div>
 				</div>
 				<div class="input-container address-gp">
-					<label for="postNumber" class="form-label"><span class="any">任意</span>住所</label>
+					<p class="form-label"><span class="any">任意</span>住所</p>
 					<div class="input-box">
 						<div class="detail-cnt mb-20">
 							<label for="postNumber">郵便番号</label>
 							<div class="phone-number">
 								<div class="d-flex">
-									<input type="text" id="postNumber" name="postNumber" value="" placeholder="000"
-										class="ph-input prefix">
+									<input type="text" id="postNumber" name="postNumber" value="" maxlength="3" placeholder="000"
+										class="ph-input prefix" oninput="validateNumericInput(this)">
 									<span class="dashed"></span>
-									<input type="text" name="postNoLast" value="" placeholder="0000" class="ph-input">
+									<input type="text" name="postNoLast" value="" maxlength="4" placeholder="0000" class="ph-input"
+										oninput="validateNumericInput(this)">
 								</div>
 							</div>
 						</div>
@@ -104,7 +108,7 @@
 					</div>
 				</div>
 				<div class="input-container desired-area">
-					<label for="areaCheck1" class="form-label"><span class="any">任意</span>支援希望エリア</label>
+					<p class="form-label"><span class="any">任意</span>支援希望エリア</p>
 					<div class="input-box">
 						<div class="checkbox-gp-list">
 							<div class="check-container">
@@ -123,11 +127,11 @@
 					</div>
 				</div>
 				<div class="input-container service-label">
-					<div class="form-label mb-sp-30">
-						<label for="serviceCheck1" class="choice-label">
+					<div class="label-wrapper mb-sp-30">
+						<p class="choice-label">
 							<span class="any">任意</span>
 							<span>希望サービスを<br class="pc"><br class="pc">選択してください</span>
-						</label>
+						</p>
 						<p class="multi-select">※複数選択可</p>
 					</div>
 					<div class="input-box">
@@ -214,10 +218,10 @@
 				</div>
 				<div class="input-container service-label">
 					<div class="form-label">
-						<label for="phoneCheck" class="choice-label">
+						<p class="choice-label">
 							<span class="required">必須</span>
 							<span>お問い合わせに<br class="pc"><br class="pc">対する回答方法</span>
-						</label>
+						</p>
 					</div>
 					<div class="checkbox-gp-list">
 						<div class="check-container">
@@ -238,7 +242,6 @@
 							<li>お客様の個人情報は厳重に取り扱い、お問い合わせ対応および当社からの情報提供を目的として利用させていただきます。</li>
 							<li>
 								個人情報の取り扱いにおきましては、当社プライバシーポリシーをご確認ください。
-								<br>
 								<a href="https://www.sugi-hd.co.jp/privacypolicy/index.html" target="_blank"
 									class="policy-link">https://www.sugi-hd.co.jp/<br class="sp">privacypolicy/index.html</a>
 							</li>
@@ -249,10 +252,10 @@
 						</div>
 					</div>
 				</div>
+				<div class="confirm-pg">
+					<button type="submit" class="common-btn"><span class="btn-text">確認画面へ</span></button>
+				</div>
 			</form>
-			<div class="confirm-pg">
-				<a href="#" class="common-btn"><span class="btn-text">確認画面へ</span></a>
-			</div>
 		</section><!-- /.sec-medi-contact -->
 	</div><!-- /.inner -->
 	<section class="sec-medical-contact">
@@ -275,6 +278,7 @@
 	</section><!--/.sec-medical-contact-->
 	<!--#include virtual="/include/medical-footer.html" -->
 	<script src="/js/common.js"></script>
+	<script src="/js/sugi-medical/contact.js"></script>
 </body>
 
 </html>

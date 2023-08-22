@@ -12,10 +12,16 @@ accordionItem.forEach(item => {
 					accordionItem.forEach(otherItem => {
 						if (otherItem !== item && otherItem.classList.contains('open')) {
 							const otherContent = otherItem.querySelector('.accordion-content');
-							otherItem.classList.remove('open');
-							if (otherContent) {
-								otherContent.style.height = '0';
-								otherContent.style.opacity = '0';
+							if (
+								otherContent &&
+								((otherContent.classList.contains("sidebar-detail") &&
+									content.classList.contains("sidebar-detail")) ||
+									(!otherContent.classList.contains("sidebar-detail") &&
+										!content.classList.contains("sidebar-detail")))
+							) {
+								otherItem.classList.remove("open");
+								otherContent.style.height = "0";
+								otherContent.style.opacity = "0";
 								otherContent.style.padding = "0";
 							}
 						}
@@ -214,9 +220,7 @@ function dropDownMenuFunc(toggle) {
 	if (!isDropdownShown) {
 		dropdownMenu.style.display = "block";
 		var contentHeight = calculateMaxHeight(dropdownMenu);
-		console.log(contentHeight)
 		dropdownMenu.classList.add("show");
-		console.log(dropDownMenu);
 		dropdownMenu.style.height = contentHeight + "px"; // Set the height to sub-menu's content
 		if (dropdownMenu.classList.contains("show")) {
 			dropdownTitle.classList.add("show");
@@ -250,8 +254,6 @@ dropdowns.forEach(function (toggle) {
 	} else {
 		toggle.addEventListener("click", function (e) {
 			e.preventDefault();
-			// closeAllDropdowns();
-			// dropDownMenuFunc(toggle);
 			var dropdownMenu = toggle.nextElementSibling;
 			var dropdownTitle;
 			var isDropdownShown = true;
@@ -289,39 +291,42 @@ document.addEventListener("DOMContentLoaded", function () {
 	var submenu = document.querySelector(".sub-menu");
 	var searchIcon = document.querySelector(".search-ico");
 	const bodyElement = document.body;
-	hamburger.addEventListener("click", function () {
-		hamburger.classList.toggle("active");
+	if (hamburger) {
+		hamburger.addEventListener("click", function () {
+			hamburger.classList.toggle("active");
 
-		if (hamburger.classList.contains("active")) {
-			navMenu.classList.add("active");
-			bodyElement.style.overflow = "hidden";
-			bodyElement.style.position = "fixed";
-			if (searchButton.classList.contains("show-submenu")) {
-				subMenu.style.height = 0;
-				searchButton.classList.remove("show-submenu");
-				submenu.classList.remove("show-submenu");
-				// console.log("show-menu");
-				existingImg = searchIcon.querySelector("img");
-				if (existingImg) {
-					newImg.src = "/img/common/ico_search.png";
-					newImg.alt = "search";
-					searchIcon.replaceChild(newImg, existingImg);
+			if (hamburger.classList.contains("active")) {
+				navMenu.classList.add("active");
+				bodyElement.style.overflow = "hidden";
+				bodyElement.style.position = "fixed";
+				if (searchButton.classList.contains("show-submenu")) {
+					subMenu.style.height = 0;
+					searchButton.classList.remove("show-submenu");
+					submenu.classList.remove("show-submenu");
+					// console.log("show-menu");
+					existingImg = searchIcon.querySelector("img");
+					if (existingImg) {
+						newImg.src = "/img/common/ico_search.png";
+						newImg.alt = "search";
+						searchIcon.replaceChild(newImg, existingImg);
+					}
 				}
-			}
-		} else {
-			navMenu.classList.remove("active");
-			bodyElement.style.overflow = "auto";
-			bodyElement.style.position = "relative";
-			if (jsSidebar) {
-				if (jsSidebar.classList.contains("sb-open")) {
-					navMenu.classList.remove("active");
-					bodyElement.style.overflow = "auto";
-					bodyElement.style.position = "fixed";
+			} else {
+				navMenu.classList.remove("active");
+				bodyElement.style.overflow = "auto";
+				bodyElement.style.position = "relative";
+				if (jsSidebar) {
+					if (jsSidebar.classList.contains("sb-open")) {
+						navMenu.classList.remove("active");
+						bodyElement.style.overflow = "auto";
+						bodyElement.style.position = "fixed";
+					}
 				}
-			}
 
-		}
-	});
+			}
+		});
+	}
+
 });
 
 function handleClick() {
@@ -494,9 +499,9 @@ function setHeight(elements) {
 
 // Call the alignment function when the page loads
 window.addEventListener("load", accordionHeight);
+window.addEventListener("resize", accordionHeight);
 
 function setOverflow(query) {
-	// const mediaQuery1 = window.matchMedia("(max-width: 1025px)");
 	if (query.matches) {
 		if (hamburger.classList.contains("active")) {
 			bodyElement.style.overflow = "hidden";
@@ -509,10 +514,5 @@ function setOverflow(query) {
 setOverflow(query);
 query.addListener(setOverflow);
 window.addEventListener("resize", setOverflow(query));
-
-
-window.addEventListener('resize', () => {
-	location.reload();
-});
 
 
