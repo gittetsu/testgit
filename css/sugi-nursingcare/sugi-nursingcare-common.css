@@ -53,7 +53,8 @@ body {
   letter-spacing: 0px;
 }
 
-.sugi-nursing-header .nav-menu-list li a:hover,.sugi-nursing-header .nav-menu-list li a.active {
+.sugi-nursing-header .nav-menu-list li a:hover,
+.sugi-nursing-header .nav-menu-list li a.active {
   color: #e6172c;
   transition: all .2s;
 }
@@ -749,32 +750,37 @@ footer.ft-nursing-care .page-top img {
   .common-nursing-button:hover {
     background-color: #e6172c;
     color: #fff;
-}
-.common-nursing-button:hover .arrow::after,
- .common-nursing-button:active .arrow:after,
+  }
+
+  .common-nursing-button:hover .arrow::after,
+  .common-nursing-button:active .arrow:after,
   .common-nursing-button.active .arrow::after {
-  border-color: #e6172c;
-}
-.common-nursing-button:hover .arrow,
- .common-nursing-button:active .arrow, 
- .common-nursing-button.active .arrow {
-  background-color: #fff;
-}
-.cmm-nursing-white-btn:hover {
-  border: 2px solid #fff;
-  background-color: #fff;
-  color: #e6172c;
-}
-.cmm-nursing-white-btn:hover .arrow,
- .cmm-nursing-white-btn:active .arrow,
+    border-color: #e6172c;
+  }
+
+  .common-nursing-button:hover .arrow,
+  .common-nursing-button:active .arrow,
+  .common-nursing-button.active .arrow {
+    background-color: #fff;
+  }
+
+  .cmm-nursing-white-btn:hover {
+    border: 2px solid #fff;
+    background-color: #fff;
+    color: #e6172c;
+  }
+
+  .cmm-nursing-white-btn:hover .arrow,
+  .cmm-nursing-white-btn:active .arrow,
   .cmm-nursing-white-btn.active .arrow {
-  background-color: #e6172c;
-}
-.cmm-nursing-white-btn:hover .arrow::after, 
-.cmm-nursing-white-btn:active .arrow:after,
- .cmm-nursing-white-btn.active .arrow::after {
-  border-color: #fff;
-}
+    background-color: #e6172c;
+  }
+
+  .cmm-nursing-white-btn:hover .arrow::after,
+  .cmm-nursing-white-btn:active .arrow:after,
+  .cmm-nursing-white-btn.active .arrow::after {
+    border-color: #fff;
+  }
 
   .sugi-nursing-header .header-blk {
     justify-content: space-between;
@@ -856,7 +862,8 @@ footer.ft-nursing-care .page-top img {
     border-radius: 50%;
   }
 
-  .sugi-nursing-header .nav-menu-list li a:hover,.sugi-nursing-header .nav-menu-list li a.active {
+  .sugi-nursing-header .nav-menu-list li a:hover,
+  .sugi-nursing-header .nav-menu-list li a.active {
     color: #fff;
   }
 
@@ -936,6 +943,7 @@ footer.ft-nursing-care .page-top img {
     position: relative;
     width: 100%;
     padding: 10px 10px 10px 20px;
+    background-color: #f9f8f4;
     max-width: 100%;
   }
 
@@ -1003,7 +1011,8 @@ footer.ft-nursing-care .page-top img {
     border-radius: 50%;
   }
 
-  .sugi-nursing-header .nav-menu-list li a:hover,.sugi-nursing-header .nav-menu-list li a.active {
+  .sugi-nursing-header .nav-menu-list li a:hover,
+  .sugi-nursing-header .nav-menu-list li a.active {
     color: #fff;
   }
 
@@ -1188,9 +1197,11 @@ footer.ft-nursing-care .page-top img {
   .cmm-nursing-white-btn.active .arrow::after {
     border-color: #fff;
   }
+
   .nursing-external-link {
     padding: 20px 48px 20px 30px;
-}
+  }
+
   /* cmm-nursing-tab-btn */
 
   .cmm-nursing-tab-btn {
