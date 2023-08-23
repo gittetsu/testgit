@@ -604,8 +604,7 @@ h6.common-sub-ttl {
   letter-spacing: -0.1px;
 }
 
-.sugi-holding-header .nav-menu-list li.dropdown a:hover,
-.sugi-holding-header .nav-menu-list li.dropdown.show a {
+.sugi-holding-header .nav-menu-list li.dropdown a:hover,.sugi-holding-header .nav-menu-list li.dropdown a.active,.sugi-holding-header .nav-menu-list li.dropdown.show a {
   color: #048851;
 }
 

@@ -94,18 +94,18 @@ accordionItem.forEach(item => {
 function acc_content_hight() {
 	var accordionItem = document.querySelectorAll(".accordion");
 	accordionItem.forEach((item) => {
-	  var content = item.querySelector(".accordion-content");
-	  if (
-		item.classList.contains("open") &&
-		content &&
-		!content.classList.contains("sidebar-detail")
-	  ) {
-		content.style.height = "auto";
-		content.style.height = content.scrollHeight + "px";
-	  }
+		var content = item.querySelector(".accordion-content");
+		if (
+			item.classList.contains("open") &&
+			content &&
+			!content.classList.contains("sidebar-detail")
+		) {
+			content.style.height = "auto";
+			content.style.height = content.scrollHeight + "px";
+		}
 	});
-  }
-  window.addEventListener("resize", acc_content_hight);
+}
+window.addEventListener("resize", acc_content_hight);
 
 /* sidebar banner toggle */
 
@@ -533,15 +533,34 @@ setOverflow(query);
 query.addListener(setOverflow);
 window.addEventListener("resize", setOverflow(query));
 
+/*header nav-menu add active-class*/
+var currentUrl = window.location.href.split('?')[0]; 
+var menuItems = document.querySelectorAll(".sugi-nursing-header .nav-menu-list li a,.sugi-medical-header .nav-menu-list li a,.sugi-holding-header .nav-menu-list li a");
+menuItems.forEach(function (item) {
+	var menuItemUrl = item.href.split('?')[0];
+	if (menuItemUrl === currentUrl) {
+		item.classList.add("active");
+	}
+});
 
-// var currentUrl = window.location.href;
+document.addEventListener("DOMContentLoaded", function () {
+	var menuItems = document.querySelectorAll(".sugi-holding-header .nav-menu-list li .dropdown-list");
+	var activeClass = "active";
+	var currentRoute = window.location.pathname;
 
-//     var menuItems = document.querySelectorAll(".sugi-holding-header .nav-menu-list li a");
-//     menuItems.forEach(function (item) {
-// 		console.log
-//         if (item.href === currentUrl) {
-//             item.classList.add("active");
-//         }
-//     });
-
-
+	menuItems.forEach(function (item) {
+		var dataTarget = item.getAttribute("data-target");
+		if (dataTarget === currentRoute) {
+			item.classList.add(activeClass);
+		}
+		item.addEventListener("click", function (event) {
+			event.preventDefault();
+			menuItems.forEach(function (otherItem) {
+				if (otherItem !== item) {
+					otherItem.classList.remove(activeClass);
+				}
+			});
+			item.classList.add(activeClass);
+		});
+	});
+});
