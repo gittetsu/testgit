@@ -78,15 +78,11 @@ body {
   border-radius: 35px;
 }
 
-.sugi-nursing-header .header-contact-btn a:hover {
-  background-color: #fff;
-  color: #e6172c;
-  transition: all .2s;
-}
-
+.sugi-nursing-header .header-contact-btn a:hover,
 .sugi-nursing-header .header-contact-btn a.active {
   background-color: #fff;
   color: #e6172c;
+  transition: all .2s;
 }
 
 /* main-nursing-care */
