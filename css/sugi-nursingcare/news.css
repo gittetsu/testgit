@@ -1,10 +1,8 @@
 @charset "UTF-8";
 
 .nursing-care-wrapper::after {
-  top: -3%;
-  left: 0;
-  width: 100%;
-  background-size: auto;
+  top: -4%;
+  left: 10%;
 }
 
 .news .newslist-gp .newslist-header .news-date {
@@ -332,13 +330,18 @@
 
 @media only screen and (max-width: 767.9px) {
 
+  .nursing-care-wrapper::after {
+    top: -1%;
+    left: 0;
+  }
+
   .news-search .accordion-ttl .accordion-text {
     color: #E6172B;
   }
 
   .news-search .accordion-ttl .arrow-blk {
-    background: #E6172B;
     border: 1px solid #E6172B;
+    background: #E6172B;
   }
 
   .news-search .accordion-ttl {
@@ -348,8 +351,8 @@
   .news-search .accordion-content {
     margin: 0;
     padding: 0;
-    border-top: none;
     background-color: #EDEADF;
+    border-top: none;
   }
 
   .news-search .search-panel {
