@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /* pc */
 
 /* sec-dominant */
@@ -246,7 +248,7 @@
   }
 
   .tab-list-02 li {
-    min-width: 110px;
+    min-width: unset;
   }
 
   .tab-slider .slide {
@@ -294,10 +296,6 @@
     display: flex;
     margin-bottom: 20px;
     border-top: transparent;
-  }
-
-  .tab-list-scroll {
-    overflow-x: auto;
   }
 
   .tab.tab-item li:first-child {

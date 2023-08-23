@@ -11,7 +11,7 @@ body {
   z-index: 2;
   width: 98%;
   margin: 0 auto;
-  padding: 31px 0 65px;
+  padding: 44px 0 50px;
   max-width: 1287px;
 }
 
@@ -23,7 +23,7 @@ body {
 
 .sugi-nursing-header .header-logo {
   width: 26.1%;
-  margin-right: 3%;
+  margin-right: 4.4%;
 }
 
 .sugi-nursing-header .header-logo a {
@@ -43,13 +43,14 @@ body {
 }
 
 .sugi-nursing-header .nav-menu-list li+li {
-  margin-left: 4%;
+  margin-left: 3.4%;
 }
 
 .sugi-nursing-header .nav-menu-list li a {
   display: block;
   font-size: 0.938rem;
   font-weight: 500;
+  letter-spacing: 0px;
 }
 
 .sugi-nursing-header .nav-menu-list li a:hover {
@@ -744,6 +745,37 @@ footer.ft-nursing-care .page-top img {
 
 /*I-pad*/
 @media screen and (min-width: 768px) and (max-width: 1024px) {
+
+  .common-nursing-button:hover {
+    background-color: #e6172c;
+    color: #fff;
+}
+.common-nursing-button:hover .arrow::after,
+ .common-nursing-button:active .arrow:after,
+  .common-nursing-button.active .arrow::after {
+  border-color: #e6172c;
+}
+.common-nursing-button:hover .arrow,
+ .common-nursing-button:active .arrow, 
+ .common-nursing-button.active .arrow {
+  background-color: #fff;
+}
+.cmm-nursing-white-btn:hover {
+  border: 2px solid #fff;
+  background-color: #fff;
+  color: #e6172c;
+}
+.cmm-nursing-white-btn:hover .arrow,
+ .cmm-nursing-white-btn:active .arrow,
+  .cmm-nursing-white-btn.active .arrow {
+  background-color: #e6172c;
+}
+.cmm-nursing-white-btn:hover .arrow::after, 
+.cmm-nursing-white-btn:active .arrow:after,
+ .cmm-nursing-white-btn.active .arrow::after {
+  border-color: #fff;
+}
+
   .sugi-nursing-header .header-blk {
     justify-content: space-between;
     width: 100%;
@@ -1156,7 +1188,9 @@ footer.ft-nursing-care .page-top img {
   .cmm-nursing-white-btn.active .arrow::after {
     border-color: #fff;
   }
-
+  .nursing-external-link {
+    padding: 20px 48px 20px 30px;
+}
   /* cmm-nursing-tab-btn */
 
   .cmm-nursing-tab-btn {

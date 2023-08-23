@@ -1,16 +1,14 @@
+@charset "UTF-8";
+
 .mb-120 {
   margin-bottom: 120px;
 }
-
-/*.sec-nursing-mv {
-  background: url('../../img/sugi-nursingcare/img_nursing_care-bg.png') no-repeat top/contain;
-  margin-top: -20%;
-}*/
 
 .sec-nursing-mv .support-commu-health {
   position: absolute;
   top: 0;
   right: 0;
+  z-index: -1;
   width: 30.75%;
 }
 
@@ -292,12 +290,13 @@ ul.nursing-newslist-blk li .nursing-news-list::after {
 }
 
 .sec-nursing-joinus .nursing-joinus-blk .nursing-joinus-img {
-  width: 52.3%;
+  width: 29.6%;
   max-width: 300px;
 }
 
 .sec-nursing-joinus .nursing-joinus-txtblk {
-  width: 66.8%;
+  width: 66.7%;
+  max-width: 685px;
 }
 
 .sec-nursing-joinus .nursing-joinus-txtblk .nursing-joinus-desc {
@@ -484,6 +483,7 @@ ul.nursing-newslist-blk li .nursing-news-list::after {
 
 /*I-pad*/
 @media screen and (min-width: 768px) and (max-width: 1024px) {
+
   .sec-nursing-mv .nursing-mv-cntblk .nursing-mv-txtblk {
     width: 45.75%;
     margin-left: 1.8%;
@@ -497,6 +497,10 @@ ul.nursing-newslist-blk li .nursing-news-list::after {
     width: 46%;
     margin-left: 2.8%;
   }
+
+  ul.nursing-newslist-blk li:hover .nursing-news-list::after {
+    background: url(/img/sugi-nursingcare/icon_circle_arrow.png) no-repeat center/cover;
+  }
 }
 
 /*SP*/
@@ -504,6 +508,15 @@ ul.nursing-newslist-blk li .nursing-news-list::after {
 
   .mb-120 {
     margin-bottom: 40px;
+  }
+
+  .sec-service .service-list-blk {
+    padding: 0;
+  }
+
+  .sec-nursing-news .nursing-new-cntblk {
+    padding-top: 40px;
+    max-width: 100%;
   }
 
   .sec-nursing-mv .nursing-mv-cntblk .support-health-img {
@@ -574,7 +587,12 @@ ul.nursing-newslist-blk li .nursing-news-list::after {
   }
 
   .sec-nursing-aboutus .nursing-about-txtblk {
+    margin-top: 0;
     padding: 0 20px;
+  }
+
+  .sec-nursing-aboutus {
+    margin-bottom: 40px;
   }
 
   .sec-nursing-aboutus .nursing-about-txtblk .common-nursing-button {
@@ -593,7 +611,16 @@ ul.nursing-newslist-blk li .nursing-news-list::after {
   }
 
   .sec-service .service-list-blk::after {
-    top: 48px;
+    top: 55px;
+    height: 99%;
+  }
+
+  .sec-nursing-qa .first-col-box .nursing-quest-box:first-child {
+    margin-top: 0;
+  }
+
+  .service-top-txtblk .common-nursing-sm-ttl {
+    margin-top: 20px;
   }
 
   .sec-service .service-top-txtblk {
@@ -604,12 +631,12 @@ ul.nursing-newslist-blk li .nursing-news-list::after {
 
   .sec-nursing-news {
     position: relative;
-    margin-top: 80px;
+    margin-top: 0;
     padding-bottom: 94px;
   }
 
   .sec-nursing-news ul.nursing-newslist-blk {
-    margin-top: 45px;
+    margin-top: 20px;
   }
 
   ul.nursing-newslist-blk li:hover .nursing-news-list::after {
@@ -622,7 +649,11 @@ ul.nursing-newslist-blk li .nursing-news-list::after {
   }
 
   .nursing-news-list .nursing-news-date {
-    margin-right: 24px;
+    margin-right: 16px;
+  }
+
+  .sec-dev-service .service-flow-list {
+    margin: 23px 0 30px;
   }
 
   .sec-nursing-news .nursing-news-ttlblk .common-nursing-button {
@@ -723,7 +754,7 @@ ul.nursing-newslist-blk li .nursing-news-list::after {
   /* sec-company-intro */
 
   .sec-company-intro .medical-consult-blk {
-    margin-top: 40px;
+    margin-top: 20px;
   }
 
   .sec-company-intro .cmp-intro-button {
@@ -743,8 +774,8 @@ ul.nursing-newslist-blk li .nursing-news-list::after {
     max-width: 292px;
   }
 
-  .cmm-nursing-desc {
-    margin: 20px 0;
+  .sec-company-intro .cmm-nursing-desc {
+    margin: 20px 0 20px;
   }
 
   .medical-consult-blk .medical-consult-img {
@@ -752,8 +783,8 @@ ul.nursing-newslist-blk li .nursing-news-list::after {
   }
 
   .sec-company-intro .company-business-blk {
-    margin-top: 40px;
-    padding-top: 40px;
+    margin-top: 20px;
+    padding-top: 0;
   }
 
   .sec-company-intro .medical-consult-txtblk .nursing-taxo-link,
@@ -789,6 +820,10 @@ ul.nursing-newslist-blk li .nursing-news-list::after {
     margin-bottom: 20px;
     padding-right: 0;
     border: unset;
+  }
+
+  .company-business-blk .cmm-business-blk .cmm-nursing-logo {
+    margin-bottom: 20px;
   }
 
   .cmm-business-blk .common-nursing-button {

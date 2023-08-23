@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /* sec-recruit */
 .sec-recruit .tab-list-02 li {
   width: 50%;
@@ -86,14 +88,14 @@
   .sec-recruit .list-gp .list-gp-detail .w-350 .img-blk {
     max-width: 201px;
   }
-  
+
   .sec-recruit .list-gp .list-gp-detail .w-350 .img-w220 {
     max-width: 211px;
   }
 
   .sec-recruit .list-gp .list-gp-detail .btn {
-    max-width: 266px;
     margin: 0 auto;
+    max-width: 266px;
   }
 
   .sec-recruit .list-gp .list-gp-detail dl dt,
@@ -101,7 +103,7 @@
     width: 100%;
   }
 
-  .sec-recruit .list-gp .list-gp-detail dl dt{
+  .sec-recruit .list-gp .list-gp-detail dl dt {
     border-right: none;
   }
 
@@ -115,12 +117,12 @@
     border-bottom: none;
   }
 
-  .sec-recruit .list-gp .list-gp-detail dl dd{
+  .sec-recruit .list-gp .list-gp-detail dl dd {
     padding: 20px;
   }
 
   .sec-recruit .list-gp .list-gp-detail dl dd a {
-    pointer-events: visible;
     color: #048851;
+    pointer-events: visible;
   }
 }

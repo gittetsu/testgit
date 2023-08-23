@@ -1,60 +1,66 @@
+const tabs = document.querySelectorAll('[data-tab-target]')
+const tabContents = document.querySelectorAll('[data-tab-content]')
+
+tabs.forEach(tab => {
+	tab.addEventListener('click', () => {
+    const currentUrl = window.location.href;
+    console.log(currentUrl);
+		const target = document.querySelector(tab.dataset.tabTarget)
+		tabContents.forEach(tabContent => {
+			tabContent.classList.remove('active')
+		})
+		tabs.forEach(tab => {
+			tab.classList.remove('active')
+		})
+    var hrefValue = tab.getAttribute("data-tab-target");
+    var currentRoute = window.location.pathname;
+    var newUrl = currentRoute + hrefValue;
+    history.pushState(null, null, newUrl);
+		tab.classList.add('active')
+		target.classList.add('active')
+	})
+});
 
 document.addEventListener("DOMContentLoaded", function (e) {
-  if (window.location.hash) {
-    let hash = decodeURIComponent(window.location.hash.trim());
-    console.log(hash);
-    document.querySelector(hash).scrollIntoView();
-    if (hash === "#integrated-report") {
-      const element = document
-        .querySelector(".report #report-id")
-        .classList.add("active");
-      document.querySelectorAll(".js-tab")[
-        document.querySelectorAll(".js-tab").length - 3
-      ].style.display = "block";
-    } else if (hash === "#nonfinancial-indicators") {
-      // this.alert("true")
-      const element = document
-        .querySelector(".indicators #indicators")
-        .classList.add("active");
-      document.querySelectorAll(".js-tab")[
-        document.querySelectorAll(".js-tab").length - 2
-      ].style.display = "block";
-    } else if (hash === "#GRI-std-comparison") {
-      // this.alert("true")
-      const element = document
-        .querySelector(".comparison-table #comparison-table")
-        .classList.add("active");
-      document.querySelectorAll(".js-tab")[
-        document.querySelectorAll(".js-tab").length - 1
-      ].style.display = "block";
-    }
-  } else {
-    document.querySelectorAll('.js-tab')[document.querySelectorAll('.js-tab').length - 3].style.display = 'block';
-    document.querySelector('.sec-data-tab a:first-child').classList.add('active');
+	tabs.forEach(tab => {
+		tab.classList.remove('active')
+	})
+	tabContents.forEach(tabContent => {
+		tabContent.classList.remove('active')
+	})
+	if (window.location.hash) {
+		let hash = decodeURIComponent(window.location.hash.trim());
+		document.querySelector(hash).scrollIntoView();
+		if (hash === "#integrated-report") {
+			var report = document.body.querySelector('.report[data-tab-target="#integrated-report"]')
+			report.classList.add('active');
+			const target = document.querySelector(report.dataset.tabTarget)
+			target.classList.add('active');
+		}
+		else if (hash == "#nonfinancial-indicators") {
+			var indicators = document.body.querySelector('.indicators[data-tab-target="#nonfinancial-indicators"]')
+			indicators.classList.add('active');
+			const target = document.querySelector(indicators.dataset.tabTarget)
+			target.classList.add('active');
+		}
+		else if (hash == "#GRI-std-comparison") {
+			var comparison = document.body.querySelector('.comparison[data-tab-target="#GRI-std-comparison"]')
+			comparison.classList.add('active');
+			const target = document.querySelector(comparison.dataset.tabTarget)
+			target.classList.add('active');
+		}
+	}
+  else{
+    var currentRoute = window.location.pathname;
+    var newUrl = currentRoute + "#integrated-report";
+    history.pushState(null, null, newUrl);
+    var report = document.body.querySelector('.report[data-tab-target="#integrated-report"]')
+			report.classList.add('active');
+			const target = document.querySelector(report.dataset.tabTarget)
+			target.classList.add('active');
   }
-  var tabLinks = document.querySelectorAll(".sec-data-tab li a");
-  tabLinks.forEach(function (tabLink) {
-    tabLink.addEventListener("click", function (event) {
-      var currentTab = tabLink.getAttribute("href");
-      console.log(currentTab);
-      var currentRoute = window.location.pathname;
-      var newUrl = currentRoute + currentTab;
-      console.log(newUrl);
-      history.pushState(null, null, newUrl);
-      tabLinks.forEach(function (link) {
-        link.classList.remove("active");
-      });
-      tabLink.classList.add("active");
-      var tabContents = document.querySelectorAll(".js-tab");
-      tabContents.forEach(function (content) {
-        content.style.display = "none";
-      });
-      document.querySelector(currentTab).style.display = "block";
-      event.preventDefault();
-    });
-  });
 });
 
 window.onload = function () {
-  window.scrollTo(0, 0);
+	window.scrollTo(0, 0);
 };

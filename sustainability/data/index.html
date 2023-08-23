@@ -35,18 +35,18 @@
       <section class="mb-150 sec-data" id="sec-data">
         <div class="tab-list-scroll mb-40">
           <ul class="sec-data-tab tab-list-02">
-            <li class="report">
-              <a href="#integrated-report" id="report-id">統合報告書</a>
+            <li>
+              <a href="javascript:void(0)" data-tab-target="#integrated-report" class="active report">統合報告書</a>
             </li>
-            <li class="indicators">
-              <a href="#nonfinancial-indicators" id="indicators">非財務指標</a>
+            <li>
+              <a href="javascript:void(0)" data-tab-target="#nonfinancial-indicators" class="indicators">非財務指標</a>
             </li>
-            <li class="comparison-table">
-              <a href="#GRI-std-comparison" id="comparison-table">GRIスタンダード対照表</a>
+            <li>
+              <a href="javascript:void(0)" data-tab-target="#GRI-std-comparison" class="comparison">GRIスタンダード対照表</a>
             </li>
           </ul>
         </div>
-        <div id="integrated-report" class="js-tab">
+        <div id="integrated-report" data-tab-content>
           <div class="data-gp mb-150">
             <h2 class="common-ttl">統合報告書</h2>
             <ul class="unorder-list-gp mb-40">
@@ -111,10 +111,10 @@
             </ul>
           </div>
         </div>
-        <div id="nonfinancial-indicators" class="js-tab">
+        <div id="nonfinancial-indicators" data-tab-content>
           <h3 class="common-ttl">非財務指標</h3>
         </div>
-        <div id="GRI-std-comparison" class="js-tab">
+        <div id="GRI-std-comparison" data-tab-content>
           <h3 class="common-ttl">GRIスタンダード対照表</h3>
         </div>
       </section><!-- /.recruit-sec -->

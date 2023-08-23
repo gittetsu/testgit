@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /* pc */
 
 .nursing-care-wrapper::after {
@@ -324,12 +326,16 @@
 }
 
 .sec-nurcare-contact .contact-form .agreement li .policy-link {
-  display: inline-block;
+  display: block;
   color: #d6365c;
 }
 
 .sec-nurcare-contact .confirm-pg {
   text-align: center;
+}
+
+.sec-nurcare-contact .confirm-pg .common-nursing-button {
+  cursor: pointer;
 }
 
 /* sec-nurcare-consult */
@@ -388,7 +394,8 @@
     max-width: 100%;
   }
 
-  .sec-nurcare-contact .contact-form .input-container label {
+  .sec-nurcare-contact .contact-form .input-container label,
+  .sec-nurcare-contact .contact-form .input-container .form-label {
     display: flex;
     align-items: center;
     margin-bottom: 10px;

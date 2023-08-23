@@ -1,3 +1,17 @@
+@charset "UTF-8";
+
+.nursing-care-wrapper::after {
+  top: -3%;
+  left: 0;
+  width: 100%;
+  background-size: auto;
+}
+
+.news .newslist-gp .newslist-header .news-date {
+  color: #7E7E7E;
+  font-weight: 400;
+}
+
 .news .news-blk {
   margin-top: 63px;
   margin-bottom: 100px;
@@ -243,7 +257,7 @@
   border-bottom: 1px solid #e2dece;
 }
 
-.news  .cmn-pagination .cmn-pager a {
+.news .cmn-pagination .cmn-pager a {
   border: 1px solid #E6172C;
 }
 
@@ -252,6 +266,11 @@
   background-color: #EDEADF;
   color: #E6172C;
   transition: all 0.2s;
+}
+
+.news .cmn-pagination .cmn-pager-num a.active {
+  background-color: #E6172C;
+  color: #fff;
 }
 
 .news .cmn-pagination .cmn-pager-num a:hover,
@@ -312,6 +331,16 @@
 }
 
 @media only screen and (max-width: 767.9px) {
+
+  .news-search .accordion-ttl .accordion-text {
+    color: #E6172B;
+  }
+
+  .news-search .accordion-ttl .arrow-blk {
+    background: #E6172B;
+    border: 1px solid #E6172B;
+  }
+
   .news-search .accordion-ttl {
     padding: 17px 19px;
   }
@@ -320,10 +349,11 @@
     margin: 0;
     padding: 0;
     border-top: none;
+    background-color: #EDEADF;
   }
 
   .news-search .search-panel {
-    padding: 20px 20px 10px 20px;
+    padding: 0;
   }
 
   .news-search .search-panel .w-504 {
@@ -408,6 +438,7 @@
   .search-panel .tab-gp .tab-btn a {
     font-size: 0.875rem;
   }
+
   .news .newslist-gp .newslist-header {
     align-items: flex-start;
   }

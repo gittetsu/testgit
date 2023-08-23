@@ -90,6 +90,23 @@ accordionItem.forEach(item => {
 
 })
 
+// dynamically accordion content high when window is resize
+function acc_content_hight() {
+	var accordionItem = document.querySelectorAll(".accordion");
+	accordionItem.forEach((item) => {
+	  var content = item.querySelector(".accordion-content");
+	  if (
+		item.classList.contains("open") &&
+		content &&
+		!content.classList.contains("sidebar-detail")
+	  ) {
+		content.style.height = "auto";
+		content.style.height = content.scrollHeight + "px";
+	  }
+	});
+  }
+  window.addEventListener("resize", acc_content_hight);
+
 /* sidebar banner toggle */
 
 var toggleButton = document.querySelector(".js-toggle-btn");
@@ -420,6 +437,7 @@ closeBtns.forEach((btn) => {
 window.onclick = function (event) {
 	if (event.target.className === "modal") {
 		event.target.style.display = "none";
+		document.querySelector("body").style.overflow = "auto";
 	}
 };
 const query = window.matchMedia("(max-width: 1025px)");
@@ -514,5 +532,16 @@ function setOverflow(query) {
 setOverflow(query);
 query.addListener(setOverflow);
 window.addEventListener("resize", setOverflow(query));
+
+
+// var currentUrl = window.location.href;
+
+//     var menuItems = document.querySelectorAll(".sugi-holding-header .nav-menu-list li a");
+//     menuItems.forEach(function (item) {
+// 		console.log
+//         if (item.href === currentUrl) {
+//             item.classList.add("active");
+//         }
+//     });
 
 

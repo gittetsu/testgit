@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /* officer */
 .officer .side-w246 p {
   text-align: center;
@@ -35,9 +37,9 @@
 
 @media only screen and (max-width: 767.9px) {
   .officer .side-w524 li {
+    flex-wrap: nowrap;
     justify-content: flex-start;
     padding: 9.5px 0;
-    flex-wrap: nowrap;
   }
 
   .officer .side-w524 li p.date {
@@ -48,7 +50,8 @@
   }
 
   .officer .side-w524 li p.txt {
-    width:71%;
+    width: 71%;
+    font-size: 1rem;
   }
 
   .officer .list-gp .list-gp-detail {

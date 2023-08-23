@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /* growth-strategy */
 .growth-strategy .d-flex {
   justify-content: flex-start;
@@ -88,9 +90,9 @@
   top: 50%;
   right: 0;
   left: 0;
-  margin: 0 auto;
   width: 6px;
   height: 6px;
+  margin: 0 auto;
   background-color: #048851;
   content: '';
   transform: translateY(-50%);
@@ -120,9 +122,9 @@
   top: 50%;
   right: 0;
   left: 0;
-  margin: 0 auto;
   width: 8px;
   height: 8px;
+  margin: 0 auto;
   background: url(/img/common/ico_arrow.svg) no-repeat center/cover;
   content: '';
   transform: translateY(-50%) rotate(90deg);
@@ -149,7 +151,8 @@
     border-top: 1px solid#e6e6e6;
     border-bottom: none;
   }
-  .ir-link-flex .ir-link:last-child{
+
+  .ir-link-flex .ir-link:last-child {
     border-bottom: 1px solid#e6e6e6;
   }
 

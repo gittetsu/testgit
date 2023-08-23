@@ -1,8 +1,10 @@
+@charset "UTF-8";
+
 /* sec-prevention */
 .sec-prevention .small-text {
-	text-align: center;
+  text-align: center;
 }
 
 .sec-others .others-content {
-	text-align: center;
+  text-align: center;
 }

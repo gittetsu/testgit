@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 .fiscal-link-gp li {
   border-top: 1px solid #e6e6e6;
 }
@@ -7,8 +9,8 @@
 }
 
 .fiscal-link-gp .fiscal-link {
-	display: flex;
-	justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
   padding: 26px 0;
   font-size: 1rem;
   font-weight: 700;
@@ -16,8 +18,8 @@
 
 .fiscal-link-gp .fiscal-link .fiscal-link-pdf {
   position: relative;
-	padding-right: 38px;
   width: 100%;
+  padding-right: 38px;
   color: #048851;
 }
 
@@ -27,8 +29,8 @@
 
 .fiscal-link-gp .fiscal-link .fiscal-link-pdf::after {
   position: absolute;
-  right: 0;
   top: 8px;
+  right: 0;
   width: 37px;
   height: 20px;
   background: url('../../img/common/ico_pdf.svg') no-repeat center/cover;

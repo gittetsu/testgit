@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /* sec-result */
 .result .img-blk {
   width: 87.4%;
@@ -13,6 +15,7 @@
 }
 
 @media only screen and (max-width: 767.9px) {
+
   /* sec-result */
   .result .img-blk {
     width: 100%;

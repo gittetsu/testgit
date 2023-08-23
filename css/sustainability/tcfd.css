@@ -1,7 +1,9 @@
+@charset "UTF-8";
+
 .table .green-txt {
+  color: #048851;
   font-size: 1.75rem;
   font-weight: 700;
-  color: #048851;
 }
 
 .table .w-380 {
@@ -34,11 +36,4 @@
 
 .table .center {
   text-align: center;
-}
-
-/*I-pad*/
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-}
-
-@media only screen and (max-width: 767.9px) {
 }

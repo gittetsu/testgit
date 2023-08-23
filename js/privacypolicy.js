@@ -11,6 +11,10 @@ tabs.forEach(tab => {
 		tabs.forEach(tab => {
 			tab.classList.remove('active')
 		})
+		var hrefValue = tab.getAttribute("data-tab-target");
+    var currentRoute = window.location.pathname;
+    var newUrl = currentRoute + hrefValue;
+    history.pushState(null, null, newUrl);
 		tab.classList.add('active')
 		target.classList.add('active')
 	})
@@ -51,7 +55,17 @@ document.addEventListener("DOMContentLoaded", function (e) {
 			const target = document.querySelector(anonymous.dataset.tabTarget)
 			target.classList.add('active');
 		}
+		
 	}
+	else{
+    var currentRoute = window.location.pathname;
+    var newUrl = currentRoute + "#privacy-policy";
+    history.pushState(null, null, newUrl);
+		var privacy = document.body.querySelector('.privacy[data-tab-target="#privacy-policy"]')
+		privacy.classList.add('active');
+		const target = document.querySelector(privacy.dataset.tabTarget)
+		target.classList.add('active');
+}
 });
 
 window.onload = function () {

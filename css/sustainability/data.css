@@ -1,9 +1,11 @@
-.stb-data .js-tab{
-  display: none;
+@charset "UTF-8";
+
+.active[data-tab-content] {
+  display: block;
 }
 
-.stb-data .tab-list-02 li a.active + .js-tab {
-  display: block;
+[data-tab-content] {
+  display: none;
 }
 
 .stb-data .sec-data .tab-list-02 li {

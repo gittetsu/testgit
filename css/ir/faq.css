@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /* qa-list */
 .faq .qa-list {
   flex-wrap: wrap;
@@ -53,15 +55,16 @@
 }
 
 @media only screen and (max-width: 767.9px) {
+
   /* qa-list */
   .faq .qa-list li {
     margin-right: 2.25%;
   }
-  
+
   .faq .qa-list li:nth-child(2n) {
     margin-right: 0;
   }
-  
+
   /* qa-blk */
   .faq .qa-blk dt,
   .faq .qa-blk dd {

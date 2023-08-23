@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 .healthcare-services .common-box {
   display: flex;
   flex-wrap: wrap;
@@ -32,10 +34,10 @@
 }
 
 .healthcare-services .common-box dd span {
+  line-height: 1;
+  margin-right: 8px;
   font-size: 1.875rem;
   font-weight: 700;
-  margin-right: 8px;
-  line-height: 1;
 }
 
 /* sec-renewal */

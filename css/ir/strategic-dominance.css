@@ -1,5 +1,7 @@
+@charset "UTF-8";
+
 /* dominance-store */
 .dominance-store .txt-store {
-  text-indent: -16px;
   margin-left: 16px;
+  text-indent: -16px;
 }

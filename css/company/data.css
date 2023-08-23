@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 .cmm-partner-boxlist .pc-none {
   display: none !important;
 }
@@ -246,16 +248,19 @@
   margin-left: 3%;
   max-width: 220px;
 }
+
 .cmm-partner-box .partner-box-inner .resources-txt {
   width: 100%;
   font-size: 0.875rem;
   letter-spacing: 0;
 }
+
 .cmm-partner-box .partner-box-inner .resources-txt .financial-desc-txt {
-  font-weight: 400;
   width: 95.2%;
+  font-weight: 400;
   text-align: left;
 }
+
 .cmm-partner-box .partner-box-inner .partner-sub-ttl {
   color: #048851;
   font-size: 0.875rem;
@@ -287,12 +292,13 @@
   top: -15px;
   right: 20px;
 }
+
 .sec-six-captials sup {
   position: relative;
+  top: -0.5em;
   line-height: 0;
   font-size: 75%;
   vertical-align: baseline;
-  top: -0.5em;
 }
 
 @media only screen and (max-width: 767.9px) {
@@ -317,6 +323,7 @@
   .bdr-bottom-pc {
     border-bottom: unset;
   }
+
   .cmm-capital-blk:nth-child(3n) .cmm-partner-boxlist .bdr-btm-none-sp {
     border-bottom: unset;
   }
@@ -560,10 +567,12 @@
   .collection-stores-blk .collection-store-desc {
     width: 42%;
   }
+
   .cmm-partner-box .partner-box-inner .resources-txt {
     width: 53%;
   }
-  .cmm-partner-box .partner-box-inner .resources-txt .financial-desc-txt{
+
+  .cmm-partner-box .partner-box-inner .resources-txt .financial-desc-txt {
     width: 87.5%;
   }
 

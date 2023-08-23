@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /* sec-healthcare */
 .strategy-vision .sec-healthcare .d-flex {
   align-items: center;
@@ -12,8 +14,8 @@
 
 .strategy-vision .sec-healthcare .healthcare-item p {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   letter-spacing: 0.6px;
 }
 
@@ -31,6 +33,7 @@
 }
 
 @media only screen and (max-width: 767.9px) {
+
   /* sec-healthcare */
   .strategy-vision .sec-healthcare .healthcare-item {
     padding: 20px;

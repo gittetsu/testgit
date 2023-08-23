@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 .ph-president-area .d-flex {
   justify-content: flex-end;
   align-items: flex-end;
@@ -23,8 +25,9 @@
   .ph-president-area .d-flex {
     flex-wrap: nowrap;
   }
+
   .sign-txtblk {
     padding-right: 8px;
-}
+  }
 
 }
