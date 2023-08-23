@@ -18,11 +18,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     /* Active Menu */
 
-    var currentUrl = window.location.href;
+    var currentUrl = window.location.href.split('?')[0];
 
     var menuItems = document.querySelectorAll(".sugi-smile-header .menu-list li a");
+
     menuItems.forEach(function (item) {
-        if (item.href === currentUrl) {
+        var menuItemUrl = item.href.split('?')[0];
+        if (menuItemUrl === currentUrl) {
             item.classList.add("active");
         }
     });
