@@ -328,6 +328,8 @@
 .sec-nurcare-contact .contact-form .agreement li .policy-link {
   display: block;
   color: #d6365c;
+  letter-spacing: 0.1em;
+  word-break: break-all;
 }
 
 .sec-nurcare-contact .confirm-pg {
