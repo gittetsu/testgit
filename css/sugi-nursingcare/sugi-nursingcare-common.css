@@ -84,6 +84,11 @@ body {
   transition: all .2s;
 }
 
+.sugi-nursing-header .header-contact-btn a.active {
+  background-color: #fff;
+  color: #e6172c;
+}
+
 /* main-nursing-care */
 
 .nursing-care-wrapper {

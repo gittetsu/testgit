@@ -146,9 +146,10 @@
   transition: all .2s;
 }
 
-.sugi-medical-header .nav-menu-list .contact a:hover::after {
+.sugi-medical-header .nav-menu-list .contact a:hover::before,
+.sugi-medical-header .nav-menu-list .contact a.active::before {
   transition: all .2s;
-  filter: invert(59%) sepia(87%) saturate(410%) hue-rotate(43deg) brightness(97%) contrast(82%);
+  filter: invert(60%) sepia(87%) saturate(410%) hue-rotate(43deg) brightness(100%) contrast(82%);
 }
 
 /* common-btn */
