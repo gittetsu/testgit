@@ -310,6 +310,7 @@
 .sec-medi-contact .contact-form .input-container.service-label .multi-select {
   margin-top: 10px;
   padding-left: 51.2px;
+  font-size: 0.875rem;
   font-weight: 400;
 }
 
@@ -439,6 +440,8 @@
 .sec-medi-contact .contact-form .agreement li .policy-link {
   display: block;
   color: #7fbe26;
+  letter-spacing: 0.1em;
+  word-break: break-all;
 }
 
 .sec-medi-contact .confirm-pg {
@@ -464,6 +467,10 @@
 
   .sec-medi-contact .contact-form .input-container.service-label .desired-service .othercase-input label {
     width: 25%;
+  }
+
+  .sec-medi-contact .contact-form .input-container.service-label .label-wrapper {
+    width: 30%;
   }
 }
 
