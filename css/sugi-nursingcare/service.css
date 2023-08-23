@@ -1,6 +1,13 @@
 @charset "UTF-8";
 
 /* service-top-cntblk */
+
+.nursing-care-wrapper::after {
+  top: -2%;
+  left: 9%;
+  width: 84%;
+}
+
 .service-nursing-care .main-nursing-care {
   padding-bottom: 60px;
 }
@@ -86,7 +93,7 @@
 }
 
 .service-flow-blk .ft-contact-bnr {
-  padding: 40px 0 0px;
+  padding: 0;
   background-color: #edeadf;
   border-radius: 15px;
   border-bottom: unset;
@@ -132,6 +139,15 @@
 
 
 @media only screen and (max-width: 767.9px) {
+
+  .nursing-care-wrapper::after {
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-size: cover;
+    max-width: 100%;
+  }
+
   .service-top-cntblk .sevice-tab-btn {
     width: 100%;
     margin: 40px auto 30px;
@@ -139,7 +155,12 @@
   }
 
   #service-content .service-list-blk {
+    margin-bottom: 60px;
     padding: 20px 0 20px;
+  }
+
+  .service-flow-list {
+    margin-top: 40px;
   }
 
   #service-flow .inner {
@@ -201,7 +222,7 @@
   }
 
   #service-flow .service-flow-list .service-flow-cnt .ft-consultation-bnr {
-    padding: 40px 20px 0px 20px;
+    padding: 40px 20px 20px 20px;
   }
 
   .service-flow-list .service-flow-cnt .ft-consultation-bnr .consultation-main-txt {
