@@ -5,10 +5,7 @@
 }
 
 .qa-blk {
-  overflow: hidden;
   margin-bottom: 40px;
-  border: 2px solid #009944;
-  border-radius: 20px;
 }
 
 .qa-blk .ques {
@@ -18,20 +15,25 @@
   color: #fff;
   font-size: 1.625rem;
   font-weight: 700;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
 .qa-blk .ques::before {
   position: absolute;
   top: 10px;
   left: 28px;
-	font-size: 1.625rem;
   color: #f5ff03;
+  font-size: 1.625rem;
   content: "Q.";
 }
 
 .qa-blk .ans {
   padding: 30px 30px 30px 28px;
+  border: 2px solid #009944;
   background-color: #fff;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
 .qa-blk .ans .ans-txt {
