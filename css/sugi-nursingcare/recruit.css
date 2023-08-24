@@ -36,11 +36,13 @@
 }
 
 .sec-nurcare-gp .nursing-info .label {
+  color: #292726;
   font-size: 1.5rem;
   font-weight: 500;
 }
 
 .sec-nurcare-gp .description {
+  color: #292726;
   font-size: 1rem;
   letter-spacing: 0.64px;
 }
@@ -97,7 +99,7 @@
 
 .sec-nurcare-recruit .colorful-img {
   position: absolute;
-  top: -85px;
+  top: -71px;
   right: 13%;
   width: 100%;
   max-width: 170px;
@@ -125,10 +127,14 @@
   border-bottom-left-radius: 8px;
 }
 
-
 .sec-nurcare-recruit .recruitment .description {
   line-height: 1.657;
   margin-bottom: 37px;
+  color: #292726;
+}
+
+.sec-nurcare-recruit .recruitment .overview .recruit-btn .nursing-external-link {
+  letter-spacing: 0;
 }
 
 .sec-nurcare-recruit .recruitment .img-blk {
@@ -240,7 +246,6 @@
 
   .sec-nurcare-recruit .recruitment .recruit-btn .nursing-external-link {
     padding: 20px 51px 20px 32px;
-    letter-spacing: 0;
   }
 
   .sec-nurcare-consult {
