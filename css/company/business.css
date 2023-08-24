@@ -123,6 +123,11 @@
   width: 62.694%;
 }
 
+.tab-slider .slide-cnt-img,
+.tab-slider .slide-txt h3 {
+  text-align: center;
+}
+
 /* tabs */
 
 .tab {
