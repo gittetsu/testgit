@@ -147,11 +147,6 @@
   border-bottom: 1px solid #e6e6e6;
 }
 
-.sec-key-issues .tbl-main-cntlist .tbl-cntlist-item .materiality-tbl-txt,
-.sec-key-issues .tbl-main-cntlist .tbl-cntlist-item .unorder-list-gp {
-  width: 60%;
-}
-
 #materiality-theme03 .tbl-main-cntlist .tbl-cntlist-item:first-child {
   padding-top: 15px;
   border-top: 1px solid #e6e6e6;
@@ -164,11 +159,10 @@
 }
 
 .sec-key-issues .table-btn {
-  width: 100%;
+  width: 140px;
   margin-right: 20px;
   border: 1px solid;
   text-align: center;
-  max-width: 140px;
   border-radius: 3px;
 }
 
