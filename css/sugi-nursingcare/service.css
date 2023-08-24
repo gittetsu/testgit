@@ -1,0 +1,294 @@
+@charset "UTF-8";
+
+/* service-top-cntblk */
+
+.nursing-care-wrapper::after {
+  top: -2%;
+  left: 9%;
+  width: 84%;
+}
+
+.service-nursing-care .main-nursing-care {
+  padding-bottom: 60px;
+}
+
+.service-nursing-care .mb-10 {
+  margin-bottom: 10px;
+}
+
+.service-top-cntblk .sevice-tab-btn {
+  width: 67.3%;
+  margin: 66px auto 80px;
+  max-width: 740px;
+}
+
+.service-top-cntblk .sevice-tab-btn .cmm-nursing-tab-btn {
+  width: 48.6%;
+}
+
+.service-top-cntblk .sevice-tab-btn .cmm-nursing-white-btn {
+  width: 48.65%;
+}
+
+.servie-cnt-img {
+  margin: 50px auto 100px;
+  max-width: 700px;
+}
+
+/* service-flow-blk */
+
+.service-flow-list {
+  margin-top: 56px;
+}
+
+.service-flow-list .service-flow-cnt .ft-consultation-bnr {
+  padding: 37px 0 0 0;
+}
+
+.service-flow-list .service-flow-cnt .ft-consultation-bnr .consultation-main-txt {
+  line-height: 1.4;
+  margin-bottom: 24px;
+}
+
+.service-flow-list .service-flow-item {
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+.service-flow-item .service-flow-ttl {
+  padding-bottom: 24px;
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.service-flow-ttl .count-number {
+  padding: 12px 18.5px;
+  background-color: #e6172c;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.service-flow-ttl .flow-ttl-txt {
+  padding-left: 24px;
+}
+
+.service-flow-item .service-flow-cnt .service-cnt-imgblk .service-cnt-img {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 686px;
+}
+
+.service-flow-item .service-flow-cnt .service-list-subttl {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+#service-flow .service-flow-list .service-flow-item:nth-child(3n) .service-flow-ttl {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: unset;
+}
+
+.service-flow-blk .ft-contact-bnr {
+  padding: 0;
+  background-color: #edeadf;
+  border-radius: 15px;
+  border-bottom: unset;
+}
+
+.service-flow-blk .ft-consultation-bnr .consultation-list ul li a {
+  padding: 16px 0;
+}
+
+.service-flow-blk .ft-consultation-bnr .consultation-text {
+  width: 28.5%;
+}
+
+.service-flow-blk .ft-consultation-bnr .consultation-list {
+  width: 68.5%;
+}
+
+.service-flow-blk .ft-consultation-bnr .consultation-list ul li a::after {
+  width: 20px;
+  height: 20px;
+}
+
+.service-flow-blk .ft-consultation-bnr .consultation-list ul li a::before {
+  right: 7px;
+}
+
+/*I-pad*/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  #service-content ul.service-list li.service-list-item {
+    padding: 36px 5px 16px 5px;
+  }
+
+  #service-content .service-list-item .service-ttl-caption {
+    top: 10%;
+    right: -13px;
+  }
+
+  .service-top-cntblk .sevice-tab-btn {
+    width: 100%;
+  }
+
+}
+
+
+@media only screen and (max-width: 767.9px) {
+
+  .nursing-care-wrapper::after {
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-size: cover;
+    max-width: 100%;
+  }
+
+  .service-top-cntblk .sevice-tab-btn {
+    width: 100%;
+    margin: 40px auto 30px;
+    max-width: 100%;
+  }
+
+  #service-content .service-list-blk {
+    margin-bottom: 60px;
+    padding: 20px 0 20px;
+  }
+
+  .service-flow-list {
+    margin-top: 40px;
+  }
+
+  #service-flow .inner {
+    padding: 0;
+  }
+
+  #service-flow .service-flow-list .service-flow-item {
+    padding: 30px 20px;
+    border-radius: unset;
+  }
+
+  #service-flow .service-flow-list .service-flow-item:first-child {
+    padding: 30px 0;
+  }
+
+  #service-flow .service-flow-list .service-flow-item .service-flow-ttl {
+    width: 89.4%;
+    margin: 0 auto 20px;
+  }
+
+  .service-flow-ttl .flow-ttl-txt {
+    padding-left: 23px;
+  }
+
+  #service-flow .service-flow-list .service-flow-item:first-child .service-flow-ttl {
+    padding: 0 0 24px 0;
+  }
+
+  #service-flow .service-flow-list .service-flow-item:first-child .unorder-list-gp {
+    padding: 0 20px;
+  }
+
+  #service-flow .service-flow-list .service-flow-cnt .ft-consultation-bnr {
+    padding: 38px 20px 0 20px;
+  }
+
+  .service-top-cntblk .sevice-tab-btn .cmm-nursing-tab-btn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .service-nursing-care h2.common-nursing-subttl {
+    font-size: 1.5rem;
+  }
+
+  .servie-cnt-img {
+    margin: 24px auto 40px;
+    max-width: 100%;
+  }
+
+  .service-flow-blk .ft-contact-bnr {
+    padding: 40px 20px 40px 20px;
+    border-radius: unset;
+  }
+
+  .service-flow-blk .ft-contact-bnr .ft-bnr-phone .small-text,
+  .service-flow-blk .ft-contact-bnr .ft-bnr-mail .small-text {
+    letter-spacing: 0.66px;
+  }
+
+  #service-flow .service-flow-list .service-flow-cnt .ft-consultation-bnr {
+    padding: 40px 20px 20px 20px;
+  }
+
+  .service-flow-list .service-flow-cnt .ft-consultation-bnr .consultation-main-txt {
+    padding-bottom: 0;
+  }
+
+  .service-flow-blk .ft-consultation-bnr .consultation-text {
+    width: 100%;
+  }
+
+  .service-flow-blk .ft-consultation-bnr .consultation-list {
+    width: 100%;
+  }
+
+  .service-flow-blk .service-flow-item:last-child .service-flow-ttl {
+    align-items: center;
+  }
+
+  .service-nursing-care .mb-sp-80 {
+    margin-bottom: 80px;
+  }
+
+  .service-nursing-care .main-nursing-care {
+    padding-bottom: 30px;
+  }
+
+  .service-flow-blk .service-flow-item .service-flow-cnt .service-cnt-imgblk {
+    width: 100%;
+    overflow: auto;
+    padding: 0 20px;
+    border: unset;
+    border-radius: unset;
+  }
+
+  .service-flow-blk .service-flow-item .service-flow-cnt .service-cnt-imgblk .service-cnt-img {
+    width: 726px;
+    margin: 0 auto;
+    padding: 20px 24px 20px 20px;
+    border: 1px solid #edeadf;
+    max-width: 726px;
+    border-radius: 15px;
+  }
+
+  .service-flow-blk .service-cnt-imgblk .service-cnt-img img {
+    width: 686px;
+    max-width: 686px;
+  }
+
+  .service-flow-blk .service-flow-item .service-flow-cnt .service-cnt-imgblk::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+
+  .service-flow-blk .service-flow-item .service-flow-cnt .service-cnt-imgblk::-webkit-scrollbar-thumb {
+    width: 0;
+    height: 0;
+    background-color: transparent;
+  }
+
+  #service-flow .service-flow-list .service-flow-item:nth-child(2) {
+    padding: 30px 0 30px 0px;
+  }
+
+  #service-flow .service-flow-list .service-flow-item:nth-child(2) .service-list-subttl,
+  #service-flow .service-flow-list .service-flow-item:nth-child(2) .unorder-list-gp {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}

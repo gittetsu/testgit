@@ -1,0 +1,143 @@
+@charset "UTF-8";
+
+/* pc */
+
+/* sec-medi-service */
+
+.sec-medi-service .service-list .list-item .w-430 {
+  width: 39.091%;
+}
+
+.sec-medi-service .service-list .list-item .w-620 {
+  width: 56.364%;
+}
+
+.sec-medi-service .service-list .list-item {
+  margin-bottom: 80px;
+  padding-bottom: 80px;
+  border-bottom: 1px dashed #7fbe26;
+}
+
+.sec-medi-service .service-list .list-item .service-ttl {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  color: #048851;
+  font-size: 1.375rem;
+  font-weight: 700;
+}
+
+.sec-medi-service .service-list .list-item .service-ico {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  max-width: 70px;
+  height: 70px;
+  margin-right: 20px;
+  background-color: #048851;
+  border-radius: 50%;
+}
+
+.sec-medi-service .service-list .list-item .service-ico::before {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: 0;
+  width: 32px;
+  height: 29px;
+  margin: 0 auto;
+  content: '';
+  transform: translatey(-50%);
+}
+
+.sec-medi-service .service-list .list-item .service-ico.medical::before {
+  background: url(/img/sugi-medical/ico_medical_institute.svg) no-repeat center/100% 100%;
+}
+
+.sec-medi-service .service-list .list-item .service-ico.pharmacies::before {
+  background: url(/img/sugi-medical/ico_pharma_service.svg) no-repeat center/100% 100%;
+}
+
+.sec-medi-service .service-list .list-item .medical-menu .sub-ttl {
+  margin-bottom: 20px;
+  color: #7fbe26;
+  font-weight: 700;
+  border-bottom: 1px solid #e5f0d6;
+}
+
+.sec-medi-service .service-list .list-item .medical-menu .menu-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.sec-medi-service .service-list .list-item .medical-menu .menu-list li:not(:last-child) {
+  margin: 0 20px 20px 0;
+}
+
+.sec-medi-service .service-list .list-item .medical-menu .menu-list li span {
+  margin-right: 10px;
+  padding: 2px 9px;
+  background-color: #f5faed;
+  color: #7fbe26;
+  font-weight: 700;
+  border-radius: 3px;
+}
+
+.sec-medi-service .note {
+  margin-bottom: 100px;
+}
+
+/* sp */
+
+@media only screen and (max-width: 767.9px) {
+  .sec-medi-service .service-list .list-item .service-ttl {
+    font-size: 1.25rem;
+  }
+
+  .sec-medi-service .service-list .list-item {
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+  }
+
+  .sec-medi-service .service-list .list-item .w-430 {
+    width: 100%;
+  }
+
+  .sec-medi-service .service-list .list-item .w-620 {
+    width: 100%;
+  }
+
+  .sec-medi-service .service-list .list-item.col-reverse {
+    flex-direction: column-reverse;
+  }
+
+  .sec-medi-service .service-list .list-item .cnt-text {
+    font-size: 1rem;
+  }
+
+  .sec-medi-service .service-list .list-item:last-child {
+    margin-bottom: 30px;
+  }
+
+  .sec-medi-service .service-list .list-item .medical-menu .menu-list {
+    flex-direction: column;
+  }
+
+  .sec-medi-service .service-list .list-item .medical-menu .menu-list li {
+    font-size: 1rem;
+  }
+
+  .sec-medi-service .service-list .list-item .medical-menu .menu-list li:not(:last-child) {
+    margin: 0 0 20px 0;
+  }
+
+  .sec-medi-service .service-list .list-item .medical-menu .sub-ttl {
+    font-size: 1rem;
+  }
+
+  .sec-medi-service .note {
+    margin-bottom: 80px;
+    font-size: 1rem;
+  }
+}

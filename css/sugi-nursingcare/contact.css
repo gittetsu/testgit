@@ -1,0 +1,458 @@
+@charset "UTF-8";
+
+/* pc */
+
+.nursing-care-wrapper::after {
+  top: -5%;
+  left: 0;
+  width: 100%;
+  background-size: auto;
+}
+
+/* sec-nurcare-contact */
+
+.sec-nurcare-contact {
+  padding-bottom: 100px;
+}
+
+.sec-nurcare-contact .common-nursing-ttl h2 {
+  margin: 0 0 63px 0;
+}
+
+.sec-nurcare-contact .common-nursing-subttl {
+  margin-bottom: 50px;
+}
+
+.sec-nurcare-contact .description .notice {
+  font-size: 0.875rem;
+}
+
+.sec-nurcare-contact .contact-form .input-container {
+  display: flex;
+  align-items: flex-start;
+  margin: 20px 0;
+  padding-top: 20px;
+  padding-left: 20px;
+  border-top: 1px solid #dedac8;
+}
+
+.sec-nurcare-contact .contact-form .input-container input[type='text'],
+.sec-nurcare-contact .contact-form .input-container input[type='email'] {
+  width: 100%;
+  padding: 13px 20px;
+  border: 1px solid #ddd;
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  outline: none;
+  border-radius: 3px;
+}
+
+.sec-nurcare-contact .contact-form .input-container textarea {
+  height: 100px;
+  padding: 13px 20px;
+  border: 1px solid #ddd;
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-size: 1rem;
+  outline: none;
+  resize: none;
+  border-radius: 3px;
+}
+
+.sec-nurcare-contact .contact-form .input-container input[type='text']::-webkit-input-placeholder {
+  color: #969696;
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-weight: 500;
+}
+
+.sec-nurcare-contact .contact-form .input-container input[type='text']:-ms-input-placeholder {
+  color: #969696;
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-weight: 500;
+}
+
+.sec-nurcare-contact .contact-form .input-container input[type='text']::placeholder {
+  color: #969696;
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-weight: 500;
+}
+
+.sec-nurcare-contact .contact-form .input-container .input-box .d-flex {
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+.sec-nurcare-contact .contact-form .input-container label,
+.sec-nurcare-contact .contact-form .input-container .form-label {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+}
+
+.sec-nurcare-contact .contact-form .input-container .form-label {
+  width: 23.612%;
+  margin-top: 7px;
+}
+
+.sec-nurcare-contact .contact-form .input-container .input-box {
+  width: 76.39%;
+}
+
+.sec-nurcare-contact .contact-form .input-container input[type='email']::-webkit-input-placeholder {
+  color: #969696;
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-weight: 500;
+}
+
+.sec-nurcare-contact .contact-form .input-container input[type='email']:-ms-input-placeholder {
+  color: #969696;
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-weight: 500;
+}
+
+.sec-nurcare-contact .contact-form .input-container input[type='email']::placeholder {
+  color: #969696;
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-weight: 500;
+}
+
+.sec-nurcare-contact .contact-form .input-container .phone-number {
+  display: flex;
+}
+
+.sec-nurcare-contact .contact-form .input-container input[type='text'].name-input {
+  width: 46.88%;
+  max-width: 230px;
+}
+
+.sec-nurcare-contact .contact-form .input-container input[type='text'].ph-input {
+  width: 43%;
+  max-width: 100px;
+}
+
+.sec-nurcare-contact .contact-form .input-container .dashed {
+  position: relative;
+  margin: 0 10px;
+  padding: 0 8px;
+}
+
+.sec-nurcare-contact .contact-form .input-container .dashed::after {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 16px;
+  height: 0;
+  content: '';
+  transform: translatey(-50%);
+  border-color: #000;
+  border-width: 0 0 2px 0;
+  border-style: solid;
+}
+
+.sec-nurcare-contact .contact-form .input-container input[type='text'].name-input:not(:last-child) {
+  margin-right: 10px;
+}
+
+.sec-nurcare-contact .contact-form .input-container .required {
+  line-height: 1.7;
+  margin-right: 10px;
+  padding: 1px 5.9px 1px;
+  background-color: #d6365c;
+  color: #fff;
+  font-size: 0.75rem;
+  border-radius: 3px;
+}
+
+.sec-nurcare-contact .contact-form .input-container .err-msg {
+  line-height: 1;
+  margin-top: 12px;
+  color: #d6365c;
+  font-size: 0.813rem;
+  font-weight: 500;
+}
+
+.sec-nurcare-contact .contact-form .input-container input[type='text'].error {
+  border: 1px solid #d6365c;
+}
+
+.sec-nurcare-contact .contact-form .input-container .err-msg .exclamation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  line-height: 1;
+  margin-right: 4px;
+  padding-left: 2px;
+  background-color: #d6365c;
+  color: #fff;
+  font-size: 0.75rem;
+  border-radius: 50%;
+}
+
+.sec-nurcare-contact .contact-form .input-container .any {
+  line-height: 1.7;
+  margin-right: 10px;
+  padding: 0 5.1px 0;
+  border: 1px solid #000;
+  background-color: #fff;
+  color: #000;
+  font-size: 0.75rem;
+  font-weight: 700;
+  border-radius: 3px;
+}
+
+.sec-nurcare-contact .contact-form .input-container .custom-select {
+  position: relative;
+  width: 71%;
+  max-width: 236px;
+}
+
+.sec-nurcare-contact .contact-form .input-container select {
+  width: 100%;
+  padding: 13px 20px;
+  border: 1px solid #ddd;
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  outline: none;
+  border-radius: 3px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+
+.sec-nurcare-contact .contact-form .input-container .select-arrow {
+  position: absolute;
+  top: 45%;
+  right: 20px;
+  width: 8px;
+  height: 8px;
+  content: '';
+  transform: translatey(-50%);
+  transform: translate(-50%, -50%) rotate(45deg);
+  border-color: #ef5b6d;
+  border-width: 0 2px 2px 0;
+  border-style: solid;
+  pointer-events: none;
+}
+
+.sec-nurcare-contact .contact-form .input-container.address-gp {
+  align-items: flex-start;
+}
+
+.sec-nurcare-contact .contact-form .input-container .agreement-check {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 17px 20px;
+  background-color: #edeadf;
+}
+
+.sec-nurcare-contact .contact-form .input-container .agreement-check input[type="checkbox"] {
+  display: none;
+}
+
+.sec-nurcare-contact .contact-form .input-container .agreement-check .checkbox-label {
+  display: flex;
+  position: relative;
+  align-items: center;
+  width: 100%;
+  padding-left: 36px;
+  cursor: pointer;
+}
+
+.sec-nurcare-contact .contact-form .input-container .agreement-check .checkbox-label:before {
+  position: absolute;
+  left: 0;
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  background-color: #fff;
+  content: '';
+  border-radius: 3px;
+}
+
+.sec-nurcare-contact .contact-form .input-container .agreement-check input[type="checkbox"]:checked+.checkbox-label:before {
+  background-color: #d6365c;
+  border-color: #d6365c;
+}
+
+.sec-nurcare-contact .contact-form .input-container .agreement-check input[type="checkbox"]:checked+.checkbox-label:after {
+  position: absolute;
+  top: 43%;
+  left: 6px;
+  width: 5px;
+  height: 10px;
+  line-height: 1;
+  content: '';
+  transform: translate(50%, -50%) rotate(40deg);
+  border-color: #fff;
+  border-width: 0 3px 3px 0;
+  border-style: solid;
+  pointer-events: none;
+}
+
+.sec-nurcare-contact .contact-form .input-container.aggreement-gp {
+  display: block;
+  padding: 30px 0 0 0;
+}
+
+.sec-nurcare-contact .contact-form .input-container.aggreement-gp label.req-label {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.sec-nurcare-contact .contact-form .agreement li {
+  position: relative;
+  margin-bottom: 10px;
+  padding-left: 16px;
+}
+
+.sec-nurcare-contact .contact-form .agreement li::before {
+  position: absolute;
+  top: 14px;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  background-color: #d6365c;
+  content: '';
+  border-radius: 50%;
+}
+
+.sec-nurcare-contact .contact-form .agreement li .policy-link {
+  display: block;
+  color: #d6365c;
+  letter-spacing: 0.1em;
+  word-break: break-all;
+}
+
+.sec-nurcare-contact .confirm-pg {
+  text-align: center;
+}
+
+.sec-nurcare-contact .confirm-pg .common-nursing-button {
+  cursor: pointer;
+}
+
+/* sec-nurcare-consult */
+
+.sec-nurcare-consult {
+  padding-bottom: 56px;
+}
+
+/*i-pad*/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .sec-nurcare-contact .contact-form .input-container .form-label {
+    width: 30%;
+  }
+
+  .sec-nurcare-contact .contact-form .input-container .input-box {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 767.9px) {
+  .nursing-care-wrapper::after {
+    top: -2%;
+    height: 30%;
+  }
+
+  .sec-nurcare-contact {
+    margin-top: 20px;
+    padding-bottom: 80px;
+  }
+
+  .sec-nurcare-contact .description .cnt-text {
+    font-size: 1rem;
+  }
+
+  .sec-nurcare-contact .contact-form .input-container input[type='text'] {
+    padding: 8px 10px;
+  }
+
+  .sec-nurcare-contact .contact-form .input-container .form-label {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .sec-nurcare-contact .contact-form .input-container .input-box {
+    width: 100%;
+  }
+
+  .sec-nurcare-contact .contact-form .input-container {
+    display: block;
+    padding: 0;
+    padding-top: 20px;
+  }
+
+  .sec-nurcare-contact .contact-form .input-container input[type='text'].name-input {
+    width: 48.21%;
+    max-width: 100%;
+  }
+
+  .sec-nurcare-contact .contact-form .input-container label,
+  .sec-nurcare-contact .contact-form .input-container .form-label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  .sec-nurcare-contact .contact-form .input-container input[type='text'].ph-input.prefix {
+    width: 23.87%;
+    max-width: 100%;
+  }
+
+  .sec-nurcare-contact .contact-form .input-container input[type='text'].ph-input {
+    width: 29.836%;
+    max-width: 100%;
+  }
+
+  .sec-nurcare-contact .contact-form .input-container .dashed {
+    padding: 0 2.5px;
+  }
+
+  .sec-nurcare-contact .contact-form .input-container .dashed::after {
+    width: 5px;
+  }
+
+  .sec-nurcare-contact .contact-form .input-container .custom-select {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .sec-nurcare-contact .contact-form .input-container select {
+    padding: 8px 10px;
+  }
+
+  .sec-nurcare-contact .contact-form .input-container textarea {
+    height: 200px;
+  }
+
+  .sec-nurcare-contact .contact-form .input-container.aggreement-gp .description p {
+    margin-bottom: 10px;
+  }
+
+  .sec-nurcare-contact .contact-form .input-container.aggreement-gp .description {
+    font-size: 1rem;
+  }
+
+  .sec-nurcare-contact .contact-form .input-container .agreement-check .checkbox-label {
+    margin-bottom: 0;
+  }
+
+  .sec-nurcare-contact .contact-form .agreement li {
+    margin-bottom: 20px;
+  }
+
+  .sec-nurcare-consult {
+    padding-bottom: 30px;
+  }
+}

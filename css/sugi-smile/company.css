@@ -1,0 +1,96 @@
+@charset "UTF-8";
+
+.smile-company {
+  padding-top: 60px;
+}
+
+.sugi-company-blk {
+  padding-bottom: 100px;
+}
+
+.sugi-company-blk .intro-txt {
+  font-size: 1.625rem;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.cmp-intro-txt {
+  font-size: 1.625rem;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 2.6px;
+}
+
+.sugi-company-blk .green-bdr-line {
+  margin: 80px auto;
+}
+
+.company-cnt-blk .table .table-ttl th {
+  width: 18%;
+  padding: 15px 0 15px 15px;
+  background-color: #f5f8f7;
+  color: #000;
+  font-family: 'Zen Maru Gothic', sans-serif;
+  letter-spacing: 1.6px;
+  max-width: 197px;
+}
+
+.company-cnt-blk .table .table-ttl td {
+  background-color: #fff;
+  font-family: 'Zen Maru Gothic', sans-serif;
+  white-space: unset;
+}
+
+.company-cnt-blk .table tr td,
+.company-cnt-blk .table tr th {
+  vertical-align: initial;
+}
+
+
+/*I-pad*/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .smile-company {
+    padding-top: 100px;
+  }
+}
+
+
+/* Sp */
+@media only screen and (max-width: 767.9px) {
+  .smile-company {
+    padding-top: 67px;
+  }
+
+  .sugi-company-blk .mb-sp-50 {
+    margin-bottom: 50px;
+  }
+
+  .sugi-company-blk .intro-txt {
+    font-size: 1.25rem;
+  }
+
+  .sugi-company-blk .green-bdr-line {
+    margin: 40px auto;
+  }
+
+  .smile-company .table tr td,
+  .table tr th {
+    padding: 15px 10px;
+    font-size: 1rem;
+  }
+
+  .smile-company .table table {
+    width: 100%;
+  }
+
+  .smile-company .table .table-ttl th {
+    padding: 15.7px 10px;
+  }
+
+  .company-cnt-blk .table .table-ttl th {
+    width: 30%;
+    font-size: 1rem;
+    max-width: 100px;
+  }
+
+}

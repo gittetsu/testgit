@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+.fiscal-link-gp li {
+  border-top: 1px solid #e6e6e6;
+}
+
+.fiscal-link-gp li:last-child {
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.fiscal-link-gp .fiscal-link {
+  display: flex;
+  justify-content: space-between;
+  padding: 26px 0;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.fiscal-link-gp .fiscal-link .fiscal-link-pdf {
+  position: relative;
+  width: 100%;
+  padding-right: 38px;
+  color: #048851;
+}
+
+.fiscal-link-gp .fiscal-link .fiscal-link-pdf+.fiscal-link-pdf {
+  margin-top: 25px;
+}
+
+.fiscal-link-gp .fiscal-link .fiscal-link-pdf::after {
+  position: absolute;
+  top: 8px;
+  right: 0;
+  width: 37px;
+  height: 20px;
+  background: url('../../img/common/ico_pdf.svg') no-repeat center/cover;
+  content: '';
+}
+
+.fiscal-link-gp .fiscal-link .fiscal-main-txt {
+  display: inline-block;
+  width: 25%;
+  color: #000;
+}
+
+.fiscal-link-gp .fiscal-link .fiscal-pdf-gp {
+  display: flex;
+  flex-direction: column;
+  width: 68%;
+}
+
+@media only screen and (max-width: 767.9px) {
+  .fiscal-link-gp .fiscal-link {
+    font-size: 0.875rem;
+  }
+
+  .fiscal-link-gp .fiscal-link .fiscal-link-pdf::after {
+    top: 3px;
+  }
+}

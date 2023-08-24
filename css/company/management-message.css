@@ -1,0 +1,77 @@
+@charset "UTF-8";
+
+.representative-blk {
+  position: relative;
+}
+
+.about-director {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  text-align: center;
+  content: '';
+  transform: translateY(-50%);
+}
+
+.director-info span {
+  padding-left: 20px;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.manage-plan-blk .table .table-ttl th {
+  width: 35.91%;
+  padding: 16px 20px;
+  vertical-align: initial;
+  border-left: unset;
+  border-right: unset;
+}
+
+.manage-plan-blk .table .table-ttl th,
+.manage-plan-blk .table tr td {
+  padding: 15px 20px;
+  border-right: unset;
+}
+
+.manage-plan-blk .table ul.co-creation-list li sup {
+  position: relative;
+  top: -0.3em;
+  line-height: 0;
+  font-size: 75%;
+  vertical-align: baseline;
+}
+
+.manage-foundation .foundation-ttl {
+  color: #009a94;
+  font-weight: 700;
+}
+
+.manage-foundation .table .table-ttl th {
+  background-color: #effcfa;
+  color: #009a94;
+}
+
+.manage-foundation .table .unorder-list-gp li::before {
+  background-color: #009a94;
+}
+
+.position-blk-subttl {
+  font-size: 1.375rem;
+}
+
+@media only screen and (max-width: 767.9px) {
+  .about-director {
+    position: unset;
+    margin-top: 30px;
+    text-align: left;
+    transform: unset;
+  }
+
+  .about-director .text {
+    font-size: 1rem;
+  }
+
+  .position-blk-subttl {
+    font-size: 1.125rem;
+  }
+}

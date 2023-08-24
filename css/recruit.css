@@ -1,0 +1,128 @@
+@charset "UTF-8";
+
+/* sec-recruit */
+.sec-recruit .tab-list-02 li {
+  width: 50%;
+  min-width: unset;
+}
+
+.sec-recruit .list-gp .list-gp-detail {
+  align-items: flex-start;
+  margin-bottom: 50px;
+  padding: 0;
+  border: none;
+}
+
+.sec-recruit .list-gp .list-gp-detail .w-350 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 75px 20px;
+  border: 1px solid #e0e0e0;
+}
+
+.sec-recruit .list-gp .list-gp-detail .w-350 .img-blk {
+  max-width: 208px;
+}
+
+.sec-recruit .list-gp .list-gp-detail .w-350 .img-w220 {
+  max-width: 220px;
+}
+
+.sec-recruit .list-gp .list-gp-detail h4 {
+  letter-spacing: 0.09rem;
+}
+
+.sec-recruit .list-gp .list-gp-detail .btn {
+  max-width: 330px;
+}
+
+.sec-recruit .list-gp .list-gp-detail .btn a {
+  width: 100%;
+}
+
+.sec-recruit .list-gp .list-gp-detail dl dt,
+.sec-recruit .list-gp .list-gp-detail dl dd {
+  padding: 11.5px 18px;
+  border-top: 1px solid #cce2d9;
+  border-bottom: 1px solid #cce2d9;
+}
+
+.sec-recruit .list-gp .list-gp-detail dl dt {
+  width: 31.6%;
+  background-color: #f5f8f7;
+  font-weight: 700;
+  border-right: 1px solid #cce2d9;
+}
+
+.sec-recruit .list-gp .list-gp-detail dl dd {
+  width: 68.4%;
+}
+
+.sec-recruit .list-gp .list-gp-detail dl dd a {
+  pointer-events: none;
+}
+
+[data-tab-content] {
+  display: none;
+}
+
+.active[data-tab-content] {
+  display: block;
+}
+
+@media only screen and (max-width: 767.9px) {
+  .sec-recruit .list-gp .list-gp-detail {
+    display: block;
+  }
+
+  .sec-recruit .list-gp .list-gp-detail .w-350 {
+    width: 100%;
+    padding: 74px 20px;
+  }
+
+  .sec-recruit .w-710 {
+    width: 100%;
+  }
+
+  .sec-recruit .list-gp .list-gp-detail .w-350 .img-blk {
+    max-width: 201px;
+  }
+
+  .sec-recruit .list-gp .list-gp-detail .w-350 .img-w220 {
+    max-width: 211px;
+  }
+
+  .sec-recruit .list-gp .list-gp-detail .btn {
+    margin: 0 auto;
+    max-width: 266px;
+  }
+
+  .sec-recruit .list-gp .list-gp-detail dl dt,
+  .sec-recruit .list-gp .list-gp-detail dl dd {
+    width: 100%;
+  }
+
+  .sec-recruit .list-gp .list-gp-detail dl dt {
+    border-right: none;
+  }
+
+  .sec-recruit .list-gp .list-gp-detail dl dt,
+  .sec-recruit .list-gp .list-gp-detail dl dd {
+    padding: 16px 20px;
+    letter-spacing: 0.7px;
+  }
+
+  .sec-recruit .list-gp .list-gp-detail dl dt {
+    border-bottom: none;
+  }
+
+  .sec-recruit .list-gp .list-gp-detail dl dd {
+    padding: 20px;
+  }
+
+  .sec-recruit .list-gp .list-gp-detail dl dd a {
+    color: #048851;
+    pointer-events: visible;
+  }
+}

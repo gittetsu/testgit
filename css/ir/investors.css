@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+.table .center {
+  text-align: center;
+}
+
+/* sec-finance */
+.active[data-tab-content] {
+  display: block;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+[data-tab-content] {
+  display: none;
+}
+
+.sec-finance .tab-list-02 li {
+  width: 50%;
+}
+
+.sec-finance .tab-list-02 li a {
+  padding: 20px 15px;
+}
+
+.sec-finance .pdf-btn {
+  display: inline-block;
+  position: relative;
+  padding: 14px 93px 14px 30px;
+  border: 2px solid #048851;
+  background-color: #fff;
+  color: #048851;
+  font-weight: 700;
+  border-radius: 100px;
+}
+
+.sec-finance .pdf-btn::after {
+  position: absolute;
+  top: 50%;
+  right: 35px;
+  width: 37px;
+  height: 20px;
+  background: url('../../img/common/ico_pdf.svg') no-repeat center/cover;
+  content: '';
+  transform: translateY(-50%);
+}

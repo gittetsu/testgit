@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+/* sp */
+
+@media only screen and (max-width: 767.9px) {
+  .related-report .pdf {
+    display: initial;
+  }
+}

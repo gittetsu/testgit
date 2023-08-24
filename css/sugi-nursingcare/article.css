@@ -1,0 +1,86 @@
+@charset "UTF-8";
+
+/* news-article */
+.nursing-care-wrapper::after {
+  top: -4%;
+  left: 10%;
+}
+
+.news-article .sec-atricle {
+  margin-top: 63px;
+  margin-bottom: 100px;
+}
+
+.news-article h2.common-ttl {
+  color: #e6172c;
+  border-bottom: 2px solid #E6172C;
+}
+
+.news-article .ref {
+  background-color: #e6172b;
+}
+
+.news-article .ref-link {
+  background-color: #eceadf;
+}
+
+.news-article h4.common-ttl {
+  color: #e6172b;
+  border-left: 3px solid #e6172b;
+}
+
+.news-article .news-date {
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.news-article .news-date p {
+  margin-right: 20px;
+}
+
+.news-article .news-date span {
+  display: flex;
+  align-items: center;
+  height: 20px;
+  padding: 0px 10px;
+  background-color: #FBEBD3;
+  color: #e6172c;
+  letter-spacing: 1.4px;
+  border-radius: 10px;
+}
+
+.news-article .ref-link a {
+  padding-right: 22px;
+  color: #e6172b;
+}
+
+.news-article .ref-link a::after {
+  width: 12px;
+  height: 12px;
+  background: url('/img/sugi-nursingcare/ico_external.svg') no-repeat center/cover;
+}
+
+.news-article .btn {
+  text-align: center;
+}
+
+.news-article .contact-us {
+  padding: 18px;
+  background-color: #5D5555;
+}
+
+.news-article .contact-us p {
+  line-height: 1.4;
+  color: #fff;
+  font-size: 1.375rem;
+  text-align: center;
+}
+
+@media only screen and (max-width: 767.9px) {
+
+  .nursing-care-wrapper::after {
+    top: -1%;
+    left: 0;
+  }
+}

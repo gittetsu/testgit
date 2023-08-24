@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+/* sec-result */
+.result .img-blk {
+  width: 87.4%;
+  margin: 0 auto 10px;
+}
+
+/* counter-measure */
+.work-engagement .counter-measure ul .list-bg {
+  margin-bottom: 10px;
+  padding: 30px;
+  background-color: #e5f3ed;
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 767.9px) {
+
+  /* sec-result */
+  .result .img-blk {
+    width: 100%;
+  }
+}
