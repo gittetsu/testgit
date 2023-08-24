@@ -123,8 +123,7 @@
   width: 62.694%;
 }
 
-.tab-slider .slide-cnt-img,
-.tab-slider .slide-txt h3 {
+.tab-slider .slide-cnt-img {
   text-align: center;
 }
 
@@ -295,6 +294,10 @@
   .tab-slider .slide-cnt-img,
   .tab-slider .slide-txt {
     width: 100%;
+  }
+
+  .tab-slider .slide-txt h3 {
+    text-align: center;
   }
 
   .tab {
