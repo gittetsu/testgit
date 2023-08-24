@@ -174,22 +174,56 @@ tabList.forEach(function (button) {
 });
 
 /*anchor-link*/
+// document.addEventListener('DOMContentLoaded', function () {
+//     document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+//         anchor.addEventListener('click', function (e) {
+//             e.preventDefault();
+//             const targetId = this.getAttribute("href").substring(1);
+//             console.log(targetId)
+//             const targetElement = document.getElementById(targetId);
+//             if (targetElement) {
+//                 targetElement.scrollIntoView({
+//                     behavior: 'smooth'
+//                 });
+//                 history.replaceState(null, null, '#' + targetId);
+//             }
+//         });
+//     });
+// });
+
 document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const targetId = this.getAttribute("href").substring(1);
-            console.log(targetId)
             const targetElement = document.getElementById(targetId);
             if (targetElement) {
-                targetElement.scrollIntoView({
-                    behavior: 'smooth'
-                });
-                history.replaceState(null, null, '#' + targetId);
+                smoothScrollTo(targetElement);
             }
         });
     });
 });
+
+function smoothScrollTo(targetElement) {
+    const targetPosition = targetElement.getBoundingClientRect().top;
+    const startPosition = window.pageYOffset;
+    const distance = targetPosition - startPosition;
+    const duration = 1000; // Adjust the duration as needed
+    const startTime = performance.now();
+
+    function scrollStep(timestamp) {
+        const currentTime = timestamp - startTime;
+        const progress = Math.min(currentTime / duration, 1);
+        const easeInOutCubic = progress < 0.5 ? 4 * progress * progress * progress : (progress - 1) * (2 * progress - 2) * (2 * progress - 2) + 1;
+        window.scrollTo(0, startPosition + distance * easeInOutCubic);
+
+        if (currentTime < duration) {
+            requestAnimationFrame(scrollStep);
+        }
+    }
+
+    requestAnimationFrame(scrollStep);
+}
 // /* scrollTop*/
 let topBtn = document.getElementById("scrollTop");
 topBtn.onclick = function (e) {
