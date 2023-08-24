@@ -5,14 +5,14 @@
 }
 
 /* sec-finance */
-.tab-content {
-  display: none;
-}
-
-.tab-content.active {
+.active[data-tab-content] {
   display: block;
   padding-bottom: 30px;
   border-bottom: 1px solid #e6e6e6;
+}
+
+[data-tab-content] {
+  display: none;
 }
 
 .sec-finance .tab-list-02 li {
