@@ -212,9 +212,7 @@ ol {
   border-bottom: 1px solid #048851;
 }
 
-.link:visited,
-.pdf:visited,
-.external-link:visited {
+.link:visited {
   color: #63288e;
   border-bottom: unset;
 }
@@ -233,10 +231,10 @@ ol {
   top: 10px;
   right: 0;
   width: 100%;
-  max-width: 14px;
   height: 14px;
   background: url(../img/common/ico_external.svg) no-repeat center/100% 100%;
   content: '';
+  max-width: 14px;
   max-width: 14px;
 }
 
@@ -252,13 +250,13 @@ ol {
 
 .pdf::after {
   position: absolute;
+  bottom: -4px;
   width: 100%;
   height: 20px;
   background: url(../img/common/ico_pdf.svg) no-repeat center/cover;
   content: '';
   transform: translateY(-50%);
   max-width: 37px;
-  bottom: -4px;
   border-bottom: 1px solid transparent;
 }
 
@@ -604,7 +602,9 @@ h6.common-sub-ttl {
   letter-spacing: -0.1px;
 }
 
-.sugi-holding-header .nav-menu-list li.dropdown a:hover,.sugi-holding-header .nav-menu-list li.dropdown a.active,.sugi-holding-header .nav-menu-list li.dropdown.show a {
+.sugi-holding-header .nav-menu-list li.dropdown a:hover,
+.sugi-holding-header .nav-menu-list li.dropdown a.active,
+.sugi-holding-header .nav-menu-list li.dropdown.show a {
   color: #048851;
 }
 
@@ -1948,20 +1948,29 @@ table tr th:first-child {
   transition: all 0.2s;
 }
 
-.cmn-pagination .cmn-pager-num a:hover,.cmn-pagination .cmn-pager-num a.active,
-.cmn-pagination .cmn-pager-prev a:hover,.cmn-pagination .cmn-pager-prev a.active,
-.cmn-pagination .cmn-pager-first a:hover,.cmn-pagination .cmn-pager-first a.active,
-.cmn-pagination .cmn-pager-next a:hover,.cmn-pagination .cmn-pager-next a.active,
-.cmn-pagination .cmn-pager-last a:hover,.cmn-pagination .cmn-pager-last a.active {
+.cmn-pagination .cmn-pager-num a:hover,
+.cmn-pagination .cmn-pager-num a.active,
+.cmn-pagination .cmn-pager-prev a:hover,
+.cmn-pagination .cmn-pager-prev a.active,
+.cmn-pagination .cmn-pager-first a:hover,
+.cmn-pagination .cmn-pager-first a.active,
+.cmn-pagination .cmn-pager-next a:hover,
+.cmn-pagination .cmn-pager-next a.active,
+.cmn-pagination .cmn-pager-last a:hover,
+.cmn-pagination .cmn-pager-last a.active {
   background-color: #048851;
   color: #fff;
   transition: all 0.2s;
 }
 
-.cmn-pagination .cmn-pager-prev a:hover img,.cmn-pagination .cmn-pager-prev a.active img,
-.cmn-pagination .cmn-pager-first a:hover img,.cmn-pagination .cmn-pager-first a.active img,
-.cmn-pagination .cmn-pager-next a:hover img,.cmn-pagination .cmn-pager-next a.active img,
-.cmn-pagination .cmn-pager-last a:hover img,.cmn-pagination .cmn-pager-last a.active img{
+.cmn-pagination .cmn-pager-prev a:hover img,
+.cmn-pagination .cmn-pager-prev a.active img,
+.cmn-pagination .cmn-pager-first a:hover img,
+.cmn-pagination .cmn-pager-first a.active img,
+.cmn-pagination .cmn-pager-next a:hover img,
+.cmn-pagination .cmn-pager-next a.active img,
+.cmn-pagination .cmn-pager-last a:hover img,
+.cmn-pagination .cmn-pager-last a.active img {
   filter: invert(100%) sepia(300%) saturate(0) hue-rotate(0) brightness(100%) contrast(180%);
 }
 
@@ -2830,8 +2839,8 @@ footer .page-top:hover img {
   }
 
   .sidebar-ttl-link:hover .sb-arrow::before {
-    left: 8px;
     top: 8px;
+    left: 8px;
     transform: rotate(90deg);
     filter: invert(100%) sepia(300%) saturate(0) hue-rotate(0) brightness(100%) contrast(180%);
   }
