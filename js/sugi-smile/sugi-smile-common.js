@@ -9,10 +9,13 @@ document.addEventListener("DOMContentLoaded", function () {
             toggleNav.classList.add("active");
             bodyElement.style.overflow = "hidden";
             bodyElement.style.position = "fixed";
+            bodyElement.style.left = 0;
+            bodyElement.style.right = 0;
+            bodyElement.style.margin = "0 auto";
         } else {
             toggleNav.classList.remove("active");
             bodyElement.style.overflow = "auto";
-            bodyElement.style.position = "unset";
+            bodyElement.style.position = "relative";
         }
     });
 

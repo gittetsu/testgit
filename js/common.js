@@ -533,6 +533,8 @@ function setHeight(elements) {
 window.addEventListener('load', accordionHeight)
 window.addEventListener('resize', accordionHeight)
 
+var toggleBtn  = document.querySelector('.toggle-btn');
+
 function setOverflow(query) {
     if (query.matches) {
         if(hamburger){
@@ -540,10 +542,22 @@ function setOverflow(query) {
                 bodyElement.style.overflow = 'hidden'
             }
         }
+        if(toggleBtn){
+            if (toggleBtn.classList.contains('active')) {
+                bodyElement.style.overflow = 'hidden',
+                bodyElement.style.position = 'fixed';
+            }
+        }
        
     } else {
         bodyElement.style.overflow = 'auto'
-        bodyElement.style.position = 'relative'
+        bodyElement.style.position = 'relative';
+        if(toggleBtn){
+            if (toggleBtn.classList.contains('active')) {
+                bodyElement.style.overflow = 'hidden',
+                bodyElement.style.position = 'fixed';
+            }
+        }
     }
 }
 setOverflow(query)
