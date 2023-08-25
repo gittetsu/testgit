@@ -35,7 +35,7 @@
 						<h3 class="top-ttl">News</h3>
 						<span>ニュースリリース</span>
 					</div>
-					<a href="#" class="common-button"><span class="pc">ニュースリリースの</span>一覧を見る<span class="arrow"></span></a>
+					<a href="/news/" class="common-button"><span class="pc">ニュースリリースの</span>一覧を見る<span class="arrow"></span></a>
 				</div>
 				<div class="tab-list d-flex">
 					<div class="tab-left mb-sp-30">
@@ -151,7 +151,7 @@
 						<h3 class="top-ttl">Topics</h3>
 						<span>グループトピックス</span>
 					</div>
-					<a href="#" class="common-button"><span class="pc">グループトピックスの</span>一覧を見る<span class="arrow"></span></a>
+					<a href="/topic/" class="common-button"><span class="pc">グループトピックスの</span>一覧を見る<span class="arrow"></span></a>
 				</div>
 				<div class="topics-slider-gp">
 					<div class="topics-slider-box">
@@ -338,14 +338,14 @@
 								<h3 class="top-ttl">Vision</h3>
 								<span>グループビジョン</span>
 							</div>
-							<a href="#" class="common-button">会社概要を見る<span class="arrow"></span></a>
+							<a href="/company/overview/" class="common-button">会社概要を見る<span class="arrow"></span></a>
 						</div>
 						<p class="text-02">セルフケアから医療・服薬、介護・生活支援まで健康をトータルに支援し、地域社会へ貢献します。</p>
 						<ul>
-							<li><a href="#" class="common-button">トップメッセージ<span class="arrow"></span></a></li>
-							<li><a href="#" class="common-button">経営理念<span class="arrow"></span></a></li>
-							<li><a href="#" class="common-button">沿革<span class="arrow"></span></a></li>
-							<li><a href="#" class="common-button">事業紹介<span class="arrow"></span></a></li>
+							<li><a href="/company/message/" class="common-button">トップメッセージ<span class="arrow"></span></a></li>
+							<li><a href="/company/philosophy/" class="common-button">経営理念<span class="arrow"></span></a></li>
+							<li><a href="/company/history/" class="common-button">沿革<span class="arrow"></span></a></li>
+							<li><a href="/company/business/" class="common-button">事業紹介<span class="arrow"></span></a></li>
 						</ul>
 					</div>
 					<div class="vision-img">
@@ -373,16 +373,16 @@
 					<div class="pharmacy-gp-blk mb-30 mb-sp-40">
 						<ul class="pharmacy-gp-tablist">
 							<li>
-								<a href="#" class="active" data-tab-target="#customer">お客様</a>
+								<a href="javascript:void(0)" class="active" data-tab-target="#customer">お客様</a>
 							</li>
 							<li>
-								<a href="#" data-tab-target="#finance">財務</a>
+								<a href="javascript:void(0)" data-tab-target="#finance">財務</a>
 							</li>
 							<li>
-								<a href="#" data-tab-target="#work-environment">職場環境</a>
+								<a href="javascript:void(0)" data-tab-target="#work-environment">職場環境</a>
 							</li>
 							<li>
-								<a href="#" data-tab-target="#others">その他</a>
+								<a href="javascript:void(0)" data-tab-target="#others">その他</a>
 							</li>
 						</ul>
 					</div>
@@ -400,7 +400,7 @@
 								</div>
 								<p class="count-txtblk">2,083<span>万人</span></p>
 							</li>
-							<li class="gp-circle-item">
+							<li class="gp-circle-item visitor-circle-item">
 								<div class="cmm-gp-cirle">
 									<div class="gp-circle-cnt">
 										<p class="num-desc-ttl"><span>お客様</span></p>
@@ -428,7 +428,7 @@
 					</div>
 					<div class="pharmacy-gp-tabcnt mb-40" id="finance" data-tab-content>
 						<ul class="number-gp-circle d-flex">
-							<li class="gp-circle-item">
+							<li class="gp-circle-item sales-circle-item">
 								<div class="cmm-gp-cirle">
 									<div class="gp-circle-cnt">
 										<p class="num-desc-ttl"><span>財務</span></p>
@@ -458,7 +458,7 @@
 							</li>
 							<li class="gp-circle-item custom-circle-item">
 								<div class="cmm-gp-cirle">
-									<div class="gp-circle-cnt">
+									<div class="gp-circle-cnt store-circle-cnt">
 										<p class="num-desc-ttl"><span>調剤</span></p>
 										<div class="point-number">
 											<img src="/img/img_store_ratio.png" alt="スギ薬局店舗の調剤併設率">
@@ -484,7 +484,7 @@
 					</div>
 					<div class="pharmacy-gp-tabcnt mb-40" id="others" data-tab-content>
 						<ul class="number-gp-circle d-flex">
-							<li class="gp-circle-item custom-circle-item">
+							<li class="gp-circle-item solar-circle-item">
 								<div class="cmm-gp-cirle">
 									<div class="gp-circle-cnt">
 										<p class="num-desc-ttl"><span>環境</span></p>
@@ -496,7 +496,7 @@
 								</div>
 								<p class="count-txtblk">48<span>店舗</span></p>
 							</li>
-							<li class="gp-circle-item">
+							<li class="gp-circle-item corporate-circle-item">
 								<div class="cmm-gp-cirle">
 									<div class="gp-circle-cnt">
 										<p class="num-desc-ttl"><span>地域</span></p>
@@ -511,8 +511,8 @@
 						</ul>
 					</div>
 					<div class="btn-link-gp d-flex">
-						<a href="#" class="common-button number-link">数字で見るスギ薬局グループ<span class="arrow"></span></a>
-						<a href="#" class="common-button store-link">出店エリアと店舗数推移 <span class="arrow"></span></a>
+						<a href="/company/business#group" class="common-button number-link">数字で見るスギ薬局グループ<span class="arrow"></span></a>
+						<a href="/company/store/" class="common-button store-link">出店エリアと店舗数推移 <span class="arrow"></span></a>
 					</div>
 				</div>
 			</div>
@@ -532,42 +532,42 @@
 					<p class="sustain-leftblk mb-sp-30">
 						スギ薬局グループは、環境と社会の様々な課題に真摯に向き合い、企業活動をとおして、健康で元気な人を増やし、活力ある社会を実現するため、ステークホルダーの皆様と協働し、「地域社会」の持続可能な発展に貢献する企業を目指します
 					</p>
-					<a href="#" class="common-button sustain-linkblk">サステナビリティ<span class="arrow"></span></a>
+					<a href="/sustainability/" class="common-button sustain-linkblk">サステナビリティ<span class="arrow"></span></a>
 				</div>
 				<ul class="sustain-link-list d-flex">
 					<li>
 						<div class="cmm-sustain-link">
-							<a href="#" class="common-button">重要課題<br class="pc">（マテリアリティ）<span class="arrow"></span></a>
+							<a href="/sustainability/materiality/" class="common-button">重要課題<br class="pc">（マテリアリティ）<span class="arrow"></span></a>
 						</div>
 					</li>
 					<li>
 						<div class="cmm-sustain-link">
-							<a href="#" class="common-button">環境<span class="arrow"></span></a>
+							<a href="/sustainability/materiality/environment/" class="common-button">環境<span class="arrow"></span></a>
 						</div>
 					</li>
 					<li>
 						<div class="cmm-sustain-link">
-							<a href="#" class="common-button">社会<span class="arrow"></span></a>
+							<a href="/sustainability/social/" class="common-button">社会<span class="arrow"></span></a>
 						</div>
 					</li>
 					<li>
 						<div class="cmm-sustain-link">
-							<a href="#" class="common-button">ガバナンス<span class="arrow"></span></a>
+							<a href="/sustainability/governance/" class="common-button">ガバナンス<span class="arrow"></span></a>
 						</div>
 					</li>
 					<li>
 						<div class="cmm-sustain-link">
-							<a href="#" class="common-button">TCFD提言に基づく<br class="pc">情報開示<span class="arrow"></span></a>
+							<a href="/sustainability/materiality/environment/tcfd.html" class="common-button">TCFD提言に基づく<br class="pc">情報開示<span class="arrow"></span></a>
 						</div>
 					</li>
 					<li>
 						<div class="cmm-sustain-link">
-							<a href="#" class="common-button">人権課題への取り組み<span class="arrow"></span></a>
+							<a href="/sustainability/materiality/sustainable-bp/human-rights.html" class="common-button">人権課題への取り組み<span class="arrow"></span></a>
 						</div>
 					</li>
 					<li>
 						<div class="cmm-sustain-link">
-							<a href="#" class="common-button">データ資料<span class="arrow"></span></a>
+							<a href="/sustainability/data/" class="common-button">データ資料<span class="arrow"></span></a>
 						</div>
 					</li>
 				</ul>
@@ -576,21 +576,21 @@
 		<div class="sec-image-category">
 			<ul class="three-category-blk d-flex">
 				<li class="cmm-list-item category-list-item01">
-					<a href="#" class="category-list-blk">
+					<a href="/ir/investors/" class="category-list-blk">
 						<span class="category-list-ttl">投資家情報</span>
 						<div class="common-button pc">詳しく見る<span class="arrow"></span></div>
 						<div class="image-link sp"><span class="img-arrow-link"></span></div>
 					</a>
 				</li>
 				<li class="cmm-list-item category-list-item02">
-					<a href="#" class="category-list-blk">
+					<a href="/property-info/" class="category-list-blk">
 						<span class="category-list-ttl">物件募集</span>
 						<div class="common-button pc">詳しく見る<span class="arrow"></span></div>
 						<div class="image-link sp"><span class="img-arrow-link"></span></div>
 					</a>
 				</li>
 				<li class="cmm-list-item category-list-item03">
-					<a href="#" class="category-list-blk">
+					<a href="/recruit/" class="category-list-blk">
 						<span class="category-list-ttl">採用情報</span>
 						<div class="common-button pc">詳しく見る<span class="arrow"></span></div>
 						<div class="image-link sp"><span class="img-arrow-link"></span></div>
@@ -611,7 +611,7 @@
 						</div>
 						<p class="mission-desc">スギ薬局グループの中核を担うのが地域医療対応型ドラッグストアを展開するスギ薬局です。</p>
 						<div class="site-link d-flex">
-							<a href="#" class="common-button site-link-btn01">WEBSITE <span class="arrow"></span></a>
+							<a href="https://www.drug-sugi.co.jp/" class="common-button site-link-btn01" target="_blank">WEBSITE <span class="arrow"></span></a>
 							<a href="#" class="common-button site-link-btn02">お客様サイト<span class="arrow"></span></a>
 						</div>
 					</div>
@@ -626,7 +626,7 @@
 						</div>
 						<p class="mission-desc">スギメディカルさまざまな医療機関、医療従事者、事業者と連携し、地域の皆様のために医療・ヘルスケアをトータルコーディネートします。</p>
 						<div class="mission02-link d-flex">
-							<a href="#" class="common-button">WEBSITE <span class="arrow"></span></a>
+							<a href="/sugi-medical/" class="common-button" target="_blank">WEBSITE <span class="arrow"></span></a>
 						</div>
 					</div>
 				</div>
@@ -646,7 +646,7 @@
 						</div>
 						<p class="mission-desc mb-30">スギスマイルあらゆる人々の幸せを願い笑顔を増やす企業として障がい者雇用の促進に注力しています。</p>
 						<div class="mission03-link d-flex">
-							<a href="#" class="common-button">WEBSITE <span class="arrow"></span></a>
+							<a href="/sugi-smile/" class="common-button" target="_blank">WEBSITE <span class="arrow"></span></a>
 						</div>
 					</div>
 				</div>

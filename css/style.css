@@ -522,7 +522,11 @@
 }
 
 .custom-circle-item .gp-circle-cnt {
-  padding: 32.5px 0px 55.5px 0;
+  padding: 32.5px 0px 51.5px 0;
+}
+
+.corporate-circle-item .gp-circle-cnt {
+  padding: 32.5px 0px 76.7px 0;
 }
 
 .gp-circle-item:nth-child(3n),
@@ -539,7 +543,11 @@
 }
 
 .gp-circle-cnt {
-  padding: 32.5px 0px 75.5px 0;
+  padding: 32.5px 0px 71.5px 0;
+}
+
+.solar-circle-item .gp-circle-cnt {
+  padding: 32.5px 0px 47.5px 0;
 }
 
 .point-number-item .count-txtblk {
@@ -1011,7 +1019,27 @@
   }
 
   .gp-circle-cnt {
-    padding: 32.5px 0px 49px 0;
+    padding: 32.5px 0px 61px 0;
+  }
+
+  .solar-circle-item .gp-circle-cnt {
+    padding: 32.5px 0px 36.5px 0;
+  }
+
+  .custom-circle-item .gp-circle-cnt {
+    padding: 32.5px 0px 37.5px 0;
+  }
+
+  .custom-circle-item .store-circle-cnt {
+    padding: 32.5px 0px 40.5px 0;
+  }
+
+  .visitor-circle-item .gp-circle-cnt {
+    padding: 32.5px 0px 66px 0;
+  }
+
+  .corporate-circle-item .gp-circle-cnt {
+    padding: 32.5px 0px 66px 0;
   }
 
   .gp-circle-item {
@@ -1019,7 +1047,7 @@
   }
 
   .point-number-item .gp-circle-cnt {
-    padding: 32.5px 0px 49px 0;
+    padding: 32.5px 0px 65px 0;
   }
 
   /*sustainablility section*/
@@ -1609,6 +1637,34 @@
   }
 
   .gp-circle-cnt {
+    padding: 22.5px 0px 21.15px 0;
+  }
+
+  .visitor-circle-item .gp-circle-cnt {
+    padding: 22.5px 0px 26.15px 0;
+  }
+
+  .solar-circle-item .gp-circle-cnt {
+    padding: 13.5px 0px 3px 0;
+  }
+
+  .solar-circle-item .count-txtblk {
+    margin-top: -3px;
+  }
+
+  .solar-circle-item .gp-circle-cnt .point-number {
+    margin-bottom: 0;
+  }
+
+  .solar-circle-item .gp-circle-cnt .gp-circle-caption {
+    margin-top: 8px;
+  }
+
+  .corporate-circle-item .gp-circle-cnt {
+    padding: 22.5px 0px 20.7px 0;
+  }
+
+  .sales-circle-item .gp-circle-cnt {
     padding: 22.5px 0px 16.15px 0;
   }
 
@@ -1678,7 +1734,7 @@
   }
 
   .custom-circle-item .gp-circle-cnt {
-    padding: 32.5px 0px 27.2px 0;
+    padding: 22.5px 0px 41.2px 0;
   }
 
   /* sustainablility section */
@@ -1823,15 +1879,15 @@
   }
 
   .category-list-item01 {
-    background: url(../img/img_investors_sp.jpg) no-repeat center/cover;
+    background: url(../img/img_investors_sp.jpg) no-repeat center/100% 100%;
   }
 
   .category-list-item02 {
-    background: url(../img/img_property_sp.jpg) no-repeat center/cover;
+    background: url(../img/img_property_sp.jpg) no-repeat center/100% 100%;
   }
 
   .category-list-item03 {
-    background: url(../img/img_recruit_sp.jpg) no-repeat center/cover;
+    background: url(../img/img_recruit_sp.jpg) no-repeat center/100% 100%;
   }
 
   .category-list-ttl {
@@ -2067,12 +2123,39 @@
   }
 
   .point-number-item .gp-circle-cnt {
-    padding: 13.5px 0px 15.2px 0;
+    padding: 13.5px 0px 21.2px 0;
   }
 
+  .visitor-circle-item .gp-circle-cnt {
+    padding: 13.5px 0px 17.95px 0;
+  }
+
+  .pharmacy-store-item .gp-circle-cnt {
+    padding: 13.5px 0px 38.6px 0;
+  }
+
+  .sales-circle-item .gp-circle-cnt {
+    padding: 13.5px 0px 15.15px 0;
+  }
+
+  .corporate-circle-item .gp-circle-cnt {
+    padding: 13.5px 0px 21.7px 0;
+  }
+
+  .corporate-circle-item .gp-circle-cnt .point-number {
+    margin-bottom: 0;
+  }
+
+  .corporate-circle-item .gp-circle-cnt .gp-circle-caption {
+    margin-top: 0;
+  }
 
   .gp-circle-item:nth-child(5) .count-txtblk {
     margin-top: 3px;
+  }
+
+  .solar-circle-item .count-txtblk {
+    margin-top: 5px;
   }
 
   /* sustainablility section */
