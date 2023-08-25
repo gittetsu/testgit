@@ -58,7 +58,8 @@
   font-weight: 500;
 }
 
-.sec-medi-contact .contact-form .input-container .input-box .d-flex {
+.sec-medi-contact .contact-form .input-container .input-box .input-d-flex {
+  display: flex;
   justify-content: flex-start;
   align-items: center;
   width: 100%;
@@ -151,6 +152,11 @@
   color: #d6365c;
   font-size: 0.813rem;
   font-weight: 500;
+}
+
+.sec-medi-contact .contact-form .input-container .err-msg.d-flex {
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .sec-medi-contact .contact-form .input-container input[type='text'].error {
@@ -438,7 +444,7 @@
 }
 
 .sec-medi-contact .contact-form .agreement li .policy-link {
-  display: block;
+  display: inline-block;
   color: #7fbe26;
   letter-spacing: 0.1em;
   word-break: break-all;
