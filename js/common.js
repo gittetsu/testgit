@@ -583,6 +583,7 @@ document.addEventListener('DOMContentLoaded', function () {
     })
 })
 
+/*new-window-open-js*/
 function openFullScreenWindow(url) {
     var screenWidth = window.screen.width;
     var screenHeight = window.screen.height;
