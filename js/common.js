@@ -535,9 +535,12 @@ window.addEventListener('resize', accordionHeight)
 
 function setOverflow(query) {
     if (query.matches) {
-        if (hamburger.classList.contains('active')) {
-            bodyElement.style.overflow = 'hidden'
+        if(hamburger){
+            if (hamburger.classList.contains('active')) {
+                bodyElement.style.overflow = 'hidden'
+            }
         }
+       
     } else {
         bodyElement.style.overflow = 'auto'
         bodyElement.style.position = 'relative'
