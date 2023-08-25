@@ -582,3 +582,12 @@ document.addEventListener('DOMContentLoaded', function () {
         })
     })
 })
+
+function openFullScreenWindow(url) {
+    var screenWidth = window.screen.width;
+    var screenHeight = window.screen.height;
+    var newWindow = window.open(url, '_blank', 'width=' + screenWidth + ',height=' + screenHeight);
+    if (!newWindow) {
+      alert('Pop-up blocked. Please allow pop-ups for this site.');
+    }
+  }
