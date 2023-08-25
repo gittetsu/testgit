@@ -6,7 +6,7 @@
 }
 
 .sugi-smile-header .header-inner {
-  width: 95%;
+  width: 97%;
   margin: 0 auto;
   padding: 37px 0;
   max-width: 1316px;
@@ -47,7 +47,7 @@
 
 .fix-wrap {
   position: absolute;
-  right: 3%;
+  right: 1.9%;
   left: 0;
   width: 60px;
   margin-left: auto;
@@ -203,7 +203,6 @@
 }
 
 /* Main Sugi Smile */
-
 .sugi-smile-wrapper {
   background: #f6fff5 url("/img/common/sugi-smile/img_sugi_smile_bg.png") no-repeat top/contain;
   font-family: 'Zen Maru Gothic', sans-serif;
@@ -287,7 +286,6 @@
 }
 
 /* Common Smile Title */
-
 .common-smile-ttl {
   text-align: center;
 }
@@ -295,6 +293,7 @@
 .common-smile-ttl span {
   color: #009944;
   font-family: 'Dosis', sans-serif;
+  font-size: 1rem;
   font-weight: 700;
 }
 
@@ -336,9 +335,7 @@
   font-weight: 700;
 }
 
-
 /* Footer */
-
 .sugi-smile-footer .ft-nav {
   background-color: #009944;
   font-family: 'Zen Maru Gothic', sans-serif;
@@ -366,7 +363,6 @@
   transform: translateY(-50%);
 }
 
-
 footer.sugi-smile-footer .page-top:hover {
   border: 2px solid #fff;
   background-color: #009944;
@@ -384,9 +380,13 @@ footer.sugi-smile-footer .ft-nav ul li a:hover {
   text-decoration: underline;
 }
 
-
 /*I-pad*/
 @media screen and (min-width: 768px) and (max-width: 1024px) {
+
+  /* Main Sugi Smile */
+  .sugi-smile-wrapper {
+    background-position: center top 3.6%;
+  }
 
   /* Header */
   .sugi-smile-header {
@@ -444,9 +444,7 @@ footer.sugi-smile-footer .ft-nav ul li a:hover {
     text-decoration: none;
   }
 
-
   /* Footer */
-
   .sugi-smile-footer .holding-link {
     display: none;
   }
@@ -456,20 +454,15 @@ footer.sugi-smile-footer .ft-nav ul li a:hover {
     background-color: #fff;
   }
 
-  footer.sugi-smile-footer .page-top img ,
+  footer.sugi-smile-footer .page-top img,
   footer.sugi-smile-footer .page-top:hover img {
     filter: unset;
   }
-
 }
-
 
 /* Sp */
 @media only screen and (max-width: 767.9px) {
-
-
   /* Header */
-
   .sugi-smile-header {
     background-color: #fff;
   }
@@ -533,7 +526,6 @@ footer.sugi-smile-footer .ft-nav ul li a:hover {
   }
 
   /* Main Sugi Smile */
-
   .sugi-smile-wrapper {
     background-image: url("/img/common/sugi-smile/img_sugi_smile_sp_bg.png");
     background-position: center top 120px;
@@ -580,10 +572,7 @@ footer.sugi-smile-footer .ft-nav ul li a:hover {
     text-decoration: none;
   }
 
-
   /* Footer */
-
-
   .sugi-smile-footer .ft-blk .sugi-holding-img {
     max-width: 164px;
   }
@@ -597,10 +586,8 @@ footer.sugi-smile-footer .ft-nav ul li a:hover {
     background-color: #fff;
   }
 
-  footer.sugi-smile-footer .page-top img ,
+  footer.sugi-smile-footer .page-top img,
   footer.sugi-smile-footer .page-top:hover img {
     filter: unset;
   }
-
-
 }
