@@ -570,8 +570,14 @@ var menuItems = document.querySelectorAll(
     '.sugi-nursing-header .nav-menu-list li a, .sugi-nursing-header .header-contact-btn a, .sugi-medical-header .nav-menu-list li a, .sugi-holding-header .nav-menu-list li a,.sugi-holding-header .sub-nav-list a',
 )
 menuItems.forEach(function (item) {
-    var menuItemUrl = item.href.split('?')[0]
+    var menuItemUrl = item.href.split('?')[0];
+    var menuSplit = item.href.split('/').slice(3, -1);
+    var currentSplit = currentUrl.split('/').slice(3, -1);
     if (menuItemUrl === currentUrl) {
+        item.classList.add('active')
+    } else if ((menuSplit[0] == null) || (currentSplit[0] == null))  {
+        item.classList.remove('active')
+    } else if ((menuSplit[1] === 'news' || currentSplit[1] === 'article')){
         item.classList.add('active')
     }
 })
