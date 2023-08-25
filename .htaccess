@@ -2,7 +2,7 @@ Options +Includes
 AddHandler server-parsed html
 
 <IfModule mod_rewrite.c>
-	
+
   RewriteEngine On
 
 	RewriteBase /
