@@ -501,7 +501,7 @@ ul.service-list li.service-list-item .service-txtblk {
 
 .service-flow-item .service-flow-ttl {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   margin-bottom: 24px;
   padding-bottom: 24px;
   font-size: 1.125rem;
@@ -525,6 +525,8 @@ ul.service-list li.service-list-item .service-txtblk {
 
 .service-flow-ttl .flow-ttl-txt {
   padding-left: 24px;
+  padding-top: 7px;
+  line-height: 1.6;
 }
 
 .service-flow-item .service-flow-cnt .service-cnt-imgblk {
@@ -1288,11 +1290,12 @@ footer.ft-nursing-care .page-top img {
   }
 
   .service-flow-item .service-flow-ttl {
-    align-items: flex-start;
     margin-bottom: 20px;
     padding-bottom: 20px;
   }
-
+  .service-flow-ttl .flow-ttl-txt {
+    padding-top: 0;
+}
   .service-flow-item .service-flow-cnt .service-cnt-imgblk {
     padding: 20px;
   }
