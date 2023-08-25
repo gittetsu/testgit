@@ -3,7 +3,7 @@
 .healthcare-services .common-box {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   align-items: baseline;
   width: 100%;
   padding: 21.5px 40px;
@@ -49,15 +49,52 @@
 @media only screen and (max-width: 767.9px) {
   .healthcare-services .common-box {
     align-items: center;
-    padding: 21px 20px;
+    padding: 24px;
   }
 
   .healthcare-services .common-box dt {
-    font-size: 1rem;
+    font-size: 1.125rem;
   }
+
+  .healthcare-services .sec-store .side-w246,
+  .healthcare-services .sec-store .side-w524,
+  .healthcare-services .sec-services .side-w246,
+  .healthcare-services .sec-services .side-w524,
+  .healthcare-services .interview-blk .side-w246,
+  .healthcare-services .interview-blk .side-w524 {
+    width: 100%;
+  }
+
+  .healthcare-services .common-box .line {
+    margin: 25.5px 0;
+  }
+
+  .healthcare-services .common-box dt {
+    width: 62.7%;
+    letter-spacing: 0;
+  }
+
+  .healthcare-services .common-box dd {
+    width: 35%;
+  }
+
 
   /* sec-renewal */
   .healthcare-services .sec-renewal .img-otc {
     max-width: 100%;
+  }
+
+  .sec-digital-member .common-box {
+    display: block;
+  }
+
+  .healthcare-services .sec-digital-member .common-box dt,
+  .healthcare-services .sec-digital-member .common-box dd {
+    width: 100%;
+  }
+
+  .healthcare-services .sec-digital-member .common-box dd {
+    margin-top: 13px;
+    text-align: center;
   }
 }
