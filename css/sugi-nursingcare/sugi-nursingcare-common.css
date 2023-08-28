@@ -707,6 +707,17 @@ footer.ft-nursing-care .ft-nav ul li a {
 
 footer.ft-nursing-care .sugi-nursing-img {
   margin-bottom: 30px;
+  display: inline-block;
+}
+
+.ft-nursing-care .ft-blk .lt-ft-blk .nav-list li a:hover,.ft-nursing-care .ft-blk .lt-ft-blk .nav-list li a.active{
+  color: #e6172c;
+  transition: all .2s;
+}
+
+.ft-nursing-care .ft-blk .lt-ft-blk .sub-nav-list li a:hover {
+  color: #e6172c;
+  border-bottom: 1px solid #e6172c;
 }
 
 footer.ft-nursing-care .sugi-nursing-img img {

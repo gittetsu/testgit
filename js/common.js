@@ -567,7 +567,7 @@ window.addEventListener('resize', setOverflow(query))
 /*header nav-menu add active-class*/
 var currentUrl = window.location.href.split('?')[0]
 var menuItems = document.querySelectorAll(
-    '.sugi-nursing-header .nav-menu-list li a, .sugi-nursing-header .header-contact-btn a, .sugi-medical-header .nav-menu-list li a, .sugi-holding-header .nav-menu-list li a,.sugi-holding-header .sub-nav-list a',
+    '.sugi-nursing-header .nav-menu-list li a, .sugi-nursing-header .header-contact-btn a, .sugi-medical-header .nav-menu-list li a, .sugi-holding-header .nav-menu-list li a,.sugi-holding-header .sub-nav-list a,.sugi-holding-footer .nav-list li a,.sugi-smile-footer .nav-list li a,.ft-medical .nav-list li a,.ft-nursing-care .nav-list li a',
 )
 menuItems.forEach(function (item) {
     var menuItemUrl = item.href.split('?')[0];
