@@ -575,9 +575,12 @@ menuItems.forEach(function (item) {
     var currentSplit = currentUrl.split('/').slice(3, -1);
     if (menuItemUrl === currentUrl) {
         item.classList.add('active')
-    } else if ((menuSplit[0] == null) || (currentSplit[0] == null))  {
-        item.classList.remove('active')
-    } else if ((menuSplit[1] === 'news' || currentSplit[1] === 'article')){
+    }
+    if (menuSplit[0] === 'sugi-nursingcare' || menuSplit[0] === 'sugi-smile' || menuSplit[0] === 'sugi-medical' || menuSplit[0] === 'sugi-pharmacy') {
+        if(menuSplit[1] === currentSplit[1]) {
+            item.classList.add('active')
+        }
+    } else if (menuSplit[0] === 'news') {
         item.classList.add('active')
     }
 })
