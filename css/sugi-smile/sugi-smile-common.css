@@ -206,7 +206,7 @@
 .sugi-smile-wrapper {
   background: #f6fff5 url(/img/common/sugi-smile/img_sugi_smile_bg.png) no-repeat;
   background-size: contain;
-  background-position: right 0px top -7.3%;
+  background-position: right 0px top 0;
   font-family: 'Zen Maru Gothic', sans-serif;
   font-weight: 400;
 }
