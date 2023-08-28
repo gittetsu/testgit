@@ -474,6 +474,10 @@ footer.ft-medical .page-top img {
 
 @media only screen and (max-width: 767.9px) {
 
+  h3.common-ttl {
+    font-size: 1.25rem;
+  }
+
   h3.common-medical-ttl {
     font-size: 1.25rem;
   }
