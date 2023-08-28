@@ -355,8 +355,10 @@
   padding-right: 20px;
   font-size: 0.875rem;
 }
-.sugi-smile-footer .holding-link:hover{
-  border-bottom: 1px solid #048851;;
+
+.sugi-smile-footer .holding-link:hover {
+  border-bottom: 1px solid #048851;
+  ;
 }
 
 .sugi-smile-footer .holding-link::after {

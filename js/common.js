@@ -533,29 +533,29 @@ function setHeight(elements) {
 window.addEventListener('load', accordionHeight)
 window.addEventListener('resize', accordionHeight)
 
-var toggleBtn  = document.querySelector('.toggle-btn');
+var toggleBtn = document.querySelector('.toggle-btn');
 
 function setOverflow(query) {
     if (query.matches) {
-        if(hamburger){
+        if (hamburger) {
             if (hamburger.classList.contains('active')) {
                 bodyElement.style.overflow = 'hidden'
             }
         }
-        if(toggleBtn){
+        if (toggleBtn) {
             if (toggleBtn.classList.contains('active')) {
                 bodyElement.style.overflow = 'hidden',
-                bodyElement.style.position = 'fixed';
+                    bodyElement.style.position = 'fixed';
             }
         }
-       
+
     } else {
         bodyElement.style.overflow = 'auto'
         bodyElement.style.position = 'relative';
-        if(toggleBtn){
+        if (toggleBtn) {
             if (toggleBtn.classList.contains('active')) {
                 bodyElement.style.overflow = 'hidden',
-                bodyElement.style.position = 'fixed';
+                    bodyElement.style.position = 'fixed';
             }
         }
     }
@@ -577,7 +577,7 @@ menuItems.forEach(function (item) {
         item.classList.add('active')
     }
     if (menuSplit[0] === 'sugi-nursingcare' || menuSplit[0] === 'sugi-smile' || menuSplit[0] === 'sugi-medical' || menuSplit[0] === 'sugi-pharmacy') {
-        if(menuSplit[1] === currentSplit[1]) {
+        if (menuSplit[1] === currentSplit[1]) {
             item.classList.add('active')
         }
     } else if (menuSplit[0] === currentSplit[0] && currentSplit[0] !== undefined) {
@@ -615,6 +615,6 @@ function openFullScreenWindow(url) {
     var screenHeight = window.screen.height;
     var newWindow = window.open(url, '_blank', 'width=' + screenWidth + ',height=' + screenHeight);
     if (!newWindow) {
-      alert('Pop-up blocked. Please allow pop-ups for this site.');
+        alert('Pop-up blocked. Please allow pop-ups for this site.');
     }
-  }
+}

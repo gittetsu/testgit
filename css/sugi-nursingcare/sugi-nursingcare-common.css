@@ -710,7 +710,8 @@ footer.ft-nursing-care .sugi-nursing-img {
   display: inline-block;
 }
 
-.ft-nursing-care .ft-blk .lt-ft-blk .nav-list li a:hover,.ft-nursing-care .ft-blk .lt-ft-blk .nav-list li a.active{
+.ft-nursing-care .ft-blk .lt-ft-blk .nav-list li a:hover,
+.ft-nursing-care .ft-blk .lt-ft-blk .nav-list li a.active {
   color: #e6172c;
   transition: all .2s;
 }
@@ -1304,9 +1305,11 @@ footer.ft-nursing-care .page-top img {
     margin-bottom: 20px;
     padding-bottom: 20px;
   }
+
   .service-flow-ttl .flow-ttl-txt {
     padding-top: 0;
-}
+  }
+
   .service-flow-item .service-flow-cnt .service-cnt-imgblk {
     padding: 20px;
   }

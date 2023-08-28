@@ -321,15 +321,18 @@ h3.common-medical-ttl {
 footer.ft-medical .ft-nav {
   background-color: #7fbe26;
 }
-.ft-medical .ft-blk .lt-ft-blk .nav-list li a:hover,.ft-medical .ft-blk .lt-ft-blk .nav-list li a.active{
+
+.ft-medical .ft-blk .lt-ft-blk .nav-list li a:hover,
+.ft-medical .ft-blk .lt-ft-blk .nav-list li a.active {
   color: #7fbe26;
   transition: all .2s;
 }
 
-.ft-medical .ft-blk .lt-ft-blk .sub-nav-list li a:hover{
+.ft-medical .ft-blk .lt-ft-blk .sub-nav-list li a:hover {
   color: #7fbe26;
   border-bottom: 1px solid #7fbe26;
 }
+
 footer.ft-medical .ft-blk .sugi-medical-img {
   margin-bottom: 30px;
   display: inline-block;
