@@ -1,9 +1,11 @@
 Options +Includes
 AddHandler server-parsed html
+AddType text/html .shtml
+AddHandler server-parsed .shtml
 
 <IfModule mod_rewrite.c>
 
-  RewriteEngine On
+	RewriteEngine On
 
 	RewriteBase /
 
@@ -16,5 +18,5 @@ AddHandler server-parsed html
 	RewriteCond %{THE_REQUEST} ^.*/index.html
 
 	RewriteRule ^(.*)index.html$ https://d2ehwfutnqpgdf.cloudfront.net/$1 [R=301,L]
-	
-	</IfModule>
+
+</IfModule>
