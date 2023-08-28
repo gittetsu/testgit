@@ -603,8 +603,7 @@ h6.common-sub-ttl {
 }
 
 .sugi-holding-header .nav-menu-list li.dropdown a:hover,
-.sugi-holding-header .nav-menu-list li.dropdown a.active,
-.sugi-holding-header .nav-menu-list li.dropdown.show a {
+.sugi-holding-header .nav-menu-list li.dropdown a.active{
   color: #048851;
 }
 
@@ -2158,6 +2157,7 @@ footer .ft-blk {
 
 .ft-blk .sugi-holding-img {
   margin-bottom: 30px;
+  display: inline-block;
 }
 
 .ft-blk .sugi-holding-img img {
@@ -2183,9 +2183,15 @@ footer .ft-blk {
   display: flex;
   font-size: 0.875rem;
 }
-
+.ft-blk .lt-ft-blk .sub-nav-list li a:hover{
+  color: #048851;
+  border-bottom: 1px solid #048851;
+}
 .ft-blk .lt-ft-blk .nav-list li {
   margin-right: 25px;
+}
+.ft-blk .lt-ft-blk .nav-list li a:hover,.ft-blk .lt-ft-blk .nav-list li a.active{
+  color: #048851;
 }
 
 .ft-blk .lt-ft-blk .nav-list li:last-child {
