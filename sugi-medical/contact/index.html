@@ -18,7 +18,7 @@
 		<div class="inner">
 			<h2 class="main-header-ttl">お問い合わせ<span>Contact</span></h2>
 			<ul class="medical-breadcrumb">
-				<li><a href="https://www.sugi-hd.co.jp/">TOP</a></li>
+				<li><a href="/sugi-medical/">TOP</a></li>
 				<li>お問い合わせ</li>
 			</ul>
 		</div>
@@ -30,7 +30,7 @@
 				<div class="input-container">
 					<p class="form-label"><span class="required">必須</span>お名前</p>
 					<div class="input-box">
-						<div class="d-flex">
+						<div class="input-d-flex">
 							<input type="text" id="surname" name="surname" value="" placeholder="姓" class="name-input error">
 							<input type="text" id="name" name="name" value="" placeholder="名" class="name-input">
 						</div>
@@ -40,7 +40,7 @@
 				<div class="input-container">
 					<p class="form-label"><span class="any">任意</span>フリガナ</p>
 					<div class="input-box">
-						<div class="d-flex">
+						<div class="input-d-flex">
 							<input type="text" id="furiSurname" name="furiSurname" value="" placeholder="セイ" class="name-input">
 							<input type="text" id="furiName" name="furiName" value="" placeholder="メイ" class="name-input">
 						</div>
@@ -79,13 +79,11 @@
 						<div class="detail-cnt mb-20">
 							<label for="postNumber">郵便番号</label>
 							<div class="phone-number">
-								<div class="d-flex">
-									<input type="text" id="postNumber" name="postNumber" value="" maxlength="3" placeholder="000"
-										class="ph-input prefix" oninput="validateNumericInput(this)">
-									<span class="dashed"></span>
-									<input type="text" name="postNoLast" value="" maxlength="4" placeholder="0000" class="ph-input"
-										oninput="validateNumericInput(this)">
-								</div>
+								<input type="text" id="postNumber" name="postNumber" value="" maxlength="3" placeholder="000"
+									class="ph-input prefix" oninput="validateNumericInput(this)">
+								<span class="dashed"></span>
+								<input type="text" name="postNoLast" value="" maxlength="4" placeholder="0000" class="ph-input"
+									oninput="validateNumericInput(this)">
 							</div>
 						</div>
 						<div class="detail-cnt mb-20">
@@ -242,6 +240,7 @@
 							<li>お客様の個人情報は厳重に取り扱い、お問い合わせ対応および当社からの情報提供を目的として利用させていただきます。</li>
 							<li>
 								個人情報の取り扱いにおきましては、当社プライバシーポリシーをご確認ください。
+								<br>
 								<a href="https://www.sugi-hd.co.jp/privacypolicy/index.html" class="policy-link"
 									target="_blank">https://www.sugi-hd.co.jp/privacypolicy/index.html</a>
 							</li>

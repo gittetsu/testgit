@@ -53,6 +53,11 @@
   align-items: center;
 }
 
+.top .common-btn {
+  letter-spacing: 0.9px;
+  max-width: 204px;
+}
+
 /* sec-mv */
 .top .sec-mv {
   position: relative;
@@ -119,32 +124,13 @@
   margin-bottom: 87px;
 }
 
-/*.top .sec-news .news-ttl h3 {
-  line-height: 1.1;
-}
-
-.top .sec-news .news-ttl h3 span {
-  letter-spacing: 1px;
-}*/
-
-/*.top .sec-news .news-ttl .common-button {
-  width: 100%;
-  max-width: 340px;
-}*/
-
-/*.top .common-ttl-blk .common-button {
-  position: relative;
-  justify-content: flex-start;
-  padding: 13px 30px;
-}
-
-.top .common-ttl-blk .common-button .arrow {
-  right: 9%;
-  margin-left: 0;
-}*/
-
 .top .sec-news .tab-list {
   align-items: flex-start;
+}
+
+.top .sec-news .common-btn {
+  letter-spacing: 1px;
+  max-width: 325px;
 }
 
 .top .sec-news .tab-list .tab-left {
@@ -159,13 +145,13 @@
   justify-content: space-between;
   width: 100%;
   line-height: 1.6;
-  padding: 26px 40px 24px 27px;
+  padding: 23px 40px 23px 27px;
   border: none;
   background-color: transparent;
   color: #000;
   text-align: left;
   letter-spacing: 3.8px;
-  border-radius: 5px;
+  border-radius: 0;
   border-bottom: 1px solid #e6e6e6;
 }
 
@@ -201,6 +187,7 @@
   color: #7FBE26;
   border-top: 1px solid transparent;
   border-bottom: 1px solid transparent;
+  border-radius: 5px;
 }
 
 .top .sec-news .tab-list .tab-right {
@@ -208,9 +195,21 @@
 }
 
 .new-common .new-common-list {
-  padding: 20.5px 0;
   border-top: 1px solid #e6e6e6;
+}
+
+.new-common .new-common-list:last-child {
   border-bottom: 1px solid #e6e6e6;
+}
+
+.new-common .new-common-list a {
+  display: inline-block;
+  padding: 21.5px 0;
+  color: #000;
+}
+
+.new-common .new-common-list p.text-02 {
+  color: #000000;
 }
 
 .new-common .new-common-list .cat-blk {
@@ -229,11 +228,7 @@
   border-right: 1px solid #D6eADe;
 }
 
-.new-common .new-common-list a {
-  color: #000;
-}
-
-.new-common .new-common-list a:hover {
+.new-common .new-common-list a:hover p.text-02 {
   color: #7FBE26;
 }
 
@@ -317,6 +312,11 @@
   background-size: cover;
   background-repeat: no-repeat;
   text-align: center;
+}
+
+.top .sec-services .services-blk .common-btn {
+  letter-spacing: 0.5px;
+  max-width: 168px;
 }
 
 .top .sec-services .services-blk:last-child {
@@ -438,24 +438,9 @@
   justify-content: flex-start;
 }
 
-.top .sec-medical-gp .medical-snc .btn-gp .common-btn {
-  /*width: 44.8%;*/
-  min-width: 170px;
-}
-
-.top .sec-medical-gp .medical-snc .btn-gp .common-btn:first-child {
+.top .sec-medical-gp .medical-snc .btn-gp .external-btn:first-child {
   margin-right: 2.8%;
-  padding: 16px 70px 16px 20px;
-  /*width: 44.5%;*/
-  min-width: 169px;
-  /*padding: 3.8% 18.3% 3.8% 5%;*/
-  /*max-width: 169px;*/
 }
-
-/*.top .sec-medical-gp .btn-gp .common-btn {
-  padding: 3.8% 16.8% 3.8% 5%;
-  max-width: 170px;
-}*/
 
 /* website-gp */
 
@@ -501,12 +486,6 @@
   letter-spacing: 0;
 }
 
-.top .sec-medical-gp .website-gp .common-btn {
-  /*padding: 3.8% 14.2% 3.8% 5%;*/
-  padding: 16px 70px 16px 20px;
-  max-width: 169px;
-}
-
 @media screen and (min-width: 1025px) and (max-width: 1200px) {
   .container {
     padding: 3%;
@@ -521,19 +500,8 @@
     padding: 0 3% 0 0;
   }
 
-  .top .sec-medical-gp .btn-gp .common-btn {
-    padding: 16px 40px 16px 20px;
-    min-width: 130px;
-  }
-
   .top .sec-medical-gp .btn-gp .common-btn:first-child {
     margin-right: 2%;
-    padding: 16px 40px 16px 20px;
-    min-width: 129px;
-  }
-
-  .top .sec-medical-gp .btn-gp .external-btn .external-text:after {
-    right: -25px;
   }
 }
 
@@ -566,24 +534,8 @@
     width: 37%;
   }
 
-  .top .sec-medical-gp .btn-gp .common-btn:first-child {
-    margin-right: 2.8%;
-    padding: 16px 25px 16px 15px;
-    /* width: 44.5%; */
-    min-width: 129px;
-    /* padding: 3.8% 18.3% 3.8% 5%; */
-    /* max-width: 169px; */
-  }
-
-  .top .sec-medical-gp .btn-gp .common-btn {
-    /* width: 44.8%; */
-    padding: 16px 25px 16px 15px;
-    letter-spacing: 1px;
-    min-width: 135px;
-  }
-
-  .top .sec-medical-gp .btn-gp .external-btn .external-text:after {
-    right: -22px;
+  .top .sec-medical-gp .medical-snc .btn-gp .external-btn:first-child {
+    margin-right: 1.5%;
   }
 }
 
@@ -693,6 +645,7 @@
     left: 0;
     width: 88%;
     margin: 0 auto;
+    letter-spacing: 0.3px;
     max-width: 325px;
   }
 

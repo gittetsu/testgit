@@ -141,7 +141,8 @@
   transform: translateY(-50%);
 }
 
-.sugi-medical-header .nav-menu-list li a:hover,.sugi-medical-header .nav-menu-list li a.active{
+.sugi-medical-header .nav-menu-list li a:hover,
+.sugi-medical-header .nav-menu-list li a.active {
   color: #7fbe26;
   transition: all .2s;
 }
@@ -156,12 +157,14 @@
 
 .common-btn {
   display: inline-block;
+  width: 100%;
   padding: 16px 62px 16px 20px;
   border: 2px solid transparent;
   box-shadow: inset 0px 3px 6px #00000029;
   background: transparent linear-gradient(66deg, #048851 0%, #7fbe26 100%) 0% 0% no-repeat padding-box;
   color: #fff;
   font-weight: 700;
+  text-align: left;
   letter-spacing: 1.5px;
   border-radius: 5px;
 }
@@ -204,23 +207,42 @@ h3.common-medical-ttl {
   border-left: 3px solid #7FBE26;
 }
 
-.external-btn .external-text {
-  display: inline-block;
+.external-btn {
+  display: block;
   position: relative;
+  width: 100%;
+  padding: 16px 38px 16px 20px;
+  border: 2px solid transparent;
+  box-shadow: inset 0px 3px 6px #00000029;
+  background: transparent linear-gradient(66deg, #048851 0%, #7fbe26 100%) 0% 0% no-repeat padding-box;
+  color: #fff;
+  font-weight: 700;
+  text-align: left;
+  letter-spacing: 0.5px;
+  border-radius: 5px;
+  max-width: 169px;
 }
 
-.external-btn .external-text:after {
+.external-btn:hover {
+  border: 2px solid #048851;
+  box-shadow: none;
+  background: none;
+  background-color: #fff;
+  color: #048851;
+}
+
+.external-btn:after {
   position: absolute;
-  top: 11px;
-  right: -42px;
+  top: 26px;
+  right: 20px;
   width: 100%;
-  height: 11px;
+  height: 14px;
   background: url(/img/sugi-medical/ico_external_link.svg) no-repeat center/cover;
   content: '';
-  max-width: 11px;
+  max-width: 14px;
 }
 
-.external-btn:hover .external-text:after {
+.external-btn:hover:after {
   filter: invert(80%) sepia(98%) saturate(6150%) hue-rotate(152deg) brightness(95%) contrast(97%);
 }
 
@@ -300,8 +322,20 @@ footer.ft-medical .ft-nav {
   background-color: #7fbe26;
 }
 
+.ft-medical .ft-blk .lt-ft-blk .nav-list li a:hover,
+.ft-medical .ft-blk .lt-ft-blk .nav-list li a.active {
+  color: #7fbe26;
+  transition: all .2s;
+}
+
+.ft-medical .ft-blk .lt-ft-blk .sub-nav-list li a:hover {
+  color: #7fbe26;
+  border-bottom: 1px solid #7fbe26;
+}
+
 footer.ft-medical .ft-blk .sugi-medical-img {
   margin-bottom: 30px;
+  display: inline-block;
 }
 
 footer.ft-medical .ft-blk .sugi-medical-img img {
@@ -402,7 +436,8 @@ footer.ft-medical .page-top img {
     filter: none;
   }
 
-  .sugi-medical-header .nav-menu-list li a:hover,.sugi-medical-header .nav-menu-list li a.active {
+  .sugi-medical-header .nav-menu-list li a:hover,
+  .sugi-medical-header .nav-menu-list li a.active {
     color: #fff;
   }
 
@@ -429,6 +464,16 @@ footer.ft-medical .page-top img {
     font-weight: 400;
   }
 
+  .external-btn {
+    padding: 16px 30px 16px 20px;
+    letter-spacing: 0;
+  }
+
+  .external-btn:after {
+    top: 26px;
+    right: 15px;
+  }
+
   .sec-medical-contact .ft-contact .email-us-btn:hover {
     background-color: #fff;
     color: #7fbe26;
@@ -440,6 +485,10 @@ footer.ft-medical .page-top img {
 }
 
 @media only screen and (max-width: 767.9px) {
+
+  h3.common-ttl {
+    font-size: 1.25rem;
+  }
 
   h3.common-medical-ttl {
     font-size: 1.25rem;
@@ -550,7 +599,8 @@ footer.ft-medical .page-top img {
     filter: none;
   }
 
-  .sugi-medical-header .nav-menu-list li a:hover,.sugi-medical-header .nav-menu-list li a.active  {
+  .sugi-medical-header .nav-menu-list li a:hover,
+  .sugi-medical-header .nav-menu-list li a.active {
     color: #fff;
   }
 
@@ -590,9 +640,14 @@ footer.ft-medical .page-top img {
     right: -37px;
   }
 
-  .external-btn .external-text:after {
-    top: 8px;
-    right: -37px;
+  .external-btn {
+    padding: 16px 38px 16px 20px;
+    font-size: 1rem;
+    max-width: 162px;
+  }
+
+  .external-btn:after {
+    top: 21px;
   }
 
   /* ft-contact-blk */

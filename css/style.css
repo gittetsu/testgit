@@ -145,7 +145,7 @@
   color: #000;
   text-align: left;
   letter-spacing: 3.8px;
-  border-radius: 5px;
+  border-radius: 0px;
   border-top: 1px solid #e6e6e6;
 }
 
@@ -163,6 +163,7 @@
   background-color: #048851;
   color: #ffffff;
   border-top: 1px solid transparent;
+  border-radius: 5px;
 }
 
 .top .sec-news .tab-list .tab-right {
@@ -1879,15 +1880,15 @@
   }
 
   .category-list-item01 {
-    background: url(../img/img_investors_sp.jpg) no-repeat center/100% 100%;
+    background: url(../img/img_investors_sp.jpg) no-repeat center/cover;
   }
 
   .category-list-item02 {
-    background: url(../img/img_property_sp.jpg) no-repeat center/100% 100%;
+    background: url(../img/img_property_sp.jpg) no-repeat center/cover;
   }
 
   .category-list-item03 {
-    background: url(../img/img_recruit_sp.jpg) no-repeat center/100% 100%;
+    background: url(../img/img_recruit_sp.jpg) no-repeat center/cover;
   }
 
   .category-list-ttl {
@@ -2164,4 +2165,18 @@
     font-size: 2.425rem;
     letter-spacing: 2.2px;
   }
+
+  /* image list block */
+  .category-list-item01 {
+    background: url(../img/img_investors_sp.jpg) no-repeat center/100% 100%;
+  }
+
+  .category-list-item02 {
+    background: url(../img/img_property_sp.jpg) no-repeat center/100% 100%;
+  }
+
+  .category-list-item03 {
+    background: url(../img/img_recruit_sp.jpg) no-repeat center/100% 100%;
+  }
+
 }

@@ -603,8 +603,7 @@ h6.common-sub-ttl {
 }
 
 .sugi-holding-header .nav-menu-list li.dropdown a:hover,
-.sugi-holding-header .nav-menu-list li.dropdown a.active,
-.sugi-holding-header .nav-menu-list li.dropdown.show a {
+.sugi-holding-header .nav-menu-list li.dropdown a.active {
   color: #048851;
 }
 
@@ -1417,6 +1416,11 @@ h6.common-sub-ttl {
 .tab-list-01 li a.active {
   background-color: #048851;
   color: #fff;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .tab-list-01 li a:hover::after,
@@ -2152,6 +2156,7 @@ footer .ft-blk {
 }
 
 .ft-blk .sugi-holding-img {
+  display: inline-block;
   margin-bottom: 30px;
 }
 
@@ -2179,8 +2184,18 @@ footer .ft-blk {
   font-size: 0.875rem;
 }
 
+.ft-blk .lt-ft-blk .sub-nav-list li a:hover {
+  color: #048851;
+  border-bottom: 1px solid #048851;
+}
+
 .ft-blk .lt-ft-blk .nav-list li {
   margin-right: 25px;
+}
+
+.ft-blk .lt-ft-blk .nav-list li a:hover,
+.ft-blk .lt-ft-blk .nav-list li a.active {
+  color: #048851;
 }
 
 .ft-blk .lt-ft-blk .nav-list li:last-child {

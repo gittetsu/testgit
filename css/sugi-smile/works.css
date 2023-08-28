@@ -1,6 +1,10 @@
 @charset "UTF-8";
 
 /* Our Business */
+.smile-work {
+  padding-top: 60px;
+}
+
 .smile-work .intro-txt {
   font-size: 1.625rem;
   font-weight: 700;
@@ -20,17 +24,11 @@
 }
 
 .smile-work .cleaning-list li {
-  width: 31%;
-  margin-right: 3.5%;
+  width: 30.741%;
+  margin-right: 31px;
   margin-bottom: 40px;
 }
 
-.smile-work .cleaning-list.two-items li {
-  width: 48%;
-  margin-right: 4%;
-}
-
-.smile-work .cleaning-list.two-items li:nth-child(2n),
 .smile-work .cleaning-list li:nth-child(3n) {
   margin-right: 0;
 }
@@ -40,33 +38,33 @@
 }
 
 .smile-work .senior-voice {
-  border: 2px solid #009944;
-  border-radius: 20px;
-  background-color: #fff;
-  padding: 30px 35px;
   margin-bottom: 80px;
+  padding: 30px 35px;
+  border: 2px solid #009944;
+  background-color: #fff;
+  border-radius: 20px;
 }
 
 .senior-voice .voice-ttl {
-  text-align: center;
-  font-weight: 500;
   font-size: 1.625rem;
+  font-weight: 500;
+  text-align: center;
 }
 
 .senior-voice .voice-ttl .ttl-txt {
-  padding-left: 50px;
   position: relative;
+  padding-left: 50px;
 }
 
 .senior-voice .voice-ttl .ttl-txt::before {
   position: absolute;
-  content: "";
+  top: 50%;
+  left: 0;
   width: 36px;
   height: 31px;
   background: url("/img/sugi-smile/ico_comment_dots.svg") no-repeat center/contain;
-  top: 50%;
+  content: "";
   transform: translateY(-50%);
-  left: 0;
 }
 
 .senior-voice .voice-blk {
@@ -92,11 +90,11 @@
 }
 
 .voice-detail .detail-fact .fact-ttl {
-  background-color: #f7f5df;
-  border-radius: 5px;
-  font-weight: 700;
-  color: #009944;
   padding: 5px 20px;
+  background-color: #f7f5df;
+  color: #009944;
+  font-weight: 700;
+  border-radius: 5px;
 }
 
 .voice-detail .detail-fact .fact-txt {
@@ -106,20 +104,6 @@
 .works h2.common-ttl {
   color: #009944;
   border-bottom-color: #009944;
-}
-
-.head-office .cleaning-list.logistics li:nth-child(2) {
-  width: 64%;
-  margin-right: 0;
-}
-
-.head-office .cleaning-list li:nth-child(2) .cleaning-img-wrap {
-  display: flex;
-  justify-content: space-between;
-}
-
-.head-office .cleaning-list li:nth-child(2) .cleaning-img-wrap .cleaning-img {
-  width: 47.7%;
 }
 
 /*I-pad*/
@@ -140,8 +124,9 @@
   .sugi-smile-wrapper.sugi-smile-work {
     background-position: center top 185px;
   }
+
   .smile-work {
-    padding-top: 70px;
+    padding-top: 73px;
   }
 
   /* Breadcrumb */
@@ -162,8 +147,7 @@
     margin-bottom: 30px;
   }
 
-  .smile-work .cleaning-list li,
-  .smile-work .cleaning-list.two-items li {
+  .smile-work .cleaning-list li {
     width: 48%;
     margin-right: 4%;
     margin-bottom: 10px;
@@ -174,37 +158,37 @@
   }
 
   .smile-work .senior-voice {
-    border-radius: 10px;
-    background-color: #fff;
-    padding: 0;
     margin-bottom: 50px;
+    padding: 0;
+    background-color: #fff;
+    border-radius: 10px;
   }
 
   .senior-voice .voice-ttl {
-    text-align: left;
-    font-size: 1.25rem;
     display: flex;
     justify-content: space-between;
-    cursor: pointer;
     padding: 20px;
+    font-size: 1.25rem;
+    text-align: left;
+    cursor: pointer;
   }
 
   .js-accor .accor-ttl .circle-ico {
+    position: relative;
     width: 36px;
     height: 36px;
-    border-radius: 50%;
     background-color: #009944;
-    position: relative;
+    border-radius: 50%;
   }
 
   .js-accor .accor-ttl .circle-ico::before,
   .js-accor .accor-ttl .circle-ico::after {
     position: absolute;
-    content: "";
     top: 50%;
     left: 50%;
-    transform: translateX(-50%) translateY(-50%);
     background-color: #fff;
+    content: "";
+    transform: translateX(-50%) translateY(-50%);
     border-radius: 100px;
   }
 
@@ -225,8 +209,8 @@
 
   .js-accor .accor-body {
     display: none;
-    transition: all 0.2s;
     padding: 0 20px;
+    transition: all 0.2s;
   }
 
   .js-accor.active .accor-body {
@@ -235,22 +219,17 @@
 
   .senior-voice .voice-blk {
     display: block;
-    padding-top: 0;
     margin-bottom: 30px;
+    padding-top: 0;
   }
 
   .voice-blk .voice-img {
     width: 33%;
-    max-width: 77px;
     margin: 0 auto 20px;
+    max-width: 77px;
   }
 
-  .voice-blk .voice-detail,
-  .head-office .cleaning-list.logistics li:nth-child(2) {
+  .voice-blk .voice-detail {
     width: 100%;
-  }
-
-  .head-office .cleaning-list li:nth-child(2) .cleaning-img-wrap .cleaning-img {
-    width: 48%;
   }
 }

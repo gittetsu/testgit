@@ -533,14 +533,31 @@ function setHeight(elements) {
 window.addEventListener('load', accordionHeight)
 window.addEventListener('resize', accordionHeight)
 
+var toggleBtn = document.querySelector('.toggle-btn');
+
 function setOverflow(query) {
     if (query.matches) {
-        if (hamburger.classList.contains('active')) {
-            bodyElement.style.overflow = 'hidden'
+        if (hamburger) {
+            if (hamburger.classList.contains('active')) {
+                bodyElement.style.overflow = 'hidden'
+            }
         }
+        if (toggleBtn) {
+            if (toggleBtn.classList.contains('active')) {
+                bodyElement.style.overflow = 'hidden',
+                    bodyElement.style.position = 'fixed';
+            }
+        }
+
     } else {
         bodyElement.style.overflow = 'auto'
-        bodyElement.style.position = 'relative'
+        bodyElement.style.position = 'relative';
+        if (toggleBtn) {
+            if (toggleBtn.classList.contains('active')) {
+                bodyElement.style.overflow = 'hidden',
+                    bodyElement.style.position = 'fixed';
+            }
+        }
     }
 }
 setOverflow(query)
@@ -550,11 +567,20 @@ window.addEventListener('resize', setOverflow(query))
 /*header nav-menu add active-class*/
 var currentUrl = window.location.href.split('?')[0]
 var menuItems = document.querySelectorAll(
-    '.sugi-nursing-header .nav-menu-list li a, .sugi-nursing-header .header-contact-btn a, .sugi-medical-header .nav-menu-list li a, .sugi-holding-header .nav-menu-list li a,.sugi-holding-header .sub-nav-list a',
+    '.sugi-nursing-header .nav-menu-list li a, .sugi-nursing-header .header-contact-btn a, .sugi-medical-header .nav-menu-list li a, .sugi-holding-header .nav-menu-list li a,.sugi-holding-header .sub-nav-list a,.sugi-holding-footer .nav-list li a,.sugi-smile-footer .nav-list li a,.ft-medical .nav-list li a,.ft-nursing-care .nav-list li a',
 )
 menuItems.forEach(function (item) {
-    var menuItemUrl = item.href.split('?')[0]
+    var menuItemUrl = item.href.split('?')[0];
+    var menuSplit = item.href.split('/').slice(3, -1);
+    var currentSplit = currentUrl.split('/').slice(3, -1);
     if (menuItemUrl === currentUrl) {
+        item.classList.add('active')
+    }
+    if (menuSplit[0] === 'sugi-nursingcare' || menuSplit[0] === 'sugi-smile' || menuSplit[0] === 'sugi-medical' || menuSplit[0] === 'sugi-pharmacy') {
+        if (menuSplit[1] === currentSplit[1]) {
+            item.classList.add('active')
+        }
+    } else if (menuSplit[0] === currentSplit[0] && currentSplit[0] !== undefined) {
         item.classList.add('active')
     }
 })
@@ -582,3 +608,13 @@ document.addEventListener('DOMContentLoaded', function () {
         })
     })
 })
+
+/*new-window-open-js*/
+function openFullScreenWindow(url) {
+    var screenWidth = window.screen.width;
+    var screenHeight = window.screen.height;
+    var newWindow = window.open(url, '_blank', 'width=' + screenWidth + ',height=' + screenHeight);
+    if (!newWindow) {
+        alert('Pop-up blocked. Please allow pop-ups for this site.');
+    }
+}

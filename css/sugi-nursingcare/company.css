@@ -1,10 +1,16 @@
 @charset "UTF-8";
 
+.nursing-care-wrapper::after {
+  top: -4%;
+  left: 7%;
+}
+
 .sec-nursecare-company {
   padding-bottom: 60px;
 }
 
 .sec-nursecare-company .company-txt {
+  line-height: 1.6;
   color: #292726;
   font-size: 1.5rem;
   font-weight: 500;
@@ -15,6 +21,7 @@
   color: #292726;
   font-size: 1rem;
   font-weight: 400;
+  letter-spacing: 0.64px;
 }
 
 .sec-nursecare-company .philosophy-sec {
@@ -56,7 +63,7 @@
 .profile-sec .table tr td .info {
   display: flex;
   flex-wrap: wrap;
-  width: 65%;
+  width: 100%;
 }
 
 .profile-sec .table tr td .info li {
@@ -73,6 +80,16 @@
   justify-content: center;
 }
 
+.profile-sec .btn-list .common-nursing-button {
+  width: 240px;
+  padding: 18px 77px 18px 32px;
+  text-align: right;
+}
+
+.profile-sec .btn-list .common-nursing-button .arrow {
+  right: 53px;
+}
+
 .profile-sec .btn-list .common-nursing-button:first-child {
   margin-right: 40px;
 }
@@ -80,12 +97,26 @@
 /* SP */
 @media only screen and (max-width: 767.9px) {
 
+  .nursing-care-wrapper::after {
+    top: 0;
+    left: 0;
+    height: 800px;
+  }
+
   .sec-nursecare-company {
     padding-bottom: 0;
   }
 
+  .greeting-sec h3.common-nursing-subttl {
+    font-size: 2rem;
+  }
+
   .sec-nursecare-company .company-txt {
     font-size: 1.125rem;
+  }
+
+  .cmp-bottom-ttl {
+    padding: 0 20px;
   }
 
   .profile-sec h3.profile-ttl {
@@ -117,7 +148,6 @@
 
   .profile-sec .btn-list .common-nursing-button {
     width: 240px;
-    text-align: center;
   }
 
 }

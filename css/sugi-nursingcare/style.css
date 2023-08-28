@@ -82,7 +82,7 @@
 }
 
 .nursing-quest-blk .sec-col-box .nursing-quest-box {
-  border-radius: 53px 53px 53px 2px;
+  border-radius: 53px 53px 53px 4px;
 }
 
 .nursing-quest-box .nursing-quest-word {
@@ -335,6 +335,7 @@ ul.nursing-newslist-blk li .nursing-news-list::after {
 .dev-service-blk .dev-service-list li {
   line-height: 1.8;
   padding: 13.5px 0;
+  font-size: 1rem;
   border-bottom: 1px solid #e9e6da;
 }
 
@@ -521,6 +522,7 @@ ul.nursing-newslist-blk li .nursing-news-list::after {
 
   .sec-nursing-mv .nursing-mv-cntblk .support-health-img {
     width: 100%;
+    padding-right: 20px;
   }
 
   .sec-nursing-mv .nursing-mv-cntblk .nursing-mv-txtblk {
@@ -785,6 +787,7 @@ ul.nursing-newslist-blk li .nursing-news-list::after {
   .sec-company-intro .company-business-blk {
     margin-top: 20px;
     padding-top: 0;
+    border-top: unset;
   }
 
   .sec-company-intro .medical-consult-txtblk .nursing-taxo-link,

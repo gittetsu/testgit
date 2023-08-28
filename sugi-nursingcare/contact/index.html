@@ -15,8 +15,8 @@
 <body>
 	<div class="nursing-care-wrapper">
 		<!--#include virtual="/include/nursing-care-header.html" -->
-		<div class="inner">
-			<section class="sec-nurcare-contact">
+		<section class="sec-nurcare-contact">
+			<div class="inner">
 				<div class="common-nursing-ttl mb-sp-40">
 					<span>お問い合わせ</span>
 					<h2>CONTACT</h2>
@@ -38,7 +38,7 @@
 					<div class="input-container">
 						<p class="form-label"><span class="required">必須</span>お名前</p>
 						<div class="input-box">
-							<div class="d-flex">
+							<div class="input-d-flex">
 								<input type="text" id="surname" name="surname" value="" placeholder="姓" class="name-input error">
 								<input type="text" id="name" name="name" value="" placeholder="名" class="name-input">
 							</div>
@@ -48,7 +48,7 @@
 					<div class="input-container">
 						<p class="form-label"><span class="required">必須</span>フリガナ</p>
 						<div class="input-box">
-							<div class="d-flex">
+							<div class="input-d-flex">
 								<input type="text" id="furiSurname" name="furiSurname" value="" placeholder="セイ" class="name-input">
 								<input type="text" id="furiName" name="furiName" value="" placeholder="メイ" class="name-input">
 							</div>
@@ -104,6 +104,7 @@
 								<li class="mb-sp-20">お客様の個人情報は厳重に取り扱い、お問い合わせ対応および当社からの情報提供を目的として利用させていただきます。</li>
 								<li>
 									個人情報の取り扱いにおきましては、当社プライバシーポリシーをご確認ください。
+									<br>
 									<a href="https://www.sugi-hd.co.jp/privacypolicy/index.html" target="_blank"
 										class="policy-link">https://www.sugi-hd.co.jp/privacypolicy/index.html</a>
 								</li>
@@ -118,14 +119,14 @@
 						<button type="submit" class="common-nursing-button">確認画面へ<span class="arrow"></span></button>
 					</div>
 				</form>
-			</section><!-- /.sec-nurcare-contact -->
-			<section class="sec-nurcare-consult">
-				<div class="inner">
-					<h3 class="common-nursing-subttl">まずは、スギナーシングケアにご相談ください。</h3>
-				</div>
-			</section><!-- /.sec-nurcare-consult -->
-		</div><!-- /.inner -->
-	</div>
+			</div>
+		</section><!-- /.sec-nurcare-contact -->
+		<section class="sec-nurcare-consult">
+			<div class="inner">
+				<h3 class="common-nursing-subttl">まずは、スギナーシングケアにご相談ください。</h3>
+			</div>
+		</section><!-- /.sec-nurcare-consult -->
+	</div><!--/.nursing-care-wrapper -->
 	<div class="sugi-nursing-contact">
 		<div class="inner">
 			<div class="ft-contact-bnr">

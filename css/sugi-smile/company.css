@@ -46,6 +46,9 @@
   vertical-align: initial;
 }
 
+.sugi-company-blk .about-intro {
+  font-size: 1rem;
+}
 
 /*I-pad*/
 @media screen and (min-width: 768px) and (max-width: 1024px) {
