@@ -283,7 +283,7 @@ ol {
 .ref-link a {
   display: flex;
   position: relative;
-  align-items: center;
+  align-items: flex-start;
   padding-right: 25px;
   color: #048851;
   text-align: center;
