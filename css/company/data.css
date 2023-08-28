@@ -208,6 +208,7 @@
 }
 
 .goal-emp-blk .goal-blk {
+  line-height: 1.2;
   padding-left: 5px;
   font-weight: 400;
 }
@@ -334,7 +335,7 @@
 
   .cmm-capital-blk .cmm-capital-ttl-blk {
     align-items: flex-start;
-    padding: 12px 10px 12px 30px;
+    padding: 24px 10px 24px 30px;
   }
 
   .human-capital-ttlblk .capital-ttl-cnt {
@@ -363,7 +364,9 @@
   }
 
   .employee-info-blk .company-local-community .cmm-emp-total-number {
+    line-height: 0.8;
     margin-left: 16px;
+    font-size: 2.5rem;
   }
 
   .management-criteria-img {
@@ -372,6 +375,7 @@
   }
 
   .cmm-capital-blk .capital-ttl-cnt h3 {
+    line-height: 1.5;
     font-size: 1.375rem;
   }
 
@@ -605,5 +609,9 @@
 
   .natural-box-list .cmm-partner-box:first {
     border-bottom: unset !important;
+  }
+
+  .cmm-capital-blk .capital-icon {
+    padding-top: 10px;
   }
 }
