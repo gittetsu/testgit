@@ -580,7 +580,7 @@ menuItems.forEach(function (item) {
         if(menuSplit[1] === currentSplit[1]) {
             item.classList.add('active')
         }
-    } else if (menuSplit[0] === 'news') {
+    } else if (menuSplit[0] === currentSplit[0] && currentSplit[0] !== undefined) {
         item.classList.add('active')
     }
 })
