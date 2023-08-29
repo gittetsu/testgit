@@ -269,6 +269,12 @@
   align-items: center;
 }
 
+.sec-our-business .block-height {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .sec-our-business .business-desc .business-desc-txt {
   margin-bottom: 32px;
 }
