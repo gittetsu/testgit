@@ -27,6 +27,10 @@
   font-weight: 400;
   outline: none;
   border-radius: 3px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
 }
 
 .sec-medi-contact .contact-form .input-container textarea {
@@ -38,6 +42,10 @@
   outline: none;
   resize: none;
   border-radius: 3px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
 }
 
 .sec-medi-contact .contact-form .input-container input[type='text']::-webkit-input-placeholder {
