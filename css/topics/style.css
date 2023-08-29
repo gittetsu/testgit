@@ -284,6 +284,10 @@
     width: 100%;
   }
 
+  .news-search .search-panel {
+    padding: 0;
+  }
+
   .news-search .search-panel .search-gp {
     flex-direction: column;
   }

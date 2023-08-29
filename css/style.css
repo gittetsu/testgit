@@ -152,9 +152,8 @@
 
 .top .sec-news .tab-list .tab-left .common-button .arrow,
 .top .sec-vision ul .common-button span {
-  top: 50%;
+  top: 23px;
   right: 20px;
-  transform: translateY(-50%);
 }
 
 .top .sec-news .tab-list .tab-left .common-button:hover,
@@ -1211,6 +1210,7 @@
   }
 
   .top .common-ttl-blk .common-button .arrow {
+    top: 19px;
     right: 27px;
   }
 
@@ -1311,7 +1311,7 @@
   }
 
   .top .sec-news .tab-list .tab-left li {
-    display: inline-block;
+    display: flex;
   }
 
   .top .sec-news .tab-list .tab-left::-webkit-scrollbar {
