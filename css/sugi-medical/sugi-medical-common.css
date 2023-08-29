@@ -142,13 +142,13 @@
 }
 
 .sugi-medical-header .nav-menu-list li a:hover,
-.sugi-medical-header .nav-menu-list li a.active {
+.sugi-medical-header .nav-menu-list li a.visible {
   color: #7fbe26;
   transition: all .2s;
 }
 
 .sugi-medical-header .nav-menu-list .contact a:hover::before,
-.sugi-medical-header .nav-menu-list .contact a.active::before {
+.sugi-medical-header .nav-menu-list .contact a.visible::before {
   transition: all .2s;
   filter: invert(60%) sepia(87%) saturate(410%) hue-rotate(43deg) brightness(100%) contrast(82%);
 }
@@ -318,7 +318,7 @@ footer.ft-medical .ft-nav {
 }
 
 .ft-medical .ft-blk .lt-ft-blk .nav-list li a:hover,
-.ft-medical .ft-blk .lt-ft-blk .nav-list li a.active {
+.ft-medical .ft-blk .lt-ft-blk .nav-list li a.visible {
   color: #7fbe26;
   transition: all .2s;
 }
@@ -432,7 +432,7 @@ footer.ft-medical .page-top img {
   }
 
   .sugi-medical-header .nav-menu-list li a:hover,
-  .sugi-medical-header .nav-menu-list li a.active {
+  .sugi-medical-header .nav-menu-list li a.visible {
     color: #fff;
   }
 
@@ -595,7 +595,7 @@ footer.ft-medical .page-top img {
   }
 
   .sugi-medical-header .nav-menu-list li a:hover,
-  .sugi-medical-header .nav-menu-list li a.active {
+  .sugi-medical-header .nav-menu-list li a.visible {
     color: #fff;
   }
 

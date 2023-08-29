@@ -345,6 +345,9 @@
   font-family: 'Zen Maru Gothic', sans-serif;
 }
 
+.sugi-smile-footer .ft-blk .lt-ft-blk .nav-list li a:hover, .sugi-smile-footer .ft-blk .lt-ft-blk .nav-list li a.visible{
+  color: #009944;
+}
 .sugi-smile-footer .ft-blk .sugi-holding-img {
   max-width: 233px;
 }

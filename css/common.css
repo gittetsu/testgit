@@ -603,7 +603,7 @@ h6.common-sub-ttl {
 }
 
 .sugi-holding-header .nav-menu-list li.dropdown a:hover,
-.sugi-holding-header .nav-menu-list li.dropdown a.active {
+.sugi-holding-header .nav-menu-list li.dropdown a.visible {
   color: #048851;
 }
 
@@ -2194,7 +2194,7 @@ footer .ft-blk {
 }
 
 .ft-blk .lt-ft-blk .nav-list li a:hover,
-.ft-blk .lt-ft-blk .nav-list li a.active {
+.ft-blk .lt-ft-blk .nav-list li a.visible {
   color: #048851;
 }
 
@@ -2780,7 +2780,7 @@ footer .page-top:hover img {
   }
 
   .sugi-holding-header .nav-menu-list li.dropdown a:hover,
-  .sugi-holding-header .nav-menu-list li.dropdown a.active {
+  .sugi-holding-header .nav-menu-list li.dropdown a.visible {
     color: #fff;
   }
 
@@ -3543,7 +3543,7 @@ footer .page-top:hover img {
   }
 
   .sugi-holding-header .nav-menu-list li.dropdown a:hover,
-  .sugi-holding-header .nav-menu-list li.dropdown a.active {
+  .sugi-holding-header .nav-menu-list li.dropdown a.visible {
     color: #fff;
   }
 

@@ -107,7 +107,6 @@ var jsSidebar = document.querySelector('.js-sidebar')
 var sidebarDeatils = document.querySelectorAll('.js-sidebar .sb-detail-link')
 var closeBtn = document.querySelector('.close-btn ')
 const mediaQuery2 = window.matchMedia('(max-width: 1025px)')
-const bodyElement = document.body
 if (toggleButton) {
     toggleButton.addEventListener('click', function () {
         slideContent.classList.toggle('open')
@@ -263,8 +262,7 @@ function dropDownMenuFunc(toggle) {
     }
 }
 // var dropdown = document.querySelectorAll(".dropdown");
-var dropdowns = document.querySelectorAll('.dropdown .dropdown-list')
-
+var dropdowns = document.querySelectorAll('.dropdown .dropdown-list');
 dropdowns.forEach(function (toggle) {
     var dropdownMenu = toggle.nextElementSibling
     const query = window.matchMedia('(max-width: 1024.9px)')
@@ -310,6 +308,16 @@ dropdowns.forEach(function (toggle) {
     }
 })
 
+var subMenuLists = document.querySelectorAll('.sub-menu-list li a');
+subMenuLists.forEach(function ( subMenuList) {
+    subMenuList.addEventListener('click',function(){
+        hamburger.classList.remove('active')
+        navMenu.classList.remove('active')
+        bodyElement.style.overflow = 'auto'
+        bodyElement.style.position = 'relative'
+    })
+});
+
 function calculateMaxHeight(element) {
     var contentHeight = element.scrollHeight
     return contentHeight
@@ -318,7 +326,6 @@ function calculateMaxHeight(element) {
 const newImg = document.createElement('img')
 
 /*menubar */
-document.addEventListener('DOMContentLoaded', function () {
     var hamburger = document.querySelector('.hamburger')
     var navMenu = document.querySelector('.nav-menu')
     var searchButton = document.querySelector('.search-btn')
@@ -337,7 +344,6 @@ document.addEventListener('DOMContentLoaded', function () {
                     subMenu.style.height = 0
                     searchButton.classList.remove('show-submenu')
                     submenu.classList.remove('show-submenu')
-                    // console.log("show-menu");
                     existingImg = searchIcon.querySelector('img')
                     if (existingImg) {
                         newImg.src = '/img/common/ico_search.png'
@@ -359,10 +365,9 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         })
     }
-})
+
 
 function handleClick() {
-    console.log('Button clicked!')
 }
 
 /*search-button*/
@@ -463,7 +468,8 @@ const header = document.querySelector('.header-inner')
 function handle(event) {
     if (event.matches) {
         if (element) {
-            header.style.marginBottom = '60px'
+            var contentHeight = calculateMaxHeight(jsSidebar)
+            header.style.marginBottom = contentHeight + 'px';
         } else {
             header.style.marginBottom = '0px'
         }
@@ -473,6 +479,7 @@ function handle(event) {
 }
 handle(query)
 query.addListener(handle)
+window.addEventListener("resize",handle(query));
 
 // Accordion Height
 function accordionHeight() {
@@ -574,22 +581,22 @@ menuItems.forEach(function (item) {
     var menuSplit = item.href.split('/').slice(3, -1);
     var currentSplit = currentUrl.split('/').slice(3, -1);
     if (menuItemUrl === currentUrl) {
-        item.classList.add('active')
+        item.classList.add('visible')
     }
     if (menuSplit[0] === 'sugi-nursingcare' || menuSplit[0] === 'sugi-smile' || menuSplit[0] === 'sugi-medical' || menuSplit[0] === 'sugi-pharmacy') {
         if (menuSplit[1] === currentSplit[1]) {
-            item.classList.add('active')
+            item.classList.add('visible')
         }
     } else if (menuSplit[0] === currentSplit[0] && currentSplit[0] !== undefined) {
-        item.classList.add('active')
+        item.classList.add('visible')
     }
 })
 
-document.addEventListener('DOMContentLoaded', function () {
+
     var menuItems = document.querySelectorAll(
         '.sugi-holding-header .nav-menu-list li .dropdown-list',
     )
-    var activeClass = 'active'
+    var activeClass = 'visible';
     var currentRoute = window.location.pathname
 
     menuItems.forEach(function (item) {
@@ -607,7 +614,7 @@ document.addEventListener('DOMContentLoaded', function () {
             item.classList.add(activeClass)
         })
     })
-})
+
 
 /*new-window-open-js*/
 function openFullScreenWindow(url) {
