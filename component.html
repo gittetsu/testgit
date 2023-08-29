@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="css/common.css">
 </head>
 <body>
-	<!--#include virtual="include/header.html" -->
+  <header data-include="/include/header.html"></header>
 	<div class="cmn-banner">
 		<div class="inner">
 			<h1>CONTACT</h1>
@@ -1658,13 +1658,14 @@
 		</div>
 
 	</div>
-	<!--#include virtual="component/inves-info-footer-nav.html" -->
-	<!--#include virtual="component/stb-footer-nav.html" -->
-	<!--#include virtual="component/cor-gov-footer-nav.html" -->
-	<!--#include virtual="component/com-info-footer-nav.html" -->
-	<!--#include virtual="component/prop-info-footer-nav.html" -->
-	<!--#include virtual="include/footer.html" -->
-	<script src="js/common.js"></script>
+	<div data-include ="component/inves-info-footer-nav.html"></div>
+	<div data-include ="component/stb-footer-nav.html"></div>
+	<div data-include ="component/cor-gov-footer-nav.html"></div>
+	<div data-include="component/com-info-footer-nav.html"></div>
+	<div data-include="component/prop-info-footer-nav.html"></div>
+  <footer data-include="/include/footer.html"></footer>
+	<script src="js/common-testing.js"></script>
+
 </body>
 
 </html>
