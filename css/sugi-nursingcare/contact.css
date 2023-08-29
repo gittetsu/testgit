@@ -46,10 +46,10 @@
   font-weight: 400;
   outline: none;
   border-radius: 3px;
+  appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
   -o-appearance: none;
-  appearance: none;
 }
 
 .sec-nurcare-contact .contact-form .input-container textarea {
@@ -61,10 +61,10 @@
   outline: none;
   resize: none;
   border-radius: 3px;
+  appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
   -o-appearance: none;
-  appearance: none;
 }
 
 .sec-nurcare-contact .contact-form .input-container input[type='text']::-webkit-input-placeholder {
@@ -227,16 +227,17 @@
   width: 100%;
   padding: 13px 20px;
   border: 1px solid #ddd;
+  background-color: #fff;
   color: #000;
   font-family: 'Zen Maru Gothic', sans-serif;
   font-size: 1rem;
   font-weight: 500;
   outline: none;
   border-radius: 3px;
+  appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
   -o-appearance: none;
-  appearance: none;
 }
 
 .sec-nurcare-contact .contact-form .input-container .select-arrow {
