@@ -179,9 +179,13 @@
   background-color: #22b7a9;
 }
 
-.sec-key-issues .tab-list-02 .yellow,
+
 #materiality-theme01 .table .table-ttl .table-col-name {
   background-color: #f5a20b;
+}
+
+.sec-key-issues .tab-list-02 .yellow {
+  background-color: #f5a22c;
 }
 
 .sec-key-issues .tab-list-02 .blue,
