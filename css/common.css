@@ -4075,6 +4075,9 @@ footer .page-top:hover img {
     height: 11px;
     max-width: 11px;
   }
+  .img-list-gp .img-col03 .img-list-detail .external-blk span:after{
+    top:4px;
+  }
 
   .img-list-detail .external-blk span {
     padding-right: 17px;
