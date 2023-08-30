@@ -3,7 +3,6 @@ const tabContents = document.querySelectorAll('[data-tab-content]')
 
 tabs.forEach(tab => {
 	tab.addEventListener('click', () => {
-    const currentUrl = window.location.href;
 		const target = document.querySelector(tab.dataset.tabTarget)
 		tabContents.forEach(tabContent => {
 			tabContent.classList.remove('active')
@@ -20,6 +19,15 @@ tabs.forEach(tab => {
 	})
 });
 
+const currentPath = window.location.href.split('/').slice(5);
+if(currentPath == "" || currentPath == "#fiscal-year-2023" || currentPath == "#fiscal-year-2024") {
+	document.addEventListener("DOMContentLoaded", function() {
+		setTimeout(function() {
+			window.scrollTo(0, 0);
+		}, 50);
+	});
+}
+
 document.addEventListener("DOMContentLoaded", function (e) {
 	tabs.forEach(tab => {
 		tab.classList.remove('active')
@@ -29,14 +37,13 @@ document.addEventListener("DOMContentLoaded", function (e) {
 	})
 	if (window.location.hash) {
 		let hash = decodeURIComponent(window.location.hash.trim());
-		if (hash === "#fiscal-year-2023") {
-			var tabTitle = document.body.querySelector('[data-tab-target="#fiscal-year-2023"]')
+		if (hash == "#fiscal-year-2024") {
+			var tabTitle = document.body.querySelector('[data-tab-target="#fiscal-year-2024"]')
 			tabTitle.setAttribute('class','active');
 			const target = document.querySelector(tabTitle.dataset.tabTarget)
 			target.classList.add('active');
-		}
-		else if (hash == "#fiscal-year-2024") {
-			var tabTitle = document.body.querySelector('[data-tab-target="#fiscal-year-2024"]')
+		} else {
+			var tabTitle = document.body.querySelector('[data-tab-target="#fiscal-year-2023"]')
 			tabTitle.setAttribute('class','active');
 			const target = document.querySelector(tabTitle.dataset.tabTarget)
 			target.classList.add('active');
