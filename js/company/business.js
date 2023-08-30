@@ -26,6 +26,7 @@ setupTabs('.sec-effort-support .tab-list:first-child');
 setupTabs('.sec-effort-support .tab-list:last-child');
 setupTabs('.sec-our-mission .tab-list:first-child');
 
+let counter = 2;
 function handleSlider() {
 	// Tab Slider
 	const carouselSlide = document.querySelector(".carousel-slide");
@@ -33,18 +34,15 @@ function handleSlider() {
 	const tabLists = document.querySelectorAll(".tab-list li a");
 	const prevBtn = document.querySelector("#prev-btn");
 	const nextBtn = document.querySelector("#next-btn");
-	const mediaQuery = window.matchMedia("only screen and (max-width: 767.9px)");
 
 	// Set the initial value of counter to 2 for image slide 2
-	let counter = 2;
-	const size = carouselImages[0].clientWidth
+	const imageElement = carouselImages[0];
+	const imageRect = imageElement.getBoundingClientRect();
+	const actualWidth = imageRect.width;
+	const marginRight = parseFloat(getComputedStyle(imageElement).marginRight);
+	const size = actualWidth + marginRight;
+
 	carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
-	let leftPosition = 0;
-
-	if (mediaQuery.matches) {
-		carouselSlide.style.left = -40.6 + `%`;
-	} else carouselSlide.style.left = -4 + `%`;
-
 	updateActiveTab(counter - 1);
 
 	nextBtn.addEventListener("click", () => {
@@ -52,27 +50,6 @@ function handleSlider() {
 		carouselSlide.style.transition = "transform 0.2s ease-in-out";
 		counter++;
 		carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
-
-		// Calculate left position based on counter
-		if (mediaQuery.matches) {
-			if (counter === 1) {
-				leftPosition = -20.3;
-			} else if (counter === 4) {
-				leftPosition = -20.3;
-			} else if (counter === 3) {
-				leftPosition = -60.9;
-			} else leftPosition = -40.6;
-		} else {
-			if (counter === 1) {
-				leftPosition = -6;
-			} else if (counter === 4) {
-				leftPosition = -2;
-			} else if (counter === 3) {
-				leftPosition = -6;
-			} else leftPosition = -4;
-		}
-
-		carouselSlide.style.left = `${leftPosition}%`;
 		updateActiveTab(counter - 1);
 	});
 
@@ -81,21 +58,6 @@ function handleSlider() {
 		carouselSlide.style.transition = "transform 0.2s ease-in-out";
 		counter--;
 		carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
-		if (mediaQuery.matches) {
-			if (counter === 1) {
-				leftPosition = -20.3;
-			} else if (counter === 2) {
-				leftPosition = -40.6;
-			} else leftPosition = -60.9;
-		} else {
-			if (counter === 1) {
-				leftPosition = -2.3;
-			} else if (counter === 2) {
-				leftPosition = -4.6;
-			} else leftPosition = -6.9;
-		}
-
-		carouselSlide.style.left = `${leftPosition}%`;
 		updateActiveTab(counter - 1);
 	});
 
@@ -134,22 +96,6 @@ function handleSlider() {
 			if (counter >= carouselImages.length - 1) counter = 1;
 			carouselSlide.style.transition = "transform 0.2s ease-in-out";
 			carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
-
-			if (mediaQuery.matches) {
-				if (counter === 1) {
-					leftPosition = -20.3;
-				} else if (counter === 2) {
-					leftPosition = -40.6;
-				} else leftPosition = -60.9;
-			} else {
-				if (counter === 1) {
-					leftPosition = -2;
-				} else if (counter === 2) {
-					leftPosition = -4;
-				} else leftPosition = -6;
-			}
-
-			carouselSlide.style.left = `${leftPosition}%`;
 			updateActiveTab(index);
 		});
 	});
