@@ -204,13 +204,10 @@
 
 /* Main Sugi Smile */
 .sugi-smile-wrapper {
-  background: #f6fff5 url(/img/common/sugi-smile/img_sugi_smile_bg.png) no-repeat;
-  background-size: contain;
-  background-position: right 0px top 0;
+  background: #f6fff5 url(/img/common/sugi-smile/img_sugi_smile_bg.png) no-repeat top/contain;
   font-family: 'Zen Maru Gothic', sans-serif;
   font-weight: 400;
 }
-
 
 /* Breadcrumb */
 .smile-breadcrumb.breadcrumb {
@@ -397,7 +394,7 @@ footer.sugi-smile-footer .ft-nav ul li a:hover {
 
   /* Main Sugi Smile */
   .sugi-smile-wrapper {
-    background-position: right 0px top 0;
+    background-position: center top 3.6%;
   }
 
   /* Header */
