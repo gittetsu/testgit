@@ -546,8 +546,8 @@
 
   .sec-our-business .support-cleaning-blk::after {
     height: 15px;
-    background: url('../../img/sugi-smile/img_business_border_sp.png')no-repeat center/100%;
-    max-width: 334px;
+    background-size: cover;
+    max-width: 100%;
   }
 
   .sec-our-business .our-business-txt {
