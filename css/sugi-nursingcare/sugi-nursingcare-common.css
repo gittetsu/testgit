@@ -524,9 +524,9 @@ ul.service-list li.service-list-item .service-txtblk {
 }
 
 .service-flow-ttl .flow-ttl-txt {
-  padding-left: 24px;
-  padding-top: 7px;
   line-height: 1.6;
+  padding-top: 7px;
+  padding-left: 24px;
 }
 
 .service-flow-item .service-flow-cnt .service-cnt-imgblk {
@@ -624,17 +624,20 @@ ul.service-list li.service-list-item .service-txtblk {
 }
 
 .ft-consultation-bnr .consultation-list {
+  display: flex;
+  justify-content: space-between;
   width: 58.2%;
 }
 
 .ft-consultation-bnr .consultation-list ul {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   justify-content: space-between;
+  width: 45.3%;
 }
 
 .ft-consultation-bnr .consultation-list ul li {
-  width: 45.4%;
   border-top: 1px solid #dedac8;
 }
 
@@ -706,8 +709,8 @@ footer.ft-nursing-care .ft-nav ul li a {
 }
 
 footer.ft-nursing-care .sugi-nursing-img {
-  margin-bottom: 30px;
   display: inline-block;
+  margin-bottom: 30px;
 }
 
 .ft-nursing-care .ft-blk .lt-ft-blk .nav-list li a:hover,
@@ -1097,11 +1100,12 @@ footer.ft-nursing-care .page-top img {
   }
 
   .ft-consultation-bnr .consultation-list {
+    flex-direction: column;
     width: 100%;
   }
 
   .ft-consultation-bnr .consultation-list ul {
-    flex-direction: column;
+    width: 100%;
   }
 
   .ft-consultation-bnr .consultation-list ul li {
