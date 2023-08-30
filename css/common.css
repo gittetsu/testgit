@@ -2519,6 +2519,7 @@ footer .page-top:hover img {
     padding: 8.2px 10px;
     border: 1px solid #ddd;
     cursor: pointer;
+    border-radius: 3px;
   }
 
   .sugi-holding-header .search-gp .search-btn .search-ico {
@@ -2598,7 +2599,7 @@ footer .page-top:hover img {
 
   .sugi-holding-header .search-btn.dropdown .sub-menu {
     position: absolute;
-    top: 72px;
+    top: 70px;
     right: 0;
     left: 0;
     z-index: 5;
