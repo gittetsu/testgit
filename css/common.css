@@ -2622,12 +2622,12 @@ footer .page-top:hover img {
 
   .sugi-holding-header form.search button {
     position: absolute;
-    top: 19px;
+    top: 20px;
     right: -15px;
     left: unset;
     width: 70px;
     padding: 0;
-    padding: 21.5px 0;
+    padding: 21px 0;
     border: none;
     background: none;
     background-color: #048851;
