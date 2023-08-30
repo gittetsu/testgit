@@ -54,6 +54,7 @@
 .senior-voice .voice-ttl .ttl-txt {
   position: relative;
   padding-left: 50px;
+  font-weight: 700;
 }
 
 .senior-voice .voice-ttl .ttl-txt::before {
