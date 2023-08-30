@@ -170,9 +170,8 @@ sidebarDeatils.forEach((element) => {
 /*button-add-active class*/
 var tabList1 = document.querySelectorAll('.tab-list-01 li a')
 var tabList2 = document.querySelectorAll('.tab-list-02 li a')
-var commonbutton = document.querySelectorAll('.common-button')
 
-var tabList = [...tabList1, ...tabList2, ...commonbutton]
+var tabList = [...tabList1, ...tabList2]
 tabList.forEach(function (button) {
     button.addEventListener('click', function () {
         tabList.forEach(function (tab) {

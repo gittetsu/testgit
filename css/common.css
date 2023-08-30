@@ -1782,8 +1782,7 @@ table tr th:first-child {
   border-radius: 50%;
 }
 
-.common-button .arrow::after,
-.common-button.active .arrow::after {
+.common-button .arrow::after{
   position: absolute;
   top: 50%;
   right: 38%;
@@ -1800,9 +1799,7 @@ table tr th:first-child {
   color: #fff;
 }
 
-.common-button:hover .arrow,
-.common-button:active .arrow,
-.common-button.active .arrow {
+.common-button:hover .arrow{
   right: 20px;
   width: 24px;
   padding: 12px;
@@ -1811,9 +1808,7 @@ table tr th:first-child {
   border-radius: 50%;
 }
 
-.common-button:hover .arrow::after,
-.common-button:active .arrow:after,
-.common-button.active .arrow::after {
+.common-button:hover .arrow::after {
   position: absolute;
   top: 16%;
   right: 50%;
@@ -4237,16 +4232,13 @@ footer .page-top:hover img {
     border-radius: unset;
   }
 
-  .common-button:hover .arrow,
-  .common-button:active .arrow,
-  .common-button.active .arrow {
+  .common-button:hover .arrow{
     width: 18px;
     padding: 9px;
     background-color: #048851;
   }
 
-  .common-button:hover .arrow::after,
-  .common-button.active .arrow::after {
+  .common-button:hover .arrow::after{
     top: 5%;
     filter: invert(100%) sepia(300%) saturate(0) hue-rotate(0) brightness(100%) contrast(180%);
   }
