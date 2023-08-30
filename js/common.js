@@ -39,6 +39,10 @@ accordionItem.forEach((item) => {
                         content.style.padding = '20px 0 20px 0'
                         if (content.classList.contains('bg-gray')) {
                             content.style.padding = '20px'
+                        } else if(content.classList.contains('sidebar-detail') && content.classList.contains('side-gp')){
+                            content.style.padding = '0px';
+                            content.style.margin = '0';
+
                         } else if (content.classList.contains('sidebar-detail')) {
                             content.style.padding = '0 0 20px 20px'
                             content.style.margin = '0'
@@ -46,10 +50,14 @@ accordionItem.forEach((item) => {
                     } else {
                         if (content.classList.contains('bg-gray')) {
                             content.style.padding = '30px 29px 30px'
-                        } else if (content.classList.contains('sidebar-detail')) {
+                        } 
+                        else if(content.classList.contains('sidebar-detail') && content.classList.contains('side-gp')){
+                            content.style.padding = '0px';
+                            content.style.margin = '0';
+                        }else if (content.classList.contains('sidebar-detail')) {
                             content.style.padding = '0px 25px 30px'
                             content.style.margin = '0'
-                        }
+                        } 
                         else {
                             content.style.padding = '30px 0 30px'
                         }
@@ -79,6 +87,9 @@ accordionItem.forEach((item) => {
                             content.style.padding = '0px 25px 30px'
                             content.style.margin = '0'
                         }
+                        else if (content.classList.contains('bg-gray')) {
+                            content.style.padding = '30px 29px 30px'
+                        } 
                     }
                 }
             } else {
@@ -96,7 +107,7 @@ accordionItem.forEach((item) => {
                         content.style.opacity = '1'
                         content.style.height = 'auto'
                     }
-                }
+                    }
                 }
             }
         }
@@ -189,7 +200,6 @@ tabList.forEach(function (button) {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const targetId = this.getAttribute("href").substring(1);
-            console.log(targetId);
             const targetElement = document.getElementById(targetId);
             if (targetElement) {
                 smoothScrollTo(targetElement);
@@ -326,13 +336,16 @@ dropdowns.forEach(function (toggle) {
     }
 })
 
-var subMenuLists = document.querySelectorAll('.sub-menu-list li a');
+var subMenuLists = document.querySelectorAll('.sub-menu-list li a,.nav-footer-list li a,.ft-nav li a');
 subMenuLists.forEach(function ( subMenuList) {
     subMenuList.addEventListener('click',function(){
         hamburger.classList.remove('active')
         navMenu.classList.remove('active')
         bodyElement.style.overflow = 'auto'
         bodyElement.style.position = 'relative'
+        var hrefValue = subMenuList.href;
+        window.location.href = hrefValue;
+        location.reload();
     })
 });
 

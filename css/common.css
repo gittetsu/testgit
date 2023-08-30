@@ -3723,7 +3723,7 @@ footer .page-top:hover img {
   .accordion.open .sidebar-ttl-link:hover .sb-arrow::before {
     top: 6px;
     left: 6px;
-    transform: rotate(90deg);
+    transform: rotate(180deg);
     filter: invert(100%) sepia(300%) saturate(0) hue-rotate(0) brightness(100%) contrast(180%);
   }
 
