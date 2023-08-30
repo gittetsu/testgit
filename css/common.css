@@ -2622,12 +2622,12 @@ footer .page-top:hover img {
 
   .sugi-holding-header form.search button {
     position: absolute;
-    top: 20px;
+    top: 19px;
     right: -15px;
     left: unset;
     width: 70px;
     padding: 0;
-    padding: 21px 0;
+    padding: 21.5px 0;
     border: none;
     background: none;
     background-color: #048851;
@@ -3696,15 +3696,6 @@ footer .page-top:hover img {
     max-width: 20px;
   }
 
-  .sb-arrow::before,
-  .accordion.open .side-gp .sb-arrow::before {
-    top: 6px;
-    left: 6px;
-    background: url(../img/common/ico_arrow.svg) no-repeat center/cover;
-    transform: rotate(90deg);
-    filter: invert(100%) sepia(300%) saturate(0) hue-rotate(0) brightness(100%) contrast(180%);
-  }
-
   .sidebar-detail .sb-detail-link span::before {
     top: 8px;
     transform: rotate(90deg);
@@ -3725,10 +3716,19 @@ footer .page-top:hover img {
     filter: invert(100%) sepia(300%) saturate(0) hue-rotate(0) brightness(100%) contrast(180%);
   }
 
+  .sb-arrow::before,
+  .accordion.open .side-gp .sb-arrow::before {
+    top: 6px;
+    left: 6px;
+    background: url(../img/common/ico_arrow.svg) no-repeat center/cover;
+    transform: rotate(90deg);
+    filter: invert(100%) sepia(300%) saturate(0) hue-rotate(0) brightness(100%) contrast(180%);
+  }
+
   .accordion.open .sidebar-ttl-link:hover .sb-arrow::before {
     top: 6px;
     left: 6px;
-    transform: rotate(180deg);
+    transform: rotate(90deg);
     filter: invert(100%) sepia(300%) saturate(0) hue-rotate(0) brightness(100%) contrast(180%);
   }
 

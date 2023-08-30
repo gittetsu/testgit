@@ -46,7 +46,8 @@ accordionItem.forEach((item) => {
                         } else if (content.classList.contains('sidebar-detail')) {
                             content.style.padding = '0px 25px 30px'
                             content.style.margin = '0'
-                        } else {
+                        }
+                        else {
                             content.style.padding = '30px 0 30px'
                         }
                     }
@@ -62,20 +63,37 @@ accordionItem.forEach((item) => {
             if (!mediaQuery.matches) {
                 if (content) {
                     if (item.classList.contains('open')) {
-                        content.style.height = 'auto'
-                        content.style.opacity = '1'
-                        content.style.padding = '0px 25px 30px'
-                        content.style.margin = '0'
+                        if(content.classList.contains('sidebar-detail') && content.classList.contains('side-gp')){
+                            content.style.height = 'auto'
+                            content.style.opacity = '1'
+                            content.style.padding = '0px'
+                            content.style.margin = '0'
+                          
+                        }
+                        else if(content.classList.contains('sidebar-detail')){
+                            content.style.height = 'auto'
+                            content.style.opacity = '1'
+                            content.style.padding = '0px 25px 30px'
+                            content.style.margin = '0'
+                        }
                     }
                 }
             } else {
                 if (content) {
-                    if (item.classList.contains('open')) {
+                    if(content.classList.contains('sidebar-detail') && content.classList.contains('side-gp')){
+                        content.style.height = 'auto'
+                        content.style.opacity = '1'
+                        content.style.padding = '0px'
+                        content.style.margin = '0'
+                    }
+                    else if (item.classList.contains('open')) {
+                        if(content.classList.contains('sidebar-detail')){
                         content.style.padding = '0 0 20px 20px'
                         content.style.margin = '0'
                         content.style.opacity = '1'
                         content.style.height = 'auto'
                     }
+                }
                 }
             }
         }
