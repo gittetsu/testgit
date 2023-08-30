@@ -54,32 +54,33 @@
 }
 
 .top .common-btn {
+  width: 100%;
   letter-spacing: 0.9px;
   max-width: 204px;
 }
 
-/* sec-mv */
-.top .sec-mv {
+/* mv-blk */
+.top .mv-blk {
   position: relative;
-  margin-bottom: 134px;
+  margin-bottom: 98px;
 }
 
-.top .sec-mv .mv-slider {
+.top .mv-blk .mv-slider {
   position: relative;
-  padding: 7.2% 0 40.1% 0;
+  padding: 34.7% 0 34.7% 0;
   background-image: url('/img/sugi-medical/img_mv_bg_01.png');
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
 
-.top .sec-mv .dots {
+.top .mv-blk .dots {
   display: flex;
   position: absolute;
   right: 9.7%;
   bottom: 0;
 }
 
-.top .sec-mv .dot {
+.top .mv-blk .dot {
   display: inline-block;
   width: 8px;
   height: 8px;
@@ -90,32 +91,16 @@
   border-radius: 50%;
 }
 
-.top .sec-mv .dot:first-child {
+.top .mv-blk .dot:first-child {
   margin-left: 0;
 }
 
-.top .sec-mv .dot:last-child {
+.top .mv-blk .dot:last-child {
   margin-right: 0;
 }
 
-.top .sec-mv .active {
+.top .mv-blk .active {
   background-color: #7FBE26;
-}
-
-.top .sec-mv .mv-txt {
-  z-index: 2;
-  width: 33%;
-  padding-bottom: 42px;
-  text-align: left;
-  min-width: 454px;
-}
-
-/*.top .sec-mv .mv-txt .img-ttl {
-  max-width: 454px;
-}*/
-.top .sec-mv .mv-txt p {
-  max-width: 309px;
-  border-bottom: 1px dashed #fff;
 }
 
 /* sec-news */
@@ -373,7 +358,7 @@
   color: #048851;
 }
 
-.top .sec-message .common-btn .btn-text:after {
+.top .sec-message .common-btn:after {
   background: url('/img/common/ico_arrow.svg') no-repeat center/cover;
   transform: rotate(90deg);
 }
@@ -572,78 +557,37 @@
     letter-spacing: 1.2px;
   }
 
-  /* sec-mv */
-  .top .sec-mv {
-    position: relative;
-    margin-bottom: 134px;
+  /* mv-blk */
+  .top .mv-blk {
+    margin-bottom: 88px;
   }
 
-  .top .sec-mv .mv-slider {
-    position: relative;
-    padding: 7.2% 0 40.1% 0;
-    background-image: url('/img/sugi-medical/img_mv_bg_01.png');
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
+  .top .mv-blk .mv-slider {
+    padding: 86.6% 0 86.7% 0;
+    background-image: url('/img/sugi-medical/img_mv_bg_01_sp.png');
   }
 
-  .top .sec-mv .dots {
-    display: flex;
-    position: absolute;
-    right: 9.7%;
-    bottom: 0;
-  }
-
-  .top .sec-mv .dot {
-    display: inline-block;
-    width: 8px;
-    height: 8px;
-    margin: 0 5px;
-    background-color: #EAEAEA;
-    cursor: pointer;
-    transition: background-color 0.6s ease;
-    border-radius: 50%;
-  }
-
-  .top .sec-mv .dot:first-child {
-    margin-left: 0;
-  }
-
-  .top .sec-mv .dot:last-child {
-    margin-right: 0;
-  }
-
-  .top .sec-mv .active {
-    background-color: #7FBE26;
-  }
-
-  .top .sec-mv .mv-txt {
-    z-index: 2;
-    width: 33%;
-    padding-bottom: 42px;
-    text-align: left;
-    min-width: 454px;
-  }
-
-  /*.top .sec-mv .mv-txt .img-ttl {
-    max-width: 454px;
-  }*/
-  .top .sec-mv .mv-txt p {
-    max-width: 309px;
-    border-bottom: 1px dashed #fff;
+  .top .mv-blk .dots {
+    right: 0;
+    bottom: -40px;
+    left: 0;
+    justify-content: center;
+    margin: 0 auto;
   }
 
   /* sec-news */
   .top .sec-news {
     position: relative;
-    margin-bottom: 134px;
+    margin-bottom: 40px;
+  }
+
+  .top .sec-news .btn {
+    margin-top: 30px;
+    text-align: center;
   }
 
   .top .sec-news .common-btn {
-    position: absolute;
-    right: 0;
-    bottom: -94px;
-    left: 0;
-    width: 88%;
+    width: 100%;
     margin: 0 auto;
     letter-spacing: 0.3px;
     max-width: 325px;
@@ -678,6 +622,11 @@
     letter-spacing: 1.4px;
   }
 
+  .top .sec-news .tab-list .tab-left li:nth-child(5n) .common-button,
+  .top .sec-news .tab-list .tab-left li:last-child .common-button {
+    border-bottom: 0;
+  }
+
   .top .sec-news .common-button .arrow {
     top: 10px;
     right: 10px;
@@ -687,6 +636,7 @@
   .top .sec-news .common-button .arrow::after,
   .top .sec-news .common-button.active .arrow::after {
     transform: translateY(-50%) rotate(90deg);
+    filter: unset;
   }
 
   .top .sec-news .tab-list .tab-right {

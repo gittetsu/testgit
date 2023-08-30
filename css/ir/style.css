@@ -128,6 +128,16 @@
     border-bottom: 1px solid transparent;
   }
 
+  .sec-growthstrategy .link-gp li a .link-arrow {
+    background-color: #048851;
+  }
+
+  .sec-growthstrategy .link-gp li a .link-arrow::before {
+    width: 8px;
+    height: 8px;
+    background: url(/img/common/ico_arrow_white.svg) no-repeat center/cover;
+  }
+
   .sec-performance .highlights li {
     width: 100%;
     margin-right: 0;

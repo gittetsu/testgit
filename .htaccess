@@ -1,7 +1,5 @@
 Options +Includes
 AddHandler server-parsed html
-AddType text/html .shtml
-AddHandler server-parsed .shtml
 
 <IfModule mod_rewrite.c>
 
