@@ -284,9 +284,54 @@
   box-shadow: 30px 30px 30px #C6E8DAB3;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .themes-blk .theme-ttl:hover .theme-ttl-arrow.yellow {
+    border: 1px solid transparent;
+    background-color: #f5a22c;
+  }
+
+  .themes-blk .theme-ttl:hover .theme-ttl-arrow.yellow::after {
+    filter: unset;
+  }
+
+  .themes-blk .theme-ttl:hover .theme-ttl-arrow.blue {
+    border: 1px solid transparent;
+    background-color: #0075ba;
+  }
+
+  .themes-blk .theme-ttl:hover .theme-ttl-arrow.blue::after {
+    filter: unset;
+  }
+
+  .themes-blk .theme-ttl:hover .theme-ttl-arrow.cyan {
+    border: 1px solid transparent;
+    background-color: #22b7a9;
+  }
+
+  .themes-blk .theme-ttl:hover .theme-ttl-arrow.cyan::after {
+    filter: unset;
+  }
+
+  .themes-blk .theme-ttl:hover .theme-ttl-arrow.pink {
+    border: 1px solid transparent;
+    background-color: #e96b9a;
+  }
+
+  .themes-blk .theme-ttl:hover .theme-ttl-arrow.pink::after {
+    filter: unset;
+  }
+
+  .themes-blk .theme-ttl:hover .theme-ttl-arrow.purple {
+    border: 1px solid transparent;
+    background-color: #a672af;
+  }
+
+  .themes-blk .theme-ttl:hover .theme-ttl-arrow.purple::after {
+    filter: unset;
+  }
+}
+
 @media only screen and (max-width: 767.9px) {
-
-
   .cmm-boxshadow-img {
     box-shadow: 15px 15px 15px #C6E8DAB3;
   }
@@ -311,6 +356,51 @@
 
   .themes-blk .theme-ttl .theme-ttl-arrow {
     top: 6px;
+  }
+
+  .themes-blk .theme-ttl:hover .theme-ttl-arrow.yellow {
+    border: 1px solid transparent;
+    background-color: #f5a22c;
+  }
+
+  .themes-blk .theme-ttl:hover .theme-ttl-arrow.yellow::after {
+    filter: unset;
+  }
+
+  .themes-blk .theme-ttl:hover .theme-ttl-arrow.blue {
+    border: 1px solid transparent;
+    background-color: #0075ba;
+  }
+
+  .themes-blk .theme-ttl:hover .theme-ttl-arrow.blue::after {
+    filter: unset;
+  }
+
+  .themes-blk .theme-ttl:hover .theme-ttl-arrow.cyan {
+    border: 1px solid transparent;
+    background-color: #22b7a9;
+  }
+
+  .themes-blk .theme-ttl:hover .theme-ttl-arrow.cyan::after {
+    filter: unset;
+  }
+
+  .themes-blk .theme-ttl:hover .theme-ttl-arrow.pink {
+    border: 1px solid transparent;
+    background-color: #e96b9a;
+  }
+
+  .themes-blk .theme-ttl:hover .theme-ttl-arrow.pink::after {
+    filter: unset;
+  }
+
+  .themes-blk .theme-ttl:hover .theme-ttl-arrow.purple {
+    border: 1px solid transparent;
+    background-color: #a672af;
+  }
+
+  .themes-blk .theme-ttl:hover .theme-ttl-arrow.purple::after {
+    filter: unset;
   }
 
   /* stb-link-flex */
