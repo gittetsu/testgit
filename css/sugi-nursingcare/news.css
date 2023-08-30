@@ -42,7 +42,7 @@
   height: 50px;
   padding: 12.5px 35px 12.5px 15px;
   border: 1px solid #ddd;
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'Zen Maru Gothic', sans-serif;
   font-size: 0.875rem;
   outline: none;
   border-radius: 3px;
@@ -58,7 +58,7 @@
   border: 1px solid transparent;
   background-color: #E6172B;
   color: #fff;
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'Zen Maru Gothic', sans-serif;
   font-size: 1rem;
   cursor: pointer;
   transition: all .2s;
@@ -147,7 +147,7 @@
   background-position: right 11px center;
   background-repeat: no-repeat;
   color: #969696;
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'Zen Maru Gothic', sans-serif;
   font-size: 0.875rem;
   outline: none;
   cursor: pointer;
