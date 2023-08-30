@@ -405,6 +405,20 @@
     background-position: center top 270px;
   }
 
+  .smile-cmn-btn:hover {
+    border: 2px solid transparent;
+    background-color: #009944;
+    color: #fff;
+  }
+
+  .smile-cmn-btn:hover .arrow {
+    background-color: #fff;
+  }
+
+  .smile-cmn-btn:hover .arrow::after {
+    filter: unset;
+  }
+
   .sec-top-mv .top-mv-blk {
     position: relative;
   }
