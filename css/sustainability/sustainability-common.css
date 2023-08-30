@@ -40,7 +40,7 @@
 
 .themes-blk .theme-ttl:hover .theme-ttl-arrow.yellow::after {
   transition: all .2s;
-  filter: invert(50%) sepia(20%) saturate(3560%) hue-rotate(338deg) brightness(100%) contrast(94%);
+  filter: invert(58%) sepia(70%) saturate(730%) hue-rotate(336deg) brightness(98%) contrast(95%);
 }
 
 .themes-blk .theme-card.blue::before,
@@ -100,7 +100,7 @@
 }
 
 .themes-blk .theme-ttl:hover .theme-ttl-arrow.purple::after {
-  filter: invert(95%) sepia(65%) saturate(3954%) hue-rotate(216deg) brightness(60%) contrast(83%);
+  filter: invert(53%) sepia(10%) saturate(1647%) hue-rotate(245deg) brightness(94%) contrast(92%);
 }
 
 .themes-blk .theme-card.top-border::before {
