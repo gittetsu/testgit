@@ -206,6 +206,10 @@
   width: 46.4%;
 }
 
+.sec-company .company-img {
+  padding-top: 35px;
+}
+
 .sec-company p {
   font-family: 'Zen Maru Gothic', sans-serif;
   font-weight: 400;
@@ -484,6 +488,10 @@
     width: 100%;
   }
 
+  .sec-company .company-img {
+    padding-top: 0;
+  }
+
   .sec-company .company-ttl {
     margin-bottom: 24px;
     font-size: 1.375rem;
@@ -493,6 +501,10 @@
     font-size: 1rem;
   }
 
+  .sec-company .mb-40 {
+    margin-bottom: 24px;
+  }
+
   .sec-company .view-more {
     margin-bottom: 32px;
     text-align: center;
@@ -500,7 +512,7 @@
 
   /* sec-location */
   .sec-location {
-    padding: 90px 0 45px;
+    padding: 45px 0;
     background-size: contain;
   }
 
@@ -511,7 +523,7 @@
   /* sec-our-business */
   .sec-our-business {
     margin-top: -1px;
-    padding: 90px 0 45px;
+    padding: 46px 0;
   }
 
   .sec-our-business .support-cleaning-blk {

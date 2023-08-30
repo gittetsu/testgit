@@ -50,10 +50,10 @@ var pcImages = [
 ];
 
 var spImages = [
-  '/img/img_mv_01.jpg',
-  '/img/img_mv_02.jpg',
-  '/img/img_mv_03.jpg',
-  '/img/img_mv_04.jpg'
+  '/img/img_mv_bg_01_sp.png',
+  '/img/img_mv_bg_02_sp.png',
+  '/img/img_mv_bg_03_sp.png',
+  '/img/img_mv_bg_04_sp.png'
 ];
 
 var slideTimeout;
@@ -117,9 +117,11 @@ window.onload = function () {
 // Handle window resize to update images when screen width changes
 window.addEventListener('resize', function () {
   updateImages();
-  changePicture(); // Change the slide immediately after resizing
   clearTimeout(slideTimeout); // Clear existing timeout
-  slideTimeout = setTimeout(changePicture, slideTime * 2); // Restart auto-sliding after resize
+  
+  // Refresh pagination dots and continue the current slide
+  updatePagination();
+  changePicture();
 });
 
 // Update the images when the window is resized

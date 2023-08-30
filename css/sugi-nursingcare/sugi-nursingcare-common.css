@@ -54,7 +54,7 @@ body {
 }
 
 .sugi-nursing-header .nav-menu-list li a:hover,
-.sugi-nursing-header .nav-menu-list li a.active {
+.sugi-nursing-header .nav-menu-list li a.visible {
   color: #e6172c;
   transition: all .2s;
 }
@@ -79,7 +79,7 @@ body {
 }
 
 .sugi-nursing-header .header-contact-btn a:hover,
-.sugi-nursing-header .header-contact-btn a.active {
+.sugi-nursing-header .header-contact-btn a.visible {
   background-color: #fff;
   color: #e6172c;
   transition: all .2s;
@@ -711,7 +711,7 @@ footer.ft-nursing-care .sugi-nursing-img {
 }
 
 .ft-nursing-care .ft-blk .lt-ft-blk .nav-list li a:hover,
-.ft-nursing-care .ft-blk .lt-ft-blk .nav-list li a.active {
+.ft-nursing-care .ft-blk .lt-ft-blk .nav-list li a.visible {
   color: #e6172c;
   transition: all .2s;
 }
@@ -878,7 +878,7 @@ footer.ft-nursing-care .page-top img {
   }
 
   .sugi-nursing-header .nav-menu-list li a:hover,
-  .sugi-nursing-header .nav-menu-list li a.active {
+  .sugi-nursing-header .nav-menu-list li a.visible {
     color: #fff;
   }
 
@@ -1027,7 +1027,7 @@ footer.ft-nursing-care .page-top img {
   }
 
   .sugi-nursing-header .nav-menu-list li a:hover,
-  .sugi-nursing-header .nav-menu-list li a.active {
+  .sugi-nursing-header .nav-menu-list li a.visible {
     color: #fff;
   }
 
