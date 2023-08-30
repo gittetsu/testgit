@@ -342,11 +342,25 @@
   font-family: 'Zen Maru Gothic', sans-serif;
 }
 
-.sugi-smile-footer .ft-blk .lt-ft-blk .nav-list li a:hover, .sugi-smile-footer .ft-blk .lt-ft-blk .nav-list li a.visible{
+.sugi-smile-footer .ft-blk .lt-ft-blk .nav-list li a:hover,
+.sugi-smile-footer .ft-blk .lt-ft-blk .nav-list li a.visible {
   color: #009944;
 }
+
 .sugi-smile-footer .ft-blk .sugi-holding-img {
   max-width: 233px;
+}
+
+.sugi-smile-footer .ft-blk {
+  border-bottom: 1px solid #e2dece;
+}
+
+.sugi-smile-footer .copyright-blk {
+  background-color: #fff;
+}
+
+.sugi-smile-footer .copyright-blk {
+  padding: 45.5px 0;
 }
 
 .sugi-smile-footer .holding-link {
@@ -472,6 +486,15 @@ footer.sugi-smile-footer .ft-nav ul li a:hover {
 /* Sp */
 @media only screen and (max-width: 767.9px) {
 
+  .sugi-smile-footer .copyright-blk {
+    padding: 21.5px 0;
+    border-top: 1px solid #e2dece;
+  }
+
+  .sugi-smile-footer .ft-blk {
+    border-bottom: unset;
+  }
+
   /* Header */
   .sugi-smile-header {
     background-color: #fff;
@@ -520,7 +543,7 @@ footer.sugi-smile-footer .ft-nav ul li a:hover {
   }
 
   .sugi-smile-header .toggle-nav {
-    top: 70px;
+    top: 68px;
     right: 0;
     width: 100%;
     padding-bottom: 300px;
