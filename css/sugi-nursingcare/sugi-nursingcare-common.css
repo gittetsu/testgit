@@ -635,10 +635,16 @@ ul.service-list li.service-list-item .service-txtblk {
   flex-direction: column;
   justify-content: space-between;
   width: 45.3%;
+  border-top: 1px solid #dedac8;
+  border-bottom: 1px solid #dedac8;
 }
 
 .ft-consultation-bnr .consultation-list ul li {
-  border-top: 1px solid #dedac8;
+  border-bottom: 1px solid #dedac8;
+}
+
+.ft-consultation-bnr .consultation-list ul li:last-child {
+  border-bottom: 1px solid transparent;
 }
 
 .ft-consultation-bnr .consultation-list ul li:nth-child(3),
@@ -1106,6 +1112,10 @@ footer.ft-nursing-care .page-top img {
 
   .ft-consultation-bnr .consultation-list ul {
     width: 100%;
+  }
+
+  .ft-consultation-bnr .consultation-list ul:last-child {
+    border-top: 1px solid transparent;
   }
 
   .ft-consultation-bnr .consultation-list ul li {
