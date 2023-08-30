@@ -1,3 +1,6 @@
+
+
+window.addEventListener('load', function(){
 /*accordion*/
 var accordionItem = document.querySelectorAll('.accordion')
 accordionItem.forEach((item) => {
@@ -182,7 +185,6 @@ tabList.forEach(function (button) {
 })
 
 /*anchor-link*/
-document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -195,7 +197,6 @@ document.addEventListener('DOMContentLoaded', function () {
             history.replaceState(null, null, '#' + targetId);
         });
     });
-});
 function smoothScrollTo(targetElement) {
     const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset; // Include current
     const startPosition = window.pageYOffset;
@@ -642,3 +643,4 @@ function openFullScreenWindow(url) {
         alert('Pop-up blocked. Please allow pop-ups for this site.');
     }
 }
+});
