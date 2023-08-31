@@ -14,7 +14,7 @@
 
 <body>
 	<div>
-		<!--#include virtual="/include/header.html" -->
+		<header data-include="/include/header.html"></header>
 		<div class="ttl-bg">
 			<h1 class="ttl inner">サステナブルな取引関係</h1>
 		</div>
@@ -22,7 +22,7 @@
 			<div class="inner">
 				<ul class="breadcrumb-list">
 					<li>
-						<a href="/index.html">TOP</a>
+						<a href="/">TOP</a>
 					</li>
 					<li>
 						<a href="/sustainability/">サステナビリティ</a>
@@ -59,8 +59,8 @@
 				</div>
 				<div class="cmm-sub-sustainable mb-60 d-flex">
 					<div class="w-530 mb-sp-40">
-						<a href="./productscontribution.html" class="common-button">商品による豊かな暮らしへの貢献<span class="arrow"></span></a>
-						<a href="./product-safety.html" class="common-button">商品の安全・安心の確保<span class="arrow"></span></a>
+						<a href="/sustainability/materiality/sustainable-bp/productscontribution.html" class="common-button">商品による豊かな暮らしへの貢献<span class="arrow"></span></a>
+						<a href="/sustainability/materiality/sustainable-bp/product-safety.html" class="common-button">商品の安全・安心の確保<span class="arrow"></span></a>
 					</div>
 					<div class="cmm-boxshadow-img w-530">
 						<img src="/img/sustainability/img_distribution.png" alt="分布">
@@ -68,8 +68,8 @@
 				</div>
 				<div class="cmm-sub-sustainable d-flex">
 					<div class="w-530 mb-sp-40">
-						<a href="./supplychain-mgmt.html" class="common-button">責任あるサプライチェーン/マネジメント体制の構築<span class="arrow"></span></a>
-						<a href="./human-rights.html" class="common-button">人権課題への取り組み<span class="arrow"></span></a>
+						<a href="/sustainability/materiality/sustainable-bp/supplychain-mgmt.html" class="common-button">責任あるサプライチェーン/マネジメント体制の構築<span class="arrow"></span></a>
+						<a href="/sustainability/materiality/sustainable-bp/human-rights.html" class="common-button">人権課題への取り組み<span class="arrow"></span></a>
 					</div>
 					<div class="cmm-boxshadow-img w-530">
 						<img src="/img/sustainability/img_family_photo.png" alt="幸せな家族写真">
@@ -77,10 +77,13 @@
 				</div>
 			</div><!-- /.cmm-sustainable-area -->
 		</div>
-		<!--#include virtual="/component/stb-footer-nav.html" -->
-		<!--#include virtual="/include/footer.html" -->
+		<div data-include="/component/stb-footer-nav.html"></div>
+		<footer data-include="/include/footer.html"></footer>
 	</div>
 
+
+
+	<script src="/js/load.js"></script>
 	<script src="/js/common.js"></script>
 </body>
 

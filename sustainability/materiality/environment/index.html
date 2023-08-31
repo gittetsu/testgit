@@ -15,7 +15,7 @@
 
 <body>
 	<div>
-		<!--#include virtual="/include/header.html" -->
+		<header data-include="/include/header.html"></header>
 		<div class="ttl-bg">
 			<h1 class="ttl inner">地球環境への貢献</h1>
 		</div>
@@ -23,7 +23,7 @@
 			<div class="inner">
 				<ul class="breadcrumb-list">
 					<li>
-						<a href="/index.html">TOP</a>
+						<a href="/">TOP</a>
 					</li>
 					<li>
 						<a href="/sustainability/">サステナビリティ</a>
@@ -60,9 +60,9 @@
 				</div>
 				<div class="cmm-sub-sustainable d-flex">
 					<div class="w-530 mb-sp-40">
-						<a href="./decarbonization.html" class="common-button">脱炭素社会の実現<span class="arrow"></span></a>
-						<a href="./recycling-society.html" class="common-button">循環型社会の実現<span class="arrow"></span></a>
-						<a href="./tcfd.html" class="common-button">TCFD提言に基づく情報開示<span class="arrow"></span></a>
+						<a href="/sustainability/materiality/environment/decarbonization.html" class="common-button">脱炭素社会の実現<span class="arrow"></span></a>
+						<a href="/sustainability/materiality/environment/recycling-society.html" class="common-button">循環型社会の実現<span class="arrow"></span></a>
+						<a href="/sustainability/materiality/environment/tcfd.html" class="common-button">TCFD提言に基づく情報開示<span class="arrow"></span></a>
 					</div>
 					<div class="cmm-boxshadow-img w-530">
 						<img src="/img/sustainability/img_env_solar.png" alt="太陽">
@@ -70,10 +70,11 @@
 				</div>
 			</div><!-- /.cmm-sustainable-area -->
 		</div>
-		<!--#include virtual="/component/stb-footer-nav.html" -->
-		<!--#include virtual="/include/footer.html" -->
+		<div data-include="/component/stb-footer-nav.html"></div>
+		<footer data-include="/include/footer.html"></footer>
 	</div>
 
+	<script src="/js/load.js"></script>
 	<script src="/js/common.js"></script>
 </body>
 

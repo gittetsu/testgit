@@ -14,7 +14,7 @@
 
 <body>
 	<div>
-		<!--#include virtual="/include/header.html" -->
+		<header data-include="/include/header.html"></header>
 		<div class="ttl-bg">
 			<h1 class="ttl inner">人権課題への取り組み</h1>
 		</div>
@@ -22,7 +22,7 @@
 			<div class="inner">
 				<ul class="breadcrumb-list">
 					<li>
-						<a href="/index.html">TOP</a>
+						<a href="/">TOP</a>
 					</li>
 					<li>
 						<a href="/sustainability/">サステナビリティ</a>
@@ -241,10 +241,11 @@
 				</div><!-- /.sidebar -->
 			</div>
 		</div>
-		<!--#include virtual="/component/stb-footer-nav.html" -->
-		<!--#include virtual="/include/footer.html" -->
+		<div data-include="/component/stb-footer-nav.html"></div>
+		<footer data-include="/include/footer.html"></footer>
 	</div>
 
+	<script src="/js/load.js"></script>
 	<script src="/js/common.js"></script>
 </body>
 
