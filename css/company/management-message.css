@@ -74,4 +74,7 @@
   .position-blk-subttl {
     font-size: 1.125rem;
   }
+  #response-policy h3.common-ttl {
+    letter-spacing: 1.8px;
+}
 }
