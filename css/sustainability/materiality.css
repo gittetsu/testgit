@@ -159,11 +159,11 @@
 }
 
 .sec-key-issues .table-btn {
-  width: 140px;
   line-height: 1.45;
   margin-right: 20px;
   border: 1px solid;
   text-align: center;
+  min-width: 140px;
   border-radius: 3px;
 }
 
