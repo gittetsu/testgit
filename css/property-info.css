@@ -132,7 +132,7 @@
 
 .cmm-property-link .common-button .arrow::after,
 .cmm-property-link .common-button.active .arrow::after {
-  top: 0;
+  top: 5px;
   width: 14px;
   height: 14px;
   background: url(../img/common/ico_external.svg) no-repeat center/cover;
@@ -158,13 +158,13 @@
 }
 
 .location-btn-list li .common-button .arrow {
-  top: 30px;
+  top: 24px;
   right: 8.7%;
 }
 
 @media only screen and (max-width: 767.9px) {
 
-  .cmm-property-link .common-button .arrow {
+  .location-btn-list .cmm-property-link .common-button .arrow {
     top: 38%;
     margin-left: 20px;
     padding: 0;
@@ -173,6 +173,7 @@
 
   .cmm-property-link .common-button .arrow::after,
   .cmm-property-link .common-button.active .arrow::after {
+    top: 7%;
     right: 8.7%;
     transform: unset;
   }

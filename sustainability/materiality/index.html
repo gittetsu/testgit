@@ -15,7 +15,7 @@
 
 <body>
 	<div>
-		<!--#include virtual="/include/header.html" -->
+		<header data="/include/header.html"></header>
 		<div class="ttl-bg">
 			<h1 class="ttl inner">重要課題（マテリアリティ）</h1>
 		</div>
@@ -23,7 +23,7 @@
 			<div class="inner">
 				<ul class="breadcrumb-list">
 					<li>
-						<a href="/index.html">TOP</a>
+						<a href="/">TOP</a>
 					</li>
 					<li>
 						<a href="/sustainability/">サステナビリティ</a>
@@ -660,10 +660,13 @@
 				</div>
 			</section>
 		</div>
-		<!--#include virtual="/component/stb-footer-nav.html" -->
-		<!--#include virtual="/include/footer.html" -->
+
+		<div data="/component/stb-footer-nav.html"></div>
+		<footer data="/include/footer.html"></footer>
 	</div>
 
+
+	<script src="/js/load.js"></script>
 	<script src="/js/common.js"></script>
 	<script src="/js/sustainability/materiality.js"></script>
 </body>

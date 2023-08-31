@@ -14,7 +14,7 @@
 
 <body>
 	<div>
-		<!--#include virtual="/include/header.html" -->
+		<header data="/include/header.html"></header>
 		<div class="ttl-bg">
 			<h1 class="ttl inner">価値創造プロセス</h1>
 		</div>
@@ -22,7 +22,7 @@
 			<div class="inner">
 				<ul class="breadcrumb-list">
 					<li>
-						<a href="/index.html">TOP</a>
+						<a href="/">TOP</a>
 					</li>
 					<li>
 						<a href="/company/">会社情報</a>
@@ -41,9 +41,10 @@
 				</div>
 			</div><!-- /.process-area -->
 		</div>
-		<!--#include virtual="/component/com-info-footer-nav.html" -->
-		<!--#include virtual="/include/footer.html" -->
+		<div data="/component/com-info-footer-nav.html"></div>
+		<footer data="/include/footer.html"></footer>
 	</div>
+	<script src="/js/load.js"></script>
 	<script src="/js/common.js"></script>
 </body>
 
