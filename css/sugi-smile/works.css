@@ -54,6 +54,7 @@
 .senior-voice .voice-ttl .ttl-txt {
   position: relative;
   padding-left: 50px;
+  font-weight: 700;
 }
 
 .senior-voice .voice-ttl .ttl-txt::before {
@@ -109,7 +110,11 @@
 /*I-pad*/
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .smile-work {
-    padding-top: 150px;
+    padding-top: 100px;
+  }
+
+  .sugi-smile-wrapper.sugi-smile-work {
+    background-position: center top 1.4%;
   }
 
   /* Breadcrumb */
@@ -120,7 +125,6 @@
 
 /* Sp */
 @media only screen and (max-width: 767.9px) {
-
   .sugi-smile-wrapper.sugi-smile-work {
     background-position: center top 185px;
   }

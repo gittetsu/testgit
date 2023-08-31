@@ -1306,12 +1306,13 @@
 
   .top .sec-news .tab-list .tab-left ul {
     display: flex;
-    width: 842px;
+    align-items: center;
+    width: 867px;
     margin-bottom: 10px;
   }
 
   .top .sec-news .tab-list .tab-left li {
-    display: flex;
+    display: inline-block;
   }
 
   .top .sec-news .tab-list .tab-left::-webkit-scrollbar {
@@ -1344,12 +1345,14 @@
   }
 
   .top .sec-news .tab-list .tab-left .common-button {
+    display: flex;
     line-height: 1.6;
     padding: 12px 29px;
     letter-spacing: 1.9px;
     border-top: none;
     border-right: 1px solid #e6e6e6;
     border-radius: unset;
+    border-left: 1px solid transparent;
   }
 
   .top .sec-news .tab-list .tab-left .common-button.active,

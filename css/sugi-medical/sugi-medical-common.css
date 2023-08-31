@@ -354,8 +354,16 @@ footer.ft-medical .ft-blk .sub-nav-list .sugi-holding-link::after {
   filter: invert(56%) sepia(83%) saturate(378%) hue-rotate(43deg) brightness(99%) contrast(97%);
 }
 
+footer.ft-medical .page-top:hover {
+  background-color: #7fbe26;
+}
+
 footer.ft-medical .page-top img {
   filter: invert(0%) sepia(98%) saturate(0%) hue-rotate(49deg) brightness(0%) contrast(101%);
+}
+
+footer.ft-medical .page-top:hover img {
+  filter: invert(50%) sepia(200%) saturate(0) hue-rotate(0) brightness(180%) contrast(180%);
 }
 
 /*I-pad*/
@@ -476,6 +484,14 @@ footer.ft-medical .page-top img {
 
   .sec-medical-contact .ft-contact .email-us-btn:hover::after {
     filter: none;
+  }
+
+  footer.ft-medical .page-top:hover {
+    background-color: #fff;
+  }
+
+  footer.ft-medical .page-top:hover img {
+    filter: invert(0%) sepia(98%) saturate(0%) hue-rotate(49deg) brightness(0%) contrast(101%);
   }
 }
 
@@ -666,5 +682,13 @@ footer.ft-medical .page-top img {
 
   .sec-medical-contact .ft-contact .email-us-btn:hover::after {
     filter: none;
+  }
+
+  footer.ft-medical .page-top:hover {
+    background-color: #fff;
+  }
+
+  footer.ft-medical .page-top:hover img {
+    filter: invert(0%) sepia(98%) saturate(0%) hue-rotate(49deg) brightness(0%) contrast(101%);
   }
 }

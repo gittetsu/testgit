@@ -37,6 +37,10 @@
   max-width: 330px;
 }
 
+.sec-recruit .medical-gp .list-gp-detail .btn {
+  max-width: 312px;
+}
+
 .sec-recruit .list-gp .list-gp-detail .btn a {
   width: 100%;
 }

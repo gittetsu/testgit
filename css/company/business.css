@@ -25,8 +25,6 @@
 
 .tab-slider .carousel-slide {
   display: flex;
-  position: relative;
-  left: 0;
   width: 100%;
 }
 
@@ -76,6 +74,16 @@
 
 .tab-slider .tab-list-02 li {
   width: 34%;
+}
+
+.tab-list-02 li a:hover {
+  color: unset;
+  border-bottom: 3px solid transparent;
+}
+
+.tab-list-02 li a.active {
+  color: #048851;
+  border-bottom: 3px solid #048851;
 }
 
 .tab-slider .slider-container .arrow {
@@ -206,27 +214,27 @@
 }
 
 .store-area {
-  position: relative;
   width: 95%;
   margin: 0 auto 150px;
-  padding: 109px 40px;
+  padding: 109px 40px 109px 76px;
   background: url(/img/company/img_store_area.jpg) no-repeat center/cover;
   color: #fff;
   max-width: 1100px;
 }
 
-.store-area .position-area .common-button {
+.store-area .common-button {
   line-height: 1.5;
   padding: 20px 60px 20px 30px;
   border: none;
 }
 
-.store-area .position-area .common-button .arrow {
+.store-area .common-button .arrow {
   top: 50%;
   transform: translateY(-50%);
 }
 
 .store-area .d-flex {
+  position: relative;
   align-items: flex-end;
   z-index: 0;
   color: #fff;
@@ -234,7 +242,8 @@
 
 .store-area .caption {
   position: absolute;
-  top: 32%;
+  top: 0;
+  line-height: 1;
   font-family: 'FigTree';
   font-size: 3.125rem;
   font-weight: 700;
@@ -243,7 +252,6 @@
 }
 
 .store-area .d-flex .opening-area {
-  line-height: 1;
   color: #fff;
   font-size: 1.25rem;
   letter-spacing: 2px;
@@ -269,7 +277,7 @@
   }
 
   .tab-slider .slide {
-    margin-right: 20%;
+    margin-right: 20px;
     padding: 6%;
   }
 
@@ -371,18 +379,12 @@
     margin-bottom: 100px;
   }
 
-  .store-area .position-area {
+  .store-area {
     padding: 16.5% 0 16.5% 5.4%;
   }
 
-  .store-area .d-flex {
-    position: relative;
-    justify-content: space-between;
-    align-items: center;
-  }
-
   .store-area .caption {
-    top: -28px;
+    top: -17px;
     font-size: 2.563rem;
   }
 
@@ -404,7 +406,6 @@
   }
 
   .store-area .common-button .arrow {
-    top: 4px;
     right: 18px;
     width: 25px;
     height: 25px;
@@ -424,11 +425,7 @@
     border-radius: unset;
   }
 
-  .store-area .common-button .arrow:hover {
-    background-color: #048851;
-  }
-
-  .store-area .common-button .arrow:hover.arrow::after {
-    background: url(/img/common/ico_arrow_white.svg) no-repeat center/cover;
+  .store-area .common-button:hover .arrow::after {
+    filter: unset;
   }
 }

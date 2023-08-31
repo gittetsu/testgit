@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     /* Toggle Menu Button */
     var toggleBtn = document.querySelector(".toggle-btn");
     var toggleNav = document.querySelector(".toggle-nav");
+    const bodyElement = document.body
 
     toggleBtn.addEventListener("click", function () {
         this.classList.toggle("active");

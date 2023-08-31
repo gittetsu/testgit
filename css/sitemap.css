@@ -5,6 +5,10 @@
   border-bottom: 1px solid #E0E0E0;
 }
 
+.sitemap .sitemap-list:last-child {
+  border-bottom: 0;
+}
+
 .sitemap .sitemap-list .d-flex {
   flex-wrap: wrap;
   justify-content: inherit;

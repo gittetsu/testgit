@@ -1782,8 +1782,7 @@ table tr th:first-child {
   border-radius: 50%;
 }
 
-.common-button .arrow::after,
-.common-button.active .arrow::after {
+.common-button .arrow::after{
   position: absolute;
   top: 50%;
   right: 38%;
@@ -1800,9 +1799,7 @@ table tr th:first-child {
   color: #fff;
 }
 
-.common-button:hover .arrow,
-.common-button:active .arrow,
-.common-button.active .arrow {
+.common-button:hover .arrow{
   right: 20px;
   width: 24px;
   padding: 12px;
@@ -1811,9 +1808,7 @@ table tr th:first-child {
   border-radius: 50%;
 }
 
-.common-button:hover .arrow::after,
-.common-button:active .arrow:after,
-.common-button.active .arrow::after {
+.common-button:hover .arrow::after {
   position: absolute;
   top: 16%;
   right: 50%;
@@ -2519,6 +2514,7 @@ footer .page-top:hover img {
     padding: 8.2px 10px;
     border: 1px solid #ddd;
     cursor: pointer;
+    border-radius: 3px;
   }
 
   .sugi-holding-header .search-gp .search-btn .search-ico {
@@ -2598,7 +2594,7 @@ footer .page-top:hover img {
 
   .sugi-holding-header .search-btn.dropdown .sub-menu {
     position: absolute;
-    top: 72px;
+    top: 70px;
     right: 0;
     left: 0;
     z-index: 5;
@@ -3695,15 +3691,6 @@ footer .page-top:hover img {
     max-width: 20px;
   }
 
-  .sb-arrow::before,
-  .accordion.open .side-gp .sb-arrow::before {
-    top: 6px;
-    left: 6px;
-    background: url(../img/common/ico_arrow.svg) no-repeat center/cover;
-    transform: rotate(90deg);
-    filter: invert(100%) sepia(300%) saturate(0) hue-rotate(0) brightness(100%) contrast(180%);
-  }
-
   .sidebar-detail .sb-detail-link span::before {
     top: 8px;
     transform: rotate(90deg);
@@ -3720,6 +3707,15 @@ footer .page-top:hover img {
   .sidebar-ttl-link:hover .sb-arrow::before {
     top: 6px;
     left: 6px;
+    transform: rotate(90deg);
+    filter: invert(100%) sepia(300%) saturate(0) hue-rotate(0) brightness(100%) contrast(180%);
+  }
+
+  .sb-arrow::before,
+  .accordion.open .side-gp .sb-arrow::before {
+    top: 6px;
+    left: 6px;
+    background: url(../img/common/ico_arrow.svg) no-repeat center/cover;
     transform: rotate(90deg);
     filter: invert(100%) sepia(300%) saturate(0) hue-rotate(0) brightness(100%) contrast(180%);
   }
@@ -4236,16 +4232,13 @@ footer .page-top:hover img {
     border-radius: unset;
   }
 
-  .common-button:hover .arrow,
-  .common-button:active .arrow,
-  .common-button.active .arrow {
+  .common-button:hover .arrow{
     width: 18px;
     padding: 9px;
     background-color: #048851;
   }
 
-  .common-button:hover .arrow::after,
-  .common-button.active .arrow::after {
+  .common-button:hover .arrow::after{
     top: 5%;
     filter: invert(100%) sepia(300%) saturate(0) hue-rotate(0) brightness(100%) contrast(180%);
   }
