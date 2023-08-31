@@ -18,6 +18,6 @@ document.addEventListener("DOMContentLoaded", (e) => {
 	};
 
 	document
-		.querySelectorAll("[data]")
-		.forEach((el) => includeHTML(el, el.getAttribute("data")));
+		.querySelectorAll("[data-include]")
+		.forEach((el) => includeHTML(el, el.getAttribute("data-include")));
 });

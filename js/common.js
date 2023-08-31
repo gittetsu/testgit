@@ -336,7 +336,7 @@ window.addEventListener('load', function () {
         }
     })
 
-    var subMenuLists = document.querySelectorAll('.sub-menu-list li a,.nav-footer-list li a,.ft-nav li a');
+    var subMenuLists = document.querySelectorAll('.sub-menu-list li a,.nav-footer-list li a,.sugi-holding-footer .ft-nav li a');
     subMenuLists.forEach(function (subMenuList) {
         subMenuList.addEventListener('click', function () {
             hamburger.classList.remove('active')
