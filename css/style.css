@@ -490,6 +490,11 @@
 .pharmacy-gp-blk .pharmacy-gp-tablist li a.active {
   background-color: #fff;
   color: #048851;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .pharmacy-gp-blk .pharmacy-gp-tablist li a {
@@ -1539,7 +1544,7 @@
 
   .top .sec-vision ul li {
     width: 50%;
-    border-top: none;
+    border-top: 1px solid transparent;
     border-bottom: 1px solid #e6e6e6;
   }
 

@@ -62,9 +62,9 @@
   padding-left: 14px;
 }
 
-.sitemap .sitemap-list li a.link::before {
+.sitemap .sitemap-list li a.link:before {
   position: absolute;
-  top: 12px;
+  top: 14px;
   left: 0;
   width: 4px;
   height: 4px;
@@ -72,6 +72,11 @@
   transform: rotate(135deg);
   border-top: 2px solid #048851;
   border-left: 2px solid #048851;
+}
+
+.sitemap .sitemap-list li a.link:visited:before {
+  border-top: 2px solid #63288e;
+  border-left: 2px solid #63288e;
 }
 
 @media only screen and (max-width: 767.9px) {
