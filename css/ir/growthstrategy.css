@@ -23,20 +23,19 @@
   display: inline-block;
   position: relative;
   margin-bottom: 5px;
-  padding-left: 20px;
+  padding-left: 18px;
   color: #048851;
   font-size: 0.875rem;
 }
 
 .growth-strategy .link-item::before {
   position: absolute;
-  top: 50%;
+  top: 11px;
   left: 0;
   width: 8px;
   height: 8px;
   background: url('/img/common/ico_green_arrow.png') no-repeat center/contain;
   content: "";
-  transform: translateY(-50%);
 }
 
 /* ir-link-flex */
@@ -142,6 +141,10 @@
   .growth-strategy .w-700 {
     width: 100%;
     margin-left: 0%;
+  }
+
+  .growth-strategy .link-item::before {
+    top: 9px;
   }
 
   /* ir-link-flex */

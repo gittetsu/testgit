@@ -26,6 +26,7 @@
   color: #009944;
   font-family: 'Dosis', sans-serif;
   font-size: 1rem;
+  font-weight: 700;
   text-align: center;
 }
 
@@ -281,6 +282,7 @@
 
 .sec-our-business .business-desc .business-desc-txt {
   margin-bottom: 32px;
+  font-size: 1rem;
 }
 
 .sec-our-business .business-subttl {
@@ -336,6 +338,11 @@
 
 .sec-our-business .head-office-blk .view-more {
   text-align: center;
+}
+
+.sec-our-business .head-office-blk .view-more .smile-cmn-btn {
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-weight: 700;
 }
 
 .sec-our-business .top-faq-blk {
@@ -399,10 +406,19 @@
   font-size: 0.875rem;
 }
 
+.sec-our-business .top-faq-blk .smile-cmn-btn {
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-weight: 700;
+}
+
 @media only screen and (max-width: 767.9px) {
   .smile-top-wrapper {
     background-image: url('../../img/sugi-smile/img_mv_top_bg_sp.png');
     background-position: center top 270px;
+  }
+
+  .smile-cmn-btn .arrow {
+    top: 20px;
   }
 
   .smile-cmn-btn:hover {
@@ -526,8 +542,8 @@
 
   /* sec-location */
   .sec-location {
-    padding: 45px 0;
-    background-size: contain;
+    padding: 60px 0;
+    background-size: cover;
   }
 
   .sec-location p {
@@ -537,7 +553,8 @@
   /* sec-our-business */
   .sec-our-business {
     margin-top: -1px;
-    padding: 46px 0;
+    padding: 60px 0;
+    background-size: cover;
   }
 
   .sec-our-business .support-cleaning-blk {

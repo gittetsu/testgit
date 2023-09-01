@@ -490,6 +490,11 @@
 .pharmacy-gp-blk .pharmacy-gp-tablist li a.active {
   background-color: #fff;
   color: #048851;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .pharmacy-gp-blk .pharmacy-gp-tablist li a {
@@ -839,15 +844,14 @@
 }
 
 .mission-taxo {
+  display: inline-block;
+  line-height: 1.7;
+  padding: 3px 10px;
+  border: 1px solid #3c8656;
+  background-color: #048851;
   color: #ffffff;
   font-size: 0.875rem;
   font-weight: 700;
-}
-
-.mission-taxo span {
-  padding: 5px 10px;
-  border: 1px solid #3c8656;
-  background-color: #048851;
   text-align: center;
   border-radius: 4px;
 }
@@ -1139,7 +1143,7 @@
     width: 91%;
   }
 
-  .mission-taxo span {
+  .mission-taxo {
     padding: 5px 10px;
     font-size: 0.75rem;
   }
@@ -1539,7 +1543,7 @@
 
   .top .sec-vision ul li {
     width: 50%;
-    border-top: none;
+    border-top: 1px solid transparent;
     border-bottom: 1px solid #e6e6e6;
   }
 
@@ -1979,10 +1983,6 @@
   .mission-taxo {
     font-size: 0.75rem;
     text-align: center;
-  }
-
-  .mission-taxo span {
-    padding: 5px 10px;
   }
 
   .cmm-mission-logo {
