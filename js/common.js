@@ -8,7 +8,6 @@ window.addEventListener('load', function () {
             item.querySelector('.accordion-ttl') != null
                 ? item.querySelector('.accordion-ttl')
                 : item.querySelector('.sidebar-ttl')
-        if (header != null) {
             const mediaQuery = window.matchMedia('(max-width: 1024.9px)')
             var content = item.querySelector('.accordion-content')
             if (content) {
@@ -111,7 +110,6 @@ window.addEventListener('load', function () {
                     }
                 }
             }
-        }
     })
 
     // dynamically accordion content high when window is resize
@@ -138,7 +136,6 @@ window.addEventListener('load', function () {
     var jsSidebar = document.querySelector('.js-sidebar')
     var sidebarDeatils = document.querySelectorAll('.js-sidebar .sb-detail-link')
     var closeBtn = document.querySelector('.close-btn ')
-    const mediaQuery2 = window.matchMedia('(max-width: 1025px)')
     if (toggleButton) {
         toggleButton.addEventListener('click', function () {
             slideContent.classList.toggle('open')
@@ -403,7 +400,7 @@ window.addEventListener('load', function () {
     const dropDownMenu = document.getElementsByClassName('dropdown')
     var hamburger = document.querySelector('.hamburger')
     var navMenu = document.querySelector('.nav-menu')
-    const mediaQuery = window.matchMedia('(max-width: 1025px)')
+    const mediaQuery = window.matchMedia('(max-width: 1024.9px)')
     var isSearch = false
 
     if (searchButton) {
@@ -487,7 +484,7 @@ window.addEventListener('load', function () {
             document.querySelector('body').style.overflow = 'auto'
         }
     }
-    const query = window.matchMedia('(max-width: 1025px)')
+    const query = window.matchMedia('(max-width: 1024.9px)')
     const element = document.querySelector('.sidebar')
     const header = document.querySelector('.header-inner')
 
