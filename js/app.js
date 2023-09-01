@@ -1,20 +1,29 @@
-// tabs for top page
-const tabs = document.querySelectorAll('[data-tab-target]')
-const tabContents = document.querySelectorAll('[data-tab-content]')
+//tabs
+function handleTabClick(tabs, tabContents) {
+	tabs.forEach((tab, index) => {
+		tab.addEventListener('click', () => {
+			const target = tabContents[index];
+			tabContents.forEach((tabContent) => {
+				tabContent.classList.remove('active');
+			});
+			tabs.forEach((tab) => {
+				tab.classList.remove('active');
+			});
+			tab.classList.add('active');
+			target.classList.add('active');
+		});
+	});
+}
 
-tabs.forEach(tab => {
-  tab.addEventListener('click', () => {
-    const target = document.querySelector(tab.dataset.tabTarget)
-    tabContents.forEach(tabContent => {
-      tabContent.classList.remove('active')
-    })
-    tabs.forEach(tab => {
-      tab.classList.remove('active')
-    })
-    tab.classList.add('active')
-    target.classList.add('active')
-  })
-})
+function setupTabs(parentClass) {
+	const parent = document.querySelector(parentClass);
+	const tabs = parent.querySelectorAll('.tablinks');
+	const tabContents = parent.querySelectorAll('.tab-cnt');
+	handleTabClick(tabs, tabContents);
+}
+
+setupTabs('.sec-news .tab-list');
+setupTabs('.sec-number-area .number-gp-blk');
 
 //height line js
 function alignElementsBasedOnHeight() {
