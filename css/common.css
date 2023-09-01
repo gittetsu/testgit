@@ -1101,7 +1101,7 @@ h6.common-sub-ttl {
   display: inline-block;
   position: relative;
   width: 26px;
-  margin: 10px 0;
+  margin: 10px 0 0;
   padding: 13px;
   border: 1px solid transparent;
   background: #048851;
@@ -3859,7 +3859,7 @@ footer .page-top:hover img {
 
   .accordion-ttl .arrow-blk {
     width: 20px;
-    margin: 4px 0;
+    margin: 4px 0 0;
     padding: 10px;
   }
 
@@ -4074,7 +4074,7 @@ footer .page-top:hover img {
     max-width: 11px;
   }
 
-  .img-list-gp .img-col03 .img-list-detail .external-blk span:after {
+  .img-list-gp .img-col03 .img-list-detail .external-blk span:after,.side-img-list-gp .img-col03 .img-list-detail .external-blk span:after{
     top: 4px;
   }
 
