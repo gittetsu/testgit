@@ -8,7 +8,7 @@ window.addEventListener('load', function () {
             item.querySelector('.accordion-ttl') != null
                 ? item.querySelector('.accordion-ttl')
                 : item.querySelector('.sidebar-ttl')
-            const mediaQuery = window.matchMedia('(max-width: 1024.9px)')
+            const mediaQuery = window.matchMedia('(max-width: 1024px)')
             var content = item.querySelector('.accordion-content')
             if (content) {
                 header.addEventListener('click', () => {
@@ -290,7 +290,7 @@ window.addEventListener('load', function () {
     var dropdowns = document.querySelectorAll('.dropdown .dropdown-list');
     dropdowns.forEach(function (toggle) {
         var dropdownMenu = toggle.nextElementSibling
-        const query = window.matchMedia('(max-width: 1024.9px)')
+        const query = window.matchMedia('(max-width: 1024px)')
 
         if (!query.matches) {
             toggle.addEventListener('mouseenter', function (e) {
@@ -400,7 +400,7 @@ window.addEventListener('load', function () {
     const dropDownMenu = document.getElementsByClassName('dropdown')
     var hamburger = document.querySelector('.hamburger')
     var navMenu = document.querySelector('.nav-menu')
-    const mediaQuery = window.matchMedia('(max-width: 1024.9px)')
+    const mediaQuery = window.matchMedia('(max-width: 1024px)')
     var isSearch = false
 
     if (searchButton) {
@@ -484,7 +484,7 @@ window.addEventListener('load', function () {
             document.querySelector('body').style.overflow = 'auto'
         }
     }
-    const query = window.matchMedia('(max-width: 1024.9px)')
+    const query = window.matchMedia('(max-width: 1024px)')
     const element = document.querySelector('.sidebar')
     const header = document.querySelector('.header-inner')
 
@@ -633,7 +633,6 @@ window.addEventListener('load', function () {
                     otherItem.classList.remove(activeClass)
                 }
             })
-            item.classList.add(activeClass)
         })
     })
 

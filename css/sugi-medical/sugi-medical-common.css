@@ -68,8 +68,8 @@
   position: absolute;
   top: 14px;
   left: 0;
-  width: 4px;
-  height: 4px;
+  width: 6px;
+  height: 6px;
   content: '';
   transform: translateY(-50%) rotate(-45deg);
   border-bottom: 1px solid #fff;

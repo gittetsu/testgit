@@ -534,6 +534,8 @@ h6.common-sub-ttl {
   font-weight: 400;
   outline: none;
   border-radius: 3px;
+  appearance: none;
+  -webkit-appearance: none;
 }
 
 .sugi-holding-header form.search input[type='text']::-webkit-input-placeholder {
@@ -719,7 +721,7 @@ h6.common-sub-ttl {
 .sugi-holding-header .dropdown .sub-menu .list-gp {
   display: flex;
   width: 77.9%;
-  padding-left: 3.1%;
+  padding-left: 2.8%;
 }
 
 .sugi-holding-header .dropdown .sub-menu .list-gp .business-gp {
@@ -729,7 +731,7 @@ h6.common-sub-ttl {
 }
 
 .sugi-holding-header .dropdown .sub-menu .list-gp .site-gp {
-  width: 28.4%;
+  width: 30.4%;
   margin-right: 4.1%;
   letter-spacing: 0.5px;
 }
@@ -2618,12 +2620,13 @@ footer .page-top:hover img {
 
   .sugi-holding-header form.search button {
     position: absolute;
-    top: 19px;
+    top: 20.5px;
     right: -15px;
     left: unset;
     width: 70px;
     padding: 0;
-    padding: 21.5px 0;
+    padding: 21px 0;
+    height: 60.4px;
     border: none;
     background: none;
     background-color: #048851;
@@ -3470,12 +3473,14 @@ footer .page-top:hover img {
   }
 
   .sugi-holding-header form.search button {
-    top: 20px;
+    top: 50%;
+    transform: translate(-50%, -50%);
     right: -15px;
+    height: 60.5px;
     left: unset;
     width: 70px;
     padding: 0;
-    padding: 21.4px 0;
+    padding: 21.5px 0;
     border: none;
     background: none;
     background-color: #048851;
