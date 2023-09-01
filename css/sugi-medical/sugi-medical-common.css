@@ -198,6 +198,7 @@ h3.common-medical-ttl {
   padding: 0 0 0 20px;
   color: #000;
   font-weight: 700;
+  letter-spacing: 2.2px;
   border-bottom: none;
   border-left: 3px solid #7FBE26;
 }
@@ -213,7 +214,7 @@ h3.common-medical-ttl {
   color: #fff;
   font-weight: 700;
   text-align: left;
-  letter-spacing: 1.6px;
+  letter-spacing: 1px;
   border-radius: 5px;
   max-width: 169px;
 }
@@ -503,6 +504,7 @@ footer.ft-medical .page-top:hover img {
 
   h3.common-medical-ttl {
     font-size: 1.25rem;
+    letter-spacing: 2px;
   }
 
   /* sec-medical-bnr */

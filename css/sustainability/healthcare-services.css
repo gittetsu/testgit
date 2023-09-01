@@ -1,21 +1,21 @@
 @charset "UTF-8";
 
 .healthcare-services .common-box {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: baseline;
   width: 100%;
   padding: 21.5px 40px;
   background-color: #e5f3ed;
   border-radius: 8px;
 }
 
-.healthcare-services .common-box .line {
-  width: 100%;
-  margin: 21px 0;
-  border: 1px solid #048851;
-  opacity: 0.3;
+.healthcare-services .common-box.d-flex,
+.healthcare-services .common-box .d-flex {
+  align-items: baseline;
+}
+
+.healthcare-services .common-box .d-flex:first-child {
+  margin-bottom: 21.5px;
+  padding-bottom: 21.5px;
+  border-bottom: 1px solid rgba(4, 136, 81, .3);
 }
 
 .healthcare-services .common-box dt {
@@ -50,6 +50,11 @@
   .healthcare-services .common-box {
     align-items: center;
     padding: 24px;
+  }
+
+  .healthcare-services .common-box .d-flex:first-child {
+    margin-bottom: 23px;
+    padding-bottom: 23px;
   }
 
   .healthcare-services .common-box dt {
