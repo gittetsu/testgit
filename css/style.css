@@ -847,9 +847,6 @@
   color: #ffffff;
   font-size: 0.875rem;
   font-weight: 700;
-}
-
-.mission-taxo span {
   padding: 5px 10px;
   border: 1px solid #3c8656;
   background-color: #048851;
@@ -1144,7 +1141,7 @@
     width: 91%;
   }
 
-  .mission-taxo span {
+  .mission-taxo {
     padding: 5px 10px;
     font-size: 0.75rem;
   }
@@ -1984,9 +1981,6 @@
   .mission-taxo {
     font-size: 0.75rem;
     text-align: center;
-  }
-
-  .mission-taxo span {
     padding: 5px 10px;
   }
 

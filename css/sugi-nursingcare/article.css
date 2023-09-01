@@ -77,6 +77,10 @@
   text-align: center;
 }
 
+.news-article .share-link {
+  background-color: #fff;
+}
+
 @media only screen and (max-width: 767.9px) {
 
   .nursing-care-wrapper::after {
