@@ -42,7 +42,7 @@
 
 .sugi-smile-header .menu-list a:hover,
 .sugi-smile-header .menu-list a.active {
-  color: #009944;
+  color: #048851;
 }
 
 .fix-wrap {
@@ -220,7 +220,7 @@
   justify-content: flex-end;
 }
 
-.smile-breadcrumb .breadcrumb-list li {
+.smile-breadcrumb .breadcrumb-list li,.smile-breadcrumb .breadcrumb-list li a{
   color: #009944;
 }
 

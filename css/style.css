@@ -156,6 +156,11 @@
   right: 20px;
 }
 
+.top .sec-news .common-button:hover .arrow::after,
+.top .sec-news .common-button.active .arrow:after {
+  top: 19%;
+}
+
 .top .sec-news .tab-list .tab-left .common-button:hover,
 .top .sec-news .tab-list .tab-left .common-button:active,
 .top .sec-news .tab-list .tab-left .common-button.active {
@@ -221,6 +226,14 @@
 .active[data-tab-content] {
   display: block;
 }
+
+/* .tab-cnt {
+  display: none;
+}
+
+.tab-cnt.active {
+  display: block;
+} */
 
 /* sec-topics */
 .top .sec-topics {
@@ -563,23 +576,14 @@
   margin-bottom: 0;
 }
 
+.top .icon-common {
+  max-width: 61px;
+  margin: 21px auto 9px;
+}
+
 .point-number {
   margin: 0 auto;
   margin-bottom: 8px;
-  max-width: 81px;
-}
-
-.visitor-number,
-.store-number {
-  margin: 20px auto 9px;
-}
-
-.visitor-number {
-  max-width: 61px;
-}
-
-.store-number {
-  max-width: 57px;
 }
 
 .num-desc-ttl {
@@ -829,6 +833,8 @@
 }
 
 .cmm-mission-blk .mission-txtblk {
+  position: relative;
+  z-index: 2;
   background-color: #ffffff;
 }
 
@@ -1311,7 +1317,7 @@
   .top .sec-news .tab-list .tab-left ul {
     display: flex;
     align-items: center;
-    width: 867px;
+    width: 858px;
     margin-bottom: 10px;
   }
 
@@ -1636,12 +1642,9 @@
     margin-right: 0;
   }
 
-  .visitor-number {
+  .top .icon-common {
     max-width: 44px;
-  }
-
-  .store-number {
-    max-width: 41px;
+    margin: 14px auto 18px;
   }
 
   .gp-circle-cnt {
@@ -1687,11 +1690,6 @@
 
   .gpoint-number-item .gp-circle-cnt {
     padding: 23.5px 0 19.9px 0;
-  }
-
-  .point-number {
-    margin-bottom: 8px;
-    max-width: 70px;
   }
 
   .num-desc-ttl {
@@ -1959,10 +1957,6 @@
     margin-bottom: 22px;
   }
 
-  .mission-img::after {
-    height: 93%;
-  }
-
   .cmm-mission-blk .mission-txtblk {
     width: 100%;
   }
@@ -1980,13 +1974,16 @@
     max-width: 100%;
   }
 
-  .mission-taxo {
-    font-size: 0.75rem;
+  .top .mission-txt {
     text-align: center;
   }
 
+  .mission-taxo {
+    font-size: 0.75rem;
+  }
+
   .cmm-mission-logo {
-    margin: 13px auto 19px auto;
+    margin: 8px auto 20px;
   }
 
   .site-link {
@@ -2025,7 +2022,7 @@
   }
 
   .mission-logo02 {
-    margin: 9px auto 11px auto;
+    margin: 8px auto 20px;
     max-width: 289px;
   }
 
@@ -2067,10 +2064,10 @@
     letter-spacing: 1.5px;
   }
 
-  /*.cmm-gp-cirle {
+  /* .cmm-gp-cirle {
     margin: 0 auto;
     max-width: 136px;
-  }*/
+  } */
 
   .count-txtblk {
     font-size: 2.3rem;

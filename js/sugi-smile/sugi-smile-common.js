@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (toggleBtn.classList.contains("active")) {
             toggleNav.classList.add("active");
             bodyElement.style.overflow = "hidden";
-            bodyElement.style.position = "fixed";
+            bodyElement.style.position = "relative";
             bodyElement.style.left = 0;
             bodyElement.style.right = 0;
             bodyElement.style.margin = "0 auto";

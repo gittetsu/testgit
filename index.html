@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
 	<meta name="description" content="スギ薬局グループは、お客様や患者様の幸せを願い、地域社会に貢献できる会社づくりを目指します。">
 	<title>スギホールディングス</title>
 	<link rel="stylesheet" href="css/reset.css">
@@ -39,39 +39,39 @@
 				</div>
 				<div class="tab-list d-flex">
 					<div class="tab-left mb-sp-30">
-						<ul>
+						<ul class="tab">
 							<li>
-								<a href="javascript:void(0)" class="common-button active" data-tab-target="#all">すべて<span
+								<a href="javascript:void(0)" class="common-button tablinks active" data-tab-target="#all">すべて<span
 										class="arrow"></span></a>
 							</li>
 							<li>
-								<a href="javascript:void(0)" class="common-button" data-tab-target="#management">経営<span
+								<a href="javascript:void(0)" class="common-button tablinks" data-tab-target="#management">経営<span
 										class="arrow"></span></a>
 							</li>
 							<li>
-								<a href="javascript:void(0)" class="common-button" data-tab-target="#group">グループ<span
+								<a href="javascript:void(0)" class="common-button tablinks" data-tab-target="#group">グループ<span
 										class="arrow"></span></a>
 							</li>
 							<li>
-								<a href="javascript:void(0)" class="common-button" data-tab-target="#sustainability">サステナビリティ<span
+								<a href="javascript:void(0)" class="common-button tablinks"
+									data-tab-target="#sustainability">サステナビリティ<span class="arrow"></span></a>
+							</li>
+							<li>
+								<a href="javascript:void(0)" class="common-button tablinks" data-tab-target="#event">イベント<span
 										class="arrow"></span></a>
 							</li>
 							<li>
-								<a href="javascript:void(0)" class="common-button" data-tab-target="#event">イベント<span
+								<a href="javascript:void(0)" class="common-button tablinks" data-tab-target="#others">その他<span
 										class="arrow"></span></a>
 							</li>
 							<li>
-								<a href="javascript:void(0)" class="common-button" data-tab-target="#others">その他<span
-										class="arrow"></span></a>
-							</li>
-							<li>
-								<a href="javascript:void(0)" class="common-button" data-tab-target="#ir-info">IR情報<span
+								<a href="javascript:void(0)" class="common-button tablinks" data-tab-target="#ir-info">IR情報<span
 										class="arrow"></span></a>
 							</li>
 						</ul>
 					</div>
 					<div class="tab-right">
-						<ul class="new-common active" id="all" data-tab-content>
+						<ul class="new-common tab-cnt active" id="all" data-tab-content>
 							<li class="new-common-list">
 								<a href="#">
 									<div class="cat-blk">
@@ -133,7 +133,7 @@
 								</a>
 							</li>
 						</ul>
-						<ul class="new-common" id="management" data-tab-content>
+						<ul class="new-common tab-cnt" id="management" data-tab-content>
 							<li class="new-common-list">
 								<a href="#">
 									<div class="cat-blk">
@@ -147,7 +147,7 @@
 								</a>
 							</li>
 						</ul>
-						<ul class="new-common" id="group" data-tab-content>
+						<ul class="new-common tab-cnt" id="group" data-tab-content>
 							<li class="new-common-list">
 								<a href="#">
 									<div class="cat-blk">
@@ -161,7 +161,7 @@
 								</a>
 							</li>
 						</ul>
-						<ul class="new-common" id="sustainability" data-tab-content>
+						<ul class="new-common tab-cnt" id="sustainability" data-tab-content>
 							<li class="new-common-list">
 								<a href="#">
 									<div class="cat-blk">
@@ -175,7 +175,7 @@
 								</a>
 							</li>
 						</ul>
-						<ul class="new-common" id="event" data-tab-content>
+						<ul class="new-common tab-cnt" id="event" data-tab-content>
 							<li class="new-common-list">
 								<a href="#">
 									<div class="cat-blk">
@@ -189,7 +189,7 @@
 								</a>
 							</li>
 						</ul>
-						<ul class="new-common" id="others" data-tab-content>
+						<ul class="new-common tab-cnt" id="others" data-tab-content>
 							<li class="new-common-list">
 								<a href="#">
 									<div class="cat-blk">
@@ -203,7 +203,7 @@
 								</a>
 							</li>
 						</ul>
-						<ul class="new-common" id="ir-info" data-tab-content>
+						<ul class="new-common tab-cnt" id="ir-info" data-tab-content>
 							<li class="new-common-list">
 								<a href="#">
 									<div class="cat-blk">
@@ -450,26 +450,26 @@
 					<div class="pharmacy-gp-blk mb-30 mb-sp-40">
 						<ul class="pharmacy-gp-tablist">
 							<li>
-								<a href="javascript:void(0)" class="active" data-tab-target="#customer">お客様</a>
+								<a href="javascript:void(0)" class="active tablinks" data-tab-target="#customer">お客様</a>
 							</li>
 							<li>
-								<a href="javascript:void(0)" data-tab-target="#finance">財務</a>
+								<a href="javascript:void(0)" class="tablinks" data-tab-target="#finance">財務</a>
 							</li>
 							<li>
-								<a href="javascript:void(0)" data-tab-target="#work-environment">職場環境</a>
+								<a href="javascript:void(0)" class="tablinks" data-tab-target="#work-environment">職場環境</a>
 							</li>
 							<li>
-								<a href="javascript:void(0)" data-tab-target="#other-tab">その他</a>
+								<a href="javascript:void(0)" class="tablinks" data-tab-target="#other-tab">その他</a>
 							</li>
 						</ul>
 					</div>
-					<div class="pharmacy-gp-tabcnt mb-40 active" id="customer" data-tab-content>
+					<div class="pharmacy-gp-tabcnt tab-cnt mb-40 active" id="customer" data-tab-content>
 						<ul class="number-gp-circle d-flex">
 							<li class="gp-circle-item point-number-item">
 								<div class="cmm-gp-cirle">
 									<div class="gp-circle-cnt">
 										<p class="num-desc-ttl"><span>お客様</span></p>
-										<div class="point-number">
+										<div class="point-number icon-common">
 											<img src="/img/img_point_number.png" alt="ポイント会員数">
 										</div>
 										<span class="gp-circle-caption">ポイント会員数</span>
@@ -481,7 +481,7 @@
 								<div class="cmm-gp-cirle">
 									<div class="gp-circle-cnt">
 										<p class="num-desc-ttl"><span>お客様</span></p>
-										<div class="visitor-number">
+										<div class="visitor-number icon-common">
 											<img src="/img/img_visitor.png" alt="年間延来店客数">
 										</div>
 										<span class="gp-circle-caption">年間延来店客数</span>
@@ -493,7 +493,7 @@
 								<div class="cmm-gp-cirle">
 									<div class="gp-circle-cnt">
 										<p class="num-desc-ttl"><span>お客様</span></p>
-										<div class="store-number">
+										<div class="store-number icon-common">
 											<img src="/img/img_store.png" alt="スギ薬局グループ店舗数">
 										</div>
 										<span class="gp-circle-caption">スギ薬局<br class="sp">グループ店舗数</span>
@@ -503,13 +503,13 @@
 							</li>
 						</ul>
 					</div>
-					<div class="pharmacy-gp-tabcnt mb-40" id="finance" data-tab-content>
+					<div class="pharmacy-gp-tabcnt tab-cnt mb-40" id="finance" data-tab-content>
 						<ul class="number-gp-circle d-flex">
 							<li class="gp-circle-item sales-circle-item">
 								<div class="cmm-gp-cirle">
 									<div class="gp-circle-cnt">
 										<p class="num-desc-ttl"><span>財務</span></p>
-										<div class="point-number">
+										<div class="point-number icon-common">
 											<img src="/img/img_sugi_sales.png" alt="連結売上高">
 										</div>
 										<span class="gp-circle-caption">連結売上高</span>
@@ -519,13 +519,13 @@
 							</li>
 						</ul>
 					</div>
-					<div class="pharmacy-gp-tabcnt mb-40" id="work-environment" data-tab-content>
+					<div class="pharmacy-gp-tabcnt tab-cnt mb-40" id="work-environment" data-tab-content>
 						<ul class="number-gp-circle d-flex">
 							<li class="gp-circle-item">
 								<div class="cmm-gp-cirle">
 									<div class="gp-circle-cnt">
 										<p class="num-desc-ttl"><span>社員</span></p>
-										<div class="point-number">
+										<div class="point-number icon-common">
 											<img src="/img/img_pharmacist.png" alt="薬剤師">
 										</div>
 										<span class="gp-circle-caption">薬剤師</span>
@@ -537,7 +537,7 @@
 								<div class="cmm-gp-cirle">
 									<div class="gp-circle-cnt store-circle-cnt">
 										<p class="num-desc-ttl"><span>調剤</span></p>
-										<div class="point-number">
+										<div class="point-number icon-common">
 											<img src="/img/img_store_ratio.png" alt="スギ薬局店舗の調剤併設率">
 										</div>
 										<span class="gp-circle-caption">スギ薬局店舗の<br>調剤併設率</span>
@@ -549,7 +549,7 @@
 								<div class="cmm-gp-cirle">
 									<div class="gp-circle-cnt">
 										<p class="num-desc-ttl"><span>調剤</span></p>
-										<div class="point-number">
+										<div class="point-number icon-common">
 											<img src="/img/img_prescription.png" alt="処方せん応需枚数">
 										</div>
 										<span class="gp-circle-caption">処方せん応需枚数</span>
@@ -559,13 +559,13 @@
 							</li>
 						</ul>
 					</div>
-					<div class="pharmacy-gp-tabcnt mb-40" id="other-tab" data-tab-content>
+					<div class="pharmacy-gp-tabcnt tab-cnt mb-40" id="other-tab" data-tab-content>
 						<ul class="number-gp-circle d-flex">
 							<li class="gp-circle-item solar-circle-item">
 								<div class="cmm-gp-cirle">
 									<div class="gp-circle-cnt">
 										<p class="num-desc-ttl"><span>環境</span></p>
-										<div class="point-number">
+										<div class="point-number icon-common">
 											<img src="/img/img_solar_panel.png" alt="太陽光パネル 設置店舗数">
 										</div>
 										<span class="gp-circle-caption">太陽光パネル<br>設置店舗数</span>
@@ -577,7 +577,7 @@
 								<div class="cmm-gp-cirle">
 									<div class="gp-circle-cnt">
 										<p class="num-desc-ttl"><span>地域</span></p>
-										<div class="point-number">
+										<div class="point-number icon-common">
 											<img src="/img/img_aggrement.png" alt="自治体との協定数">
 										</div>
 										<span class="gp-circle-caption">自治体との協定数</span>
@@ -686,7 +686,9 @@
 				</div>
 				<div class="mission-txtblk">
 					<div class="mission-cnt">
-						<p class="mission-taxo">ドラッグストア事業</p>
+						<div class="mission-txt">
+							<p class="mission-taxo">ドラッグストア事業</p>
+						</div>
 						<div class="cmm-mission-logo mission-logo01">
 							<img src="/img/img_mission_logo01.png" alt="ドラッグストア事業">
 						</div>
@@ -703,7 +705,9 @@
 			<div class="cmm-mission-blk d-flex">
 				<div class="mission-txtblk">
 					<div class="mission-cnt">
-						<p class="mission-taxo">医療コンサルティング事業</p>
+						<div class="mission-txt">
+							<p class="mission-taxo">医療コンサルティング事業</p>
+						</div>
 						<div class="cmm-mission-logo mission-logo02">
 							<img src="/img/img_mission_logo02.png" alt="医療コンサルティング事業">
 						</div>
@@ -723,7 +727,9 @@
 				</div>
 				<div class="mission-txtblk">
 					<div class="mission-cnt">
-						<p class="mission-taxo">障がい者雇用推進事業</p>
+						<div class="mission-txt">
+							<p class="mission-taxo">障がい者雇用推進事業</p>
+						</div>
 						<div class="cmm-mission-logo mission-logo03">
 							<img src="/img/img_mission_logo03.png" alt="障がい者雇用推進事業">
 						</div>
