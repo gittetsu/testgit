@@ -397,10 +397,6 @@ window.addEventListener('load', function () {
         })
     }
 
-
-    function handleClick() {
-    }
-
     /*search-button*/
     var searchButton = document.querySelector('.search-btn')
     const subMenu = document.querySelector('.sub-menu')
@@ -566,9 +562,7 @@ window.addEventListener('load', function () {
             j++
         })
     }
-
-    // Call the alignment function when the page loads
-    window.addEventListener('load', accordionHeight)
+    accordionHeight();
     window.addEventListener('resize', accordionHeight)
 
     var toggleBtn = document.querySelector('.toggle-btn');

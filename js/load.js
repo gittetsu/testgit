@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
 			}
 		});
 
-		xhr.open("GET", url);
+		xhr.open("GET", url, false);
 		xhr.setRequestHeader("Content-type", "text/html; charset=utf-8");
 		xhr.send();
 	};
