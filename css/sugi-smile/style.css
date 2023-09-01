@@ -526,8 +526,8 @@
 
   /* sec-location */
   .sec-location {
-    padding: 45px 0;
-    background-size: contain;
+    padding: 60px 0;
+    background-size: cover;
   }
 
   .sec-location p {
@@ -537,7 +537,8 @@
   /* sec-our-business */
   .sec-our-business {
     margin-top: -1px;
-    padding: 46px 0;
+    padding: 60px 0;
+    background-size: cover;
   }
 
   .sec-our-business .support-cleaning-blk {
