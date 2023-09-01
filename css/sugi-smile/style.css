@@ -83,7 +83,7 @@
 /* smile-top-wrapper */
 .smile-top-wrapper {
   position: relative;
-  background: #f6fff5 url('../../img/common/sugi-smile/img_sugi_smile_bg.png')no-repeat center top 145px/contain;
+  background: #f6fff5 url('../../img/sugi-smile/img_mv_top_bg_pc.png')no-repeat center top 45px/107%;
 }
 
 /* sec-top-mv */
@@ -92,6 +92,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-bottom: 45px;
 }
 
 .sec-top-mv .top-mv-txt {
@@ -437,6 +438,7 @@
 
   .sec-top-mv .top-mv-blk {
     position: relative;
+    padding-bottom: 0;
   }
 
   .sec-top-mv .top-mv-txt {
