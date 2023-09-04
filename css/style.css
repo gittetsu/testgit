@@ -457,6 +457,11 @@
   content: "";
 }
 
+.sec-number-area .number-gp-blk {
+  position: relative;
+  z-index: 2;
+}
+
 .number-gp-ttl,
 .update-time,
 .num-desc-ttl,
