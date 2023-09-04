@@ -227,6 +227,7 @@
 
 .smile-breadcrumb .breadcrumb-list li:last-child {
   font-weight: 700;
+  padding-right: 0;
 }
 
 .breadcrumb-list li::after {
