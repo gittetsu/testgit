@@ -64,7 +64,7 @@ window.addEventListener('load', alignElementsBasedOnHeight);
 
 
 //mv slider for top page
-var i = 1; // Start from the first image
+var i = 0; // Start from the first image
 var slideTime = 3000; // 3 seconds
 var pcImages = [
   '/img/img_mv_bg_01.png',
@@ -82,6 +82,18 @@ var spImages = [
 
 var slideTimeout;
 
+// Preload images
+var preloadedImages = [];
+for (var j = 0; j < pcImages.length; j++) {
+  preloadedImages.push(new Image());
+  preloadedImages[j].src = pcImages[j];
+}
+
+for (var k = 0; k < spImages.length; k++) {
+  preloadedImages.push(new Image());
+  preloadedImages[k + pcImages.length].src = spImages[k];
+}
+
 function changePicture() {
   var sliderElement = document.querySelector('.mv-slider'); // Select the slider container element
 
@@ -90,21 +102,17 @@ function changePicture() {
 
   var currentImages = window.innerWidth >= 768 ? pcImages : spImages; // Use PC images for larger screens, SP images for smaller screens
 
+  i = (i + 1) % currentImages.length; // Loop through images
+
   sliderElement.style.backgroundImage = "url(" + currentImages[i] + ")";
 
   updatePagination(); // Update the pagination dots
 
-  if (i < currentImages.length - 1) {
-    i++;
-  } else {
-    i = 0;
-  }
-
   // Clear the existing timeout
   clearTimeout(slideTimeout);
 
-  // Set a new timeout with longer slideTime for slower transition
-  slideTimeout = setTimeout(changePicture, slideTime * 2);
+  // Set a new timeout for the next slide
+  slideTimeout = setTimeout(changePicture, slideTime);
 }
 
 function updatePagination() {
@@ -124,21 +132,38 @@ function updatePagination() {
       i = parseInt(this.dataset.slideIndex); // Update the current index based on the clicked dot's data attribute
       updatePagination(); // Update the pagination dots again
 
-      // Reset the transition temporarily to prevent smooth transition during manual dot clicks
-      var sliderElement = document.querySelector('.mv-slider');
-      sliderElement.style.transition = 'none';
+      // Clear the existing timeout
+      clearTimeout(slideTimeout);
 
-      changePicture();
+      // Set a new timeout for the next slide
+      slideTimeout = setTimeout(changePicture, slideTime);
     });
     pagination.appendChild(dot);
   }
 }
-window.addEventListener("load", changePicture);
-window.addEventListener("resize", updateImages);
+
+// Initialize the slider
+window.addEventListener("load", function () {
+  var sliderElement = document.querySelector('.mv-slider');
+  sliderElement.style.backgroundImage = "url(" + pcImages[i] + ")";
+
+  // Start the slideshow
+  slideTimeout = setTimeout(changePicture, slideTime);
+});
 
 // Update the images when the window is resized
+window.addEventListener("resize", updateImages);
+window.addEventListener("load", changePicture);
+
 function updateImages() {
   var currentImages = window.innerWidth >= 768 ? pcImages : spImages; // Use PC images for larger screens, SP images for smaller screens
+
+  // Preload images for the current screen size
+  preloadedImages = [];
+  for (var j = 0; j < currentImages.length; j++) {
+    preloadedImages.push(new Image());
+    preloadedImages[j].src = currentImages[j];
+  }
 
   // Update the background image of the slider container
   var sliderElement = document.querySelector('.mv-slider');
@@ -147,7 +172,6 @@ function updateImages() {
   // Update the pagination dots
   updatePagination();
 }
-
 
 //image slider for top page
 const slideshowContainer = document.querySelector('.slider-image');
