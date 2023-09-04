@@ -13,7 +13,7 @@
 
 .news-article h2.common-ttl {
   color: #e6172c;
-  border-bottom: 2px solid #E6172C;
+  border-bottom: 2px solid #e6172c;
 }
 
 .news-article .ref {
@@ -44,7 +44,7 @@
   align-items: center;
   height: 20px;
   padding: 0px 10px;
-  background-color: #FBEBD3;
+  background-color: #fbebd3;
   color: #e6172c;
   letter-spacing: 1.4px;
   border-radius: 10px;
@@ -67,7 +67,7 @@
 
 .news-article .contact-us {
   padding: 18px;
-  background-color: #5D5555;
+  background-color: #5d5555;
 }
 
 .news-article .contact-us p {

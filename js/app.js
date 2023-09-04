@@ -1,25 +1,25 @@
 //tabs
 function handleTabClick(tabs, tabContents) {
-	tabs.forEach((tab, index) => {
-		tab.addEventListener('click', () => {
-			const target = tabContents[index];
-			tabContents.forEach((tabContent) => {
-				tabContent.classList.remove('active');
-			});
-			tabs.forEach((tab) => {
-				tab.classList.remove('active');
-			});
-			tab.classList.add('active');
-			target.classList.add('active');
-		});
-	});
+  tabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => {
+      const target = tabContents[index];
+      tabContents.forEach((tabContent) => {
+        tabContent.classList.remove('active');
+      });
+      tabs.forEach((tab) => {
+        tab.classList.remove('active');
+      });
+      tab.classList.add('active');
+      target.classList.add('active');
+    });
+  });
 }
 
 function setupTabs(parentClass) {
-	const parent = document.querySelector(parentClass);
-	const tabs = parent.querySelectorAll('.tablinks');
-	const tabContents = parent.querySelectorAll('.tab-cnt');
-	handleTabClick(tabs, tabContents);
+  const parent = document.querySelector(parentClass);
+  const tabs = parent.querySelectorAll('.tablinks');
+  const tabContents = parent.querySelectorAll('.tab-cnt');
+  handleTabClick(tabs, tabContents);
 }
 
 setupTabs('.sec-news .tab-list');
@@ -27,20 +27,35 @@ setupTabs('.sec-number-area .number-gp-blk');
 
 //height line js
 function alignElementsBasedOnHeight() {
-  const elements = document.querySelectorAll('.topics-txt .text-02');
-  let maxHeight = 0;
+  const groups = {
+    '.topics-txt .text-02': 0,
+    '.gp-circle-cnt': 0,
+    '.gp-circle-caption': 0,
+  };
 
-  // Find the maximum height
-  elements.forEach(element => {
-    element.style.removeProperty("height");
-    const height = element.getBoundingClientRect().height;
-    maxHeight = Math.max(maxHeight, height);
-  });
+  // Find the maximum height for each group
+  for (const selector in groups) {
+    const elements = document.querySelectorAll(selector);
+    let maxHeight = 0;
 
-  // Set the maximum height to all elements
-  elements.forEach(element => {
-    element.style.height = `${maxHeight}px`;
-  });
+    elements.forEach(element => {
+      element.style.removeProperty("height");
+      const height = element.getBoundingClientRect().height;
+      maxHeight = Math.max(maxHeight, height);
+    });
+
+    groups[selector] = maxHeight;
+  }
+
+  // Set the maximum height for each group of elements
+  for (const selector in groups) {
+    const elements = document.querySelectorAll(selector);
+    const maxHeight = groups[selector];
+
+    elements.forEach(element => {
+      element.style.height = `${maxHeight}px`;
+    });
+  }
 }
 
 // Call the alignment function when the page loads
@@ -118,25 +133,18 @@ function updatePagination() {
     pagination.appendChild(dot);
   }
 }
-
-window.onload = function () {
-  changePicture();
-};
-
-// Handle window resize to update images when screen width changes
-window.addEventListener('resize', function () {
-  updateImages();
-  clearTimeout(slideTimeout); // Clear existing timeout
-  
-  // Refresh pagination dots and continue the current slide
-  updatePagination();
-  changePicture();
-});
+window.addEventListener("load", changePicture);
+window.addEventListener("resize", updateImages);
 
 // Update the images when the window is resized
 function updateImages() {
   var currentImages = window.innerWidth >= 768 ? pcImages : spImages; // Use PC images for larger screens, SP images for smaller screens
-  images = currentImages;
+
+  // Update the background image of the slider container
+  var sliderElement = document.querySelector('.mv-slider');
+  sliderElement.style.backgroundImage = "url(" + currentImages[i] + ")";
+
+  // Update the pagination dots
   updatePagination();
 }
 

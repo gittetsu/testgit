@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /* news-article */
-.news-article .sec-article{
+.news-article .sec-article {
   margin-bottom: 100px;
 }
 
@@ -15,12 +15,12 @@
 }
 
 .news-article .news-date span {
-  color: #7FBE26;
+  color: #7fbe26;
 }
 
 .news-article .ref-link a {
   padding-right: 22px;
-  color: #7FBE26;
+  color: #7fbe26;
 }
 
 .news-article .ref-link a::after {
@@ -36,7 +36,7 @@
 
 .news-article .contact-us {
   padding: 18px;
-  background-color: #5D5555;
+  background-color: #5d5555;
 }
 
 .news-article .contact-us p {

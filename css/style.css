@@ -34,7 +34,7 @@
   width: 8px;
   height: 8px;
   margin: 0 5px;
-  background-color: #EAEAEA;
+  background-color: #eaeaea;
   cursor: pointer;
   transition: background-color 0.6s ease;
   border-radius: 50%;
@@ -136,7 +136,6 @@
 }
 
 .top .sec-news .tab-list .tab-left .common-button {
-  justify-content: space-between;
   width: 100%;
   line-height: 1.6;
   padding: 23px 40px 22px 27px;
@@ -226,14 +225,6 @@
 .active[data-tab-content] {
   display: block;
 }
-
-/* .tab-cnt {
-  display: none;
-}
-
-.tab-cnt.active {
-  display: block;
-} */
 
 /* sec-topics */
 .top .sec-topics {
@@ -539,14 +530,6 @@
   max-width: 240px;
 }
 
-.custom-circle-item .gp-circle-cnt {
-  padding: 32.5px 0px 51.5px 0;
-}
-
-.corporate-circle-item .gp-circle-cnt {
-  padding: 32.5px 0px 76.7px 0;
-}
-
 .gp-circle-item:nth-child(3n),
 .gp-circle-item:last-child {
   margin-right: 0;
@@ -561,11 +544,7 @@
 }
 
 .gp-circle-cnt {
-  padding: 32.5px 0px 71.5px 0;
-}
-
-.solar-circle-item .gp-circle-cnt {
-  padding: 32.5px 0px 47.5px 0;
+  padding: 32.5px 0px 78px 0;
 }
 
 .point-number-item .count-txtblk {
@@ -577,8 +556,8 @@
 }
 
 .top .icon-common {
-  max-width: 61px;
   margin: 21px auto 9px;
+  max-width: 61px;
 }
 
 .point-number {
@@ -1032,32 +1011,8 @@
     padding: 32.5px 0px 61px 0;
   }
 
-  .solar-circle-item .gp-circle-cnt {
-    padding: 32.5px 0px 36.5px 0;
-  }
-
-  .custom-circle-item .gp-circle-cnt {
-    padding: 32.5px 0px 37.5px 0;
-  }
-
-  .custom-circle-item .store-circle-cnt {
-    padding: 32.5px 0px 40.5px 0;
-  }
-
-  .visitor-circle-item .gp-circle-cnt {
-    padding: 32.5px 0px 66px 0;
-  }
-
-  .corporate-circle-item .gp-circle-cnt {
-    padding: 32.5px 0px 66px 0;
-  }
-
   .gp-circle-item {
     width: 31.5%;
-  }
-
-  .point-number-item .gp-circle-cnt {
-    padding: 32.5px 0px 65px 0;
   }
 
   /*sustainablility section*/
@@ -1643,20 +1598,12 @@
   }
 
   .top .icon-common {
-    max-width: 44px;
     margin: 14px auto 18px;
+    max-width: 47px;
   }
 
   .gp-circle-cnt {
-    padding: 22.5px 0px 21.15px 0;
-  }
-
-  .visitor-circle-item .gp-circle-cnt {
-    padding: 22.5px 0px 26.15px 0;
-  }
-
-  .solar-circle-item .gp-circle-cnt {
-    padding: 13.5px 0px 3px 0;
+    padding: 20px 0 38.5px;
   }
 
   .solar-circle-item .count-txtblk {
@@ -1671,14 +1618,6 @@
     margin-top: 8px;
   }
 
-  .corporate-circle-item .gp-circle-cnt {
-    padding: 22.5px 0px 20.7px 0;
-  }
-
-  .sales-circle-item .gp-circle-cnt {
-    padding: 22.5px 0px 16.15px 0;
-  }
-
   .cmm-gp-cirle {
     margin: 0 auto;
     max-width: 160px;
@@ -1686,10 +1625,6 @@
 
   .point-number-item .count-txtblk {
     margin-top: -24px;
-  }
-
-  .gpoint-number-item .gp-circle-cnt {
-    padding: 23.5px 0 19.9px 0;
   }
 
   .num-desc-ttl {
@@ -1702,7 +1637,12 @@
   }
 
   .gp-circle-caption {
-    margin-top: 0px;
+    position: absolute;
+    right: 0;
+    bottom: -4px;
+    left: 0;
+    margin: 0 auto;
+    font-size: 0.875rem;
     font-size: 0.875rem;
   }
 
@@ -1716,31 +1656,12 @@
     font-size: 0.75rem;
   }
 
-  .gp-circle-item:nth-child(3) {
-    margin-right: 4%;
-  }
-
-  .pharmacy-store-item .gp-circle-caption,
-  .custom-circle-item .gp-circle-caption {
-    position: absolute;
-    bottom: -7px;
-    left: 26px;
-  }
-
-  .pharmacy-store-item .gp-circle-cnt {
-    padding: 23.5px 0px 37.6px 0;
-  }
-
   .pharmacy-store-item .count-txtblk {
     margin-top: -2px;
   }
 
   .custom-circle-item .count-txtblk {
     margin-top: -2px;
-  }
-
-  .custom-circle-item .gp-circle-cnt {
-    padding: 22.5px 0px 41.2px 0;
   }
 
   /* sustainablility section */
@@ -2064,99 +1985,18 @@
     letter-spacing: 1.5px;
   }
 
-  /* .cmm-gp-cirle {
-    margin: 0 auto;
-    max-width: 136px;
-  } */
-
   .count-txtblk {
     font-size: 2.3rem;
     letter-spacing: 0;
   }
 
-  .point-number-item .gp-circle-cnt {
-    padding: 13.5px 0px 17.5px 0;
-  }
-
-  .cmm-gp-cirle {
-    max-width: 133px;
-    max-height: 133px;
-  }
-
-  .point-number {
-    max-width: 58px;
+  .gp-circle-cnt {
+    padding: 15px 0 20.5px;
   }
 
   .gp-circle-caption {
-    margin-top: -5px;
     font-size: 0.875rem;
     letter-spacing: 0;
-  }
-
-  .point-number-item .count-txtblk {
-    margin-top: -23px;
-  }
-
-  .gp-circle-cnt {
-    padding: 13.5px 0px 18.3px 0;
-  }
-
-  .custom-circle-item .gp-circle-cnt {
-    padding: 13.5px 0px 34.2px 0;
-  }
-
-  .visitor-number,
-  .store-number {
-    margin: 10px auto 9px;
-  }
-
-  .gp-circle-item:nth-child(3) .gp-circle-caption {
-    bottom: -7px;
-    left: 18px;
-  }
-
-  .gp-circle-item:nth-child(2) .gp-circle-caption {
-    margin-top: 9px;
-  }
-
-  .gp-circle-item:nth-child(3) {
-    margin-right: 0;
-  }
-
-  .point-number-item .gp-circle-cnt {
-    padding: 13.5px 0px 21.2px 0;
-  }
-
-  .visitor-circle-item .gp-circle-cnt {
-    padding: 13.5px 0px 17.95px 0;
-  }
-
-  .pharmacy-store-item .gp-circle-cnt {
-    padding: 13.5px 0px 38.6px 0;
-  }
-
-  .sales-circle-item .gp-circle-cnt {
-    padding: 13.5px 0px 15.15px 0;
-  }
-
-  .corporate-circle-item .gp-circle-cnt {
-    padding: 13.5px 0px 21.7px 0;
-  }
-
-  .corporate-circle-item .gp-circle-cnt .point-number {
-    margin-bottom: 0;
-  }
-
-  .corporate-circle-item .gp-circle-cnt .gp-circle-caption {
-    margin-top: 0;
-  }
-
-  .gp-circle-item:nth-child(5) .count-txtblk {
-    margin-top: 3px;
-  }
-
-  .solar-circle-item .count-txtblk {
-    margin-top: 5px;
   }
 
   /* sustainablility section */
