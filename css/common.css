@@ -590,6 +590,7 @@ h6.common-sub-ttl {
 
 .sugi-holding-header .dropdown .sub-menu .list-gp .business-gp a.other-link {
   padding-bottom: 0;
+  display: inline-block;
 }
 
 .sugi-holding-header .dropdown .sub-menu .list-gp li:last-child {
@@ -646,6 +647,7 @@ h6.common-sub-ttl {
 .sugi-holding-header .sub-menu-list .other-link span {
   position: relative;
   padding-right: 25px;
+  display: inline-block;
 }
 
 .sugi-holding-header .sub-menu-list .other-link span:after {
@@ -660,7 +662,7 @@ h6.common-sub-ttl {
 
 .sugi-holding-header .sub-menu-list .business-gp .other-link span:after,
 .sugi-holding-header .sub-menu-list .site-gp .other-link span:after {
-  top: 5px;
+  top: 7px;
 }
 
 .sugi-holding-header .dropdown .sub-menu .sub-menu-list {
@@ -790,7 +792,7 @@ h6.common-sub-ttl {
 }
 
 .sugi-holding-header .dropdown .sub-menu .list-gp ul {
-  margin-right: 29px;
+  margin-right: 26px;
 }
 
 .sugi-holding-header .dropdown .sub-menu .list-gp ul:last-child {
@@ -3427,8 +3429,12 @@ footer .page-top:hover img {
 
   .sugi-holding-header .sub-menu-list .other-link span:after {
     filter: invert(100%) sepia(300%) saturate(0) hue-rotate(0) brightness(100%) contrast(180%);
-  }
+    width: 11px;
+    top: 5px;
+    height: 11px;
+    right: 10px;
 
+  }
   .sugi-holding-header .sub-menu-list .other-link {
     padding: 0 0 21px 24px;
     color: #fff;

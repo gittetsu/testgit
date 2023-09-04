@@ -140,15 +140,8 @@ window.addEventListener('load', function () {
         toggleButton.addEventListener('click', function () {
             slideContent.classList.toggle('open')
             jsSidebar.classList.toggle('sb-open')
-            if (jsSidebar.classList.contains('sb-open')) {
-                bodyElement.style.overflow = 'hidden'
-                bodyElement.style.position = 'fixed'
-            } else {
-                bodyElement.style.overflow = 'auto'
-                bodyElement.style.position = 'relative'
-            }
+            sideBar();
         })
-
         if (closeBtn) {
             closeBtn.addEventListener('click', function () {
                 slideContent.classList.remove('open')
@@ -159,7 +152,18 @@ window.addEventListener('load', function () {
             })
         }
     }
-
+    /*sideBar Resize Function*/
+    function sideBar(){
+        if (jsSidebar.classList.contains('sb-open')) {
+            bodyElement.style.overflow = 'hidden'
+            bodyElement.style.position = 'fixed'
+        }
+        else{
+            bodyElement.style.overflow = 'auto'
+            bodyElement.style.position = 'relative'
+        }
+    }
+    window.addEventListener("resize",sideBar);
     // for sidebar details link
     var toggleButtonID = document.querySelector('#js-toggle-btn')
     sidebarDeatils.forEach((element) => {
@@ -177,6 +181,7 @@ window.addEventListener('load', function () {
             }
         })
     })
+    
 
     /*button-add-active class*/
     var tabList1 = document.querySelectorAll('.tab-list-01 li a')
@@ -333,7 +338,7 @@ window.addEventListener('load', function () {
         }
     })
 
-    var subMenuLists = document.querySelectorAll('.sub-menu-list li a,.nav-footer-list li a,.sugi-holding-footer .ft-nav li a');
+    var subMenuLists = document.querySelectorAll('.sub-menu-list li a,.sugi-holding-header .nav-footer-list li a,.sugi-holding-footer .ft-nav li a');
     subMenuLists.forEach(function (subMenuList) {
         subMenuList.addEventListener('click', function () {
             hamburger.classList.remove('active')
@@ -492,10 +497,10 @@ window.addEventListener('load', function () {
     function handle(event) {
         if (event.matches) {
             if (element) {
-                var contentHeight = calculateMaxHeight(jsSidebar)
+                var contentHeight = calculateMaxHeight(toggleButtonID)
                 header.style.marginBottom = contentHeight + 'px';
             } else {
-                header.style.marginBottom = '0px'
+                 header.style.marginBottom = '0px'
             }
         } else {
             header.style.marginBottom = '0px'
@@ -574,7 +579,7 @@ window.addEventListener('load', function () {
             if (toggleBtn) {
                 if (toggleBtn.classList.contains('active')) {
                     bodyElement.style.overflow = 'hidden',
-                        bodyElement.style.position = 'fixed';
+                    bodyElement.style.position = 'fixed';
                 }
             }
 

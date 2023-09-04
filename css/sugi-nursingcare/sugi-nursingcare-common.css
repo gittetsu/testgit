@@ -615,7 +615,7 @@ ul.service-list li.service-list-item .service-txtblk {
 }
 
 .ft-consultation-bnr .consultation-text {
-  width: 36.4%;
+  width: 38%;
 }
 
 .ft-consultation-bnr .consultation-main-txt {
@@ -753,6 +753,7 @@ footer.ft-nursing-care .ft-blk .sugi-holding-link::after {
 footer.ft-nursing-care .copyright-blk {
   padding: 48px 0;
   background-color: #fff;
+  font-family: 'Noto Sans JP' , sans-serif;
 }
 
 footer.ft-nursing-care .page-top:hover {
