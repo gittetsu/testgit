@@ -36,7 +36,7 @@
   margin: 0 5px;
   background-color: #eaeaea;
   cursor: pointer;
-  transition: background-color 0.6s ease;
+  transition: background-color 0.3s ease-in-out;
   border-radius: 50%;
 }
 
@@ -153,11 +153,6 @@
 .top .sec-vision ul .common-button span {
   top: 23px;
   right: 20px;
-}
-
-.top .sec-news .common-button:hover .arrow::after,
-.top .sec-news .common-button.active .arrow:after {
-  top: 19%;
 }
 
 .top .sec-news .tab-list .tab-left .common-button:hover,
