@@ -617,7 +617,7 @@ window.addEventListener('load', function () {
             if (menuSplit[1] === currentSplit[1]) {
                 item.classList.add('visible')
             }
-        } else if (menuSplit[0] === currentSplit[0] && currentSplit[0] !== undefined) {
+        } else if (currentUrl.includes("/news/") && menuItemUrl.endsWith("/news/")) {
             item.classList.add('visible')
         }
     })
