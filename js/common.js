@@ -8,108 +8,108 @@ window.addEventListener('load', function () {
             item.querySelector('.accordion-ttl') != null
                 ? item.querySelector('.accordion-ttl')
                 : item.querySelector('.sidebar-ttl')
-            const mediaQuery = window.matchMedia('(max-width: 1024px)')
-            var content = item.querySelector('.accordion-content')
-            if (content) {
-                header.addEventListener('click', () => {
-                    if (!item.classList.contains('open')) {
-                        // Close all other active items
-                        accordionItem.forEach((otherItem) => {
-                            if (otherItem !== item && otherItem.classList.contains('open')) {
-                                const otherContent = otherItem.querySelector('.accordion-content')
-                                if (
-                                    otherContent &&
-                                    ((otherContent.classList.contains('sidebar-detail') &&
-                                        content.classList.contains('sidebar-detail')) ||
-                                        (!otherContent.classList.contains('sidebar-detail') &&
-                                            !content.classList.contains('sidebar-detail')))
-                                ) {
-                                    otherItem.classList.remove('open')
-                                    otherContent.style.height = '0'
-                                    otherContent.style.opacity = '0'
-                                    otherContent.style.padding = '0'
-                                }
-                            }
-                        })
-
-                        // Open the clicked item
-                        item.classList.add('open')
-                        if (mediaQuery.matches) {
-                            content.style.padding = '20px 0 20px 0'
-                            if (content.classList.contains('bg-gray')) {
-                                content.style.padding = '20px'
-                            } else if (content.classList.contains('sidebar-detail') && content.classList.contains('side-gp')) {
-                                content.style.padding = '0px';
-                                content.style.margin = '0';
-
-                            } else if (content.classList.contains('sidebar-detail')) {
-                                content.style.padding = '0 0 20px 20px'
-                                content.style.margin = '0'
-                            }
-                        } else {
-                            if (content.classList.contains('bg-gray')) {
-                                content.style.padding = '30px 29px 30px'
-                            }
-                            else if (content.classList.contains('sidebar-detail') && content.classList.contains('side-gp')) {
-                                content.style.padding = '0px';
-                                content.style.margin = '0';
-                            } else if (content.classList.contains('sidebar-detail')) {
-                                content.style.padding = '0px 25px 30px'
-                                content.style.margin = '0'
-                            }
-                            else {
-                                content.style.padding = '30px 0 30px'
+        const mediaQuery = window.matchMedia('(max-width: 1024px)')
+        var content = item.querySelector('.accordion-content')
+        if (content) {
+            header.addEventListener('click', () => {
+                if (!item.classList.contains('open')) {
+                    // Close all other active items
+                    accordionItem.forEach((otherItem) => {
+                        if (otherItem !== item && otherItem.classList.contains('open')) {
+                            const otherContent = otherItem.querySelector('.accordion-content')
+                            if (
+                                otherContent &&
+                                ((otherContent.classList.contains('sidebar-detail') &&
+                                    content.classList.contains('sidebar-detail')) ||
+                                    (!otherContent.classList.contains('sidebar-detail') &&
+                                        !content.classList.contains('sidebar-detail')))
+                            ) {
+                                otherItem.classList.remove('open')
+                                otherContent.style.height = '0'
+                                otherContent.style.opacity = '0'
+                                otherContent.style.padding = '0'
                             }
                         }
-                        content.style.height = content.scrollHeight + 'px'
-                        content.style.opacity = '1'
+                    })
+
+                    // Open the clicked item
+                    item.classList.add('open')
+                    if (mediaQuery.matches) {
+                        content.style.padding = '20px 0 20px 0'
+                        if (content.classList.contains('bg-gray')) {
+                            content.style.padding = '20px'
+                        } else if (content.classList.contains('sidebar-detail') && content.classList.contains('side-gp')) {
+                            content.style.padding = '0px';
+                            content.style.margin = '0';
+
+                        } else if (content.classList.contains('sidebar-detail')) {
+                            content.style.padding = '0 0 20px 20px'
+                            content.style.margin = '0'
+                        }
                     } else {
-                        item.classList.remove('open')
-                        content.style.padding = '0'
-                        content.style.height = '0'
-                        content.style.opacity = '0'
-                    }
-                })
-                if (!mediaQuery.matches) {
-                    if (content) {
-                        if (item.classList.contains('open')) {
-                            if (content.classList.contains('sidebar-detail') && content.classList.contains('side-gp')) {
-                                content.style.height = 'auto'
-                                content.style.opacity = '1'
-                                content.style.padding = '0px'
-                                content.style.margin = '0'
-
-                            }
-                            else if (content.classList.contains('sidebar-detail')) {
-                                content.style.height = 'auto'
-                                content.style.opacity = '1'
-                                content.style.padding = '0px 25px 30px'
-                                content.style.margin = '0'
-                            }
-                            else if (content.classList.contains('bg-gray')) {
-                                content.style.padding = '30px 29px 30px'
-                            }
+                        if (content.classList.contains('bg-gray')) {
+                            content.style.padding = '30px 29px 30px'
+                        }
+                        else if (content.classList.contains('sidebar-detail') && content.classList.contains('side-gp')) {
+                            content.style.padding = '0px';
+                            content.style.margin = '0';
+                        } else if (content.classList.contains('sidebar-detail')) {
+                            content.style.padding = '0px 25px 30px'
+                            content.style.margin = '0'
+                        }
+                        else {
+                            content.style.padding = '30px 0 30px'
                         }
                     }
+                    content.style.height = content.scrollHeight + 'px'
+                    content.style.opacity = '1'
                 } else {
-                    if (content) {
+                    item.classList.remove('open')
+                    content.style.padding = '0'
+                    content.style.height = '0'
+                    content.style.opacity = '0'
+                }
+            })
+            if (!mediaQuery.matches) {
+                if (content) {
+                    if (item.classList.contains('open')) {
                         if (content.classList.contains('sidebar-detail') && content.classList.contains('side-gp')) {
                             content.style.height = 'auto'
                             content.style.opacity = '1'
                             content.style.padding = '0px'
                             content.style.margin = '0'
+
                         }
-                        else if (item.classList.contains('open')) {
-                            if (content.classList.contains('sidebar-detail')) {
-                                content.style.padding = '0 0 20px 20px'
-                                content.style.margin = '0'
-                                content.style.opacity = '1'
-                                content.style.height = 'auto'
-                            }
+                        else if (content.classList.contains('sidebar-detail')) {
+                            content.style.height = 'auto'
+                            content.style.opacity = '1'
+                            content.style.padding = '0px 25px 30px'
+                            content.style.margin = '0'
+                        }
+                        else if (content.classList.contains('bg-gray')) {
+                            content.style.padding = '30px 29px 30px'
+                        }
+                    }
+                }
+            } else {
+                if (content) {
+                    if (content.classList.contains('sidebar-detail') && content.classList.contains('side-gp')) {
+                        content.style.height = 'auto'
+                        content.style.opacity = '1'
+                        content.style.padding = '0px'
+                        content.style.margin = '0'
+                    }
+                    else if (item.classList.contains('open')) {
+                        if (content.classList.contains('sidebar-detail')) {
+                            content.style.padding = '0 0 20px 20px'
+                            content.style.margin = '0'
+                            content.style.opacity = '1'
+                            content.style.height = 'auto'
                         }
                     }
                 }
             }
+        }
     })
 
     // dynamically accordion content high when window is resize
@@ -153,17 +153,20 @@ window.addEventListener('load', function () {
         }
     }
     /*sideBar Resize Function*/
-    function sideBar(){
-        if (jsSidebar.classList.contains('sb-open')) {
-            bodyElement.style.overflow = 'hidden'
-            bodyElement.style.position = 'fixed'
+    function sideBar() {
+        if (jsSidebar) {
+            if (jsSidebar.classList.contains('sb-open')) {
+                bodyElement.style.overflow = 'hidden'
+                bodyElement.style.position = 'fixed'
+            }
+            else {
+                bodyElement.style.overflow = 'auto'
+                bodyElement.style.position = 'relative'
+            }
         }
-        else{
-            bodyElement.style.overflow = 'auto'
-            bodyElement.style.position = 'relative'
-        }
+
     }
-    window.addEventListener("resize",sideBar);
+    window.addEventListener("resize", sideBar);
     // for sidebar details link
     var toggleButtonID = document.querySelector('#js-toggle-btn')
     sidebarDeatils.forEach((element) => {
@@ -181,7 +184,7 @@ window.addEventListener('load', function () {
             }
         })
     })
-    
+
 
     /*button-add-active class*/
     var tabList1 = document.querySelectorAll('.tab-list-01 li a')
@@ -500,7 +503,7 @@ window.addEventListener('load', function () {
                 var contentHeight = calculateMaxHeight(toggleButtonID)
                 header.style.marginBottom = contentHeight + 'px';
             } else {
-                 header.style.marginBottom = '0px'
+                header.style.marginBottom = '0px'
             }
         } else {
             header.style.marginBottom = '0px'
@@ -579,7 +582,7 @@ window.addEventListener('load', function () {
             if (toggleBtn) {
                 if (toggleBtn.classList.contains('active')) {
                     bodyElement.style.overflow = 'hidden',
-                    bodyElement.style.position = 'fixed';
+                        bodyElement.style.position = 'fixed';
                 }
             }
 
