@@ -1815,13 +1815,13 @@ table tr th:first-child {
 
 .common-button:hover .arrow::after,.common-button.active .arrow:after {
   position: absolute;
-  top: 16%;
+  top: 50%;
   right: 50%;
   width: 8px;
   height: 8px;
   background: url('../img/common/ico_arrow.svg') no-repeat center/cover;
   content: '';
-  transform: translate(50%, 50%) rotate(90deg);
+  transform: translate(50%, -50%) rotate(90deg);
   border-radius: unset;
 }
 
