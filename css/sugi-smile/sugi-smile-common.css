@@ -478,7 +478,7 @@ footer.sugi-smile-footer .ft-nav ul li a:hover {
 
   footer.sugi-smile-footer .page-top img,
   footer.sugi-smile-footer .page-top:hover img {
-    filter: unset;
+    filter: invert(0%) sepia(98%) saturate(0%) hue-rotate(49deg) brightness(0%) contrast(101%);
   }
 }
 
