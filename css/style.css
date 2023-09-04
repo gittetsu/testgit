@@ -630,7 +630,6 @@
 .mission02-link .common-button .arrow,
 .mission03-link .common-button .arrow {
   top: 18px;
-  right: 20px;
 }
 
 
@@ -722,12 +721,7 @@
 
 .sustain-link-list .common-button .arrow {
   top: 50%;
-  right: 20px;
   transform: translateY(-50%);
-}
-
-.cmm-sustain-link {
-  height: 100%;
 }
 
 /* sec-image-category */
@@ -735,7 +729,6 @@
 .cmm-list-item {
   position: relative;
   width: 33.33%;
-  height: 500px;
 }
 
 .cmm-list-item:before {
@@ -749,7 +742,7 @@
 
 .category-list-blk {
   display: block;
-  padding: 203px 0 170px 0px;
+  padding: 207px 0 170px 0px;
   text-align: center;
 }
 
@@ -1751,19 +1744,6 @@
     border: unset;
   }
 
-  .btn-link-gp .common-button .arrow,
-  .sustain-linkblk .arrow,
-  .cmm-list-item .common-button .arrow,
-  .site-link .site-link-btn01 .arrow,
-  .mission02-link .common-button .arrow,
-  .mission03-link .common-button .arrow,
-  .site-link .site-link-btn01 .arrow,
-  .site-link .site-link-btn02 .arrow,
-  .mission02-link .common-button .arrow,
-  .mission03-link .common-button .arrow {
-    top: 20px;
-  }
-
   .number-link {
     width: 100%;
     margin: 0 auto;
@@ -1774,7 +1754,7 @@
   .number-link.active .arrow::after,
   .store-link .arrow::after,
   .store-link.active .arrow::after {
-    top: 5%;
+    /* top: 5%; */
     right: 9px;
   }
 
@@ -1821,12 +1801,13 @@
     margin-bottom: 10px;
   }
 
-  .cmm-sustain-link {
-    width: 100%;
-  }
-
   .sustain-link-list .common-button {
     padding: 18px 17px 17px 17px;
+  }
+
+  .sustain-link-list .common-button .arrow {
+    top: 20px;
+    transform: translateY(0);
   }
 
   /* sec-image-category */
@@ -1837,12 +1818,11 @@
 
   .cmm-list-item {
     width: 100%;
-    height: 160px;
   }
 
   .category-list-blk {
     position: relative;
-    padding: 70px 19px 60px;
+    padding: 19% 20px 15.5%;
   }
 
   .category-list-item01 {
@@ -2051,19 +2031,6 @@
   .common-top-ttl h3 {
     font-size: 2.425rem;
     letter-spacing: 2.2px;
-  }
-
-  /* image list block */
-  .category-list-item01 {
-    background: url(../img/img_investors_sp.jpg) no-repeat center/100% 100%;
-  }
-
-  .category-list-item02 {
-    background: url(../img/img_property_sp.jpg) no-repeat center/100% 100%;
-  }
-
-  .category-list-item03 {
-    background: url(../img/img_recruit_sp.jpg) no-repeat center/100% 100%;
   }
 
 }
