@@ -2623,7 +2623,7 @@ footer .page-top:hover img {
 
   .sugi-holding-header form.search button {
     position: absolute;
-    top: 20.5px;
+    top: 50%;
     right: -15px;
     left: unset;
     width: 70px;
@@ -2637,6 +2637,7 @@ footer .page-top:hover img {
     cursor: pointer;
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
+    transform: translate(-50% , -50%);
   }
 
   .sugi-holding-header form.search button span {
