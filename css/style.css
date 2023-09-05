@@ -742,7 +742,7 @@
 
 .category-list-blk {
   display: block;
-  padding: 207px 0 170px 0px;
+  padding: 44.4% 0 38.4%;
   text-align: center;
 }
 
@@ -1091,10 +1091,6 @@
 
   .cmm-list-item {
     height: unset;
-  }
-
-  .category-list-blk {
-    padding: 75px 20px 50px 20px;
   }
 
   .category-list-ttl {
