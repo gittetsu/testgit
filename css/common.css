@@ -3133,7 +3133,7 @@ footer .page-top:hover img {
   }
 
   .external-link::after {
-    top: 6px;
+    top: 7px;
     max-width: 11px;
     height: 11px;
   }
