@@ -590,6 +590,7 @@ h6.common-sub-ttl {
 
 .sugi-holding-header .dropdown .sub-menu .list-gp .business-gp a.other-link {
   padding-bottom: 0;
+  display: inline-block;
 }
 
 .sugi-holding-header .dropdown .sub-menu .list-gp li:last-child {
@@ -646,6 +647,7 @@ h6.common-sub-ttl {
 .sugi-holding-header .sub-menu-list .other-link span {
   position: relative;
   padding-right: 25px;
+  display: inline-block;
 }
 
 .sugi-holding-header .sub-menu-list .other-link span:after {
@@ -660,7 +662,7 @@ h6.common-sub-ttl {
 
 .sugi-holding-header .sub-menu-list .business-gp .other-link span:after,
 .sugi-holding-header .sub-menu-list .site-gp .other-link span:after {
-  top: 5px;
+  top: 7px;
 }
 
 .sugi-holding-header .dropdown .sub-menu .sub-menu-list {
@@ -790,7 +792,7 @@ h6.common-sub-ttl {
 }
 
 .sugi-holding-header .dropdown .sub-menu .list-gp ul {
-  margin-right: 29px;
+  margin-right: 26px;
 }
 
 .sugi-holding-header .dropdown .sub-menu .list-gp ul:last-child {
@@ -1133,6 +1135,7 @@ h6.common-sub-ttl {
   height: 0;
   overflow: hidden;
   margin: 0px 29px;
+  border-top: 1px dashed transparent;
   font-size: 1rem;
   font-weight: 400;
   transition: height 0.3s ease-out;
@@ -1813,13 +1816,13 @@ table tr th:first-child {
 
 .common-button:hover .arrow::after,.common-button.active .arrow:after {
   position: absolute;
-  top: 16%;
+  top: 50%;
   right: 50%;
   width: 8px;
   height: 8px;
   background: url('../img/common/ico_arrow.svg') no-repeat center/cover;
   content: '';
-  transform: translate(50%, 50%) rotate(90deg);
+  transform: translate(50%, -50%) rotate(90deg);
   border-radius: unset;
 }
 
@@ -2620,7 +2623,7 @@ footer .page-top:hover img {
 
   .sugi-holding-header form.search button {
     position: absolute;
-    top: 20.5px;
+    top: 50%;
     right: -15px;
     left: unset;
     width: 70px;
@@ -2634,6 +2637,7 @@ footer .page-top:hover img {
     cursor: pointer;
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
+    transform: translate(-50% , -50%);
   }
 
   .sugi-holding-header form.search button span {
@@ -3427,8 +3431,12 @@ footer .page-top:hover img {
 
   .sugi-holding-header .sub-menu-list .other-link span:after {
     filter: invert(100%) sepia(300%) saturate(0) hue-rotate(0) brightness(100%) contrast(180%);
-  }
+    width: 11px;
+    top: 5px;
+    height: 11px;
+    right: 10px;
 
+  }
   .sugi-holding-header .sub-menu-list .other-link {
     padding: 0 0 21px 24px;
     color: #fff;
@@ -4245,7 +4253,7 @@ footer .page-top:hover img {
   }
 
   .common-button:hover .arrow::after,.common-button.active .arrow::after {
-    top: 5%;
+    top: 50%;
     filter: invert(100%) sepia(300%) saturate(0) hue-rotate(0) brightness(100%) contrast(180%);
   }
 

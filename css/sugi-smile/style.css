@@ -412,6 +412,23 @@
   font-weight: 700;
 }
 
+/*I-pad*/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .smile-cmn-btn:hover {
+    border: 2px solid transparent;
+    background-color: #009944;
+    color: #fff;
+  }
+
+  .smile-cmn-btn:hover .arrow {
+    background-color: #fff;
+  }
+
+  .smile-cmn-btn:hover .arrow::after {
+    filter: unset;
+  }
+}
+
 @media only screen and (max-width: 767.9px) {
   .smile-top-wrapper {
     background-image: url('../../img/sugi-smile/img_mv_top_bg_sp.png');
@@ -509,7 +526,7 @@
 
   /* sec-company */
   .sec-company {
-    padding: 40px 0 50px;
+    padding: 40px 0 30px;
   }
 
   .sec-company .d-flex {
@@ -544,8 +561,8 @@
 
   /* sec-location */
   .sec-location {
-    padding: 60px 0;
-    background-size: cover;
+    padding: 40px 0;
+    background-size: contain;
   }
 
   .sec-location p {
@@ -555,8 +572,7 @@
   /* sec-our-business */
   .sec-our-business {
     margin-top: -1px;
-    padding: 60px 0;
-    background-size: cover;
+    padding: 33px 0 77px;
   }
 
   .sec-our-business .support-cleaning-blk {

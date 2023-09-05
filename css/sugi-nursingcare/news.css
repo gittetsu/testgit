@@ -6,7 +6,7 @@
 }
 
 .news .newslist-gp .newslist-header .news-date {
-  color: #7E7E7E;
+  color: #7e7e7e;
   font-weight: 400;
 }
 
@@ -17,7 +17,7 @@
 
 .search-panel {
   padding: 40px;
-  background-color: #EDEADF;
+  background-color: #edeadf;
 }
 
 .search-panel form.search {
@@ -56,7 +56,7 @@
   width: 100%;
   padding: 13.4px 0;
   border: 1px solid transparent;
-  background-color: #E6172B;
+  background-color: #e6172b;
   color: #fff;
   font-family: 'Zen Maru Gothic', sans-serif;
   font-size: 1rem;
@@ -66,9 +66,9 @@
 }
 
 .search-panel form.search .filter-btn button:hover {
-  border: 1px solid #E6172B;
+  border: 1px solid #e6172b;
   background-color: #fff;
-  color: #E6172B;
+  color: #e6172b;
   transition: all .2s;
   border-radius: 3px;
 }
@@ -224,7 +224,7 @@
 }
 
 .search-panel .tab-gp .tab-btn a.active {
-  background-color: #E6172B;
+  background-color: #e6172b;
   color: #fff;
 }
 
@@ -245,8 +245,8 @@
   align-items: center;
   height: 20px;
   padding: 0px 10px;
-  background-color: #FBEBD3;
-  color: #E6172C;
+  background-color: #fbebd3;
+  color: #e6172c;
   border-radius: 10px;
 }
 
@@ -271,18 +271,18 @@
 }
 
 .news .cmn-pagination .cmn-pager a {
-  border: 1px solid #E6172C;
+  border: 1px solid #e6172c;
 }
 
 .news .cmn-pagination .cmn-pager-num a {
   padding: 1px 0;
-  background-color: #EDEADF;
-  color: #E6172C;
+  background-color: #edeadf;
+  color: #e6172c;
   transition: all 0.2s;
 }
 
 .news .cmn-pagination .cmn-pager-num a.active {
-  background-color: #E6172C;
+  background-color: #e6172c;
   color: #fff;
 }
 
@@ -291,7 +291,7 @@
 .news .cmn-pagination .cmn-pager-first a:hover,
 .news .cmn-pagination .cmn-pager-next a:hover,
 .news .cmn-pagination .cmn-pager-last a:hover {
-  background-color: #E6172C;
+  background-color: #e6172c;
   color: #fff;
   transition: all 0.2s;
 }
@@ -351,12 +351,12 @@
   }
 
   .news-search .accordion-ttl .accordion-text {
-    color: #E6172B;
+    color: #e6172b;
   }
 
   .news-search .accordion-ttl .arrow-blk {
-    border: 1px solid #E6172B;
-    background: #E6172B;
+    border: 1px solid #e6172b;
+    background: #e6172b;
   }
 
   .news-search .accordion-ttl {
@@ -366,7 +366,7 @@
   .news-search .accordion-content {
     margin: 0;
     padding: 0;
-    background-color: #EDEADF;
+    background-color: #edeadf;
     border-top: none;
   }
 

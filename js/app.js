@@ -1,25 +1,25 @@
 //tabs
 function handleTabClick(tabs, tabContents) {
-	tabs.forEach((tab, index) => {
-		tab.addEventListener('click', () => {
-			const target = tabContents[index];
-			tabContents.forEach((tabContent) => {
-				tabContent.classList.remove('active');
-			});
-			tabs.forEach((tab) => {
-				tab.classList.remove('active');
-			});
-			tab.classList.add('active');
-			target.classList.add('active');
-		});
-	});
+  tabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => {
+      const target = tabContents[index];
+      tabContents.forEach((tabContent) => {
+        tabContent.classList.remove('active');
+      });
+      tabs.forEach((tab) => {
+        tab.classList.remove('active');
+      });
+      tab.classList.add('active');
+      target.classList.add('active');
+    });
+  });
 }
 
 function setupTabs(parentClass) {
-	const parent = document.querySelector(parentClass);
-	const tabs = parent.querySelectorAll('.tablinks');
-	const tabContents = parent.querySelectorAll('.tab-cnt');
-	handleTabClick(tabs, tabContents);
+  const parent = document.querySelector(parentClass);
+  const tabs = parent.querySelectorAll('.tablinks');
+  const tabContents = parent.querySelectorAll('.tab-cnt');
+  handleTabClick(tabs, tabContents);
 }
 
 setupTabs('.sec-news .tab-list');
@@ -27,20 +27,35 @@ setupTabs('.sec-number-area .number-gp-blk');
 
 //height line js
 function alignElementsBasedOnHeight() {
-  const elements = document.querySelectorAll('.topics-txt .text-02');
-  let maxHeight = 0;
+  const groups = {
+    '.topics-txt .text-02': 0,
+    '.gp-circle-cnt': 0,
+    '.gp-circle-caption': 0,
+  };
 
-  // Find the maximum height
-  elements.forEach(element => {
-    element.style.removeProperty("height");
-    const height = element.getBoundingClientRect().height;
-    maxHeight = Math.max(maxHeight, height);
-  });
+  // Find the maximum height for each group
+  for (const selector in groups) {
+    const elements = document.querySelectorAll(selector);
+    let maxHeight = 0;
 
-  // Set the maximum height to all elements
-  elements.forEach(element => {
-    element.style.height = `${maxHeight}px`;
-  });
+    elements.forEach(element => {
+      element.style.removeProperty("height");
+      const height = element.getBoundingClientRect().height;
+      maxHeight = Math.max(maxHeight, height);
+    });
+
+    groups[selector] = maxHeight;
+  }
+
+  // Set the maximum height for each group of elements
+  for (const selector in groups) {
+    const elements = document.querySelectorAll(selector);
+    const maxHeight = groups[selector];
+
+    elements.forEach(element => {
+      element.style.height = `${maxHeight}px`;
+    });
+  }
 }
 
 // Call the alignment function when the page loads
@@ -49,7 +64,7 @@ window.addEventListener('load', alignElementsBasedOnHeight);
 
 
 //mv slider for top page
-var i = 1; // Start from the first image
+var i = 0; // Start from the first image
 var slideTime = 3000; // 3 seconds
 var pcImages = [
   '/img/img_mv_bg_01.png',
@@ -67,6 +82,18 @@ var spImages = [
 
 var slideTimeout;
 
+// Preload images
+var preloadedImages = [];
+for (var j = 0; j < pcImages.length; j++) {
+  preloadedImages.push(new Image());
+  preloadedImages[j].src = pcImages[j];
+}
+
+for (var k = 0; k < spImages.length; k++) {
+  preloadedImages.push(new Image());
+  preloadedImages[k + pcImages.length].src = spImages[k];
+}
+
 function changePicture() {
   var sliderElement = document.querySelector('.mv-slider'); // Select the slider container element
 
@@ -75,21 +102,17 @@ function changePicture() {
 
   var currentImages = window.innerWidth >= 768 ? pcImages : spImages; // Use PC images for larger screens, SP images for smaller screens
 
+  i = (i + 1) % currentImages.length; // Loop through images
+
   sliderElement.style.backgroundImage = "url(" + currentImages[i] + ")";
 
   updatePagination(); // Update the pagination dots
 
-  if (i < currentImages.length - 1) {
-    i++;
-  } else {
-    i = 0;
-  }
-
   // Clear the existing timeout
   clearTimeout(slideTimeout);
 
-  // Set a new timeout with longer slideTime for slower transition
-  slideTimeout = setTimeout(changePicture, slideTime * 2);
+  // Set a new timeout for the next slide
+  slideTimeout = setTimeout(changePicture, slideTime);
 }
 
 function updatePagination() {
@@ -109,37 +132,46 @@ function updatePagination() {
       i = parseInt(this.dataset.slideIndex); // Update the current index based on the clicked dot's data attribute
       updatePagination(); // Update the pagination dots again
 
-      // Reset the transition temporarily to prevent smooth transition during manual dot clicks
-      var sliderElement = document.querySelector('.mv-slider');
-      sliderElement.style.transition = 'none';
+      // Clear the existing timeout
+      clearTimeout(slideTimeout);
 
-      changePicture();
+      // Set a new timeout for the next slide
+      slideTimeout = setTimeout(changePicture, slideTime);
     });
     pagination.appendChild(dot);
   }
 }
 
-window.onload = function () {
-  changePicture();
-};
+// Initialize the slider
+window.addEventListener("load", function () {
+  var sliderElement = document.querySelector('.mv-slider');
+  sliderElement.style.backgroundImage = "url(" + pcImages[i] + ")";
 
-// Handle window resize to update images when screen width changes
-window.addEventListener('resize', function () {
-  updateImages();
-  clearTimeout(slideTimeout); // Clear existing timeout
-  
-  // Refresh pagination dots and continue the current slide
-  updatePagination();
-  changePicture();
+  // Start the slideshow
+  slideTimeout = setTimeout(changePicture, slideTime);
 });
 
 // Update the images when the window is resized
+window.addEventListener("resize", updateImages);
+window.addEventListener("load", changePicture);
+
 function updateImages() {
   var currentImages = window.innerWidth >= 768 ? pcImages : spImages; // Use PC images for larger screens, SP images for smaller screens
-  images = currentImages;
+
+  // Preload images for the current screen size
+  preloadedImages = [];
+  for (var j = 0; j < currentImages.length; j++) {
+    preloadedImages.push(new Image());
+    preloadedImages[j].src = currentImages[j];
+  }
+
+  // Update the background image of the slider container
+  var sliderElement = document.querySelector('.mv-slider');
+  sliderElement.style.backgroundImage = "url(" + currentImages[i] + ")";
+
+  // Update the pagination dots
   updatePagination();
 }
-
 
 //image slider for top page
 const slideshowContainer = document.querySelector('.slider-image');

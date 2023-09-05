@@ -74,7 +74,10 @@
 }
 
 .senior-voice .voice-blk:not(:last-of-type) {
-  border-bottom: 2px dotted #009944;
+  background-image: radial-gradient(circle, #009944 1px, #fff 1px);
+  background-size: 8px 2px;
+  background-position: bottom;
+  background-repeat: repeat-x;
 }
 
 .voice-blk .voice-img {
@@ -87,7 +90,7 @@
 }
 
 .voice-detail .detail-fact {
-  margin-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 .voice-detail .detail-fact .fact-ttl {
@@ -126,7 +129,7 @@
 /* Sp */
 @media only screen and (max-width: 767.9px) {
   .sugi-smile-wrapper.sugi-smile-work {
-    background-position: center top 185px;
+    background-position: center top 190px;
   }
 
   .smile-work {
