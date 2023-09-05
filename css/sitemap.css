@@ -48,7 +48,6 @@
   border: 1px solid #048851;
   background-color: #fff;
   transition: all .2s;
-  border-radius: 50%;
 }
 
 .sitemap .sitemap-list h2 a:hover .arrow::after {
@@ -79,6 +78,18 @@
   border-left: 2px solid #63288e;
 }
 
+/*I-pad*/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .sitemap .sitemap-list h2 a:hover .arrow::after {
+    filter: unset;
+  }
+
+  .sitemap .sitemap-list h2 a:hover .arrow {
+    border: 1px solid transparent;
+    background-color: #048851;
+  }
+}
+
 @media only screen and (max-width: 767.9px) {
   .sitemap .sitemap-list li {
     width: 100%;
@@ -91,5 +102,14 @@
 
   .sitemap .sitemap-list li a.link::before {
     top: 10px;
+  }
+
+  .sitemap .sitemap-list h2 a:hover .arrow::after {
+    filter: unset;
+  }
+
+  .sitemap .sitemap-list h2 a:hover .arrow {
+    border: 1px solid transparent;
+    background-color: #048851;
   }
 }
