@@ -154,7 +154,7 @@ window.addEventListener('load', function () {
     }
     /*sideBar Resize Function*/
     function sideBar() {
-        if (jsSidebar) {
+        if (jsSidebar && mediaQuery.matches) {
             if (jsSidebar.classList.contains('sb-open')) {
                 bodyElement.style.overflow = 'hidden'
                 bodyElement.style.position = 'fixed'
@@ -647,11 +647,14 @@ window.addEventListener('load', function () {
 
     /*new-window-open-js*/
     var links = document.querySelector('a.new-window');
-    links.addEventListener('click', function (e) {
-        e.preventDefault();
-        window.open(this.getAttribute('href'), '', [
-            'width=' + screen.availWidth,
-            'height=' + screen.availHeight
-        ]);
-    });
+    if(links){
+        links.addEventListener('click', function (e) {
+            e.preventDefault();
+            window.open(this.getAttribute('href'), '', [
+                'width=' + screen.availWidth,
+                'height=' + screen.availHeight
+            ]);
+        });
+    }
+   
 });
