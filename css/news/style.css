@@ -272,6 +272,11 @@
   .search-panel .tab-gp .tab-btn {
     margin-bottom: 1.5%;
   }
+
+  .search-panel .tab-gp .tab-btn a:hover {
+    background-color: #fff;
+    color: #000;
+  }
 }
 
 @media only screen and (max-width: 767.9px) {
@@ -381,5 +386,10 @@
 
   .search-panel form.search .filter-btn button:hover span::before {
     filter: none;
+  }
+
+  .search-panel .tab-gp .tab-btn a:hover {
+    background-color: #fff;
+    color: #000;
   }
 }
