@@ -131,12 +131,12 @@
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 0.875rem;
   outline: none;
+  cursor: pointer;
   border-radius: 3px;
   -webkit-appearance: none;
   -moz-appearance: none;
   -o-appearance: none;
   appearance: none;
-  cursor: pointer;
 }
 
 .search-panel .d-flex {
@@ -204,7 +204,8 @@
   border-radius: 3px;
 }
 
-.search-panel .tab-gp .tab-btn a.active {
+.search-panel .tab-gp .tab-btn a.active,
+.search-panel .tab-gp .tab-btn a:hover {
   background-color: #048851;
   color: #fff;
 }

@@ -213,7 +213,8 @@
   border-radius: 3px;
 }
 
-.search-panel .tab-gp .tab-btn a.active {
+.search-panel .tab-gp .tab-btn a.active,
+.search-panel .tab-gp .tab-btn a:hover {
   background-color: #048851;
   color: #fff;
 }
