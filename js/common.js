@@ -646,12 +646,12 @@ window.addEventListener('load', function () {
 
 
     /*new-window-open-js*/
-    function openFullScreenWindow(url) {
-        var screenWidth = window.screen.width;
-        var screenHeight = window.screen.height;
-        var newWindow = window.open(url, '_blank', 'width=' + screenWidth + ',height=' + screenHeight);
-        if (!newWindow) {
-            alert('Pop-up blocked. Please allow pop-ups for this site.');
-        }
-    }
+    var links = document.querySelector('a.new-window');
+    links.addEventListener('click', function (e) {
+        e.preventDefault();
+        window.open(this.getAttribute('href'), '', [
+            'width=' + screen.availWidth,
+            'height=' + screen.availHeight
+        ]);
+    });
 });
