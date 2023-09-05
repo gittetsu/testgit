@@ -71,10 +71,12 @@ ul.cmm-address-blk .phno-field {
   font-size: 1.75rem;
   font-weight: 700;
   letter-spacing: 0.4px;
+  pointer-events: none;
 }
 
 ul.cmm-address-blk .office-number {
   font-weight: 500;
+  pointer-events: none;
 }
 
 .address-detail-blk .address-detail-cnt,
@@ -135,6 +137,10 @@ ul.cmm-address-blk .office-number {
   .office-top-cntblk .office-tab-btn {
     width: 90%;
   }
+
+  ul.cmm-address-blk .phno-field,ul.cmm-address-blk .office-number {
+    pointer-events: visible;
+  }
 }
 
 
@@ -189,6 +195,11 @@ ul.cmm-address-blk .office-number {
     font-size: 1rem;
   }
 
+  
+  ul.cmm-address-blk .phno-field,ul.cmm-address-blk .office-number {
+    pointer-events: visible;
+  }
+
   .sec-prefecture-blk .office-address-box ul.cmm-address-blk li:first-child {
     padding: 17px 0 17px 0;
   }
@@ -230,6 +241,7 @@ ul.cmm-address-blk .office-number {
 
   .address-detail-blk .nursing-station-blk .address-field-cnt {
     width: 100%;
+    pointer-events: visible;
   }
 
   .address-detail-blk .map-blk .common-nursing-button {
