@@ -204,7 +204,7 @@ h3.common-nursing-subttl {
   display: inline-block;
   position: relative;
   line-height: 1.5;
-  padding: 20px 52px 20px 32px;
+  padding: 19px 52px 19px 32px;
   background-color: #e6172c;
   color: #fff;
   font-family: 'Zen Maru Gothic', sans-serif;
@@ -212,6 +212,7 @@ h3.common-nursing-subttl {
   font-weight: 400;
   text-align: left;
   border-radius: 32px;
+  border: 2px solid transparent;
 }
 
 .nursing-external-link::after {
@@ -227,6 +228,7 @@ h3.common-nursing-subttl {
 .nursing-external-link:hover {
   background-color: #fff;
   color: #e6172c;
+  border: 2px solid #e6172c;
 }
 
 .nursing-external-link:hover::after {
