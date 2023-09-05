@@ -130,7 +130,7 @@ function updatePagination() {
 
   // Add a click event listener to each pagination dot
   var dots = document.querySelectorAll('.dot');
-  dots.forEach(function(dot, index) {
+  dots.forEach(function (dot, index) {
     dot.addEventListener('click', function () {
       i = index; // Update the current index based on the clicked dot's index
       updateSliderBackground(); // Update the slider's background image
@@ -189,7 +189,7 @@ function updateImages() {
 const slideshowContainer = document.querySelector('.slider-image');
 const slides = document.querySelector('.slides-list');
 const slideItems = document.querySelectorAll('.slide-item');
-const slideWidth = slideItems[0].clientWidth;
+let slideWidth = slideItems[0].clientWidth; // Initialize slideWidth
 const intervalTime = 3000;
 const initialSlideCount = 4;
 const transitionDuration = 2000; // Change this value to adjust the transition duration
@@ -257,8 +257,24 @@ function initSlideshow() {
   setInterval(nextSlide, intervalTime);
 }
 
+function updateSlideWidth() {
+  // Update slideWidth when the window is resized
+  slideWidth = slideItems[0].clientWidth;
+  translateXValue = -(currentSlide * slideWidth);
+  slides.style.transition = 'none';
+  slides.style.transform = `translateX(${translateXValue}px)`;
+
+  // Wait a moment to allow the new position to be set before adding the transition again
+  setTimeout(() => {
+    slides.style.transition = `transform ${transitionDuration}ms ease-in-out`;
+  }, 50);
+}
+
+// Initialize the slideshow
 initSlideshow();
 
+// Add window resize event listener
+window.addEventListener('resize', updateSlideWidth);
 
 //progress bar slider for top page
 const crouselSlide = document.querySelector(".topics-slider");
