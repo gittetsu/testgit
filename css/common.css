@@ -2582,7 +2582,8 @@ footer .page-top:hover img {
 
   .sugi-holding-header .dropdown .sub-menu .list-gp ul li .sub-menu-detail li a {
     display: block;
-    padding-bottom: 10px;
+    padding-right: 0;
+    margin-bottom: 10px;
     letter-spacing: 0.1rem;
   }
 
@@ -3419,7 +3420,8 @@ footer .page-top:hover img {
   }
 
   .sugi-holding-header .dropdown .sub-menu .list-gp ul li .sub-menu-detail li a {
-    padding-bottom: 10px;
+    padding-right: 0;
+    margin-bottom: 10px;
     letter-spacing: 0.1rem;
   }
 
