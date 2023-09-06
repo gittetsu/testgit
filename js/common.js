@@ -154,7 +154,7 @@ window.addEventListener('load', function () {
     }
     /*sideBar Resize Function*/
     function sideBar() {
-        if (jsSidebar) {
+        if (jsSidebar && mediaQuery.matches) {
             if (jsSidebar.classList.contains('sb-open')) {
                 bodyElement.style.overflow = 'hidden'
                 bodyElement.style.position = 'fixed'
@@ -646,12 +646,15 @@ window.addEventListener('load', function () {
 
 
     /*new-window-open-js*/
-    function openFullScreenWindow(url) {
-        var screenWidth = window.screen.width;
-        var screenHeight = window.screen.height;
-        var newWindow = window.open(url, '_blank', 'width=' + screenWidth + ',height=' + screenHeight);
-        if (!newWindow) {
-            alert('Pop-up blocked. Please allow pop-ups for this site.');
-        }
+    var links = document.querySelector('a.new-window');
+    if(links){
+        links.addEventListener('click', function (e) {
+            e.preventDefault();
+            window.open(this.getAttribute('href'), '', [
+                'width=' + screen.availWidth,
+                'height=' + screen.availHeight
+            ]);
+        });
     }
+   
 });

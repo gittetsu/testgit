@@ -124,12 +124,16 @@ function updatePagination() {
   for (var j = 0; j < currentImages.length; j++) {
     var dot = document.createElement('span');
     dot.classList.add('dot');
-    if (j === i) {
-      dot.classList.add('active');
-    }
     dot.dataset.slideIndex = j; // Store the slide index as a data attribute
+    pagination.appendChild(dot);
+  }
+
+  // Add a click event listener to each pagination dot
+  var dots = document.querySelectorAll('.dot');
+  dots.forEach(function (dot, index) {
     dot.addEventListener('click', function () {
-      i = parseInt(this.dataset.slideIndex); // Update the current index based on the clicked dot's data attribute
+      i = index; // Update the current index based on the clicked dot's index
+      updateSliderBackground(); // Update the slider's background image
       updatePagination(); // Update the pagination dots again
 
       // Clear the existing timeout
@@ -138,8 +142,10 @@ function updatePagination() {
       // Set a new timeout for the next slide
       slideTimeout = setTimeout(changePicture, slideTime);
     });
-    pagination.appendChild(dot);
-  }
+  });
+
+  // Update the active dot based on the current index
+  dots[i].classList.add('active');
 }
 
 // Initialize the slider
@@ -150,6 +156,12 @@ window.addEventListener("load", function () {
   // Start the slideshow
   slideTimeout = setTimeout(changePicture, slideTime);
 });
+
+function updateSliderBackground() {
+  var sliderElement = document.querySelector('.mv-slider');
+  var currentImages = window.innerWidth >= 768 ? pcImages : spImages; // Use PC images for larger screens, SP images for smaller screens
+  sliderElement.style.backgroundImage = "url(" + currentImages[i] + ")";
+}
 
 // Update the images when the window is resized
 window.addEventListener("resize", updateImages);
@@ -177,7 +189,7 @@ function updateImages() {
 const slideshowContainer = document.querySelector('.slider-image');
 const slides = document.querySelector('.slides-list');
 const slideItems = document.querySelectorAll('.slide-item');
-const slideWidth = slideItems[0].clientWidth;
+let slideWidth = slideItems[0].clientWidth; // Initialize slideWidth
 const intervalTime = 3000;
 const initialSlideCount = 4;
 const transitionDuration = 2000; // Change this value to adjust the transition duration
@@ -245,8 +257,24 @@ function initSlideshow() {
   setInterval(nextSlide, intervalTime);
 }
 
+function updateSlideWidth() {
+  // Update slideWidth when the window is resized
+  slideWidth = slideItems[0].clientWidth;
+  translateXValue = -(currentSlide * slideWidth);
+  slides.style.transition = 'none';
+  slides.style.transform = `translateX(${translateXValue}px)`;
+
+  // Wait a moment to allow the new position to be set before adding the transition again
+  setTimeout(() => {
+    slides.style.transition = `transform ${transitionDuration}ms ease-in-out`;
+  }, 50);
+}
+
+// Initialize the slideshow
 initSlideshow();
 
+// Add window resize event listener
+window.addEventListener('resize', updateSlideWidth);
 
 //progress bar slider for top page
 const crouselSlide = document.querySelector(".topics-slider");

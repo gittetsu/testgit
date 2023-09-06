@@ -839,6 +839,10 @@ h6.common-sub-ttl {
   border-top: 1px solid #efefef;
 }
 
+.sidebar-item .accordion{
+  border: 1px solid transparent;
+}
+
 .sidebar-item:last-child {
   border-bottom: 1px solid #efefef;
 }
@@ -1059,7 +1063,7 @@ h6.common-sub-ttl {
 .accordion {
   width: 100%;
   margin-bottom: 40px;
-  border: 1px solid transparent;
+  border: 1px solid #e0e0e0;
   border-radius: 5px;
 }
 
@@ -1086,7 +1090,7 @@ h6.common-sub-ttl {
   justify-content: space-between;
   align-items: flex-start;
   padding: 14.5px 30px 14.5px 30px;
-  border: 1px solid #e0e0e0;
+  border: 1px solid transparent;
   color: #048851;
   font-size: 1.25rem;
   font-weight: 700;
@@ -3133,7 +3137,7 @@ footer .page-top:hover img {
   }
 
   .external-link::after {
-    top: 6px;
+    top: 7px;
     max-width: 11px;
     height: 11px;
   }

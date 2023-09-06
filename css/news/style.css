@@ -213,7 +213,8 @@
   border-radius: 3px;
 }
 
-.search-panel .tab-gp .tab-btn a.active {
+.search-panel .tab-gp .tab-btn a.active,
+.search-panel .tab-gp .tab-btn a:hover {
   background-color: #048851;
   color: #fff;
 }
@@ -270,6 +271,21 @@
 
   .search-panel .tab-gp .tab-btn {
     margin-bottom: 1.5%;
+  }
+
+  .search-panel .tab-gp .tab-btn a:hover {
+    background-color: #fff;
+    color: #000;
+  }
+
+  .search-panel form.search .filter-btn button:hover {
+    border: 1px solid transparent;
+    background-color: #048851;
+    color: #fff;
+  }
+
+  .search-panel form.search .filter-btn button:hover span::before {
+    filter: unset;
   }
 }
 
@@ -380,5 +396,10 @@
 
   .search-panel form.search .filter-btn button:hover span::before {
     filter: none;
+  }
+
+  .search-panel .tab-gp .tab-btn a:hover {
+    background-color: #fff;
+    color: #000;
   }
 }

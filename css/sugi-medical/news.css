@@ -211,7 +211,8 @@
   border-radius: 3px;
 }
 
-.search-panel .tab-gp .tab-btn a.active {
+.search-panel .tab-gp .tab-btn a.active,
+.search-panel .tab-gp .tab-btn a:hover {
   background-color: #048851;
   color: #fff;
 }
@@ -280,6 +281,11 @@
 
   .search-panel .tab-gp .tab-btn {
     margin-bottom: 1.5%;
+  }
+
+  .search-panel .tab-gp .tab-btn a:hover {
+    background-color: #fff;
+    color: #000;
   }
 }
 
@@ -379,5 +385,10 @@
 
   .search-panel .tab-gp .tab-btn a {
     font-size: 0.875rem;
+  }
+
+  .search-panel .tab-gp .tab-btn a:hover {
+    background-color: #fff;
+    color: #000;
   }
 }

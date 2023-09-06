@@ -204,7 +204,7 @@ h3.common-nursing-subttl {
   display: inline-block;
   position: relative;
   line-height: 1.5;
-  padding: 20px 52px 20px 32px;
+  padding: 19px 52px 19px 32px;
   background-color: #e6172c;
   color: #fff;
   font-family: 'Zen Maru Gothic', sans-serif;
@@ -212,16 +212,27 @@ h3.common-nursing-subttl {
   font-weight: 400;
   text-align: left;
   border-radius: 32px;
+  border: 2px solid transparent;
 }
 
 .nursing-external-link::after {
   position: absolute;
-  top: 27px;
+  top: 25px;
   right: 33px;
   width: 12px;
   height: 12px;
   background: url(../../img/sugi-nursingcare/icon_external_link.svg) no-repeat center/100% 100%;
   content: '';
+}
+
+.nursing-external-link:hover {
+  background-color: #fff;
+  color: #e6172c;
+  border: 2px solid #e6172c;
+}
+
+.nursing-external-link:hover::after {
+  filter: invert(53%) sepia(131%) saturate(2932%) hue-rotate(346deg) brightness(75%) contrast(163%);
 }
 
 /* common-nursing-button */
@@ -257,14 +268,13 @@ h3.common-nursing-subttl {
   display: block;
   position: absolute;
   top: 50%;
-  left: 45%;
+  left: 50%;
   width: 4px;
-  height: 4px;
+  height: 6px;
   content: '';
-  transform: translate(-50%, -45%) rotate(45deg);
-  border-color: #e6172c;
-  border-width: 1px 1px 0 0;
-  border-style: solid;
+  background: url('../../img/common/ico_next_pagination.svg')no-repeat center/contain;
+  filter: invert(15%) sepia(105%) saturate(5934%) hue-rotate(347deg) brightness(96%) contrast(94%);
+  transform: translate(-50% , -50%);
 }
 
 .common-nursing-button:hover {
@@ -282,7 +292,7 @@ h3.common-nursing-subttl {
 .common-nursing-button:hover .arrow::after,
 .common-nursing-button:active .arrow:after,
 .common-nursing-button.active .arrow::after {
-  border-color: #fff;
+  filter: invert(100%) sepia(300%) saturate(0) hue-rotate(0) brightness(100%) contrast(180%);
 }
 
 
@@ -753,7 +763,7 @@ footer.ft-nursing-care .ft-blk .sugi-holding-link::after {
 footer.ft-nursing-care .copyright-blk {
   padding: 48px 0;
   background-color: #fff;
-  font-family: 'Noto Sans JP' , sans-serif;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 
 footer.ft-nursing-care .page-top:hover {
@@ -923,6 +933,15 @@ footer.ft-nursing-care .page-top img {
 
   .nursing-external-link::after {
     right: 20px;
+  }
+
+  .nursing-external-link:hover {
+    background-color: #e6172c;
+    color: #fff;
+  }
+
+  .nursing-external-link:hover::after {
+    filter: invert(15%) sepia(300%) saturate(100%) hue-rotate(0) brightness(100%) contrast(180%);
   }
 
   .cmm-nursing-tab-btn {
@@ -1230,6 +1249,15 @@ footer.ft-nursing-care .page-top img {
 
   .nursing-external-link {
     padding: 20px 48px 20px 30px;
+  }
+
+  .nursing-external-link:hover {
+    background-color: #e6172c;
+    color: #fff;
+  }
+
+  .nursing-external-link:hover::after {
+    filter: invert(15%) sepia(300%) saturate(100%) hue-rotate(0) brightness(100%) contrast(180%);
   }
 
   /* cmm-nursing-tab-btn */
