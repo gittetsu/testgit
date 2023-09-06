@@ -4241,12 +4241,11 @@ footer .page-top:hover img {
   }
 
   .common-button .arrow::after {
-    top: 5%;
     right: 50%;
     width: 8px;
     height: 8px;
     background: url('../img/common/ico_arrow_white.svg') no-repeat center/cover;
-    transform: translate(50%, 50%);
+    transform: translate(50%, -50%);
     border-radius: unset;
   }
 
