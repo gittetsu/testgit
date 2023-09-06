@@ -288,6 +288,12 @@
     color: #000;
   }
 
+  .search-panel .tab-gp .tab-btn a:active,
+  .search-panel .tab-gp .tab-btn a.active {
+    background-color: #048851;
+    color: #fff;
+  }
+
   .search-panel form.search .filter-btn button:hover {
     border: 1px solid transparent;
     background-color: #048851;
@@ -400,6 +406,12 @@
   .search-panel .tab-gp .tab-btn a:hover {
     background-color: #fff;
     color: #000;
+  }
+
+  .search-panel .tab-gp .tab-btn a:active,
+  .search-panel .tab-gp .tab-btn a.active {
+    background-color: #048851;
+    color: #fff;
   }
 
   .search-panel form.search .filter-btn button:hover {
