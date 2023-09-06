@@ -343,9 +343,27 @@
 
 .sec-nurcare-contact .contact-form .agreement li .policy-link {
   display: inline-block;
-  color: #d6365c;
+  color: #e6172c;
   letter-spacing: 0.1em;
-  word-break: break-all;
+  position: relative;
+  padding-right: 25px;
+  border-bottom: 1px solid transparent;
+}
+
+.sec-nurcare-contact .contact-form .agreement li .policy-link:hover {
+  border-bottom: 1px solid #e6172c;
+}
+
+.sec-nurcare-contact .contact-form .agreement li .policy-link::after {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  top: 50%;
+  right: 7px;
+  background: url('../../img/sugi-nursingcare/icon_external_link.svg') no-repeat center/contain;
+  filter: invert(55%) sepia(113%) saturate(5864%) hue-rotate(345deg) brightness(88%) contrast(94%);
+  transform: translateY(-50%);
 }
 
 .sec-nurcare-contact .confirm-pg {
