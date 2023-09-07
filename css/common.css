@@ -3008,6 +3008,10 @@ footer .page-top:hover img {
     display: none;
   }
 
+  .share-link a:hover {
+    opacity: 1;
+  }
+
   /* common-button */
   .common-button:hover,
   .common-button.active {
@@ -3038,7 +3042,7 @@ footer .page-top:hover img {
     top: 50%;
     filter: invert(100%) sepia(300%) saturate(0) hue-rotate(0) brightness(100%) contrast(180%);
   }
-  
+
   .cmn-pagination .cmn-pager-num a:not(.active):hover {
     background-color: #f4f4f4;
     color: #048851;
@@ -3050,6 +3054,45 @@ footer .page-top:hover img {
 
   .cmn-pagination .cmn-pager a:hover img {
     filter: unset;
+  }
+
+  /* tab-list-01 */
+
+  .tab-list-01 li a:hover {
+    background-color: transparent;
+    color: #048851;
+  }
+
+  .tab-list-01 li a.active:hover {
+    background-color: #048851;
+    color: #fff;
+  }
+
+  .tab-list-01 li a:hover::after {
+    display: none;
+  }
+
+  .tab-list-01 li a.active:hover:after {
+    display: block;
+  }
+
+  /* tab-list-02 */
+
+  .tab-list-02 li a.active:hover {
+    color: #048851;
+    border-bottom: 3px solid #048851;
+  }
+
+  .tab-list-02 li a:hover {
+    color: #000;
+    border-bottom: 3px solid transparent;
+  }
+
+  /* img-list-gp */
+
+  .img-list-detail a:hover .txt-blk span:before {
+    background: url('../img/common/ico_arrow_green.svg') no-repeat center;
+    background-color: #fff;
   }
 
   /* footer */
@@ -3226,6 +3269,10 @@ footer .page-top:hover img {
 
   .share-link a img {
     max-width: 30px;
+  }
+
+  .share-link a:hover {
+    opacity: 1;
   }
 
   /*title*/
@@ -4160,6 +4207,24 @@ footer .page-top:hover img {
     font-size: 0.875rem;
   }
 
+  .tab-list-01 li a:hover {
+    background-color: transparent;
+    color: #048851;
+  }
+
+  .tab-list-01 li a.active:hover {
+    background-color: #048851;
+    color: #fff;
+  }
+
+  .tab-list-01 li a:hover::after {
+    display: none;
+  }
+
+  .tab-list-01 li a.active:hover:after {
+    display: block;
+  }
+
   .tab-list-scroll {
     width: 100%;
     border: none;
@@ -4204,6 +4269,16 @@ footer .page-top:hover img {
   .tab-list-02 li a {
     padding: 10px 10px;
     font-size: 0.75rem;
+    border-bottom: 3px solid transparent;
+  }
+
+  .tab-list-02 li a.active:hover {
+    color: #048851;
+    border-bottom: 3px solid #048851;
+  }
+
+  .tab-list-02 li a:hover {
+    color: #000;
     border-bottom: 3px solid transparent;
   }
 
