@@ -34,23 +34,37 @@
 						※17時以降にいただいたお問い合わせは翌営業日以降の受付となります。
 					</p>
 				</div>
-				<form action="/" class="contact-form mb-40">
+				<form id="contact-form" action="confirm.html" class="contact-form mb-40" novalidate>
 					<div class="input-container">
 						<p class="form-label"><span class="required">必須</span>お名前</p>
 						<div class="input-box">
 							<div class="input-d-flex">
-								<input type="text" id="surname" name="surname" value="" placeholder="姓" class="name-input error">
-								<input type="text" id="name" name="name" value="" placeholder="名" class="name-input">
+								<div class="input">
+								<input type="text" id="surname" name="surname" value="" placeholder="姓" class="name-input">
+								<p class="err-msg d-flex" id="surname-error"><span>必須につき入力をお願いします</span></p>
 							</div>
-							<p class="err-msg d-flex"><span class="exclamation">！</span><span>必須につき入力をお願いします</span></p>
+							<div class="input">
+								<input type="text" id="lastname" name="lastname" value="" placeholder="名" class="name-input">
+								<p class="err-msg d-flex" id="name-error"><span>必須につき入力をお願いします</span></p>
+							</div>
+							</div>
+							
 						</div>
 					</div>
 					<div class="input-container">
 						<p class="form-label"><span class="required">必須</span>フリガナ</p>
 						<div class="input-box">
 							<div class="input-d-flex">
-								<input type="text" id="furiSurname" name="furiSurname" value="" placeholder="セイ" class="name-input">
-								<input type="text" id="furiName" name="furiName" value="" placeholder="メイ" class="name-input">
+								<div class="input">
+									<input type="text" id="furiSurname" name="furiSurname" value="" placeholder="セイ" class="name-input">
+									<p class="err-msg d-flex" id="furiSurname-error"><span>必須につき入力をお願いします</span></p>
+								</div>
+								<div class="input">
+									<input type="text" id="furiName" name="furiName" value="" placeholder="メイ" class="name-input">
+									<p class="err-msg d-flex" id="furiName-error"><span>必須につき入力をお願いします</span></p>
+								</div>
+								
+								
 							</div>
 						</div>
 					</div>
@@ -65,20 +79,20 @@
 						<div class="input-box">
 							<div class="phone-number">
 								<input type="text" id="phoneNumber" name="phoneNumber" value="" maxlength="3" placeholder="090"
-									class="ph-input prefix" oninput="validateNumericInput(this)">
+									class="ph-input prefix">
 								<span class="dashed"></span>
-								<input type="text" name="phoneNoFirst" value="" maxlength="4" placeholder="0000" class="ph-input"
-									oninput="validateNumericInput(this)">
+								<input type="text" name="phoneNoFirst" id="phoneNoFirst" value="" maxlength="4" placeholder="0000" class="ph-input">
 								<span class="dashed"></span>
-								<input type="text" name="phoneNoLast" value="" maxlength="4" placeholder="0000" class="ph-input"
-									oninput="validateNumericInput(this)">
+								<input type="text" name="phoneNoLast" id="phoneNoLast" value="" maxlength="4" placeholder="0000" class="ph-input">
 							</div>
+							<p class="err-msg d-flex" id="phno-error"><span>必須につき入力をお願いします</span></p>
 						</div>
 					</div>
 					<div class="input-container">
 						<label for="mailAddress" class="form-label"><span class="required">必須</span>メールアドレス</label>
 						<div class="input-box">
 							<input type="email" id="mailAddress" name="mailAddress" value="" placeholder="info@example.com">
+							<p class="err-msg d-flex" id="email-error"><span>必須につき入力をお願いします</span></p>
 						</div>
 					</div>
 					<div class="input-container address-gp">
@@ -86,19 +100,23 @@
 						<div class="input-box">
 							<div class="custom-select">
 								<select id="contactType" name="contactType">
-									<option value="選択してください">選択してください</option>
-									<option value="選択してください">サービス内容について</option>
-									<option value="選択してください">事業所について</option>
-									<option value="選択してください">採用について</option>
-									<option value="選択してください">その他お問い合わせ</option>
+									<option value="">選択してください</option>
+									<option value="サービス内容について">サービス内容について</option>
+									<option value="事業所について">事業所について</option>
+									<option value="採用について">採用について</option>
+									<option value="その他お問い合わせ">その他お問い合わせ</option>
 								</select>
 								<span class="select-arrow"></span>
 							</div>
+							<p class="err-msg d-flex" id="customselect-error"><span>必須につき入力をお願いします</span></p>
 						</div>
 					</div>
 					<div class="input-container">
 						<label for="description" class="form-label"><span class="required">必須</span>お問い合わせ内容</label>
-						<textarea id="description" name="description" rows="3" class="input-box"></textarea>
+						<div class="textarea">
+						<textarea id="description" name="description" rows="3"></textarea>
+						<p class="err-msg d-flex" id="description-error"><span>必須につき入力をお願いします</span></p>
+					</div>
 					</div>
 					<div class="input-container aggreement-gp">
 						<label for="agreement" class="req-label mb-20"><span class="required">必須</span>個人情報の取扱いへの同意</label>
@@ -111,10 +129,13 @@
 									class="policy-link" target="_blank">当社プライバシーポリシー</a>をご確認ください。
 								</li>
 							</ul>
-							<div class="agreement-check mb-40 mb-sp-30">
+							<div class="mb-40 mb-sp-30">
+							<div class="agreement-check">
 								<input type="checkbox" id="agreement" name="agreement" value="">
 								<label for="agreement" class="checkbox-label">同意する</label>
 							</div>
+							<p class="err-msg d-flex" id="agreement-check-error"><span>必須につき入力をお願いします</span></p>
+						</div>
 						</div>
 					</div>
 					<div class="confirm-pg">

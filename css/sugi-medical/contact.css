@@ -65,13 +65,16 @@
   font-family: 'Noto Sans JP', sans-serif;
   font-weight: 500;
 }
-.sec-medi-contact .contact-form .input{
+
+.sec-medi-contact .contact-form .input {
   width: 100%;
   max-width: 230px;
 }
+
 .sec-medi-contact .contact-form .input:not(:last-child) {
   margin-right: 10px;
 }
+
 .sec-medi-contact .contact-form .input-container .input-box .input-d-flex {
   display: flex;
   justify-content: flex-start;
@@ -161,31 +164,33 @@
 }
 
 .sec-medi-contact .contact-form .input-container .err-msg {
+  display: block;
+  display: none;
+  position: relative;
   line-height: 1;
   margin-top: 12px;
+  padding-left: 25px;
   color: #d6365c;
   font-size: 0.813rem;
   font-weight: 500;
-  display: block;
-  position: relative;
-  padding-left: 25px;
-  display: none;
 }
-.sec-medi-contact .contact-form .input-container .err-msg:before{
-  content: "！";
+
+.sec-medi-contact .contact-form .input-container .err-msg:before {
+  position: absolute;
+  top: -3px;
+  left: 0;
+  width: 20px;
+  padding: 2.79px 0 4.2px;
   background-color: #d6365c;
   color: #fff;
-  padding: 2.79px 0 4.2px;
-  letter-spacing: 0;
-  width: 20px;
-  top: -3px;
-  position: absolute;
   text-align: center;
-  left: 0;
+  letter-spacing: 0;
+  content: "！";
   border-radius: 50%;
 }
 
-.sec-medi-contact .contact-form .input-container input[type='text'].error,.sec-medi-contact .contact-form .input-container input[type='email'].error {
+.sec-medi-contact .contact-form .input-container input[type='text'].error,
+.sec-medi-contact .contact-form .input-container input[type='email'].error {
   border: 1px solid #d6365c;
 }
 
@@ -260,7 +265,7 @@
   border-radius: 3px;
 }
 
-.sec-medi-contact .contact-form .input-container .checkbox-gp-list .checkbox-label.error:before{
+.sec-medi-contact .contact-form .input-container .checkbox-gp-list .checkbox-label.error:before {
   border: 1px solid #d6365c;
 }
 
@@ -398,10 +403,12 @@
   justify-content: flex-start;
   align-items: center;
   padding: 17px 20px;
-  background-color: #f6f6f6;
   border: 1px solid transparent;
+  background-color: #f6f6f6;
 }
-.sec-medi-contact .contact-form .input-container .agreement-check.error,.sec-medi-contact .contact-form .input-container .agreement-check.error .checkbox-label:before {
+
+.sec-medi-contact .contact-form .input-container .agreement-check.error,
+.sec-medi-contact .contact-form .input-container .agreement-check.error .checkbox-label:before {
   border: 1px solid#d6365c;
 }
 
@@ -531,10 +538,12 @@
     padding: 0;
     border-top: none;
   }
-  .sec-medi-contact .contact-form .input{
+
+  .sec-medi-contact .contact-form .input {
     width: 100%;
     max-width: 100%;
   }
+
   .sec-medi-contact .contact-form .input-container input[type='text'].name-input {
     width: 100%;
     max-width: 100%;

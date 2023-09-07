@@ -14,6 +14,9 @@ var isPhone = false;
 var ishandleService = false;
 var ishandleAgreement = false;
 /*keyup*/
+var surName = document.getElementById("surname");
+surName.addEventListener("keyup", validateFirstName);
+surName.addEventListener("focusout", validateFirstName);
 function validateFirstName() {
 	var surName = document.getElementById("surname").value;
 	if (surName.length == 0) {
@@ -26,6 +29,10 @@ function validateFirstName() {
 		document.getElementById("surname").classList.remove("error");
 	}
 }
+
+var lastName = document.getElementById("lastname")
+lastName.addEventListener("keyup", validateLastName);
+lastName.addEventListener("focusout", validateLastName);
 function validateLastName() {
 	var lastName = document.getElementById("lastname").value;
 	if (lastName.length == 0) {
@@ -39,29 +46,40 @@ function validateLastName() {
 		return true;
 	}
 }
+var email = document.getElementById("mailAddress");
+email.addEventListener("keyup", validateEmail);
+email.addEventListener("focusout", validateEmail);
 
 function validateEmail() {
-	var email = document.getElementById("mailAddress").value;
+	var emailValue = email.value;
+	const emailRegex = /^[^\s@]+@[a-zA-Z]+\.[^\s@]+$/;
+
 	var spanElements = emailError.getElementsByTagName("span");
-	if (email.length == 0) {
+	if (emailValue.length == 0) {
 		isEmail = false;
-		document.getElementById("mailAddress").classList.add("error");
+		email.classList.add("error");
 		spanElements[0].innerHTML = "必須につき入力をお願いします";
 		emailError.style.display = "block";
-	} else if (!email.match(/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/)) {
+	} else if (!emailRegex.test(emailValue)) {
 		isEmail = false;
-		document.getElementById("mailAddress").classList.add("error");
-		spanElements[0].innerHTML =
-			"正しいメールアドレスの形式で入力をお願いします";
+		email.classList.add("error");
 		emailError.style.display = "block";
-	}
-	else {
+		const regex = /^[^@\s]+@[^@]*[a-zA-Z0-9]+$/;
+		if (regex.test(emailValue)) {
+			spanElements[0].innerHTML = " 特殊な形式のメールアドレスです。<br> 入力内容に不備がないか確認いただくか、他のメールアドレスを入力ください。<br>【特殊な形式のメールアドレスの例】<br>・アドレスの先頭または、@マークの直前にピリオドがある<br>・@マークより前でピリオドが連続している<br>・@マークより後ろに存在しないドメインを指定している";
+		} else {
+			spanElements[0].innerHTML =
+				"正しいメールアドレスの形式で入力をお願いします";
+		}
+	} else {
 		isEmail = true;
 		emailError.style.display = "none";
-		document.getElementById("mailAddress").classList.remove("error");
+		email.classList.remove("error");
 	}
 }
 
+companyName.addEventListener("keyup", validateCompanyName);
+companyName.addEventListener("focusout", validateCompanyName);
 function validateCompanyName() {
 	var companyName = document.getElementById("companyName").value;
 	if (companyName.length == 0) {
@@ -80,6 +98,10 @@ var phoneNoLast = document.getElementById("phoneNoLast");
 phoneNumber.addEventListener("keyup", validatephoneNumber);
 phoneNoFirst.addEventListener("keyup", validatephoneNumber);
 phoneNoLast.addEventListener("keyup", validatephoneNumber);
+phoneNumber.addEventListener("focusout", validatephoneNumber);
+phoneNoFirst.addEventListener("focusout", validatephoneNumber);
+phoneNoLast.addEventListener("focusout", validatephoneNumber);
+
 
 function validatephoneNumber() {
 	var phNo = phoneNumber.value; // This is "area code"
@@ -241,7 +263,13 @@ contactForm.addEventListener("submit", function (e) {
 	validatephoneNumber();
 	handleServiceCheckboxChange();
 	handleAgreementCheckboxChange();
-
+	var messages = document.querySelectorAll("p.err-msg");
+	var elementToScrollTo = document.getElementById("contact-form");
+	messages.forEach(function (message) {
+		if (window.getComputedStyle(message).display === "block") {
+			elementToScrollTo.scrollIntoView({ behavior: "smooth" });
+		}
+	});
 	if (isFirstName && isLastName && isEmail && isCompany && isPhone && ishandleService && ishandleAgreement) {
 		this.submit();
 		window.location("/confirm.html");
