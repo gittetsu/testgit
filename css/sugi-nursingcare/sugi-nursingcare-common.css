@@ -326,14 +326,13 @@ h3.common-nursing-subttl {
   display: block;
   position: absolute;
   top: 50%;
-  left: 45%;
+  left: 50%;
   width: 4px;
-  height: 4px;
+  height: 6px;
+  background: url('../../img/common/ico_next_pagination.svg')no-repeat center/contain;
   content: '';
-  transform: translate(-50%, -45%) rotate(45deg);
-  border-color: #fff;
-  border-width: 1px 1px 0 0;
-  border-style: solid;
+  transform: translate(-50%, -50%);
+  filter: invert(100%) sepia(300%) saturate(0) hue-rotate(0) brightness(100%) contrast(180%);
 }
 
 .cmm-nursing-white-btn:hover {
@@ -343,15 +342,13 @@ h3.common-nursing-subttl {
 }
 
 .cmm-nursing-white-btn:hover .arrow,
-.cmm-nursing-white-btn:active .arrow,
 .cmm-nursing-white-btn.active .arrow {
   background-color: #fff;
 }
 
 .cmm-nursing-white-btn:hover .arrow::after,
-.cmm-nursing-white-btn:active .arrow:after,
 .cmm-nursing-white-btn.active .arrow::after {
-  border-color: #e6172c;
+  filter: invert(15%) sepia(105%) saturate(5934%) hue-rotate(347deg) brightness(96%) contrast(94%);
 }
 
 /* cmm-nursing-tab-btn */
@@ -805,15 +802,13 @@ footer.ft-nursing-care .page-top img {
   }
 
   .cmm-nursing-white-btn:hover .arrow,
-  .cmm-nursing-white-btn:active .arrow,
   .cmm-nursing-white-btn.active .arrow {
     background-color: #e6172c;
   }
 
   .cmm-nursing-white-btn:hover .arrow::after,
-  .cmm-nursing-white-btn:active .arrow:after,
   .cmm-nursing-white-btn.active .arrow::after {
-    border-color: #fff;
+    filter: invert(100%) sepia(300%) saturate(0) hue-rotate(0) brightness(100%) contrast(180%);
   }
 
   .sugi-nursing-header .header-blk {
@@ -945,6 +940,10 @@ footer.ft-nursing-care .page-top img {
 
   .cmm-nursing-tab-btn {
     padding: 14px 45px 14px 24px;
+  }
+
+  .ft-contact-bnr .ft-bnr-phone .phone-num-txt {
+    pointer-events: inherit;
   }
 
   .ft-consultation-bnr .consultation-list ul li a:hover::before {
@@ -1231,15 +1230,13 @@ footer.ft-nursing-care .page-top img {
   }
 
   .cmm-nursing-white-btn:hover .arrow,
-  .cmm-nursing-white-btn:active .arrow,
   .cmm-nursing-white-btn.active .arrow {
     background-color: #e6172c;
   }
 
   .cmm-nursing-white-btn:hover .arrow::after,
-  .cmm-nursing-white-btn:active .arrow:after,
   .cmm-nursing-white-btn.active .arrow::after {
-    border-color: #fff;
+    filter: invert(100%) sepia(300%) saturate(0) hue-rotate(0) brightness(100%) contrast(180%);
   }
 
   .nursing-external-link {

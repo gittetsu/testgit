@@ -1961,29 +1961,15 @@ table tr th:first-child {
   transition: all 0.2s;
 }
 
-.cmn-pagination .cmn-pager-num a:hover,
-.cmn-pagination .cmn-pager-num a.active,
-.cmn-pagination .cmn-pager-prev a:hover,
-.cmn-pagination .cmn-pager-prev a.active,
-.cmn-pagination .cmn-pager-first a:hover,
-.cmn-pagination .cmn-pager-first a.active,
-.cmn-pagination .cmn-pager-next a:hover,
-.cmn-pagination .cmn-pager-next a.active,
-.cmn-pagination .cmn-pager-last a:hover,
-.cmn-pagination .cmn-pager-last a.active {
+.cmn-pagination li a:hover,
+.cmn-pagination li a.active {
   background-color: #048851;
   color: #fff;
   transition: all 0.2s;
 }
 
-.cmn-pagination .cmn-pager-prev a:hover img,
-.cmn-pagination .cmn-pager-prev a.active img,
-.cmn-pagination .cmn-pager-first a:hover img,
-.cmn-pagination .cmn-pager-first a.active img,
-.cmn-pagination .cmn-pager-next a:hover img,
-.cmn-pagination .cmn-pager-next a.active img,
-.cmn-pagination .cmn-pager-last a:hover img,
-.cmn-pagination .cmn-pager-last a.active img {
+.cmn-pagination li a:hover img,
+.cmn-pagination li a.active img {
   filter: invert(100%) sepia(300%) saturate(0) hue-rotate(0) brightness(100%) contrast(180%);
 }
 
@@ -3051,6 +3037,19 @@ footer .page-top:hover img {
   .common-button.active .arrow::after {
     top: 50%;
     filter: invert(100%) sepia(300%) saturate(0) hue-rotate(0) brightness(100%) contrast(180%);
+  }
+  
+  .cmn-pagination .cmn-pager-num a:not(.active):hover {
+    background-color: #f4f4f4;
+    color: #048851;
+  }
+
+  .cmn-pagination .cmn-pager a:hover {
+    background-color: #fff;
+  }
+
+  .cmn-pagination .cmn-pager a:hover img {
+    filter: unset;
   }
 
   /* footer */
@@ -4383,6 +4382,19 @@ footer .page-top:hover img {
 
   .cmn-pagination .cmn-pager a {
     padding: 11px 0;
+  }
+
+  .cmn-pagination .cmn-pager-num a:not(.active):hover {
+    background-color: #f4f4f4;
+    color: #048851;
+  }
+
+  .cmn-pagination .cmn-pager a:hover {
+    background-color: #fff;
+  }
+
+  .cmn-pagination .cmn-pager a:hover img {
+    filter: unset;
   }
 
   /* footer */
