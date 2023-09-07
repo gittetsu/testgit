@@ -60,14 +60,14 @@ body {
 }
 
 .sugi-nursing-header .header-contact-btn {
-  width: 15.5%;
+  width: 16.5%;
   text-align: right;
 }
 
 .sugi-nursing-header .header-contact-btn a {
   display: inline-block;
   width: 164px;
-  padding: 6% 10%;
+  padding: 6% 9%;
   border: 2px solid #e6172c;
   background-color: #e6172c;
   color: #fff;
@@ -205,6 +205,7 @@ h3.common-nursing-subttl {
   position: relative;
   line-height: 1.5;
   padding: 19px 52px 19px 32px;
+  border: 2px solid transparent;
   background-color: #e6172c;
   color: #fff;
   font-family: 'Zen Maru Gothic', sans-serif;
@@ -212,7 +213,6 @@ h3.common-nursing-subttl {
   font-weight: 400;
   text-align: left;
   border-radius: 32px;
-  border: 2px solid transparent;
 }
 
 .nursing-external-link::after {
@@ -226,9 +226,9 @@ h3.common-nursing-subttl {
 }
 
 .nursing-external-link:hover {
+  border: 2px solid #e6172c;
   background-color: #fff;
   color: #e6172c;
-  border: 2px solid #e6172c;
 }
 
 .nursing-external-link:hover::after {
@@ -271,10 +271,10 @@ h3.common-nursing-subttl {
   left: 50%;
   width: 4px;
   height: 6px;
-  content: '';
   background: url('../../img/common/ico_next_pagination.svg')no-repeat center/contain;
+  content: '';
+  transform: translate(-50%, -50%);
   filter: invert(15%) sepia(105%) saturate(5934%) hue-rotate(347deg) brightness(96%) contrast(94%);
-  transform: translate(-50% , -50%);
 }
 
 .common-nursing-button:hover {
@@ -284,13 +284,11 @@ h3.common-nursing-subttl {
 }
 
 .common-nursing-button:hover .arrow,
-.common-nursing-button:active .arrow,
 .common-nursing-button.active .arrow {
   background-color: #e6172c;
 }
 
 .common-nursing-button:hover .arrow::after,
-.common-nursing-button:active .arrow:after,
 .common-nursing-button.active .arrow::after {
   filter: invert(100%) sepia(300%) saturate(0) hue-rotate(0) brightness(100%) contrast(180%);
 }
@@ -590,14 +588,17 @@ ul.service-list li.service-list-item .service-txtblk {
 }
 
 .ft-contact-bnr .ft-bnr-phone .phone-num-txt {
+  display: inline-block;
   line-height: 1;
-  padding-bottom: 15px;
+  margin-bottom: 15px;
   font-family: 'Josefin Sans', sans-serif;
   font-size: 1.75rem;
   font-weight: 700;
+  pointer-events: none;
 }
 
 .ft-contact-bnr .ft-bnr-phone .reception-hour-txt {
+  display: block;
   font-size: 0.75rem;
 }
 
@@ -788,13 +789,11 @@ footer.ft-nursing-care .page-top img {
   }
 
   .common-nursing-button:hover .arrow::after,
-  .common-nursing-button:active .arrow:after,
   .common-nursing-button.active .arrow::after {
-    border-color: #e6172c;
+    filter: invert(15%) sepia(105%) saturate(5934%) hue-rotate(347deg) brightness(96%) contrast(94%);
   }
 
   .common-nursing-button:hover .arrow,
-  .common-nursing-button:active .arrow,
   .common-nursing-button.active .arrow {
     background-color: #fff;
   }
@@ -1100,6 +1099,10 @@ footer.ft-nursing-care .page-top img {
     border-bottom: 1px solid #dedac8;
   }
 
+  .ft-contact-bnr .ft-bnr-phone .phone-num-txt {
+    pointer-events: inherit;
+  }
+
   .ft-contact-bnr .ft-bnr-phone .small-text,
   .ft-contact-bnr .ft-bnr-mail .small-text {
     font-size: 0.875rem;
@@ -1204,27 +1207,19 @@ footer.ft-nursing-care .page-top img {
     max-width: 18px;
   }
 
-  .common-nursing-button .arrow::after,
-  .common-nursing-button.active .arrow::after {
-    width: 4px;
-    height: 4px;
-  }
-
   .common-nursing-button:hover {
     background-color: #e6172c;
     color: #fff;
   }
 
   .common-nursing-button:hover .arrow,
-  .common-nursing-button:active .arrow,
   .common-nursing-button.active .arrow {
     background-color: #fff;
   }
 
   .common-nursing-button:hover .arrow::after,
-  .common-nursing-button:active .arrow:after,
   .common-nursing-button.active .arrow::after {
-    border-color: #e6172c;
+    filter: invert(15%) sepia(105%) saturate(5934%) hue-rotate(347deg) brightness(96%) contrast(94%);
   }
 
   /* .cmm-nursing-white-btn */

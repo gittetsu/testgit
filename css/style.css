@@ -1746,14 +1746,6 @@
     max-width: 286px;
   }
 
-  .number-link .arrow::after,
-  .number-link.active .arrow::after,
-  .store-link .arrow::after,
-  .store-link.active .arrow::after {
-    /* top: 5%; */
-    right: 9px;
-  }
-
   .store-link {
     width: 100%;
     margin: 0 auto;
