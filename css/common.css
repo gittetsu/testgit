@@ -589,8 +589,8 @@ h6.common-sub-ttl {
 }
 
 .sugi-holding-header .dropdown .sub-menu .list-gp .business-gp a.other-link {
-  padding-bottom: 0;
   display: inline-block;
+  padding-bottom: 0;
 }
 
 .sugi-holding-header .dropdown .sub-menu .list-gp li:last-child {
@@ -645,9 +645,9 @@ h6.common-sub-ttl {
 }
 
 .sugi-holding-header .sub-menu-list .other-link span {
+  display: inline-block;
   position: relative;
   padding-right: 25px;
-  display: inline-block;
 }
 
 .sugi-holding-header .sub-menu-list .other-link span:after {
@@ -839,7 +839,7 @@ h6.common-sub-ttl {
   border-top: 1px solid #efefef;
 }
 
-.sidebar-item .accordion{
+.sidebar-item .accordion {
   border: 1px solid transparent;
 }
 
@@ -1139,10 +1139,10 @@ h6.common-sub-ttl {
   height: 0;
   overflow: hidden;
   margin: 0px 29px;
-  border-top: 1px dashed transparent;
   font-size: 1rem;
   font-weight: 400;
   transition: height 0.3s ease-out;
+  border-top: 1px dashed transparent;
 }
 
 .open .accordion-content {
@@ -1804,12 +1804,14 @@ table tr th:first-child {
   border-radius: 50%;
 }
 
-.common-button:hover,.common-button.active {
+.common-button:hover,
+.common-button.active {
   background-color: #048851;
   color: #fff;
 }
 
-.common-button:hover .arrow,.common-button.active .arrow  {
+.common-button:hover .arrow,
+.common-button.active .arrow {
   right: 20px;
   width: 24px;
   padding: 12px;
@@ -1818,7 +1820,8 @@ table tr th:first-child {
   border-radius: 50%;
 }
 
-.common-button:hover .arrow::after,.common-button.active .arrow:after {
+.common-button:hover .arrow::after,
+.common-button.active .arrow:after {
   position: absolute;
   top: 50%;
   right: 50%;
@@ -2582,8 +2585,8 @@ footer .page-top:hover img {
 
   .sugi-holding-header .dropdown .sub-menu .list-gp ul li .sub-menu-detail li a {
     display: block;
-    padding-right: 0;
     margin-bottom: 10px;
+    padding-right: 0;
     letter-spacing: 0.1rem;
   }
 
@@ -2632,17 +2635,17 @@ footer .page-top:hover img {
     right: -15px;
     left: unset;
     width: 70px;
+    height: 60.4px;
     padding: 0;
     padding: 21px 0;
-    height: 60.4px;
     border: none;
     background: none;
     background-color: #048851;
     font-size: 0.75rem;
     cursor: pointer;
+    transform: translate(-50%, -50%);
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
-    transform: translate(-50% , -50%);
   }
 
   .sugi-holding-header form.search button span {
@@ -3019,6 +3022,37 @@ footer .page-top:hover img {
     display: none;
   }
 
+  /* common-button */
+  .common-button:hover,
+  .common-button.active {
+    background-color: #fff;
+    color: #048851;
+  }
+
+  .common-button .arrow {
+    background-color: #048851;
+  }
+
+  .common-button .arrow::after {
+    right: 50%;
+    width: 8px;
+    height: 8px;
+    background: url('../img/common/ico_arrow_white.svg') no-repeat center/cover;
+    transform: translate(50%, -50%);
+    border-radius: unset;
+  }
+
+  .common-button:hover .arrow,
+  .common-button.active .arrow {
+    background-color: #048851;
+  }
+
+  .common-button:hover .arrow::after,
+  .common-button.active .arrow::after {
+    top: 50%;
+    filter: invert(100%) sepia(300%) saturate(0) hue-rotate(0) brightness(100%) contrast(180%);
+  }
+
   /* footer */
   footer {
     border-top: 1px solid #e0e0e0;
@@ -3139,8 +3173,8 @@ footer .page-top:hover img {
 
   .external-link::after {
     top: 7px;
-    max-width: 11px;
     height: 11px;
+    max-width: 11px;
   }
 
   .pdf {
@@ -3420,8 +3454,8 @@ footer .page-top:hover img {
   }
 
   .sugi-holding-header .dropdown .sub-menu .list-gp ul li .sub-menu-detail li a {
-    padding-right: 0;
     margin-bottom: 10px;
+    padding-right: 0;
     letter-spacing: 0.1rem;
   }
 
@@ -3436,13 +3470,14 @@ footer .page-top:hover img {
   }
 
   .sugi-holding-header .sub-menu-list .other-link span:after {
-    filter: invert(100%) sepia(300%) saturate(0) hue-rotate(0) brightness(100%) contrast(180%);
-    width: 11px;
     top: 5px;
-    height: 11px;
     right: 10px;
+    width: 11px;
+    height: 11px;
+    filter: invert(100%) sepia(300%) saturate(0) hue-rotate(0) brightness(100%) contrast(180%);
 
   }
+
   .sugi-holding-header .sub-menu-list .other-link {
     padding: 0 0 21px 24px;
     color: #fff;
@@ -3488,11 +3523,10 @@ footer .page-top:hover img {
 
   .sugi-holding-header form.search button {
     top: 50%;
-    transform: translate(-50%, -50%);
     right: -15px;
-    height: 60.5px;
     left: unset;
     width: 70px;
+    height: 60.5px;
     padding: 0;
     padding: 21.5px 0;
     border: none;
@@ -3500,6 +3534,7 @@ footer .page-top:hover img {
     background-color: #048851;
     font-size: 0.75rem;
     cursor: pointer;
+    transform: translate(-50%, -50%);
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
   }
@@ -4091,7 +4126,8 @@ footer .page-top:hover img {
     max-width: 11px;
   }
 
-  .img-list-gp .img-col03 .img-list-detail .external-blk span:after,.side-img-list-gp .img-col03 .img-list-detail .external-blk span:after{
+  .img-list-gp .img-col03 .img-list-detail .external-blk span:after,
+  .side-img-list-gp .img-col03 .img-list-detail .external-blk span:after {
     top: 4px;
   }
 
@@ -4227,7 +4263,8 @@ footer .page-top:hover img {
     border-radius: 100px;
   }
 
-  .common-button:hover,.common-button.active {
+  .common-button:hover,
+  .common-button.active {
     background-color: #fff;
     color: #048851;
   }
@@ -4251,13 +4288,15 @@ footer .page-top:hover img {
     border-radius: unset;
   }
 
-  .common-button:hover .arrow,.common-button.active .arrow {
+  .common-button:hover .arrow,
+  .common-button.active .arrow {
     width: 18px;
     padding: 9px;
     background-color: #048851;
   }
 
-  .common-button:hover .arrow::after,.common-button.active .arrow::after {
+  .common-button:hover .arrow::after,
+  .common-button.active .arrow::after {
     top: 50%;
     filter: invert(100%) sepia(300%) saturate(0) hue-rotate(0) brightness(100%) contrast(180%);
   }
