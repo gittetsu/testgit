@@ -5,7 +5,7 @@ var pcImages = [
 	'/img/sugi-medical/img_mv_bg_01.png',
 	'/img/sugi-medical/img_mv_bg_02.png',
 	'/img/sugi-medical/img_mv_bg_01.png',
-	'/img/sugi-medical/img_mv_bg_01.png'
+	'/img/sugi-medical/img_mv_bg_02.png'
 ];
 
 var spImages = [

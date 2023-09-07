@@ -341,7 +341,7 @@ window.addEventListener('load', function () {
         }
     })
 
-    var subMenuLists = document.querySelectorAll('.sub-menu-list li a,.sugi-holding-header .nav-footer-list li a,.sugi-holding-footer .ft-nav li a');
+    var subMenuLists = document.querySelectorAll('.sub-menu-list li a:not(.other-link),.sugi-holding-header .nav-footer-list li a,.sugi-holding-footer .ft-nav li a');
     subMenuLists.forEach(function (subMenuList) {
         subMenuList.addEventListener('click', function () {
             hamburger.classList.remove('active')

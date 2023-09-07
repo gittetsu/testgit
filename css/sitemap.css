@@ -98,10 +98,8 @@
 
   .sitemap .sitemap-list h2 a .arrow {
     top: 5px;
-  }
-
-  .sitemap .sitemap-list li a.link::before {
-    top: 10px;
+    height: 20px;
+    max-width: 20px;
   }
 
   .sitemap .sitemap-list h2 a:hover .arrow::after {
