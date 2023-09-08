@@ -647,7 +647,7 @@ window.addEventListener('load', function () {
 
     /*new-window-open-js*/
     var links = document.querySelector('a.new-window');
-    if(links){
+    if (links) {
         links.addEventListener('click', function (e) {
             e.preventDefault();
             window.open(this.getAttribute('href'), '', [
@@ -656,5 +656,5 @@ window.addEventListener('load', function () {
             ]);
         });
     }
-   
+
 });
