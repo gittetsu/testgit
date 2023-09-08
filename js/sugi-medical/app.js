@@ -82,6 +82,8 @@ function updateImages() {
 
 //height line js
 function alignElementsBasedOnHeight() {
+	const isMobile = window.innerWidth < 768; // Adjust this threshold to target smartphones
+
 	const groups = {
 		'.tab-left .common-txt': 0,
 		'.website-blk p': 0,
@@ -106,15 +108,26 @@ function alignElementsBasedOnHeight() {
 		const elements = document.querySelectorAll(selector);
 		const maxHeight = groups[selector];
 
-		elements.forEach(element => {
-			element.style.height = `${maxHeight}px`;
-		});
+		if (isMobile && selector === '.tab-left .common-txt') {
+			// For SP (smartphone) layout and the specific selector
+			elements.forEach(element => {
+				element.style.height = `${maxHeight}px`;
+			});
+		} else {
+			// For other cases, remove the height property
+			elements.forEach(element => {
+				element.style.removeProperty("height");
+			});
+		}
 	}
 }
 
-// Call the alignment function when the page loads
+// Call the alignment function when the page loads and on window resize
 window.addEventListener("resize", alignElementsBasedOnHeight);
 window.addEventListener('load', alignElementsBasedOnHeight);
+
+// Initial alignment when the page loads
+alignElementsBasedOnHeight();
 
 // tabs
 const tabs = document.querySelectorAll('[data-tab-target]')

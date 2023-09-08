@@ -246,28 +246,14 @@
     width: 51%;
   }
 
-  .search-panel form.search input[type=text] {
-    padding: 3.8% 15% 3.8% 5%;
-  }
-
   .search-panel .search-blk {
     right: 18px;
     width: 12px;
     height: 12px;
   }
 
-  .search-panel .search-blk::before {
-    width: 12px;
-    height: 12px;
-  }
-
   .search-panel .w-482 form.search input[type=text] {
     padding: 15.3% 2% 15.3% 40%;
-  }
-
-  .search-panel .tab-gp p {
-    width: 18%;
-    margin-right: 2%;
   }
 
   .search-panel .tab-gp .tab-btn {
@@ -297,10 +283,6 @@
 }
 
 @media only screen and (max-width: 767.9px) {
-  .news-search .accordion-ttl {
-    padding: 17px 19px;
-  }
-
   .news-search .accordion-content {
     margin: 0;
     padding: 0;

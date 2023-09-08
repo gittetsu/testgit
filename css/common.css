@@ -240,7 +240,7 @@ ol {
 .pdf {
   display: inline-block;
   position: relative;
-  padding-right: 37px;
+  padding-right: 46px;
   color: #048851;
   font-size: 1rem;
   font-weight: 400;
@@ -780,14 +780,7 @@ h6.common-sub-ttl {
   font-weight: 400;
 }
 
-.sugi-holding-header
-  .dropdown
-  .sub-menu
-  .list-gp
-  li
-  .sub-menu-detail
-  li
-  a::before {
+.sugi-holding-header .dropdown .sub-menu .list-gp li .sub-menu-detail li a::before {
   background: unset;
 }
 
@@ -902,8 +895,7 @@ h6.common-sub-ttl {
   left: 0;
   background: url('/img/common/ico_arrow.svg') no-repeat center/cover;
   transform: rotate(90deg);
-  filter: invert(65%) sepia(85%) saturate(2496%) hue-rotate(109deg)
-    brightness(93%) contrast(97%);
+  filter: invert(65%) sepia(85%) saturate(2496%) hue-rotate(109deg) brightness(93%) contrast(97%);
 }
 
 .sb-arrow::before {
@@ -972,15 +964,13 @@ h6.common-sub-ttl {
   height: 8px;
   background: url('/img/common/ico_arrow.svg') no-repeat center/cover;
   transform: rotate(-180deg);
-  filter: invert(100%) sepia(300%) saturate(0) hue-rotate(0) brightness(100%)
-    contrast(180%);
+  filter: invert(100%) sepia(300%) saturate(0) hue-rotate(0) brightness(100%) contrast(180%);
 }
 
 .sidebar-ttl-link:hover .sb-arrow::before,
 .accordion.open .sidebar-ttl-link:hover .sb-arrow::before {
   transform: rotate(90deg);
-  filter: invert(100%) sepia(85%) saturate(2496%) hue-rotate(109deg)
-    brightness(93%) contrast(97%);
+  filter: invert(100%) sepia(85%) saturate(2496%) hue-rotate(109deg) brightness(93%) contrast(97%);
 }
 
 .sidebar-detail .sb-detail-link {
@@ -1088,8 +1078,7 @@ h6.common-sub-ttl {
 }
 
 .accordion-ttl:hover .arrow-blk::before {
-  filter: invert(65%) sepia(18%) saturate(2496%) hue-rotate(109deg)
-    brightness(93%) contrast(97%);
+  filter: invert(65%) sepia(18%) saturate(2496%) hue-rotate(109deg) brightness(93%) contrast(97%);
 }
 
 .accordion-ttl {
@@ -1118,7 +1107,7 @@ h6.common-sub-ttl {
   display: inline-block;
   position: relative;
   width: 26px;
-  margin: 10px 0 0;
+  margin: 6.5px 0 0;
   padding: 13px;
   border: 1px solid transparent;
   background: #048851;
@@ -1649,10 +1638,8 @@ table tr th:first-child {
   bottom: 0px;
   left: 0;
   width: 100%;
-  padding: 15px 0;
-  background: transparent
-    linear-gradient(180deg, #00000000 0%, #00000033 30%, #00000099 100%) 0% 0%
-    no-repeat;
+  padding: 15px 30px;
+  background: transparent linear-gradient(180deg, #00000000 0%, #00000033 30%, #00000099 100%) 0% 0% no-repeat;
   color: #fff;
   text-align: center;
 }
@@ -1672,19 +1659,20 @@ table tr th:first-child {
   background: url('/img/common/ico_external.svg') no-repeat center/cover;
   content: '';
   max-width: 14px;
-  filter: invert(100%) sepia(300%) saturate(0) hue-rotate(0) brightness(100%)
-    contrast(180%);
+  filter: invert(100%) sepia(300%) saturate(0) hue-rotate(0) brightness(100%) contrast(180%);
 }
 
 .img-list-detail .txt-blk span {
   position: relative;
   padding-left: 30px;
   font-weight: bold;
+  display: inline-block;
+  text-align: left;
 }
 
 .img-list-detail .txt-blk span::before {
   position: absolute;
-  top: 50%;
+  top: 4px;
   left: 0;
   width: 8px;
   height: 8px;
@@ -1692,7 +1680,6 @@ table tr th:first-child {
   background: url('/img/common/ico_arrow_green.svg') no-repeat center;
   background-color: #ffffff;
   content: '';
-  transform: translateY(-50%);
   border-radius: 100%;
 }
 
@@ -1785,8 +1772,7 @@ table tr th:first-child {
 }
 
 .external-button:hover .external-text:after {
-  filter: invert(100%) sepia(300%) saturate(0) hue-rotate(0) brightness(100%)
-    contrast(180%);
+  filter: invert(100%) sepia(300%) saturate(0) hue-rotate(0) brightness(100%) contrast(180%);
 }
 
 .common-button .arrow {
@@ -1903,7 +1889,11 @@ table tr th:first-child {
 .newslist-gp .news-list .newslist-desc {
   color: #048851;
   font-weight: 700;
-  /* padding-right: 0; */
+}
+
+.newslist-desc.pdf::after {
+  margin-left: 7px;
+  bottom: -5px;
 }
 
 /* topic */
@@ -1960,7 +1950,7 @@ table tr th:first-child {
   align-items: center;
 }
 
-.cmn-pagination .cmn-pager-num + .cmn-pager-num {
+.cmn-pagination .cmn-pager-num+.cmn-pager-num {
   margin-left: 6px;
 }
 
@@ -1980,8 +1970,7 @@ table tr th:first-child {
 
 .cmn-pagination li a:hover img,
 .cmn-pagination li a.active img {
-  filter: invert(100%) sepia(300%) saturate(0) hue-rotate(0) brightness(100%)
-    contrast(180%);
+  filter: invert(100%) sepia(300%) saturate(0) hue-rotate(0) brightness(100%) contrast(180%);
 }
 
 .cmn-pagination .cmn-pager-num a:active {
@@ -2070,12 +2059,12 @@ table tr th:first-child {
   border-radius: 50%;
 }
 
-.ft-nav-banner > li {
+.ft-nav-banner>li {
   padding: 15px 30px;
   border-top: 1px solid #e6e6e6;
 }
 
-.ft-nav-banner > li:last-child {
+.ft-nav-banner>li:last-child {
   border-bottom: 1px solid #e6e6e6;
 }
 
@@ -2149,7 +2138,7 @@ footer .ft-nav {
   content: none;
 }
 
-.ft-nav ul li + li {
+.ft-nav ul li+li {
   margin-left: 15px;
   padding-left: 15px;
 }
@@ -2208,13 +2197,13 @@ footer .ft-blk {
   margin-right: 0;
 }
 
-.ft-blk .lt-ft-blk .sub-nav-list li + li {
+.ft-blk .lt-ft-blk .sub-nav-list li+li {
   position: relative;
   margin-left: 20px;
   padding-left: 20px;
 }
 
-.ft-blk .lt-ft-blk .sub-nav-list li + li::before {
+.ft-blk .lt-ft-blk .sub-nav-list li+li::before {
   position: absolute;
   top: 50%;
   left: 0;
@@ -2274,8 +2263,7 @@ footer .page-top img {
 }
 
 footer .page-top:hover img {
-  filter: invert(100%) sepia(300%) saturate(0) hue-rotate(0) brightness(100%)
-    contrast(180%);
+  filter: invert(100%) sepia(300%) saturate(0) hue-rotate(0) brightness(100%) contrast(180%);
 }
 
 /* image-modal */
@@ -2316,8 +2304,7 @@ footer .page-top:hover img {
 }
 
 .light-box-gp .zoom-in:hover .ico-zoom:after {
-  filter: invert(65%) sepia(70%) saturate(4011%) hue-rotate(145deg)
-    brightness(88%) contrast(97%);
+  filter: invert(65%) sepia(70%) saturate(4011%) hue-rotate(145deg) brightness(88%) contrast(97%);
 }
 
 .img-gp {
@@ -2582,30 +2569,14 @@ footer .page-top:hover img {
     padding: 10px 0 0 22px;
   }
 
-  .sugi-holding-header
-    .dropdown
-    .sub-menu
-    .list-gp
-    ul
-    li
-    .sub-menu-detail
-    li
-    a {
+  .sugi-holding-header .dropdown .sub-menu .list-gp ul li .sub-menu-detail li a {
     display: block;
     margin-bottom: 10px;
     padding-right: 0;
     letter-spacing: 0.1rem;
   }
 
-  .sugi-holding-header
-    .dropdown
-    .sub-menu
-    .list-gp
-    ul
-    li
-    .sub-menu-detail
-    li:last-child
-    a {
+  .sugi-holding-header .dropdown .sub-menu .list-gp ul li .sub-menu-detail li:last-child a {
     padding-bottom: 0;
   }
 
@@ -2670,7 +2641,7 @@ footer .page-top:hover img {
   }
 
   .sugi-holding-header .nav-menu.active .nav-menu-list {
-    height: 94vh;
+    height: 100vh;
     overflow-y: scroll;
   }
 
@@ -2702,8 +2673,7 @@ footer .page-top:hover img {
   }
 
   .sugi-holding-header .sub-menu-list .other-link span:after {
-    filter: invert(100%) sepia(300%) saturate(0) hue-rotate(0) brightness(100%)
-      contrast(180%);
+    filter: invert(100%) sepia(300%) saturate(0) hue-rotate(0) brightness(100%) contrast(180%);
   }
 
   .sugi-holding-header .nav-menu-list li a {
@@ -2715,6 +2685,7 @@ footer .page-top:hover img {
 
   .sugi-holding-header .nav-menu-list li.dropdown a {
     padding: 24px 20px;
+    border-bottom: 1px solid transparent;
   }
 
   .sugi-holding-header .nav-menu-list li.dropdown.show a {
@@ -2867,8 +2838,7 @@ footer .page-top:hover img {
   .accordion.open .side-gp .sidebar-ttl-link .sb-arrow::before {
     background: url('/img/common/ico_arrow.svg') no-repeat center/cover;
     transform: rotate(90deg);
-    filter: invert(100%) sepia(300%) saturate(0) hue-rotate(0) brightness(100%)
-      contrast(180%);
+    filter: invert(100%) sepia(300%) saturate(0) hue-rotate(0) brightness(100%) contrast(180%);
   }
 
   .sidebar-ttl-link .sb-arrow::before {
@@ -2876,28 +2846,24 @@ footer .page-top:hover img {
     left: 8px;
     background: url('/img/common/ico_arrow.svg') no-repeat center/cover;
     transform: rotate(90deg);
-    filter: invert(100%) sepia(300%) saturate(0) hue-rotate(0) brightness(100%)
-      contrast(180%);
+    filter: invert(100%) sepia(300%) saturate(0) hue-rotate(0) brightness(100%) contrast(180%);
   }
 
   .sidebar-ttl-link:hover .sb-arrow::before {
     top: 8px;
     left: 8px;
     transform: rotate(90deg);
-    filter: invert(100%) sepia(300%) saturate(0) hue-rotate(0) brightness(100%)
-      contrast(180%);
+    filter: invert(100%) sepia(300%) saturate(0) hue-rotate(0) brightness(100%) contrast(180%);
   }
 
   .accordion.open .sidebar-ttl-link .sb-arrow::before {
     transform: rotate(180deg);
-    filter: invert(100%) sepia(300%) saturate(0) hue-rotate(0) brightness(100%)
-      contrast(180%);
+    filter: invert(100%) sepia(300%) saturate(0) hue-rotate(0) brightness(100%) contrast(180%);
   }
 
   .accordion.open .sidebar-ttl-link:hover .sb-arrow::before {
     transform: rotate(180deg);
-    filter: invert(100%) sepia(300%) saturate(0) hue-rotate(0) brightness(100%)
-      contrast(180%);
+    filter: invert(100%) sepia(300%) saturate(0) hue-rotate(0) brightness(100%) contrast(180%);
   }
 
   .sidebar-list {
@@ -3075,8 +3041,7 @@ footer .page-top:hover img {
   .common-button:hover .arrow::after,
   .common-button.active .arrow::after {
     top: 50%;
-    filter: invert(100%) sepia(300%) saturate(0) hue-rotate(0) brightness(100%)
-      contrast(180%);
+    filter: invert(100%) sepia(300%) saturate(0) hue-rotate(0) brightness(100%) contrast(180%);
   }
 
   .cmn-pagination .cmn-pager-num a:not(.active):hover {
@@ -3089,6 +3054,20 @@ footer .page-top:hover img {
   }
 
   .cmn-pagination .cmn-pager a:hover img {
+    filter: unset;
+  }
+
+  .cmn-pagination .cmn-pager-prev a:hover,
+  .cmn-pagination .cmn-pager-next a:hover,
+  .cmn-pagination .cmn-pager-first a:hover,
+  .cmn-pagination .cmn-pager-last a:hover {
+    background-color: #fff;
+  }
+
+  .cmn-pagination .cmn-pager-prev a:hover img,
+  .cmn-pagination .cmn-pager-next a:hover img,
+  .cmn-pagination .cmn-pager-first a:hover img,
+  .cmn-pagination .cmn-pager-last a:hover img {
     filter: unset;
   }
 
@@ -3164,7 +3143,6 @@ footer .page-top:hover img {
   }
 
   .accordion-ttl:hover .arrow-blk {
-    border: 1px solid #048851;
     background-color: #048851;
   }
 
@@ -3269,6 +3247,11 @@ footer .page-top:hover img {
   }
 
   .pdf::after {
+    bottom: -8px;
+  }
+
+  .newslist-desc.pdf::after {
+    margin-left: 7px;
     bottom: -8px;
   }
 
@@ -3544,29 +3527,13 @@ footer .page-top:hover img {
     padding: 10px 0 0 22px;
   }
 
-  .sugi-holding-header
-    .dropdown
-    .sub-menu
-    .list-gp
-    ul
-    li
-    .sub-menu-detail
-    li
-    a {
+  .sugi-holding-header .dropdown .sub-menu .list-gp ul li .sub-menu-detail li a {
     margin-bottom: 10px;
     padding-right: 0;
     letter-spacing: 0.1rem;
   }
 
-  .sugi-holding-header
-    .dropdown
-    .sub-menu
-    .list-gp
-    ul
-    li
-    .sub-menu-detail
-    li:last-child
-    a {
+  .sugi-holding-header .dropdown .sub-menu .list-gp ul li .sub-menu-detail li:last-child a {
     padding-bottom: 0;
   }
 
@@ -3581,8 +3548,7 @@ footer .page-top:hover img {
     right: 10px;
     width: 11px;
     height: 11px;
-    filter: invert(100%) sepia(300%) saturate(0) hue-rotate(0) brightness(100%)
-      contrast(180%);
+    filter: invert(100%) sepia(300%) saturate(0) hue-rotate(0) brightness(100%) contrast(180%);
   }
 
   .sugi-holding-header .sub-menu-list .other-link {
@@ -3660,12 +3626,13 @@ footer .page-top:hover img {
     left: 0;
     z-index: 5;
     width: 100%;
+    padding-bottom: 300px;
     background-color: rgba(4, 136, 81, 0.95);
   }
 
   .sugi-holding-header .nav-menu.active .nav-menu-list {
     right: 0;
-    height: 92vh;
+    height: 100vh;
     overflow-y: scroll;
   }
 
@@ -3684,6 +3651,7 @@ footer .page-top:hover img {
 
   .sugi-holding-header .nav-menu-list li.dropdown a {
     padding: 24px 20px;
+    border-bottom: 1px solid transparent;
   }
 
   .sugi-holding-header .nav-menu-list .dropdown.show a {
@@ -3760,7 +3728,6 @@ footer .page-top:hover img {
   }
 
   .sugi-holding-header .nav-menu-list .nav-footer-list {
-    padding-bottom: 110px;
     background-color: rgba(0, 0, 0, 0.2);
   }
 
@@ -3830,7 +3797,6 @@ footer .page-top:hover img {
 
   .sidebar-detail {
     padding: 0 20px;
-    /*margin-bottom: 20px;*/
   }
 
   .sidebar-ttl-link {
@@ -3853,24 +3819,21 @@ footer .page-top:hover img {
   .sidebar-detail .sb-detail-link span::before {
     top: 8px;
     transform: rotate(90deg);
-    filter: invert(65%) sepia(85%) saturate(2496%) hue-rotate(109deg)
-      brightness(93%) contrast(97%);
+    filter: invert(65%) sepia(85%) saturate(2496%) hue-rotate(109deg) brightness(93%) contrast(97%);
   }
 
   .accordion.open .sidebar-ttl-link .sb-arrow::before {
     top: 6px;
     left: 6px;
     transform: rotate(180deg);
-    filter: invert(100%) sepia(300%) saturate(0) hue-rotate(0) brightness(100%)
-      contrast(180%);
+    filter: invert(100%) sepia(300%) saturate(0) hue-rotate(0) brightness(100%) contrast(180%);
   }
 
   .sidebar-ttl-link:hover .sb-arrow::before {
     top: 6px;
     left: 6px;
     transform: rotate(90deg);
-    filter: invert(100%) sepia(300%) saturate(0) hue-rotate(0) brightness(100%)
-      contrast(180%);
+    filter: invert(100%) sepia(300%) saturate(0) hue-rotate(0) brightness(100%) contrast(180%);
   }
 
   .sb-arrow::before,
@@ -3879,16 +3842,14 @@ footer .page-top:hover img {
     left: 6px;
     background: url('/img/common/ico_arrow.svg') no-repeat center/cover;
     transform: rotate(90deg);
-    filter: invert(100%) sepia(300%) saturate(0) hue-rotate(0) brightness(100%)
-      contrast(180%);
+    filter: invert(100%) sepia(300%) saturate(0) hue-rotate(0) brightness(100%) contrast(180%);
   }
 
   .accordion.open .sidebar-ttl-link:hover .sb-arrow::before {
     top: 6px;
     left: 6px;
     transform: rotate(180deg);
-    filter: invert(100%) sepia(300%) saturate(0) hue-rotate(0) brightness(100%)
-      contrast(180%);
+    filter: invert(100%) sepia(300%) saturate(0) hue-rotate(0) brightness(100%) contrast(180%);
   }
 
   .sidebar-ttl-link:hover .sb-arrow,
@@ -4021,7 +3982,7 @@ footer .page-top:hover img {
 
   .accordion-ttl .arrow-blk {
     width: 20px;
-    margin: 4px 0 0;
+    margin: 1px 0 0;
     padding: 10px;
   }
 
@@ -4172,7 +4133,7 @@ footer .page-top:hover img {
 
   /*image -list-gp both sidebar and nosidebar*/
   .img-list-detail .txt-blk {
-    padding: 15px 0;
+    padding: 15px 15px;
   }
 
   .img-list-detail a:hover .txt-blk span:before {
@@ -4184,6 +4145,7 @@ footer .page-top:hover img {
     width: 7px;
     height: 7px;
     padding: 7px;
+    top: 1px;
   }
 
   .img-list-gp .img-list-detail,
@@ -4436,8 +4398,7 @@ footer .page-top:hover img {
   .common-button:hover .arrow::after,
   .common-button.active .arrow::after {
     top: 50%;
-    filter: invert(100%) sepia(300%) saturate(0) hue-rotate(0) brightness(100%)
-      contrast(180%);
+    filter: invert(100%) sepia(300%) saturate(0) hue-rotate(0) brightness(100%) contrast(180%);
   }
 
   .external-button {

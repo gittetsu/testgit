@@ -33,7 +33,7 @@
   right: 0;
   width: 37px;
   height: 20px;
-  background: url('../../img/common/ico_pdf.svg') no-repeat center/cover;
+  background: url('/img/common/ico_pdf.svg') no-repeat center/cover;
   content: '';
 }
 

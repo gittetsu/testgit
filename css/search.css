@@ -62,23 +62,13 @@
   position: relative;
   width: 100%;
   height: 50px;
-  padding: 18px 15px;
+  padding: 18px 35px 18px 15px;
   border: 1px solid #ddd;
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 0.875rem;
   font-weight: 400;
   outline: none;
   border-radius: 3px;
-}
-
-.search-panel .search input[type=text]::-webkit-input-placeholder {
-  /* Edge */
-  font-family: 'Noto Sans JP', sans-serif;
-}
-
-.search-panel .search input[type=text]:-ms-input-placeholder {
-  /* Internet Explorer 10-11 */
-  font-family: 'Noto Sans JP', sans-serif;
 }
 
 .search-panel .search input[type=text]::placeholder {
@@ -185,7 +175,7 @@
   left: 0;
   width: 14px;
   height: 14px;
-  background: url(/img/common/ico_search.png) no-repeat center/cover;
+  background: url('/img/common/ico_search.png') no-repeat center/cover;
   content: '';
 }
 

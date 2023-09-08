@@ -102,6 +102,12 @@
     max-width: 20px;
   }
 
+  .sitemap .sitemap-list li a.link:before {
+    top: 10px;
+    width: 4px;
+    height: 4px;
+  }
+
   .sitemap .sitemap-list h2 a:hover .arrow::after {
     filter: unset;
   }

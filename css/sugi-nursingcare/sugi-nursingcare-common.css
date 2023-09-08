@@ -102,7 +102,7 @@ body {
   z-index: -1;
   width: 83.5%;
   height: 100%;
-  background: url(../../img/sugi-nursingcare/img_nursing_care-bg.png) no-repeat top/contain;
+  background: url('/img/sugi-nursingcare/img_nursing_care-bg.png') no-repeat top/contain;
   content: '';
 }
 
@@ -221,7 +221,7 @@ h3.common-nursing-subttl {
   right: 33px;
   width: 12px;
   height: 12px;
-  background: url(../../img/sugi-nursingcare/icon_external_link.svg) no-repeat center/100% 100%;
+  background: url('/img/sugi-nursingcare/icon_external_link.svg') no-repeat center/100% 100%;
   content: '';
 }
 
@@ -271,7 +271,7 @@ h3.common-nursing-subttl {
   left: 50%;
   width: 4px;
   height: 6px;
-  background: url('../../img/common/ico_next_pagination.svg')no-repeat center/contain;
+  background: url('/img/common/ico_next_pagination.svg')no-repeat center/contain;
   content: '';
   transform: translate(-50%, -50%);
   filter: invert(15%) sepia(105%) saturate(5934%) hue-rotate(347deg) brightness(96%) contrast(94%);
@@ -329,7 +329,7 @@ h3.common-nursing-subttl {
   left: 50%;
   width: 4px;
   height: 6px;
-  background: url('../../img/common/ico_next_pagination.svg')no-repeat center/contain;
+  background: url('/img/common/ico_next_pagination.svg')no-repeat center/contain;
   content: '';
   transform: translate(-50%, -50%);
   filter: invert(100%) sepia(300%) saturate(0) hue-rotate(0) brightness(100%) contrast(180%);
@@ -675,7 +675,7 @@ ul.service-list li.service-list-item .service-txtblk {
   z-index: 1;
   width: 6px;
   height: 10px;
-  background: url('../../img/common/ico_next_pagination.svg')no-repeat center/contain;
+  background: url('/img/common/ico_next_pagination.svg')no-repeat center/contain;
   content: "";
   transform: translateY(-50%);
   filter: invert(100%) sepia(300%) saturate(0) hue-rotate(0) brightness(100%) contrast(180%);
@@ -753,7 +753,7 @@ footer.ft-nursing-care .ft-blk .sugi-holding-link::after {
   right: 0;
   width: 12px;
   height: 12px;
-  background: url('../../img/common/sugi-nursing/ico_new_link.png')no-repeat center/contain;
+  background: url('/img/common/sugi-nursing/ico_new_link.png')no-repeat center/contain;
   content: "";
   transform: translateY(-50%);
 }
@@ -843,7 +843,7 @@ footer.ft-nursing-care .page-top img {
 
   .sugi-nursing-header .nav-menu-list {
     flex-direction: column;
-    height: 92vh;
+    height: 100vh;
     overflow-y: scroll;
   }
 
@@ -873,7 +873,7 @@ footer.ft-nursing-care .page-top img {
     z-index: 1;
     width: 6px;
     height: 8px;
-    background: url("../../img/common/ico_next_pagination.svg")no-repeat center/contain;
+    background: url('/img/common/ico_next_pagination.svg')no-repeat center/contain;
     content: "";
     transform: translateY(-50%);
     filter: brightness(0) saturate(100%) invert(15%) sepia(100%) saturate(3872%) hue-rotate(346deg) brightness(92%) contrast(96%);
@@ -911,7 +911,7 @@ footer.ft-nursing-care .page-top img {
     right: 23px;
     width: 14px;
     height: 14px;
-    background: url('../../img/common/sugi-nursing/ico_external.png')no-repeat center/contain;
+    background: url('/img/common/sugi-nursing/ico_external.png')no-repeat center/contain;
     content: "";
     transform: translateY(-50%);
   }
@@ -1005,7 +1005,8 @@ footer.ft-nursing-care .page-top img {
 
   .sugi-nursing-header .nav-menu-list {
     flex-direction: column;
-    height: 92vh;
+    height: 100vh;
+    padding-bottom: 300px;
     overflow-y: scroll;
   }
 
@@ -1035,7 +1036,7 @@ footer.ft-nursing-care .page-top img {
     z-index: 1;
     width: 6px;
     height: 8px;
-    background: url("../../img/common/ico_next_pagination.svg")no-repeat center/contain;
+    background: url('/img/common/ico_next_pagination.svg')no-repeat center/contain;
     content: "";
     transform: translateY(-50%);
     filter: brightness(0) saturate(100%) invert(15%) sepia(100%) saturate(3872%) hue-rotate(346deg) brightness(92%) contrast(96%);
@@ -1059,7 +1060,6 @@ footer.ft-nursing-care .page-top img {
   }
 
   .sugi-nursing-header .nav-menu .nav-footer-list {
-    padding-bottom: 130px;
     background-color: rgba(0, 0, 0, 0.2);
   }
 
@@ -1073,7 +1073,7 @@ footer.ft-nursing-care .page-top img {
     right: 23px;
     width: 14px;
     height: 14px;
-    background: url('../../img/common/sugi-nursing/ico_external.png')no-repeat center/contain;
+    background: url('/img/common/sugi-nursing/ico_external.png')no-repeat center/contain;
     content: "";
     transform: translateY(-50%);
   }

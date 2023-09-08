@@ -98,7 +98,7 @@
   left: 50%;
   width: 7px;
   height: 14px;
-  background: url('../../img/sugi-nursingcare/icon_quest_word.png') no-repeat center/contain;
+  background: url('/img/sugi-nursingcare/icon_quest_word.png') no-repeat center/contain;
   content: '';
   transform: translate(-50%, -50%);
 }
@@ -247,7 +247,7 @@ ul.nursing-newslist-blk li .nursing-news-list::before {
   z-index: 1;
   width: 6px;
   height: 10px;
-  background: url('../../img/common/ico_next_pagination.svg')no-repeat center/contain;
+  background: url('/img/common/ico_next_pagination.svg')no-repeat center/contain;
   content: "";
   transform: translateY(-50%);
   filter: invert(100%) sepia(300%) saturate(0) hue-rotate(0) brightness(100%) contrast(180%);

@@ -110,7 +110,7 @@
 
 .location-btn-blk {
   padding: 7.33% 9.75%;
-  background: url('../img/property-info/img_location_btn_bg.png') no-repeat center/cover;
+  background: url('/img/property-info/img_location_btn_bg.png') no-repeat center/cover;
 }
 
 .location-btn-blk .location-btn-list {
@@ -135,7 +135,7 @@
   top: 5px;
   width: 14px;
   height: 14px;
-  background: url(../img/common/ico_external.svg) no-repeat center/cover;
+  background: url('/img/common/ico_external.svg') no-repeat center/cover;
   background-color: unset;
   transform: unset;
   border-radius: unset;

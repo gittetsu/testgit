@@ -15,7 +15,7 @@
 }
 
 .smile-work .works:not(:last-of-type) {
-  background: url("/img/common/sugi-smile/img_sugi_smile_bottom_bg.png") no-repeat bottom/contain;
+  background: url('/img/common/sugi-smile/img_sugi_smile_bottom_bg.png') no-repeat bottom/contain;
 }
 
 .smile-work .cleaning-list {
@@ -63,7 +63,7 @@
   left: 0;
   width: 36px;
   height: 31px;
-  background: url("/img/sugi-smile/ico_comment_dots.svg") no-repeat center/contain;
+  background: url('/img/sugi-smile/ico_comment_dots.svg') no-repeat center/contain;
   content: "";
   transform: translateY(-50%);
 }
