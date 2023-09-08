@@ -131,12 +131,11 @@
 
 
 .top .sec-news .common-button .arrow {
-  top: 50%;
+  top: 25px;
   right: 20px;
   width: 24px;
   height: 24px;
   background-color: #f5faed;
-  transform: translateY(-50%);
 }
 
 .top .sec-news .common-button .arrow::after,
@@ -508,6 +507,51 @@
 
   .top .sec-medical-gp .medical-snc .btn-gp .external-btn:first-child {
     margin-right: 1.5%;
+  }
+
+  .top .sec-news .common-button:hover .arrow::after,
+  .top .sec-news .common-button:active .arrow:after,
+  .top .sec-news .common-button.active .arrow::after {
+    filter: unset;
+  }
+
+
+  .top .sec-news .tab-list .tab-left .common-button.active:hover {
+    background-color: #f5faed;
+    color: #7fbe26;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    border-radius: 5px;
+  }
+
+  .top .sec-news .tab-list .tab-left .common-button:active:hover .arrow:after,
+  .top .sec-news .tab-list .tab-left .common-button.active:hover .arrow:after {
+    background: url(/img/sugi-medical/ico_arrow_white.svg) no-repeat center/cover;
+  }
+
+  .top .sec-news .tab-list .tab-left .common-button:hover {
+    background-color: transparent;
+    color: #000;
+    border-top: 1px solid #e6e6e6;
+    border-radius: unset;
+  }
+
+  .top .sec-news .common-button:active:hover .arrow,
+  .top .sec-news .common-button.active:hover .arrow {
+    background-color: #7fbe26;
+  }
+
+  .top .sec-news .common-button:hover .arrow {
+    background-color: #f5faed;
+  }
+
+  .top .sec-news .common-button:active .arrow:after,
+  .top .sec-news .common-button.active .arrow::after {
+    background: url(/img/sugi-medical/ico_arrow_white.svg) no-repeat center/cover;
+  }
+
+  .top .sec-news .common-button:hover .arrow::after {
+    background: url(/img/sugi-medical/ico_arrow_green.svg) no-repeat center/cover;
   }
 }
 
