@@ -96,6 +96,7 @@
   .healthcare-services .sec-digital-member .common-box dt,
   .healthcare-services .sec-digital-member .common-box dd {
     width: 100%;
+    text-align: center;
   }
 
   .healthcare-services .sec-digital-member .common-box dd {
