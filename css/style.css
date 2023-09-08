@@ -748,15 +748,15 @@
 }
 
 .category-list-item01 {
-  background: url(/img/img_investors.jpg) no-repeat center/cover;
+  background: url('/img/img_investors.jpg') no-repeat center/cover;
 }
 
 .category-list-item02 {
-  background: url(/img/img_property.jpg) no-repeat center/cover;
+  background: url('/img/img_property.jpg') no-repeat center/cover;
 }
 
 .category-list-item03 {
-  background: url(/img/img_recruit.jpg) no-repeat center/cover;
+  background: url('/img/img_recruit.jpg') no-repeat center/cover;
 }
 
 .category-list-ttl {
@@ -1734,7 +1734,7 @@
   /* sustainablility section */
   .sec-sustainable {
     padding: 90px 20px 91px 20px;
-    background: url(/img/img_sustainability_sp.png) no-repeat bottom/contain;
+    background: url('/img/img_sustainability_sp.png') no-repeat bottom/contain;
   }
 
   .sustainable-blk {
@@ -1873,15 +1873,15 @@
   }
 
   .category-list-item01 {
-    background: url(/img/img_investors_sp.jpg) no-repeat center/cover;
+    background: url('/img/img_investors_sp.jpg') no-repeat center/cover;
   }
 
   .category-list-item02 {
-    background: url(/img/img_property_sp.jpg) no-repeat center/cover;
+    background: url('/img/img_property_sp.jpg') no-repeat center/cover;
   }
 
   .category-list-item03 {
-    background: url(/img/img_recruit_sp.jpg) no-repeat center/cover;
+    background: url('/img/img_recruit_sp.jpg') no-repeat center/cover;
   }
 
   .category-list-ttl {
