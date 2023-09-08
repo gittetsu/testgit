@@ -1107,7 +1107,7 @@ h6.common-sub-ttl {
   display: inline-block;
   position: relative;
   width: 26px;
-  margin: 10px 0 0;
+  margin: 6.5px 0 0;
   padding: 13px;
   border: 1px solid transparent;
   background: #048851;
@@ -2680,6 +2680,7 @@ footer .page-top:hover img {
 
   .sugi-holding-header .nav-menu-list li.dropdown a {
     padding: 24px 20px;
+    border-bottom: 1px solid transparent;
   }
 
   .sugi-holding-header .nav-menu-list li.dropdown.show a {
@@ -3051,6 +3052,20 @@ footer .page-top:hover img {
     filter: unset;
   }
 
+  .cmn-pagination .cmn-pager-prev a:hover,
+  .cmn-pagination .cmn-pager-next a:hover,
+  .cmn-pagination .cmn-pager-first a:hover,
+  .cmn-pagination .cmn-pager-last a:hover {
+    background-color: #fff;
+  }
+
+  .cmn-pagination .cmn-pager-prev a:hover img,
+  .cmn-pagination .cmn-pager-next a:hover img,
+  .cmn-pagination .cmn-pager-first a:hover img,
+  .cmn-pagination .cmn-pager-last a:hover img {
+    filter: unset;
+  }
+
   /* tab-list-01 */
 
   .tab-list-01 li a:hover {
@@ -3123,7 +3138,6 @@ footer .page-top:hover img {
   }
 
   .accordion-ttl:hover .arrow-blk {
-    border: 1px solid #048851;
     background-color: #048851;
   }
 
@@ -3627,6 +3641,7 @@ footer .page-top:hover img {
 
   .sugi-holding-header .nav-menu-list li.dropdown a {
     padding: 24px 20px;
+    border-bottom: 1px solid transparent;
   }
 
   .sugi-holding-header .nav-menu-list .dropdown.show a {
@@ -3772,7 +3787,6 @@ footer .page-top:hover img {
 
   .sidebar-detail {
     padding: 0 20px;
-    /*margin-bottom: 20px;*/
   }
 
   .sidebar-ttl-link {
@@ -3958,7 +3972,7 @@ footer .page-top:hover img {
 
   .accordion-ttl .arrow-blk {
     width: 20px;
-    margin: 4px 0 0;
+    margin: 1px 0 0;
     padding: 10px;
   }
 
