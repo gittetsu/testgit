@@ -240,7 +240,7 @@ ol {
 .pdf {
   display: inline-block;
   position: relative;
-  padding-right: 37px;
+  padding-right: 46px;
   color: #048851;
   font-size: 1rem;
   font-weight: 400;
@@ -1891,6 +1891,11 @@ table tr th:first-child {
   font-weight: 700;
 }
 
+.newslist-desc.pdf::after {
+  margin-left: 7px;
+  bottom: -5px;
+}
+
 /* topic */
 .topics-gp .topics-list {
   border-top: 1px solid #e6e6e6;
@@ -3242,6 +3247,11 @@ footer .page-top:hover img {
   }
 
   .pdf::after {
+    bottom: -8px;
+  }
+
+  .newslist-desc.pdf::after {
+    margin-left: 7px;
     bottom: -8px;
   }
 
