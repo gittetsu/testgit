@@ -78,7 +78,6 @@
 .sec-medi-contact .contact-form .input-container .input-box .input-d-flex {
   display: flex;
   justify-content: flex-start;
-  /* align-items: center; */
   width: 100%;
 }
 
@@ -193,21 +192,6 @@
 .sec-medi-contact .contact-form .input-container input[type='email'].error {
   border: 1px solid #d6365c;
 }
-
-/* .sec-medi-contact .contact-form .input-container .err-msg .exclamation {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 20px;
-  height: 20px;
-  line-height: 1;
-  margin-right: 4px;
-  padding-left: 2px;
-  background-color: #d6365c;
-  color: #fff;
-  font-size: 0.75rem;
-  border-radius: 50%;
-} */
 
 .sec-medi-contact .contact-form .input-container .any {
   margin-right: 10px;

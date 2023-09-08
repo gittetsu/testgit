@@ -71,16 +71,6 @@
   border-radius: 3px;
 }
 
-.search-panel .search input[type=text]::-webkit-input-placeholder {
-  /* Edge */
-  font-family: 'Noto Sans JP', sans-serif;
-}
-
-.search-panel .search input[type=text]:-ms-input-placeholder {
-  /* Internet Explorer 10-11 */
-  font-family: 'Noto Sans JP', sans-serif;
-}
-
 .search-panel .search input[type=text]::placeholder {
   font-family: 'Noto Sans JP', sans-serif;
 }

@@ -204,7 +204,7 @@
 
 /* Main Sugi Smile */
 .sugi-smile-wrapper {
-  background: #f6fff5 url(/img/common/sugi-smile/img_sugi_smile_bg.png) no-repeat top/contain;
+  background: #f6fff5 url('/img/common/sugi-smile/img_sugi_smile_bg.png') no-repeat top/contain;
   font-family: 'Zen Maru Gothic', sans-serif;
   font-weight: 400;
 }
