@@ -1638,7 +1638,7 @@ table tr th:first-child {
   bottom: 0px;
   left: 0;
   width: 100%;
-  padding: 15px 0;
+  padding: 15px 30px;
   background: transparent linear-gradient(180deg, #00000000 0%, #00000033 30%, #00000099 100%) 0% 0% no-repeat;
   color: #fff;
   text-align: center;
@@ -1666,11 +1666,13 @@ table tr th:first-child {
   position: relative;
   padding-left: 30px;
   font-weight: bold;
+  display: inline-block;
+  text-align: left;
 }
 
 .img-list-detail .txt-blk span::before {
   position: absolute;
-  top: 50%;
+  top: 4px;
   left: 0;
   width: 8px;
   height: 8px;
@@ -1678,7 +1680,6 @@ table tr th:first-child {
   background: url('/img/common/ico_arrow_green.svg') no-repeat center;
   background-color: #ffffff;
   content: '';
-  transform: translateY(-50%);
   border-radius: 100%;
 }
 
@@ -4122,7 +4123,7 @@ footer .page-top:hover img {
 
   /*image -list-gp both sidebar and nosidebar*/
   .img-list-detail .txt-blk {
-    padding: 15px 0;
+    padding: 15px 15px;
   }
 
   .img-list-detail a:hover .txt-blk span:before {
@@ -4134,6 +4135,7 @@ footer .page-top:hover img {
     width: 7px;
     height: 7px;
     padding: 7px;
+    top: 1px;
   }
 
   .img-list-gp .img-list-detail,
