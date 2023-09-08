@@ -3,9 +3,12 @@
 
 <head>
 	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
 	<meta name="description" content="スギナーシングケアのサービス内容、採用情報に関するご質問は専用のお問い合わせフォームをご利用ください。">
+	<meta property="og:image" content="/img/sugi-nursingcare/img_ogp.jpg">
 	<title>お問い合わせ | スギナーシングケア</title>
+	<link rel="shortcut icon" href="/img/sugi-nursingcare/favicon.ico">
 	<link rel="stylesheet" href="/css/reset.css">
 	<link rel="stylesheet" href="/css/common.css">
 	<link rel="stylesheet" href="/css/sugi-nursingcare/sugi-nursingcare-common.css">
@@ -40,15 +43,15 @@
 						<div class="input-box">
 							<div class="input-d-flex">
 								<div class="input">
-								<input type="text" id="surname" name="surname" value="" placeholder="姓" class="name-input">
-								<p class="err-msg d-flex" id="surname-error"><span>必須につき入力をお願いします</span></p>
+									<input type="text" id="surname" name="surname" value="" placeholder="姓" class="name-input">
+									<p class="err-msg d-flex" id="surname-error"><span>必須につき入力をお願いします</span></p>
+								</div>
+								<div class="input">
+									<input type="text" id="lastname" name="lastname" value="" placeholder="名" class="name-input">
+									<p class="err-msg d-flex" id="name-error"><span>必須につき入力をお願いします</span></p>
+								</div>
 							</div>
-							<div class="input">
-								<input type="text" id="lastname" name="lastname" value="" placeholder="名" class="name-input">
-								<p class="err-msg d-flex" id="name-error"><span>必須につき入力をお願いします</span></p>
-							</div>
-							</div>
-							
+
 						</div>
 					</div>
 					<div class="input-container">
@@ -63,8 +66,8 @@
 									<input type="text" id="furiName" name="furiName" value="" placeholder="メイ" class="name-input">
 									<p class="err-msg d-flex" id="furiName-error"><span>必須につき入力をお願いします</span></p>
 								</div>
-								
-								
+
+
 							</div>
 						</div>
 					</div>
@@ -81,9 +84,11 @@
 								<input type="text" id="phoneNumber" name="phoneNumber" value="" maxlength="3" placeholder="090"
 									class="ph-input prefix">
 								<span class="dashed"></span>
-								<input type="text" name="phoneNoFirst" id="phoneNoFirst" value="" maxlength="4" placeholder="0000" class="ph-input">
+								<input type="text" name="phoneNoFirst" id="phoneNoFirst" value="" maxlength="4" placeholder="0000"
+									class="ph-input">
 								<span class="dashed"></span>
-								<input type="text" name="phoneNoLast" id="phoneNoLast" value="" maxlength="4" placeholder="0000" class="ph-input">
+								<input type="text" name="phoneNoLast" id="phoneNoLast" value="" maxlength="4" placeholder="0000"
+									class="ph-input">
 							</div>
 							<p class="err-msg d-flex" id="phno-error"><span>必須につき入力をお願いします</span></p>
 						</div>
@@ -114,9 +119,9 @@
 					<div class="input-container">
 						<label for="description" class="form-label"><span class="required">必須</span>お問い合わせ内容</label>
 						<div class="textarea">
-						<textarea id="description" name="description" rows="3"></textarea>
-						<p class="err-msg d-flex" id="description-error"><span>必須につき入力をお願いします</span></p>
-					</div>
+							<textarea id="description" name="description" rows="3"></textarea>
+							<p class="err-msg d-flex" id="description-error"><span>必須につき入力をお願いします</span></p>
+						</div>
 					</div>
 					<div class="input-container aggreement-gp">
 						<label for="agreement" class="req-label mb-20"><span class="required">必須</span>個人情報の取扱いへの同意</label>
@@ -125,17 +130,17 @@
 							<ul class="agreement mb-30">
 								<li class="mb-sp-20">お客様の個人情報は厳重に取り扱い、お問い合わせ対応および当社からの情報提供を目的として利用させていただきます。</li>
 								<li>
-									個人情報の取り扱いにおきましては、<a href="/privacypolicy#privacy-policy"
-									class="policy-link" target="_blank">当社プライバシーポリシー</a>をご確認ください。
+									個人情報の取り扱いにおきましては、<a href="/privacypolicy#privacy-policy" class="policy-link"
+										target="_blank">当社プライバシーポリシー</a>をご確認ください。
 								</li>
 							</ul>
 							<div class="mb-40 mb-sp-30">
-							<div class="agreement-check">
-								<input type="checkbox" id="agreement" name="agreement" value="">
-								<label for="agreement" class="checkbox-label">同意する</label>
+								<div class="agreement-check">
+									<input type="checkbox" id="agreement" name="agreement" value="">
+									<label for="agreement" class="checkbox-label">同意する</label>
+								</div>
+								<p class="err-msg d-flex" id="agreement-check-error"><span>必須につき入力をお願いします</span></p>
 							</div>
-							<p class="err-msg d-flex" id="agreement-check-error"><span>必須につき入力をお願いします</span></p>
-						</div>
 						</div>
 					</div>
 					<div class="confirm-pg">
@@ -149,7 +154,8 @@
 				<h3 class="common-nursing-subttl">まずは、スギナーシングケアにご相談ください。</h3>
 			</div>
 		</section><!-- /.sec-nurcare-consult -->
-	</div><!--/.nursing-care-wrapper -->
+	</div>
+	<!--/.nursing-care-wrapper -->
 	<div class="sugi-nursing-contact">
 		<div class="inner">
 			<div class="ft-contact-bnr">
@@ -190,7 +196,8 @@
 				</div>
 			</div>
 		</div>
-	</div><!--/.sugi-nursing-contact -->
+	</div>
+	<!--/.sugi-nursing-contact -->
 	<footer data-include="/include/nursing-care-footer.html"></footer>
 	<script src="/js/load.js"></script>
 	<script src="/js/common.js"></script>
