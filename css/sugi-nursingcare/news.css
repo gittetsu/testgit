@@ -108,9 +108,10 @@
   width: 14px;
   height: 14px;
   margin: 0;
+  border: none;
+  background: transparent;
   cursor: pointer;
   transform: translateY(-50%);
-  border-radius: 3px;
 }
 
 .search-panel .search-blk::before {
@@ -276,25 +277,14 @@
 }
 
 .news .cmn-pagination .cmn-pager-num a {
-  padding: 1px 0;
   background-color: #edeadf;
   color: #e6172c;
-  transition: all 0.2s;
 }
 
-.news .cmn-pagination .cmn-pager-num a.active {
+.news .cmn-pagination li a:hover,
+.news .cmn-pagination li a.active {
   background-color: #e6172c;
   color: #fff;
-}
-
-.news .cmn-pagination .cmn-pager-num a:hover,
-.news .cmn-pagination .cmn-pager-prev a:hover,
-.news .cmn-pagination .cmn-pager-first a:hover,
-.news .cmn-pagination .cmn-pager-next a:hover,
-.news .cmn-pagination .cmn-pager-last a:hover {
-  background-color: #e6172c;
-  color: #fff;
-  transition: all 0.2s;
 }
 
 /*I-pad*/
@@ -361,6 +351,21 @@
   }
 
   .search-panel form.search .filter-btn button:hover span::before {
+    filter: unset;
+  }
+
+  .news .cmn-pagination .cmn-pager-num a:not(.active):hover {
+    background-color: #edeadf;
+    color: #e6172c;
+  }
+
+  .news .cmn-pagination .cmn-pager a:hover {
+    background-color: #fff;
+    border: 1px solid #e6172c;
+  }
+
+  .news .cmn-pagination .cmn-pager a:hover img,
+  .news .cmn-pagination .cmn-pager a.active img {
     filter: unset;
   }
 }
@@ -483,6 +488,10 @@
     align-items: flex-start;
   }
 
+  .news .cmn-pagination .cmn-pager-num a {
+    padding: 5.1px 0;
+  }
+
   .search-panel .tab-gp .tab-btn a:hover {
     background-color: #fff;
     color: #000;
@@ -501,6 +510,21 @@
   }
 
   .search-panel form.search .filter-btn button:hover span::before {
+    filter: unset;
+  }
+
+  .news .cmn-pagination .cmn-pager-num a:not(.active):hover {
+    background-color: #edeadf;
+    color: #e6172c;
+  }
+
+  .news .cmn-pagination .cmn-pager a:hover {
+    background-color: #fff;
+    border: 1px solid #e6172c;
+  }
+
+  .news .cmn-pagination .cmn-pager a:hover img,
+  .news .cmn-pagination .cmn-pager a.active img {
     filter: unset;
   }
 }

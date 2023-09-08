@@ -602,6 +602,26 @@
     letter-spacing: 1.4px;
   }
 
+  .top .sec-news .tab-list .tab-left .common-button:hover {
+    background-color: transparent;
+    color: #000;
+    border-top: 1px solid #e6e6e6;
+  }
+
+  .top .sec-news .common-button:hover .arrow {
+    background-color: #f5faed;
+  }
+
+  .top .sec-news .common-button.active:hover .arrow {
+    background-color: #7fbe26;
+  }
+
+  .top .sec-news .tab-list .tab-left .common-button.active:hover {
+    background-color: #f5faed;
+    color: #7fbe26;
+    border-top: 1px solid transparent;
+  }
+
   .top .sec-news .tab-list .tab-left li:nth-child(5n) .common-button,
   .top .sec-news .tab-list .tab-left li:last-child .common-button {
     border-bottom: 0;
@@ -616,6 +636,14 @@
   .top .sec-news .common-button .arrow::after,
   .top .sec-news .common-button.active .arrow::after {
     transform: translateY(-50%) rotate(90deg);
+    filter: unset;
+  }
+
+  .top .sec-news .common-button:hover .arrow::after {
+    filter: invert(40%) sepia(97%) saturate(383%) hue-rotate(39deg) brightness(91%) contrast(100%);
+  }
+
+  .top .sec-news .common-button.active:hover .arrow::after {
     filter: unset;
   }
 

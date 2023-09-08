@@ -661,6 +661,19 @@ footer.ft-medical .page-top:hover img {
     letter-spacing: 1.4px;
   }
 
+  .common-btn:hover,
+  .external-btn:hover {
+    border: 2px solid transparent;
+    box-shadow: inset 0px 3px 6px #00000029;
+    background: transparent linear-gradient(66deg, #048851 0%, #7fbe26 100%) 0% 0% no-repeat;
+    color: #fff;
+  }
+
+  .common-btn:hover:after,
+  .external-btn:hover:after {
+    filter: unset;
+  }
+
   .external-btn {
     font-size: 1rem;
     max-width: 162px;

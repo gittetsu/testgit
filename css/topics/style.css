@@ -89,9 +89,10 @@
   width: 14px;
   height: 14px;
   margin: 0;
+  border: none;
+  background: transparent;
   cursor: pointer;
   transform: translateY(-50%);
-  border-radius: 3px;
 }
 
 .search-panel .search-blk::before {

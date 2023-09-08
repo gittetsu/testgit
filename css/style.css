@@ -138,7 +138,7 @@
 .top .sec-news .tab-list .tab-left .common-button {
   width: 100%;
   line-height: 1.6;
-  padding: 23px 40px 22px 27px;
+  padding: 23px 45px 22px 27px;
   border: none;
   background-color: transparent;
   color: #000;
@@ -742,20 +742,21 @@
 
 .category-list-blk {
   display: block;
+  position: relative;
   padding: 44.4% 0 38.4%;
   text-align: center;
 }
 
 .category-list-item01 {
-  background: url(/img/img_investors.jpg) no-repeat center/cover;
+  background: url('/img/img_investors.jpg') no-repeat center/cover;
 }
 
 .category-list-item02 {
-  background: url(/img/img_property.jpg) no-repeat center/cover;
+  background: url('/img/img_property.jpg') no-repeat center/cover;
 }
 
 .category-list-item03 {
-  background: url(/img/img_recruit.jpg) no-repeat center/cover;
+  background: url('/img/img_recruit.jpg') no-repeat center/cover;
 }
 
 .category-list-ttl {
@@ -1002,6 +1003,28 @@
     letter-spacing: 0px;
   }
 
+  /* sec-news */
+  .top .sec-news .tab-list .tab-left .common-button:hover {
+    background-color: transparent;
+    color: #000;
+    border-top: 1px solid #e6e6e6;
+  }
+
+  .top .sec-news .tab-list .tab-left .common-button.active:hover {
+    background-color: #048851;
+    color: #ffffff;
+    border-top: 1px solid transparent;
+  }
+
+  .top .sec-news .tab-list .tab-left .common-button:active .arrow,
+  .top .sec-news .tab-list .tab-left .common-button.active .arrow {
+    background-color: #fff;
+  }
+
+  .top .sec-news .tab-list .tab-left .common-button.active .arrow::after {
+    filter: unset;
+  }
+
   /* sec-topics */
   .top .sec-topics .topics-slider .topics-item {
     flex: 0 0 260px;
@@ -1040,6 +1063,11 @@
 
   .gp-circle-item {
     width: 31.5%;
+  }
+
+  .pharmacy-gp-blk .pharmacy-gp-tablist li a:hover {
+    background-color: transparent;
+    color: #fff;
   }
 
   /*sustainablility section*/
@@ -1343,7 +1371,7 @@
     line-height: 1.6;
     padding: 12px 29px;
     letter-spacing: 1.9px;
-    border-top: none;
+    border-top: 1px solid transparent;
     border-right: 1px solid #e6e6e6;
     border-radius: unset;
     border-left: 1px solid transparent;
@@ -1354,6 +1382,16 @@
     border-right: 1px solid transparent;
     border-left: 1px solid transparent;
     border-radius: 5px;
+  }
+
+  .top .sec-news .tab-list .tab-left .common-button:hover {
+    background-color: transparent;
+    color: #000;
+  }
+
+  .top .sec-news .tab-list .tab-left .common-button.active:hover {
+    background-color: #048851;
+    color: #ffffff;
   }
 
   .top .sec-news .tab-list .tab-left .common-button .arrow {
@@ -1696,7 +1734,7 @@
   /* sustainablility section */
   .sec-sustainable {
     padding: 90px 20px 91px 20px;
-    background: url(/img/img_sustainability_sp.png) no-repeat bottom/contain;
+    background: url('/img/img_sustainability_sp.png') no-repeat bottom/contain;
   }
 
   .sustainable-blk {
@@ -1809,20 +1847,41 @@
   }
 
   .category-list-blk {
-    position: relative;
-    padding: 19% 20px 15.5%;
+    padding: 19.2% 20px 9.1%;
+  }
+
+  .cmm-list-item .common-button {
+    position: unset;
+    padding: 0;
+    padding: 0;
+    background-color: transparent;
+    max-width: 100%;
+  }
+
+  .cmm-list-item .common-button .arrow {
+    top: 50%;
+    right: 20px;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    background: #ffffff;
+    transform: translateY(-50%);
+  }
+
+  .cmm-list-item .common-button .arrow:after {
+    filter: invert(65%) sepia(70%) saturate(4384%) hue-rotate(139deg) brightness(83%) contrast(100%);
   }
 
   .category-list-item01 {
-    background: url(/img/img_investors_sp.jpg) no-repeat center/cover;
+    background: url('/img/img_investors_sp.jpg') no-repeat center/cover;
   }
 
   .category-list-item02 {
-    background: url(/img/img_property_sp.jpg) no-repeat center/cover;
+    background: url('/img/img_property_sp.jpg') no-repeat center/cover;
   }
 
   .category-list-item03 {
-    background: url(/img/img_recruit_sp.jpg) no-repeat center/cover;
+    background: url('/img/img_recruit_sp.jpg') no-repeat center/cover;
   }
 
   .category-list-ttl {
@@ -1836,45 +1895,6 @@
     top: -37px;
     font-size: 2.5rem;
     letter-spacing: 2px;
-  }
-
-
-  .image-link .img-arrow-link {
-    position: absolute;
-    top: 53%;
-    right: 20px;
-    width: 24px;
-    height: 24px;
-    background: #ffffff;
-    content: '';
-    transform: translateY(-50%);
-    border-radius: 50%;
-  }
-
-  .image-link .img-arrow-link::before {
-    display: block;
-    position: absolute;
-    top: 50%;
-    right: 8px;
-    width: 8px;
-    height: 2px;
-    background-color: #048851;
-    content: '';
-    transform: translateY(-50%);
-  }
-
-  .image-link .img-arrow-link::after {
-    position: absolute;
-    top: 50%;
-    right: 8px;
-    width: 4px;
-    height: 4px;
-    background-color: unset;
-    content: '';
-    transform: translate(0, -50%) rotate(45deg);
-    border-top: 2px solid #048851;
-    border-right: 2px solid #048851;
-    border-radius: unset;
   }
 
 

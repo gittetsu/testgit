@@ -231,10 +231,6 @@ ul.nursing-newslist-blk li:first-child {
   border-top: 1px solid #e9e6da;
 }
 
-ul.nursing-newslist-blk li:hover .nursing-news-list::after {
-  background: url('/img/sugi-nursingcare/icon_circle_arrow_hover.png') no-repeat center/cover;
-}
-
 ul.nursing-newslist-blk li .nursing-news-list {
   display: block;
   position: relative;
@@ -244,15 +240,39 @@ ul.nursing-newslist-blk li .nursing-news-list {
   letter-spacing: 1.4px;
 }
 
+ul.nursing-newslist-blk li .nursing-news-list::before {
+  position: absolute;
+  top: 50%;
+  right: 17px;
+  z-index: 1;
+  width: 6px;
+  height: 10px;
+  background: url('../../img/common/ico_next_pagination.svg')no-repeat center/contain;
+  content: "";
+  transform: translateY(-50%);
+  filter: invert(100%) sepia(300%) saturate(0) hue-rotate(0) brightness(100%) contrast(180%);
+}
+
 ul.nursing-newslist-blk li .nursing-news-list::after {
   position: absolute;
   top: 50%;
   right: 0;
   width: 40px;
   height: 40px;
-  background: url('/img/sugi-nursingcare/icon_circle_arrow.png') no-repeat center/cover;
-  content: '';
+  border: 1px solid transparent;
+  background-color: #e6172c;
+  content: "";
   transform: translateY(-50%);
+  border-radius: 50%;
+}
+
+ul.nursing-newslist-blk li .nursing-news-list:hover::before {
+  filter: invert(15%) sepia(105%) saturate(5934%) hue-rotate(347deg) brightness(96%) contrast(94%);
+}
+
+ul.nursing-newslist-blk li .nursing-news-list:hover::after {
+  border: 1px solid #e6172c;
+  background-color: #fff;
 }
 
 .nursing-news-list .nursing-news-topcnt {
@@ -499,8 +519,13 @@ ul.nursing-newslist-blk li .nursing-news-list::after {
     margin-left: 2.8%;
   }
 
-  ul.nursing-newslist-blk li:hover .nursing-news-list::after {
-    background: url(/img/sugi-nursingcare/icon_circle_arrow.png) no-repeat center/cover;
+  ul.nursing-newslist-blk li .nursing-news-list:hover::before {
+    filter: invert(100%) sepia(300%) saturate(0) hue-rotate(0) brightness(100%) contrast(180%);
+  }
+
+  ul.nursing-newslist-blk li .nursing-news-list:hover::after {
+    border: 1px solid transparent;
+    background-color: #e6172c;
   }
 }
 
@@ -641,8 +666,13 @@ ul.nursing-newslist-blk li .nursing-news-list::after {
     margin-top: 20px;
   }
 
-  ul.nursing-newslist-blk li:hover .nursing-news-list::after {
-    background: url(/img/sugi-nursingcare/icon_circle_arrow.png) no-repeat center/cover;
+  ul.nursing-newslist-blk li .nursing-news-list:hover::before {
+    filter: invert(100%) sepia(300%) saturate(0) hue-rotate(0) brightness(100%) contrast(180%);
+  }
+
+  ul.nursing-newslist-blk li .nursing-news-list:hover::after {
+    border: 1px solid transparent;
+    background-color: #e6172c;
   }
 
   ul.nursing-newslist-blk li .nursing-news-list .nursing-news-cnt {
