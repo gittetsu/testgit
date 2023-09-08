@@ -22,19 +22,25 @@
 				<li>お問い合わせ</li>
 			</ul>
 		</div>
-	</section><!--/.sec-medical-bnr-->
+	</section>
+	<!--/.sec-medical-bnr-->
 	<div class="inner">
 		<section class="sec-medi-contact">
 			<h3 class="common-medical-ttl common-ttl mb-sp-30">サービスに関するご質問やご不明点、ご相談などお気軽にお問い合わせください。</h3>
-			<form action="/confirm" class="contact-form">
+			<form id="contact-form" class="contact-form" novalidate action="confirm.html">
 				<div class="input-container">
 					<p class="form-label"><span class="required">必須</span>お名前</p>
 					<div class="input-box">
 						<div class="input-d-flex">
-							<input type="text" id="surname" name="surname" value="" placeholder="姓" class="name-input error">
-							<input type="text" id="name" name="name" value="" placeholder="名" class="name-input">
+							<div class="input">
+								<input type="text" id="surname" name="surname" value="" placeholder="姓" class="name-input">
+								<p class="err-msg" id="surname-error"><span>必須につき入力をお願いします</span></p>
+							</div>
+							<div class="input">
+								<input type="text" id="lastname" name="lastname" value="" placeholder="名" class="name-input">
+								<p class="err-msg" id="name-error"><span>必須につき入力をお願いします</span></p>
+							</div>
 						</div>
-						<p class="err-msg d-flex"><span class="exclamation">！</span><span>必須につき入力をお願いします</span></p>
 					</div>
 				</div>
 				<div class="input-container">
@@ -50,27 +56,31 @@
 					<p class="form-label"><span class="required">必須</span>電話番号</p>
 					<div class="input-box">
 						<div class="phone-number">
-							<input type="text" id="phoneNumber" name="phoneNumber" value="" maxlength="3" placeholder="090"
-								class="ph-input prefix" oninput="validateNumericInput(this)">
+							<input type="text" id="phoneNumber" name="phoneNumber" value="" maxlength="4" placeholder="090"
+								class="ph-input prefix">
 							<span class="dashed"></span>
-							<input type="text" name="phoneNoFirst" value="" maxlength="4" placeholder="0000" class="ph-input"
-								oninput="validateNumericInput(this)">
+							<input type="text" name="phoneNoFirst" id="phoneNoFirst" value="" maxlength="4" placeholder="0000"
+								class="ph-input">
 							<span class="dashed"></span>
-							<input type="text" name="phoneNoLast" value="" maxlength="4" placeholder="0000" class="ph-input"
-								oninput="validateNumericInput(this)">
+							<input type="text" name="phoneNoLast" id="phoneNoLast" value="" maxlength="4" placeholder="0000"
+								class="ph-input">
 						</div>
+						<p class="err-msg d-flex" id="phno-error"><span>必須につき入力をお願いします</span></p>
 					</div>
 				</div>
 				<div class="input-container">
 					<label for="mailAddress" class="form-label"><span class="required">必須</span>メールアドレス</label>
 					<div class="input-box">
-						<input type="email" id="mailAddress" name="mailAddress" value="" placeholder="info@example.com">
+						<input type="email" id="mailAddress" name="mailAddress" value="" placeholder="info@example.com"
+							onkeyup="validateEmail()">
+						<p class="err-msg" id="email-error"><span>必須につき入力をお願いします</span></p>
 					</div>
 				</div>
 				<div class="input-container">
 					<label for="companyName" class="form-label"><span class="required">必須</span>企業名</label>
 					<div class="input-box">
 						<input type="text" id="companyName" name="companyName" value="" placeholder="">
+						<p class="err-msg" id="companyName-error"><span>必須につき入力をお願いします</span></p>
 					</div>
 				</div>
 				<div class="input-container address-gp">
@@ -78,12 +88,15 @@
 					<div class="input-box">
 						<div class="detail-cnt mb-20">
 							<label for="postNumber">郵便番号</label>
-							<div class="phone-number">
-								<input type="text" id="postNumber" name="postNumber" value="" maxlength="3" placeholder="000"
-									class="ph-input prefix" oninput="validateNumericInput(this)">
-								<span class="dashed"></span>
-								<input type="text" name="postNoLast" value="" maxlength="4" placeholder="0000" class="ph-input"
-									oninput="validateNumericInput(this)">
+							<div class="input-number">
+								<div class="phone-number">
+									<input type="text" id="postNumber" name="postNumber" value="" maxlength="3" placeholder="000"
+										class="ph-input prefix">
+									<span class="dashed"></span>
+									<input type="text" name="postLastNumber" id="postLastNumber" value="" maxlength="4" placeholder="0000"
+										class="ph-input">
+								</div>
+								<p class="err-msg" id="postNumber-error"><span>必須につき入力をお願いします</span></p>
 							</div>
 						</div>
 						<div class="detail-cnt mb-20">
@@ -221,15 +234,18 @@
 							<span>お問い合わせに<br class="pc"><br class="pc">対する回答方法</span>
 						</p>
 					</div>
-					<div class="checkbox-gp-list">
-						<div class="check-container">
-							<input type="checkbox" id="phoneCheck" name="phoneCheck" value="">
-							<label for="phoneCheck" class="checkbox-label">電話</label>
+					<div class="input-box">
+						<div class="checkbox-gp-list">
+							<div class="check-container">
+								<input type="checkbox" id="phoneCheck" name="phoneCheck" value="">
+								<label for="phoneCheck" class="checkbox-label">電話</label>
+							</div>
+							<div class="check-container">
+								<input type="checkbox" id="mailCheck" name="mailCheck" value="">
+								<label for="mailCheck" class="checkbox-label">メール</label>
+							</div>
 						</div>
-						<div class="check-container">
-							<input type="checkbox" id="mailCheck" name="mailCheck" value="">
-							<label for="mailCheck" class="checkbox-label">メール</label>
-						</div>
+						<p class="err-msg d-flex" id="checkbox-error"><span>必須につき入力をお願いします</span></p>
 					</div>
 				</div>
 				<div class="input-container aggreement-gp">
@@ -239,12 +255,16 @@
 						<ul class="agreement mb-30">
 							<li>お客様の個人情報は厳重に取り扱い、お問い合わせ対応および当社からの情報提供を目的として利用させていただきます。</li>
 							<li>
-								個人情報の取り扱いにおきましては、<a href="/privacypolicy/" class="external-link" target="_blank">当社プライバシーポリシー</a> をご確認ください。
+								個人情報の取り扱いにおきましては、<a href="/privacypolicy/" class="external-link" target="_blank">当社プライバシーポリシー</a>
+								をご確認ください。
 							</li>
 						</ul>
-						<div class="agreement-check mb-40 mb-sp-30">
-							<input type="checkbox" id="agreement" name="agreement" value="">
-							<label for="agreement" class="checkbox-label">同意する</label>
+						<div class="mb-40 mb-sp-30">
+							<div class="agreement-check">
+								<input type="checkbox" id="agreement" name="agreement" value="">
+								<label for="agreement" class="checkbox-label">同意する</label>
+							</div>
+							<p class="err-msg d-flex" id="agreement-check-error"><span>必須につき入力をお願いします</span></p>
 						</div>
 					</div>
 				</div>
@@ -254,7 +274,7 @@
 			</form>
 		</section><!-- /.sec-medi-contact -->
 	</div><!-- /.inner -->
-	<section class="sec-medical-contact">
+	<!--/<section class="sec-medical-contact">
 		<div class="contact-ttl-blk pc">
 			<h3>サービスに関するご質問やご不明点、ご相談などお気軽にお問い合わせください。</h3>
 		</div>
@@ -271,7 +291,7 @@
 				</div>
 			</div>
 		</div>
-	</section><!--/.sec-medical-contact-->
+	</section>.sec-medical-contact-->
 	<footer data-include="/include/medical-footer.html"></footer>
 	<script src="/js/load.js"></script>
 	<script src="/js/common.js"></script>
