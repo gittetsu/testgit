@@ -843,7 +843,7 @@ footer.ft-nursing-care .page-top img {
 
   .sugi-nursing-header .nav-menu-list {
     flex-direction: column;
-    height: 92vh;
+    height: 100vh;
     overflow-y: scroll;
   }
 
@@ -1005,7 +1005,8 @@ footer.ft-nursing-care .page-top img {
 
   .sugi-nursing-header .nav-menu-list {
     flex-direction: column;
-    height: 92vh;
+    height: 100vh;
+    padding-bottom: 300px;
     overflow-y: scroll;
   }
 
@@ -1059,7 +1060,6 @@ footer.ft-nursing-care .page-top img {
   }
 
   .sugi-nursing-header .nav-menu .nav-footer-list {
-    padding-bottom: 130px;
     background-color: rgba(0, 0, 0, 0.2);
   }
 
