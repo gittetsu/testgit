@@ -34,11 +34,11 @@
 }
 
 .issue-gp01::after {
-  background: url('../../img/sustainability/icon_traingle01.svg') no-repeat center/contain;
+  background: url('/img/sustainability/icon_traingle01.svg') no-repeat center/contain;
 }
 
 .issue-gp02::after {
-  background: url('../../img/sustainability/icon_traingle02.png') no-repeat center/contain;
+  background: url('/img/sustainability/icon_traingle02.png') no-repeat center/contain;
 }
 
 .issue-gp01 {
@@ -94,7 +94,7 @@
   left: 50%;
   width: 8px;
   height: 8px;
-  background: url(../../img/common/ico_white_d_arrow.png) no-repeat center/contain;
+  background: url('/img/common/ico_white_d_arrow.png') no-repeat center/contain;
   content: "";
   transform: translate(-50%, -50%);
 }
@@ -277,11 +277,11 @@
   }
 
   .issue-gp01 {
-    background: url('../../img/sustainability/img_traingle01_bg_sp.png') no-repeat center/100% 100%;
+    background: url('/img/sustainability/img_traingle01_bg_sp.png') no-repeat center/100% 100%;
   }
 
   .issue-gp02 {
-    background: url('../../img/sustainability/img_traingle02_bg_sp.png') no-repeat center/100% 100%;
+    background: url('/img/sustainability/img_traingle02_bg_sp.png') no-repeat center/100% 100%;
   }
 
   .issue-gp01::after,

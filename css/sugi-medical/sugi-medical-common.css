@@ -4,7 +4,7 @@
 .sec-medical-bnr {
   margin-bottom: 80px;
   padding: 95px 0;
-  background: url('../../img/common/sugi-medical/img_banner_bg.png')no-repeat right/cover;
+  background: url('/img/common/sugi-medical/img_banner_bg.png')no-repeat right/cover;
 }
 
 .sec-medical-bnr .inner {
@@ -136,7 +136,7 @@
   left: 0;
   width: 18px;
   height: 12px;
-  background: url("../../img/common/sugi-medical/ico_email.svg")no-repeat center/contain;
+  background: url('/img/common/sugi-medical/ico_email.svg')no-repeat center/contain;
   content: "";
   transform: translateY(-50%);
 }
@@ -187,7 +187,7 @@
   right: 20px;
   width: 12px;
   height: 12px;
-  background: url(/img/sugi-medical/ico_arrow_right.svg) no-repeat center/cover;
+  background: url('/img/sugi-medical/ico_arrow_right.svg') no-repeat center/cover;
   content: '';
   transform: rotate(0deg);
   border-radius: unset;
@@ -233,7 +233,7 @@ h3.common-medical-ttl {
   right: 20px;
   width: 100%;
   height: 14px;
-  background: url(/img/sugi-medical/ico_external_link.svg) no-repeat center/cover;
+  background: url('/img/sugi-medical/ico_external_link.svg') no-repeat center/cover;
   content: '';
   max-width: 14px;
 }
@@ -304,7 +304,7 @@ h3.common-medical-ttl {
   right: 30px;
   width: 12px;
   height: 12px;
-  background: url('../../img/common/sugi-medical/ico_arrow_right.svg')no-repeat center/contain;
+  background: url('/img/common/sugi-medical/ico_arrow_right.svg')no-repeat center/contain;
   content: "";
   transform: translateY(-50%);
 }
@@ -349,7 +349,7 @@ footer.ft-medical .ft-blk .sub-nav-list .sugi-holding-link::after {
   right: 6px;
   width: 14px;
   height: 14px;
-  background: url('../../img/common/sugi-medical/ico_external.svg')no-repeat center/contain;
+  background: url('/img/common/sugi-medical/ico_external.svg')no-repeat center/contain;
   content: "";
   transform: translateY(-50%);
   filter: invert(56%) sepia(83%) saturate(378%) hue-rotate(43deg) brightness(99%) contrast(97%);
@@ -422,7 +422,7 @@ footer.ft-medical .page-top:hover img {
     right: 20px;
     width: 20px;
     height: 20px;
-    background: url('../../img/common/sugi-medical/ico_nav_link_arr.png')no-repeat center/contain;
+    background: url('/img/common/sugi-medical/ico_nav_link_arr.png')no-repeat center/contain;
     content: "";
     transform: translateY(-50%);
   }
@@ -455,7 +455,7 @@ footer.ft-medical .page-top:hover img {
     right: 23px;
     width: 14px;
     height: 14px;
-    background: url('../../img/common/sugi-medical/ico_external.svg')no-repeat center/contain;
+    background: url('/img/common/sugi-medical/ico_external.svg')no-repeat center/contain;
     content: "";
     transform: translateY(-50%);
   }
@@ -607,7 +607,7 @@ footer.ft-medical .page-top:hover img {
     right: 20px;
     width: 20px;
     height: 20px;
-    background: url('../../img/common/sugi-medical/ico_nav_link_arr.png')no-repeat center/contain;
+    background: url('/img/common/sugi-medical/ico_nav_link_arr.png')no-repeat center/contain;
     content: "";
     transform: translateY(-50%);
   }
@@ -640,7 +640,7 @@ footer.ft-medical .page-top:hover img {
     right: 23px;
     width: 14px;
     height: 14px;
-    background: url('../../img/common/sugi-medical/ico_external.svg')no-repeat center/contain;
+    background: url('/img/common/sugi-medical/ico_external.svg')no-repeat center/contain;
     content: "";
     transform: translateY(-50%);
   }

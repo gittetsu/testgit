@@ -185,7 +185,7 @@
   left: 0;
   width: 14px;
   height: 14px;
-  background: url(/img/common/ico_search.png) no-repeat center/cover;
+  background: url('/img/common/ico_search.png') no-repeat center/cover;
   content: '';
 }
 

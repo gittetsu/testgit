@@ -60,7 +60,7 @@
   left: 50%;
   width: 6px;
   height: 6px;
-  background: url('../../img/common/sugi-smile/ico_triangle_arrow.png')no-repeat center/contain;
+  background: url('/img/common/sugi-smile/ico_triangle_arrow.png')no-repeat center/contain;
   content: "";
   transform: translate(-50%, -50%);
 }
@@ -83,7 +83,7 @@
 /* smile-top-wrapper */
 .smile-top-wrapper {
   position: relative;
-  background: #f6fff5 url('../../img/sugi-smile/img_mv_top_bg_pc.png')no-repeat center top 45px/107%;
+  background: #f6fff5 url('/img/sugi-smile/img_mv_top_bg_pc.png')no-repeat center top 45px/107%;
 }
 
 /* sec-top-mv */
@@ -125,7 +125,7 @@
   left: 14px;
   width: 22px;
   height: 13px;
-  background: url('../../img/sugi-smile/ico_txt_lt_corner.png')no-repeat center/contain;
+  background: url('/img/sugi-smile/ico_txt_lt_corner.png')no-repeat center/contain;
   content: '';
 }
 
@@ -135,7 +135,7 @@
   right: 14px;
   width: 22px;
   height: 13px;
-  background: url('../../img/sugi-smile/ico_txt_rt_corner.png')no-repeat center/contain;
+  background: url('/img/sugi-smile/ico_txt_rt_corner.png')no-repeat center/contain;
   content: '';
 }
 
@@ -223,7 +223,7 @@
   z-index: 1;
   margin-top: -5px;
   padding: 97px 0 165px;
-  background: url('../../img/sugi-smile/img_top_location_bg.jpg')no-repeat top/cover;
+  background: url('/img/sugi-smile/img_top_location_bg.jpg')no-repeat top/cover;
   background-color: #e4f8e2;
 }
 
@@ -237,7 +237,7 @@
 .sec-our-business {
   margin-top: -5px;
   padding: 160px 0 120px;
-  background: url('../../img/sugi-smile/img_our_business_bg.jpg')no-repeat top/contain;
+  background: url('/img/sugi-smile/img_our_business_bg.jpg')no-repeat top/contain;
   background-color: #fff;
 }
 
@@ -252,7 +252,7 @@
   left: 50%;
   width: 100%;
   height: 25px;
-  background: url('../../img/sugi-smile/img_business_border.png')no-repeat center/100%;
+  background: url('/img/sugi-smile/img_business_border.png')no-repeat center/100%;
   content: "";
   transform: translateX(-50%);
   max-width: 1100px;
@@ -432,7 +432,7 @@
 
 @media only screen and (max-width: 767.9px) {
   .smile-top-wrapper {
-    background-image: url('../../img/sugi-smile/img_mv_top_bg_sp.png');
+    background-image: url('/img/sugi-smile/img_mv_top_bg_sp.png');
     background-position: center top 270px;
   }
 
