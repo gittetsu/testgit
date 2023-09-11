@@ -17,16 +17,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 75px 20px;
-  border: 1px solid #e0e0e0;
-}
-
-.sec-recruit .list-gp .list-gp-detail .w-350 .img-blk {
-  max-width: 208px;
-}
-
-.sec-recruit .list-gp .list-gp-detail .w-350 .img-w220 {
-  max-width: 220px;
 }
 
 .sec-recruit .list-gp .list-gp-detail h4 {
@@ -89,19 +79,10 @@
 
   .sec-recruit .list-gp .list-gp-detail .w-350 {
     width: 100%;
-    padding: 74px 20px;
   }
 
   .sec-recruit .w-710 {
     width: 100%;
-  }
-
-  .sec-recruit .list-gp .list-gp-detail .w-350 .img-blk {
-    max-width: 201px;
-  }
-
-  .sec-recruit .list-gp .list-gp-detail .w-350 .img-w220 {
-    max-width: 211px;
   }
 
   .sec-recruit .list-gp .list-gp-detail .btn {

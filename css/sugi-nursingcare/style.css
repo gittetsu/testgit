@@ -13,7 +13,7 @@
 }
 
 .sec-nursing-mv {
-  padding-top: 29px;
+  padding-top: 15px;
 }
 
 .sec-nursing-mv .nursing-mv-cntblk {
@@ -224,11 +224,11 @@
 }
 
 ul.nursing-newslist-blk li {
-  border-bottom: 1px solid #e9e6da;
+  border-bottom: 1px solid #e2dece;
 }
 
 ul.nursing-newslist-blk li:first-child {
-  border-top: 1px solid #e9e6da;
+  border-top: 1px solid #e2dece;
 }
 
 ul.nursing-newslist-blk li .nursing-news-list {
@@ -335,7 +335,7 @@ ul.nursing-newslist-blk li .nursing-news-list:hover::after {
 }
 
 .sec-dev-service .dev-service-blk {
-  width: 44.4%;
+  width: 44.55%;
   margin-top: 56px;
   padding: 48px 48px 43px 48px;
   border: 4px solid #fdbcc3;
@@ -356,11 +356,11 @@ ul.nursing-newslist-blk li .nursing-news-list:hover::after {
   line-height: 1.8;
   padding: 13.5px 0;
   font-size: 1rem;
-  border-bottom: 1px solid #e9e6da;
+  border-bottom: 1px solid #edeadf;
 }
 
 .dev-service-blk .dev-service-list li:first-child {
-  border-top: 1px solid #e9e6da;
+  border-top: 1px solid #edeadf;
 }
 
 .sec-dev-service .sugi-dev-cntblk {
@@ -407,11 +407,13 @@ ul.nursing-newslist-blk li .nursing-news-list:hover::after {
   transform: translate(-55.5%, -50%);
 }
 
+.sec-dev-service .btn-center {
+  text-align: center;
+}
+
 .sec-dev-service .cmm-nursing-white-btn {
-  display: block;
-  width: 100%;
-  margin: 0 auto;
-  max-width: 234px;
+  padding: 18px 55px 18px 32px;
+  text-align: left;
 }
 
 .sec-dev-service h3.common-nursing-subttl {
@@ -457,7 +459,7 @@ ul.nursing-newslist-blk li .nursing-news-list:hover::after {
 
 .sec-company-intro .medical-consult-txtblk .nursing-taxo-link,
 .cmm-business-blk .nursing-taxo-link {
-  padding: 0 12px;
+  padding: 3.5px 12px;
   font-weight: 700;
   border-radius: 4px;
 }
@@ -527,6 +529,10 @@ ul.nursing-newslist-blk li .nursing-news-list:hover::after {
     border: 1px solid transparent;
     background-color: #e6172c;
   }
+
+  .sec-nursing-mv {
+    padding-top: 0;
+  }
 }
 
 /*SP*/
@@ -540,9 +546,18 @@ ul.nursing-newslist-blk li .nursing-news-list:hover::after {
     padding: 0;
   }
 
+  .sec-service .service-top-txtblk .service-top-desc {
+    font-size: 1rem;
+  }
+
   .sec-nursing-news .nursing-new-cntblk {
     padding-top: 40px;
     max-width: 100%;
+  }
+
+  .sec-nursing-mv {
+    margin-bottom: 49px;
+    padding-top: 0;
   }
 
   .sec-nursing-mv .nursing-mv-cntblk .support-health-img {
@@ -611,6 +626,10 @@ ul.nursing-newslist-blk li .nursing-news-list:hover::after {
   .nursing-about-txtblk .common-nursing-sm-ttl {
     margin: 20px 0 20px;
     font-size: 1.125rem;
+  }
+
+  .sec-nursing-aboutus .nursing-aboutus-blk p {
+    font-size: 1rem;
   }
 
   .sec-nursing-aboutus .nursing-about-txtblk {
@@ -703,7 +722,7 @@ ul.nursing-newslist-blk li .nursing-news-list:hover::after {
     padding: 40px 20px;
   }
 
-  .nursing-joinus-blk .nursing-joinus-img {
+  .sec-nursing-joinus .nursing-joinus-blk .nursing-joinus-img {
     width: 53%;
     margin: 0 auto;
     max-width: 150px;
@@ -716,6 +735,7 @@ ul.nursing-newslist-blk li .nursing-news-list:hover::after {
 
   .sec-nursing-joinus .nursing-joinus-txtblk .nursing-joinus-desc {
     margin: 20px 0 30px;
+    font-size: 1rem;
   }
 
   .nursing-joinus-txtblk .common-nursing-button {
@@ -737,6 +757,11 @@ ul.nursing-newslist-blk li .nursing-news-list:hover::after {
     padding: 30px 20px;
   }
 
+  .sugi-dev-cntblk .dev-service-blk .dev-service-logo01 {
+    margin: 0 auto;
+    max-width: 290px;
+  }
+
   .sec-dev-service .service-flow-list .service-flow-item {
     margin-bottom: 24px;
     padding: 40px 20px 40px 20px;
@@ -755,13 +780,6 @@ ul.nursing-newslist-blk li .nursing-news-list:hover::after {
     position: unset;
     margin: 40px auto 18px;
     transform: translate(0, 0) rotate(90deg);
-  }
-
-  .sec-dev-service .cmm-nursing-white-btn {
-    display: block;
-    width: 100%;
-    margin: 0 auto;
-    max-width: 234px;
   }
 
   .sec-dev-service h3.common-nursing-subttl {
@@ -808,6 +826,7 @@ ul.nursing-newslist-blk li .nursing-news-list:hover::after {
 
   .sec-company-intro .cmm-nursing-desc {
     margin: 20px 0 20px;
+    font-size: 1rem;
   }
 
   .medical-consult-blk .medical-consult-img {
@@ -818,11 +837,6 @@ ul.nursing-newslist-blk li .nursing-news-list:hover::after {
     margin-top: 20px;
     padding-top: 0;
     border-top: unset;
-  }
-
-  .sec-company-intro .medical-consult-txtblk .nursing-taxo-link,
-  .cmm-business-blk .nursing-taxo-link {
-    padding: 0 12px;
   }
 
   .cmm-nursing-logoblk {

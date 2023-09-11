@@ -815,7 +815,7 @@
 
 .cmm-mission-blk .mission-img {
   position: relative;
-  z-index: 5;
+  z-index: 3;
   width: 57.8%;
 }
 
@@ -826,13 +826,14 @@
   z-index: -1;
   width: 100%;
   height: 100%;
+  box-shadow: 0 0 50px rgba(198, 232, 218, 0.5);
   background: #c6e8da;
   content: '';
-  -webkit-filter: blur(50px);
-  -moz-filter: blur(50px);
-  -o-filter: blur(50px);
-  -ms-filter: blur(50px);
-  filter: blur(50px);
+  -webkit-filter: blur(30px);
+  -moz-filter: blur(30px);
+  -o-filter: blur(30px);
+  -ms-filter: blur(30px);
+  filter: blur(30px);
 }
 
 .cmm-mission-blk .mission-txtblk {
@@ -1052,6 +1053,10 @@
     margin-top: 21px;
   }
 
+  .top .sec-vision ul li:hover {
+    border-top: 1px solid #e6e6e6;
+  }
+
   /* sec-number-area */
   .sec-number-area {
     padding: 150px 0 120px 0;
@@ -1068,6 +1073,11 @@
   .pharmacy-gp-blk .pharmacy-gp-tablist li a:hover {
     background-color: transparent;
     color: #fff;
+  }
+
+  .pharmacy-gp-blk .pharmacy-gp-tablist li a.active:hover {
+    background-color: #fff;
+    color: #048851;
   }
 
   /*sustainablility section*/
