@@ -409,6 +409,7 @@
 }
 
 .top .sec-medical-gp .btn-gp {
+  display: flex;
   flex-wrap: nowrap;
   justify-content: flex-start;
 }
@@ -644,6 +645,10 @@
     padding: 10.5px 48px 10.5px 10px;
     font-size: 0.875rem;
     letter-spacing: 1.4px;
+  }
+
+  .top .sec-news .tab-list .tab-left ul li:first-child .common-button, .top .sec-news .tab-list .tab-left ul li:nth-child(2) .common-button {
+    border-top: 1px solid transparent;
   }
 
   .top .sec-news .tab-list .tab-left .common-button:hover {
