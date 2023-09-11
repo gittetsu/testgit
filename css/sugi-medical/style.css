@@ -359,7 +359,7 @@
 .top .sec-medical-gp h2 {
   position: relative;
   margin-bottom: 96px;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   font-weight: 700;
   text-align: center;
 }
@@ -391,6 +391,7 @@
   background-color: #7fbe26;
   color: #fff;
   font-size: 0.875rem;
+  font-weight: 700;
   border-radius: 4px;
 }
 
@@ -647,7 +648,8 @@
     letter-spacing: 1.4px;
   }
 
-  .top .sec-news .tab-list .tab-left ul li:first-child .common-button, .top .sec-news .tab-list .tab-left ul li:nth-child(2) .common-button {
+  .top .sec-news .tab-list .tab-left ul li:first-child .common-button,
+  .top .sec-news .tab-list .tab-left ul li:nth-child(2) .common-button {
     border-top: 1px solid transparent;
   }
 
@@ -788,15 +790,14 @@
     margin-bottom: 20px;
   }
 
-
   /* sec-medical-gp */
   .top .sec-medical-gp {
     margin-bottom: 40px;
   }
 
-
   .top .sec-medical-gp h2 {
     margin-bottom: 44px;
+    font-size: 1.5rem;
   }
 
   .top .sec-medical-gp h2:after {

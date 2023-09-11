@@ -147,6 +147,7 @@
 }
 
 .location-btn-list li {
+  display: flex;
   width: 31.5%;
 }
 
@@ -159,7 +160,17 @@
 
 .location-btn-list li .common-button .arrow {
   top: 24px;
-  right: 8.7%;
+}
+
+.location-btn-list li .external-button {
+  border-radius: 5px;
+  width: 100%;
+  padding: 22px 20px;
+  line-height: 1.5;
+}
+
+.location-btn-list li .external-text:after {
+  top: 5px;
 }
 
 @media only screen and (max-width: 767.9px) {
@@ -185,10 +196,5 @@
   .cmm-property-link .common-button:hover .arrow::after,
   .cmm-property-link .common-button:active .arrow:after {
     filter: unset;
-  }
-
-  .location-btn-blk .location-btn-list .common-button:hover .arrow::after,
-  .location-btn-blk .location-btn-list .common-button.active .arrow::after {
-    top: 7%;
   }
 }
