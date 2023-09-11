@@ -1053,6 +1053,10 @@
     margin-top: 21px;
   }
 
+  .top .sec-vision ul li:hover {
+    border-top: 1px solid #e6e6e6;
+  }
+
   /* sec-number-area */
   .sec-number-area {
     padding: 150px 0 120px 0;
@@ -1069,6 +1073,11 @@
   .pharmacy-gp-blk .pharmacy-gp-tablist li a:hover {
     background-color: transparent;
     color: #fff;
+  }
+
+  .pharmacy-gp-blk .pharmacy-gp-tablist li a.active:hover {
+    background-color: #fff;
+    color: #048851;
   }
 
   /*sustainablility section*/
