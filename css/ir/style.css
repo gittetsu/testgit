@@ -1,7 +1,4 @@
 @charset "UTF-8";
-
-/* pc */
-
 /* sec-ir-news */
 
 .btn-center {
@@ -115,6 +112,31 @@
     width: 49.37%;
     margin-right: 0;
   }
+
+  .sec-growthstrategy .link-gp li a .link-arrow {
+    background-color: #048851;
+  }
+
+  .sec-growthstrategy .link-gp li a .link-arrow::before {
+    width: 8px;
+    height: 8px;
+    background: url(/img/common/ico_arrow_white.svg) no-repeat center/cover;
+  }
+
+  .sec-growthstrategy .link-gp li a:hover {
+    background-color: #fff;
+    color: #048851;
+  }
+
+  .sec-growthstrategy .link-gp li a:hover .link-arrow {
+    background-color: #048851;
+  }
+
+  .sec-growthstrategy .link-gp li a:hover .link-arrow::before {
+    width: 8px;
+    height: 8px;
+    background: url(/img/common/ico_arrow_white.svg) no-repeat center/cover;
+  }
 }
 
 /* sp */
@@ -141,5 +163,20 @@
   .sec-performance .highlights li {
     width: 100%;
     margin-right: 0;
+  }
+
+  .sec-growthstrategy .link-gp li a:hover {
+    background-color: #fff;
+    color: #048851;
+  }
+
+  .sec-growthstrategy .link-gp li a:hover .link-arrow {
+    background-color: #048851;
+  }
+
+  .sec-growthstrategy .link-gp li a:hover .link-arrow::before {
+    width: 8px;
+    height: 8px;
+    background: url(/img/common/ico_arrow_white.svg) no-repeat center/cover;
   }
 }
