@@ -256,7 +256,8 @@ h3.common-nursing-subttl {
   position: absolute;
   top: 21px;
   right: 32px;
-  width: 18px;
+  width: 100%;
+  max-width: 18px;
   padding: 9px 0;
   background-color: #fff;
   transition: all 0.3s ease-in-out;
