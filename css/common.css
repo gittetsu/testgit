@@ -2378,6 +2378,10 @@ footer .page-top:hover img {
   .l-inner {
     width: 100%;
   }
+  .link:hover, .link:active, .pdf:hover, .external-link:hover {
+    color: #048851;
+    border-bottom: 1px solid transparent;
+  }
 
   /*header*/
   .sugi-holding-header .header-inner {
@@ -3253,6 +3257,11 @@ footer .page-top:hover img {
 
   .pdf::after {
     bottom: -8px;
+  }
+
+  .link:hover, .link:active, .pdf:hover, .external-link:hover {
+    color: #048851;
+    border-bottom: 1px solid transparent;
   }
 
   .newslist-desc.pdf::after {
