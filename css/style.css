@@ -1199,15 +1199,18 @@
 
   .sustain-linkblk .arrow,
   .site-link .site-link-btn01 .arrow,
-  .mission02-link .common-button .arrow,
-  .mission03-link .common-button .arrow,
-  .site-link .site-link-btn01 .arrow,
   .site-link .site-link-btn02 .arrow,
   .mission02-link .common-button .arrow,
   .mission03-link .common-button .arrow {
     top: 17px;
     width: 20px;
-    padding: 10px 0;
+    padding: 10px;
+  }
+
+  .sustain-linkblk:hover .arrow,
+  .sustain-linkblk.active .arrow {
+    width: 20px;
+    padding: 10px;
   }
 
   .mission-logo01 {
