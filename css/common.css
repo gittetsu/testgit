@@ -249,7 +249,7 @@ ol {
 
 .pdf::after {
   position: absolute;
-  bottom: -4px;
+  bottom: -6px;
   width: 100%;
   height: 20px;
   background: url('/img/common/ico_pdf.svg') no-repeat center/cover;
@@ -2378,6 +2378,9 @@ footer .page-top:hover img {
   .l-inner {
     width: 100%;
   }
+  .link:hover, .link:active, .pdf:hover, .external-link:hover {
+    border-bottom: 1px solid transparent;
+  }
 
   /*header*/
   .sugi-holding-header .header-inner {
@@ -3253,6 +3256,10 @@ footer .page-top:hover img {
 
   .pdf::after {
     bottom: -8px;
+  }
+
+  .link:hover, .link:active, .pdf:hover, .external-link:hover {
+    border-bottom: 1px solid transparent;
   }
 
   .newslist-desc.pdf::after {

@@ -218,7 +218,7 @@ h3.common-nursing-subttl {
 .nursing-external-link::after {
   position: absolute;
   top: 25px;
-  right: 33px;
+  right: 32px;
   width: 12px;
   height: 12px;
   background: url('/img/sugi-nursingcare/icon_external_link.svg') no-repeat center/100% 100%;
@@ -369,13 +369,12 @@ h3.common-nursing-subttl {
 
 .cmm-nursing-tab-btn .arrow {
   position: absolute;
-  top: 50%;
+  top: 23px;
   right: 20px;
   width: 18px;
   margin-left: 10px;
   padding: 9px 0;
   background-color: #e6172c;
-  transform: translateY(-50%);
   transition: all 0.3s ease-in-out;
   border-radius: 50%;
 }
@@ -1273,7 +1272,7 @@ footer.ft-nursing-care .page-top img {
   /* unorder-list-gp */
 
   .main-nursing-care .unorder-list-gp li {
-    padding-left: 16px;
+    padding-left: 24px;
     font-size: 1rem;
   }
 
@@ -1366,6 +1365,10 @@ footer.ft-nursing-care .page-top img {
   .cmm-nursing-tab-btn {
     width: 100%;
     margin-bottom: 10px;
+  }
+
+  .cmm-nursing-tab-btn .arrow{
+    top: 20px;
   }
 
   .main-nursing-care .unorder-list-gp li::before {

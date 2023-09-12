@@ -623,9 +623,6 @@
 .sustain-linkblk .arrow,
 .cmm-list-item .common-button .arrow,
 .site-link .site-link-btn01 .arrow,
-.mission02-link .common-button .arrow,
-.mission03-link .common-button .arrow,
-.site-link .site-link-btn01 .arrow,
 .site-link .site-link-btn02 .arrow,
 .mission02-link .common-button .arrow,
 .mission03-link .common-button .arrow {
@@ -1202,13 +1199,18 @@
 
   .sustain-linkblk .arrow,
   .site-link .site-link-btn01 .arrow,
-  .mission02-link .common-button .arrow,
-  .mission03-link .common-button .arrow,
-  .site-link .site-link-btn01 .arrow,
   .site-link .site-link-btn02 .arrow,
   .mission02-link .common-button .arrow,
   .mission03-link .common-button .arrow {
-    top: 15px;
+    top: 17px;
+    width: 20px;
+    padding: 10px;
+  }
+
+  .sustain-linkblk:hover .arrow,
+  .sustain-linkblk.active .arrow {
+    width: 20px;
+    padding: 10px;
   }
 
   .mission-logo01 {
@@ -1956,6 +1958,13 @@
     width: 100%;
     margin-top: 27px;
     max-width: 100%;
+  }
+
+  .btn-link-gp .common-button .arrow,
+  .site-link .site-link-btn01 .arrow,
+  .mission02-link .common-button .arrow,
+  .mission03-link .common-button .arrow {
+    top: 20px;
   }
 
   .site-link .site-link-btn01 {

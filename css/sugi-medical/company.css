@@ -38,6 +38,10 @@
   text-decoration: underline;
 }
 
+.sec-company-profile .table tr td .ph-num {
+  margin-right: 30px;
+}
+
 .sec-company-profile .company-location iframe {
   width: 100%;
 }
@@ -85,7 +89,11 @@
 
   .sec-company-profile .table tr td {
     font-size: 1rem;
-	  white-space: unset;
+    white-space: unset;
     word-break: break-word;
+  }
+
+  .sec-company-profile .table tr td .ph-num {
+    margin-right: 0;
   }
 }

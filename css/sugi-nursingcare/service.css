@@ -148,6 +148,10 @@
     max-width: 100%;
   }
 
+  .service-top-cntblk {
+    padding-top: 20px;
+  }
+
   .service-top-cntblk .sevice-tab-btn {
     width: 100%;
     margin: 40px auto 30px;
@@ -236,10 +240,6 @@
 
   .service-flow-blk .ft-consultation-bnr .consultation-list {
     width: 100%;
-  }
-
-  .service-flow-blk .service-flow-item:last-child .service-flow-ttl {
-    align-items: center;
   }
 
   .service-nursing-care .mb-sp-80 {

@@ -43,6 +43,7 @@
   font-family: 'Niconne';
   font-size: 7.5rem;
   font-weight: 400;
+  letter-spacing: -6px;
 }
 
 .sec-medical-bnr .medical-breadcrumb {
@@ -66,7 +67,7 @@
 
 .sec-medical-bnr .medical-breadcrumb li+li::before {
   position: absolute;
-  top: 10px;
+  top: 11px;
   left: -5px;
   width: 6px;
   height: 6px;
@@ -547,7 +548,7 @@ footer.ft-medical .page-top:hover img {
   }
 
   .sec-medical-bnr .medical-breadcrumb li+li::before {
-    top: 7px;
+    top: 8px;
   }
 
   .sugi-medical-header .header-logo img {

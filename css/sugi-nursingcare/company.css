@@ -57,6 +57,7 @@
 
 .profile-sec .table tr td:last-child {
   background-color: #fff;
+  font-weight: 400;
   border-right-color: transparent;
 }
 
@@ -104,6 +105,7 @@
   }
 
   .sec-nursecare-company {
+    padding-top: 20px;
     padding-bottom: 0;
   }
 
