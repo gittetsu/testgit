@@ -218,7 +218,7 @@ h3.common-nursing-subttl {
 .nursing-external-link::after {
   position: absolute;
   top: 25px;
-  right: 33px;
+  right: 32px;
   width: 12px;
   height: 12px;
   background: url('/img/sugi-nursingcare/icon_external_link.svg') no-repeat center/100% 100%;

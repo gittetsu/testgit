@@ -6,9 +6,12 @@
   left: 10%;
 }
 
+.news-article  .main-nursing-care {
+  padding-bottom: 100px;
+}
+
 .news-article .sec-article {
   margin-top: 63px;
-  margin-bottom: 100px;
 }
 
 .news-article h2.common-ttl {

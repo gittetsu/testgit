@@ -80,7 +80,7 @@
 
 .sec-nurcare-gp .newhome-medical .card-blk .card-cnt-list li::before {
   position: absolute;
-  top: 14px;
+  top: 12px;
   left: 0;
   width: 8px;
   height: 8px;
@@ -134,7 +134,10 @@
 }
 
 .sec-nurcare-recruit .recruitment .overview .recruit-btn .nursing-external-link {
-  letter-spacing: 0;
+  display: block;
+  margin: 0 auto;
+  letter-spacing: -0.5px;
+  max-width: 276px;
 }
 
 .sec-nurcare-recruit .recruitment .img-blk {
@@ -196,6 +199,10 @@
   .sec-nurcare-gp .newhome-medical .card-blk .card-cnt-list {
     padding-top: 20px;
     font-size: 1rem;
+  }
+
+  .sec-nurcare-gp .newhome-medical .card-blk .card-cnt-list li::before {
+    top: 10px;
   }
 
   .sec-nurcare-recruit {
