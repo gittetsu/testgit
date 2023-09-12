@@ -371,20 +371,21 @@ window.addEventListener('load', function () {
     if (hamburger) {
         hamburger.addEventListener('click', function () {
             hamburger.classList.toggle('active')
-
             if (hamburger.classList.contains('active')) {
                 navMenu.classList.add('active')
                 bodyElement.style.overflow = 'hidden'
                 bodyElement.style.position = 'fixed'
-                if (searchButton.classList.contains('show-submenu')) {
-                    subMenu.style.height = 0
-                    searchButton.classList.remove('show-submenu')
-                    submenu.classList.remove('show-submenu')
-                    existingImg = searchIcon.querySelector('img')
-                    if (existingImg) {
-                        newImg.src = '/img/common/ico_search.png'
-                        newImg.alt = 'search'
-                        searchIcon.replaceChild(newImg, existingImg)
+                if (searchButton) {
+                    if (searchButton.classList.contains('show-submenu')) {
+                        subMenu.style.height = 0
+                        searchButton.classList.remove('show-submenu')
+                        submenu.classList.remove('show-submenu')
+                        existingImg = searchIcon.querySelector('img')
+                        if (existingImg) {
+                            newImg.src = '/img/common/ico_search.png'
+                            newImg.alt = 'search'
+                            searchIcon.replaceChild(newImg, existingImg)
+                        }
                     }
                 }
             } else {
