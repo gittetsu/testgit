@@ -27,6 +27,10 @@
   border-radius: 5px;
 }
 
+.sec-prefecture-blk .unorder-list-gp li::before {
+  top: 16px;
+}
+
 .sec-prefecture-blk .unorder-list-gp li {
   font-size: 1.25rem;
   font-weight: 700;
@@ -179,6 +183,10 @@ ul.cmm-address-blk .office-number {
 
   .sec-prefecture-blk .office-location-name {
     padding: 10.5px 20px;
+  }
+
+  .sec-prefecture-blk .unorder-list-gp li::before {
+    top: 14px;
   }
 
   .office-address-box ul.cmm-address-blk {
