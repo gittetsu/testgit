@@ -485,7 +485,7 @@
   }
 
   .sec-nurcare-contact {
-    margin-top: 20px;
+    padding-top: 20px;
     padding-bottom: 80px;
   }
 
@@ -597,5 +597,9 @@
 
   .sec-nurcare-consult {
     padding-bottom: 30px;
+  }
+
+  .sec-nurcare-contact .contact-form .agreement li::before {
+    top: 11px;
   }
 }
