@@ -38,6 +38,7 @@
 
 .sec-nurcare-confirm table td {
   width: 77.39%;
+  font-weight: 400;
 }
 
 .sec-nurcare-confirm table tr:last-child th,
@@ -55,6 +56,11 @@
   .nursing-care-wrapper::after {
     top: -1%;
     left: 0;
+  }
+
+  .sec-nurcare-confirm {
+    padding-top: 20px;
+    padding-bottom: 80px;
   }
 
   .sec-nurcare-confirm table th {

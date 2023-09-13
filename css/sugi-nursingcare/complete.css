@@ -22,6 +22,7 @@
 }
 
 .sec-nurcare-complete p {
+  font-weight: 400;
   text-align: center;
 }
 
@@ -35,5 +36,10 @@
   .nursing-care-wrapper::after {
     top: -1%;
     left: 0;
+  }
+
+  .sec-nurcare-complete {
+    padding-top: 20px;
+    padding-bottom: 80px;
   }
 }
