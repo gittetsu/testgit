@@ -20,25 +20,24 @@
   color: #fff;
   font-size: 1.125rem;
   text-align: center;
-  border-right: 1px solid rgba(224, 224, 224, 0.5);
 }
 
 .issue-gp01::after,
 .issue-gp02::after {
   position: absolute;
   top: 0;
-  right: -15px;
+  left: 100%;
   width: 14px;
   height: 60px;
   content: '';
 }
 
 .issue-gp01::after {
-  background: url('/img/sustainability/icon_traingle01.svg') no-repeat center/contain;
+  background: url('/img/sustainability/icon_traingle01.png') no-repeat right center/cover;
 }
 
 .issue-gp02::after {
-  background: url('/img/sustainability/icon_traingle02.png') no-repeat center/contain;
+  background: url('/img/sustainability/icon_traingle02.png') no-repeat right center/cover;
 }
 
 .issue-gp01 {
