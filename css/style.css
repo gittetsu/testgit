@@ -404,17 +404,21 @@
   overflow: hidden;
 }
 
+.sec-image-slider .slider-image {
+  display: flex;
+  width: 250%;
+  transform: translateX(0);
+  animation: slidermove 20s linear infinite;
+}
+
 .sec-image-slider .slides-list {
   display: flex;
   width: 100%;
-  margin: 0 -1.46%;
-  transition: transform 0.5s ease;
 }
 
 .sec-image-slider .slide-item {
-  flex: 0 0 32.2%;
   width: 100%;
-  padding: 0 1.46%;
+  margin: 0 1%;
 }
 
 /* sec-number-area */
@@ -927,6 +931,15 @@
 
 .mission-logo03 {
   max-width: 246px;
+}
+
+@keyframes slidermove {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 
@@ -1625,14 +1638,8 @@
     right: 14px;
   }
 
-
-  .sec-image-slider .slides-list {
-    margin: 0 -1.73%;
-  }
-
-  .sec-image-slider .slide-item {
-    flex: 0 0 41.6%;
-    padding: 0 1.73%;
+  .sec-image-slider .slider-image {
+    width: 260%;
   }
 
   /* sec-number-area */
