@@ -53,36 +53,8 @@
 }
 
 .top .sec-mv .mv-txt {
-  z-index: 2;
-  width: 25%;
+  width: 24.34%;
   text-align: left;
-  min-width: 335px;
-}
-
-.top .sec-mv .mv-txt h2 {
-  line-height: 1.2;
-  color: #048851;
-  font-size: 2.813rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-}
-
-.top .sec-mv .mv-txt h2 span {
-  display: block;
-  margin-bottom: 8px;
-  padding: 3px 2px 10px 10px;
-  background-color: #ffffff;
-  letter-spacing: 0px;
-  border-radius: 4px;
-}
-
-.top .sec-mv .mv-txt p {
-  line-height: 1.7;
-  margin-top: 27px;
-  color: #ffffff;
-  font-size: 1.875rem;
-  font-weight: 700;
-  letter-spacing: 4.5px;
 }
 
 /* sec-news */
@@ -390,12 +362,18 @@
 .top .sec-vision .vision-img {
   width: 54.3%;
   margin-top: 21px;
+  position: relative;
+}
+.top .sec-vision .vision-img::before{
+  content: "";
+  position: absolute;
+  width:100%;
+  height: 100%;
+  background: url('/img/img_vision.jpg') no-repeat center/cover;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 
-.top .sec-vision .vision-img img {
-  max-width: 670px;
-  height: 100%;
-}
 
 .top .sec-vision ul li {
   border-top: 1px solid #e6e6e6;
@@ -426,17 +404,21 @@
   overflow: hidden;
 }
 
+.sec-image-slider .slider-image {
+  display: flex;
+  width: 250%;
+  transform: translateX(0);
+  animation: slidermove 20s linear infinite;
+}
+
 .sec-image-slider .slides-list {
   display: flex;
   width: 100%;
-  margin: 0 -1.46%;
-  transition: transform 0.5s ease;
 }
 
 .sec-image-slider .slide-item {
-  flex: 0 0 32.2%;
   width: 100%;
-  padding: 0 1.46%;
+  margin: 0 1%;
 }
 
 /* sec-number-area */
@@ -951,6 +933,15 @@
   max-width: 246px;
 }
 
+@keyframes slidermove {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 
 @media screen and (min-width: 1025px) and (max-width: 1200px) {
   .container {
@@ -1002,26 +993,6 @@
 
   .cmm-mission-blk:nth-child(2n) {
     padding: 0 0 0 2.3%;
-  }
-
-  /* top */
-  .top .sec-mv .mv-txt {
-    width: 30%;
-    min-width: 240px;
-  }
-
-  .top .sec-mv .mv-txt h2 {
-    font-size: 2rem;
-  }
-
-  .top .sec-mv .mv-txt h2 span {
-    padding: 3px 2px 10px 10px;
-  }
-
-  .top .sec-mv .mv-txt p {
-    margin-top: 27px;
-    font-size: 1.875rem;
-    letter-spacing: 4px;
   }
 
   /* sec-topics */
@@ -1087,9 +1058,9 @@
     width: 49.3%;
     margin-top: 21px;
   }
-  .top .sec-vision .vision-img img{
-    max-width: 670px;
-    height: 100%;
+
+  .top .sec-vision .vision-img:before {
+    background: url('/img/img_vision.jpg') no-repeat center/100% 100%;
   }
 
   .top .sec-vision ul li:hover {
@@ -1337,7 +1308,6 @@
   }
 
   .top .sec-mv .mv-slider {
-    position: relative;
     padding: 40.2% 0 8.2%;
     background-image: url('/img/img_mv_bg_02_sp.png');
   }
@@ -1348,35 +1318,11 @@
   }
 
   .top .sec-mv .mv-txt {
-    display: flex;
     position: absolute;
-    bottom: -85px;
-    align-items: flex-end;
-    width: 100%;
-    min-width: auto;
-  }
-
-  .top .sec-mv .mv-txt h2 {
-    width: 49.1%;
-    margin-left: 5.3%;
-    font-size: 1.563rem;
-    letter-spacing: 0.7px;
-  }
-
-  .top .sec-mv .mv-txt h2 span {
-    margin-bottom: 6px;
-    padding: 8px 0px 8px 4px;
-  }
-
-  .top .sec-mv .mv-txt p {
-    width: 33.6%;
-    margin-left: 4.8%;
-    font-size: 1rem;
-    letter-spacing: 1.5px;
-  }
-
-  .top .sec-mv .mv-img {
-    flex-direction: column-reverse;
+    bottom: -79px;
+    left: 5.3%;
+    width: 86%;
+    max-width: 322px;
   }
 
   /* sec-news */
@@ -1653,10 +1599,14 @@
     width: 100%;
     margin-top: 0;
   }
+  .top .sec-vision .vision-img::before{
+    background: unset;
+  }
+
   .top .sec-vision .vision-img img {
-    max-width: 100%;
     height: 100%;
-}
+    max-width: 100%;
+  }
 
   .top .sec-vision ul {
     display: flex;
@@ -1688,14 +1638,8 @@
     right: 14px;
   }
 
-
-  .sec-image-slider .slides-list {
-    margin: 0 -1.73%;
-  }
-
-  .sec-image-slider .slide-item {
-    flex: 0 0 41.6%;
-    padding: 0 1.73%;
+  .sec-image-slider .slider-image {
+    width: 260%;
   }
 
   /* sec-number-area */
@@ -2139,19 +2083,8 @@
 
 
 @media only screen and (max-width: 374.9px) {
-
-  /* sec-mv */
-  .top .sec-mv .mv-txt h2 {
-    width: 49.5%;
-    margin-left: 2.5%;
-    font-size: 1.375rem;
-  }
-
-  .top .sec-mv .mv-txt p {
-    width: 34%;
-    margin-left: 3.5%;
-    font-size: 0.875rem;
-    letter-spacing: 1.5px;
+  .top .sec-mv .mv-txt {
+    bottom: -42%;
   }
 
   .count-txtblk {

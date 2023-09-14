@@ -73,6 +73,10 @@
   padding-top: 40px;
 }
 
+.senior-voice .voice-blk:first-child {
+  padding-top: 30px;
+}
+
 .senior-voice .voice-blk:not(:last-of-type) {
   background-image: radial-gradient(circle, #009944 1px, #fff 1px);
   background-size: 8px 2px;
@@ -136,6 +140,18 @@
     padding-top: 73px;
   }
 
+  .common-smile-subttl {
+    margin-bottom: 19px;
+  }
+
+  .smile-work .works p {
+    font-size: 1rem;
+  }
+
+  .voice-detail .detail-fact .fact-ttl {
+    padding: 9px 20px;
+  }
+
   /* Breadcrumb */
   .smile-work .smile-breadcrumb.breadcrumb {
     top: 130px;
@@ -144,10 +160,7 @@
   /* Our Business */
   .smile-work .intro-txt {
     text-align: center;
-  }
-
-  .smile-work .works {
-    padding: 40px 0 25px;
+    padding-bottom: 20px;
   }
 
   .smile-work .cleaning-list {
@@ -227,6 +240,10 @@
   .senior-voice .voice-blk {
     display: block;
     margin-bottom: 30px;
+    padding-top: 0;
+  }
+
+  .senior-voice .voice-blk:first-child{
     padding-top: 0;
   }
 
