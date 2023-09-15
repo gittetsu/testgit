@@ -29,7 +29,6 @@ setupTabs('.sec-number-area .number-gp-blk');
 function alignElementsBasedOnHeight() {
   const groups = {
     '.topics-txt .text-02': 0,
-    '.gp-circle-cnt': 0,
     '.gp-circle-caption': 0,
   };
 

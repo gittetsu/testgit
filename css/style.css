@@ -548,7 +548,7 @@
 }
 
 .gp-circle-cnt {
-  padding: 32.5px 0px 78px 0;
+  padding: 14% 0 32.1%;
 }
 
 .point-number-item .count-txtblk {
@@ -1089,10 +1089,6 @@
   /* sec-number-area */
   .sec-number-area {
     padding: 150px 0 120px 0;
-  }
-
-  .gp-circle-cnt {
-    padding: 32.5px 0px 61px 0;
   }
 
   .gp-circle-item {
@@ -1729,12 +1725,13 @@
   }
 
   .top .icon-common {
-    margin: 14px auto 18px;
+    margin: 9% auto 12%;
     max-width: 47px;
+    width: 28%;
   }
 
   .gp-circle-cnt {
-    padding: 20px 0 38.5px;
+    padding: 15% 0 21.4%;
   }
 
   .solar-circle-item .count-txtblk {
@@ -2115,10 +2112,6 @@
   .count-txtblk {
     font-size: 2.3rem;
     letter-spacing: 0;
-  }
-
-  .gp-circle-cnt {
-    padding: 15px 0 20.5px;
   }
 
   .gp-circle-caption {
