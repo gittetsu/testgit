@@ -62,6 +62,11 @@
   margin-bottom: 130px;
 }
 
+.top .sec-news .container {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
 .top .sec-news .news-ttl {
   align-items: flex-end;
 }
@@ -200,6 +205,8 @@
 
 .top .sec-topics .container {
   padding: 0 0 0 133px;
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
 .top .sec-topics .topics-ttl {
@@ -360,16 +367,17 @@
 }
 
 .top .sec-vision .vision-img {
+  position: relative;
   width: 54.3%;
   margin-top: 21px;
-  position: relative;
 }
-.top .sec-vision .vision-img::before{
-  content: "";
+
+.top .sec-vision .vision-img::before {
   position: absolute;
-  width:100%;
+  width: 100%;
   height: 100%;
   background: url('/img/img_vision.jpg') no-repeat center/cover;
+  content: "";
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
 }
@@ -540,7 +548,7 @@
 }
 
 .gp-circle-cnt {
-  padding: 32.5px 0px 78px 0;
+  padding: 14% 0 32.1%;
 }
 
 .point-number-item .count-txtblk {
@@ -552,8 +560,9 @@
 }
 
 .top .icon-common {
-  margin: 21px auto 9px;
+  margin: 10% auto 3.2%;
   max-width: 61px;
+  width: 25%;
 }
 
 .point-number {
@@ -636,6 +645,8 @@
 
 .sustainable-blk {
   padding: 0 133px;
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
 .top-sustain-blk {
@@ -821,7 +832,7 @@
 }
 
 .cmm-mission-blk {
-  align-items: flex-start;
+  align-items: center;
   margin-bottom: 149px;
   padding: 0 133px 0 0;
 }
@@ -937,6 +948,7 @@
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-50%);
   }
@@ -950,6 +962,8 @@
 
   .sustainable-blk {
     padding: 0 3%;
+    max-width: 100%;
+    ;
   }
 
   .cmm-mission-blk {
@@ -985,6 +999,7 @@
 
   .sustainable-blk {
     padding: 0 2.3%;
+    max-width: 100%;
   }
 
   .cmm-mission-blk {
@@ -995,9 +1010,14 @@
     padding: 0 0 0 2.3%;
   }
 
+  .top .sec-news .container {
+    max-width: 100%;
+  }
+
   /* sec-topics */
   .top .sec-topics .container {
     padding: 0 0 0 2.3%;
+    max-width: 100%;
   }
 
   .top .sec-vision .container {
@@ -1072,12 +1092,12 @@
     padding: 150px 0 120px 0;
   }
 
-  .gp-circle-cnt {
-    padding: 32.5px 0px 61px 0;
-  }
-
   .gp-circle-item {
     width: 31.5%;
+  }
+
+  .gp-circle-cnt {
+    padding: 14% 0 31.1%;
   }
 
   .pharmacy-gp-blk .pharmacy-gp-tablist li a:hover {
@@ -1471,8 +1491,13 @@
     margin-bottom: 178px;
   }
 
+  .top .sec-news .container {
+    max-width: 100%;
+  }
+
   .top .sec-topics .container {
     padding: 0 0 0 20px;
+    max-width: 100%;
   }
 
   .top .sec-topics .topics-ttl {
@@ -1599,7 +1624,8 @@
     width: 100%;
     margin-top: 0;
   }
-  .top .sec-vision .vision-img::before{
+
+  .top .sec-vision .vision-img::before {
     background: unset;
   }
 
@@ -1704,12 +1730,13 @@
   }
 
   .top .icon-common {
-    margin: 14px auto 18px;
+    margin: 9% auto 12%;
     max-width: 47px;
+    width: 28%;
   }
 
   .gp-circle-cnt {
-    padding: 20px 0 38.5px;
+    padding: 15% 0 21.4%;
   }
 
   .solar-circle-item .count-txtblk {
@@ -2090,10 +2117,6 @@
   .count-txtblk {
     font-size: 2.3rem;
     letter-spacing: 0;
-  }
-
-  .gp-circle-cnt {
-    padding: 15px 0 20.5px;
   }
 
   .gp-circle-caption {
