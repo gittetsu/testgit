@@ -360,16 +360,17 @@
 }
 
 .top .sec-vision .vision-img {
+  position: relative;
   width: 54.3%;
   margin-top: 21px;
-  position: relative;
 }
-.top .sec-vision .vision-img::before{
-  content: "";
+
+.top .sec-vision .vision-img::before {
   position: absolute;
-  width:100%;
+  width: 100%;
   height: 100%;
   background: url('/img/img_vision.jpg') no-repeat center/cover;
+  content: "";
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
 }
@@ -821,7 +822,7 @@
 }
 
 .cmm-mission-blk {
-  align-items: flex-start;
+  align-items: center;
   margin-bottom: 149px;
   padding: 0 133px 0 0;
 }
@@ -937,6 +938,7 @@
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-50%);
   }
@@ -1599,7 +1601,8 @@
     width: 100%;
     margin-top: 0;
   }
-  .top .sec-vision .vision-img::before{
+
+  .top .sec-vision .vision-img::before {
     background: unset;
   }
 
