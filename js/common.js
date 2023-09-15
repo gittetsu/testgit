@@ -320,7 +320,6 @@ window.addEventListener('load', function () {
             })
         } else {
             var arrow = toggle.querySelector(".arrow-blk")
-            console.log(toggle)
             arrow.addEventListener('click', function (e) {
                 e.preventDefault()
                 var dropdownMenu = toggle.nextElementSibling
