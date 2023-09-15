@@ -2697,7 +2697,7 @@ footer .page-top:hover img {
 
   .sugi-holding-header .nav-menu-list li.dropdown a {
     margin: 0 20px;
-    padding: 24px 0px;
+    padding: 0 0px;
     border-bottom: 1px solid transparent;
   }
 
@@ -2725,6 +2725,20 @@ footer .page-top:hover img {
     align-items: center;
   }
 
+  .sugi-holding-header .nav-menu-list li.dropdown .list {
+    padding: 24px 0;
+  }
+
+  .sugi-holding-header .nav-menu-list li.dropdown .dropdown-list .sub-ttl {
+    width: 30%;
+    padding: 24px 0;
+  }
+
+  .sugi-holding-header .nav-menu-list li.dropdown .dropdown-list .arrow-blk {
+    width: 70%;
+    padding: 24px 0;
+  }
+
   .sugi-holding-header .nav-menu-list li.dropdown .dropdown-list .click-arrow,
   .sugi-holding-header .nav-menu-list li.dropdown .list .click-arrow {
     position: relative;
@@ -2732,6 +2746,7 @@ footer .page-top:hover img {
     height: 20px;
     background-color: #fff;
     border-radius: 3px;
+    margin-left: auto;
   }
 
   .sugi-holding-header .nav-menu-list li.dropdown .list .click-arrow {
@@ -2769,43 +2784,14 @@ footer .page-top:hover img {
     transform: rotate(0deg) translate(-50%, -50%);
   }
 
-  /* .sugi-holding-header .nav-menu-list li a:after {
-    position: absolute;
-    top: 27px;
-    right: 20px;
-    width: 20px;
-    height: 20px;
-    background-color: #fff;
-    content: '';
-    border-radius: 3px;
-  } */
-
-  /* .sugi-holding-header .nav-menu-list li a:before {
-    position: absolute;
-    top: 35px;
-    right: 26px;
-    z-index: 9;
-    width: 8px;
-    height: 5.5px;
-    background: url('/img/common/ico_down_arrow.svg') no-repeat center/cover;
-    content: '';
-    transform: rotate(180deg);
-  } */
-
-  /* .sugi-holding-header .nav-menu-list .dropdown.show a::before {
-    top: 34px;
-    background: url('/img/common/ico_uparrow_green.png') no-repeat center/cover;
-    transform: rotate(0deg);
-  }
-
   .sugi-holding-header .nav-menu-list li.single-link a:before {
     top: 49%;
     height: 8px;
     background: url('/img/common/ico_arrow_green.svg') no-repeat center/cover;
     transform: translateY(-50%);
-  } */
+  }
 
-  .sugi-holding-header .dropdown .sub-menu .list-gp ul li a::before {
+  */ .sugi-holding-header .dropdown .sub-menu .list-gp ul li a::before {
     top: 9px;
     left: 8px;
     background: url('/img/common/ico_sub_arrow_sp.png') no-repeat center/cover;
@@ -3732,7 +3718,7 @@ footer .page-top:hover img {
 
   .sugi-holding-header .nav-menu-list li.dropdown a {
     margin: 0 20px;
-    padding: 24px 0px;
+    padding: 0 0px;
     border-bottom: 1px solid transparent;
   }
 
@@ -3775,6 +3761,21 @@ footer .page-top:hover img {
     height: 20px;
     background-color: #fff;
     border-radius: 3px;
+    margin-left: auto;
+  }
+
+  .sugi-holding-header .nav-menu-list li.dropdown .list {
+    padding: 24px 0;
+  }
+
+  .sugi-holding-header .nav-menu-list li.dropdown .dropdown-list .sub-ttl {
+    width: 25%;
+    padding: 24px 0;
+  }
+
+  .sugi-holding-header .nav-menu-list li.dropdown .dropdown-list .arrow-blk {
+    width: 75%;
+    padding: 24px 0;
   }
 
   .sugi-holding-header .nav-menu-list li.dropdown .list .click-arrow {
@@ -3811,45 +3812,6 @@ footer .page-top:hover img {
     background: url('/img/common/ico_uparrow_green.png') no-repeat center/cover;
     transform: rotate(0deg) translate(-50%, -50%);
   }
-
-  /* .sugi-holding-header .nav-menu-list li a:after {
-    position: absolute;
-    top: 27px;
-    right: 20px;
-    width: 20px;
-    height: 20px;
-    background-color: #fff;
-    content: '';
-    border-radius: 3px;
-  }
-
-  .sugi-holding-header .nav-menu-list li a:before {
-    position: absolute;
-    top: 35px;
-    right: 26px;
-    z-index: 9;
-    width: 8px;
-    height: 5.5px;
-    background: url('/img/common/ico_down_arrow.svg') no-repeat center/cover;
-    content: '';
-    transform: rotate(180deg);
-  }
-
-  .sugi-holding-header .nav-menu-list .dropdown.show a::before {
-    background: url('/img/common/ico_uparrow_green.png') no-repeat center/cover;
-    transform: rotate(0deg);
-  }
-
-  .sugi-holding-header .nav-menu-list li.single-link a:before {
-    top: 52%;
-    height: 8px;
-    background: url('/img/common/ico_arrow_green.svg') no-repeat center/cover;
-    transform: translateY(-50%);
-  }
-
-  .sugi-holding-header .nav-menu-list .single-link a:after {
-    border-radius: 50%;
-  } */
 
   .sugi-holding-header .nav-menu-list .nav-footer-list li a:before,
   .sugi-holding-header .nav-menu-list .nav-footer-list li a:after {

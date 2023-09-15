@@ -319,7 +319,8 @@ window.addEventListener('load', function () {
                 closeAllDropdowns()
             })
         } else {
-            var arrow = toggle.querySelector(".click-arrow")
+            var arrow = toggle.querySelector(".arrow-blk")
+            console.log(toggle)
             arrow.addEventListener('click', function (e) {
                 e.preventDefault()
                 var dropdownMenu = toggle.nextElementSibling
