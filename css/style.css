@@ -560,8 +560,9 @@
 }
 
 .top .icon-common {
-  margin: 21px auto 9px;
+  margin: 10% auto 3.2%;
   max-width: 61px;
+  width: 25%;
 }
 
 .point-number {
@@ -1093,6 +1094,10 @@
 
   .gp-circle-item {
     width: 31.5%;
+  }
+
+  .gp-circle-cnt {
+    padding: 14% 0 31.1%;
   }
 
   .pharmacy-gp-blk .pharmacy-gp-tablist li a:hover {
