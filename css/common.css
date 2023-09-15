@@ -445,7 +445,6 @@ h6.common-sub-ttl {
 .sugi-holding-header .search-gp .search-btn {
   display: flex;
   align-items: center;
-  width: 230px;
 }
 
 .sugi-holding-header .search-gp .search-btn .txt {
