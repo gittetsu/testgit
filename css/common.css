@@ -411,12 +411,20 @@ h6.common-sub-ttl {
 
 .sugi-holding-header .header-inner .header-blk {
   padding: 17px 0;
+  max-width: 260px;
 }
 
 .sugi-holding-header .navbar-gp {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.sugi-holding-header .nav-gp {
+  width: 83%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .sugi-holding-header .header-logo a {
@@ -601,7 +609,7 @@ h6.common-sub-ttl {
 
 .sugi-holding-header .nav-menu-list li a {
   font-weight: 700;
-  letter-spacing: -0.1px;
+  font-size: 0.938rem;
 }
 
 .sugi-holding-header .nav-menu-list li.dropdown a:hover,
@@ -650,7 +658,7 @@ h6.common-sub-ttl {
 
 .sugi-holding-header .sub-menu-list .other-link span:after {
   position: absolute;
-  top: 2px;
+  top: 5px;
   right: 0;
   width: 14px;
   height: 14px;
@@ -660,7 +668,7 @@ h6.common-sub-ttl {
 
 .sugi-holding-header .sub-menu-list .business-gp .other-link span:after,
 .sugi-holding-header .sub-menu-list .site-gp .other-link span:after {
-  top: 7px;
+  top: 10px;
 }
 
 .sugi-holding-header .dropdown .sub-menu .sub-menu-list {
@@ -731,7 +739,7 @@ h6.common-sub-ttl {
 }
 
 .sugi-holding-header .dropdown .sub-menu .list-gp .site-gp {
-  width: 30.4%;
+  width: 32.4%;
   margin-right: 4.1%;
   letter-spacing: 0.5px;
 }
@@ -752,9 +760,9 @@ h6.common-sub-ttl {
 }
 
 .sugi-holding-header .dropdown .sub-menu .list-gp li a {
-  display: inline;
+  padding: 0 0 0 14px;
+  display: flex;
   position: relative;
-  padding-left: 14px;
   color: #048851;
   font-size: 0.875rem;
   letter-spacing: 0.5px;
@@ -762,7 +770,7 @@ h6.common-sub-ttl {
 
 .sugi-holding-header .dropdown .sub-menu .list-gp li a::before {
   position: absolute;
-  top: 6px;
+  top: 10px;
   left: 0;
   width: 6px;
   height: 10px;
@@ -776,7 +784,8 @@ h6.common-sub-ttl {
 
 .sugi-holding-header .dropdown .sub-menu .list-gp ul li .sub-menu-detail li a {
   padding-left: 0;
-  font-size: 0.75rem;
+  font-size: .875rem;
+  padding-bottom: 0;
   font-weight: 400;
 }
 
@@ -2545,6 +2554,13 @@ footer .page-top:hover img {
     color: #fff;
   }
 
+  .sugi-holding-header .dropdown .sub-menu .list-gp ul li a:before {
+    top: 9px;
+    left: 8px;
+    background: url(/img/common/ico_sub_arrow_sp.png) no-repeat center/cover;
+    transform: rotate(0deg);
+  }
+
   .sugi-holding-header .dropdown .sub-menu .sub-menu-list {
     display: block;
     padding: 0 0 0 12px;
@@ -3769,12 +3785,12 @@ footer .page-top:hover img {
   }
 
   .sugi-holding-header .nav-menu-list li.dropdown .dropdown-list .sub-ttl {
-    width: 25%;
+    width: 50%;
     padding: 24px 0;
   }
 
   .sugi-holding-header .nav-menu-list li.dropdown .dropdown-list .arrow-blk {
-    width: 75%;
+    width: 50%;
     padding: 24px 0;
   }
 
