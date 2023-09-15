@@ -1570,6 +1570,11 @@ table tr th:first-child {
   align-items: flex-start;
 }
 
+.order-list-gp ol .order-list-ttl .order-list-num {
+  background-color: unset;
+  border: 1px solid transparent;
+}
+
 .order-list-ttl .order-list-num {
   margin-right: 10px;
   padding: 2.4px 0;
