@@ -637,6 +637,8 @@
 
 .sustainable-blk {
   padding: 0 133px;
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
 .top-sustain-blk {
@@ -952,6 +954,7 @@
 
   .sustainable-blk {
     padding: 0 3%;
+    max-width: 100%;;
   }
 
   .cmm-mission-blk {
@@ -987,6 +990,7 @@
 
   .sustainable-blk {
     padding: 0 2.3%;
+    max-width: 100%;
   }
 
   .cmm-mission-blk {
