@@ -408,7 +408,7 @@ h6.common-sub-ttl {
   width: 98%;
   margin: 0 auto;
   padding: 28px 0 0;
-  max-width: 1306px;
+  max-width: 100%;
 }
 
 .sugi-holding-header .header-inner .header-blk {
