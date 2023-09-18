@@ -1490,6 +1490,10 @@ h6.common-sub-ttl {
   width: 100%;
   text-align: left;
   -webkit-text-size-adjust: 100%;
+  border-collapse: collapse;
+  border-style:hidden;
+  border-top: 1px solid #cce2d9;
+  border-bottom: 1px solid #cce2d9;
 }
 
 .table .table-ttl th {
@@ -1502,19 +1506,10 @@ h6.common-sub-ttl {
 .table tr th {
   padding: 11.6px 20px;
   border: 1px solid #cce2d9;
+  -moz-border: 1px solid #cce2d9;
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 1rem;
   vertical-align: middle;
-}
-
-.table tr td:last-child,
-table tr th:last-child {
-  border-right: 1px solid transparent;
-}
-
-.table tr td:first-child,
-table tr th:first-child {
-  border-left: 1px solid transparent;
 }
 
 .table tr .row,
