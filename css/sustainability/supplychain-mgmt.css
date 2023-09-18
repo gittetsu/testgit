@@ -3,12 +3,17 @@
 .supplychain-mgmt .pdf-btn {
   display: inline-block;
   position: relative;
-  padding: 14px 92px 14px 30px;
+  padding: 14.4px 92px 14.4px 30px;
   border: 2px solid #048851;
   background-color: #fff;
   color: #048851;
   font-weight: 700;
   border-radius: 100px;
+}
+
+.supplychain-mgmt .pdf-btn:hover {
+  background-color: #048851;
+  color: #fff;
 }
 
 .supplychain-mgmt .pdf-btn::after {
@@ -21,6 +26,13 @@
   content: '';
 }
 
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .supplychain-mgmt .pdf-btn:hover {
+    background-color: #fff;
+    color: #048851;
+  }
+}
+
 @media only screen and (max-width: 767.9px) {
   .supplychain-mgmt .btn-gp {
     margin: 0 auto;
@@ -28,12 +40,17 @@
   }
 
   .supplychain-mgmt .pdf-btn {
-    padding: 14px 65px 14px 20px;
+    padding: 14.4px 65px 14.4px 20px;
     text-align: left;
     letter-spacing: 0.5px;
   }
 
   .supplychain-mgmt .pdf-btn::after {
     top: 16px;
+  }
+
+  .supplychain-mgmt .pdf-btn:hover {
+    background-color: #fff;
+    color: #048851;
   }
 }
