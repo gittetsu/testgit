@@ -3,7 +3,7 @@
 .supplychain-mgmt .pdf-btn {
   display: inline-block;
   position: relative;
-  padding: 14px 92px 14px 30px;
+  padding: 14.4px 92px 14.4px 30px;
   border: 2px solid #048851;
   background-color: #fff;
   color: #048851;
@@ -40,7 +40,7 @@
   }
 
   .supplychain-mgmt .pdf-btn {
-    padding: 14px 65px 14px 20px;
+    padding: 14.4px 65px 14.4px 20px;
     text-align: left;
     letter-spacing: 0.5px;
   }

@@ -26,12 +26,17 @@
 .sec-finance .pdf-btn {
   display: inline-block;
   position: relative;
-  padding: 14px 93px 14px 30px;
+  padding: 14.4px 93px 14.4px 30px;
   border: 2px solid #048851;
   background-color: #fff;
   color: #048851;
   font-weight: 700;
   border-radius: 100px;
+}
+
+.sec-finance .pdf-btn:hover {
+  background-color: #048851;
+  color: #fff;
 }
 
 .sec-finance .pdf-btn::after {
@@ -43,4 +48,18 @@
   background: url('/img/common/ico_pdf.svg') no-repeat center/cover;
   content: '';
   transform: translateY(-50%);
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .sec-finance .pdf-btn:hover {
+    background-color: #fff;
+    color: #048851;
+  }
+}
+
+@media only screen and (max-width: 767.9px) {
+  .sec-finance .pdf-btn:hover {
+    background-color: #fff;
+    color: #048851;
+  }
 }
