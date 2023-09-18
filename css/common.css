@@ -362,14 +362,15 @@ ol {
 }
 
 h2.common-ttl {
-  padding-bottom: 3px;
+  padding-bottom: 7px;
   color: #048851;
   font-size: 1.625rem;
   border-bottom: 2px solid #048851;
+  letter-spacing: 0.16rem;
 }
 
 h3.common-ttl {
-  padding-bottom: 3px;
+  padding-bottom: 14px;
   color: #000;
   font-size: 1.375rem;
   border-bottom: 1px solid #e0e0e0;
