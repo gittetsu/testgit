@@ -747,7 +747,7 @@
 
 .category-list-blk .category-list-detail {
   padding: 44.4% 0 38.4%;
-  margin: 20px;
+  margin: 30px;
   border: 1px solid transparent;
   position: relative;
 }
@@ -1184,6 +1184,10 @@
 
   .cmm-list-item .category-list-blk:hover {
     transform: initial;
+  }
+
+  .category-list-blk .category-list-detail{
+    margin: 0;
   }
 
   .category-list-blk:hover .category-list-detail {
