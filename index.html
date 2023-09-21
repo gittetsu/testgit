@@ -664,22 +664,23 @@
 							const liElement = document.createElement('li');
 							liElement.className = 'news-list';
 							liElement.innerHTML = `
-                <a href="#" class="article-link" data-article-id="${article.id}">
-                    <div class="newslist-header">
-                        <span class="news-date">${formatDate(article.attributes.created)}</span>
-                        <div>
-                            <span class="news-sugi">スギホールディングス</span> 
-                            <span class="news-info">${article.attributes.field_list}</span>
-                        </div>
-                    </div>
-                    <p class="newslist-desc" id="article-title${categoryLists[category.toLowerCase()].count}">${article.attributes.title}</p>
-                </a>
-            `;
+							<li class="new-common-list">
+                				<a href="#" class="article-link" data-article-id="${article.id}">
+                    			<div class="cat-blk">
+                        			<p class="date small-text">${formatDate(article.attributes.created)}</p>
+									<ul>
+                            			<li class="small-text">スギホールディングス</li> 
+										<li class="small-text">${article.attributes.field_list}</li>
+									</ul>
+                    			</div>
+                    			<p class="newslist-desc text-02" id="article-title${categoryLists[category.toLowerCase()].count}">${article.attributes.title}</p>
+                				</a>
+							</li>
+            				`;
 							ulElement.appendChild(liElement);
 						});
 					}
 				});
-
 
 				// リンクにクリックイベントを追加
 				const articleLinks = document.querySelectorAll('.article-link');

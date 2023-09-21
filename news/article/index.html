@@ -27,7 +27,9 @@
 					<a href="/">TOP</a>
 				</li>
 				<li><a href="/news/">ニュースリリース</a></li>
-				<li>記事タイトルが入ります。</li>
+				<li>
+					<div id="article-title"></div>
+				</li>
 			</ul>
 		</div>
 	</div><!-- /.breadcrumb -->
@@ -35,28 +37,36 @@
 		<section class="mb-150">
 			<div class="article-list mb-60">
 				<div class="article-sub-ttl mb-12">
-					<span class="article-date">2020.05.01</span>
+					<span class="article-date">
+						<div id="article-date"></div>
+					</span>
 					<span class="article-sugi">スギ薬局</span>
 					<span class="article-info">店舗情報</span>
 				</div>
-				<h2 class="common-ttl">『名古屋大学病院店』新型コロナ対策を強化</h2>
-				<h3 class="common-ttl">小見出し1</h3>
+				<h2 class="common-ttl">
+					<div id="article-title2"></div>
+				</h2>
+				<!-- <h3 class="common-ttl">小見出し1</h3> -->
 				<p class="mb-40">
-					この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。
+				<div id="article-body"></div>
 				</p>
-				<div class="d-flex reverse">
+				<!-- <div class="d-flex reverse">
 					<p class="w-560">
-						この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
+						この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。
 					</p>
 					<div class="w-500 mb-sp-30">
-						<img src="/img/news/img_500.png" alt="この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。">
+						<img src="/img/news/img_500.png"
+							alt="この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。">
 					</div>
-				</div>
+				</div> -->
 			</div>
-			<div class="ref-link mb-60">
+			<!-- <div class="ref-link mb-60">
 				<a href="#" target="_blank"><span class="ref">参考</span>https://www.xxxxxxx.xxxxx.jp</a>
+			</div> -->
+			<div class="ref-link mb-60">
+				<a href="/pdf/" id="pdf-link" target="_blank"><span class="ref">参考</span></a>
 			</div>
-			<div class="article-txt01 mb-60">
+			<!-- <div class="article-txt01 mb-60">
 				<h3 class="common-ttl">小見出し1</h3>
 				<p>
 					この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。
@@ -65,7 +75,7 @@
 			<div class="article-txt02 mb-40">
 				<h4 class="common-ttl">小見出し2</h4>
 				<p>この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。</p>
-			</div>
+			</div> -->
 			<div class="share-link mb-40">
 				<span class="share-txt">この記事をシェアする</span>
 				<a href="#"><img src="/img/common/ico_facebook.svg" alt="facebook"></a>
@@ -79,6 +89,60 @@
 		</section>
 	</div>
 	<footer data-include="/include/footer.html"></footer>
+	<script>//jsファイル移行
+		document.addEventListener('DOMContentLoaded', function () {
+			// URLからIDを取得
+			const urlParams = new URLSearchParams(window.location.search);
+			const articleId = urlParams.get('id');
+			const apiUrl = `https://d37m9cibsc5611.cloudfront.net/jsonapi/node/article/${articleId}`;
+
+			// 日付フォーマット変更
+			function formatDate(dateString) {
+				const options = { year: 'numeric', month: '2-digit', day: '2-digit' };
+				const date = new Date(dateString);
+				return date.toLocaleDateString('ja-JP', options).replace(/\//g, '.');
+			}
+
+			// APIから本文データを取得する関数
+			async function fetchArticleBody() {
+				try {
+					// JSON APIからデータを取得します
+					const response = await fetch(apiUrl);
+					const data = await response.json();
+					console.log(data);
+
+					// article-body要素に本文を挿入
+					const articleBody = data.data.attributes.body.value;
+					const articleBodyElement = document.getElementById('article-body');
+					articleBodyElement.innerHTML = articleBody;
+
+					// article-date要素に本文を挿入
+					const articleDate = formatDate(data.data.attributes.created);
+					const articleDateElement = document.getElementById('article-date');
+					articleDateElement.innerHTML = articleDate;
+
+					// article-title要素に本文を挿入
+					const articleTitle = data.data.attributes.title;
+					const articleTitleElement = document.getElementById('article-title');
+					articleTitleElement.innerHTML = articleTitle;
+
+					const articleTitle2 = data.data.attributes.title;
+					const articleTitleElement2 = document.getElementById('article-title2');
+					articleTitleElement2.innerHTML = articleTitle2;
+
+					// PDFリンクを設定
+					const pdfLink = document.getElementById('pdf-link');
+		            pdfLink.href = `/pdf/${data.data.attributes.field_pdf.value}`;
+
+				} catch (error) {
+					console.error('エラーが発生しました:', error);
+				}
+			}
+
+			// ページ読み込み時に記事本文を更新
+			fetchArticleBody();
+		});
+	</script>
 	<script src="/js/load.js"></script>
 	<script src="/js/common.js"></script>
 </body>
