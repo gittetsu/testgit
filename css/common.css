@@ -470,7 +470,8 @@ h6.common-sub-ttl {
 }
 
 .sugi-holding-header .sub-nav-list {
-  padding-right: 29px;
+  /* padding-right: 29px; */
+  padding-right: 0;
 }
 
 .sugi-holding-header .sub-nav-list a span {
