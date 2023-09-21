@@ -11,6 +11,7 @@
 /* sec-contact */
 .sec-contact .phone-num {
   font-size: 1.25rem;
+  pointer-events: none;
 }
 
 .sec-contact .text-03 {
@@ -38,6 +39,11 @@
     margin-top: 20px;
     margin-left: 0;
   }
+
+  /* sec-contact */
+  .sec-contact .phone-num {
+    pointer-events: visible;
+  }
 }
 
 @media only screen and (max-width: 767.9px) {
@@ -48,5 +54,10 @@
 
   .sec-inquiries .external-button+.external-button {
     margin-top: 20px;
+  }
+
+  /* sec-contact */
+  .sec-contact .phone-num {
+    pointer-events: visible;
   }
 }
