@@ -724,39 +724,56 @@
 .cmm-list-item {
   position: relative;
   width: 33.33%;
+  overflow: hidden;
 }
 
-.cmm-list-item:before {
+.cmm-list-item a:before {
   position: absolute;
   top: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.3);
   content: "";
+  left: 0;
+  right: 0;
 }
 
 .category-list-blk {
   display: block;
   position: relative;
-  margin: 20px;
-  padding: 44.4% 0 38.4%;
-  border: 1px solid transparent;
+  overflow: hidden;
   text-align: center;
 }
 
-.category-list-blk:hover {
+.category-list-blk .category-list-detail {
+  padding: 44.4% 0 38.4%;
+  margin: 30px;
+  border: 1px solid transparent;
+  position: relative;
+}
+
+.category-list-blk:hover .category-list-detail {
   border: 1px solid rgba(224, 224, 224, 0.5);
 }
 
-.category-list-item01 {
+.category-list-item01 a {
   background: url('/img/img_investors.jpg') no-repeat center/cover;
 }
 
-.category-list-item02 {
+.cmm-list-item a {
+  transition: transform 1.2s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.cmm-list-item .category-list-blk:hover {
+  transform: scale(1.05, 1.05);
+}
+
+
+.category-list-item02 a {
   background: url('/img/img_property.jpg') no-repeat center/cover;
 }
 
-.category-list-item03 {
+.category-list-item03 a {
   background: url('/img/img_recruit.jpg') no-repeat center/cover;
 }
 
@@ -1165,7 +1182,15 @@
     padding-bottom: 4px;
   }
 
-  .category-list-blk:hover {
+  .cmm-list-item .category-list-blk:hover {
+    transform: initial;
+  }
+
+  .category-list-blk .category-list-detail{
+    margin: 0;
+  }
+
+  .category-list-blk:hover .category-list-detail {
     border: 1px solid transparent;
   }
 
@@ -1912,13 +1937,18 @@
     width: 100%;
   }
 
-  .category-list-blk {
-    margin: 0;
+  .category-list-blk .category-list-detail {
     padding: 19.2% 20px 9.1%;
+    margin: 0;
+    border: none;
   }
 
-  .category-list-blk:hover {
-    border: 1px solid transparent;
+  .category-list-blk:hover .category-list-detail {
+    border: none;
+  }
+
+  .cmm-list-item .category-list-blk:hover {
+    transform: initial;
   }
 
   .category-list-blk:hover .common-button {
@@ -1970,15 +2000,15 @@
     filter: invert(65%) sepia(70%) saturate(4384%) hue-rotate(139deg) brightness(83%) contrast(100%);
   }
 
-  .category-list-item01 {
+  .category-list-item01 a {
     background: url('/img/img_investors_sp.jpg') no-repeat center/cover;
   }
 
-  .category-list-item02 {
+  .category-list-item02 a {
     background: url('/img/img_property_sp.jpg') no-repeat center/cover;
   }
 
-  .category-list-item03 {
+  .category-list-item03 a {
     background: url('/img/img_recruit_sp.jpg') no-repeat center/cover;
   }
 
