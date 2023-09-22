@@ -8,28 +8,28 @@
   font-family: 'Figtree';
   font-weight: 700;
   font-style: normal;
-  src: url('../fonts/Figtree-Bold.ttf');
+  src: url('/fonts/Figtree-Bold.ttf');
 }
 
 @font-face {
   font-family: 'Figtree';
   font-weight: 300;
   font-style: normal;
-  src: url('../fonts/Figtree-Light.ttf');
+  src: url('/fonts/Figtree-Light.ttf');
 }
 
 @font-face {
   font-family: 'Noto Sans JP';
   font-weight: 400;
   font-style: normal;
-  src: url('../fonts/NotoSansJP-Regular.ttf');
+  src: url('/fonts/NotoSansJP-Regular.ttf');
 }
 
 @font-face {
   font-family: 'Noto Sans JP';
   font-weight: 700;
   font-style: normal;
-  src: url('../fonts/NotoSansJP-Bold.ttf');
+  src: url('/fonts/NotoSansJP-Bold.ttf');
 }
 
 @font-face {
@@ -43,34 +43,34 @@
   font-family: 'Niconne';
   font-weight: 400;
   font-style: normal;
-  src: url('../fonts/Niconne-Regular.ttf');
+  src: url('/fonts/Niconne-Regular.ttf');
 }
 
 @font-face {
   font-family: 'Zen Maru Gothic';
   font-weight: 500;
   font-style: normal;
-  src: url('../fonts/ZenMaruGothic-Medium.ttf');
+  src: url('/fonts/ZenMaruGothic-Medium.ttf');
 }
 
 @font-face {
   font-family: 'Zen Maru Gothic';
   font-weight: 700;
-  src: url('../fonts/ZenMaruGothic-Bold.ttf');
+  src: url('/fonts/ZenMaruGothic-Bold.ttf');
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Zen Maru Gothic';
   font-weight: 400;
-  src: url('../fonts/ZenMaruGothic-Regular.ttf');
+  src: url('/fonts/ZenMaruGothic-Regular.ttf');
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Josefin Sans';
   font-weight: 700;
-  src: url('../fonts/JosefinSans-Bold.ttf');
+  src: url('/fonts/JosefinSans-Bold.ttf');
   font-style: normal;
 }
 
