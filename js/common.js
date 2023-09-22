@@ -501,23 +501,6 @@ window.addEventListener('load', function () {
     const element = document.querySelector('.sidebar')
     const header = document.querySelector('.header-inner')
 
-    // This function handles the media query changes
-    function handle(event) {
-        if (event.matches) {
-            if (element) {
-                var contentHeight = calculateMaxHeight(toggleButtonID)
-                header.style.marginBottom = contentHeight + 'px';
-            } else {
-                header.style.marginBottom = '0px'
-            }
-        } else {
-            header.style.marginBottom = '0px'
-        }
-    }
-    handle(query)
-    query.addListener(handle)
-    window.addEventListener("resize", handle(query));
-
     // Accordion Height
     function accordionHeight() {
         const side_col03_detail_lists = document.querySelectorAll('.side-accor-col03')
@@ -662,4 +645,31 @@ window.addEventListener('load', function () {
         });
     }
 
+    /*header calculate*/
+    function setHeight() {
+        var header = document.querySelector('header');
+        var contentElements = document.querySelectorAll('.sec-mv, .cmn-banner, .sidebar , .ttl-bg');
+        var headerHeight = header.offsetHeight + 'px';
+        if (element) {
+            var bodyElement = document.body;
+            var sideNav = document.querySelector('.js-sidebar');
+            var sideNavHeight = sideNav.offsetHeight + 'px';
+            if (header && sideNav) {
+                var headerHeight = parseInt(header.offsetHeight);
+                var sideNavHeight = parseInt(sideNav.offsetHeight);
+                var totalHeight = headerHeight + sideNavHeight;
+                var totalHeightResult = totalHeight + 'px';
+                bodyElement.style.paddingTop = mediaQuery.matches ? totalHeightResult : 0;
+            }
+        }
+
+        contentElements.forEach(function (element) {
+            element.style.marginTop = mediaQuery.matches ? headerHeight : 0;
+        });
+    }
+    setHeight();
+
+    window.addEventListener('resize', setHeight);
+
 });
+
