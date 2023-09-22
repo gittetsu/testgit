@@ -1492,7 +1492,7 @@ h6.common-sub-ttl {
   text-align: left;
   -webkit-text-size-adjust: 100%;
   border-collapse: collapse;
-  border-style:hidden;
+  border-style: hidden;
   border-top: 1px solid #cce2d9;
   border-bottom: 1px solid #cce2d9;
 }
@@ -2398,6 +2398,14 @@ footer .page-top:hover img {
   }
 
   /*header*/
+  .sugi-holding-header {
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    z-index: 5;
+    top: 0;
+  }
+
   .sugi-holding-header .header-inner {
     align-items: center;
     width: 100%;
@@ -3408,6 +3416,14 @@ footer .page-top:hover img {
   }
 
   /*header*/
+  .sugi-holding-header {
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    z-index: 5;
+    top: 0;
+  }
+
   .sugi-holding-header .header-inner {
     position: relative;
     align-items: center;
