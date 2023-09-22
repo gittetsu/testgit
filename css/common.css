@@ -405,7 +405,7 @@ h6.common-sub-ttl {
   position: relative;
   justify-content: space-between;
   z-index: 30;
-  width: 98%;
+  width: 95%;
   margin: 0 auto;
   padding: 28px 0 0;
   max-width: 100%;
@@ -423,7 +423,7 @@ h6.common-sub-ttl {
 }
 
 .sugi-holding-header .nav-gp {
-  width: 83%;
+  width: 94%;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
