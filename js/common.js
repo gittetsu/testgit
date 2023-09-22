@@ -676,7 +676,6 @@ window.addEventListener('load', function () {
                 var sideNavHeight = parseInt(sideNav.offsetHeight);
                 var totalHeight = headerHeight + sideNavHeight;
                 var totalHeightResult = totalHeight + 'px';
-                console.log(totalHeightResult)
                 bodyElement.style.paddingTop = mediaQuery.matches ? totalHeightResult : 0;
             }
         }
