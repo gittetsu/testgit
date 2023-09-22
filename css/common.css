@@ -36,7 +36,7 @@
   font-family: 'Dosis';
   font-weight: 700;
   font-style: normal;
-  src: url('../fonts/Dosis-Bold.ttf');
+  src: url('/fonts/Dosis-Bold.ttf');
 }
 
 @font-face {
@@ -1006,7 +1006,7 @@ h6.common-sub-ttl {
 /* banner*/
 .cmn-banner {
   padding: 45.5px 0 45.5px;
-  background: url('/../img/common/img_banner_bg.png') no-repeat center/cover;
+  background: url('/img/common/img_banner_bg.png') no-repeat center/cover;
 }
 
 .cmn-banner h1 {
