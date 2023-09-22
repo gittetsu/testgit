@@ -501,23 +501,6 @@ window.addEventListener('load', function () {
     const element = document.querySelector('.sidebar')
     const header = document.querySelector('.header-inner')
 
-    // This function handles the media query changes
-    // function handle(event) {
-    //     if (event.matches) {
-    //         if (element) {
-    //             var contentHeight = calculateMaxHeight(toggleButtonID)
-    //             // header.style.marginBottom = contentHeight + 'px';
-    //         } else {
-    //             header.style.marginBottom = '0px'
-    //         }
-    //     } else {
-    //         header.style.marginBottom = '0px'
-    //     }
-    // }
-    // handle(query)
-    // query.addListener(handle)
-    // window.addEventListener("resize", handle(query));
-
     // Accordion Height
     function accordionHeight() {
         const side_col03_detail_lists = document.querySelectorAll('.side-accor-col03')
