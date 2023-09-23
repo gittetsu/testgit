@@ -89,8 +89,16 @@ function openArticle(event) {
   // 選択された記事のIDを取得
   const articleId = event.currentTarget.getAttribute('data-article-id');
 
-  // articleIdを使用して遷移先URLを構築
-  const destinationURL = `https://d2ehwfutnqpgdf.cloudfront.net/news/article?id=${articleId}`;
+  // article.attributes.body.value の値を確認
+  const articleBodyValue = article.attributes.body.value;
+
+  // 遷移先URLのベース部分
+  let destinationURL = `https://d2ehwfutnqpgdf.cloudfront.net/news/article?id=${articleId}`;
+
+  // テキストデータ が存在しない場合、URLを変更
+  if (!article.attributes.body.value) {
+    destinationURL = `https://d2ehwfutnqpgdf.cloudfront.net/pdf/${article.attributes.field_pdf.value}`;
+  }
 
   // 遷移
   window.location.href = destinationURL;
