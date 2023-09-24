@@ -1,6 +1,13 @@
 // JSON APIのエンドポイントURLを指定
 const apiUrl = 'https://d37m9cibsc5611.cloudfront.net/jsonapi/node/sugi_hd?sort=-created';
 
+// 日付解析関数
+function parseDate(dateString) {
+  const [datePart] = dateString.split(' '); // 日付部分のみを取得
+  const [year, month, day] = datePart.split('-').map(Number); // 日付部分をハイフンで分割して数値に変換
+  return new Date(year, month - 1, day); // 月は0から始まるため、1を引いて設定
+}
+
 // 日付フォーマット変更
 function formatDate(dateString) {
   const options = { year: 'numeric', month: '2-digit', day: '2-digit' };
@@ -16,12 +23,14 @@ async function updateArticleLists() {
     const data = await response.json();
     console.log(data);
 
-    // データを新しい順にソート（created フィールドを基準に）
-    const sortedData = data.data.sort((a, b) => {
-      const dateA = new Date(a.attributes.created);
-      const dateB = new Date(b.attributes.created);
-      return dateB - dateA; // 新しい順にソート
-    });
+    const sortedData = data.data
+    .sort((a, b) => {
+        // field_date を Date オブジェクトに変換して比較
+        const dateA = parseDate(a.attributes.field_date);
+        const dateB = parseDate(b.attributes.field_date);
+        return dateB - dateA; // 新しい順にソート
+    })
+    .slice(0, 5); // 最大5件まで
 
     // カテゴリーごとに記事をフィルタリングしてリストに追加
     const categories = ["経営", "グループ", "サステナビリティ", "イベント", "その他", "IR情報"];
