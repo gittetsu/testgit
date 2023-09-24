@@ -9,8 +9,8 @@
 }
 
 .sec-dominant .caption {
-  padding-left: 1.5rem;
-  text-indent: -1.5rem;
+  padding-left: 1.3rem;
+  text-indent: -1.3rem;
 }
 
 .sec-dominant .caption::before {
@@ -317,12 +317,9 @@
     height: 50px;
   }
 
-  .sec-dominant .caption::before {
-    content: " ";
-  }
-
   .sec-dominant .caption {
-    text-indent: 0;
+    padding-left: 0.9rem;
+    text-indent: -0.9rem;
   }
 
   .tab-slider .slide-cnt-img,

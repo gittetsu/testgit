@@ -405,7 +405,7 @@ h6.common-sub-ttl {
   position: relative;
   justify-content: space-between;
   z-index: 30;
-  width: 98%;
+  width: 95%;
   margin: 0 auto;
   padding: 28px 0 0;
   max-width: 100%;
@@ -423,7 +423,7 @@ h6.common-sub-ttl {
 }
 
 .sugi-holding-header .nav-gp {
-  width: 83%;
+  width: 94%;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -470,7 +470,8 @@ h6.common-sub-ttl {
 }
 
 .sugi-holding-header .sub-nav-list {
-  padding-right: 29px;
+  /* padding-right: 29px; */
+  padding-right: 0;
 }
 
 .sugi-holding-header .sub-nav-list a span {
@@ -1005,7 +1006,7 @@ h6.common-sub-ttl {
 /* banner*/
 .cmn-banner {
   padding: 45.5px 0 45.5px;
-  background: url('/../img/common/img_banner_bg.png') no-repeat center/cover;
+  background: url('/img/common/img_banner_bg.png') no-repeat center/cover;
 }
 
 .cmn-banner h1 {
@@ -1491,7 +1492,7 @@ h6.common-sub-ttl {
   text-align: left;
   -webkit-text-size-adjust: 100%;
   border-collapse: collapse;
-  border-style:hidden;
+  border-style: hidden;
   border-top: 1px solid #cce2d9;
   border-bottom: 1px solid #cce2d9;
 }
@@ -2397,6 +2398,14 @@ footer .page-top:hover img {
   }
 
   /*header*/
+  .sugi-holding-header {
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    z-index: 5;
+    top: 0;
+  }
+
   .sugi-holding-header .header-inner {
     align-items: center;
     width: 100%;
@@ -3407,6 +3416,14 @@ footer .page-top:hover img {
   }
 
   /*header*/
+  .sugi-holding-header {
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    z-index: 5;
+    top: 0;
+  }
+
   .sugi-holding-header .header-inner {
     position: relative;
     align-items: center;
