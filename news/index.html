@@ -162,84 +162,10 @@
 		</ul>
 	</div>
 	<footer data-include="/include/footer.html"></footer>
-    	<script>//jsファイル移行
-	        // JSON APIのエンドポイントURLを指定
-        	const apiUrl = 'https://d37m9cibsc5611.cloudfront.net/jsonapi/node/article?sort=-created';
-
-	        // 日付フォーマット変更
-        	function formatDate(dateString) {
-            		const options = { year: 'numeric', month: '2-digit', day: '2-digit' };
-            		const date = new Date(dateString);
-            	return date.toLocaleDateString('ja-JP', options).replace(/\//g, '.');
-       		 }
-
-	        // ページ読み込み時に記事タイトルを更新
-        	async function updateArticleTitles() {
-            	try {
-                	// JSON APIからデータを取得
-                	const response = await fetch(apiUrl);
-                	const data = await response.json();
-                	console.log(data);
-
-	                // データを新しい順にソート（created フィールドを基準に）
-        	        const sortedData = data.data.sort((a, b) => {
-                	    const dateA = new Date(a.attributes.created);
-                	    const dateB = new Date(b.attributes.created);
-                    	    return dateB - dateA; // 新しい順にソート
-               		 });
-
-	                // ul要素を取得
-        	        const ulElement = document.getElementById('all');
-
-	                // 記事リストを生成
-        	        sortedData.forEach((article, index) => {
-                	    const liElement = document.createElement('li');
-	                    liElement.className = 'news-list';
-        	            liElement.innerHTML = `
-                	    <a href="#" class="article-link" data-article-id="${article.id}">
-                        	<div class="newslist-header">
-                            		<span class="news-date">${formatDate(article.attributes.created)}</span>
-                            		<div>
-                                		<span class="news-sugi">スギホールディングス</span> 
-		                                <span class="news-info">${article.attributes.field_list}</span>
-                		        </div>
-                        	</div>
-                        	<p class="newslist-desc" id="article-title${index + 1}">${article.attributes.title}</p>
-                    	    </a>
-                    	    `;
-                    	ulElement.appendChild(liElement);
-                	});
-
-	                // リンクにクリックイベントを追加
-        	        const articleLinks = document.querySelectorAll('.article-link');
-                	articleLinks.forEach(link => {
-	                    link.addEventListener('click', openArticle);
-	                });
-        	    } catch (error) {
-                	console.error('エラーが発生しました:', error);
-        	    	}
-	        }
-
-	        function openArticle(event) {
-        	    // デフォルトのクリック動作（リンク遷移）を防止
-			event.preventDefault();
-
-	            // 選択された記事のIDを取得
-        	    const articleId = event.currentTarget.getAttribute('data-article-id');
-
-	            // articleIdを使用して遷移先URLを構築
-        	    const destinationURL = `/news/article?id=${articleId}`;
-
-	            // 遷移
-        	    window.location.href = destinationURL;
-        	}
-
-	        // ページ読み込み時に記事タイトルを更新
-	        window.addEventListener('load', updateArticleTitles);
-    	</script>
 	<script src="/js/load.js"></script>
 	<script src="/js/common.js"></script>
 	<script src="/js/news/app.js"></script>
+	<script src="../js/news/drupal.js"></script>
 </body>
 
 </html>
