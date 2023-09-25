@@ -648,7 +648,8 @@ window.addEventListener('load', function () {
     /*header calculate*/
     function setHeight() {
         var header = document.querySelector('header');
-        var contentElements = document.querySelectorAll('.sec-mv, .cmn-banner, .sidebar , .ttl-bg');
+        var contentElements = document.querySelectorAll('.sec-mv, .cmn-banner, .sidebar , .ttl-bg, .top, .sec-medical-bnr');
+        var content = document.querySelectorAll('.main-nursing-care, .sec-nursecare-company, .sec-nurcare-gp,.sec-nurcare-contact, .sec-nurcare-complete, .sec-nurcare-confirm')
         var headerHeight = header.offsetHeight + 'px';
         if (element) {
             var bodyElement = document.body;
@@ -665,6 +666,9 @@ window.addEventListener('load', function () {
 
         contentElements.forEach(function (element) {
             element.style.marginTop = mediaQuery.matches ? headerHeight : 0;
+        });
+        content.forEach(function (element) {
+            element.style.paddingTop = mediaQuery.matches ? headerHeight : 0;
         });
     }
     setHeight();

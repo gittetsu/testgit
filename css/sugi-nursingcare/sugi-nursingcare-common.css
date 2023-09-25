@@ -785,6 +785,12 @@ footer.ft-nursing-care .page-top img {
 
 /*I-pad*/
 @media screen and (min-width: 768px) and (max-width: 1024px) {
+  .sugi-nursing-header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 99;
+  }
 
   .common-nursing-button:hover {
     background-color: #e6172c;
@@ -972,6 +978,13 @@ footer.ft-nursing-care .page-top img {
 }
 
 @media only screen and (max-width: 767.9px) {
+
+  .sugi-nursing-header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 99;
+  }
 
   /* header */
   .sugi-nursing-header .header-blk {

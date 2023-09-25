@@ -370,6 +370,14 @@ footer.ft-medical .page-top:hover img {
 
 /*I-pad*/
 @media screen and (min-width: 768px) and (max-width: 1024px) {
+  .sugi-medical-header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 99;
+    background-color: #fff;
+  }
+
   .sugi-medical-header .header-inner {
     width: 100%;
     padding: 10px 10px 10px 20px;
@@ -519,6 +527,14 @@ footer.ft-medical .page-top:hover img {
   h3.common-medical-ttl {
     font-size: 1.25rem;
     letter-spacing: 2px;
+  }
+
+  .sugi-medical-header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 99;
+    background-color: #fff;
   }
 
   /* sec-medical-bnr */
