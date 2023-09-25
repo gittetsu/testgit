@@ -653,7 +653,7 @@ window.addEventListener('load', function () {
         var headerHeight = header.offsetHeight + 'px';
         if (element) {
             var bodyElement = document.body;
-            var sideNav = document.querySelector('.js-sidebar');
+            var sideNav = document.querySelector('.sugi-holding-header .js-sidebar');
             var sideNavHeight = sideNav.offsetHeight + 'px';
             if (header && sideNav) {
                 var headerHeight = parseInt(header.offsetHeight);
