@@ -647,21 +647,29 @@ window.addEventListener('load', function () {
 
     /*header calculate*/
     function setHeight() {
+        var holding = document.querySelector(".sugi-holding-header");
+        var smile = document.querySelector('.sugi-smile-header')
         var header = document.querySelector('header');
         var contentElements = document.querySelectorAll('.sec-mv, .cmn-banner, .sidebar , .ttl-bg, .top, .sec-medical-bnr');
         var content = document.querySelectorAll('.main-nursing-care, .sec-nursecare-company, .sec-nurcare-gp,.sec-nurcare-contact, .sec-nurcare-complete, .sec-nurcare-confirm')
         var headerHeight = header.offsetHeight + 'px';
-        if (element) {
-            var bodyElement = document.body;
-            var sideNav = document.querySelector('.js-sidebar');
-            var sideNavHeight = sideNav.offsetHeight + 'px';
-            if (header && sideNav) {
-                var headerHeight = parseInt(header.offsetHeight);
-                var sideNavHeight = parseInt(sideNav.offsetHeight);
-                var totalHeight = headerHeight + sideNavHeight;
-                var totalHeightResult = totalHeight + 'px';
-                bodyElement.style.paddingTop = mediaQuery.matches ? totalHeightResult : 0;
-            }
+        var bodyElement = document.body;
+        if(holding){
+            if (element) {
+                var sideNav = document.querySelector('.js-sidebar');
+                var sideNavHeight = sideNav.offsetHeight + 'px';
+                if (header && sideNav) {
+                    var headerHeight = parseInt(header.offsetHeight);
+                    var sideNavHeight = parseInt(sideNav.offsetHeight);
+                    var totalHeight = headerHeight + sideNavHeight;
+                    var totalHeightResult = totalHeight + 'px';
+                    bodyElement.style.paddingTop = mediaQuery.matches ? totalHeightResult : 0;
+                }
+        }
+       
+        }
+        else{
+            bodyElement.style.paddingTop = 0;
         }
 
         contentElements.forEach(function (element) {
