@@ -65,7 +65,7 @@ document.addEventListener('click', event => {
       .then(data => {
         const articleAttributes = data.data.attributes;
 
-        if (articleAttributes.body && articleAttributes.body.value === null) {
+        if (articleAttributes.body === null) {
           // 条件1: bodyがnullの場合、PDFへ遷移
           const pdfFileName = articleAttributes.field_pdf.value;
           if (pdfFileName) {
