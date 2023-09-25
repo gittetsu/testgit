@@ -1,5 +1,5 @@
 // JSON APIのエンドポイントURLを指定
-const apiUrl = 'https://d37m9cibsc5611.cloudfront.net/jsonapi/node/sugi_hd?sort=field_date';
+const apiUrl = 'https://d37m9cibsc5611.cloudfront.net/jsonapi/node/sugi_hd?sort=-field_date&filter[field_list]=サステナビリティ&page[limit]=5';
 
 // 日付フォーマット変更
 function formatDate(dateString) {
@@ -7,19 +7,6 @@ function formatDate(dateString) {
     const date = new Date(dateString);
     return date.toLocaleDateString('ja-JP', options).replace(/\//g, '.');
 }
-
-// 日付フォーマット変換関数
-// function parseDate(dateString) {
-//     console.log(dateString);
-//     const parts = dateString.split(' ');
-//     console.log(parts);
-//     const datePart = parts[0];
-//     console.log(datePart);
-//     const timePart = parts[1];
-//     const [year, month, day] = datePart.split('-').map(Number);
-//     const [hours, minutes, seconds] = timePart.split(':').map(Number);
-//     return new Date(year, month - 1, day, hours, minutes, seconds);
-// }
 
 // 日付解析関数
 function parseDate(dateString) {
@@ -36,25 +23,12 @@ async function updateArticleTitles() {
         const data = await response.json();
         console.log(data);
 
-        const sortedData = data.data
-            .filter(article => article.attributes.field_list === 'サステナビリティ') // フィルタリング条件
-            .sort((a, b) => {
-                // field_date を Date オブジェクトに変換して比較
-                const dateA = parseDate(a.attributes.field_date);
-                const dateB = parseDate(b.attributes.field_date);
-                return dateB - dateA; // 新しい順にソート
-            })
-            .slice(0, 5); // 最大5件まで
-
-        // const sortedData = data.data
-        //     .filter(article => article.attributes.field_list === 'サステナビリティ') // フィルタリング条件
-        //     .slice(0, 5); // 最大5件まで
-
         // ul要素を取得
         const ulElement = document.getElementById('all');
 
         // 記事リストを生成
-        sortedData.forEach((article, index) => {
+        data.data.forEach((article, index) => {
+            // sortedData.forEach((article, index) => {
             const liElement = document.createElement('li');
             liElement.className = 'news-list';
             liElement.innerHTML = `
@@ -62,7 +36,7 @@ async function updateArticleTitles() {
                         	<div class="newslist-header">
                             		<span class="news-date">${formatDate(article.attributes.field_date)}</span>
                             		<div>
-                                		<span class="news-sugi">${formatDate(article.attributes.field_company)}</span> 
+                                		<span class="news-sugi">${article.attributes.field_company}</span> 
 		                                <span class="news-info">${article.attributes.field_list}</span>
                 		        </div>
                         	</div>
@@ -71,30 +45,42 @@ async function updateArticleTitles() {
                     	    `;
             ulElement.appendChild(liElement);
         });
-
-        // リンクにクリックイベントを追加
-        const articleLinks = document.querySelectorAll('.article-link');
-        articleLinks.forEach(link => {
-            link.addEventListener('click', openArticle);
-        });
     } catch (error) {
         console.error('エラーが発生しました:', error);
     }
 }
 
-function openArticle(event) {
-    // デフォルトのクリック動作（リンク遷移）を防止
-    event.preventDefault();
+// 記事リンクにクリックイベントを追加
+document.addEventListener('click', event => {
+    const articleLink = event.target.closest('.article-link');
+    if (articleLink) {
+        event.preventDefault(); // リンクのデフォルト動作をキャンセル
 
-    // 選択された記事のIDを取得
-    const articleId = event.currentTarget.getAttribute('data-article-id');
+        const articleId = articleLink.getAttribute('data-article-id');
 
-    // articleIdを使用して遷移先URLを構築
-    const destinationURL = `/news/article?id=${articleId}`;
+        // ページ遷移の条件に応じてURLを決定
+        const apiUrl = `https://d37m9cibsc5611.cloudfront.net/jsonapi/node/sugi_hd/${articleId}`;
+        fetch(apiUrl)
+            .then(response => response.json())
+            .then(data => {
+                const articleAttributes = data.data.attributes;
 
-    // 遷移
-    window.location.href = destinationURL;
-}
+                if (articleAttributes.body === null) {
+                    // 条件1: bodyがnullの場合、PDFへ遷移
+                    const pdfFileName = articleAttributes.field_pdf.value;
+                    if (pdfFileName) {
+                        window.location.href = `/pdf/${pdfFileName}`;
+                    }
+                } else {
+                    // 条件2: bodyがnullでない場合、記事へ遷移
+                    window.location.href = `/news/article?id=${articleId}`;
+                }
+            })
+            .catch(error => {
+                console.error('エラーが発生しました:', error);
+            });
+    }
+});
 
 // ページ読み込み時に記事タイトルを更新
 window.addEventListener('load', updateArticleTitles);
