@@ -95,7 +95,6 @@
 }
 
 .top .common-ttl-blk .common-button .arrow {
-  top: 17px;
   right: 5.5%;
   margin-left: 0;
 }
@@ -116,6 +115,7 @@
   width: 100%;
   line-height: 1.6;
   padding: 23px 45px 22px 27px;
+  word-break: break-all;
   border: none;
   background-color: transparent;
   color: #000;
@@ -128,7 +128,6 @@
 
 .top .sec-news .tab-list .tab-left .common-button .arrow,
 .top .sec-vision ul .common-button span {
-  top: 23px;
   right: 20px;
 }
 
@@ -617,16 +616,6 @@
   border: unset;
 }
 
-.btn-link-gp .common-button .arrow,
-.sustain-linkblk .arrow,
-.cmm-list-item .common-button .arrow,
-.site-link .site-link-btn01 .arrow,
-.site-link .site-link-btn02 .arrow,
-.mission02-link .common-button .arrow,
-.mission03-link .common-button .arrow {
-  top: 18px;
-}
-
 
 .number-link {
   width: 322px;
@@ -947,7 +936,6 @@
 
 .site-link .site-link-btn02 {
   width: 52%;
-  max-width: 200px;
 }
 
 .mission-logo01 {
@@ -1213,7 +1201,6 @@
   }
 
   .category-list-blk:hover .common-button .arrow {
-    top: 20px;
     width: 20px;
     padding: 10px 0;
   }
@@ -1230,13 +1217,11 @@
 
 
   .cmm-list-item .common-button {
-    width: 150px;
     padding: 13px 13px 13px 15px;
     text-align: left;
   }
 
   .cmm-list-item .common-button .arrow {
-    top: 20px;
     width: 20px;
     padding: 10px 0;
   }
@@ -1289,17 +1274,11 @@
     font-size: 0.75rem;
   }
 
-  .btn-link-gp .common-button .arrow,
-  .cmm-list-item .common-button .arrow {
-    top: 20px;
-  }
-
   .sustain-linkblk .arrow,
   .site-link .site-link-btn01 .arrow,
   .site-link .site-link-btn02 .arrow,
   .mission02-link .common-button .arrow,
   .mission03-link .common-button .arrow {
-    top: 17px;
     width: 20px;
     padding: 10px;
   }
@@ -1341,7 +1320,6 @@
   }
 
   .top .common-ttl-blk .common-button .arrow {
-    top: 19px;
     right: 27px;
   }
 
@@ -2072,13 +2050,6 @@
     width: 100%;
     margin-top: 27px;
     max-width: 100%;
-  }
-
-  .btn-link-gp .common-button .arrow,
-  .site-link .site-link-btn01 .arrow,
-  .mission02-link .common-button .arrow,
-  .mission03-link .common-button .arrow {
-    top: 20px;
   }
 
   .site-link .site-link-btn01 {
