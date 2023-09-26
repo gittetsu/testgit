@@ -20,7 +20,6 @@
 
 .smile-work .cleaning-list {
   display: flex;
-  flex-wrap: wrap;
 }
 
 .smile-work .cleaning-list li {
@@ -165,6 +164,7 @@
 
   .smile-work .cleaning-list {
     margin-bottom: 30px;
+    flex-wrap: wrap;
   }
 
   .smile-work .cleaning-list li {
