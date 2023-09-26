@@ -72,38 +72,6 @@
   border-right: 1px solid #cce2d9;
 }
 
-.recruit-area-blk .store-link .external-button {
-  width: 52%;
-  max-width: 173px;
-}
-
-.recruit-area-blk .commercial-link01 .external-button {
-  width: 100%;
-  max-width: 400px;
-}
-
-.recruit-area-blk .commercial-link02 .external-button,
-.recruit-area-blk .clinic-btn-link01 .external-button,
-.recruit-area-blk .clinic-btn-link02 .external-button {
-  width: 56.85%;
-  max-width: 190px;
-}
-
-.recruit-area-blk .building-link .external-button {
-  width: 62.24%;
-  max-width: 208px;
-}
-
-.recruit-area-blk .pharmacy-link01 .external-button {
-  width: 72.84%;
-  max-width: 243px;
-}
-
-.recruit-area-blk .pharmacy-link02 .external-button {
-  width: 78.23%;
-  max-width: 261px;
-}
-
 .recruit-area-blk .table .store-clinic-tbl tr .row {
   width: 18.3%;
 }
@@ -119,33 +87,6 @@
   max-width: 1100px;
 }
 
-.cmm-property-link .common-button .arrow {
-  top: 22px;
-  margin-left: 20px;
-}
-
-.cmm-property-link .common-button:hover .arrow,
-.cmm-property-link .common-button:active .arrow,
-.cmm-property-link .common-button.active .arrow {
-  background: unset;
-}
-
-.cmm-property-link .common-button .arrow::after,
-.cmm-property-link .common-button.active .arrow::after {
-  top: 5px;
-  width: 14px;
-  height: 14px;
-  background: url('/img/common/ico_external.svg') no-repeat center/cover;
-  background-color: unset;
-  transform: unset;
-  border-radius: unset;
-}
-
-.cmm-property-link .common-button:hover .arrow::after,
-.cmm-property-link .common-button:active .arrow:after {
-  filter: invert(100%) sepia(300%) saturate(0) hue-rotate(0) brightness(100%) contrast(180%);
-}
-
 .location-btn-list li {
   display: flex;
   width: 31.5%;
@@ -158,10 +99,6 @@
   border-radius: 5px;
 }
 
-.location-btn-list li .common-button .arrow {
-  top: 24px;
-}
-
 .location-btn-list li .external-button {
   border-radius: 5px;
   width: 100%;
@@ -169,32 +106,16 @@
   line-height: 1.5;
 }
 
-.location-btn-list li .external-text:after {
-  top: 5px;
-}
 
 @media only screen and (max-width: 767.9px) {
 
   .location-btn-list .cmm-property-link .common-button .arrow {
-    top: 24px;
     margin-left: 20px;
     padding: 0;
     transform: unset;
   }
 
-  .cmm-property-link .common-button .arrow::after,
-  .cmm-property-link .common-button.active .arrow::after {
-    top: 7%;
-    right: 8.7%;
-    transform: unset;
-  }
-
   .location-btn-list li {
     width: 100%;
-  }
-
-  .cmm-property-link .common-button:hover .arrow::after,
-  .cmm-property-link .common-button:active .arrow:after {
-    filter: unset;
   }
 }
