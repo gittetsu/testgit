@@ -6,46 +6,49 @@ const apiUrl = 'https://d37m9cibsc5611.cloudfront.net/jsonapi/node/sugi_hd';
 // ページング関連の変数
 let currentPage = 1;
 let totalPages = 1;
-const itemsPerPage = 50; // 1ページあたりのアイテム数
+const itemsPerPage = 20; // 1ページあたりのアイテム数
 
 // カテゴリーごとに記事を取得して表示
 async function updateArticleLists(category, searchKeyword) {
   try {
+    //ページ番号を取得    
     // カテゴリーごとのフィルター条件を設定
     const filter = category === 'all' ? '' : category === '#all' ? '' : `&filter[field_list]=${category.replace("#", "")}`;
-
-    let currentPage = 1;
-    let totalPages = 1;
 
     // JSON APIからデータを取得
     if (!searchKeyword) {
       searchKeyword = "";
     }
 
-    while (currentPage <= totalPages) {
-      const response = await (fetch(`${apiUrl}?sort=-field_date${filter}&page[limit]=${itemsPerPage}&page[offset]=${(currentPage - 1) * itemsPerPage}&filter[title][condition][path]=title&filter[title][condition][operator]=CONTAINS&filter[title][condition][value]=${searchKeyword}`));
-      const data = await response.json();
-      console.log(response);
-      console.log(data);
-      console.log(data.links.next);
-      if (data.links.next) {
-        totalPages++;
-        console.log(totalPages);
-      }
-      currentPage++;
-      console.log(currentPage);
+    const currentUrl = window.location.href;
+    const url = new URL(currentUrl);
+    let pageNumber = 0;
+    if (parseInt(url.searchParams.get('page'))) {
+      pageNumber = parseInt(url.searchParams.get('page'));
     }
 
-    // const offset = (currentPage - 1) * itemsPerPage;
-    // const response = await fetch(`${apiUrl}?sort=-field_date${filter}&page[limit]=${itemsPerPage}&page[offset]=${offset}&filter[title][condition][path]=title&filter[title][condition][operator]=CONTAINS&filter[title][condition][value]=${searchKeyword}`);
-    const response = await fetch(`${apiUrl}?sort=-field_date${filter}&page[limit]=20&filter[title][condition][path]=title&filter[title][condition][operator]=CONTAINS&filter[title][condition][value]=${searchKeyword}`);
-    const data = await response.json();
-    console.log(data);
-    console.log(data.links.next);
+    let currentPage = 1;
+    let totalPages = 1;
+    if (pageNumber == 999) {
+      while (currentPage <= totalPages) {
+        const response = await (fetch(`${apiUrl}?sort=-field_date${filter}&page[limit]=${itemsPerPage}&page[offset]=${(currentPage - 1) * itemsPerPage}&filter[title][condition][path]=title&filter[title][condition][operator]=CONTAINS&filter[title][condition][value]=${searchKeyword}`));
+        const data = await response.json();
+        if (data.links.next) {
+          totalPages++;
+          console.log(totalPages);
+        }
+        currentPage++;
+        console.log(currentPage);
+        console.log("test");
+      }
+      const currentUrl = window.location.href;
+      const url = new URL(currentUrl);
+      url.searchParams.set('page', (currentPage - 2))
+      window.location.href = url.toString();        
+    }
 
-    // article-title要素に本文を挿入
-    const pages = document.getElementById('page_start');
-    pages.innerHTML = totalPages;
+    const response = await fetch(`${apiUrl}?sort=-field_date${filter}&page[limit]=20&page[offset]=${(pageNumber * 20)}&filter[title][condition][path]=title&filter[title][condition][operator]=CONTAINS&filter[title][condition][value]=${searchKeyword}`);
+    const data = await response.json();
 
     // 取得したデータから記事リストを生成
     const ulElement = document.getElementById(category.replace("#", ""));
@@ -102,65 +105,66 @@ tabLinks.forEach(link => {
   });
 });
 
-// ページネーションの各リスト要素を取得
-// const page_first = document.querySelector('.cmn-pager-first a');
-// const page_prev = document.querySelector('.cmn-pager-prev a');
-// const page_next = document.querySelector('.cmn-pager-next a');
-// const page_last = document.querySelector('.cmn-pager-last a');
-// const paginationItems = document.querySelectorAll('.cmn-pager-num a');
-
-// page_first.addEventListener('click', () => {
-//   console.log(0);
-// });
-// page_prev.addEventListener('click', () => {
-//   console.log(-1);
-// });
-// page_next.addEventListener('click', () => {
-//   console.log(+1);
-// });
-// page_last.addEventListener('click', () => {
-//   console.log(999);
-// });
-
 // ページネーションの最初のリスト要素を取得
 const firstPageLink = document.querySelector('.cmn-pager-first a');
-
-// 最初のリスト要素にクリックイベントを追加
 firstPageLink.addEventListener('click', (event) => {
   event.preventDefault(); // リンクのデフォルト動作をキャンセル
 
   // 現在のURLを取得
   const currentUrl = window.location.href;
   const url = new URL(currentUrl);
-  const pageNumber = 1;
+  const pageNumber = 0;
   url.searchParams.set('page', pageNumber)
   // 新しいURLにリダイレクト
   window.location.href = url.toString();
 });
 
-const page_last = document.querySelector('.cmn-pager-last a');
-
-page_last.addEventListener('click', (event) => {
+const page_prev = document.querySelector('.cmn-pager-prev a');
+page_prev.addEventListener('click', (event) => {
   event.preventDefault(); // リンクのデフォルト動作をキャンセル
 
   // 現在のURLを取得
   const currentUrl = window.location.href;
   const url = new URL(currentUrl);
-  let pageNumber = parseInt(url.searchParams.get('page'));
+  let pageNumber = 0;
+  if (parseInt(url.searchParams.get('page'))) {
+    pageNumber = parseInt(url.searchParams.get('page'));
+  }
   pageNumber--;
   url.searchParams.set('page', pageNumber)
   // 新しいURLにリダイレクト
   window.location.href = url.toString();
 });
 
+const page_next = document.querySelector('.cmn-pager-next a');
+page_next.addEventListener('click', (event) => {
+  event.preventDefault(); // リンクのデフォルト動作をキャンセル
 
-// 各リスト要素にクリックイベントを追加
-// paginationItems.forEach((item, index) => {
-//   item.addEventListener('click', () => {
-//     // クリックされた順番に対応した数値を返す
-//     console.log(index + 1); // 1から始まるページ番号を表示（必要に応じて他の処理を追加）
-//   });
-// });
+  // 現在のURLを取得
+  const currentUrl = window.location.href;
+  const url = new URL(currentUrl);
+  let pageNumber = 0;
+  if (parseInt(url.searchParams.get('page'))) {
+    pageNumber = parseInt(url.searchParams.get('page'));
+  }
+  pageNumber++;
+  url.searchParams.set('page', pageNumber)
+  // 新しいURLにリダイレクト
+  window.location.href = url.toString();
+});
+const page_last = document.querySelector('.cmn-pager-last a');
+page_last.addEventListener('click', (event) => {
+  event.preventDefault(); // リンクのデフォルト動作をキャンセル
+
+  // 現在のURLを取得
+  const currentUrl = window.location.href;
+  const url = new URL(currentUrl);
+  const pageNumber = 999;
+  url.searchParams.set('page', pageNumber)
+  // 新しいURLにリダイレクト
+  window.location.href = url.toString();
+});
+
 
 // 記事リンクにクリックイベントを追加
 document.addEventListener('click', event => {
@@ -194,20 +198,41 @@ document.addEventListener('click', event => {
   }
 });
 
-// // クリックされたときの処理を追加
-// const pagerFirst = document.getElementById('pager-first');
-// pagerFirst.addEventListener('click', function() {
-//     // 1を返す
-//     return 1;
-// });
 
-// // クリックされたときの処理を定義
-// pagerFirst.addEventListener('click', function() {
-//     // ここにクリックされたときの具体的な処理を追加
-//     // 例: 1を返す代わりに、ページの遷移などの処理を行う
-//     console.log('クリックされました');
-//     // ここで必要な処理を追加
-// });
+// 年と月の選択肢を生成する関数
+function populateYearMonthOptions() {
+  const yearSelect = document.querySelector('.select-box.year');
+  const monthSelect = document.querySelector('.select-box.month');
+
+  const currentDate = new Date();
+  const currentYear = currentDate.getFullYear();
+  const currentMonth = currentDate.getMonth() + 1;
+
+  // 年の選択肢を生成（現在から3年前まで）
+  for (let year = currentYear; year >= currentYear - 3; year--) {
+      const option = document.createElement('option');
+      option.value = year;
+      option.textContent = year + '年';
+      yearSelect.appendChild(option);
+  }
+
+  // 月の選択肢を生成（1から12まで）
+  for (let month = 1; month <= 12; month++) {
+      const option = document.createElement('option');
+      option.value = month;
+      option.textContent = month + '月';
+      monthSelect.appendChild(option);
+  }
+
+  // 現在の年月を選択状態にする
+  yearSelect.value = currentYear;
+  monthSelect.value = currentMonth;
+}
+
+// ページが読み込まれた際に選択肢を生成
+window.addEventListener('load', () => {
+  populateYearMonthOptions();
+});
 
 // URLのクエリパラメータが変更された場合に更新
 window.addEventListener('popstate', () => {
@@ -228,3 +253,4 @@ window.addEventListener('load', () => {
   const category = selectedTab.getAttribute('data-tab-target');
   updateArticleLists(category, searchKeyword);
 });
+
