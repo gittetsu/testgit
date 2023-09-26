@@ -1,191 +1,230 @@
-// JSON APIのエンドポイントURLを指定
-// const apiUrl = 'https://d37m9cibsc5611.cloudfront.net/jsonapi/node/sugi_hd?sort=-field_date';
-const apiUrl = 'https://d37m9cibsc5611.cloudfront.net/jsonapi/node/sugi_hd?page[number]=3&page[size]=1';
-// console.log(field_list);
-// 日付フォーマット変更
-function formatDate(dateString) {
-    const options = { year: 'numeric', month: '2-digit', day: '2-digit' };
-    const date = new Date(dateString);
-    return date.toLocaleDateString('ja-JP', options).replace(/\//g, '.');
-}
-
-// 日付解析関数
-function parseDate(dateString) {
-    const [datePart] = dateString.split(' '); // 日付部分のみを取得
-    const [year, month, day] = datePart.split('-').map(Number); // 日付部分をハイフンで分割して数値に変換
-    return new Date(year, month - 1, day); // 月は0から始まるため、1を引いて設定
-}
 
 
-// ページ読み込み時に記事タイトルを更新
-async function updateArticleTitles() {
-    try {
-        // JSON APIからデータを取得
-        const response = await fetch(apiUrl);
-        const data = await response.json();
-        console.log(data);
+// JSON APIのベースURLを指定
+const apiUrl = 'https://d37m9cibsc5611.cloudfront.net/jsonapi/node/sugi_hd';
 
-        const sortedData = data.data
-            // .filter(article => article.attributes.field_list === 'サステナビリティ') // フィルタリング条件
-            .sort((a, b) => {
-                // field_date を Date オブジェクトに変換して比較
-                const dateA = parseDate(a.attributes.field_date);
-                const dateB = parseDate(b.attributes.field_date);
-                return dateB - dateA; // 新しい順にソート
-            })
-            .slice(0, 20); // 最大5件まで
+// ページング関連の変数
+let currentPage = 1;
+let totalPages = 1;
+const itemsPerPage = 50; // 1ページあたりのアイテム数
 
-        // ul要素を取得
-        const ulElement = document.getElementById('all');
+// カテゴリーごとに記事を取得して表示
+async function updateArticleLists(category, searchKeyword) {
+  try {
+    // カテゴリーごとのフィルター条件を設定
+    const filter = category === 'all' ? '' : category === '#all' ? '' : `&filter[field_list]=${category.replace("#", "")}`;
 
-        // 記事リストを生成
-        sortedData.forEach((article, index) => {
-            const liElement = document.createElement('li');
-            liElement.className = 'news-list';
-            liElement.innerHTML = `
-                	    <a href="#" class="article-link" data-article-id="${article.id}">
-                        	<div class="newslist-header">
-                            		<span class="news-date">${formatDate(article.attributes.field_date)}</span>
-                            		<div>
-                                		<span class="news-sugi">${article.attributes.field_company}</span> 
-		                                <span class="news-info">${article.attributes.field_list}</span>
-                		        </div>
-                        	</div>
-                        	<p class="newslist-desc" id="article-title${index + 1}">${article.attributes.title}</p>
-                    	    </a>
-                    	    `;
-            ulElement.appendChild(liElement);
-        });
+    let currentPage = 1;
+    let totalPages = 1;
 
-        // リンクにクリックイベントを追加
-        const articleLinks = document.querySelectorAll('.article-link');
-        articleLinks.forEach(link => {
-            link.addEventListener('click', openArticle);
-        });
-    } catch (error) {
-        console.error('エラーが発生しました:', error);
+    // JSON APIからデータを取得
+    if (!searchKeyword) {
+      searchKeyword = "";
     }
+
+    while (currentPage <= totalPages) {
+      const response = await (fetch(`${apiUrl}?sort=-field_date${filter}&page[limit]=${itemsPerPage}&page[offset]=${(currentPage - 1) * itemsPerPage}&filter[title][condition][path]=title&filter[title][condition][operator]=CONTAINS&filter[title][condition][value]=${searchKeyword}`));
+      const data = await response.json();
+      console.log(response);
+      console.log(data);
+      console.log(data.links.next);
+      if (data.links.next) {
+        totalPages++;
+        console.log(totalPages);
+      }
+      currentPage++;
+      console.log(currentPage);
+    }
+
+    // const offset = (currentPage - 1) * itemsPerPage;
+    // const response = await fetch(`${apiUrl}?sort=-field_date${filter}&page[limit]=${itemsPerPage}&page[offset]=${offset}&filter[title][condition][path]=title&filter[title][condition][operator]=CONTAINS&filter[title][condition][value]=${searchKeyword}`);
+    const response = await fetch(`${apiUrl}?sort=-field_date${filter}&page[limit]=20&filter[title][condition][path]=title&filter[title][condition][operator]=CONTAINS&filter[title][condition][value]=${searchKeyword}`);
+    const data = await response.json();
+    console.log(data);
+    console.log(data.links.next);
+
+    // article-title要素に本文を挿入
+    const pages = document.getElementById('page_start');
+    pages.innerHTML = totalPages;
+
+    // 取得したデータから記事リストを生成
+    const ulElement = document.getElementById(category.replace("#", ""));
+    console.log("チェック");
+    console.log(ulElement);
+    console.log(data);
+    if (ulElement) {
+      ulElement.innerHTML = ''; // リストをクリア
+
+      data.data.forEach((article, index) => {
+        const liElement = document.createElement('li');
+        liElement.className = 'news-list';
+        liElement.innerHTML = `
+          <li class="news-list">
+            <a href="#" class="article-link" data-article-id="${article.id}">
+              <div class="newslist-header">
+                <span class="news-date">${article.attributes.field_date}</span>
+                <span class="news-info">${article.attributes.field_list}</span>
+              </div>
+              <p class="newslist-desc text-02" id="article-title${index + 1}">${article.attributes.title}</p>
+            </a>
+          </li>
+        `;
+        ulElement.appendChild(liElement);
+      });
+    }
+  } catch (error) {
+    console.error('エラーが発生しました:', error);
+  }
 }
 
-function openArticle(event) {
-    // デフォルトのクリック動作（リンク遷移）を防止
-    event.preventDefault();
-
-    // 選択された記事のIDを取得
-    const articleId = event.currentTarget.getAttribute('data-article-id');
-
-    // articleIdを使用して遷移先URLを構築
-    const destinationURL = `/news/article?id=${articleId}`;
-
-    // 遷移
-    window.location.href = destinationURL;
+// ページ番号を変更して記事を更新する関数
+function changePage(pageNumber) {
+  if (pageNumber >= 1 && pageNumber <= totalPages) {
+    currentPage = pageNumber;
+    // クエリパラメータ search の値を取得
+    const urlSearchParams = new URLSearchParams(window.location.search);
+    const searchKeyword = urlSearchParams.get('search');
+    // カテゴリーは選択されたタブに応じて取得
+    const selectedTab = document.querySelector('.tab-btn a.active');
+    const category = selectedTab.getAttribute('data-tab-target');
+    updateArticleLists(category, searchKeyword);
+  }
 }
+// タブリンクにクリックイベントを追加
+const tabLinks = document.querySelectorAll('.tab-btn a');
+tabLinks.forEach(link => {
+  link.addEventListener('click', event => {
+    const category = event.currentTarget.getAttribute('data-tab-target');
+    // クエリパラメータ search の値を取得
+    const urlSearchParams = new URLSearchParams(window.location.search);
+    const searchKeyword = urlSearchParams.get('search');
+    updateArticleLists(category, searchKeyword);
+  });
+});
 
-// ページ読み込み時に記事タイトルを更新
-window.addEventListener('load', updateArticleTitles);
+// ページネーションの各リスト要素を取得
+// const page_first = document.querySelector('.cmn-pager-first a');
+// const page_prev = document.querySelector('.cmn-pager-prev a');
+// const page_next = document.querySelector('.cmn-pager-next a');
+// const page_last = document.querySelector('.cmn-pager-last a');
+// const paginationItems = document.querySelectorAll('.cmn-pager-num a');
 
-// // JSON APIのエンドポイントURLを指定
-// const apiUrl = 'https://d37m9cibsc5611.cloudfront.net/jsonapi/node/sugi_hd?sort=field_date&page[limit]=50&page[offset]=5';
+// page_first.addEventListener('click', () => {
+//   console.log(0);
+// });
+// page_prev.addEventListener('click', () => {
+//   console.log(-1);
+// });
+// page_next.addEventListener('click', () => {
+//   console.log(+1);
+// });
+// page_last.addEventListener('click', () => {
+//   console.log(999);
+// });
 
-// // 日付フォーマット変更
-// function formatDate(dateString) {
-//     const options = { year: 'numeric', month: '2-digit', day: '2-digit' };
-//     const date = new Date(dateString);
-//     return date.toLocaleDateString('ja-JP', options).replace(/\//g, '.');
-// }
+// ページネーションの最初のリスト要素を取得
+const firstPageLink = document.querySelector('.cmn-pager-first a');
 
-// // 日付解析関数
-// function parseDate(dateString) {
-//     const [datePart] = dateString.split(' '); // 日付部分のみを取得
-//     const [year, month, day] = datePart.split('-').map(Number); // 日付部分をハイフンで分割して数値に変換
-//     return new Date(year, month - 1, day); // 月は0から始まるため、1を引いて設定
-// }
+// 最初のリスト要素にクリックイベントを追加
+firstPageLink.addEventListener('click', (event) => {
+  event.preventDefault(); // リンクのデフォルト動作をキャンセル
 
-// // ページ読み込み時に記事タイトルを更新
-// async function updateArticleTitles() {
-//     try {
-//         let allData = [];
-//         console.log(allData);
+  // 現在のURLを取得
+  const currentUrl = window.location.href;
+  const url = new URL(currentUrl);
+  const pageNumber = 1;
+  url.searchParams.set('page', pageNumber)
+  // 新しいURLにリダイレクト
+  window.location.href = url.toString();
+});
 
-//         let nextPageUrl = apiUrl;
+const page_last = document.querySelector('.cmn-pager-last a');
 
-//         while (nextPageUrl) {
-//             // JSON APIからデータを取得
-//             const response = await fetch(nextPageUrl);
-//             const data = await response.json();
-//             console.log(data);
+page_last.addEventListener('click', (event) => {
+  event.preventDefault(); // リンクのデフォルト動作をキャンセル
 
-//             allData = allData.concat(data.data);
+  // 現在のURLを取得
+  const currentUrl = window.location.href;
+  const url = new URL(currentUrl);
+  let pageNumber = parseInt(url.searchParams.get('page'));
+  pageNumber--;
+  url.searchParams.set('page', pageNumber)
+  // 新しいURLにリダイレクト
+  window.location.href = url.toString();
+});
 
-//             // ページネーション情報から次のページURLを取得
-//             nextPageUrl = getNextPageUrl(data.links);
-//         }
 
-//         // データを新しい順にソート
-//         const sortedData = allData
-//             .sort((a, b) => {
-//                 // field_date を Date オブジェクトに変換して比較
-//                 const dateA = parseDate(a.attributes.field_date);
-//                 const dateB = parseDate(b.attributes.field_date);
-//                 return dateB - dateA; // 新しい順にソート
-//             })
-//             .slice(0, 20); // 最大20件まで表示
+// 各リスト要素にクリックイベントを追加
+// paginationItems.forEach((item, index) => {
+//   item.addEventListener('click', () => {
+//     // クリックされた順番に対応した数値を返す
+//     console.log(index + 1); // 1から始まるページ番号を表示（必要に応じて他の処理を追加）
+//   });
+// });
 
-//         // ul要素を取得
-//         const ulElement = document.getElementById('all');
+// 記事リンクにクリックイベントを追加
+document.addEventListener('click', event => {
+  const articleLink = event.target.closest('.article-link');
+  if (articleLink) {
+    event.preventDefault(); // リンクのデフォルト動作をキャンセル
 
-//         // 記事リストを生成
-//         sortedData.forEach((article, index) => {
-//             const liElement = document.createElement('li');
-//             liElement.className = 'news-list';
-//             liElement.innerHTML = `
-//                 	    <a href="#" class="article-link" data-article-id="${article.id}">
-//                         	<div class="newslist-header">
-//                             		<span class="news-date">${formatDate(article.attributes.field_date)}</span>
-//                             		<div>
-//                                 		<span class="news-sugi">${article.attributes.field_company}</span> 
-// 		                                <span class="news-info">${article.attributes.field_list}</span>
-//                 		        </div>
-//                         	</div>
-//                         	<p class="newslist-desc" id="article-title${index + 1}">${article.attributes.title}</p>
-//                     	    </a>
-//                     	    `;
-//             ulElement.appendChild(liElement);
-//         });
+    const articleId = articleLink.getAttribute('data-article-id');
 
-//         // リンクにクリックイベントを追加
-//         const articleLinks = document.querySelectorAll('.article-link');
-//         articleLinks.forEach(link => {
-//             link.addEventListener('click', openArticle);
-//         });
-//     } catch (error) {
-//         console.error('エラーが発生しました:', error);
-//     }
-// }
+    // ページ遷移の条件に応じてURLを決定
+    const apiUrl = `https://d37m9cibsc5611.cloudfront.net/jsonapi/node/sugi_hd/${articleId}`;
+    fetch(apiUrl)
+      .then(response => response.json())
+      .then(data => {
+        const articleAttributes = data.data.attributes;
 
-// // 次のページURLを取得する関数
-// function getNextPageUrl(links) {
-//     for (const link of links) {
-//         if (link.rel === 'next') {
-//             return link.href;
-//         }
-//     }
-//     return null;
-// }
+        if (articleAttributes.body === null) {
+          // 条件1: bodyがnullの場合、PDFへ遷移
+          const pdfFileName = articleAttributes.field_pdf.value;
+          if (pdfFileName) {
+            window.location.href = `/pdf/${pdfFileName}`;
+          }
+        } else {
+          // 条件2: bodyがnullでない場合、記事へ遷移
+          window.location.href = `/news/article?id=${articleId}`;
+        }
+      })
+      .catch(error => {
+        console.error('エラーが発生しました:', error);
+      });
+  }
+});
 
-// function openArticle(event) {
-//     // デフォルトのクリック動作（リンク遷移）を防止
-//     event.preventDefault();
+// // クリックされたときの処理を追加
+// const pagerFirst = document.getElementById('pager-first');
+// pagerFirst.addEventListener('click', function() {
+//     // 1を返す
+//     return 1;
+// });
 
-//     // 選択された記事のIDを取得
-//     const articleId = event.currentTarget.getAttribute('data-article-id');
+// // クリックされたときの処理を定義
+// pagerFirst.addEventListener('click', function() {
+//     // ここにクリックされたときの具体的な処理を追加
+//     // 例: 1を返す代わりに、ページの遷移などの処理を行う
+//     console.log('クリックされました');
+//     // ここで必要な処理を追加
+// });
 
-//     // articleIdを使用して遷移先URLを構築
-//     const destinationURL = `/news/article?id=${articleId}`;
+// URLのクエリパラメータが変更された場合に更新
+window.addEventListener('popstate', () => {
+  const urlSearchParams = new URLSearchParams(window.location.search);
+  const searchKeyword = urlSearchParams.get('search');
+  // カテゴリーは選択されたタブに応じて取得
+  const selectedTab = document.querySelector('.tab-btn a.active');
+  const category = selectedTab.getAttribute('data-tab-target');
+  updateArticleLists(category, searchKeyword);
+});
 
-//     // 遷移
-//     window.location.href = destinationURL;
-// }
-
-// // ページ読み込み時に記事タイトルを更新
-// window.addEventListener('load', updateArticleTitles);
+// ページ読み込み時にデフォルトのカテゴリーで記事を表示
+window.addEventListener('load', () => {
+  const urlSearchParams = new URLSearchParams(window.location.search);
+  const searchKeyword = urlSearchParams.get('search');
+  // カテゴリーは選択されたタブに応じて取得
+  const selectedTab = document.querySelector('.tab-btn a.active');
+  const category = selectedTab.getAttribute('data-tab-target');
+  updateArticleLists(category, searchKeyword);
+});
