@@ -13,7 +13,7 @@ async function updateArticleLists(category) {
     console.log(data);
 
     // 取得したデータから記事リストを生成
-    const ulElement = document.getElementById(category);
+    const ulElement = document.getElementById(category.replace("#", ""));
     if (ulElement) {
       ulElement.innerHTML = ''; // リストをクリア
 
