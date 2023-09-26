@@ -188,7 +188,8 @@
 .stb-link-flex .stb-link .arrow {
   display: inline-block;
   position: absolute;
-  top: 10%;
+  top: 50%;
+  transform: translateY(-50%);
   right: 3%;
   width: 24px;
   margin-left: 10px;
