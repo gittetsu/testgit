@@ -1,7 +1,7 @@
 
 
 // JSON APIのベースURLを指定
-const apiUrl = 'https://d37m9cibsc5611.cloudfront.net/jsonapi/node/sugi_hd';
+const apiUrl = 'https://d37m9cibsc5611.cloudfront.net/jsonapi/node/sugi_medical';
 
 // ページング関連の変数
 let currentPage = 1;
@@ -13,7 +13,7 @@ async function updateArticleLists(category, searchKeyword) {
   try {
     //ページ番号を取得    
     // カテゴリーごとのフィルター条件を設定
-    const filter = category === 'all' ? '' : category === '#all' ? '' : `&filter[field_list]=${category.replace("#", "")}`;
+    const filter = category === 'all' ? '' : category === '#all' ? '' : `&filter[field_medical_list]=${category.replace("#", "")}`;
 
     // JSON APIからデータを取得
     if (!searchKeyword) {
@@ -76,7 +76,7 @@ async function updateArticleLists(category, searchKeyword) {
             <a href="#" class="article-link" data-article-id="${article.id}">
               <div class="newslist-header">
                 <span class="news-date">${article.attributes.field_date}</span>
-                <span class="news-info">${article.attributes.field_list}</span>
+                <span class="news-info">${article.attributes.field_medical_list}</span>
               </div>
               <p class="newslist-desc text-02" id="article-title${index + 1}">${article.attributes.title}</p>
             </a>
@@ -239,7 +239,7 @@ document.addEventListener('click', event => {
 //   monthSelect.value = currentMonth;
 // }
 
-// ページが読み込まれた際に選択肢を生成
+// // ページが読み込まれた際に選択肢を生成
 // window.addEventListener('load', () => {
 //   populateYearMonthOptions();
 // });
