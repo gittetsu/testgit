@@ -44,16 +44,26 @@ async function updateArticleLists(category, searchKeyword) {
       const currentUrl = window.location.href;
       const url = new URL(currentUrl);
       url.searchParams.set('page', (currentPage - 2))
-      window.location.href = url.toString();        
+      window.location.href = url.toString();
     }
 
     const response = await fetch(`${apiUrl}?sort=-field_date${filter}&page[limit]=20&page[offset]=${(pageNumber * 20)}&filter[title][condition][path]=title&filter[title][condition][operator]=CONTAINS&filter[title][condition][value]=${searchKeyword}`);
     const data = await response.json();
 
+    // ページの最初を示すボタンの要素を取得
+    const nextPageButton = document.querySelector('.cmn-pager-next');
+    const lastPageButton = document.querySelector('.cmn-pager-last');
+    // データの値が20未満の場合、ボタンを非表示にする
+    if (data.data.length < 20) {
+      nextPageButton.style.display = 'none';
+      lastPageButton.style.display = 'none';
+    } else {
+      nextPageButton.style.display = 'block'; // それ以外の場合は表示
+      lastPageButton.style.display = 'block';
+    }
+
     // 取得したデータから記事リストを生成
     const ulElement = document.getElementById(category.replace("#", ""));
-    console.log("チェック");
-    console.log(ulElement);
     console.log(data);
     if (ulElement) {
       ulElement.innerHTML = ''; // リストをクリア
@@ -199,40 +209,40 @@ document.addEventListener('click', event => {
 });
 
 
-// 年と月の選択肢を生成する関数
-function populateYearMonthOptions() {
-  const yearSelect = document.querySelector('.select-box.year');
-  const monthSelect = document.querySelector('.select-box.month');
+// // 年と月の選択肢を生成する関数
+// function populateYearMonthOptions() {
+//   const yearSelect = document.querySelector('.select-box.year');
+//   const monthSelect = document.querySelector('.select-box.month');
 
-  const currentDate = new Date();
-  const currentYear = currentDate.getFullYear();
-  const currentMonth = currentDate.getMonth() + 1;
+//   const currentDate = new Date();
+//   const currentYear = currentDate.getFullYear();
+//   const currentMonth = currentDate.getMonth() + 1;
 
-  // 年の選択肢を生成（現在から3年前まで）
-  for (let year = currentYear; year >= currentYear - 3; year--) {
-      const option = document.createElement('option');
-      option.value = year;
-      option.textContent = year + '年';
-      yearSelect.appendChild(option);
-  }
+//   // 年の選択肢を生成（現在から3年前まで）
+//   for (let year = currentYear; year >= currentYear - 3; year--) {
+//     const option = document.createElement('option');
+//     option.value = year;
+//     option.textContent = year + '年';
+//     yearSelect.appendChild(option);
+//   }
 
-  // 月の選択肢を生成（1から12まで）
-  for (let month = 1; month <= 12; month++) {
-      const option = document.createElement('option');
-      option.value = month;
-      option.textContent = month + '月';
-      monthSelect.appendChild(option);
-  }
+//   // 月の選択肢を生成（1から12まで）
+//   for (let month = 1; month <= 12; month++) {
+//     const option = document.createElement('option');
+//     option.value = month;
+//     option.textContent = month + '月';
+//     monthSelect.appendChild(option);
+//   }
 
-  // 現在の年月を選択状態にする
-  yearSelect.value = currentYear;
-  monthSelect.value = currentMonth;
-}
+//   // 現在の年月を選択状態にする
+//   yearSelect.value = currentYear;
+//   monthSelect.value = currentMonth;
+// }
 
 // ページが読み込まれた際に選択肢を生成
-window.addEventListener('load', () => {
-  populateYearMonthOptions();
-});
+// window.addEventListener('load', () => {
+//   populateYearMonthOptions();
+// });
 
 // URLのクエリパラメータが変更された場合に更新
 window.addEventListener('popstate', () => {
@@ -252,5 +262,20 @@ window.addEventListener('load', () => {
   const selectedTab = document.querySelector('.tab-btn a.active');
   const category = selectedTab.getAttribute('data-tab-target');
   updateArticleLists(category, searchKeyword);
+
+  // ページの最初を示すボタンの要素を取得
+  const firstPageButton = document.querySelector('.cmn-pager-first');
+  const prevPageButton = document.querySelector('.cmn-pager-prev');
+  // URLのクエリパラメータからpageの値を取得
+  const urlSearchpages = new URLSearchParams(window.location.search);
+  const pageValue = urlSearchpages.get('page');
+  // pageの値が0の場合、ボタンを非表示にする
+  if (pageValue === '0' | !pageValue) {
+    firstPageButton.style.display = 'none';
+    prevPageButton.style.display = 'none';
+  } else {
+    firstPageButton.style.display = 'block'; // それ以外の場合は表示
+    prevPageButton.style.display = 'block';
+  }
 });
 
