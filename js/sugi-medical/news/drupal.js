@@ -1,7 +1,7 @@
 
 
 // JSON APIのベースURLを指定
-const apiUrl = 'https://d37m9cibsc5611.cloudfront.net/jsonapi/node/sugi_medical';
+const apiUrl = 'https://d1vyjchtv8ee5.cloudfront.net/jsonapi/node/sugi_medical';
 
 // ページング関連の変数
 let currentPage = 1;
@@ -185,7 +185,7 @@ document.addEventListener('click', event => {
     const articleId = articleLink.getAttribute('data-article-id');
 
     // ページ遷移の条件に応じてURLを決定
-    const apiUrl = `https://d37m9cibsc5611.cloudfront.net/jsonapi/node/sugi_medical/${articleId}`;
+    const apiUrl = `https://d1vyjchtv8ee5.cloudfront.net/jsonapi/node/sugi_medical/${articleId}`;
     fetch(apiUrl)
       .then(response => response.json())
       .then(data => {

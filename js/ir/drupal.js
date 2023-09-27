@@ -1,5 +1,5 @@
 // JSON APIのエンドポイントURLを指定
-const apiUrl = 'https://d37m9cibsc5611.cloudfront.net/jsonapi/node/sugi_hd?sort=-field_date&filter[field_list]=IR情報&page[limit]=5';
+const apiUrl = 'https://d1vyjchtv8ee5.cloudfront.net/jsonapi/node/sugi_hd?sort=-field_date&filter[field_list]=IR情報&page[limit]=5';
 
 // 日付フォーマット変更
 function formatDate(dateString) {
@@ -61,7 +61,7 @@ document.addEventListener('click', event => {
         const articleId = articleLink.getAttribute('data-article-id');
 
         // ページ遷移の条件に応じてURLを決定
-        const apiUrl = `https://d37m9cibsc5611.cloudfront.net/jsonapi/node/sugi_hd/${articleId}`;
+        const apiUrl = `https://d1vyjchtv8ee5.cloudfront.net/jsonapi/node/sugi_hd/${articleId}`;
         fetch(apiUrl)
             .then(response => response.json())
             .then(data => {
@@ -92,7 +92,7 @@ window.addEventListener('load', updateArticleTitles);
 
 
 // // JSON APIのエンドポイントURLを指定
-// const apiUrl = 'https://d37m9cibsc5611.cloudfront.net/jsonapi/node/sugi_hd?sort=-field_date';
+// const apiUrl = 'https://d1vyjchtv8ee5.cloudfront.net/jsonapi/node/sugi_hd?sort=-field_date';
 
 // // 日付フォーマット変更
 // function formatDate(dateString) {
