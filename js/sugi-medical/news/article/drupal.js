@@ -39,8 +39,8 @@ document.addEventListener('DOMContentLoaded', function () {
             articleTitleElement2.innerHTML = articleTitle2;
 
             // PDFリンクを設定
-            const pdfLink = document.getElementById('pdf-link');
-            pdfLink.href = `/pdf/${data.data.attributes.field_pdf.value}`;
+            const pdfLink = document.getElementById('ref-link');
+            // pdfLink.href = `/pdf/${data.data.attributes.field_pdf.value}`;
 
             if (data.data.attributes.field_pdf) {
                 pdfLink.style.display = 'inline'; // PDFリンクを表示

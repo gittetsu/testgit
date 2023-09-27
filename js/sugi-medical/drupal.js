@@ -73,7 +73,7 @@ document.addEventListener('click', event => {
           }
         } else {
           // 条件2: bodyがnullでない場合、記事へ遷移
-          window.location.href = `/news/article?id=${articleId}`;
+          window.location.href = `/sugi-medical/news/article?id=${articleId}`;
         }
       })
       .catch(error => {

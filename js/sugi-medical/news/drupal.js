@@ -185,7 +185,7 @@ document.addEventListener('click', event => {
     const articleId = articleLink.getAttribute('data-article-id');
 
     // ページ遷移の条件に応じてURLを決定
-    const apiUrl = `https://d37m9cibsc5611.cloudfront.net/jsonapi/node/sugi_hd/${articleId}`;
+    const apiUrl = `https://d37m9cibsc5611.cloudfront.net/jsonapi/node/sugi_medical/${articleId}`;
     fetch(apiUrl)
       .then(response => response.json())
       .then(data => {
@@ -199,7 +199,7 @@ document.addEventListener('click', event => {
           }
         } else {
           // 条件2: bodyがnullでない場合、記事へ遷移
-          window.location.href = `/news/article?id=${articleId}`;
+          window.location.href = `/sugi-medical/news/article.html?id=${articleId}`;
         }
       })
       .catch(error => {
