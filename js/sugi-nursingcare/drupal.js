@@ -1,11 +1,11 @@
 // JSON APIのベースURLを指定
-const apiUrl = 'https://d37m9cibsc5611.cloudfront.net/jsonapi/node/sugi_medical';
+const apiUrl = 'https://d37m9cibsc5611.cloudfront.net/jsonapi/node/sugi_nurse';
 
 // カテゴリーごとに記事を取得して表示
 async function updateArticleLists(category) {
   try {
     // カテゴリーごとのフィルター条件を設定
-    const filter = category === 'all' ? '' : `&filter[field_list]=${category.replace("#", "")}`;
+    const filter = category === 'all' ? '' : `&filter[field_nurse_list]=${category.replace("#", "")}`;
 
     // JSON APIからデータを取得
     const response = await fetch(`${apiUrl}?sort=-field_date${filter}&page[limit]=5`);
@@ -26,7 +26,7 @@ async function updateArticleLists(category) {
               <div class="cat-blk">
                 <p class="date small-text">${article.attributes.field_date}</p>
                 <ul>
-                  <li class="small-text">${article.attributes.field_medical_list}</li>
+                  <li class="small-text">${article.attributes.field_nurse_list}</li>
                 </ul>
               </div>
               <p class="newslist-desc text-02" id="article-title${index + 1}">${article.attributes.title}</p>
@@ -59,7 +59,7 @@ document.addEventListener('click', event => {
     const articleId = articleLink.getAttribute('data-article-id');
 
     // ページ遷移の条件に応じてURLを決定
-    const apiUrl = `https://d37m9cibsc5611.cloudfront.net/jsonapi/node/sugi_medical/${articleId}`;
+    const apiUrl = `https://d37m9cibsc5611.cloudfront.net/jsonapi/node/sugi_nurse/${articleId}`;
     fetch(apiUrl)
       .then(response => response.json())
       .then(data => {
@@ -73,7 +73,7 @@ document.addEventListener('click', event => {
           }
         } else {
           // 条件2: bodyがnullでない場合、記事へ遷移
-          window.location.href = `/sugi-medical/news/article.html?id=${articleId}`;
+          window.location.href = `/sugi-nursingcare/news/article.html?id=${articleId}`;
         }
       })
       .catch(error => {
