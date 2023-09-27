@@ -2066,7 +2066,7 @@
   }
 
   .mission02-link .common-button,
-  .mission03-link .common-button {
+  .mission03-link .common-button,.mission03-link .external-button{
     width: 100%;
     padding: 16px 18px 16px 18px;
     max-width: 100%;
