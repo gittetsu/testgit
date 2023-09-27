@@ -1,5 +1,5 @@
 // JSON APIのエンドポイントURLを指定
-const apiUrl = 'https://d37m9cibsc5611.cloudfront.net/jsonapi/node/sugi_hd_en?sort=-field_date&filter[field_en_list]=Sustainability&page[limit]=5';
+const apiUrl = 'https://d1vyjchtv8ee5.cloudfront.net/jsonapi/node/sugi_hd_en?sort=-field_date&filter[field_en_list]=Sustainability&page[limit]=5';
 
 // 日付フォーマット変更
 function formatDate(dateString) {
@@ -58,7 +58,7 @@ document.addEventListener('click', event => {
         const articleId = articleLink.getAttribute('data-article-id');
 
         // ページ遷移の条件に応じてURLを決定
-        const apiUrl = `https://d37m9cibsc5611.cloudfront.net/jsonapi/node/sugi_hd_en/${articleId}`;
+        const apiUrl = `https://d1vyjchtv8ee5.cloudfront.net/jsonapi/node/sugi_hd_en/${articleId}`;
         fetch(apiUrl)
             .then(response => response.json())
             .then(data => {
