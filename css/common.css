@@ -162,6 +162,10 @@ ol {
 }
 
 /*text*/
+.font-uni {
+  font-family: 'Times New Roman', sans-serif;
+}
+
 .small-text {
   line-height: 1.7;
   color: #000;
@@ -1307,7 +1311,6 @@ h6.common-sub-ttl {
 }
 
 .accor-col03 .col03-detail {
-  display: flex;
   width: 31.9%;
   margin-right: 2.1%;
   margin-bottom: 40px;
