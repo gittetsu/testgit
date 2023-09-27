@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
             articleBodyElement.innerHTML = articleBody;
 
             // article-date要素に本文を挿入
-            const articleDate = formatDate(data.data.attributes.created);
+            const articleDate = formatDate(data.data.attributes.field_date);
             const articleDateElement = document.getElementById('article-date');
             articleDateElement.innerHTML = articleDate;
 

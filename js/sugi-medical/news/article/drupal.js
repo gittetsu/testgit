@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
             articleBodyElement.innerHTML = articleBody;
 
             // article-date要素に本文を挿入
-            const articleDate = formatDate(data.data.attributes.field_data);
+            const articleDate = formatDate(data.data.attributes.field_date);
             const articleDateElement = document.getElementById('article-date');
             articleDateElement.innerHTML = articleDate;
 
@@ -36,7 +36,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
             const articleTitle2 = data.data.attributes.title;
             const articleTitleElement2 = document.getElementById('article-title2');
-            articleTitleElement2.innerHTML = articleTitle2;
+            if(articleTitleElement2){
+                articleTitleElement2.innerHTML = articleTitle2;
+            }
 
             // PDFリンクを設定
             const pdfLink = document.getElementById('ref-link');
