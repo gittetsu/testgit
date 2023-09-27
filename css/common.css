@@ -162,6 +162,10 @@ ol {
 }
 
 /*text*/
+.font-uni {
+  font-family: 'Times New Roman', sans-serif;
+}
+
 .small-text {
   line-height: 1.7;
   color: #000;
