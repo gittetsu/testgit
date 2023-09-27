@@ -646,7 +646,7 @@ window.addEventListener('load', function () {
     }
 
     /*header calculate*/
-    function setHeight() {
+    function headerHeigt() {
         var holding = document.querySelector(".sugi-holding-header");
         var smile = document.querySelector('.sugi-smile-header')
         var header = document.querySelector('header');
@@ -679,9 +679,9 @@ window.addEventListener('load', function () {
             element.style.paddingTop = mediaQuery.matches ? headerHeight : 0;
         });
     }
-    setHeight();
+    headerHeigt();
 
-    window.addEventListener('resize', setHeight);
+    window.addEventListener('resize', headerHeigt);
 
 });
 
