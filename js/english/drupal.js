@@ -5,14 +5,14 @@ const apiUrl = 'https://d1vyjchtv8ee5.cloudfront.net/jsonapi/node/sugi_hd_en';
 async function updateArticleLists(category) {
   try {
     // カテゴリーごとのフィルター条件を設定
-    const filter = category === 'all' ? '' : category === '#all' ? '' : `&filter[field_en_list]=${category.replace("#", "")}`;
+    const filter = category === 'all' ? '' : `&filter[field_en_list]=${category.replace("#", "")}`;
 
     // JSON APIからデータを取得
     const response = await fetch(`${apiUrl}?sort=-field_date${filter}&page[limit]=5`);
     const data = await response.json();
 
     // 取得したデータから記事リストを生成
-    const ulElement = document.getElementById(category.replace("#", ""));
+    const ulElement = document.getElementById(category);
     if (ulElement) {
       ulElement.innerHTML = ''; // リストをクリア
 
@@ -73,7 +73,7 @@ document.addEventListener('click', event => {
           }
         } else {
           // 条件2: bodyがnullでない場合、記事へ遷移
-          window.location.href = `/news/article?id=${articleId}`;
+          window.location.href = `/english/news/article?id=${articleId}`;
         }
       })
       .catch(error => {
