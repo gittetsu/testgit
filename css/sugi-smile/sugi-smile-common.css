@@ -454,6 +454,7 @@ footer.sugi-smile-footer .ft-nav ul li a:hover {
   /* Side Bar */
   .sugi-smile-wrapper .sidebar {
     top: 0;
+    position: absolute;
   }
 
   .sugi-smile-wrapper .sidebar-bnr-sp {
@@ -592,6 +593,7 @@ footer.sugi-smile-footer .ft-nav ul li a:hover {
   /* Side Bar */
   .sugi-smile-wrapper .sidebar {
     top: 0;
+    position: absolute;
   }
 
   .sugi-smile-wrapper .sidebar-bnr-sp {
