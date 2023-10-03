@@ -18,11 +18,8 @@ window.addEventListener('load', function () {
                         if (otherItem !== item && otherItem.classList.contains('open')) {
                             const otherContent = otherItem.querySelector('.accordion-content')
                             if (
-                                otherContent &&
-                                ((otherContent.classList.contains('sidebar-detail') &&
-                                    content.classList.contains('sidebar-detail')) ||
-                                    (!otherContent.classList.contains('sidebar-detail') &&
-                                        !content.classList.contains('sidebar-detail')))
+                                otherContent && otherContent.classList.contains("sidebar-detail") &&
+                                content.classList.contains("sidebar-detail")
                             ) {
                                 otherItem.classList.remove('open')
                                 otherContent.style.height = '0'
@@ -654,7 +651,7 @@ window.addEventListener('load', function () {
         var content = document.querySelectorAll('.main-nursing-care, .sec-nursecare-company, .sec-nurcare-gp,.sec-nurcare-contact, .sec-nurcare-complete, .sec-nurcare-confirm')
         var headerHeight = header.offsetHeight + 'px';
         var bodyElement = document.body;
-        if(holding){
+        if (holding) {
             if (element) {
                 var sideNav = document.querySelector('.js-sidebar');
                 var sideNavHeight = sideNav.offsetHeight + 'px';
@@ -665,10 +662,10 @@ window.addEventListener('load', function () {
                     var totalHeightResult = totalHeight + 'px';
                     bodyElement.style.paddingTop = mediaQuery.matches ? totalHeightResult : 0;
                 }
+            }
+
         }
-       
-        }
-        else{
+        else {
             bodyElement.style.paddingTop = 0;
         }
 
