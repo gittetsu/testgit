@@ -1320,7 +1320,8 @@
   }
 
   .top .common-ttl-blk .common-button .arrow {
-    right: 27px;
+    right: 10px;
+    bottom: 10px;
   }
 
   /* top */
