@@ -235,6 +235,11 @@
 }
 
 /* Side Bar */
+.sidebar-main {
+  position: sticky;
+  top: 30px;
+}
+
 .sugi-smile-wrapper .sidebar .sidebar-list {
   background-color: #009944;
   border-radius: 5px;
@@ -457,6 +462,11 @@ footer.sugi-smile-footer .ft-nav ul li a:hover {
     position: absolute;
   }
 
+  .sidebar-main {
+    position: unset;
+    top: unset;
+  }
+
   .sugi-smile-wrapper .sidebar-bnr-sp {
     border-bottom: 1px solid #e0e0e0;
   }
@@ -594,6 +604,11 @@ footer.sugi-smile-footer .ft-nav ul li a:hover {
   .sugi-smile-wrapper .sidebar {
     top: 0;
     position: absolute;
+  }
+
+  .sidebar-main {
+    position: unset;
+    top: unset;
   }
 
   .sugi-smile-wrapper .sidebar-bnr-sp {
