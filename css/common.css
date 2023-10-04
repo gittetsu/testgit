@@ -2892,8 +2892,8 @@ footer .page-top:hover img {
 
   /*sidebar*/
   .sidebar {
-    position: absolute;
-    top: 72px;
+    position: fixed;
+    top: 70px;
     right: 0;
     left: 0;
     z-index: 0;
@@ -3901,7 +3901,7 @@ footer .page-top:hover img {
 
   /*sidebar*/
   .sidebar {
-    position: absolute;
+    position: fixed;
     top: 70px;
     right: 0;
     left: 0;
@@ -4737,6 +4737,9 @@ footer .page-top:hover img {
   }
 
   footer .scroll {
-    right: 30px;
+    right: 10px;
+  }
+  footer .page-top{
+    bottom: 10px;
   }
 }
