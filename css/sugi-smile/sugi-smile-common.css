@@ -238,6 +238,7 @@
 .sidebar-main {
   position: sticky;
   top: 30px;
+  padding-bottom: 30px;
 }
 
 .sugi-smile-wrapper .sidebar .sidebar-list {
@@ -465,6 +466,7 @@ footer.sugi-smile-footer .ft-nav ul li a:hover {
   .sidebar-main {
     position: unset;
     top: unset;
+    padding-bottom: 0;
   }
 
   .sugi-smile-wrapper .sidebar-bnr-sp {
@@ -609,6 +611,7 @@ footer.sugi-smile-footer .ft-nav ul li a:hover {
   .sidebar-main {
     position: unset;
     top: unset;
+    padding-bottom: 0;
   }
 
   .sugi-smile-wrapper .sidebar-bnr-sp {
