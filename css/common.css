@@ -4737,6 +4737,9 @@ footer .page-top:hover img {
   }
 
   footer .scroll {
-    right: 30px;
+    right: 10px;
+  }
+  footer .page-top{
+    bottom: 10px;
   }
 }
