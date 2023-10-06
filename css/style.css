@@ -415,7 +415,6 @@
 	width: 100%;
 	margin: 0 auto;
 	max-width: 1920px;
-	margin:0 auto;
 	overflow: hidden;
 }
 
@@ -1675,15 +1674,10 @@
 
   .sec-image-slider .slider-image{
 		width: 100%;
-		margin: 0 auto;
 		max-width: 100%;
-		margin:0 auto;
-		overflow: hidden;
 	}
 	.sec-image-slider  .slides-list{
 		width: calc(152px * 16);
-		display: flex;
-		animation: slidermove 40s linear infinite;
 	}
 	.sec-image-slider  .slide-item{
 		width: 152px;
