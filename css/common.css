@@ -3938,7 +3938,8 @@ footer .page-top:hover img {
 
   .sidebar-bnr-sp .sb-bnr-arrow {
     position: relative;
-    width: 20px;
+    max-width: 20px;
+    width: 100%;
     height: 20px;
     background-color: #048851;
     border-radius: 3px;
