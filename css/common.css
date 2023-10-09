@@ -1520,8 +1520,12 @@ h6.common-sub-ttl {
 }
 
 /*common-table*/
+.table{
+  overflow: auto;
+}
 .table table {
   width: 100%;
+  margin-bottom: 15px;
   text-align: left;
   -webkit-text-size-adjust: 100%;
   border-collapse: collapse;
