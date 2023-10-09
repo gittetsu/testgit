@@ -144,6 +144,7 @@
 
 .tab button {
   display: flex;
+  text-align: left;
   justify-content: space-between;
   align-items: center;
   width: 100%;
@@ -188,7 +189,8 @@
 
 .tab-arrow {
   position: relative;
-  width: 24px;
+  max-width: 24px;
+  width: 100%;
   height: 24px;
   border-radius: 50%;
 }
@@ -223,7 +225,7 @@
 }
 
 .sec-our-mission .tab-list .d-flex.link-gp .external-button:first-child {
-  margin-right: 20px;
+  margin-right: 3%;
 }
 
 .store-area {
@@ -268,6 +270,7 @@
   color: #fff;
   font-size: 1.25rem;
   letter-spacing: 2px;
+  width: 50%;
 }
 
 /* ipad */
@@ -349,10 +352,9 @@
   }
 
   .tab button {
-    display: flex;
     justify-content: center;
     align-items: center;
-    width: 115px;
+    min-width: 115px;
     padding: 10px;
     font-size: 0.875rem;
     border-bottom: 3px solid transparent;
