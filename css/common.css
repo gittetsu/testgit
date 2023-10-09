@@ -1127,6 +1127,7 @@ h6.common-sub-ttl {
 
 .accordion-ttl {
   display: flex;
+  word-break: break-all;
   position: relative;
   justify-content: space-between;
   align-items: flex-start;
