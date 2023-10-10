@@ -74,7 +74,7 @@ document.addEventListener('click', event => {
                     }
                 } else {
                     // 条件2: bodyがnullでない場合、記事へ遷移
-                    window.location.href = `/sugi-nursingcare/news/article?id=${articleId}`;
+                    window.location.href = `/sugi-nursingcare/news/article.html?id=${articleId}`;
                 }
             })
             .catch(error => {
