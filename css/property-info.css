@@ -53,22 +53,12 @@
   margin-left: 20px;
 }
 
-.inquiry-blk .table tr td {
-  border-left: inherit;
-}
-
-.inquiry-blk .table tr td:nth-child(3n) {
-  border-right: inherit;
-}
-
-.recruit-area-blk .table tr,
-.inquiry-blk .table tr {
+.recruit-area-blk .table tr {
   border-top: 1px solid #cce2d9;
   border-bottom: 1px solid #cce2d9;
 }
 
-.recruit-area-blk .table tr .row,
-.inquiry-blk .table tr .row {
+.recruit-area-blk .table tr .row {
   border-right: 1px solid #cce2d9;
 }
 
@@ -106,6 +96,32 @@
   line-height: 1.5;
 }
 
+.inquiry-blk .inquiry-list {
+  display: flex;
+  border-top: 1px solid #cce2d9;
+  border-bottom: 1px solid #cce2d9;
+}
+
+.inquiry-blk .inquiry-list .inquiry-list-detail {
+  border-right: 1px solid #cce2d9;
+  width: 100%;
+}
+
+.inquiry-blk .inquiry-list .inquiry-list-detail:last-child {
+  border-right: 1px solid transparent;
+}
+
+.inquiry-blk .inquiry-list .inquiry-list-detail .inquiry-detail {
+  font-weight: 400;
+  padding: 11.6px 22px;
+}
+
+.inquiry-blk .inquiry-list .inquiry-list-detail .inquiry-ttl {
+  font-weight: 700;
+  background-color: #f5f8f7;
+  padding: 11.6px 22px;
+  border-bottom: 1px solid #cce2d9;
+}
 
 @media only screen and (max-width: 767.9px) {
 
@@ -117,5 +133,47 @@
 
   .location-btn-list li {
     width: 100%;
+  }
+
+  .recruit-area-blk .area-blk.table {
+    overflow: hidden;
+  }
+
+  .recruit-area-blk .area-blk.table table {
+    border-top: 1px solid transparent;
+  }
+
+  .recruit-area-blk .area-blk.table tr {
+    display: block;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+  }
+
+  .recruit-area-blk .area-blk.table tr .row {
+    width: 100%;
+    border-right: 1px solid transparent;
+    border-bottom: 1px solid #cce2d9;
+    border-top: 1px solid #cce2d9;
+    white-space: inherit;
+  }
+
+  .recruit-area-blk .area-blk.table tr td {
+    width: 100%;
+    display: block;
+    border-bottom: 1px solid transparent;
+    white-space: inherit;
+  }
+
+
+  .inquiry-blk .inquiry-list {
+    flex-wrap: wrap;
+    border-top: 1px solid transparent;
+    font-size: 0.875rem;
+  }
+
+  .inquiry-blk .inquiry-list .inquiry-list-detail {
+    border-bottom: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-top: 1px solid #cce2d9;
   }
 }
