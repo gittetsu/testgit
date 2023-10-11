@@ -679,6 +679,7 @@ h6.common-sub-ttl {
 
 .sugi-holding-header .dropdown .sub-menu .sub-menu-list {
   display: flex;
+  align-items: flex-start;
   width: 100%;
   padding: 3.1%;
 }
