@@ -119,6 +119,8 @@
 .inquiry-blk .inquiry-list .inquiry-list-detail .inquiry-ttl {
   font-weight: 700;
   background-color: #f5f8f7;
+  display: flex;
+  align-items: center;
   padding: 11.6px 22px;
   border-bottom: 1px solid #cce2d9;
 }
