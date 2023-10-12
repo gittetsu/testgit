@@ -91,15 +91,20 @@
   margin-right: 0;
 }
 
-.sec-performance .highlights li .tag {
+.sec-performance .highlights li .text-04.tag {
   display: inline-block;
   padding: 2.8px 12px;
   border: 1px solid #000;
   border-radius: 4px;
+  font-size: 0.875rem;
+}
+
+.sec-performance .highlights li .text-04 {
+  font-size: 1rem;
 }
 
 .sec-performance .highlights li .text-04 span {
-  font-size: 3.438rem;
+  font-size: 3rem;
 }
 
 /* I-pad */
@@ -178,5 +183,10 @@
     width: 8px;
     height: 8px;
     background: url(/img/common/ico_arrow_white.svg) no-repeat center/cover;
+  }
+
+  .sec-performance .highlights li .text-04.tag,
+  .sec-performance .highlights li .small-text {
+    font-size: 1rem;
   }
 }

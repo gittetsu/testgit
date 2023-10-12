@@ -54,10 +54,40 @@
 
   .sec-inquiries .external-button+.external-button {
     margin-top: 20px;
+    margin-left: 0;
+  }
+  .sec-inquiries .external-button{
+    margin-right: 20px;
   }
 
   /* sec-contact */
   .sec-contact .phone-num {
     pointer-events: visible;
   }
+
+  .sec-contact .table,.sec-inquiries .table,.sec-guidance .table{
+    overflow: hidden;
+  }
+
+  .sec-contact .table table,.sec-inquiries .table table,.sec-guidance .table table{
+    border-top: 1px solid transparent;
+  }
+
+  .sec-contact .table tr .row, .sec-contact .table th .row,.sec-inquiries .table tr .row, .sec-inquiries .table th .row,
+  .sec-guidance .table tr .row, .sec-guidance .table th .row {
+    width: 100%;
+    border-bottom: 1px solid #cce2d9;
+    border-top: 1px solid #cce2d9;
+  }
+
+  .sec-contact .table tr td, .sec-contact .table tr th,.sec-inquiries .table tr td, .sec-inquiries .table tr th,
+  .sec-guidance .table tr td, .sec-guidance .table tr th {
+    width: 100%;
+    display: block;
+    border: 1px solid transparent;
+    white-space: normal;
+  }
+
+
+  
 }

@@ -414,7 +414,6 @@
 .sec-image-slider .slider-image {
 	width: 100%;
 	margin: 0 auto;
-	max-width: 1920px;
 	overflow: hidden;
 }
 
