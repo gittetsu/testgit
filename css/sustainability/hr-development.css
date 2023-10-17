@@ -1,0 +1,74 @@
+@charset "UTF-8";
+
+/* pc */
+
+/* sec-training */
+
+.sec-training .mb-60 .small-text {
+  margin-top: 10px;
+}
+
+.sec-training .img-list-gp {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sec-training .img-list-gp li {
+  width: 30.75%;
+  margin: 0 3.8% 4.478% 0;
+}
+
+.sec-training .img-list-gp li:nth-child(3n+0) {
+  margin-right: 0;
+}
+
+.sec-training .img-list-gp li:nth-last-child(-n+3) {
+  margin-bottom: 0;
+}
+
+/* sec-promo */
+
+.sec-promo .interview {
+  padding: 30px;
+  background-color: #e5f3ed;
+  border-radius: 5px;
+}
+
+.sec-promo .interview .caption-ttl {
+  color: #048851;
+  font-family: 'Figtree';
+  font-weight: 700;
+}
+
+.sec-promo .interview .d-flex {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.sec-promo .interview .pharmacist {
+  width: 25.052%;
+}
+
+.sec-promo .interview .person-cmt {
+  width: 69.437%;
+}
+
+/* sp */
+
+@media only screen and (max-width: 767.9px) {
+  .sec-training .img-list-gp {
+    justify-content: space-between;
+  }
+
+  .sec-training .img-list-gp li {
+    width: 47.8%;
+    margin-right: 0;
+  }
+
+  .sec-training .img-list-gp li:nth-last-child(-n+3) {
+    margin-bottom: 4.478%;
+  }
+
+  .sec-training .img-list-gp li:nth-last-child(-n+2) {
+    margin-bottom: 0;
+  }
+}

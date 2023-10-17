@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+.sec-place-opportunity .w-227 {
+  width: 30.7%;
+  margin-right: 40px;
+}
+
+.sec-place-opportunity .w-388 {
+  width: 52.4%;
+}
+
+.sec-place-opportunity .activities-flex {
+  display: flex;
+}
+
+.sec-place-opportunity .emp-ratebox {
+  padding: 62px 35px 53px;
+  background-color: #e5f3ed;
+  text-align: center;
+}
+
+.sec-place-opportunity .emp-ratebox .text-01 {
+  font-size: 1.125rem;
+}
+
+.sec-place-opportunity .emp-ratebox .rate-num {
+  font-size: 3.375rem;
+}
+
+.sec-place-opportunity .emp-ratebox .rate-percentage {
+  font-size: 1.75rem;
+}
+
+.sec-place-opportunity .platinum-img {
+  text-align: center;
+}
+
+.sec-place-opportunity .platinum-img img {
+  max-width: 200px;
+}
+
+/* SP */
+@media only screen and (max-width: 767.9px) {
+  .sec-place-opportunity .w-227 {
+    width: 100%;
+  }
+
+  .sec-place-opportunity .w-388 {
+    width: 100%;
+  }
+
+  .sec-place-opportunity .activities-flex {
+    flex-direction: column;
+  }
+}

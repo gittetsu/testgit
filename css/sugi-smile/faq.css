@@ -1,0 +1,99 @@
+@charset "UTF-8";
+
+.smile-faq {
+  padding: 60px 0;
+}
+
+.qa-blk {
+  margin-bottom: 40px;
+}
+
+.qa-blk .ques {
+  position: relative;
+  padding: 10px 35px 10px 70px;
+  background-color: #009944;
+  color: #fff;
+  font-size: 1.625rem;
+  font-weight: 700;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.qa-blk .ques::before {
+  position: absolute;
+  top: 10px;
+  left: 28px;
+  color: #f5ff03;
+  font-size: 1.625rem;
+  content: "Q.";
+}
+
+.qa-blk .ans {
+  padding: 30px 30px 30px 28px;
+  border: 2px solid #009944;
+  background-color: #fff;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.qa-blk .ans .ans-txt {
+  position: relative;
+  margin-bottom: 10px;
+  padding-left: 42px;
+  font-size: 1rem;
+}
+
+.qa-blk .ans .ans-txt::before {
+  position: absolute;
+  top: -15px;
+  left: 0;
+  color: #009944;
+  font-size: 1.625rem;
+  font-weight: 700;
+  content: "A.";
+}
+
+.qa-blk .ans .ans-txt a {
+  color: #009944;
+}
+
+/*I-pad*/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .smile-faq {
+    padding-top: 70px;
+  }
+}
+
+/* Sp */
+@media only screen and (max-width: 767.9px) {
+  .smile-faq {
+    padding-top: 70px;
+  }
+
+  .qa-blk {
+    margin-bottom: 20px;
+  }
+
+  .qa-blk .ques {
+    padding: 10px 20px 10px 60px;
+    font-size: 1.25rem;
+  }
+
+  .qa-blk .ques::before {
+    top: 10px;
+    left: 20px;
+  }
+
+  .qa-blk .ans {
+    padding: 20px;
+  }
+
+  .qa-blk .ans .ans-txt {
+    margin-bottom: 0;
+    padding-left: 38px;
+  }
+
+  .qa-blk .ans .ans-txt::before {
+    top: -12px;
+  }
+}

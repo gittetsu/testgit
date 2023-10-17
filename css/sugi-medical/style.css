@@ -1,0 +1,860 @@
+@charset "UTF-8";
+
+.container {
+  padding: 0 9.7%;
+}
+
+.top .d-flex {
+  flex-wrap: nowrap;
+}
+
+.top .common-top-ttl {
+  position: relative;
+  width: 50%;
+}
+
+.top .common-top-ttl .top-ttl {
+  position: relative;
+  line-height: 1.21;
+  color: #f2f2f2;
+  font-family: 'Niconne', cursive;
+  font-size: 7.5rem;
+  font-weight: 500;
+  letter-spacing: -6px;
+}
+
+.top .common-top-ttl span {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  line-height: 1.1;
+  padding-left: 16px;
+  color: #048851;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 1.875rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  transform: translateY(-50%);
+}
+
+.top .common-top-ttl span:before {
+  position: absolute;
+  top: 55%;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  background-color: #048851;
+  content: '';
+  transform: translateY(-50%);
+  border-radius: 50%;
+}
+
+.top .common-ttl-blk {
+  align-items: center;
+}
+
+/* mv-blk */
+.top .mv-blk {
+  position: relative;
+  margin-bottom: 98px;
+}
+
+.top .mv-blk .mv-slider {
+  position: relative;
+  padding: 34.7% 0 34.7% 0;
+  background-image: url('/img/sugi-medical/img_mv_bg_01.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.top .mv-blk .dots {
+  display: flex;
+  position: absolute;
+  right: 9.7%;
+  bottom: 0;
+}
+
+.top .mv-blk .dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin: 0 5px;
+  background-color: #eaeaea;
+  cursor: pointer;
+  transition: background-color 0.6s ease;
+  border-radius: 50%;
+}
+
+.top .mv-blk .dot:first-child {
+  margin-left: 0;
+}
+
+.top .mv-blk .dot:last-child {
+  margin-right: 0;
+}
+
+.top .mv-blk .active {
+  background-color: #7fbe26;
+}
+
+/* sec-news */
+
+.top .sec-news {
+  margin-bottom: 87px;
+}
+
+.top .sec-news .tab-list {
+  align-items: flex-start;
+}
+
+.top .sec-news .tab-list .tab-left {
+  width: 23.7%;
+}
+
+.top .sec-news .tab-list .tab-left li:last-child .common-button {
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.top .sec-news .tab-list .tab-left .common-button {
+  width: 100%;
+  line-height: 1.6;
+  padding: 23px 40px 23px 27px;
+  border: none;
+  background-color: transparent;
+  color: #000;
+  text-align: left;
+  letter-spacing: 3.8px;
+  border-radius: 0;
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid transparent;
+}
+
+
+.top .sec-news .common-button .arrow {
+  right: 20px;
+  width: 24px;
+  height: 24px;
+  background-color: #f5faed;
+}
+
+.top .sec-news .common-button .arrow::after,
+.top .sec-news .common-button.active .arrow::after {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  margin: 0 auto;
+  background: url('/img/sugi-medical/ico_arrow_green.svg') no-repeat center/cover;
+  content: '';
+  transform: translateY(-50%) rotate(0deg);
+  border-radius: unset;
+}
+
+.top .sec-news .tab-list .tab-left .common-button:hover,
+.top .sec-news .tab-list .tab-left .common-button:active,
+.top .sec-news .tab-list .tab-left .common-button.active {
+  background-color: #f5faed;
+  color: #7fbe26;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  border-radius: 5px;
+}
+
+.top .sec-news .tab-list .tab-right {
+  width: 68.2%;
+}
+
+.new-common .new-common-list {
+  border-top: 1px solid #e6e6e6;
+}
+
+.new-common .new-common-list:last-child {
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.new-common .new-common-list a {
+  display: block;
+  padding: 21.5px 0;
+  color: #000;
+}
+
+.new-common .new-common-list p.text-02 {
+  color: #000000;
+}
+
+.new-common .new-common-list .cat-blk {
+  display: flex;
+}
+
+.new-common .new-common-list ul {
+  display: flex;
+  align-items: center;
+}
+
+.new-common .new-common-list ul li {
+  line-height: 1;
+  padding: 0 14px;
+  color: #7fbe26;
+  border-right: 1px solid #D6eADe;
+}
+
+.new-common .new-common-list a:hover p.text-02 {
+  color: #7fbe26;
+}
+
+.new-common .new-common-list .date {
+  line-height: 1.7;
+  padding: 0;
+  color: #000;
+  font-size: 0.875rem;
+  border-right: none;
+}
+
+.new-common .new-common-list ul li {
+  font-size: 0.875rem;
+}
+
+.new-common .new-common-list ul li:last-child {
+  padding-right: 0;
+  border-right: none;
+}
+
+[data-tab-content] {
+  display: none;
+}
+
+.active[data-tab-content] {
+  display: block;
+}
+
+.top .sec-news .common-button:hover .arrow,
+.top .sec-news .common-button:active .arrow,
+.top .sec-news .common-button.active .arrow {
+  right: 20px;
+  width: 24px;
+  padding: 12px;
+  background-color: #7fbe26;
+  transition: all 0.3s ease-in-out;
+  border-radius: 50%;
+}
+
+.top .sec-news .common-button:hover .arrow::after,
+.top .sec-news .common-button:active .arrow:after,
+.top .sec-news .common-button.active .arrow::after {
+  background: url('/img/sugi-medical/ico_arrow_white.svg') no-repeat center/cover;
+}
+
+/* sec-company */
+.top .sec-company {
+  position: relative;
+  margin-bottom: 87px;
+}
+
+.top .sec-company .container,
+.top .sec-medical-gp .medical-snc .container {
+  padding: 0 0 0 9.7%;
+}
+
+.top .sec-message .common-top-ttl,
+.top .sec-company .common-top-ttl {
+  width: 100%;
+}
+
+.top .sec-company .txt-blk,
+.top .sec-message .txt-blk {
+  width: 40.54%;
+}
+
+.top .sec-company .txt-blk p {
+  margin-bottom: 60px;
+}
+
+.top .sec-company .img-blk,
+.top .sec-message .img-blk {
+  width: 54.33%;
+}
+
+/* sec-services */
+.top .sec-services .services-blk {
+  width: 50%;
+  padding: 135px 20px;
+  background-image: url('/img/sugi-medical/img_sev_providers.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+.top .sec-services .services-blk:last-child {
+  background-image: url('/img/sugi-medical/img_sev_pharmacy.jpg');
+}
+
+.top .sec-services .services-blk p {
+  line-height: 1.5;
+  margin-bottom: 40px;
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.top .sec-services .services-blk .icon {
+  margin: 0 auto 21px;
+  max-width: 50px;
+}
+
+/* sec-message */
+.top .sec-message {
+  position: relative;
+  margin-bottom: 150px;
+  padding: 100px 0;
+  background-color: #7fbe26;
+  background-image: url('/img/sugi-medical/img_president_msg_bg.png');
+  background-size: contain;
+  background-position: bottom right;
+  background-repeat: no-repeat;
+}
+
+.top .sec-message .container {
+  padding: 0 9.7% 0 0;
+}
+
+.top .sec-message .common-top-ttl .top-ttl {
+  color: #8ac734;
+}
+
+.top .sec-message .common-top-ttl .top-ttl span {
+  color: #fff;
+}
+
+.top .sec-message .common-top-ttl .top-ttl span:before {
+  background-color: #fff;
+}
+
+.top .sec-message p {
+  margin-bottom: 60px;
+  color: #fff;
+}
+
+.top .sec-message .common-btn {
+  box-shadow: none;
+  background: #ffffff;
+  color: #048851;
+}
+
+.top .sec-message .common-btn:after {
+  background: url('/img/common/ico_arrow.svg') no-repeat center/cover;
+  transform: rotate(90deg);
+}
+
+/* sec-medical-gp */
+.top .sec-medical-gp {
+  position: relative;
+  margin-bottom: 150px;
+}
+
+
+.top .sec-medical-gp h2 {
+  position: relative;
+  margin-bottom: 96px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.top .sec-medical-gp h2:after {
+  position: absolute;
+  right: 0;
+  bottom: -32px;
+  left: 0;
+  width: 40px;
+  height: 4px;
+  margin: 0 auto;
+  background-color: #7fbe26;
+  content: '';
+  border-radius: 4px;
+}
+
+.top .sec-medical-gp .txt-blk {
+  width: 30.81%;
+}
+
+.top .sec-medical-gp .medical-snc .img-blk {
+  width: 62.5%;
+}
+
+.top .sec-medical-gp p.support-business-txt,
+.top .sec-medical-gp .website-gp span.txt {
+  display: inline-block;
+  background-color: #7fbe26;
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 700;
+  border-radius: 4px;
+}
+
+.top .sec-medical-gp p.support-business-txt {
+  margin-bottom: 20px;
+  padding: 1.5px 12px;
+}
+
+.top .sec-medical-gp .logo {
+  margin-bottom: 40px;
+  max-width: 340px;
+}
+
+.top .sec-medical-gp p {
+  margin-bottom: 60px;
+}
+
+.top .sec-medical-gp .btn-gp {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+}
+
+.top .sec-medical-gp .medical-snc .btn-gp .external-btn:first-child {
+  margin-right: 2.8%;
+}
+
+/* website-gp */
+
+.top .sec-medical-gp .website-gp ul {
+  margin-top: 56px;
+  padding-top: 56px;
+  border-top: 1px solid #e6e6e6;
+}
+
+.top .sec-medical-gp .website-gp ul li {
+  width: 50%;
+}
+
+.top .sec-medical-gp .website-gp ul li:first-child {
+  padding-right: 7.3%;
+  border-right: 1px solid #e6e6e6;
+}
+
+.top .sec-medical-gp .website-gp ul li:last-child {
+  padding-left: 8%;
+}
+
+.top .sec-medical-gp .website-gp .logo-blk {
+  max-width: 252px;
+}
+
+.top .sec-medical-gp .website-gp .logo-blk01 {
+  max-width: 191px;
+}
+
+.top .sec-medical-gp .website-gp span.txt {
+  margin: 40px 0 20px;
+  padding: 1.5px 10px;
+  border: 1px solid #3c8656;
+}
+
+.top .sec-medical-gp .website-gp p {
+  margin: 40px 0 60px;
+  letter-spacing: 0;
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+  .container {
+    padding: 3%;
+  }
+
+  .top .sec-company .container,
+  .top .sec-medical-gp .medical-snc .container {
+    padding: 0 0 0 3%;
+  }
+
+  .top .sec-message .container {
+    padding: 0 3% 0 0;
+  }
+
+  .top .sec-medical-gp .btn-gp .common-btn:first-child {
+    margin-right: 2%;
+  }
+}
+
+/*I-pad*/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    padding: 2.3%;
+  }
+
+  .top .sec-company .container,
+  .top .sec-medical-gp .medical-snc .container {
+    padding: 0 0 0 2.3%;
+  }
+
+  .top .sec-message .container {
+    padding: 0 2.3% 0 0;
+  }
+
+  .top .common-top-ttl .top-ttl {
+    font-size: 6.5rem;
+  }
+
+  /* sec-medical-gp */
+
+  .top .sec-medical-gp .medical-snc .img-blk {
+    width: 56.5%;
+  }
+
+  .top .sec-medical-gp .txt-blk {
+    width: 37%;
+  }
+
+  .top .sec-medical-gp .medical-snc .btn-gp .external-btn:first-child {
+    margin-right: 1.5%;
+  }
+
+  .top .sec-news .common-button:hover .arrow::after,
+  .top .sec-news .common-button:active .arrow:after,
+  .top .sec-news .common-button.active .arrow::after {
+    filter: unset;
+  }
+
+
+  .top .sec-news .tab-list .tab-left .common-button.active:hover {
+    background-color: #f5faed;
+    color: #7fbe26;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    border-radius: 5px;
+  }
+
+  .top .sec-news .tab-list .tab-left .common-button:active:hover .arrow:after,
+  .top .sec-news .tab-list .tab-left .common-button.active:hover .arrow:after {
+    background: url('/img/sugi-medical/ico_arrow_white.svg') no-repeat center/cover;
+  }
+
+  .top .sec-news .tab-list .tab-left .common-button:hover {
+    background-color: transparent;
+    color: #000;
+    border-top: 1px solid #e6e6e6;
+    border-radius: unset;
+  }
+
+  .top .sec-news .common-button:active:hover .arrow,
+  .top .sec-news .common-button.active:hover .arrow {
+    background-color: #7fbe26;
+  }
+
+  .top .sec-news .common-button:hover .arrow {
+    background-color: #f5faed;
+  }
+
+  .top .sec-news .common-button:active .arrow:after,
+  .top .sec-news .common-button.active .arrow::after {
+    background: url('/img/sugi-medical/ico_arrow_white.svg') no-repeat center/cover;
+  }
+
+  .top .sec-news .common-button:hover .arrow::after {
+    background: url('/img/sugi-medical/ico_arrow_green.svg') no-repeat center/cover;
+  }
+}
+
+@media only screen and (max-width: 767.9px) {
+
+  .container,
+  .top .sec-company .container,
+  .top .sec-medical-gp .medical-snc .container,
+  .top .sec-message .container {
+    padding: 0 20px;
+  }
+
+  .top .d-flex {
+    flex-wrap: wrap;
+  }
+
+  .top .btn-gp {
+    text-align: center;
+  }
+
+  .top .common-top-ttl {
+    width: 100%;
+  }
+
+  .top .common-top-ttl .top-ttl {
+    line-height: 1.21;
+    font-size: 5rem;
+    letter-spacing: -4px;
+  }
+
+  .top .common-top-ttl span {
+    line-height: 1.1;
+    font-size: 1.5rem;
+    letter-spacing: 1.2px;
+  }
+
+  /* mv-blk */
+  .top .mv-blk {
+    margin-bottom: 88px;
+  }
+
+  .top .mv-blk .mv-slider {
+    padding: 86.6% 0 86.7% 0;
+    background-image: url('/img/sugi-medical/img_mv_bg_01_sp.png');
+  }
+
+  .top .mv-blk .dots {
+    right: 0;
+    bottom: -40px;
+    left: 0;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  /* sec-news */
+  .top .sec-news {
+    margin-bottom: 40px;
+  }
+
+  .top .sec-news .btn {
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  .top .sec-news .tab-list {
+    display: block;
+    margin-top: 20px;
+  }
+
+  .top .sec-news .tab-list .tab-left {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .top .sec-news .tab-list .tab-left ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .top .sec-news .tab-list .tab-left ul li {
+    width: 48.6%;
+    margin-right: 2.7%;
+  }
+
+  .top .sec-news .tab-list .tab-left ul li:nth-child(2n) {
+    margin-right: 0;
+  }
+
+  .top .sec-news .tab-list .tab-left .common-button {
+    padding: 10.5px 48px 10.5px 10px;
+    font-size: 0.875rem;
+    letter-spacing: 1.4px;
+  }
+
+  .top .sec-news .tab-list .tab-left ul li:first-child .common-button,
+  .top .sec-news .tab-list .tab-left ul li:nth-child(2) .common-button {
+    border-top: 1px solid transparent;
+  }
+
+  .top .sec-news .tab-list .tab-left .common-button:hover {
+    background-color: transparent;
+    color: #000;
+    border-top: 1px solid #e6e6e6;
+  }
+
+  .top .sec-news .common-button:hover .arrow {
+    background-color: #f5faed;
+  }
+
+  .top .sec-news .common-button.active:hover .arrow {
+    background-color: #7fbe26;
+  }
+
+  .top .sec-news .tab-list .tab-left .common-button.active:hover {
+    background-color: #f5faed;
+    color: #7fbe26;
+    border-top: 1px solid transparent;
+  }
+
+  .top .sec-news .tab-list .tab-left li:nth-child(5n) .common-button,
+  .top .sec-news .tab-list .tab-left li:last-child .common-button {
+    border-bottom: 0;
+  }
+
+  .top .sec-news .common-button .arrow {
+    top: 10px;
+    right: 10px;
+    transform: translateY(0);
+  }
+
+  .top .sec-news .common-button .arrow::after,
+  .top .sec-news .common-button.active .arrow::after {
+    transform: translateY(-50%) rotate(90deg);
+    filter: unset;
+  }
+
+  .top .sec-news .common-button:hover .arrow::after {
+    filter: invert(40%) sepia(97%) saturate(383%) hue-rotate(39deg) brightness(91%) contrast(100%);
+  }
+
+  .top .sec-news .common-button.active:hover .arrow::after {
+    filter: unset;
+  }
+
+  .top .sec-news .tab-list .tab-right {
+    width: 100%;
+  }
+
+  .new-common .new-common-list a {
+    padding: 21px 0 20px;
+  }
+
+  .new-common .new-common-list .cat-blk {
+    margin-bottom: 6px;
+  }
+
+  .new-common .new-common-list ul li {
+    padding: 0 20px;
+  }
+
+  .top .sec-news .common-button:hover .arrow,
+  .top .sec-news .common-button:active .arrow,
+  .top .sec-news .common-button.active .arrow {
+    right: 10px;
+  }
+
+  /* sec-company */
+  .top .sec-company {
+    margin-bottom: 40px;
+  }
+
+  .top .sec-company .txt-blk,
+  .top .sec-message .txt-blk {
+    width: 100%;
+  }
+
+  .top .sec-company .txt-blk p {
+    margin-bottom: 30px;
+  }
+
+  .top .sec-company .img-blk,
+  .top .sec-message .img-blk {
+    width: 100%;
+  }
+
+  .top .sec-company .img-blk {
+    margin-bottom: 20px;
+  }
+
+  .top .sec-company .img-blk img {
+    border-radius: 5px;
+  }
+
+  .top .sec-company h3.common-medical-ttl {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  /* sec-services */
+  .top .sec-services .services-txt-gp {
+    position: relative;
+    margin-bottom: 134px;
+  }
+
+  .top .sec-services .common-ttl-blk .btn-gp {
+    position: absolute;
+    right: 0;
+    bottom: -94px;
+    left: 0;
+    margin: 0 auto;
+  }
+
+  .top .sec-services .services-blk {
+    width: 100%;
+    padding: 27px 20px 28px;
+  }
+
+  .top .sec-services .services-blk p {
+    margin-bottom: 30px;
+  }
+
+  /* sec-message */
+  .top .sec-message {
+    margin-bottom: 40px;
+    padding: 40px 0;
+    background-size: cover;
+  }
+
+  .top .sec-message .img-blk {
+    margin-bottom: 30px;
+  }
+
+  .top .sec-message p {
+    margin-bottom: 20px;
+  }
+
+  /* sec-medical-gp */
+  .top .sec-medical-gp {
+    margin-bottom: 40px;
+  }
+
+  .top .sec-medical-gp h2 {
+    margin-bottom: 44px;
+    font-size: 1.5rem;
+  }
+
+  .top .sec-medical-gp h2:after {
+    bottom: -20px;
+  }
+
+  .top .sec-medical-gp .txt-blk,
+  .top .sec-medical-gp .medical-snc .img-blk {
+    width: 100%;
+  }
+
+  .top .sec-medical-gp p.support-business-txt {
+    margin: 20px 0 20px;
+    padding: 3.6px 13px;
+  }
+
+  .top .sec-medical-gp .logo {
+    width: 100%;
+    margin-bottom: 20px;
+    max-width: 340px;
+  }
+
+  .top .sec-medical-gp p {
+    margin-bottom: 20px;
+  }
+
+  .top .sec-medical-gp .btn-gp {
+    justify-content: center;
+  }
+
+  /* website-gp */
+
+  .top .sec-medical-gp .website-gp ul {
+    margin-top: 20px;
+    padding-top: 0;
+    border-top: 0;
+  }
+
+  .top .sec-medical-gp .website-gp ul li {
+    width: 100%;
+  }
+
+  .top .sec-medical-gp .website-gp ul li:first-child {
+    margin-bottom: 20px;
+    padding-right: 0;
+    border-right: none;
+  }
+
+  .top .sec-medical-gp .website-gp ul li:last-child {
+    padding-left: 0;
+  }
+
+  .top .sec-medical-gp .website-gp span.txt {
+    margin: 20px 0 20px;
+    padding: 3.6px 12.5px;
+  }
+
+  .top .sec-medical-gp .website-gp p {
+    margin: 20px 0;
+  }
+}

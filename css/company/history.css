@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+/* pc */
+
+/* sec-history */
+
+.sec-history .table tr th {
+	width: 20%;
+	text-align: center;
+}
+
+.sec-history .table tr td {
+	width: 80%;
+}

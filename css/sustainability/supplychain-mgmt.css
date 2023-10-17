@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+.supplychain-mgmt .pdf-btn {
+  display: inline-block;
+  position: relative;
+  padding: 14.4px 92px 14.4px 30px;
+  border: 2px solid #048851;
+  background-color: #fff;
+  color: #048851;
+  font-weight: 700;
+  border-radius: 100px;
+}
+
+.supplychain-mgmt .pdf-btn:hover {
+  background-color: #048851;
+  color: #fff;
+}
+
+.supplychain-mgmt .pdf-btn::after {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 37px;
+  height: 20px;
+  background: url('/img/common/ico_pdf.svg') no-repeat center/cover;
+  content: '';
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .supplychain-mgmt .pdf-btn:hover {
+    background-color: #fff;
+    color: #048851;
+  }
+}
+
+@media only screen and (max-width: 767.9px) {
+  .supplychain-mgmt .btn-gp {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .supplychain-mgmt .pdf-btn {
+    padding: 14.4px 65px 14.4px 20px;
+    text-align: left;
+    letter-spacing: 0.5px;
+  }
+
+  .supplychain-mgmt .pdf-btn::after {
+    top: 16px;
+  }
+
+  .supplychain-mgmt .pdf-btn:hover {
+    background-color: #fff;
+    color: #048851;
+  }
+}

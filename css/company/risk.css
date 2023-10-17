@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+/* sec-compliance */
+.sec-compliance .scope-img {
+	width: 15%;
+	margin-right: 3.5%;
+}
+
+.sec-compliance .scope-img img {
+	max-width: 96px;
+}
+
+.sec-compliance .scope-desc {
+	width: 81%;
+}
+
+@media only screen and (max-width: 767.9px) {
+	.sec-compliance .scope-img {
+		width: 18%;
+		margin-right: 1.5%;
+	}
+
+	.sec-compliance .scope-desc {
+		width: 80%;
+	}
+}

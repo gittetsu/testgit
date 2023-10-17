@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+	<meta name="description" content="">
+	<meta property="og:image" content="/img/common/img_ogp.jpg">
+	<title>News Release｜Sugi Holdings</title>
+	<link rel="shortcut icon" href="/img/common/favicon.ico">
+	<link rel="stylesheet" href="/css/reset.css">
+	<link rel="stylesheet" href="/css/common.css">
+	<link rel="stylesheet" href="/css/news/style.css">
+</head>
+
+<body>
+	<header data-include="/english/include/header.html"></header>
+	<div class="cmn-banner">
+		<div class="inner">
+			<h1>News</h1>
+			<span>News Release</span>
+		</div>
+	</div>
+	<!--/.cmn-banner-->
+	<div class="breadcrumb">
+		<div class="inner">
+			<ul class="breadcrumb-list">
+				<li>
+					<a href="/english/">TOP</a>
+				</li>
+				<li>News Release</li>
+			</ul>
+		</div>
+	</div><!-- /.breadcrumb -->
+	<div class="inner mb-150">
+		<div class="search-panel bg-gray pc mb-60">
+			<form class="search d-flex search-gp" action="#">
+				<div class="w-504 d-flex">
+					<label for="search" class="text-01">Search</label>
+					<div class="search-input">
+						<input class="small-text" type="text" placeholder="Type to search" name="search">
+						<button type="submit" class="search-blk"></button>
+					</div>
+				</div>
+				<div class="w-482 d-flex">
+					<!-- <label class="text-01">Filter by year/month</label>
+					<div class="d-flex select-box-gp">
+						<select class="select-box">
+							<option value="1">year</option>
+						</select>
+						<select class="select-box">
+							<option value="1">month</option>
+						</select>
+					</div> -->
+					<div class="filter-btn">
+						<button type="submit"><span>Search</span></button>
+					</div>
+				</div>
+			</form>
+			<div class="d-flex tab-gp">
+				<p class="text-01">Filter by category</p>
+				<div class="tab-cat-gp">
+					<div class="tab-btn">
+						<a href="javascript:void(0)" class="text-04 active" data-tab-target="#all">All</a>
+					</div>
+					<div class="tab-btn">
+						<a href="javascript:void(0)" class="text-04" data-tab-target="#Management">Management</a>
+					</div>
+					<div class="tab-btn">
+						<a href="javascript:void(0)" class="text-04" data-tab-target="#IR">IR</a>
+					</div>
+					<div class="tab-btn">
+						<a href="javascript:void(0)" class="text-04" data-tab-target="#Group">Group</a>
+					</div>
+					<div class="tab-btn">
+						<a href="javascript:void(0)" class="text-04" data-tab-target="#Sustainability">Sustainability</a>
+					</div>
+					<div class="tab-btn">
+						<a href="javascript:void(0)" class="text-04" data-tab-target="#Event">Event</a>
+					</div>
+					<div class="tab-btn">
+						<a href="javascript:void(0)" class="text-04" data-tab-target="#Other">Other</a>
+					</div>
+				</div>
+			</div>
+		</div><!-- ./search-panel -->
+		<div class="news-search sp mb-60">
+			<div class="accordion close">
+				<h5 class="accordion-ttl"><span class="accordion-text">Article Search</span><span class="arrow-blk"></span>
+				</h5>
+				<div class="accordion-content bg-gray">
+					<div class="search-panel">
+						<form class="search d-flex search-gp" action="#">
+							<div class="w-504 d-flex">
+								<label for="search" class="text-01">keyword</label>
+								<div class="search-input">
+									<input class="small-text" type="text" placeholder="Type to search" name="search">
+									<button type="submit" class="search-blk"></button>
+								</div>
+							</div>
+							<div class="w-482 d-flex">
+								<!-- <label class="text-01">Filter by year/month</label>
+								<div class="d-flex select-box-gp">
+									<select class="select-box">
+										<option value="1">year</option>
+									</select>
+									<select class="select-box">
+										<option value="1">month</option>
+									</select>
+								</div> -->
+								<div class="filter-btn">
+									<button type="submit"><span>search</span></button>
+								</div>
+							</div>
+						</form>
+						<div class="d-flex tab-gp">
+							<p class="text-01">Filter by article category</p>
+							<div class="tab-cat-gp">
+								<div class="tab-btn">
+									<a href="javascript:void(0)" class="text-04 active" data-tab-target="#all">All</a>
+								</div>
+								<div class="tab-btn">
+									<a href="javascript:void(0)" class="text-04" data-tab-target="#Management">Management</a>
+								</div>
+								<div class="tab-btn">
+									<a href="javascript:void(0)" class="text-04" data-tab-target="#IR">IR</a>
+								</div>
+								<div class="tab-btn">
+									<a href="javascript:void(0)" class="text-04" data-tab-target="#Group">Group</a>
+								</div>
+								<div class="tab-btn">
+									<a href="javascript:void(0)" class="text-04" data-tab-target="#Sustainability">Sustainability</a>
+								</div>
+								<div class="tab-btn">
+									<a href="javascript:void(0)" class="text-04" data-tab-target="#Event">Event</a>
+								</div>
+								<div class="tab-btn">
+									<a href="javascript:void(0)" class="text-04" data-tab-target="#Other">Other</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<ul class="newslist-gp mb-60 active" id="all" data-tab-content></ul>
+		<ul class="newslist-gp mb-60" id="Management" data-tab-content></ul>
+		<ul class="newslist-gp mb-60" id="IR" data-tab-content></ul>
+		<ul class="newslist-gp mb-60" id="Group" data-tab-content></ul>
+		<ul class="newslist-gp mb-60" id="Sustainability" data-tab-content></ul>
+		<ul class="newslist-gp mb-60" id="Event" data-tab-content></ul>
+		<ul class="newslist-gp mb-60" id="Other" data-tab-content></ul>
+		<ul class="cmn-pagination">
+			<li class="cmn-pager cmn-pager-first"><a href="#"><img src="/img/common/ico_first_pagination.svg" alt=""></a>
+			</li>
+			<li class="cmn-pager cmn-pager-prev"><a href="#"><img src="/img/common/ico_prev_pagination.svg" alt=""></a></li>
+			<!-- <li class="cmn-pager-num"><a href="#" class="active">5</a></li>
+			<li class="pc cmn-pager-num"><a href="#">6</a></li>
+			<li class="pc cmn-pager-num"><a href="#">7</a></li>
+			<li class="pc cmn-pager-num"><a href="#">8</a></li>
+			<li class="pc cmn-pager-num"><a href="#">9</a></li>
+			<li class="pc cmn-pager-num"><a href="#">10</a></li> -->
+			<li class="cmn-pager cmn-pager-next"><a href="#"><img src="/img/common/ico_next_pagination.svg" alt=""></a></li>
+			<li class="cmn-pager cmn-pager-last"><a href="#"><img src="/img/common/ico_last_pagination.svg" alt=""></a></li>
+		</ul>
+	</div>
+	<footer data-include="/english/include/footer.html"></footer>
+	<script src="/js/load.js"></script>
+	<script src="/js/common.js"></script>
+	<script src="/js/news/app.js"></script>
+	<script src="/js/english/news/drupal.js"></script>	
+</body>
+
+</html>

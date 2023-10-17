@@ -1,0 +1,738 @@
+@charset "UTF-8";
+
+/* sec-medical-bnr */
+.sec-medical-bnr {
+  margin-bottom: 80px;
+  padding: 95px 0;
+  background: url('/img/common/sugi-medical/img_banner_bg.png')no-repeat right/cover;
+}
+
+.sec-medical-bnr .inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sec-medical-bnr .main-header-ttl {
+  position: relative;
+  z-index: 1;
+  padding-left: 22px;
+  color: #fff;
+  font-size: 1.875rem;
+}
+
+.sec-medical-bnr .main-header-ttl::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  background-color: #fff;
+  content: "";
+  transform: translateY(-50%);
+  border-radius: 100%;
+}
+
+.sec-medical-bnr .main-header-ttl span {
+  position: absolute;
+  top: -33px;
+  left: 0;
+  z-index: -1;
+  line-height: 1;
+  color: #89c733;
+  font-family: 'Niconne';
+  font-size: 7.5rem;
+  font-weight: 400;
+  letter-spacing: -6px;
+}
+
+.sec-medical-bnr .medical-breadcrumb {
+  display: flex;
+}
+
+.sec-medical-bnr .medical-breadcrumb li {
+  font-size: 0.875rem;
+}
+
+.sec-medical-bnr .medical-breadcrumb li:last-child {
+  color: #fff;
+  font-weight: 700;
+}
+
+.sec-medical-bnr .medical-breadcrumb li+li {
+  position: relative;
+  margin-left: 20px;
+  padding-left: 20px;
+}
+
+.sec-medical-bnr .medical-breadcrumb li+li::before {
+  position: absolute;
+  top: 11px;
+  left: -5px;
+  width: 6px;
+  height: 6px;
+  content: '';
+  transform: rotate(-45deg);
+  border-bottom: 1px solid #fff;
+  border-right: 1px solid #fff;
+}
+
+.sec-medical-bnr .medical-breadcrumb li a {
+  color: #fff;
+  font-weight: 400;
+}
+
+.sec-medical-bnr .medical-breadcrumb li:last-child a {
+  font-weight: 700;
+}
+
+.sugi-medical-header .header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95.2%;
+  margin: 0 auto;
+  padding: 25px 0 34px;
+  max-width: 1287px;
+}
+
+.sugi-medical-header .header-logo img {
+  max-width: 189px;
+}
+
+.sugi-medical-header .nav-menu {
+  width: 50%;
+}
+
+.sugi-medical-header .nav-menu-list {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.sugi-medical-header .nav-menu-list li {
+  margin-right: 25px;
+}
+
+.sugi-medical-header .nav-menu-list .contact {
+  margin-right: 0;
+  padding-left: 25px;
+  border-left: 1px solid #e6e6e6;
+}
+
+.sugi-medical-header .nav-menu-list li a {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.sugi-medical-header .nav-menu-list .contact a {
+  position: relative;
+  padding-left: 24px;
+  color: #048851;
+}
+
+.sugi-medical-header .nav-menu-list .contact a::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 18px;
+  height: 12px;
+  background: url('/img/common/sugi-medical/ico_email.svg')no-repeat center/contain;
+  content: "";
+  transform: translateY(-50%);
+}
+
+.sugi-medical-header .nav-menu-list li a:hover,
+.sugi-medical-header .nav-menu-list li a.visible {
+  color: #7fbe26;
+  transition: all .2s;
+}
+
+.sugi-medical-header .nav-menu-list .contact a:hover::before,
+.sugi-medical-header .nav-menu-list .contact a.visible::before {
+  transition: all .2s;
+  filter: invert(60%) sepia(87%) saturate(410%) hue-rotate(43deg) brightness(100%) contrast(82%);
+}
+
+/* common-btn */
+
+.common-btn {
+  display: inline-block;
+  position: relative;
+  padding: 16px 57px 16px 20px;
+  border: 2px solid transparent;
+  box-shadow: inset 0px 3px 6px #00000029;
+  background: transparent linear-gradient(66deg, #048851 0%, #7fbe26 100%) 0% 0% no-repeat padding-box;
+  color: #fff;
+  font-weight: 700;
+  text-align: left;
+  letter-spacing: 1.6px;
+  border-radius: 5px;
+}
+
+.common-btn:hover {
+  border: 2px solid #048851;
+  box-shadow: none;
+  background: none;
+  background-color: #fff;
+  color: #048851;
+}
+
+.common-btn:hover:after {
+  filter: invert(80%) sepia(98%) saturate(6150%) hue-rotate(152deg) brightness(95%) contrast(97%);
+}
+
+.common-btn:after {
+  position: absolute;
+  top: 26px;
+  right: 20px;
+  width: 12px;
+  height: 12px;
+  background: url('/img/sugi-medical/ico_arrow_right.svg') no-repeat center/cover;
+  content: '';
+  transform: rotate(0deg);
+  border-radius: unset;
+}
+
+h3.common-medical-ttl {
+  line-height: 1.5;
+  padding: 0 0 0 20px;
+  color: #000;
+  font-weight: 700;
+  letter-spacing: 2.2px;
+  border-bottom: none;
+  border-left: 3px solid #7FBE26;
+}
+
+.external-btn {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  padding: 16px 38px 16px 20px;
+  border: 2px solid transparent;
+  box-shadow: inset 0px 3px 6px #00000029;
+  background: transparent linear-gradient(66deg, #048851 0%, #7fbe26 100%) 0% 0% no-repeat padding-box;
+  color: #fff;
+  font-weight: 700;
+  text-align: left;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  max-width: 169px;
+}
+
+.external-btn:hover {
+  border: 2px solid #048851;
+  box-shadow: none;
+  background: none;
+  background-color: #fff;
+  color: #048851;
+}
+
+.external-btn:after {
+  position: absolute;
+  top: 26px;
+  right: 20px;
+  width: 100%;
+  height: 14px;
+  background: url('/img/sugi-medical/ico_external_link.svg') no-repeat center/cover;
+  content: '';
+  max-width: 14px;
+}
+
+.external-btn:hover:after {
+  filter: invert(80%) sepia(98%) saturate(6150%) hue-rotate(152deg) brightness(95%) contrast(97%);
+}
+
+/* ft-contact-blk */
+.sec-medical-contact .contact-ttl-blk {
+  padding: 18px 20px;
+  background-color: #5d5555;
+  color: #fff;
+  font-size: 1.375rem;
+  text-align: center;
+}
+
+.sec-medical-contact .ft-contact {
+  padding: 80px 0;
+  text-align: center;
+}
+
+.sec-medical-contact .ft-contact .contact-border {
+  position: relative;
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+}
+
+.sec-medical-contact .ft-contact .contact-border::after {
+  position: absolute;
+  right: 50%;
+  bottom: 0;
+  width: 24px;
+  height: 1px;
+  background-color: #7fbe26;
+  content: "";
+  transform: translateX(50%);
+}
+
+.sec-medical-contact .ft-contact .mail-icon {
+  margin-bottom: 16px;
+}
+
+.sec-medical-contact .ft-contact .mail-icon img {
+  max-width: 48px;
+}
+
+.sec-medical-contact .ft-contact .email-us-btn {
+  display: inline-block;
+  position: relative;
+  padding: 15px 52px 15px 30px;
+  border: 2px solid #7fbe26;
+  background-color: #fff;
+  color: #7fbe26;
+  font-weight: 700;
+  border-radius: 100px;
+}
+
+.sec-medical-contact .ft-contact .email-us-btn:hover {
+  background-color: #7fbe26;
+  color: #fff;
+  transition: all .2s;
+}
+
+.sec-medical-contact .ft-contact .email-us-btn::after {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  width: 12px;
+  height: 12px;
+  background: url('/img/common/sugi-medical/ico_arrow_right.svg')no-repeat center/contain;
+  content: "";
+  transform: translateY(-50%);
+}
+
+.sec-medical-contact .ft-contact .email-us-btn:hover::after {
+  filter: invert(50%) sepia(200%) saturate(0) hue-rotate(0) brightness(180%) contrast(180%);
+}
+
+/* footer */
+footer.ft-medical .ft-nav {
+  background-color: #7fbe26;
+}
+
+.ft-medical .ft-blk .lt-ft-blk .nav-list li a:hover,
+.ft-medical .ft-blk .lt-ft-blk .nav-list li a.visible {
+  color: #7fbe26;
+  transition: all .2s;
+}
+
+.ft-medical .ft-blk .lt-ft-blk .sub-nav-list li a:hover {
+  color: #7fbe26;
+  border-bottom: 1px solid #7fbe26;
+}
+
+footer.ft-medical .ft-blk .sugi-medical-img {
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+footer.ft-medical .ft-blk .sugi-medical-img img {
+  max-width: 189px;
+}
+
+footer.ft-medical .ft-blk .sub-nav-list .sugi-holding-link {
+  position: relative;
+  padding-right: 26px;
+}
+
+footer.ft-medical .ft-blk .sub-nav-list .sugi-holding-link::after {
+  position: absolute;
+  top: 50%;
+  right: 6px;
+  width: 14px;
+  height: 14px;
+  background: url('/img/common/sugi-medical/ico_external.svg')no-repeat center/contain;
+  content: "";
+  transform: translateY(-50%);
+  filter: invert(56%) sepia(83%) saturate(378%) hue-rotate(43deg) brightness(99%) contrast(97%);
+}
+
+footer.ft-medical .page-top:hover {
+  background-color: #7fbe26;
+}
+
+footer.ft-medical .page-top img {
+  filter: invert(0%) sepia(98%) saturate(0%) hue-rotate(49deg) brightness(0%) contrast(101%);
+}
+
+footer.ft-medical .page-top:hover img {
+  filter: invert(50%) sepia(200%) saturate(0) hue-rotate(0) brightness(180%) contrast(180%);
+}
+
+/*I-pad*/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .sugi-medical-header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 99;
+    background-color: #fff;
+  }
+
+  .sugi-medical-header .header-inner {
+    width: 100%;
+    padding: 10px 10px 10px 20px;
+    max-width: 100%;
+  }
+
+  .sugi-medical-header .nav-menu {
+    position: absolute;
+    top: 74px;
+    right: 0;
+    left: 0;
+    z-index: 5;
+    width: 100%;
+    background-color: rgba(127, 190, 38, 0.95);
+  }
+
+  .sugi-medical-header .nav-menu-list {
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100vh;
+    padding-bottom: 300px;
+    overflow-y: scroll;
+  }
+
+  .sugi-medical-header .nav-menu-list li {
+    margin-right: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.30);
+  }
+
+  .sugi-medical-header .nav-menu-list li:last-child {
+    border-bottom: none;
+  }
+
+  .sugi-medical-header .nav-menu-list .contact {
+    padding-left: 0;
+    border-left: none;
+  }
+
+  .sugi-medical-header .nav-menu-list li a {
+    padding: 25px 20px;
+    color: #fff;
+  }
+
+  .sugi-medical-header .nav-menu-list>li>a {
+    position: relative;
+  }
+
+  .sugi-medical-header .nav-menu-list>li>a::after {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+    background: url('/img/common/sugi-medical/ico_nav_link_arr.png')no-repeat center/contain;
+    content: "";
+    transform: translateY(-50%);
+  }
+
+  .sugi-medical-header .nav-menu-list .contact a {
+    padding-left: 20px;
+    color: #fff;
+  }
+
+  .sugi-medical-header .nav-menu-list .contact a::before {
+    content: none;
+  }
+
+  .sugi-medical-header .nav-menu-list .contact a:hover::after {
+    filter: none;
+  }
+
+  .sugi-medical-header .nav-menu-list li a:hover,
+  .sugi-medical-header .nav-menu-list li a.visible {
+    color: #fff;
+  }
+
+  .sugi-medical-header .nav-menu .sugi-holding-link {
+    position: relative;
+  }
+
+  .sugi-medical-header .nav-menu .sugi-holding-link::after {
+    position: absolute;
+    top: 50%;
+    right: 23px;
+    width: 14px;
+    height: 14px;
+    background: url('/img/common/sugi-medical/ico_external.svg')no-repeat center/contain;
+    content: "";
+    transform: translateY(-50%);
+  }
+
+  .sugi-medical-header .nav-menu-list .nav-footer-list {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+
+  .sugi-medical-header .nav-menu-list .nav-footer-list li a {
+    font-weight: 400;
+  }
+
+  .common-btn:hover,
+  .external-btn:hover {
+    border: 2px solid transparent;
+    box-shadow: inset 0px 3px 6px #00000029;
+    background: transparent linear-gradient(66deg, #048851 0%, #7fbe26 100%) 0% 0% no-repeat;
+    color: #fff;
+  }
+
+  .common-btn:hover:after,
+  .external-btn:hover:after {
+    filter: unset;
+  }
+
+  .external-btn {
+    padding: 16px 30px 16px 20px;
+    letter-spacing: 0;
+  }
+
+  .external-btn:after {
+    top: 26px;
+    right: 15px;
+  }
+
+  .sec-medical-contact .ft-contact .email-us-btn:hover {
+    background-color: #fff;
+    color: #7fbe26;
+  }
+
+  .sec-medical-contact .ft-contact .email-us-btn:hover::after {
+    filter: none;
+  }
+
+  footer.ft-medical .page-top:hover {
+    background-color: #fff;
+  }
+
+  footer.ft-medical .page-top:hover img {
+    filter: invert(0%) sepia(98%) saturate(0%) hue-rotate(49deg) brightness(0%) contrast(101%);
+  }
+}
+
+@media only screen and (max-width: 767.9px) {
+
+  h3.common-ttl {
+    font-size: 1.25rem;
+  }
+
+  h3.common-medical-ttl {
+    font-size: 1.25rem;
+    letter-spacing: 2px;
+  }
+
+  .sugi-medical-header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 99;
+    background-color: #fff;
+  }
+
+  /* sec-medical-bnr */
+  .sec-medical-bnr {
+    margin-bottom: 40px;
+    padding: 26.2px 0;
+  }
+
+  .sec-medical-bnr .inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .sec-medical-bnr .main-header-ttl {
+    margin-bottom: 18px;
+    font-size: 1.5rem;
+  }
+
+  .sec-medical-bnr .main-header-ttl span {
+    top: -25px;
+    font-size: 5rem;
+  }
+
+  .sec-medical-bnr::after {
+    width: 191px;
+    height: 135px;
+  }
+
+  .sec-medical-bnr .medical-breadcrumb li+li::before {
+    top: 8px;
+  }
+
+  .sugi-medical-header .header-logo img {
+    max-width: 137px;
+  }
+
+  .sugi-medical-header .header-inner {
+    width: 100%;
+    padding: 10px 10px 10px 20px;
+    max-width: 100%;
+  }
+
+  .sugi-medical-header .nav-menu {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    left: 0;
+    z-index: 5;
+    width: 100%;
+    background-color: rgba(127, 190, 38, 0.95);
+  }
+
+  .sugi-medical-header .nav-menu-list {
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100vh;
+    padding-bottom: 300px;
+    overflow-y: scroll;
+  }
+
+  .sugi-medical-header .nav-menu-list li {
+    margin-right: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.30);
+  }
+
+  .sugi-medical-header .nav-menu-list li:last-child {
+    border-bottom: none;
+  }
+
+  .sugi-medical-header .nav-menu-list .contact {
+    padding-left: 0;
+    border-left: none;
+  }
+
+  .sugi-medical-header .nav-menu-list li a {
+    padding: 25px 20px;
+    color: #fff;
+  }
+
+  .sugi-medical-header .nav-menu-list>li>a {
+    position: relative;
+  }
+
+  .sugi-medical-header .nav-menu-list>li>a::after {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+    background: url('/img/common/sugi-medical/ico_nav_link_arr.png')no-repeat center/contain;
+    content: "";
+    transform: translateY(-50%);
+  }
+
+  .sugi-medical-header .nav-menu-list .contact a {
+    padding-left: 20px;
+    color: #fff;
+  }
+
+  .sugi-medical-header .nav-menu-list .contact a::before {
+    content: none;
+  }
+
+  .sugi-medical-header .nav-menu-list .contact a:hover::after {
+    filter: none;
+  }
+
+  .sugi-medical-header .nav-menu-list li a:hover,
+  .sugi-medical-header .nav-menu-list li a.visible {
+    color: #fff;
+  }
+
+  .sugi-medical-header .nav-menu .sugi-holding-link {
+    position: relative;
+  }
+
+  .sugi-medical-header .nav-menu .sugi-holding-link::after {
+    position: absolute;
+    top: 50%;
+    right: 23px;
+    width: 14px;
+    height: 14px;
+    background: url('/img/common/sugi-medical/ico_external.svg')no-repeat center/contain;
+    content: "";
+    transform: translateY(-50%);
+  }
+
+  .sugi-medical-header .nav-menu-list .nav-footer-list {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+
+  .sugi-medical-header .nav-menu-list .nav-footer-list li a {
+    font-weight: 400;
+  }
+
+  /* common-btn */
+
+  .common-btn {
+    padding: 17px 59px 17px 20px;
+    font-size: 1rem;
+    letter-spacing: 1.4px;
+  }
+
+  .common-btn:hover,
+  .external-btn:hover {
+    border: 2px solid transparent;
+    box-shadow: inset 0px 3px 6px #00000029;
+    background: transparent linear-gradient(66deg, #048851 0%, #7fbe26 100%) 0% 0% no-repeat;
+    color: #fff;
+  }
+
+  .common-btn:hover:after,
+  .external-btn:hover:after {
+    filter: unset;
+  }
+
+  .external-btn {
+    font-size: 1rem;
+    max-width: 162px;
+  }
+
+  .external-btn:after {
+    top: 21px;
+  }
+
+  /* ft-contact-blk */
+  .sec-medical-contact .ft-contact {
+    padding: 40px 0;
+  }
+
+  .sec-medical-contact .ft-contact .contact-border {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+  }
+
+  .sec-medical-contact .ft-contact .contact-border .small-text {
+    font-size: 0.875rem;
+  }
+
+  .sec-medical-contact .ft-contact .email-us-btn {
+    padding: 17px 51px 17px 30px;
+    font-size: 1rem;
+  }
+
+  .sec-medical-contact .ft-contact .email-us-btn:hover {
+    background-color: #fff;
+    color: #7fbe26;
+  }
+
+  .sec-medical-contact .ft-contact .email-us-btn:hover::after {
+    filter: none;
+  }
+
+  footer.ft-medical .page-top:hover {
+    background-color: #fff;
+  }
+
+  footer.ft-medical .page-top:hover img {
+    filter: invert(0%) sepia(98%) saturate(0%) hue-rotate(49deg) brightness(0%) contrast(101%);
+  }
+}

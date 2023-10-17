@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+/* pc */
+
+/* sec-monthly-report */
+
+.sec-monthly-report .report-gp {
+	padding-bottom: 30px;
+}
+
+.sec-monthly-report .report-gp.b-border {
+	border-bottom: solid 1px #a09fa0;
+}
+
+.sec-monthly-report table tr .center-position {
+	text-align: center;
+}
+
+.sec-monthly-report .pdf-img img {
+	max-width: 25px;
+	width: 100%;
+}
+
+.sec-monthly-report .text-right {
+	text-align: right;
+}

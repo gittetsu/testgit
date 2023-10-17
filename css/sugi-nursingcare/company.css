@@ -1,0 +1,155 @@
+@charset "UTF-8";
+
+.nursing-care-wrapper::after {
+  top: -4%;
+  left: 7%;
+}
+
+.sec-nursecare-company {
+  padding-bottom: 60px;
+}
+
+.sec-nursecare-company .company-txt {
+  line-height: 1.6;
+  color: #292726;
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+.greeting-sec .company-desc {
+  color: #292726;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.64px;
+}
+
+.sec-nursecare-company .philosophy-sec {
+  text-align: center;
+}
+
+.profile-sec h3.profile-ttl {
+  padding-bottom: 15px;
+  font-size: 1.75rem;
+  font-weight: 700;
+  border-bottom: 1px solid #dedac8;
+}
+
+.profile-sec .table::-webkit-scrollbar-thumb {
+  background-color: #e6172c;
+}
+
+.profile-sec .table tr .row {
+  background-color: #fff0f1;
+  border-left-color: transparent;
+  min-width: 197px;
+}
+
+.profile-sec .table tr td {
+  border-color: #dedac8;
+}
+
+.profile-sec .table tr td,
+.profile-sec .table tr th {
+  font-family: 'Zen Maru Gothic', sans-serif;
+  font-size: 1rem;
+}
+
+.profile-sec .table tr td:last-child {
+  background-color: #fff;
+  font-weight: 400;
+  border-right-color: transparent;
+}
+
+.profile-sec .table tr td .info {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.profile-sec .table tr td .info li {
+  margin-right: 20px;
+}
+
+.profile-sec .url-link {
+  color: #e6172c;
+  text-decoration: underline;
+}
+
+.profile-sec .btn-list {
+  display: flex;
+  justify-content: center;
+}
+
+.profile-sec .btn-list .common-nursing-button {
+  width: 240px;
+  padding: 18px 77px 18px 32px;
+  text-align: right;
+}
+
+.profile-sec .btn-list .common-nursing-button .arrow {
+  right: 53px;
+}
+
+.profile-sec .btn-list .common-nursing-button:first-child {
+  margin-right: 40px;
+}
+
+/* SP */
+@media only screen and (max-width: 767.9px) {
+
+  .nursing-care-wrapper::after {
+    top: 0;
+    left: 0;
+    height: 800px;
+  }
+
+  .sec-nursecare-company {
+    padding-top: 20px;
+    padding-bottom: 0;
+  }
+
+  .greeting-sec h3.common-nursing-subttl {
+    font-size: 2rem;
+  }
+
+  .sec-nursecare-company .company-txt {
+    font-size: 1.125rem;
+  }
+
+  .cmp-bottom-ttl {
+    padding: 0 20px;
+  }
+
+  .profile-sec h3.profile-ttl {
+    font-size: 1.625rem;
+  }
+
+  .profile-sec .table tr .row {
+    min-width: 100px;
+  }
+
+  .profile-sec .table tr td,
+  .profile-sec .table tr th {
+    padding: 15px 10px;
+  }
+
+  .profile-sec .table tr td .info {
+    width: 100%;
+  }
+
+  .profile-sec .btn-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-sec .btn-list .common-nursing-button:first-child {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .profile-sec .btn-list .common-nursing-button {
+    width: 240px;
+  }
+
+}

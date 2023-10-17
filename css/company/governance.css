@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+.governance .sec-governance {
+  margin-bottom: 110px;
+}
+
+.governance .sec-governance .pdf {
+  padding-right: 47px;
+  font-size: 0.875rem;
+}
+
+.governance .sec-governance .pdf::after {
+  right: 0;
+  bottom: -9px;
+  border-radius: 3px;
+}
+
+@media only screen and (max-width: 767.9px) {
+
+  .governance .sec-governance .pdf {
+    padding-right: 33px;
+    font-size: 0.625rem;
+  }
+
+  .governance .sec-governance .pdf::after {
+    bottom: -8px;
+    width: 27px;
+    height: 15px;
+  }
+}

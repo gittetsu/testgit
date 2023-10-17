@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+/* news-article */
+.news-article .sec-article {
+  margin-bottom: 100px;
+}
+
+.news-article .news-date {
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+}
+
+.news-article .news-date p {
+  margin-right: 20px;
+}
+
+.news-article .news-date span {
+  color: #7fbe26;
+}
+
+.news-article .ref-link a {
+  padding-right: 22px;
+  color: #7fbe26;
+}
+
+.news-article .ref-link a::after {
+  top: 12px;
+  width: 12px;
+  height: 12px;
+  background: url('/img/sugi-medical/ico_external.svg') no-repeat center/cover;
+}
+
+.news-article .btn {
+  text-align: center;
+}
+
+.news-article .contact-us {
+  padding: 18px;
+  background-color: #5d5555;
+}
+
+.news-article .contact-us p {
+  line-height: 1.4;
+  color: #fff;
+  font-size: 1.375rem;
+  text-align: center;
+}
+
+@media only screen and (max-width: 767.9px) {
+  .news-article .ref-link a::after {
+    top: 7px;
+  }
+}
