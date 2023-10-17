@@ -23,17 +23,10 @@
   letter-spacing: 0.09rem;
 }
 
-.sec-recruit .list-gp .list-gp-detail .btn {
-  max-width: 330px;
-}
-
 .sec-recruit .medical-gp .list-gp-detail .btn {
   max-width: 312px;
 }
 
-.sec-recruit .list-gp .list-gp-detail .btn a {
-  width: 100%;
-}
 
 .sec-recruit .list-gp .list-gp-detail dl dt,
 .sec-recruit .list-gp .list-gp-detail dl dd {
@@ -86,8 +79,7 @@
   }
 
   .sec-recruit .list-gp .list-gp-detail .btn {
-    margin: 0 auto;
-    max-width: 266px;
+   text-align: center;
   }
 
   .sec-recruit .list-gp .list-gp-detail dl dt,

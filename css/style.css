@@ -397,9 +397,9 @@
 .top .sec-vision ul .common-button {
   display: flex;
   justify-content: space-between;
-  width: auto;
+  width: 100%;
   line-height: 1.9;
-  padding: 20px;
+  padding: 23px 45px 22px 27px;
   border: none;
   border-radius: 5px;
 }

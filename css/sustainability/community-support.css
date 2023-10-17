@@ -10,6 +10,7 @@
 
 .sec-home-visit .result-box {
   display: flex;
+  word-break: break-word;
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: space-around;
