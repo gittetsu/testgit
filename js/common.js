@@ -294,6 +294,7 @@ window.addEventListener('load', function () {
     var dropdowns = document.querySelectorAll('.dropdown .dropdown-list');
     dropdowns.forEach(function (toggle) {
         var dropdownMenu = toggle.nextElementSibling
+        var dropdownLink = dropdownMenu.getElementsByTagName("a")
         const query = window.matchMedia('(max-width: 1024px)')
         toggle.addEventListener('click', function (e) {
             var hrefValue = toggle.href;
@@ -309,11 +310,30 @@ window.addEventListener('load', function () {
                 dropDownMenuFunc(toggle)
             })
 
+            toggle.addEventListener('keyup', function (e) {
+                dropDownMenuFunc(toggle)
+            })
+            dropdownMenu.addEventListener('keyup', function (e) {
+                dropDownMenuFunc(toggle)
+            })
+
             toggle.addEventListener('mouseleave', function (event) {
                 closeAllDropdowns()
             })
             dropdownMenu.addEventListener('mouseleave', function (event) {
                 closeAllDropdowns()
+            })
+            toggle.addEventListener('focusout', function (event) {
+                closeAllDropdowns();
+            });
+            Array.from(dropdownLink).forEach(function (link) {
+                link.addEventListener('focusout', function (event) {
+                    const focusedElement = event.target.id;
+                    if (focusedElement == "medical") {
+                        closeAllDropdowns();
+
+                    }
+                })
             })
         } else {
             var arrow = toggle.querySelector(".arrow-blk")

@@ -619,7 +619,7 @@ h6.common-sub-ttl {
 }
 
 .sugi-holding-header .nav-menu-list li.dropdown a:hover,
-.sugi-holding-header .nav-menu-list li.dropdown a.visible {
+.sugi-holding-header .nav-menu-list li.dropdown a.visible,.sugi-holding-header .nav-menu-list li.dropdown a:focus {
   color: #048851;
 }
 
@@ -2887,7 +2887,8 @@ footer .page-top:hover img {
   }
 
   .sugi-holding-header .nav-menu-list li.dropdown a:hover,
-  .sugi-holding-header .nav-menu-list li.dropdown a.visible {
+  .sugi-holding-header .nav-menu-list li.dropdown a.visible,
+  .sugi-holding-header .nav-menu-list li.dropdown a:focus {
     color: #fff;
   }
 
@@ -3805,7 +3806,8 @@ footer .page-top:hover img {
   }
 
   .sugi-holding-header .nav-menu-list li.dropdown a:hover,
-  .sugi-holding-header .nav-menu-list li.dropdown a.visible {
+  .sugi-holding-header .nav-menu-list li.dropdown a.visible,
+  .sugi-holding-header .nav-menu-list li.dropdown a:focus {
     color: #fff;
   }
 
