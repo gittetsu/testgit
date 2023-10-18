@@ -250,7 +250,7 @@
 
 .store-area .d-flex {
   position: relative;
-  align-items: flex-end;
+  align-items: center;
   z-index: 0;
   color: #fff;
 }
