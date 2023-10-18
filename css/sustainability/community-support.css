@@ -98,6 +98,10 @@
     margin-bottom: 0;
   }
 
+  .com-support .img-list-gp li:last-child {
+    width: 100%;
+  }
+
   .sec-home-visit .img-list-gp li:first-child {
     margin-bottom: 4.478%;
   }
