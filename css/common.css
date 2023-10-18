@@ -1117,12 +1117,14 @@ h6.common-sub-ttl {
   margin-bottom: 0;
 }
 
-.accordion-ttl:hover .arrow-blk {
+.accordion-ttl:hover .arrow-blk,
+.accordion-ttl:focus .arrow-blk {
   border: 1px solid #048851;
   background-color: #fff;
 }
 
-.accordion-ttl:hover .arrow-blk::before {
+.accordion-ttl:hover .arrow-blk::before,
+ .accordion-ttl:focus .arrow-blk::before {
   filter: invert(65%) sepia(18%) saturate(2496%) hue-rotate(109deg) brightness(93%) contrast(97%);
 }
 
@@ -3263,11 +3265,13 @@ footer .page-top:hover img {
     filter: unset;
   }
 
-  .accordion-ttl:hover .arrow-blk {
+  .accordion-ttl:hover .arrow-blk,
+  .accordion-ttl:focus .arrow-blk  {
     background-color: #048851;
   }
 
-  .accordion-ttl:hover .arrow-blk::before {
+  .accordion-ttl:hover .arrow-blk::before,
+   .accordion-ttl:focus .arrow-blk::before {
     filter: unset;
   }
 
@@ -4151,12 +4155,14 @@ footer .page-top:hover img {
     margin-bottom: 10px;
   }
 
-  .accordion-ttl:hover .arrow-blk {
+  .accordion-ttl:hover .arrow-blk,
+  .accordion-ttl:focus .arrow-blk  {
     border: 1px solid #048851;
     background-color: #048851;
   }
 
-  .accordion-ttl:hover .arrow-blk::before {
+  .accordion-ttl:hover .arrow-blk::before,
+  .accordion-ttl:focus .arrow-blk::before {
     filter: unset;
   }
 

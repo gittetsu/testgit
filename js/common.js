@@ -10,6 +10,9 @@ window.addEventListener('load', function () {
                 : item.querySelector('.sidebar-ttl')
         const mediaQuery = window.matchMedia('(max-width: 1024px)')
         var content = item.querySelector('.accordion-content')
+        // Add tabindex and aria-expanded attributes to the header
+        header.setAttribute('tabindex', '0');
+        header.setAttribute('aria-expanded', 'false');
         if (content) {
             header.addEventListener('click', () => {
                 if (!item.classList.contains('open')) {
@@ -66,6 +69,9 @@ window.addEventListener('load', function () {
                     content.style.height = '0'
                     content.style.opacity = '0'
                 }
+                // Toggle the aria-expanded attribute when clicking
+                const expanded = !item.classList.contains('open');
+                header.setAttribute('aria-expanded', expanded);
             })
             if (!mediaQuery.matches) {
                 if (content) {
@@ -106,6 +112,25 @@ window.addEventListener('load', function () {
                     }
                 }
             }
+            // Add keyboard event handling
+            header.addEventListener('keydown', (event) => {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    // Handle Enter or Space key press (you can trigger a click event here)
+                    header.click();
+                } else if (event.key === 'Tab' && event.shiftKey) {
+                    // Handle Shift + Tab to navigate backward
+                    if (item > 0) {
+                        event.preventDefault();
+                        accordionItem[item - 1].querySelector('.accordion-ttl').focus();
+                    }
+                } else if (event.key === 'Tab' && !event.shiftKey) {
+                    // Handle Tab to navigate forward
+                    if (item < accordionItem.length - 1) {
+                        event.preventDefault();
+                        accordionItem[item + 1].querySelector('.accordion-ttl').focus();
+                    }
+                }
+            });
         }
     })
 
