@@ -10,6 +10,7 @@
 
 .sec-home-visit .result-box {
   display: flex;
+  word-break: break-word;
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: space-around;
@@ -95,6 +96,10 @@
 
   .com-support .img-list-gp li:nth-last-child(-n+2) {
     margin-bottom: 0;
+  }
+
+  .com-support .img-list-gp li:last-child {
+    width: 100%;
   }
 
   .sec-home-visit .img-list-gp li:first-child {

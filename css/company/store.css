@@ -3,7 +3,7 @@
 .area-blk {
   display: flex;
   justify-content: space-between;
-  width: 500px;
+  width: 517px;
 }
 
 .area-blk .area-list {
@@ -14,7 +14,8 @@
 .area-blk .area-list li {
   display: flex;
   align-items: center;
-  margin-right: 28px;
+  width: 48%;
+  margin-right: 13px;
 }
 
 .area-blk .area-list li:nth-child(2n) {
@@ -56,7 +57,7 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  width: 462px;
+  width: 457px;
 }
 
 .group-total .stock-icon {
@@ -79,6 +80,12 @@
 
 .group-total .fsize-55 {
   font-size: 3.438rem;
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .area-blk {
+    width: 650px;
+  }
+
 }
 
 @media only screen and (max-width: 767.9px) {

@@ -1128,6 +1128,7 @@ h6.common-sub-ttl {
 
 .accordion-ttl {
   display: flex;
+  word-break: break-all;
   position: relative;
   justify-content: space-between;
   align-items: flex-start;
@@ -1520,8 +1521,12 @@ h6.common-sub-ttl {
 }
 
 /*common-table*/
+.table{
+  overflow: auto;
+}
 .table table {
   width: 100%;
+  margin-bottom: 15px;
   text-align: left;
   -webkit-text-size-adjust: 100%;
   border-collapse: collapse;
@@ -3934,7 +3939,8 @@ footer .page-top:hover img {
 
   .sidebar-bnr-sp .sb-bnr-arrow {
     position: relative;
-    width: 20px;
+    max-width: 20px;
+    width: 100%;
     height: 20px;
     background-color: #048851;
     border-radius: 3px;
