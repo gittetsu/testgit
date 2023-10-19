@@ -3,6 +3,7 @@
 window.addEventListener('load', function () {
     /*accordion*/
     var accordionItem = document.querySelectorAll('.accordion')
+
     accordionItem.forEach((item) => {
         var header =
             item.querySelector('.accordion-ttl') != null
@@ -10,9 +11,11 @@ window.addEventListener('load', function () {
                 : item.querySelector('.sidebar-ttl')
         const mediaQuery = window.matchMedia('(max-width: 1024px)')
         var content = item.querySelector('.accordion-content')
-        // Add tabindex and aria-expanded attributes to the header
-        header.setAttribute('tabindex', '0');
-        header.setAttribute('aria-expanded', 'false');
+        var sidebarttl = item.querySelector(".sidebar-ttl-link");
+        if (header.classList.contains('accordion-ttl')) {
+            header.setAttribute('tabindex', '0');
+            header.setAttribute('aria-expanded', 'false');
+        }
         if (content) {
             header.addEventListener('click', () => {
                 if (!item.classList.contains('open')) {
@@ -54,7 +57,7 @@ window.addEventListener('load', function () {
                             content.style.padding = '0px';
                             content.style.margin = '0';
                         } else if (content.classList.contains('sidebar-detail')) {
-                            content.style.padding = '0px 25px 30px'
+                            content.style.padding = '2px 25px 30px'
                             content.style.margin = '0'
                         }
                         else {
@@ -69,9 +72,6 @@ window.addEventListener('load', function () {
                     content.style.height = '0'
                     content.style.opacity = '0'
                 }
-                // Toggle the aria-expanded attribute when clicking
-                const expanded = !item.classList.contains('open');
-                header.setAttribute('aria-expanded', expanded);
             })
             if (!mediaQuery.matches) {
                 if (content) {
@@ -86,7 +86,7 @@ window.addEventListener('load', function () {
                         else if (content.classList.contains('sidebar-detail')) {
                             content.style.height = 'auto'
                             content.style.opacity = '1'
-                            content.style.padding = '0px 25px 30px'
+                            content.style.padding = '2px 25px 30px'
                             content.style.margin = '0'
                         }
                         else if (content.classList.contains('bg-gray')) {
@@ -131,7 +131,25 @@ window.addEventListener('load', function () {
                     }
                 }
             });
+            if (header.classList.contains("sidebar-ttl")) {
+                sidebarttl.addEventListener("keyup", () => {
+                    if (!item.classList.contains("open")) {
+                        accordionItem.forEach((otherItem) => {
+                            if (otherItem !== item && otherItem.classList.contains("open")) {
+                                if (content.classList.contains("sidebar-detail")) {
+                                    content.style.height = "auto";
+                                    content.style.opacity = "1";
+                                    content.style.padding = "2px 25px 30px";
+                                    content.style.margin = "0";
+                                }
+                            }
+                        });
+                    }
+                    item.classList.add("open")
+                });
+            }
         }
+
     })
 
     // dynamically accordion content high when window is resize
