@@ -16,7 +16,7 @@
 
 .top .sec-mv .mv-slider {
   position: relative;
-  padding: 7.2% 0 13.1% 2.2%;
+  padding: 7.2% 0 32.5% 2.2%;
   background-image: url('/img/img_mv_bg_02.png');
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -55,6 +55,8 @@
 .top .sec-mv .mv-txt {
   width: 24.34%;
   text-align: left;
+  position: absolute;
+  top: 20%;
 }
 
 /* sec-news */
@@ -1351,6 +1353,7 @@
     left: 5.3%;
     width: 86%;
     max-width: 322px;
+    top: unset;
   }
 
   /* sec-news */
