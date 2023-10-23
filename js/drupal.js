@@ -26,7 +26,7 @@ async function updateArticleLists(category) {
               <div class="cat-blk">
                 <p class="date small-text">${article.attributes.field_date}</p>
                 <ul>
-                  <li class="small-text">スギホールディングスaa</li> 
+                  <li class="small-text">スギホールディングス</li> 
                   <li class="small-text">${article.attributes.field_list}</li>
                 </ul>
               </div>
@@ -41,7 +41,7 @@ async function updateArticleLists(category) {
               <div class="cat-blk">
                 <p class="date small-text">${article.attributes.field_date}</p>
                 <ul>
-                  <li class="small-text">スギホールディングスbb</li> 
+                  <li class="small-text">スギホールディングス</li> 
                   <li class="small-text">${article.attributes.field_list}</li>
                 </ul>
               </div>
