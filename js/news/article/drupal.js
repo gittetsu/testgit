@@ -39,12 +39,12 @@ document.addEventListener('DOMContentLoaded', function () {
             articleTitleElement2.innerHTML = articleTitle2;
 
             // article-company要素に本文を挿入
-            const articleCompany = formatDate(data.data.attributes.field_company);
+            const articleCompany = data.data.attributes.field_company;
             const articleCompanyElement = document.getElementById('article-company');
             articleCompanyElement.innerHTML = articleCompany;
 
             // article-category要素に本文を挿入
-            const articleList = formatDate(data.data.attributes.field_list);
+            const articleList = data.data.attributes.field_list;
             const articleListElement = document.getElementById('article-list');
             articleListElement.innerHTML = articleList;
 
