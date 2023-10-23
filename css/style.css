@@ -762,6 +762,9 @@
   transform: scale(1.05, 1.05);
 }
 
+.cmm-list-item a:focus{
+  border: 2px solid #000;
+}
 
 .category-list-item02 a {
   background: url('/img/img_property.jpg') no-repeat center/cover;
