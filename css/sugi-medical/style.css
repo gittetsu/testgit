@@ -125,8 +125,11 @@
   text-align: left;
   letter-spacing: 3.8px;
   border-radius: 0;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.top .sec-news .tab-list .tab-left li:first-child .common-button {
   border-top: 1px solid #e6e6e6;
-  border-bottom: 1px solid transparent;
 }
 
 
@@ -157,7 +160,6 @@
 .top .sec-news .tab-list .tab-left .common-button.active {
   background-color: #f5faed;
   color: #7fbe26;
-  border-top: 1px solid transparent;
   border-bottom: 1px solid transparent;
   border-radius: 5px;
 }
@@ -520,7 +522,6 @@
   .top .sec-news .tab-list .tab-left .common-button.active:hover {
     background-color: #f5faed;
     color: #7fbe26;
-    border-top: 1px solid transparent;
     border-bottom: 1px solid transparent;
     border-radius: 5px;
   }
@@ -533,7 +534,7 @@
   .top .sec-news .tab-list .tab-left .common-button:hover {
     background-color: transparent;
     color: #000;
-    border-top: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
     border-radius: unset;
   }
 
@@ -647,15 +648,14 @@
     letter-spacing: 1.4px;
   }
 
-  .top .sec-news .tab-list .tab-left ul li:first-child .common-button,
-  .top .sec-news .tab-list .tab-left ul li:nth-child(2) .common-button {
-    border-top: 1px solid transparent;
+  .top .sec-news .tab-list .tab-left li:first-child .common-button{
+    border-top: 1px solid transparent
   }
 
   .top .sec-news .tab-list .tab-left .common-button:hover {
     background-color: transparent;
     color: #000;
-    border-top: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
   }
 
   .top .sec-news .common-button:hover .arrow {
@@ -669,12 +669,12 @@
   .top .sec-news .tab-list .tab-left .common-button.active:hover {
     background-color: #f5faed;
     color: #7fbe26;
-    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
   }
 
   .top .sec-news .tab-list .tab-left li:nth-child(5n) .common-button,
   .top .sec-news .tab-list .tab-left li:last-child .common-button {
-    border-bottom: 0;
+    border-bottom: 1px solid transparent;
   }
 
   .top .sec-news .common-button .arrow {
