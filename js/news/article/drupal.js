@@ -45,6 +45,9 @@ document.addEventListener('DOMContentLoaded', function () {
             if (data.data.attributes.field_pdf.value) {
                 pdfLink.style.display = 'inline'; // PDFリンクを表示
                 pdfLink.href = `/pdf/${data.data.attributes.field_pdf.value}`;
+                // article-pdf要素に本文を挿入
+                const articlePdfElement = document.getElementById('article-pdf');
+                articlePdfElement.innerHTML = `https://www.sugi-hd.co.jp/pdf/${data.data.attributes.field_pdf.value}`;
             } else {
                 pdfLink.style.display = 'none'; // PDFリンクを非表示
             }
