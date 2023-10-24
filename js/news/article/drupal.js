@@ -50,7 +50,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // PDFリンクを設定
             const pdfLink = document.getElementById('pdf-link');
-            pdfLink.href = `/pdf/${data.data.attributes.field_pdf.value}`;
 
             if (data.data.attributes.field_pdf.value) {
                 pdfLink.style.display = 'inline'; // PDFリンクを表示

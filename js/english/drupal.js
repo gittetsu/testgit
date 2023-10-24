@@ -19,7 +19,23 @@ async function updateArticleLists(category) {
       data.data.forEach((article, index) => {
         const liElement = document.createElement('li');
         liElement.className = 'news-list';
-        liElement.innerHTML = `
+        if (article.attributes.body === null) {
+          liElement.innerHTML = `
+          <li class="new-common-list">
+            <a href="#" class="article-link" data-article-id="${article.id}">
+              <div class="cat-blk">
+                <p class="date small-text">${article.attributes.field_date}</p>
+                <ul>
+                  <li class="small-text">Sugi Holdings</li> 
+                  <li class="small-text">${article.attributes.field_en_list}</li>
+                </ul>
+              </div>
+              <p class="newslist-desc pdf" id="article-title${index + 1}">${article.attributes.title}</p>
+            </a>
+          </li>
+        `;
+        } else {
+          liElement.innerHTML = `
           <li class="new-common-list">
             <a href="#" class="article-link" data-article-id="${article.id}">
               <div class="cat-blk">
@@ -33,6 +49,7 @@ async function updateArticleLists(category) {
             </a>
           </li>
         `;
+        }
         ulElement.appendChild(liElement);
       });
     }
