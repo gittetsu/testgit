@@ -113,6 +113,10 @@
   border-bottom: 1px solid #e6e6e6;
 }
 
+.top .sec-news .tab-list .tab-left li:first-child .common-button {
+  border-top: 1px solid #e6e6e6;
+}
+
 .top .sec-news .tab-list .tab-left .common-button {
   width: 100%;
   line-height: 1.6;
@@ -764,6 +768,9 @@
   transform: scale(1.05, 1.05);
 }
 
+.cmm-list-item a:focus{
+  border: 2px solid #000;
+}
 
 .category-list-item02 a {
   background: url('/img/img_property.jpg') no-repeat center/cover;
@@ -1432,6 +1439,7 @@
 
   .top .sec-news .tab-list .tab-left li:first-child .common-button {
     border-left: 1px solid #e6e6e6;
+    border-top: 1px solid transparent;
   }
 
   .top .sec-news .tab-list .tab-left .common-button {
@@ -1440,6 +1448,7 @@
     padding: 12px 29px;
     letter-spacing: 1.9px;
     border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
     border-right: 1px solid #e6e6e6;
     border-radius: unset;
     border-left: 1px solid transparent;
