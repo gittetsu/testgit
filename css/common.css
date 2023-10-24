@@ -1117,6 +1117,10 @@ h6.common-sub-ttl {
   margin-bottom: 0;
 }
 
+.accordion-ttl:focus{
+  border: 2px solid #000;
+}
+
 .accordion-ttl:hover .arrow-blk,
 .accordion-ttl:focus .arrow-blk {
   border: 1px solid #048851;
@@ -1135,7 +1139,7 @@ h6.common-sub-ttl {
   justify-content: space-between;
   align-items: flex-start;
   padding: 14.5px 30px 14.5px 30px;
-  border: 1px solid transparent;
+  border: 2px solid transparent;
   color: #048851;
   font-size: 1.25rem;
   font-weight: 700;

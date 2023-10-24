@@ -64,6 +64,9 @@
   cursor: pointer;
   border-radius: 50%;
 }
+.sugi-smile-header .toggle-btn:focus-visible{
+  outline: 2px solid #000;
+}
 
 .sugi-smile-header .toggle-btn span {
   position: absolute;
@@ -115,20 +118,14 @@
 }
 
 .sugi-smile-header .toggle-nav {
-  display: none;
   position: fixed;
   top: 0;
   z-index: 9;
   width: 40%;
-  height: 100vh;
-  padding-bottom: 60px;
+  height: 0;
   background-color: rgba(0, 153, 68, 0.95);
   max-width: 400px;
   overflow-y: auto;
-}
-
-.sugi-smile-header .toggle-nav.active {
-  display: block;
 }
 
 .sugi-smile-header .toggle-nav .nav-header {
@@ -431,7 +428,6 @@ footer.sugi-smile-footer .ft-nav ul li a:hover {
     top: 115px;
     right: 0;
     width: 100%;
-    padding-bottom: 300px;
     max-width: 100%;
   }
 
@@ -560,7 +556,6 @@ footer.sugi-smile-footer .ft-nav ul li a:hover {
     top: 68px;
     right: 0;
     width: 100%;
-    padding-bottom: 300px;
     max-width: 100%;
   }
 
