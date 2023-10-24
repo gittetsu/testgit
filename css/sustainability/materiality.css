@@ -20,29 +20,45 @@
 }
 
 .cmm-issue-gp {
+  display: flex;
   position: relative;
-  padding: 12px 0;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 5px;
   color: #fff;
   font-size: 1.125rem;
   text-align: center;
 }
 
-.issue-gp01::after,
-.issue-gp02::after {
+.issue-gp01:after,
+.issue-gp01:before,
+.issue-gp02:after,
+.issue-gp02:before {
   position: absolute;
-  top: 0;
   left: 100%;
   width: 14px;
-  height: 60px;
+  height: 50%;
   content: '';
 }
 
-.issue-gp01::after {
-  background: url('/img/sustainability/icon_traingle01.png') no-repeat right center/cover;
+.issue-gp01:after {
+  bottom: 0;
+  background: linear-gradient(to right bottom, #6fba8a 48%, transparent 52%);
 }
 
-.issue-gp02::after {
-  background: url('/img/sustainability/icon_traingle02.png') no-repeat right center/cover;
+.issue-gp01:before {
+  top: 0;
+  background: linear-gradient(to right top, #6fba8a 48%, transparent 52%);
+}
+
+.issue-gp02:after {
+  bottom: 0;
+  background: linear-gradient(to right bottom, #00a067 48%, transparent 52%);
+}
+
+.issue-gp02:before {
+  top: 0;
+  background: linear-gradient(to right top, #00a067 48%, transparent 52%);
 }
 
 .issue-gp01 {
@@ -78,6 +94,7 @@
   position: relative;
   justify-content: space-between;
   text-align: left;
+  word-break: break-word;
 }
 
 .sec-key-issues .tab-list-02 .tab-list-txt {
@@ -275,11 +292,6 @@
 
 @media only screen and (max-width: 767.9px) {
 
-  .issue-gp01,
-  .issue-gp02 {
-    padding: 7px 0 22px !important;
-  }
-
   .issue-gp01 {
     background: url('/img/sustainability/img_traingle01_bg_sp.png') no-repeat center/100% 100%;
   }
@@ -288,7 +300,9 @@
     background: url('/img/sustainability/img_traingle02_bg_sp.png') no-repeat center/100% 100%;
   }
 
+  .issue-gp01:before,
   .issue-gp01::after,
+  .issue-gp02:before,
   .issue-gp02::after {
     background: unset;
   }
@@ -304,10 +318,15 @@
     padding: 5.1% 0 0 5.1%;
   }
 
-  .sec-process .cmm-issue-gp {
+  .cmm-issue-gp {
     margin-bottom: 31px;
-    padding: 14.8px 0;
+    padding: 14.8px 5px;
     border-right: unset;
+  }
+
+  .issue-gp01,
+  .issue-gp02 {
+    padding: 7px 5px 22px;
   }
 
   .sec-process .col03 .col03-detail {

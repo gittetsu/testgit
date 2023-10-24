@@ -16,7 +16,7 @@
 
 .top .sec-mv .mv-slider {
   position: relative;
-  padding: 7.2% 0 13.1% 2.2%;
+  padding: 7.2% 0 32.5% 2.2%;
   background-image: url('/img/img_mv_bg_02.png');
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -55,6 +55,8 @@
 .top .sec-mv .mv-txt {
   width: 24.34%;
   text-align: left;
+  position: absolute;
+  top: 20%;
 }
 
 /* sec-news */
@@ -122,7 +124,7 @@
   text-align: left;
   letter-spacing: 3.8px;
   border-radius: 0px;
-  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
 }
 
 
@@ -136,7 +138,7 @@
 .top .sec-news .tab-list .tab-left .common-button.active {
   background-color: #048851;
   color: #ffffff;
-  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
   border-radius: 5px;
 }
 
@@ -384,6 +386,7 @@
 
 .top .sec-vision ul li {
   border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid transparent;
 }
 
 .top .sec-vision ul li:hover {
@@ -397,9 +400,9 @@
 .top .sec-vision ul .common-button {
   display: flex;
   justify-content: space-between;
-  width: auto;
+  width: 100%;
   line-height: 1.9;
-  padding: 20px;
+  padding: 23px 45px 22px 27px;
   border: none;
   border-radius: 5px;
 }
@@ -1043,13 +1046,13 @@
   .top .sec-news .tab-list .tab-left .common-button:hover {
     background-color: transparent;
     color: #000;
-    border-top: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
   }
 
   .top .sec-news .tab-list .tab-left .common-button.active:hover {
     background-color: #048851;
     color: #ffffff;
-    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
   }
 
   .top .sec-news .tab-list .tab-left .common-button:active .arrow,
@@ -1350,6 +1353,7 @@
     left: 5.3%;
     width: 86%;
     max-width: 322px;
+    top: unset;
   }
 
   /* sec-news */
