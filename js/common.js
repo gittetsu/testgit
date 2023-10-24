@@ -374,10 +374,12 @@ window.addEventListener('load', function () {
                     const focusedElement = event.target.id;
                     if (focusedElement == "medical") {
                         closeAllDropdowns();
-
                     }
                 })
             })
+            toggle.addEventListener('focus', function (event) {
+                closeAllDropdowns();
+            });
         } else {
             var arrow = toggle.querySelector(".arrow-blk")
             arrow.addEventListener('click', function (e) {
