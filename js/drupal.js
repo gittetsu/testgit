@@ -30,7 +30,7 @@ async function updateArticleLists(category) {
                   <li class="small-text">${article.attributes.field_list}</li>
                 </ul>
               </div>
-              <p class="newslist-desc" id="article-title${index + 1}">${article.attributes.title}</p>
+              <p class="newslist-desc pdf" id="article-title${index + 1}">${article.attributes.title}</p>
             </a>
           </li>
         `;
@@ -45,7 +45,7 @@ async function updateArticleLists(category) {
                   <li class="small-text">${article.attributes.field_list}</li>
                 </ul>
               </div>
-              <p class="newslist-desc pdf" id="article-title${index + 1}">${article.attributes.title}</p>
+              <p class="newslist-desc text-02" id="article-title${index + 1}">${article.attributes.title}</p>
             </a>
           </li>
         `;
