@@ -70,7 +70,7 @@ async function updateArticleLists(category, searchKeyword) {
         const liElement = document.createElement('li');
         liElement.className = 'news-list';
         if (article.attributes.body === null) {
-          yliElement.innerHTML = `
+          liElement.innerHTML = `
           <li class="news-list">
             <a href="#" class="article-link" data-article-id="${article.id}">
               <div class="newslist-header">
