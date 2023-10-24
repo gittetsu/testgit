@@ -43,7 +43,7 @@ async function updateArticleTitles() {
                                     <span class="news-info">${article.attributes.field_list}</span>
                                 </div>
                             </div>
-                        <p class="newslist-desc text-02" id="article-title${index + 1}">${article.attributes.title}</p>
+                        <p class="newslist-desc pdf" id="article-title${index + 1}">${article.attributes.title}</p>
                         </a>
                         `;
             } else {
@@ -56,7 +56,7 @@ async function updateArticleTitles() {
 		                            <span class="news-info">${article.attributes.field_list}</span>
                 		        </div>
                         	</div>
-                        <p class="newslist-desc pdf" id="article-title${index + 1}">${article.attributes.title}</p>
+                        <p class="newslist-desc text-02" id="article-title${index + 1}">${article.attributes.title}</p>
                     	</a>
                     	`;
             }
