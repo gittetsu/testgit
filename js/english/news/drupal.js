@@ -67,11 +67,23 @@ async function updateArticleLists(category, searchKeyword) {
     console.log(data);
     if (ulElement) {
       ulElement.innerHTML = ''; // リストをクリア
-
       data.data.forEach((article, index) => {
         const liElement = document.createElement('li');
         liElement.className = 'news-list';
-        liElement.innerHTML = `
+        if (article.attributes.body === null) {
+          yliElement.innerHTML = `
+          <li class="news-list">
+            <a href="#" class="article-link" data-article-id="${article.id}">
+              <div class="newslist-header">
+                <span class="news-date">${article.attributes.field_date}</span>
+                <span class="news-info">${article.attributes.field_en_list}</span>
+              </div>
+              <p class="newslist-desc pdf" id="article-title${index + 1}">${article.attributes.title}</p>
+            </a>
+          </li>
+          `;
+        } else {
+          liElement.innerHTML = `
           <li class="news-list">
             <a href="#" class="article-link" data-article-id="${article.id}">
               <div class="newslist-header">
@@ -81,7 +93,8 @@ async function updateArticleLists(category, searchKeyword) {
               <p class="newslist-desc text-02" id="article-title${index + 1}">${article.attributes.title}</p>
             </a>
           </li>
-        `;
+          `;
+        }
         ulElement.appendChild(liElement);
       });
     }
