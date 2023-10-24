@@ -33,7 +33,8 @@ async function updateArticleTitles() {
             // sortedData.forEach((article, index) => {
             const liElement = document.createElement('li');
             liElement.className = 'news-list';
-            liElement.innerHTML = `
+            if (article.attributes.body === null) {
+                liElement.innerHTML = `
                 	    <a href="#" class="article-link" data-article-id="${article.id}">
                         	<div class="newslist-header">
                             		<span class="news-date">${formatDate(article.attributes.field_date)}</span>
@@ -41,9 +42,22 @@ async function updateArticleTitles() {
 		                                <span class="news-info">${article.attributes.field_en_list}</span>
                 		        </div>
                         	</div>
-                        	<p class="newslist-desc pdf" id="article-title${index + 1}">${article.attributes.title}</p>
-                    	    </a>
-                    	    `;
+                        <p class="newslist-desc text-02" id="article-title${index + 1}">${article.attributes.title}</p>
+                    	</a>
+                    	`;
+            } else {
+                liElement.innerHTML = `
+                	    <a href="#" class="article-link" data-article-id="${article.id}">
+                        	<div class="newslist-header">
+                            		<span class="news-date">${formatDate(article.attributes.field_date)}</span>
+                            		<div>
+		                                <span class="news-info">${article.attributes.field_en_list}</span>
+                		        </div>
+                        	</div>
+                        <p class="newslist-desc pdf" id="article-title${index + 1}">${article.attributes.title}</p>
+                    	</a>
+                    	`;
+            }
             ulElement.appendChild(liElement);
         });
     } catch (error) {
