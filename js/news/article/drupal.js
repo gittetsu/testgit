@@ -38,6 +38,16 @@ document.addEventListener('DOMContentLoaded', function () {
             const articleTitleElement2 = document.getElementById('article-title2');
             articleTitleElement2.innerHTML = articleTitle2;
 
+            // article-company要素に本文を挿入
+            const articleCompany = data.data.attributes.field_company;
+            const articleCompanyElement = document.getElementById('article-company');
+            articleCompanyElement.innerHTML = articleCompany;
+
+            // article-category要素に本文を挿入
+            const articleList = data.data.attributes.field_list;
+            const articleListElement = document.getElementById('article-list');
+            articleListElement.innerHTML = articleList;
+
             // PDFリンクを設定
             const pdfLink = document.getElementById('pdf-link');
             pdfLink.href = `/pdf/${data.data.attributes.field_pdf.value}`;
@@ -45,6 +55,9 @@ document.addEventListener('DOMContentLoaded', function () {
             if (data.data.attributes.field_pdf.value) {
                 pdfLink.style.display = 'inline'; // PDFリンクを表示
                 pdfLink.href = `/pdf/${data.data.attributes.field_pdf.value}`;
+                // article-pdf要素に本文を挿入
+                const articlePdfElement = document.getElementById('article-pdf');
+                articlePdfElement.innerHTML = `https://www.sugi-hd.co.jp/pdf/${data.data.attributes.field_pdf.value}`;
             } else {
                 pdfLink.style.display = 'none'; // PDFリンクを非表示
             }
