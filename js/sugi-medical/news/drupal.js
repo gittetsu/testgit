@@ -195,7 +195,7 @@ document.addEventListener('click', event => {
           // 条件1: bodyがnullの場合、PDFへ遷移
           const pdfFileName = articleAttributes.field_pdf.value;
           if (pdfFileName) {
-            window.location.href = `/pdf/${pdfFileName}`;
+            window.open(`/pdf/${pdfFileName}`, '_blank')
           }
         } else {
           // 条件2: bodyがnullでない場合、記事へ遷移

@@ -5,7 +5,7 @@ const apiUrl = 'https://d1vyjchtv8ee5.cloudfront.net/jsonapi/node/sugi_medical';
 async function updateArticleLists(category) {
   try {
     // カテゴリーごとのフィルター条件を設定
-    const filter = category === 'all' ? '' : `&filter[field_list]=${category.replace("#", "")}`;
+    const filter = category === 'all' ? '' : category === '#all' ? '' : `&filter[field_medical_list]=${category.replace("#", "")}`;
 
     // JSON APIからデータを取得
     const response = await fetch(`${apiUrl}?sort=-field_date${filter}&page[limit]=5`);
@@ -69,7 +69,7 @@ document.addEventListener('click', event => {
           // 条件1: bodyがnullの場合、PDFへ遷移
           const pdfFileName = articleAttributes.field_pdf.value;
           if (pdfFileName) {
-            window.location.href = `/pdf/${pdfFileName}`;
+            window.open(`/pdf/${pdfFileName}`, '_blank')
           }
         } else {
           // 条件2: bodyがnullでない場合、記事へ遷移

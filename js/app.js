@@ -1,25 +1,25 @@
 //tabs
 function handleTabClick(tabs, tabContents) {
-  tabs.forEach((tab, index) => {
-    tab.addEventListener('click', () => {
-      const target = tabContents[index];
-      tabContents.forEach((tabContent) => {
-        tabContent.classList.remove('active');
-      });
-      tabs.forEach((tab) => {
-        tab.classList.remove('active');
-      });
-      tab.classList.add('active');
-      target.classList.add('active');
+    tabs.forEach((tab, index) => {
+        tab.addEventListener('click', () => {
+            const target = tabContents[index];
+            tabContents.forEach((tabContent) => {
+                tabContent.classList.remove('active');
+            });
+            tabs.forEach((tab) => {
+                tab.classList.remove('active');
+            });
+            tab.classList.add('active');
+            target.classList.add('active');
+        });
     });
-  });
 }
 
 function setupTabs(parentClass) {
-  const parent = document.querySelector(parentClass);
-  const tabs = parent.querySelectorAll('.tablinks');
-  const tabContents = parent.querySelectorAll('.tab-cnt');
-  handleTabClick(tabs, tabContents);
+    const parent = document.querySelector(parentClass);
+    const tabs = parent.querySelectorAll('.tablinks');
+    const tabContents = parent.querySelectorAll('.tab-cnt');
+    handleTabClick(tabs, tabContents);
 }
 
 setupTabs('.sec-news .tab-list');
@@ -27,34 +27,34 @@ setupTabs('.sec-number-area .number-gp-blk');
 
 //height line js
 function alignElementsBasedOnHeight() {
-  const groups = {
-    '.topics-txt .text-02': 0,
-    '.gp-circle-caption': 0,
-  };
+    const groups = {
+        '.topics-txt .text-02': 0,
+        '.gp-circle-caption': 0,
+    };
 
-  // Find the maximum height for each group
-  for (const selector in groups) {
-    const elements = document.querySelectorAll(selector);
-    let maxHeight = 0;
+    // Find the maximum height for each group
+    for (const selector in groups) {
+        const elements = document.querySelectorAll(selector);
+        let maxHeight = 0;
 
-    elements.forEach(element => {
-      element.style.removeProperty("height");
-      const height = element.getBoundingClientRect().height;
-      maxHeight = Math.max(maxHeight, height);
-    });
+        elements.forEach(element => {
+            element.style.removeProperty("height");
+            const height = element.getBoundingClientRect().height;
+            maxHeight = Math.max(maxHeight, height);
+        });
 
-    groups[selector] = maxHeight;
-  }
+        groups[selector] = maxHeight;
+    }
 
-  // Set the maximum height for each group of elements
-  for (const selector in groups) {
-    const elements = document.querySelectorAll(selector);
-    const maxHeight = groups[selector];
+    // Set the maximum height for each group of elements
+    for (const selector in groups) {
+        const elements = document.querySelectorAll(selector);
+        const maxHeight = groups[selector];
 
-    elements.forEach(element => {
-      element.style.height = `${maxHeight}px`;
-    });
-  }
+        elements.forEach(element => {
+            element.style.height = `${maxHeight}px`;
+        });
+    }
 }
 
 // Call the alignment function when the page loads
@@ -66,17 +66,17 @@ window.addEventListener('load', alignElementsBasedOnHeight);
 var i = 0; // Start from the first image
 var slideTime = 3000; // 3 seconds
 var pcImages = [
-  '/img/img_mv_bg_01.png',
-  '/img/img_mv_bg_02.png',
-  '/img/img_mv_bg_03.png',
-  '/img/img_mv_bg_04.png'
+    '/img/img_mv_bg_01.png',
+    '/img/img_mv_bg_02.png',
+    '/img/img_mv_bg_03.png',
+    '/img/img_mv_bg_04.png'
 ];
 
 var spImages = [
-  '/img/img_mv_bg_01_sp.png',
-  '/img/img_mv_bg_02_sp.png',
-  '/img/img_mv_bg_03_sp.png',
-  '/img/img_mv_bg_04_sp.png'
+    '/img/img_mv_bg_01_sp.png',
+    '/img/img_mv_bg_02_sp.png',
+    '/img/img_mv_bg_03_sp.png',
+    '/img/img_mv_bg_04_sp.png'
 ];
 
 var slideTimeout;
@@ -84,82 +84,82 @@ var slideTimeout;
 // Preload images
 var preloadedImages = [];
 for (var j = 0; j < pcImages.length; j++) {
-  preloadedImages.push(new Image());
-  preloadedImages[j].src = pcImages[j];
+    preloadedImages.push(new Image());
+    preloadedImages[j].src = pcImages[j];
 }
 
 for (var k = 0; k < spImages.length; k++) {
-  preloadedImages.push(new Image());
-  preloadedImages[k + pcImages.length].src = spImages[k];
+    preloadedImages.push(new Image());
+    preloadedImages[k + pcImages.length].src = spImages[k];
 }
 
 function changePicture() {
-  var sliderElement = document.querySelector('.mv-slider'); // Select the slider container element
+    var sliderElement = document.querySelector('.mv-slider'); // Select the slider container element
 
-  // Apply a CSS transition for smoother slide
-  sliderElement.style.transition = 'background-image 0.5s ease-in-out';
+    // Apply a CSS transition for smoother slide
+    sliderElement.style.transition = 'background-image 0.5s ease-in-out';
 
-  var currentImages = window.innerWidth >= 768 ? pcImages : spImages; // Use PC images for larger screens, SP images for smaller screens
+    var currentImages = window.innerWidth >= 768 ? pcImages : spImages; // Use PC images for larger screens, SP images for smaller screens
 
-  i = (i + 1) % currentImages.length; // Loop through images
+    i = (i + 1) % currentImages.length; // Loop through images
 
-  sliderElement.style.backgroundImage = "url(" + currentImages[i] + ")";
+    sliderElement.style.backgroundImage = "url(" + currentImages[i] + ")";
 
-  updatePagination(); // Update the pagination dots
+    updatePagination(); // Update the pagination dots
 
-  // Clear the existing timeout
-  clearTimeout(slideTimeout);
+    // Clear the existing timeout
+    clearTimeout(slideTimeout);
 
-  // Set a new timeout for the next slide
-  slideTimeout = setTimeout(changePicture, slideTime);
+    // Set a new timeout for the next slide
+    slideTimeout = setTimeout(changePicture, slideTime);
 }
 
 function updatePagination() {
-  var pagination = document.querySelector('.dots');
-  pagination.innerHTML = ''; // Clear previous pagination dots
+    var pagination = document.querySelector('.dots');
+    pagination.innerHTML = ''; // Clear previous pagination dots
 
-  var currentImages = window.innerWidth >= 768 ? pcImages : spImages; // Use PC images for larger screens, SP images for smaller screens
+    var currentImages = window.innerWidth >= 768 ? pcImages : spImages; // Use PC images for larger screens, SP images for smaller screens
 
-  for (var j = 0; j < currentImages.length; j++) {
-    var dot = document.createElement('span');
-    dot.classList.add('dot');
-    dot.dataset.slideIndex = j; // Store the slide index as a data attribute
-    pagination.appendChild(dot);
-  }
+    for (var j = 0; j < currentImages.length; j++) {
+        var dot = document.createElement('span');
+        dot.classList.add('dot');
+        dot.dataset.slideIndex = j; // Store the slide index as a data attribute
+        pagination.appendChild(dot);
+    }
 
-  // Add a click event listener to each pagination dot
-  var dots = document.querySelectorAll('.dot');
-  dots.forEach(function (dot, index) {
-    dot.addEventListener('click', function () {
-      i = index; // Update the current index based on the clicked dot's index
-      updateSliderBackground(); // Update the slider's background image
-      updatePagination(); // Update the pagination dots again
+    // Add a click event listener to each pagination dot
+    var dots = document.querySelectorAll('.dot');
+    dots.forEach(function (dot, index) {
+        dot.addEventListener('click', function () {
+            i = index; // Update the current index based on the clicked dot's index
+            updateSliderBackground(); // Update the slider's background image
+            updatePagination(); // Update the pagination dots again
 
-      // Clear the existing timeout
-      clearTimeout(slideTimeout);
+            // Clear the existing timeout
+            clearTimeout(slideTimeout);
 
-      // Set a new timeout for the next slide
-      slideTimeout = setTimeout(changePicture, slideTime);
+            // Set a new timeout for the next slide
+            slideTimeout = setTimeout(changePicture, slideTime);
+        });
     });
-  });
 
-  // Update the active dot based on the current index
-  dots[i].classList.add('active');
+    // Update the active dot based on the current index
+    dots[i].classList.add('active');
 }
 
 // Initialize the slider
 window.addEventListener("load", function () {
-  var sliderElement = document.querySelector('.mv-slider');
-  sliderElement.style.backgroundImage = "url(" + pcImages[i] + ")";
+    var sliderElement = document.querySelector('.mv-slider');
+    sliderElement.style.backgroundImage = "url(" + pcImages[i] + ")";
 
-  // Start the slideshow
-  slideTimeout = setTimeout(changePicture, slideTime);
+    // Start the slideshow
+    slideTimeout = setTimeout(changePicture, slideTime);
 });
 
 function updateSliderBackground() {
-  var sliderElement = document.querySelector('.mv-slider');
-  var currentImages = window.innerWidth >= 768 ? pcImages : spImages; // Use PC images for larger screens, SP images for smaller screens
-  sliderElement.style.backgroundImage = "url(" + currentImages[i] + ")";
+    var sliderElement = document.querySelector('.mv-slider');
+    var currentImages = window.innerWidth >= 768 ? pcImages : spImages; // Use PC images for larger screens, SP images for smaller screens
+    sliderElement.style.backgroundImage = "url(" + currentImages[i] + ")";
 }
 
 // Update the images when the window is resized
@@ -167,79 +167,79 @@ window.addEventListener("resize", updateImages);
 window.addEventListener("load", changePicture);
 
 function updateImages() {
-  var currentImages = window.innerWidth >= 768 ? pcImages : spImages; // Use PC images for larger screens, SP images for smaller screens
+    var currentImages = window.innerWidth >= 768 ? pcImages : spImages; // Use PC images for larger screens, SP images for smaller screens
 
-  // Preload images for the current screen size
-  preloadedImages = [];
-  for (var j = 0; j < currentImages.length; j++) {
-    preloadedImages.push(new Image());
-    preloadedImages[j].src = currentImages[j];
-  }
+    // Preload images for the current screen size
+    preloadedImages = [];
+    for (var j = 0; j < currentImages.length; j++) {
+        preloadedImages.push(new Image());
+        preloadedImages[j].src = currentImages[j];
+    }
 
-  // Update the background image of the slider container
-  var sliderElement = document.querySelector('.mv-slider');
-  sliderElement.style.backgroundImage = "url(" + currentImages[i] + ")";
+    // Update the background image of the slider container
+    var sliderElement = document.querySelector('.mv-slider');
+    sliderElement.style.backgroundImage = "url(" + currentImages[i] + ")";
 
-  // Update the pagination dots
-  updatePagination();
+    // Update the pagination dots
+    updatePagination();
 }
 
 //progress bar slider for top page
-const crouselSlide = document.querySelector(".topics-slider");
-const crouselImages = document.querySelectorAll(".topics-slider .topics-item");
-const progressBar = document.querySelector(".progress");
-const progressBarContainer = document.querySelector(".progress-bar");
+// const crouselSlide = document.querySelector(".topics-slider");
+// const crouselImages = document.querySelectorAll(".topics-slider .topics-item");
+// const progressBar = document.querySelector(".progress");
+// const progressBarContainer = document.querySelector(".progress-bar");
 
-const prevBtn = document.querySelector("#prev-btn");
-const nextBtn = document.querySelector("#next-btn");
+// const prevBtn = document.querySelector("#prev-btn");
+// const nextBtn = document.querySelector("#next-btn");
 
-let counter = 3;
-const size = crouselImages[0].clientWidth;
-crouselSlide.style.transform = "translateX(" + -size * counter + "px)";
-updateProgressBar();
+// let counter = 3;
+// const size = crouselImages[0].clientWidth;
+// crouselSlide.style.transform = "translateX(" + -size * counter + "px)";
+// updateProgressBar();
 
-nextBtn.addEventListener("click", () => {
-  if (counter >= crouselImages.length - 4) return;
-  crouselSlide.style.transition = "transform 0.4s ease-in-out";
-  counter++;
-  crouselSlide.style.transform = "translateX(" + -size * counter + "px)";
-  console.log(counter);
-  console.log(crouselSlide.style.transform)
-  updateProgressBar();
-});
+// nextBtn.addEventListener("click", () => {
+//   if (counter >= crouselImages.length - 4) return;
+//   crouselSlide.style.transition = "transform 0.4s ease-in-out";
+//   counter++;
+//   crouselSlide.style.transform = "translateX(" + -size * counter + "px)";
+//   console.log(counter);
+//   console.log(crouselSlide.style.transform)
+//   updateProgressBar();
+// });
 
-prevBtn.addEventListener("click", () => {
-  if (counter <= 2) return;
-  crouselSlide.style.transition = "transform 0.4s";
-  counter--;
-  crouselSlide.style.transform = "translateX(" + -size * counter + "px)";
-  updateProgressBar();
+// prevBtn.addEventListener("click", () => {
+//   if (counter <= 2) return;
+//   crouselSlide.style.transition = "transform 0.4s";
+//   counter--;
+//   crouselSlide.style.transform = "translateX(" + -size * counter + "px)";
+//   updateProgressBar();
 
-});
+// });
 
 
-function updateProgressBar() {
-  const progress = ((counter - 1) / (crouselImages.length - 6)) * 100; // Subtract 1 from counter to account for starting at 1 instead of 0
-  const progressBarWidth = Math.min(100, Math.max(25, progress)); // Set a minimum width of 25% and a maximum width of 100%
-  progressBar.style.width = progressBarWidth + "%";
-}
+// function updateProgressBar() {
+//   const progress = ((counter - 1) / (crouselImages.length - 6)) * 100; // Subtract 1 from counter to account for starting at 1 instead of 0
+//   const progressBarWidth = Math.min(100, Math.max(25, progress)); // Set a minimum width of 25% and a maximum width of 100%
+//   progressBar.style.width = progressBarWidth + "%";
+// }
 
-crouselSlide.addEventListener("transitionend", () => {
-  if (crouselImages[counter].id === "lastClone") {
-    crouselSlide.style.transition = "none";
-    counter = crouselImages.length - counter - 3;
-    crouselSlide.style.transform = "translateX(" + -size * counter + "px)";
-  }
-  if (crouselImages[counter].id === "firstClone") {
-    crouselSlide.style.transition = "none";
-    counter = crouselImages.length - counter - 1;
-    crouselSlide.style.transform = "translateX(" + -size * counter + "px)";
-  }
-  updateProgressBar();
-});
+// crouselSlide.addEventListener("transitionend", () => {
+//   if (crouselImages[counter].id === "lastClone") {
+//     crouselSlide.style.transition = "none";
+//     counter = crouselImages.length - counter - 3;
+//     crouselSlide.style.transform = "translateX(" + -size * counter + "px)";
+//   }
+//   if (crouselImages[counter].id === "firstClone") {
+//     crouselSlide.style.transition = "none";
+//     counter = crouselImages.length - counter - 1;
+//     crouselSlide.style.transform = "translateX(" + -size * counter + "px)";
+//   }
+//   updateProgressBar();
+// });
 
-window.addEventListener("load", () => {
-  const progressBarContainerWidth = progressBarContainer.clientWidth;
-  const initialProgress = (25 / 100) * progressBarContainerWidth;
-  progressBar.style.width = initialProgress + "px";
-});
+// window.addEventListener("load", () => {
+//   const progressBarContainerWidth = progressBarContainer.clientWidth;
+//   const initialProgress = (25 / 100) * progressBarContainerWidth;
+//   progressBar.style.width = initialProgress + "px";
+// });

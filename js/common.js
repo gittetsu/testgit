@@ -3,6 +3,7 @@
 window.addEventListener('load', function () {
     /*accordion*/
     var accordionItem = document.querySelectorAll('.accordion')
+
     accordionItem.forEach((item) => {
         var header =
             item.querySelector('.accordion-ttl') != null
@@ -10,6 +11,11 @@ window.addEventListener('load', function () {
                 : item.querySelector('.sidebar-ttl')
         const mediaQuery = window.matchMedia('(max-width: 1024px)')
         var content = item.querySelector('.accordion-content')
+        var sidebarttl = item.querySelector(".sidebar-ttl-link");
+        if (header.classList.contains('accordion-ttl')) {
+            header.setAttribute('tabindex', '0');
+            header.setAttribute('aria-expanded', 'false');
+        }
         if (content) {
             header.addEventListener('click', () => {
                 if (!item.classList.contains('open')) {
@@ -51,7 +57,7 @@ window.addEventListener('load', function () {
                             content.style.padding = '0px';
                             content.style.margin = '0';
                         } else if (content.classList.contains('sidebar-detail')) {
-                            content.style.padding = '0px 25px 30px'
+                            content.style.padding = '2px 25px 30px'
                             content.style.margin = '0'
                         }
                         else {
@@ -80,7 +86,7 @@ window.addEventListener('load', function () {
                         else if (content.classList.contains('sidebar-detail')) {
                             content.style.height = 'auto'
                             content.style.opacity = '1'
-                            content.style.padding = '0px 25px 30px'
+                            content.style.padding = '2px 25px 30px'
                             content.style.margin = '0'
                         }
                         else if (content.classList.contains('bg-gray')) {
@@ -106,7 +112,44 @@ window.addEventListener('load', function () {
                     }
                 }
             }
+            // Add keyboard event handling
+            header.addEventListener('keydown', (event) => {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    // Handle Enter or Space key press (you can trigger a click event here)
+                    header.click();
+                } else if (event.key === 'Tab' && event.shiftKey) {
+                    // Handle Shift + Tab to navigate backward
+                    if (item > 0) {
+                        event.preventDefault();
+                        accordionItem[item - 1].querySelector('.accordion-ttl').focus();
+                    }
+                } else if (event.key === 'Tab' && !event.shiftKey) {
+                    // Handle Tab to navigate forward
+                    if (item < accordionItem.length - 1) {
+                        event.preventDefault();
+                        accordionItem[item + 1].querySelector('.accordion-ttl').focus();
+                    }
+                }
+            });
+            if (header.classList.contains("sidebar-ttl")) {
+                sidebarttl.addEventListener("keyup", () => {
+                    if (!item.classList.contains("open")) {
+                        accordionItem.forEach((otherItem) => {
+                            if (otherItem !== item && otherItem.classList.contains("open")) {
+                                if (content.classList.contains("sidebar-detail")) {
+                                    content.style.height = "auto";
+                                    content.style.opacity = "1";
+                                    content.style.padding = "2px 25px 30px";
+                                    content.style.margin = "0";
+                                }
+                            }
+                        });
+                    }
+                    item.classList.add("open")
+                });
+            }
         }
+
     })
 
     // dynamically accordion content high when window is resize
@@ -294,6 +337,7 @@ window.addEventListener('load', function () {
     var dropdowns = document.querySelectorAll('.dropdown .dropdown-list');
     dropdowns.forEach(function (toggle) {
         var dropdownMenu = toggle.nextElementSibling
+        var dropdownLink = dropdownMenu.getElementsByTagName("a")
         const query = window.matchMedia('(max-width: 1024px)')
         toggle.addEventListener('click', function (e) {
             var hrefValue = toggle.href;
@@ -309,12 +353,33 @@ window.addEventListener('load', function () {
                 dropDownMenuFunc(toggle)
             })
 
+            toggle.addEventListener('keyup', function (e) {
+                dropDownMenuFunc(toggle)
+            })
+            dropdownMenu.addEventListener('keyup', function (e) {
+                dropDownMenuFunc(toggle)
+            })
+
             toggle.addEventListener('mouseleave', function (event) {
                 closeAllDropdowns()
             })
             dropdownMenu.addEventListener('mouseleave', function (event) {
                 closeAllDropdowns()
             })
+            toggle.addEventListener('focusout', function (event) {
+                closeAllDropdowns();
+            });
+            Array.from(dropdownLink).forEach(function (link) {
+                link.addEventListener('focusout', function (event) {
+                    const focusedElement = event.target.id;
+                    if (focusedElement == "medical") {
+                        closeAllDropdowns();
+                    }
+                })
+            })
+            toggle.addEventListener('focus', function (event) {
+                closeAllDropdowns();
+            });
         } else {
             var arrow = toggle.querySelector(".arrow-blk")
             arrow.addEventListener('click', function (e) {

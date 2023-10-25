@@ -619,7 +619,7 @@ h6.common-sub-ttl {
 }
 
 .sugi-holding-header .nav-menu-list li.dropdown a:hover,
-.sugi-holding-header .nav-menu-list li.dropdown a.visible {
+.sugi-holding-header .nav-menu-list li.dropdown a.visible,.sugi-holding-header .nav-menu-list li.dropdown a:focus {
   color: #048851;
 }
 
@@ -1117,12 +1117,18 @@ h6.common-sub-ttl {
   margin-bottom: 0;
 }
 
-.accordion-ttl:hover .arrow-blk {
+.accordion-ttl:focus{
+  border: 2px solid #000;
+}
+
+.accordion-ttl:hover .arrow-blk,
+.accordion-ttl:focus .arrow-blk {
   border: 1px solid #048851;
   background-color: #fff;
 }
 
-.accordion-ttl:hover .arrow-blk::before {
+.accordion-ttl:hover .arrow-blk::before,
+ .accordion-ttl:focus .arrow-blk::before {
   filter: invert(65%) sepia(18%) saturate(2496%) hue-rotate(109deg) brightness(93%) contrast(97%);
 }
 
@@ -1133,7 +1139,7 @@ h6.common-sub-ttl {
   justify-content: space-between;
   align-items: flex-start;
   padding: 14.5px 30px 14.5px 30px;
-  border: 1px solid transparent;
+  border: 2px solid transparent;
   color: #048851;
   font-size: 1.25rem;
   font-weight: 700;
@@ -2892,7 +2898,8 @@ footer .page-top:hover img {
   }
 
   .sugi-holding-header .nav-menu-list li.dropdown a:hover,
-  .sugi-holding-header .nav-menu-list li.dropdown a.visible {
+  .sugi-holding-header .nav-menu-list li.dropdown a.visible,
+  .sugi-holding-header .nav-menu-list li.dropdown a:focus {
     color: #fff;
   }
 
@@ -3262,11 +3269,13 @@ footer .page-top:hover img {
     filter: unset;
   }
 
-  .accordion-ttl:hover .arrow-blk {
+  .accordion-ttl:hover .arrow-blk,
+  .accordion-ttl:focus .arrow-blk  {
     background-color: #048851;
   }
 
-  .accordion-ttl:hover .arrow-blk::before {
+  .accordion-ttl:hover .arrow-blk::before,
+   .accordion-ttl:focus .arrow-blk::before {
     filter: unset;
   }
 
@@ -3810,7 +3819,8 @@ footer .page-top:hover img {
   }
 
   .sugi-holding-header .nav-menu-list li.dropdown a:hover,
-  .sugi-holding-header .nav-menu-list li.dropdown a.visible {
+  .sugi-holding-header .nav-menu-list li.dropdown a.visible,
+  .sugi-holding-header .nav-menu-list li.dropdown a:focus {
     color: #fff;
   }
 
@@ -4149,12 +4159,14 @@ footer .page-top:hover img {
     margin-bottom: 10px;
   }
 
-  .accordion-ttl:hover .arrow-blk {
+  .accordion-ttl:hover .arrow-blk,
+  .accordion-ttl:focus .arrow-blk  {
     border: 1px solid #048851;
     background-color: #048851;
   }
 
-  .accordion-ttl:hover .arrow-blk::before {
+  .accordion-ttl:hover .arrow-blk::before,
+  .accordion-ttl:focus .arrow-blk::before {
     filter: unset;
   }
 
