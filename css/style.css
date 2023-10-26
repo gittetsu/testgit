@@ -1381,14 +1381,15 @@
   /* top */
   .top .sec-mv {
     margin-bottom: 79px;
-    padding: 0 0 32% 0;
+    padding: 0 0 181px 0;
+    /* padding: 0 0 32% 0; */
     background-image: url('/img/img_mv_bg_sp.png');
     background-size: cover;
     background-repeat: no-repeat;
   }
 
   .top .sec-mv .mv-slider {
-    position: initial;
+    position: relative;
     width: 100%;
     padding: 40.2% 0 8.2%;
     background-image: url('/img/img_mv_bg_02_sp.png');
@@ -1402,14 +1403,16 @@
   .top .sec-mv .mv-txt {
     display: flex;
     position: absolute;
-    top: 56%;
+    top: unset;
+    bottom: 49px;
+    /* top: 56%; */
     align-items: flex-end;
     width: 100%;
     min-width: auto;
   }
 
   .top .sec-mv .mv-txt h2 {
-    width: 49.1%;
+    min-width: 160px;
     margin-left: 5.3%;
     font-size: 1.563rem;
     letter-spacing: 0.7px;
@@ -1417,7 +1420,7 @@
 
   .top .sec-mv .mv-txt h2 span {
     margin-bottom: 6px;
-    padding: 8px 0px 8px 4px;
+    padding: 8px 0px 8px 10px;
   }
 
   .top .sec-mv .mv-txt p {
@@ -2215,7 +2218,6 @@
 @media only screen and (max-width: 374.9px) {
 /* sec-mv */
 .top .sec-mv .mv-txt h2 {
-  width: 49.5%;
   margin-left: 2.5%;
   font-size: 1.375rem;
 }
