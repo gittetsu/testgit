@@ -253,7 +253,12 @@ window.addEventListener('load', function () {
         });
     });
     function smoothScrollTo(targetElement) {
-        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset; // Include current
+        let offset = 0;
+        const mediaQuery = window.matchMedia('(max-width: 1024.9px)');
+        if (mediaQuery.matches) {
+            offset = 150;
+        }
+        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - offset; // Include current
         const startPosition = window.pageYOffset;
         const distance = targetPosition - startPosition;
         const duration = 1000; // Adjust the duration as needed
