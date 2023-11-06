@@ -22,7 +22,7 @@
 .top .sec-mv .mv-slider {
   width: 75.4%;
   position: absolute;
-  right:0;
+  right: 0;
   top: 50px;
   padding: 18.3% 0;
   background-image: url('/img/img_mv_bg_02_sp.png');
@@ -84,6 +84,11 @@
   background-color: #ffffff;
   letter-spacing: 0px;
   border-radius: 4px;
+}
+
+html[lang="en"] .top .sec-mv .mv-txt h2 span:first-child {
+  width: fit-content;
+  padding: 3px 10px 10px;
 }
 
 .top .sec-mv .mv-txt p {
@@ -1382,7 +1387,6 @@
   .top .sec-mv {
     margin-bottom: 79px;
     padding: 0 0 181px 0;
-    /* padding: 0 0 32% 0; */
     background-image: url('/img/img_mv_bg_sp.png');
     background-size: cover;
     background-repeat: no-repeat;
@@ -1405,10 +1409,20 @@
     position: absolute;
     top: unset;
     bottom: 49px;
-    /* top: 56%; */
     align-items: flex-end;
     width: 100%;
     min-width: auto;
+  }
+
+  html[lang="en"] .top .sec-mv .mv-txt {
+    display: block;
+    width: 95%;
+    bottom: 60px;
+  }
+
+  html[lang="en"] .top .sec-mv .mv-txt h2 span {
+    width: fit-content;
+    padding: 3px 10px 10px;
   }
 
   .top .sec-mv .mv-txt h2 {
@@ -1424,10 +1438,15 @@
   }
 
   .top .sec-mv .mv-txt p {
-    width: 33.6%;
+    width: 35.6%;
     margin-left: 4.8%;
     font-size: 1rem;
     letter-spacing: 1.5px;
+  }
+  
+  html[lang="en"] .top .sec-mv .mv-txt p {
+    width: 96%;
+    margin-top: 0;
   }
 
   .top .sec-mv .mv-img {
@@ -2223,7 +2242,7 @@
 }
 
 .top .sec-mv .mv-txt p {
-  width: 34%;
+  width: 36%;
   margin-left: 3.5%;
   font-size: 0.875rem;
   letter-spacing: 1.5px;
