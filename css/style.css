@@ -1227,12 +1227,6 @@
     filter: unset;
   }
 
-
-  .cmm-list-item .common-button {
-    padding: 13px 13px 13px 15px;
-    text-align: left;
-  }
-
   .cmm-list-item .common-button .arrow {
     width: 20px;
     padding: 10px 0;
