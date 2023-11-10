@@ -11,7 +11,7 @@
 /* sec-mv */
 .top .sec-mv {
   position: relative;
-  margin-bottom: 136px;
+  margin-bottom: 60px;
 }
 
 .top .sec-mv .mv-slider {
@@ -57,6 +57,73 @@
   text-align: left;
   position: absolute;
   top: 20%;
+}
+
+/* sec-notice */
+.top .sec-notice {
+  margin-bottom: 100px;
+}
+
+.top .sec-notice .notice-content {
+  display: flex;
+  padding: 30px;
+  background-color: #f8f8f8;
+  border-radius: 5px;
+}
+
+.top .notice-ttl {
+  font-size: 1.25rem;
+  font-weight: 700;
+  width: 30%;
+  max-width: 208px;
+}
+
+.top .notice-ttl span {
+  position: relative;
+  padding-left: 30px;
+}
+
+.top .notice-ttl span::before {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 21px;
+  padding: 0.8px 0;
+  line-height: 1.5;
+  background-color: #048851;
+  color: #ffffff;
+  font-size: 0.813rem;
+  text-align: center;
+  letter-spacing: 0;
+  content: "!";
+  border-radius: 50%;
+}
+
+.top .notice-list {
+  padding-left: 1%;
+  width: 90%;
+}
+
+.top .notice-item {
+  margin-bottom: 5px;
+}
+
+.top .notice-item a {
+  display: flex;
+  padding: 4px 0;
+  color: #048851;
+}
+
+.top .notice-date {
+  display: inline-block;
+  margin-right: 18px;
+  font-size: 0.875rem;
+}
+
+.top .notice-desc {
+  font-size: 1rem;
+  font-weight: 700;
 }
 
 /* sec-news */
@@ -1049,6 +1116,20 @@
     letter-spacing: 0px;
   }
 
+  /* sec-notice */
+
+  .top .sec-notice {
+    margin-bottom: 50px;
+  }
+
+  .top .notice-ttl {
+    width: 30%;
+  }
+
+  .top .notice-list {
+    width: 70%;
+  }
+
   /* sec-news */
   .top .sec-news .tab-list .tab-left .common-button:hover {
     background-color: transparent;
@@ -1337,7 +1418,7 @@
 
   /* top */
   .top .sec-mv {
-    margin-bottom: 79px;
+    margin-bottom: 57px;
     padding: 0 0 32% 0;
     background-image: url('/img/img_mv_bg_sp.png');
     background-size: cover;
@@ -1361,6 +1442,48 @@
     width: 86%;
     max-width: 322px;
     top: unset;
+  }
+
+  /* sec-notice */
+  .top .sec-notice {
+    background-color: #f8f8f8;
+    margin-bottom: 60px;
+  }
+
+  .top .sec-notice .notice-content {
+    display: block;
+    padding: 30px 10px 22px;
+    border-radius: 0;
+    background-color: unset;
+  }
+
+  .top .notice-ttl {
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .top .notice-list {
+    padding: 10px 0 0;
+    width: 100%;
+  }
+
+  .top .notice-item:not(:last-child) {
+    margin-bottom: 12px;
+  }
+
+  .top .notice-item a {
+    display: block;
+    padding: 4px 0;
+  }
+
+  .top .notice-date {
+    margin-right: 0;
+    font-size: 0.75rem;
+  }
+
+  .top .notice-desc {
+    font-size: 0.875rem;
   }
 
   /* sec-news */
