@@ -621,6 +621,8 @@
 }
 
 .btn-link-gp .common-button {
+  display: flex;
+  align-items: center;
   padding: 16px 50px 16px 20px;
   border: unset;
 }
@@ -806,10 +808,8 @@
 }
 
 .cmm-list-item .common-button {
-  width: 100%;
   padding: 14px 50px 14px 20px;
   border: unset;
-  max-width: 182px;
 }
 
 .category-list-blk:hover .common-button {
@@ -1225,12 +1225,6 @@
     transform: translate(50%, -50%);
     border-radius: unset;
     filter: unset;
-  }
-
-
-  .cmm-list-item .common-button {
-    padding: 13px 13px 13px 15px;
-    text-align: left;
   }
 
   .cmm-list-item .common-button .arrow {
