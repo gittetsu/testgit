@@ -933,15 +933,15 @@
 
 .site-link .site-link-btn01,
 .site-link .site-link-btn02,
-.mission02-link .common-button,
-.mission03-link .common-button,
+.mission02-link .external-button,
+.mission03-link .external-button,
 .sustain-linkblk {
   padding: 14px 22px 14px 27px;
 }
 
 .site-link .site-link-btn01,
-.mission02-link .common-button,
-.mission03-link .common-button {
+.mission02-link .external-button,
+.mission03-link .external-button {
   width: 46%;
   max-width: 181px;
 }
@@ -1273,18 +1273,14 @@
 
   .site-link .site-link-btn01,
   .site-link .site-link-btn02,
-  .mission02-link .common-button,
-  .mission03-link .common-button,
+  .mission02-link .external-button,
+  .mission03-link .external-button,
   .sustain-linkblk {
     padding: 14px 20px 14px 19px;
     font-size: 0.75rem;
   }
 
-  .sustain-linkblk .arrow,
-  .site-link .site-link-btn01 .arrow,
-  .site-link .site-link-btn02 .arrow,
-  .mission02-link .common-button .arrow,
-  .mission03-link .common-button .arrow {
+  .sustain-linkblk .arrow {
     width: 20px;
     padding: 10px;
   }
@@ -1660,8 +1656,8 @@
     border-bottom: 1px solid #e6e6e6;
   }
 
-  .top .sec-vision ul li:nth-child(1n),
-  .top .sec-vision ul li:nth-child(3n) {
+  .top .sec-vision ul li:nth-child(1),
+  .top .sec-vision ul li:nth-child(3) {
     border-right: 1px solid #e6e6e6;
   }
 
@@ -2083,22 +2079,15 @@
   }
 
   .site-link .site-link-btn01 {
-    width: 100%;
     margin-bottom: 12px;
-    padding: 17px 18px 14px 17px;
-    max-width: 100%;
   }
 
-  .site-link .site-link-btn02 {
+  .site-link .site-link-btn01,
+  .site-link .site-link-btn02, 
+  .mission02-link .external-button,
+  .mission03-link .external-button {
     width: 100%;
-    padding: 14px 18px 14px 19px;
-    max-width: 100%;
-  }
-
-  .mission02-link .common-button,
-  .mission03-link .common-button,.mission03-link .external-button{
-    width: 100%;
-    padding: 16px 18px 16px 18px;
+    padding: 16px 18px 16px 17px;
     max-width: 100%;
   }
 
