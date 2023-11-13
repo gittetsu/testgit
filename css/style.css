@@ -69,12 +69,20 @@
   min-width: 335px;
 }
 
+html[lang="en"] .top .sec-mv .mv-txt {
+  width: 26%;
+}
+
 .top .sec-mv .mv-txt h2 {
   line-height: 1.2;
   color: #048851;
   font-size: 2.813rem;
   font-weight: 700;
   letter-spacing: 1px;
+}
+
+html[lang="en"] .top .sec-mv .mv-txt h2 {
+  font-size: 1.875rem;
 }
 
 .top .sec-mv .mv-txt h2 span {
@@ -98,6 +106,11 @@ html[lang="en"] .top .sec-mv .mv-txt h2 span:first-child {
   font-size: 1.875rem;
   font-weight: 700;
   letter-spacing: 4.5px;
+}
+
+html[lang="en"] .top .sec-mv .mv-txt p {
+  font-size: 1.25rem;
+  letter-spacing: 0.8px;
 }
 
 /* sec-news */
@@ -1056,12 +1069,27 @@ html[lang="en"] .top .sec-mv .mv-txt h2 span:first-child {
     padding: 2.3%;
   }
 
-  .top .sec-mv {
-    padding: 6.6% 0 40% 2.2%;
+  .top .sec-mv .mv-txt {
+    min-width: 225px;
+    top: 30%;
+  }
+  
+  .top .sec-mv .mv-txt h2 {
+    font-size: 1.8rem;
   }
 
-  .top .sec-mv .mv-slider {
-    padding: 22.3% 0;
+  .top .sec-mv .mv-txt p {
+    margin-top: 15px;
+    font-size: 1.1rem;
+  }  
+
+  html[lang="en"] .top .sec-mv .mv-txt h2 {
+    font-size: 1.25rem;
+  }
+
+  html[lang="en"] .top .sec-mv .mv-txt p {
+    font-size: 1rem;
+    letter-spacing: 0;
   }
 
   .sustainable-blk {
@@ -1366,7 +1394,6 @@ html[lang="en"] .top .sec-mv .mv-txt h2 span:first-child {
     display: none;
   }
 
-
   .common-top-ttl h3 {
     font-size: 3.125rem;
     text-align: center;
@@ -1380,7 +1407,7 @@ html[lang="en"] .top .sec-mv .mv-txt h2 span:first-child {
   /* top */
   .top .sec-mv {
     margin-bottom: 79px;
-    padding: 0 0 181px 0;
+    padding: 0 0 138px 0;
     background-image: url('/img/img_mv_bg_sp.png');
     background-size: cover;
     background-repeat: no-repeat;
@@ -1388,6 +1415,7 @@ html[lang="en"] .top .sec-mv .mv-txt h2 span:first-child {
 
   .top .sec-mv .mv-slider {
     position: relative;
+    top: 0;
     width: 100%;
     padding: 40.2% 0 8.2%;
     background-image: url('/img/img_mv_bg_02_sp.png');
@@ -1424,6 +1452,16 @@ html[lang="en"] .top .sec-mv .mv-txt h2 span:first-child {
     margin-left: 5.3%;
     font-size: 1.563rem;
     letter-spacing: 0.7px;
+  }
+
+  
+  html[lang="en"] .top .sec-mv .mv-txt h2 {
+    font-size: 1.4rem;
+  }
+
+  html[lang="en"] .top .sec-mv .mv-txt p {
+    font-size: 1rem;
+    letter-spacing: 1.5px;
   }
 
   .top .sec-mv .mv-txt h2 span {
@@ -2230,17 +2268,21 @@ html[lang="en"] .top .sec-mv .mv-txt h2 span:first-child {
 
 @media only screen and (max-width: 374.9px) {
 /* sec-mv */
-.top .sec-mv .mv-txt h2 {
-  margin-left: 2.5%;
-  font-size: 1.375rem;
-}
+  .top .sec-mv .mv-txt h2 {
+    margin-left: 2.5%;
+    font-size: 1.375rem;
+  }
 
-.top .sec-mv .mv-txt p {
-  width: 36%;
-  margin-left: 3.5%;
-  font-size: 0.875rem;
-  letter-spacing: 1.5px;
-}
+  html[lang="en"] .top .sec-mv .mv-txt h2 {
+    font-size: 1.25rem;
+  }
+
+  .top .sec-mv .mv-txt p {
+    width: 36%;
+    margin-left: 3.5%;
+    font-size: 0.875rem;
+    letter-spacing: 1.5px;
+  }
 
   .count-txtblk {
     font-size: 2.3rem;
