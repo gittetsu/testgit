@@ -62,7 +62,7 @@ async function updateArticleLists(category, searchKeyword) {
     }
 
     // 取得したデータから記事リストを生成
-    const ulElement = document.getElementById(category.replace("#", ""));
+    const ulElement = document.getElementById("all");
     if (ulElement) {
       ulElement.innerHTML = ''; // リストをクリア
       data.data.forEach((article, index) => {
