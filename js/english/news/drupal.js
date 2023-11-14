@@ -253,6 +253,12 @@ window.addEventListener('load', () => {
   const urlSearchParams = new URLSearchParams(window.location.search);
   const searchKeyword = urlSearchParams.get('search');
   const category = urlSearchParams.get('category');
+
+  // searchパラメータが存在する場合、検索ボックスに表示
+  if (searchKeyword) {
+    searchInput.value = searchKeyword;
+  }
+
   updateArticleLists(category, searchKeyword);
 
   // すべてのタブを取得
