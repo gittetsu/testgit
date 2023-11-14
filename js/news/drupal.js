@@ -233,6 +233,7 @@ window.addEventListener('popstate', () => {
 window.addEventListener('load', () => {
 
   var buttons = document.getElementsByClassName("categoryButton");
+  var searchInput = document.querySelector('.search-input input');
   const currentUrl = window.location.href;
   const url = new URL(currentUrl);
   for (var i = 0; i < buttons.length; i++) {
