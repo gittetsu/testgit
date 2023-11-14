@@ -1,6 +1,5 @@
 
 
-// JSON APIのベースURLを指定
 const apiUrl = 'https://d1vyjchtv8ee5.cloudfront.net/jsonapi/node/sugi_medical';
 
 // ページング関連の変数
@@ -11,14 +10,17 @@ const itemsPerPage = 20; // 1ページあたりのアイテム数
 // カテゴリーごとに記事を取得して表示
 async function updateArticleLists(category, searchKeyword) {
   try {
-    //ページ番号を取得    
-    // カテゴリーごとのフィルター条件を設定
-    const filter = category === 'all' ? '' : category === '#all' ? '' : `&filter[field_medical_list]=${category.replace("#", "")}`;
-
     // JSON APIからデータを取得
     if (!searchKeyword) {
       searchKeyword = "";
     }
+    if (!category) {
+      category = "all";
+    }
+
+    //ページ番号を取得    
+    // カテゴリーごとのフィルター条件を設定
+    const filter = category === 'all' ? '' : category === '#all' ? '' : `&filter[field_medical_list]=${category.replace("#", "")}`;
 
     const currentUrl = window.location.href;
     const url = new URL(currentUrl);
@@ -35,11 +37,8 @@ async function updateArticleLists(category, searchKeyword) {
         const data = await response.json();
         if (data.links.next) {
           totalPages++;
-          console.log(totalPages);
         }
         currentPage++;
-        console.log(currentPage);
-        console.log("test");
       }
       const currentUrl = window.location.href;
       const url = new URL(currentUrl);
@@ -64,7 +63,6 @@ async function updateArticleLists(category, searchKeyword) {
 
     // 取得したデータから記事リストを生成
     const ulElement = document.getElementById(category.replace("#", ""));
-    console.log(data);
     if (ulElement) {
       ulElement.innerHTML = ''; // リストをクリア
 
@@ -208,42 +206,6 @@ document.addEventListener('click', event => {
   }
 });
 
-
-// // 年と月の選択肢を生成する関数
-// function populateYearMonthOptions() {
-//   const yearSelect = document.querySelector('.select-box.year');
-//   const monthSelect = document.querySelector('.select-box.month');
-
-//   const currentDate = new Date();
-//   const currentYear = currentDate.getFullYear();
-//   const currentMonth = currentDate.getMonth() + 1;
-
-//   // 年の選択肢を生成（現在から3年前まで）
-//   for (let year = currentYear; year >= currentYear - 3; year--) {
-//     const option = document.createElement('option');
-//     option.value = year;
-//     option.textContent = year + '年';
-//     yearSelect.appendChild(option);
-//   }
-
-//   // 月の選択肢を生成（1から12まで）
-//   for (let month = 1; month <= 12; month++) {
-//     const option = document.createElement('option');
-//     option.value = month;
-//     option.textContent = month + '月';
-//     monthSelect.appendChild(option);
-//   }
-
-//   // 現在の年月を選択状態にする
-//   yearSelect.value = currentYear;
-//   monthSelect.value = currentMonth;
-// }
-
-// // ページが読み込まれた際に選択肢を生成
-// window.addEventListener('load', () => {
-//   populateYearMonthOptions();
-// });
-
 // URLのクエリパラメータが変更された場合に更新
 window.addEventListener('popstate', () => {
   const urlSearchParams = new URLSearchParams(window.location.search);
@@ -256,12 +218,48 @@ window.addEventListener('popstate', () => {
 
 // ページ読み込み時にデフォルトのカテゴリーで記事を表示
 window.addEventListener('load', () => {
+
+  var buttons = document.getElementsByClassName("categoryButton");
+  var searchInput = document.querySelector('.search-input input');
+  const currentUrl = window.location.href;
+  const url = new URL(currentUrl);
+  for (var i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener("click", function () {
+      var category = this.innerText;
+      selectCategory(category);
+    });
+  }
+
+  function selectCategory(category) {
+    url.searchParams.set('category', category)
+    window.location.href = url.toString();
+  }
+
   const urlSearchParams = new URLSearchParams(window.location.search);
   const searchKeyword = urlSearchParams.get('search');
-  // カテゴリーは選択されたタブに応じて取得
-  const selectedTab = document.querySelector('.tab-btn a.active');
-  const category = selectedTab.getAttribute('data-tab-target');
+  const category = urlSearchParams.get('category');
+
+  // searchパラメータが存在する場合、検索ボックスに表示
+  if (searchKeyword) {
+    searchInput.value = searchKeyword;
+  }
+
   updateArticleLists(category, searchKeyword);
+
+  // すべてのタブを取得
+  var tabs = document.querySelectorAll('.categoryButton');
+
+  // カテゴリに一致するタブを取得
+  var tab = document.querySelector('[data-tab-target="#' + category + '"]');
+
+  // カテゴリに一致するタブが存在する場合、activeクラスを追加
+  if (tab) {
+    // すべてのタブからactiveクラスを削除
+    tabs.forEach(function (t) {
+      t.classList.remove('active');
+    });
+    tab.classList.add('active');
+  }
 
   // ページの最初を示すボタンの要素を取得
   const firstPageButton = document.querySelector('.cmn-pager-first');

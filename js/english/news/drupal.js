@@ -37,11 +37,8 @@ async function updateArticleLists(category, searchKeyword) {
         const data = await response.json();
         if (data.links.next) {
           totalPages++;
-          console.log(totalPages);
         }
         currentPage++;
-        console.log(currentPage);
-        console.log("test");
       }
       const currentUrl = window.location.href;
       const url = new URL(currentUrl);
@@ -66,7 +63,6 @@ async function updateArticleLists(category, searchKeyword) {
 
     // 取得したデータから記事リストを生成
     const ulElement = document.getElementById(category.replace("#", ""));
-    console.log(data);
     if (ulElement) {
       ulElement.innerHTML = ''; // リストをクリア
       data.data.forEach((article, index) => {
