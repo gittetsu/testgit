@@ -25,7 +25,7 @@
   right: 0;
   top: 50px;
   padding: 18.3% 0;
-  background-image: url('/img/img_mv_bg_02_sp.png');
+  background-image: url('/img/img_mv_bg_02.png');
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
@@ -62,15 +62,9 @@
 
 .top .sec-mv .mv-txt {
   z-index: 2;
-  width: 24.5%;
   text-align: left;
   position: absolute;
   top: 20%;
-  min-width: 335px;
-}
-
-html[lang="en"] .top .sec-mv .mv-txt {
-  width: 26%;
 }
 
 .top .sec-mv .mv-txt h2 {
@@ -1066,7 +1060,6 @@ html[lang="en"] .top .sec-mv .mv-txt p {
   }
 
   .top .sec-mv .mv-txt {
-    min-width: 225px;
     top: 30%;
   }
   
@@ -1410,7 +1403,6 @@ html[lang="en"] .top .sec-mv .mv-txt p {
     top: 0;
     width: 100%;
     padding: 40.2% 0 8.2%;
-    background-image: url('/img/img_mv_bg_02_sp.png');
   }
 
   .top .sec-mv .dots {
@@ -1430,7 +1422,6 @@ html[lang="en"] .top .sec-mv .mv-txt p {
 
   html[lang="en"] .top .sec-mv .mv-txt {
     display: block;
-    width: 95%;
     bottom: 60px;
   }
 
@@ -1440,7 +1431,6 @@ html[lang="en"] .top .sec-mv .mv-txt p {
   }
 
   .top .sec-mv .mv-txt h2 {
-    min-width: 160px;
     margin-left: 5.3%;
     font-size: 1.563rem;
     letter-spacing: 0.7px;
@@ -1469,7 +1459,7 @@ html[lang="en"] .top .sec-mv .mv-txt p {
   }
   
   html[lang="en"] .top .sec-mv .mv-txt p {
-    width: 96%;
+    width: auto;
     margin-top: 0;
   }
 
