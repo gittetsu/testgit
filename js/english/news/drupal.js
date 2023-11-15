@@ -15,12 +15,12 @@ async function updateArticleLists(category, searchKeyword) {
       searchKeyword = "";
     }
     if (!category) {
-      category = "all";
+      category = "All";
     }
 
     //ページ番号を取得    
     // カテゴリーごとのフィルター条件を設定
-    const filter = category === 'all' ? '' : category === '#all' ? '' : `&filter[field_en_list]=${category.replace("#", "")}`;
+    const filter = category === 'All' ? '' : category === '#all' ? '' : `&filter[field_en_list]=${category.replace("#", "")}`;
 
     const currentUrl = window.location.href;
     const url = new URL(currentUrl);

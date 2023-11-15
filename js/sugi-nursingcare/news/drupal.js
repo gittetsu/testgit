@@ -16,11 +16,11 @@ async function updateArticleLists(category, searchKeyword) {
       searchKeyword = "";
     }
     if (!category) {
-      category = "all";
+      category = "すべて";
     }
     //ページ番号を取得    
     // カテゴリーごとのフィルター条件を設定
-    const filter = category === 'all' ? '' : category === '#all' ? '' : `&filter[field_nurse_list]=${category.replace("#", "")}`;
+    const filter = category === 'すべて' ? '' : category === '#all' ? '' : `&filter[field_nurse_list]=${category.replace("#", "")}`;
 
     const currentUrl = window.location.href;
     const url = new URL(currentUrl);
