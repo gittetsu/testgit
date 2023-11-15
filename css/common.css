@@ -448,31 +448,6 @@ h6.common-sub-ttl {
   margin-bottom: 14px;
 }
 
-.sugi-holding-header .search-gp .search-btn {
-  display: flex;
-  align-items: center;
-}
-
-.sugi-holding-header .search-gp .search-btn .txt {
-  padding-top: 6px;
-  padding-left: 5px;
-  color: #048851;
-  font-size: 0.875rem;
-  font-weight: 700;
-  cursor: pointer;
-  border-bottom: 1px solid transparent;
-}
-
-.sugi-holding-header .search-gp .search-btn .txt:hover {
-  border-bottom: 1px solid #048851;
-}
-
-.sugi-holding-header .search-gp .search-btn .search-ico {
-  width: 100%;
-  cursor: pointer;
-  max-width: 14px;
-}
-
 .sugi-holding-header .sub-nav-list {
   /* padding-right: 29px; */
   padding-right: 0;
@@ -640,10 +615,6 @@ h6.common-sub-ttl {
   background-color: rgba(255, 255, 255, 0.96);
   transition: height 0.5s ease;
   border-radius: 10px;
-}
-
-.sugi-holding-header .search-btn.hover .sub-menu {
-  display: none;
 }
 
 .sugi-holding-header .dropdown .sub-menu.show-submenu,
@@ -2477,34 +2448,8 @@ footer .page-top:hover img {
     display: flex;
   }
 
-  .sugi-holding-header .header .search-blk .search-btn {
-    position: relative;
-    width: 50px;
-    margin-right: 9px;
-    padding: 12px 0;
-    border: 1px solid #e0e0e0;
-    text-align: center;
-    border-radius: 3px;
-    border-radius: 3px;
-  }
-
-  .sugi-holding-header .search-blk .search-btn:before {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 16px;
-    height: 16px;
-    background: url('/img/common/ico_search.png') no-repeat center/cover;
-    content: '';
-    transform: translate(-50%, -50%);
-  }
-
   .sugi-holding-header .nav-gp {
     width: 40%;
-  }
-
-  .sugi-holding-header .search-blk .search-btn.active:before {
-    background: url('/img/common/ico_cross.png') no-repeat center/cover;
   }
 
   .hamburger {
@@ -2577,22 +2522,6 @@ footer .page-top:hover img {
 
   .sugi-holding-header .search-gp {
     margin-bottom: 0;
-  }
-
-  .sugi-holding-header .search-gp .search-btn {
-    display: block;
-    width: 50px;
-    margin-right: 9px;
-    padding: 6px 10px 10.4px;
-    border: 1px solid #ddd;
-    cursor: pointer;
-    border-radius: 3px;
-  }
-
-  .sugi-holding-header .search-gp .search-btn .search-ico {
-    display: block;
-    width: 14px;
-    margin: 0 auto;
   }
 
   .sugi-holding-header .dropdown .sub-menu .list-gp {
@@ -2673,18 +2602,6 @@ footer .page-top:hover img {
   .sugi-holding-header .dropdown .sub-menu .list-gp .site-gp {
     width: 100%;
     margin-right: 0;
-  }
-
-  .sugi-holding-header .search-btn.dropdown .sub-menu {
-    position: absolute;
-    top: 70px;
-    right: 0;
-    left: 0;
-    z-index: 5;
-    width: 100%;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
-    background: rgba(255, 255, 255, 0.96);
-    border-radius: 0;
   }
 
   .sugi-holding-header form.search {
@@ -3499,34 +3416,8 @@ footer .page-top:hover img {
     display: flex;
   }
 
-  .sugi-holding-header .search-blk .search-btn {
-    position: relative;
-    width: 50px;
-    margin-right: 9px;
-    padding: 12px 0;
-    border: 1px solid #e0e0e0;
-    text-align: center;
-    border-radius: 3px;
-    border-radius: 3px;
-  }
-
-  .sugi-holding-header .search-blk .search-btn:before {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 16px;
-    height: 16px;
-    background: url('/img/common/ico_search.png') no-repeat center/cover;
-    content: '';
-    transform: translate(-50%, -50%);
-  }
-
   .sugi-holding-header .nav-gp {
     width: 40%;
-  }
-
-  .sugi-holding-header .search-blk .search-btn.active:before {
-    background: url('/img/common/ico_cross.png') no-repeat center/cover;
   }
 
   .hamburger {
@@ -3598,22 +3489,6 @@ footer .page-top:hover img {
 
   .sugi-holding-header .search-gp {
     margin-bottom: 0;
-  }
-
-  .sugi-holding-header .search-gp .search-btn {
-    display: block;
-    width: 50px;
-    margin-right: 9px;
-    padding: 11px 10px 13.6px;
-    border: 1px solid #ddd;
-    cursor: pointer;
-    border-radius: 3px;
-  }
-
-  .sugi-holding-header .search-gp .search-btn .search-ico {
-    display: block;
-    width: 14px;
-    margin: 0 auto;
   }
 
   .sugi-holding-header .dropdown .sub-menu {
@@ -3719,18 +3594,6 @@ footer .page-top:hover img {
     width: unset;
     height: unset;
     background-color: unset;
-  }
-
-  .sugi-holding-header .search-btn.dropdown .sub-menu {
-    position: absolute;
-    top: 70px;
-    right: 0;
-    left: 0;
-    z-index: 5;
-    width: 100%;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
-    background: rgba(255, 255, 255, 0.96);
-    border-radius: 0;
   }
 
   .sugi-holding-header form.search {
