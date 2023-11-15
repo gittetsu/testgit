@@ -10,14 +10,22 @@
 
 /* sec-mv */
 .top .sec-mv {
+  display: flex;
   position: relative;
   margin-bottom: 136px;
+  background-image: url('/img/img_mv_bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 6.6% 0 30% 2.2%;
 }
 
 .top .sec-mv .mv-slider {
-  position: relative;
-  padding: 7.2% 0 32.5% 2.2%;
-  background-image: url('/img/img_mv_bg_02.png');
+  width: 75.4%;
+  position: absolute;
+  right: 0;
+  top: 50px;
+  padding: 18.3% 0;
+  background-image: url('/img/img_mv_bg_02_sp.png');
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
@@ -25,7 +33,7 @@
 .top .sec-mv .dots {
   display: flex;
   position: absolute;
-  bottom: 0;
+  bottom: -50px;
   left: 2.2%;
 }
 
@@ -53,10 +61,56 @@
 }
 
 .top .sec-mv .mv-txt {
+  z-index: 2;
+  width: 24.5%;
+  text-align: left;
   position: absolute;
   top: 20%;
-  width: 24.34%;
-  text-align: left;
+  min-width: 335px;
+}
+
+html[lang="en"] .top .sec-mv .mv-txt {
+  width: 26%;
+}
+
+.top .sec-mv .mv-txt h2 {
+  line-height: 1.2;
+  color: #048851;
+  font-size: 2.813rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+html[lang="en"] .top .sec-mv .mv-txt h2 {
+  font-size: 1.875rem;
+}
+
+.top .sec-mv .mv-txt h2 span {
+  display: block;
+  margin-bottom: 8px;
+  padding: 3px 2px 10px 10px;
+  background-color: #ffffff;
+  letter-spacing: 0px;
+  border-radius: 4px;
+}
+
+html[lang="en"] .top .sec-mv .mv-txt h2 span:first-child {
+  width: fit-content;
+  padding: 3px 10px 10px;
+}
+
+.top .sec-mv .mv-txt p {
+  line-height: 1.7;
+  margin-top: 27px;
+  color: #ffffff;
+  font-size: 1.875rem;
+  font-weight: 700;
+  letter-spacing: 4.5px;
+}
+
+html[lang="en"] .top .sec-mv .mv-txt p {
+  font-size: 1.25rem;
+  letter-spacing: 0.8px;
 }
 
 /* sec-news */
@@ -1009,7 +1063,6 @@ html[lang="en"] .count-txtblk {
   .sustainable-blk {
     padding: 0 3%;
     max-width: 100%;
-    ;
   }
 
   .cmm-mission-blk {
@@ -1041,6 +1094,29 @@ html[lang="en"] .count-txtblk {
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .container {
     padding: 2.3%;
+  }
+
+  .top .sec-mv .mv-txt {
+    min-width: 225px;
+    top: 30%;
+  }
+  
+  .top .sec-mv .mv-txt h2 {
+    font-size: 1.8rem;
+  }
+
+  .top .sec-mv .mv-txt p {
+    margin-top: 15px;
+    font-size: 1.1rem;
+  }  
+
+  html[lang="en"] .top .sec-mv .mv-txt h2 {
+    font-size: 1.25rem;
+  }
+
+  html[lang="en"] .top .sec-mv .mv-txt p {
+    font-size: 1rem;
+    letter-spacing: 0;
   }
 
   .sustainable-blk {
@@ -1337,7 +1413,6 @@ html[lang="en"] .count-txtblk {
     display: none;
   }
 
-
   .common-top-ttl h3 {
     font-size: 3.125rem;
     text-align: center;
@@ -1351,13 +1426,16 @@ html[lang="en"] .count-txtblk {
   /* top */
   .top .sec-mv {
     margin-bottom: 79px;
-    padding: 0 0 32% 0;
+    padding: 0 0 138px 0;
     background-image: url('/img/img_mv_bg_sp.png');
     background-size: cover;
     background-repeat: no-repeat;
   }
 
   .top .sec-mv .mv-slider {
+    position: relative;
+    top: 0;
+    width: 100%;
     padding: 40.2% 0 8.2%;
     background-image: url('/img/img_mv_bg_02_sp.png');
   }
@@ -1368,12 +1446,62 @@ html[lang="en"] .count-txtblk {
   }
 
   .top .sec-mv .mv-txt {
+    display: flex;
     position: absolute;
     top: unset;
-    bottom: -79px;
-    left: 5.3%;
-    width: 86%;
-    max-width: 322px;
+    bottom: 49px;
+    align-items: flex-end;
+    width: 100%;
+    min-width: auto;
+  }
+
+  html[lang="en"] .top .sec-mv .mv-txt {
+    display: block;
+    width: 95%;
+    bottom: 60px;
+  }
+
+  html[lang="en"] .top .sec-mv .mv-txt h2 span {
+    width: fit-content;
+    padding: 3px 10px 10px;
+  }
+
+  .top .sec-mv .mv-txt h2 {
+    min-width: 160px;
+    margin-left: 5.3%;
+    font-size: 1.563rem;
+    letter-spacing: 0.7px;
+  }
+
+  
+  html[lang="en"] .top .sec-mv .mv-txt h2 {
+    font-size: 1.4rem;
+  }
+
+  html[lang="en"] .top .sec-mv .mv-txt p {
+    font-size: 1rem;
+    letter-spacing: 1.5px;
+  }
+
+  .top .sec-mv .mv-txt h2 span {
+    margin-bottom: 6px;
+    padding: 8px 0px 8px 10px;
+  }
+
+  .top .sec-mv .mv-txt p {
+    width: 35.6%;
+    margin-left: 4.8%;
+    font-size: 1rem;
+    letter-spacing: 1.5px;
+  }
+  
+  html[lang="en"] .top .sec-mv .mv-txt p {
+    width: 96%;
+    margin-top: 0;
+  }
+
+  .top .sec-mv .mv-img {
+    flex-direction: column-reverse;
   }
 
   /* sec-news */
@@ -2157,8 +2285,21 @@ html[lang="en"] .count-txtblk {
 
 
 @media only screen and (max-width: 374.9px) {
-  .top .sec-mv .mv-txt {
-    bottom: -42%;
+/* sec-mv */
+  .top .sec-mv .mv-txt h2 {
+    margin-left: 2.5%;
+    font-size: 1.375rem;
+  }
+
+  html[lang="en"] .top .sec-mv .mv-txt h2 {
+    font-size: 1.25rem;
+  }
+
+  .top .sec-mv .mv-txt p {
+    width: 36%;
+    margin-left: 3.5%;
+    font-size: 0.875rem;
+    letter-spacing: 1.5px;
   }
 
   .count-txtblk {

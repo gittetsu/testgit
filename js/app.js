@@ -65,10 +65,10 @@ window.addEventListener('load', alignElementsBasedOnHeight);
 var i = 0; // Start from the first image
 var slideTime = 3000; // 3 seconds
 var pcImages = [
-    '/img/img_mv_bg_01.png',
-    '/img/img_mv_bg_02.png',
-    '/img/img_mv_bg_03.png',
-    '/img/img_mv_bg_04.png'
+    '/img/img_mv_bg_01_sp.png',
+    '/img/img_mv_bg_02_sp.png',
+    '/img/img_mv_bg_03_sp.png',
+    '/img/img_mv_bg_04_sp.png'
 ];
 
 var spImages = [
