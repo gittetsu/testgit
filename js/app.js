@@ -64,32 +64,20 @@ window.addEventListener('load', alignElementsBasedOnHeight);
 //mv slider for top page
 var i = 0; // Start from the first image
 var slideTime = 3000; // 3 seconds
-var pcImages = [
-    '/img/img_mv_bg_01_sp.png',
-    '/img/img_mv_bg_02_sp.png',
-    '/img/img_mv_bg_03_sp.png',
-    '/img/img_mv_bg_04_sp.png'
-];
-
-var spImages = [
-    '/img/img_mv_bg_01_sp.png',
-    '/img/img_mv_bg_02_sp.png',
-    '/img/img_mv_bg_03_sp.png',
-    '/img/img_mv_bg_04_sp.png'
+var images = [
+    '/img/img_mv_bg_01.png',
+    '/img/img_mv_bg_02.png',
+    '/img/img_mv_bg_03.png',
+    '/img/img_mv_bg_04.png'
 ];
 
 var slideTimeout;
 
 // Preload images
 var preloadedImages = [];
-for (var j = 0; j < pcImages.length; j++) {
+for (var j = 0; j < images.length; j++) {
     preloadedImages.push(new Image());
-    preloadedImages[j].src = pcImages[j];
-}
-
-for (var k = 0; k < spImages.length; k++) {
-    preloadedImages.push(new Image());
-    preloadedImages[k + pcImages.length].src = spImages[k];
+    preloadedImages[j].src = images[j];
 }
 
 function changePicture() {
@@ -98,11 +86,9 @@ function changePicture() {
     // Apply a CSS transition for smoother slide
     sliderElement.style.transition = 'background-image 0.5s ease-in-out';
 
-    var currentImages = window.innerWidth >= 768 ? pcImages : spImages; // Use PC images for larger screens, SP images for smaller screens
+    i = (i + 1) % images.length; // Loop through images
 
-    i = (i + 1) % currentImages.length; // Loop through images
-
-    sliderElement.style.backgroundImage = "url(" + currentImages[i] + ")";
+    sliderElement.style.backgroundImage = "url(" + images[i] + ")";
 
     updatePagination(); // Update the pagination dots
 
@@ -117,9 +103,7 @@ function updatePagination() {
     var pagination = document.querySelector('.dots');
     pagination.innerHTML = ''; // Clear previous pagination dots
 
-    var currentImages = window.innerWidth >= 768 ? pcImages : spImages; // Use PC images for larger screens, SP images for smaller screens
-
-    for (var j = 0; j < currentImages.length; j++) {
+    for (var j = 0; j < images.length; j++) {
         var dot = document.createElement('span');
         dot.classList.add('dot');
         dot.dataset.slideIndex = j; // Store the slide index as a data attribute
@@ -149,7 +133,7 @@ function updatePagination() {
 // Initialize the slider
 window.addEventListener("load", function () {
     var sliderElement = document.querySelector('.mv-slider');
-    sliderElement.style.backgroundImage = "url(" + pcImages[i] + ")";
+    sliderElement.style.backgroundImage = "url(" + images[i] + ")";
 
     // Start the slideshow
     slideTimeout = setTimeout(changePicture, slideTime);
@@ -157,8 +141,7 @@ window.addEventListener("load", function () {
 
 function updateSliderBackground() {
     var sliderElement = document.querySelector('.mv-slider');
-    var currentImages = window.innerWidth >= 768 ? pcImages : spImages; // Use PC images for larger screens, SP images for smaller screens
-    sliderElement.style.backgroundImage = "url(" + currentImages[i] + ")";
+    sliderElement.style.backgroundImage = "url(" + images[i] + ")";
 }
 
 // Update the images when the window is resized
@@ -166,22 +149,21 @@ window.addEventListener("resize", updateImages);
 window.addEventListener("load", changePicture);
 
 function updateImages() {
-    var currentImages = window.innerWidth >= 768 ? pcImages : spImages; // Use PC images for larger screens, SP images for smaller screens
-
     // Preload images for the current screen size
     preloadedImages = [];
-    for (var j = 0; j < currentImages.length; j++) {
+    for (var j = 0; j < images.length; j++) {
         preloadedImages.push(new Image());
-        preloadedImages[j].src = currentImages[j];
+        preloadedImages[j].src = images[j];
     }
 
     // Update the background image of the slider container
     var sliderElement = document.querySelector('.mv-slider');
-    sliderElement.style.backgroundImage = "url(" + currentImages[i] + ")";
+    sliderElement.style.backgroundImage = "url(" + images[i] + ")";
 
     // Update the pagination dots
     updatePagination();
 }
+
 
 //progress bar slider for top page
 // const crouselSlide = document.querySelector(".topics-slider");
