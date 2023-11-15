@@ -765,14 +765,10 @@ html[lang="en"] .top .sec-mv .mv-txt p {
   align-items: center;
   width: 100%;
   height: 100%;
+  min-height: 80px;
   line-height: 1.5;
-  padding: 14px 50px 14px 17px;
+  padding: 14px 45px 14px 17px;
   border-radius: 5px;
-}
-
-.sustain-link-list .common-button .arrow {
-  top: 50%;
-  transform: translateY(-50%);
 }
 
 /* sec-image-category */
@@ -987,15 +983,15 @@ html[lang="en"] .top .sec-mv .mv-txt p {
 
 .site-link .site-link-btn01,
 .site-link .site-link-btn02,
-.mission02-link .common-button,
-.mission03-link .common-button,
+.mission02-link .external-button,
+.mission03-link .external-button,
 .sustain-linkblk {
   padding: 14px 22px 14px 27px;
 }
 
 .site-link .site-link-btn01,
-.mission02-link .common-button,
-.mission03-link .common-button {
+.mission02-link .external-button,
+.mission03-link .external-button {
   width: 46%;
   max-width: 181px;
 }
@@ -1349,18 +1345,14 @@ html[lang="en"] .top .sec-mv .mv-txt p {
 
   .site-link .site-link-btn01,
   .site-link .site-link-btn02,
-  .mission02-link .common-button,
-  .mission03-link .common-button,
+  .mission02-link .external-button,
+  .mission03-link .external-button,
   .sustain-linkblk {
     padding: 14px 20px 14px 19px;
     font-size: 0.75rem;
   }
 
-  .sustain-linkblk .arrow,
-  .site-link .site-link-btn01 .arrow,
-  .site-link .site-link-btn02 .arrow,
-  .mission02-link .common-button .arrow,
-  .mission03-link .common-button .arrow {
+  .sustain-linkblk .arrow {
     width: 20px;
     padding: 10px;
   }
@@ -1788,8 +1780,8 @@ html[lang="en"] .top .sec-mv .mv-txt p {
     border-bottom: 1px solid #e6e6e6;
   }
 
-  .top .sec-vision ul li:nth-child(1n),
-  .top .sec-vision ul li:nth-child(3n) {
+  .top .sec-vision ul li:nth-child(1),
+  .top .sec-vision ul li:nth-child(3) {
     border-right: 1px solid #e6e6e6;
   }
 
@@ -2053,12 +2045,7 @@ html[lang="en"] .top .sec-mv .mv-txt p {
   }
 
   .sustain-link-list .common-button {
-    padding: 18px 17px 17px 17px;
-  }
-
-  .sustain-link-list .common-button .arrow {
-    top: 20px;
-    transform: translateY(0);
+    padding: 18px 40px 17px 17px;
   }
 
   /* sec-image-category */
@@ -2211,22 +2198,15 @@ html[lang="en"] .top .sec-mv .mv-txt p {
   }
 
   .site-link .site-link-btn01 {
-    width: 100%;
     margin-bottom: 12px;
-    padding: 17px 18px 14px 17px;
-    max-width: 100%;
   }
 
-  .site-link .site-link-btn02 {
+  .site-link .site-link-btn01,
+  .site-link .site-link-btn02, 
+  .mission02-link .external-button,
+  .mission03-link .external-button {
     width: 100%;
-    padding: 14px 18px 14px 19px;
-    max-width: 100%;
-  }
-
-  .mission02-link .common-button,
-  .mission03-link .common-button,.mission03-link .external-button{
-    width: 100%;
-    padding: 16px 18px 16px 18px;
+    padding: 16px 18px 16px 17px;
     max-width: 100%;
   }
 
