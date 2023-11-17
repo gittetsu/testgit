@@ -86,9 +86,15 @@
   max-width: 208px;
 }
 
+html[lang="en"] .top .notice-ttl {
+  width: 33%;
+  max-width: 250px;
+}
+
 .top .notice-ttl span {
   position: relative;
   padding-left: 30px;
+  display: inline-block;
 }
 
 .top .notice-ttl span::before {
@@ -1187,8 +1193,8 @@ html[lang="en"] .top .sec-mv .mv-txt p {
     margin-bottom: 50px;
   }
 
-  .top .notice-ttl {
-    width: 30%;
+  html[lang="en"] .top .notice-ttl {
+    width: 50%;
   }
 
   .top .notice-list {
@@ -1561,7 +1567,8 @@ html[lang="en"] .top .sec-mv .mv-txt p {
     background-color: unset;
   }
 
-  .top .notice-ttl {
+  .top .notice-ttl ,
+  html[lang="en"] .top .notice-ttl {
     text-align: center;
     width: 100%;
     max-width: 100%;
