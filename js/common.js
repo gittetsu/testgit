@@ -253,7 +253,12 @@ window.addEventListener('load', function () {
         });
     });
     function smoothScrollTo(targetElement) {
-        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset; // Include current
+        let offset = 0;
+        const mediaQuery = window.matchMedia('(max-width: 1024.9px)');
+        if (mediaQuery.matches) {
+            offset = 150;
+        }
+        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - offset; // Include current
         const startPosition = window.pageYOffset;
         const distance = targetPosition - startPosition;
         const duration = 1000; // Adjust the duration as needed
@@ -430,9 +435,6 @@ window.addEventListener('load', function () {
     /*menubar */
     var hamburger = document.querySelector('.hamburger')
     var navMenu = document.querySelector('.nav-menu')
-    var searchButton = document.querySelector('.search-btn')
-    var submenu = document.querySelector('.sub-menu')
-    var searchIcon = document.querySelector('.search-ico')
     const bodyElement = document.body
     if (hamburger) {
         hamburger.addEventListener('click', function () {
@@ -441,19 +443,6 @@ window.addEventListener('load', function () {
                 navMenu.classList.add('active')
                 bodyElement.style.overflow = 'hidden'
                 bodyElement.style.position = 'fixed'
-                if (searchButton) {
-                    if (searchButton.classList.contains('show-submenu')) {
-                        subMenu.style.height = 0
-                        searchButton.classList.remove('show-submenu')
-                        submenu.classList.remove('show-submenu')
-                        existingImg = searchIcon.querySelector('img')
-                        if (existingImg) {
-                            newImg.src = '/img/common/ico_search.png'
-                            newImg.alt = 'search'
-                            searchIcon.replaceChild(newImg, existingImg)
-                        }
-                    }
-                }
             } else {
                 navMenu.classList.remove('active')
                 bodyElement.style.overflow = 'auto'
@@ -470,69 +459,7 @@ window.addEventListener('load', function () {
     }
 
     /*search-button*/
-    var searchButton = document.querySelector('.search-btn')
-    const subMenu = document.querySelector('.sub-menu')
-    const dropDownMenu = document.getElementsByClassName('dropdown')
-    var hamburger = document.querySelector('.hamburger')
-    var navMenu = document.querySelector('.nav-menu')
     const mediaQuery = window.matchMedia('(max-width: 1024px)')
-    var isSearch = false
-
-    if (searchButton) {
-        searchButton.addEventListener('click', function (event) {
-            var searchIcon = document.querySelector('.search-ico')
-            existingImg = searchIcon.querySelector('img')
-
-            subMenu.classList.toggle('show-submenu')
-            const contentHeight = subMenu.scrollHeight
-            subMenu.style.height = subMenu.classList.contains('show-submenu')
-                ? 'auto'
-                : '0'
-
-            if (subMenu.classList.contains('show-submenu')) {
-                isSearch = true
-                if (hamburger.classList.contains('active')) {
-                    navMenu.classList.remove('active')
-                    hamburger.classList.remove('active')
-                    bodyElement.style.overflow = 'auto'
-                    bodyElement.style.position = 'relative'
-                }
-                const inputElement = document.querySelector('.search input')
-                searchButton.classList.add('show-submenu')
-                inputElement.addEventListener('click', function (event) {
-                    event.stopPropagation()
-                })
-            } else {
-                isSearch = false
-                searchButton.classList.remove('show-submenu')
-                for (i = 1; i < dropDownMenu.length; i++) {
-                    dropDownMenu[i].classList.remove('disable-pointer-events')
-                }
-            }
-            newImg.alt = 'search'
-            searchIcon.replaceChild(newImg, existingImg)
-
-            handleMediaQueryChange(mediaQuery)
-            mediaQuery.addListener(handleMediaQueryChange)
-        })
-    }
-
-    function handleMediaQueryChange(event) {
-        if (event.matches) {
-            if (subMenu.classList.contains('show-submenu')) {
-                newImg.src = '/img/common/ico_cross.png'
-            } else {
-                newImg.src = '/img/common/ico_search.png'
-            }
-        } else {
-            newImg.src = '/img/common/ico_search.png'
-            if (isSearch) {
-                for (i = 1; i < dropDownMenu.length; i++) {
-                    dropDownMenu[i].classList.add('disable-pointer-events')
-                }
-            }
-        }
-    }
 
     // Image Modal Box
     const modalBtns = Array.from(document.querySelectorAll('.zoom-in'))
