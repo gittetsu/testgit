@@ -27,13 +27,13 @@ async function updateArticleTitles() {
         const ulElement = document.getElementById('all');
 
 
-        
+
         // 記事リストを生成
         data.data.forEach((article, index) => {
             // sortedData.forEach((article, index) => {
-              const liElement = document.createElement('li');
-              liElement.className = 'nursing-newslist';
-              liElement.innerHTML = `
+            const liElement = document.createElement('li');
+            liElement.className = 'nursing-newslist';
+            liElement.innerHTML = `
               <li>
                 <a href="#" class="nursing-news-list" data-article-id="${article.id}">
                   <div class="nursing-news-topcnt d-flex">
@@ -44,8 +44,8 @@ async function updateArticleTitles() {
                 </a>
               </li>
               `;
-              ulElement.appendChild(liElement);
-              });
+            ulElement.appendChild(liElement);
+        });
     } catch (error) {
         console.error('エラーが発生しました:', error);
     }
@@ -70,7 +70,11 @@ document.addEventListener('click', event => {
                     // 条件1: bodyがnullの場合、PDFへ遷移
                     const pdfFileName = articleAttributes.field_pdf.value;
                     if (pdfFileName) {
-                        window.open(`/pdf/${pdfFileName}`, '_blank')
+                        if (!window.open(`/pdf/${pdfFileName}`, '_blank')) {
+                            window.location.href = `/pdf/${pdfFileName}`;
+                        } else {
+                            window.open(`/pdf/${pdfFileName}`, '_blank');
+                        }
                     }
                 } else {
                     // 条件2: bodyがnullでない場合、記事へ遷移

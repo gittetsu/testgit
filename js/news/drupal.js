@@ -206,7 +206,11 @@ document.addEventListener('click', event => {
           // 条件1: bodyがnullの場合、PDFへ遷移
           const pdfFileName = articleAttributes.field_pdf.value;
           if (pdfFileName) {
-            window.open(`/pdf/${pdfFileName}`, '_blank')
+            if(!window.open(`/pdf/${pdfFileName}`, '_blank')){
+              window.location.href = `/pdf/${pdfFileName}`;
+            }else{
+              window.open(`/pdf/${pdfFileName}`, '_blank');
+            }
           }
         } else {
           // 条件2: bodyがnullでない場合、記事へ遷移
