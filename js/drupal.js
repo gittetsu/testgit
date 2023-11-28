@@ -84,9 +84,9 @@ document.addEventListener('click', event => {
 
         if (articleAttributes.body === null) {
           // 条件1: bodyがnullの場合、PDFへ遷移
-          const pdfFileName = articleAttributes.field_pdf.value;
+          const pdfFileName = articleAttributes.field_pdf.value;          
           if (pdfFileName) {
-            window.open(`/pdf/${pdfFileName}`, '_blank')
+            window.location.href = `/pdf/${pdfFileName}`;
           }
         } else {
           // 条件2: bodyがnullでない場合、記事へ遷移
