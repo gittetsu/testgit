@@ -15,18 +15,18 @@ async function updateArticleLists(category) {
     const ulElement = document.getElementById(category);
     if (ulElement) {
       ulElement.innerHTML = ''; // リストをクリア
-      let pdflink = "";
-      if (article.attributes.body === null) {
-        // 条件1: bodyがnullの場合、PDFへ遷移
-        if (article.attributes.field_pdf.value) {
-          pdflink = `/pdf/${article.attributes.field_pdf.value}" target="_blank`;
-        }
-      } else {
-        // 条件2: bodyがnullでない場合、記事へ遷移
-        pdflink = `/news/article?id=${article.id}`;
-      }
       data.data.forEach((article, index) => {
         const liElement = document.createElement('li');
+        let pdflink = "";
+        if (article.attributes.body === null) {
+          // 条件1: bodyがnullの場合、PDFへ遷移
+          if (article.attributes.field_pdf.value) {
+            pdflink = `/pdf/${article.attributes.field_pdf.value}" target="_blank`;
+          }
+        } else {
+          // 条件2: bodyがnullでない場合、記事へ遷移
+          pdflink = `/news/article?id=${article.id}`;
+        }
         liElement.className = 'news-list';
         if (article.attributes.body === null) {
           liElement.innerHTML = `
