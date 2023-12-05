@@ -27,7 +27,7 @@ async function updateArticleLists(category) {
           }
         } else {
           // 条件2: bodyがnullでない場合、記事へ遷移
-          pdflink = `/sugi-medical/news/article.html?id=${articleId}`;
+          pdflink = `/sugi-medical/news/article.html?id=${article.id}`;
         }
         liElement.className = 'news-list';
         liElement.innerHTML = `

@@ -76,7 +76,7 @@ async function updateArticleLists(category, searchKeyword) {
           }
         } else {
           // 条件2: bodyがnullでない場合、記事へ遷移
-          pdflink = `/sugi-nursingcare/news/article.html?id=${articleId}`;
+          pdflink = `/sugi-nursingcare/news/article.html?id=${article.id}`;
         }
         liElement.className = 'news-list';
         liElement.innerHTML = `
