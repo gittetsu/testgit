@@ -93,7 +93,7 @@ async function updateArticleLists(category, searchKeyword) {
         } else {
           liElement.innerHTML = `
           <li class="news-list">
-            <a href="#" class="article-link" data-article-id="${article.id}">
+            <a href="${pdflink}" class="article-link" data-article-id="${article.id}">
               <div class="newslist-header">
                 <span class="news-date">${article.attributes.field_date}</span>
                 <span class="news-info">${article.attributes.field_list}</span>

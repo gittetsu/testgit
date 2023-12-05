@@ -47,7 +47,7 @@ async function updateArticleLists(category) {
         } else {
           liElement.innerHTML = `
           <li class="new-common-list">
-            <a href="#" class="article-link" data-article-id="${article.id}">
+            <a href="${pdflink}" class="article-link" data-article-id="${article.id}">
               <div class="cat-blk">
                 <p class="date small-text">${article.attributes.field_date}</p>
                 <ul>
