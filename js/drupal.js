@@ -26,7 +26,7 @@ async function updateArticleLists(category) {
           }
         } else {
           // 条件2: bodyがnullでない場合、記事へ遷移
-          pdflink = `/news/article.html?id=${article.id}`;
+          pdflink = `/news/article?id=${article.id}`;
         }
         liElement.className = 'news-list';
         if (article.attributes.body === null) {

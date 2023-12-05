@@ -23,7 +23,7 @@ async function updateArticleLists(category) {
         }
       } else {
         // 条件2: bodyがnullでない場合、記事へ遷移
-        pdflink = `/news/article.html?id=${article.id}`;
+        pdflink = `/news/article?id=${article.id}`;
       }
       data.data.forEach((article, index) => {
         const liElement = document.createElement('li');
