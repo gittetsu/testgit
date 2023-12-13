@@ -146,6 +146,8 @@
 
 .sec-nurcare-recruit .recruitment .img-blk img {
   height: 100%;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 
 /* sec-nurcare-consult */
@@ -243,12 +245,13 @@
 
   .sec-nurcare-recruit .recruitment .img-blk {
     width: 100%;
-    border-bottom-right-radius: 8px;
-    border-bottom-left-radius: 8px;
   }
 
   .sec-nurcare-recruit .recruitment .img-blk img {
     height: inherit;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
   }
 
   .sec-nurcare-recruit .recruitment .recruit-btn .nursing-external-link {
