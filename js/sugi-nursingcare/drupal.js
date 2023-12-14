@@ -26,16 +26,24 @@ async function updateArticleTitles() {
         // ul要素を取得
         const ulElement = document.getElementById('all');
 
-
-        
         // 記事リストを生成
         data.data.forEach((article, index) => {
             // sortedData.forEach((article, index) => {
-              const liElement = document.createElement('li');
-              liElement.className = 'nursing-newslist';
-              liElement.innerHTML = `
+            const liElement = document.createElement('li');
+            let pdflink = "";
+            if (article.attributes.body === null) {
+              // 条件1: bodyがnullの場合、PDFへ遷移
+              if (article.attributes.field_pdf.value) {
+                pdflink = `/pdf/${article.attributes.field_pdf.value}" target="_blank`;
+              }
+            } else {
+              // 条件2: bodyがnullでない場合、記事へ遷移
+              pdflink = `/sugi-nursingcare/news/article.html?id=${article.id}`;
+            }    
+            liElement.className = 'nursing-newslist';
+            liElement.innerHTML = `
               <li>
-                <a href="#" class="nursing-news-list" data-article-id="${article.id}">
+                <a href="${pdflink}" class="nursing-news-list" data-article-id="${article.id}">
                   <div class="nursing-news-topcnt d-flex">
                     <span class="nursing-news-date">${formatDate(article.attributes.field_date)}<</span>
                     <span class="nursing-taxo-link">${article.attributes.field_nurse_list}</span>
@@ -44,44 +52,12 @@ async function updateArticleTitles() {
                 </a>
               </li>
               `;
-              ulElement.appendChild(liElement);
-              });
+            ulElement.appendChild(liElement);
+        });
     } catch (error) {
         console.error('エラーが発生しました:', error);
     }
 }
-
-// 記事リンクにクリックイベントを追加
-document.addEventListener('click', event => {
-    const articleLink = event.target.closest('.nursing-news-list');
-    if (articleLink) {
-        event.preventDefault(); // リンクのデフォルト動作をキャンセル
-
-        const articleId = articleLink.getAttribute('data-article-id');
-
-        // ページ遷移の条件に応じてURLを決定
-        const apiUrl = `https://d1vyjchtv8ee5.cloudfront.net/jsonapi/node/sugi_nurse/${articleId}`;
-        fetch(apiUrl)
-            .then(response => response.json())
-            .then(data => {
-                const articleAttributes = data.data.attributes;
-
-                if (articleAttributes.body === null) {
-                    // 条件1: bodyがnullの場合、PDFへ遷移
-                    const pdfFileName = articleAttributes.field_pdf.value;
-                    if (pdfFileName) {
-                        window.open(`/pdf/${pdfFileName}`, '_blank')
-                    }
-                } else {
-                    // 条件2: bodyがnullでない場合、記事へ遷移
-                    window.location.href = `/sugi-nursingcare/news/article.html?id=${articleId}`;
-                }
-            })
-            .catch(error => {
-                console.error('エラーが発生しました:', error);
-            });
-    }
-});
 
 // ページ読み込み時に記事タイトルを更新
 window.addEventListener('load', updateArticleTitles);
