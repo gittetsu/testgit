@@ -542,8 +542,6 @@ html[lang="en"] .top .sec-mv .mv-txt p {
 .pharmacy-gp-blk .pharmacy-gp-tablist li {
   width: 23.64%;
   margin-right: 1.8%;
-  border: 1px solid #ffffff;
-  border-radius: 5px;
 }
 
 .pharmacy-gp-blk .pharmacy-gp-tablist li:last-child {
@@ -572,6 +570,8 @@ html[lang="en"] .top .sec-mv .mv-txt p {
   font-size: 1rem;
   font-weight: 700;
   text-align: center;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
 }
 
 .number-gp-circle {
