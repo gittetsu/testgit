@@ -1,6 +1,5 @@
 
-
-window.addEventListener('load', function () {
+function commonload() {
     /*accordion*/
     var accordionItem = document.querySelectorAll('.accordion')
 
@@ -671,6 +670,4 @@ window.addEventListener('load', function () {
     headerHeigt();
 
     window.addEventListener('resize', headerHeigt);
-
-});
-
+}
