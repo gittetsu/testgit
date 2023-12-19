@@ -1,23 +1,27 @@
 document.addEventListener("DOMContentLoaded", (e) => {
-	const includeHTML = (el, url) => {
-		const xhr = new XMLHttpRequest();
-
-		xhr.addEventListener("readystatechange", (e) => {
-			if (xhr.readyState !== 4) return;
-			if (xhr.status >= 200) {
-				el.outerHTML = xhr.responseText;
+	let doccnt = 0;
+	const includeHTML = async (el, url) => {
+		try {
+			const response = await fetch(url);
+			if (response.ok) {
+				const html = await response.text();
+				el.outerHTML = html;
+				doccnt++;
+				if (doc.length == doccnt) {
+					commonload();
+				}
 			} else {
-				let message = xhr.statusText || "Error loading the file, verify that you are making the request by http or https";
-				el.outerHTML = `<div><p>Error ${xhr.status}: ${message}</p></div>`;
+				throw new Error(`Error ${response.status}: ${response.statusText}`);
 			}
-		});
-
-		xhr.open("GET", url, false);
-		xhr.setRequestHeader("Content-type", "text/html; charset=utf-8");
-		xhr.send();
+		} catch (error) {
+			let message =
+				error.message ||
+				"Error loading the file, verify that you are making the request by http or https";
+			el.outerHTML = `<div><p>${message}</p></div>`;
+		}
 	};
-
-	document
-		.querySelectorAll("[data-include]")
-		.forEach((el) => includeHTML(el, el.getAttribute("data-include")));
+	let doc = document.querySelectorAll("[data-include]");
+	doc.forEach(async (el) => {
+		await includeHTML(el, el.getAttribute("data-include"));
+	})
 });
