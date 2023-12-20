@@ -29,7 +29,6 @@ setupTabs('.sec-number-area .number-gp-blk');
 function alignElementsBasedOnHeight() {
     const groups = {
         '.topics-txt .text-02': 0,
-        '.gp-circle-caption': 0,
     };
 
     // Find the maximum height for each group
