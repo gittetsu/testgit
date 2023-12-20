@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+function commonload() {
     /* Toggle Menu Button */
     var toggleBtn = document.querySelector(".toggle-btn");
     var toggleNav = document.querySelector(".toggle-nav");
@@ -91,4 +91,4 @@ document.addEventListener("DOMContentLoaded", function () {
             item.classList.add("active");
         }
     });
-});
+}
