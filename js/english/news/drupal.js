@@ -21,6 +21,7 @@ async function updateArticleLists(category, searchKeyword) {
     //ページ番号を取得    
     // カテゴリーごとのフィルター条件を設定
     const filter = category === 'All' ? '' : category === '#all' ? '' : `&filter[field_en_list]=${category.replace("#", "")}`;
+    const noticefilter = 'filter[ex1][condition][path]=field_notice&filter[ex1][condition][operator]=IN&filter[ex1][condition][value][1]=1&filter[ex1][condition][value][2]=3'
 
     const currentUrl = window.location.href;
     const url = new URL(currentUrl);
@@ -33,7 +34,7 @@ async function updateArticleLists(category, searchKeyword) {
     let totalPages = 1;
     if (pageNumber == 999) {
       while (currentPage <= totalPages) {
-        const response = await (fetch(`${apiUrl}?sort=-field_date${filter}&page[limit]=${itemsPerPage}&page[offset]=${(currentPage - 1) * itemsPerPage}&filter[title][condition][path]=title&filter[title][condition][operator]=CONTAINS&filter[title][condition][value]=${searchKeyword}`));
+        const response = await (fetch(`${apiUrl}?sort=-field_date${filter}&page[limit]=${itemsPerPage}&page[offset]=${(currentPage - 1) * itemsPerPage}&filter[title][condition][path]=title&filter[title][condition][operator]=CONTAINS&filter[title][condition][value]=${searchKeyword}&${noticefilter}`));
         const data = await response.json();
         if (data.links.next) {
           totalPages++;
@@ -46,7 +47,7 @@ async function updateArticleLists(category, searchKeyword) {
       window.location.href = url.toString();
     }
 
-    const response = await fetch(`${apiUrl}?sort=-field_date${filter}&page[limit]=20&page[offset]=${(pageNumber * 20)}&filter[title][condition][path]=title&filter[title][condition][operator]=CONTAINS&filter[title][condition][value]=${searchKeyword}`);
+    const response = await fetch(`${apiUrl}?sort=-field_date${filter}&page[limit]=20&page[offset]=${(pageNumber * 20)}&filter[title][condition][path]=title&filter[title][condition][operator]=CONTAINS&filter[title][condition][value]=${searchKeyword}&${noticefilter}`);
     const data = await response.json();
 
     // ページの最初を示すボタンの要素を取得

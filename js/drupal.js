@@ -16,7 +16,6 @@ async function updateArticleLists(category) {
     const ulElement = document.getElementById(category);
     if (ulElement) {
       ulElement.innerHTML = ''; // リストをクリア
-
       data.data.forEach((article, index) => {
         const liElement = document.createElement('li');
         let pdflink = "";
