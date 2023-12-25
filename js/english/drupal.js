@@ -9,7 +9,7 @@ async function updateArticleLists(category) {
     const noticefilter = 'filter[ex1][condition][path]=field_notice&filter[ex1][condition][operator]=IN&filter[ex1][condition][value][1]=1&filter[ex1][condition][value][2]=3'
 
     // JSON APIからデータを取得
-    const response = await fetch(`${apiUrl}?sort=-field_date${filter}&page[limit]=5&${noticefilter}`);
+    const response = await fetch(`${apiUrl}?sort=-field_date,-changed${filter}&page[limit]=5&${noticefilter}`);
     const data = await response.json();
 
     // 取得したデータから記事リストを生成
@@ -73,7 +73,7 @@ async function updateNoticeList() {
   try {
     // JSON APIからNOTICELISTのデータを取得
     const noticefilter2 = 'filter[ex1][condition][path]=field_notice&filter[ex1][condition][operator]=IN&filter[ex1][condition][value][1]=2&filter[ex1][condition][value][2]=3'
-    const response2 = await fetch(`${apiUrl}?sort=-field_date,-changed&${noticefilter2}`);
+    const response2 = await fetch(`${apiUrl}?sort=-field_date,-changed&page[limit]=5&${noticefilter2}`);
     const data2 = await response2.json();
     // 条件に応じて要素を取得
     const noticeSection = document.querySelector('.sec-notice');
