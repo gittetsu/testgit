@@ -30,7 +30,7 @@ async function updateArticleLists(category) {
         liElement.className = 'news-list';
         if (article.attributes.body === null) {
           liElement.innerHTML = `
-          <li class="new-common-list">
+          <div class="new-common-list">
             <a href="${pdflink}" class="article-link" data-article-id="${article.id}">
               <div class="cat-blk">
                 <p class="date small-text">${article.attributes.field_date}</p>
@@ -45,7 +45,7 @@ async function updateArticleLists(category) {
         `;
         } else {
           liElement.innerHTML = `
-          <li class="new-common-list">
+          <div class="new-common-list">
             <a href="${pdflink}" class="article-link" data-article-id="${article.id}">
               <div class="cat-blk">
                 <p class="date small-text">${article.attributes.field_date}</p>
