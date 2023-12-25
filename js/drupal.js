@@ -98,13 +98,13 @@ async function updateNoticeList() {
           }
         } else {
           // 条件2: bodyがnullでない場合、記事へ遷移
-          pdflink = `/sugi-nursingcare/news/article.html?id=${article.id}`;
+          pdflink = `/news/article?id=${article.id}`;
         }    
         // liElement2.className = 'notice-list';
         liElement2.className = 'notice-list-item';
         liElement2.innerHTML = `
                 <li class="notice-item">
-                <a href="#">
+                <a href="${pdflink}">
                 <span class="notice-date">${article.attributes.field_date}</span>
                 <p class="notice-desc id="article-title${index + 1}">${article.attributes.title}</p>
                 </a>
