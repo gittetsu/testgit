@@ -42,7 +42,7 @@ async function updateArticleLists(category) {
               </div>
               <p class="newslist-desc pdf" id="article-title${index + 1}">${article.attributes.title}</p>
             </a>
-          </li>
+          </div>
         `;
         } else {
           liElement.innerHTML = `
@@ -57,7 +57,7 @@ async function updateArticleLists(category) {
               </div>
               <p class="newslist-desc text-02" id="article-title${index + 1}">${article.attributes.title}</p>
             </a>
-          </li>
+          </div>
         `;
         }
         ulElement.appendChild(liElement);
