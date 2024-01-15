@@ -81,7 +81,7 @@ async function updateArticleLists(category, searchKeyword) {
         liElement.className = 'news-list';
         if (article.attributes.body === null) {
           liElement.innerHTML = `
-          <li class="news-list">
+          <div class="news-list">
             <a href="${pdflink}" class="article-link" data-article-id="${article.id}">
               <div class="newslist-header">
                 <span class="news-date">${article.attributes.field_date}</span>
@@ -89,11 +89,11 @@ async function updateArticleLists(category, searchKeyword) {
               </div>
               <p class="newslist-desc pdf" id="article-title${index + 1}">${article.attributes.title}</p>
             </a>
-          </li>
+          </div>
           `;
         } else {
           liElement.innerHTML = `
-          <li class="news-list">
+          <div class="news-list">
             <a href="${pdflink}" class="article-link" data-article-id="${article.id}">
               <div class="newslist-header">
                 <span class="news-date">${article.attributes.field_date}</span>
@@ -101,7 +101,7 @@ async function updateArticleLists(category, searchKeyword) {
               </div>
               <p class="newslist-desc text-02" id="article-title${index + 1}">${article.attributes.title}</p>
             </a>
-          </li>
+          </div>
           `;
         }
         ulElement.appendChild(liElement);
