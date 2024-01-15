@@ -1,9 +1,17 @@
 @charset "UTF-8";
 
+.stores-area {
+  position: relative;
+}
+
 .area-blk {
-  display: flex;
-  justify-content: space-between;
-  width: 517px;
+  position: absolute;
+  top: 5.5%;
+  left: 5.4%;
+  padding: 28px 15px 15px 30px;
+  background-color: rgba(244, 244, 244,0.5);
+  border-radius: 3px;
+  width: 560px;
 }
 
 .area-blk .area-list {
@@ -16,10 +24,15 @@
   align-items: center;
   width: 48%;
   margin-right: 13px;
+  line-height: 1.5;
 }
 
 .area-blk .area-list li:nth-child(2n) {
   margin-right: 0;
+}
+
+html[lang="en"] .area-blk .area-list li {
+  line-height: 2;
 }
 
 .area-blk .area-list .text-bg {
@@ -44,6 +57,10 @@
   background-color: #4ec8ef;
 }
 
+.area-blk .area-list .text-bg.purple{
+  background-color: #cda3e3;
+}
+
 .area-blk .area-list .fsize-40 {
   font-size: 2.5rem;
 }
@@ -55,17 +72,15 @@
 
 .group-total {
   display: flex;
-  justify-content: flex-end;
   align-items: center;
-  width: 457px;
 }
 
 .group-total .stock-icon {
-  margin-right: 5.8%;
+  margin-right: 4.8%;
 }
 
 .group-total .group-total-ttl {
-  margin-right: 7.7%;
+  margin-right: 1.7%;
 }
 
 .group-total .group-total-ttl span {
@@ -81,23 +96,22 @@
 .group-total .fsize-55 {
   font-size: 3.438rem;
 }
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  .area-blk {
-    width: 650px;
-  }
-
-}
 
 @media only screen and (max-width: 767.9px) {
+  .stores-map {
+    margin: 0 -20px;
+  }
+
   .area-blk {
-    flex-direction: column;
     width: 100%;
+    position: relative;
+    left: unset;
+    top: unset;
+    padding: 30px 0 15px;
   }
 
   .area-blk .area-list li {
     flex-direction: column;
-    justify-content: center;
-    width: 48%;
     margin-right: 4%;
     margin-bottom: 18px;
   }
@@ -108,11 +122,6 @@
     padding: 3px 6px;
     font-size: 0.875rem;
     text-align: center;
-  }
-
-  .group-total {
-    justify-content: center;
-    width: 100%;
   }
 
   .group-total .fsize-55 {
