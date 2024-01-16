@@ -4,76 +4,6 @@
   box-sizing: border-box;
 }
 
-@font-face {
-  font-family: 'Figtree';
-  font-weight: 700;
-  font-style: normal;
-  src: url('../fonts/Figtree-Bold.ttf');
-}
-
-@font-face {
-  font-family: 'Figtree';
-  font-weight: 300;
-  font-style: normal;
-  src: url('../fonts/Figtree-Light.ttf');
-}
-
-@font-face {
-  font-family: 'Noto Sans JP';
-  font-weight: 400;
-  font-style: normal;
-  src: url('../fonts/NotoSansJP-Regular.ttf');
-}
-
-@font-face {
-  font-family: 'Noto Sans JP';
-  font-weight: 700;
-  font-style: normal;
-  src: url('../fonts/NotoSansJP-Bold.ttf');
-}
-
-@font-face {
-  font-family: 'Dosis';
-  font-weight: 700;
-  font-style: normal;
-  src: url('../fonts/Dosis-Bold.ttf');
-}
-
-@font-face {
-  font-family: 'Niconne';
-  font-weight: 400;
-  font-style: normal;
-  src: url('../fonts/Niconne-Regular.ttf');
-}
-
-@font-face {
-  font-family: 'Zen Maru Gothic';
-  font-weight: 500;
-  font-style: normal;
-  src: url('../fonts/ZenMaruGothic-Medium.ttf');
-}
-
-@font-face {
-  font-family: 'Zen Maru Gothic';
-  font-weight: 700;
-  src: url('../fonts/ZenMaruGothic-Bold.ttf');
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Zen Maru Gothic';
-  font-weight: 400;
-  src: url('../fonts/ZenMaruGothic-Regular.ttf');
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Josefin Sans';
-  font-weight: 700;
-  src: url('../fonts/JosefinSans-Bold.ttf');
-  font-style: normal;
-}
-
 body {
   position: relative;
   width: 100%;
@@ -346,8 +276,8 @@ ol {
 /*title*/
 .ttl-bg {
   padding: 40px 0;
-  background-color: #f4f4f4;
   border: 1px solid #e6e6e6;
+  background-color: #f4f4f4;
 }
 
 .ttl {
@@ -369,8 +299,8 @@ h2.common-ttl {
   padding-bottom: 7px;
   color: #048851;
   font-size: 1.625rem;
-  border-bottom: 2px solid #048851;
   letter-spacing: 0.16rem;
+  border-bottom: 2px solid #048851;
 }
 
 h3.common-ttl {
@@ -427,10 +357,10 @@ h6.common-sub-ttl {
 }
 
 .sugi-holding-header .nav-gp {
-  width: 94%;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  width: 94%;
 }
 
 .sugi-holding-header .header-logo a {
@@ -534,8 +464,8 @@ h6.common-sub-ttl {
 }
 
 .sugi-holding-header .nav-menu-list li a {
-  font-weight: 700;
   font-size: 0.938rem;
+  font-weight: 700;
 }
 
 .sugi-holding-header .nav-menu-list li.dropdown a:hover,
@@ -655,10 +585,10 @@ h6.common-sub-ttl {
 }
 
 .sugi-holding-header .dropdown .sub-menu .list-gp .business-gp {
-  width: 190px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  width: 190px;
   margin-right: 2%;
   letter-spacing: 0px;
 }
@@ -685,9 +615,9 @@ h6.common-sub-ttl {
 }
 
 .sugi-holding-header .dropdown .sub-menu .list-gp li a {
-  padding: 0 0 0 14px;
   display: flex;
   position: relative;
+  padding: 0 0 0 14px;
   color: #048851;
   font-size: 0.875rem;
   letter-spacing: 0.5px;
@@ -708,9 +638,9 @@ h6.common-sub-ttl {
 }
 
 .sugi-holding-header .dropdown .sub-menu .list-gp ul li .sub-menu-detail li a {
+  padding-bottom: 0;
   padding-left: 0;
   font-size: .875rem;
-  padding-bottom: 0;
   font-weight: 400;
 }
 
@@ -720,8 +650,8 @@ h6.common-sub-ttl {
 
 .sugi-holding-header .dropdown .sub-menu .list-gp ul li .sub-menu-detail li {
   line-height: 1.7;
-  padding-bottom: 0;
   margin-bottom: 8px;
+  padding-bottom: 0;
 }
 
 .sugi-holding-header .dropdown .sub-menu .list-gp ul {
@@ -949,8 +879,8 @@ h6.common-sub-ttl {
 
 /*breadcrumb*/
 .breadcrumb {
-  margin-bottom: 100px;
   overflow: auto;
+  margin-bottom: 100px;
   padding: 10.5px 0;
   border-bottom: 1px solid #e6e6e6;
 }
@@ -1050,7 +980,6 @@ h6.common-sub-ttl {
 
 .accordion-ttl {
   display: flex;
-  word-break: break-all;
   position: relative;
   justify-content: space-between;
   align-items: flex-start;
@@ -1060,6 +989,7 @@ h6.common-sub-ttl {
   font-size: 1.25rem;
   font-weight: 700;
   cursor: pointer;
+  word-break: break-all;
   border-radius: 5px;
 }
 
@@ -1450,8 +1380,8 @@ h6.common-sub-ttl {
   width: 100%;
   margin-bottom: 15px;
   text-align: left;
-  -webkit-text-size-adjust: 100%;
   border-collapse: collapse;
+  -webkit-text-size-adjust: 100%;
   border-style: hidden;
   border-top: 1px solid #cce2d9;
   border-bottom: 1px solid #cce2d9;
@@ -1529,8 +1459,8 @@ h6.common-sub-ttl {
 }
 
 .order-list-gp ol .order-list-ttl .order-list-num {
-  background-color: unset;
   border: 1px solid transparent;
+  background-color: unset;
 }
 
 .order-list-ttl .order-list-num {
@@ -1729,13 +1659,13 @@ h6.common-sub-ttl {
 
 .external-button .external-text:after {
   position: absolute;
-  transform: translateY(-50%);
   top: 50%;
   right: 0;
   width: 100%;
   height: 14px;
   background: url('/img/common/ico_external.svg') no-repeat center/100% 100%;
   content: '';
+  transform: translateY(-50%);
   max-width: 14px;
 }
 
@@ -1756,8 +1686,8 @@ h6.common-sub-ttl {
   width: 24px;
   margin-left: 10px;
   padding: 12px 0;
-  transform: translateY(-50%);
   background-color: transparent;
+  transform: translateY(-50%);
   transition: all 0.3s ease-in-out;
   border-radius: 50%;
 }
@@ -2362,10 +2292,10 @@ footer .page-top:hover img {
   /*header*/
   .sugi-holding-header {
     position: fixed;
+    top: 0;
+    z-index: 5;
     width: 100%;
     background-color: #fff;
-    z-index: 5;
-    top: 0;
   }
 
   .sugi-holding-header .header-inner {
@@ -2642,9 +2572,9 @@ footer .page-top:hover img {
     position: relative;
     width: 20px;
     height: 20px;
+    margin-left: auto;
     background-color: #fff;
     border-radius: 3px;
-    margin-left: auto;
   }
 
   .sugi-holding-header .nav-menu-list li.dropdown .list .click-arrow {
@@ -3293,10 +3223,10 @@ footer .page-top:hover img {
   /*header*/
   .sugi-holding-header {
     position: fixed;
+    top: 0;
+    z-index: 5;
     width: 100%;
     background-color: #fff;
-    z-index: 5;
-    top: 0;
   }
 
   .sugi-holding-header .header-inner {
@@ -3580,9 +3510,9 @@ footer .page-top:hover img {
     position: relative;
     width: 20px;
     height: 20px;
+    margin-left: auto;
     background-color: #fff;
     border-radius: 3px;
-    margin-left: auto;
   }
 
   .sugi-holding-header .nav-menu-list li.dropdown .list {
@@ -3686,10 +3616,10 @@ footer .page-top:hover img {
 
   .sidebar-bnr-sp .sb-bnr-arrow {
     position: relative;
-    max-width: 20px;
     width: 100%;
     height: 20px;
     background-color: #048851;
+    max-width: 20px;
     border-radius: 3px;
   }
 
