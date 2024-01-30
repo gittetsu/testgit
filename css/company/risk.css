@@ -2,25 +2,30 @@
 
 /* sec-compliance */
 .sec-compliance .scope-img {
-	width: 15%;
-	margin-right: 3.5%;
+	max-width: 110px;
+	margin: 0 auto;
 }
 
-.sec-compliance .scope-img img {
-	max-width: 96px;
+ul.reg-number {
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.reg-number {
+	font-weight: 400;
+	font-size: 0.688rem;
 }
 
 .sec-compliance .scope-desc {
-	width: 81%;
+	font-size: 0.75rem;
 }
 
-@media only screen and (max-width: 767.9px) {
-	.sec-compliance .scope-img {
-		width: 18%;
-		margin-right: 1.5%;
-	}
+.sec-compliance .scope-desc .unorder-list-gp li::before {
+	top: 9px;
+	width: 4px;
+	height: 4px;
+}
 
-	.sec-compliance .scope-desc {
-		width: 80%;
-	}
+.sec-compliance .bg-gray-content {
+	margin-bottom: 15px;
 }
