@@ -69,7 +69,7 @@ async function updateArticleLists(category, searchKeyword) {
       data.data.forEach((article, index) => {
         const liElement = document.createElement('li');
         let pdflink = "";
-        pdflink = `/topics/article.html?id=${article.id}`;
+        pdflink = `/topic/article/index.html?id=${article.id}`;
         liElement.className = 'topics';
         liElement.innerHTML = `
         <li class="topics-list">
