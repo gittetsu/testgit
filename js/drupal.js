@@ -1,5 +1,6 @@
 // JSON APIのベースURLを指定
 const apiUrl = 'https://d1vyjchtv8ee5.cloudfront.net/jsonapi/node/sugi_hd';
+// const apiUrl = 'https://d37m9cibsc5611.cloudfront.net/jsonapi/node/sugi_group';
 
 // カテゴリーごとに記事を取得して表示
 async function updateArticleLists(category) {
@@ -119,6 +120,52 @@ async function updateNoticeList() {
   }
 }
 
+async function updateGroupList() {
+  try {
+    // const groupUrl = 'https://d1vyjchtv8ee5.cloudfront.net/jsonapi/node/sugi_group';
+    // const groupUrl = 'https://d1vyjchtv8ee5.cloudfront.net/jsonapi/node/sugi_hd';
+    const groupUrl = 'https://d37m9cibsc5611.cloudfront.net/jsonapi/node/sugi_group';
+    console.log(groupUrl);
+
+    // JSON APIからデータを取得
+    const response3 = await fetch(`${groupUrl}?sort=-field_date,-changed`);
+    const data3 = await response3.json();
+    console.log(data3);
+
+    // 取得したデータから記事リストを生成
+    const groupListElement = document.getElementById('topics-slider');
+    if (groupListElement) {
+      groupListElement.innerHTML = ''; // リストをクリア
+      data3.data.forEach((article, index) => {
+        const liElement3 = document.createElement('li');
+        let pdflink = "";
+        pdflink = `/topic/article/index.html?id=${article.id}`;
+        // liElement.className = 'news-list';
+        liElement3.className = 'topics-item';
+        liElement3.innerHTML = `
+          <li class="topics-item slick-slide">
+          <a href="${pdflink}" class="topics-box" data-article-id="${article.id}>
+            <div class="topics-img">
+              <img src="/topic/img/${article.attributes.field_group_thumbnail}" alt="" width="240" height="140">
+            </div>
+            <div class="topics-txt">
+              <p class="text-02">${article.attributes.title}</p>
+              <div class="d-flex">
+                <p class="date small-text">${article.attributes.field_date}</p>
+                <span class="category">${article.attributes.field_group_list}</span>
+              </div>
+            </div>
+          </a>
+        </li>
+  `;
+        groupListElement.appendChild(liElement3);
+      });
+    }
+  } catch (error) {
+    console.error('エラーが発生しました:', error);
+  }
+}
+
 // タブリンクにクリックイベントを追加
 const tabLinks = document.querySelectorAll('.tablinks');
 tabLinks.forEach(link => {
@@ -132,4 +179,5 @@ tabLinks.forEach(link => {
 window.addEventListener('load', () => {
   updateArticleLists('all'); // デフォルトは 'all' カテゴリー
   updateNoticeList(); // NOTICELISTの記事を表示
+  updateGroupList(); // Grouptopicsの記事を表示
 });
