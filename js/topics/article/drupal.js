@@ -21,9 +21,24 @@ document.addEventListener('DOMContentLoaded', function () {
             console.log(data);
 
             // article-body要素に本文を挿入
-            const articleBody = data.data.attributes.body.value;
+            const inputtext = data.data.attributes.body.value;
+            let replacementMap = {
+                '/sites/default/files/inline-images/': '../../topic/img/',
+                'width="': 'style="width: ',
+                'data-align="right"': 'class="align-right"',
+                'data-align="left"': 'class="align-left"',
+                'data-align="center"': 'class="align-center"'
+            };
+            let resulttext = inputtext.replace(
+                new RegExp(Object.keys(replacementMap).join("|"), "g"),
+                match => replacementMap[match]
+            );
+            console.log(resulttext);
+
+            // const articleBody = data.data.attributes.body.value;
             const articleBodyElement = document.getElementById('article-body');
-            articleBodyElement.innerHTML = articleBody;
+            // articleBodyElement.innerHTML = articleBody;
+            articleBodyElement.innerHTML = resulttext;
 
             // article-date要素に本文を挿入
             const articleDate = formatDate(data.data.attributes.field_date);
