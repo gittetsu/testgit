@@ -128,7 +128,7 @@ async function updateGroupList() {
     console.log(groupUrl);
 
     // JSON APIからデータを取得
-    const response3 = await fetch(`${groupUrl}?sort=-field_date,-changed`);
+    const response3 = await fetch(`${groupUrl}?sort=-field_date,-changed&page[limit]=10`);
     const data3 = await response3.json();
     console.log(data3);
 
@@ -137,16 +137,19 @@ async function updateGroupList() {
     if (groupListElement) {
       groupListElement.innerHTML = ''; // リストをクリア
       data3.data.forEach((article, index) => {
+        console.log(article);
+        console.log(index);
         const liElement3 = document.createElement('li');
         let pdflink = "";
         pdflink = `/topic/article/index.html?id=${article.id}`;
         // liElement.className = 'news-list';
         liElement3.className = 'topics-item';
-        liElement3.innerHTML = `
-          <li class="topics-item slick-slide">
+        if (index == 2) {
+          liElement3.innerHTML = `
+          <li class="topics-item slick-slide id="lastClone"">
           <a href="${pdflink}" class="topics-box" data-article-id="${article.id}>
             <div class="topics-img">
-              <img src="/topic/img/${article.attributes.field_group_thumbnail}" alt="" width="240" height="140">
+              <img src="/topic/img/${article.attributes.field_group_thumbnail}" alt="" width="240" height="140" style="object-fit: cover;">
             </div>
             <div class="topics-txt">
               <p class="text-02">${article.attributes.title}</p>
@@ -157,7 +160,42 @@ async function updateGroupList() {
             </div>
           </a>
         </li>
-  `;
+        `;
+        } else if (index == 7) {
+          liElement3.innerHTML = `
+          <li class="topics-item slick-slide id="firstClone"">
+          <a href="${pdflink}" class="topics-box" data-article-id="${article.id}>
+            <div class="topics-img">
+              <img src="/topic/img/${article.attributes.field_group_thumbnail}" alt="" width="240" height="140" style="object-fit: cover;">
+            </div>
+            <div class="topics-txt">
+              <p class="text-02">${article.attributes.title}</p>
+              <div class="d-flex">
+                <p class="date small-text">${article.attributes.field_date}</p>
+                <span class="category">${article.attributes.field_group_list}</span>
+              </div>
+            </div>
+          </a>
+        </li>
+        `;
+        } else {
+          liElement3.innerHTML = `
+          <li class="topics-item slick-slide">
+          <a href="${pdflink}" class="topics-box" data-article-id="${article.id}>
+            <div class="topics-img">
+              <img src="/topic/img/${article.attributes.field_group_thumbnail}" alt="" width="240" height="140" style="object-fit: cover;">
+            </div>
+            <div class="topics-txt">
+              <p class="text-02">${article.attributes.title}</p>
+              <div class="d-flex">
+                <p class="date small-text">${article.attributes.field_date}</p>
+                <span class="category">${article.attributes.field_group_list}</span>
+              </div>
+            </div>
+          </a>
+        </li>
+        `;
+        }
         groupListElement.appendChild(liElement3);
       });
     }
