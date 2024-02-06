@@ -24,10 +24,10 @@ document.addEventListener('DOMContentLoaded', function () {
             const inputtext = data.data.attributes.body.value;
             let replacementMap = {
                 '/sites/default/files/inline-images/': '../../topic/img/',
-                'width="': 'style="width: ',
+                'width="': 'style="margin-bottom:40px; width: ',
                 'data-align="right"': 'class="align-right"',
                 'data-align="left"': 'class="align-left"',
-                'data-align="center"': 'class="align-center"'
+                'data-align="center"': 'class="align-center"',
             };
             let resulttext = inputtext.replace(
                 new RegExp(Object.keys(replacementMap).join("|"), "g"),
