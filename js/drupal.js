@@ -149,7 +149,7 @@ async function updateGroupList() {
           <li class="topics-item slick-slide id="lastClone"">
           <a href="${pdflink}" class="topics-box" data-article-id="${article.id}>
             <div class="topics-img">
-              <img src="/topic/img/${article.attributes.field_group_thumbnail}" alt="" style="object-fit: cover; width:340px; height:200px;">
+              <img src="/topic/img/${article.attributes.field_group_thumbnail}" alt="" style="object-fit: cover; aspect-ratio: 4/3;">
             </div>
             <div class="topics-txt">
               <p class="text-02">${article.attributes.title}</p>
@@ -166,7 +166,7 @@ async function updateGroupList() {
           <li class="topics-item slick-slide id="firstClone"">
           <a href="${pdflink}" class="topics-box" data-article-id="${article.id}>
             <div class="topics-img">
-              <img src="/topic/img/${article.attributes.field_group_thumbnail}" alt="" style="object-fit: cover; width:340px; height:200px;">
+              <img src="/topic/img/${article.attributes.field_group_thumbnail}" alt="" style="object-fit: cover; aspect-ratio: 4/3;">
             </div>
             <div class="topics-txt">
               <p class="text-02">${article.attributes.title}</p>
@@ -183,7 +183,7 @@ async function updateGroupList() {
           <li class="topics-item slick-slide">
           <a href="${pdflink}" class="topics-box" data-article-id="${article.id}>
             <div class="topics-img">
-              <img src="/topic/img/${article.attributes.field_group_thumbnail}" alt="" style="object-fit: cover; width:340px; height:200px;">
+              <img src="/topic/img/${article.attributes.field_group_thumbnail}" alt="" style="object-fit: cover; aspect-ratio: 4/3">
             </div>
             <div class="topics-txt">
               <p class="text-02">${article.attributes.title}</p>
