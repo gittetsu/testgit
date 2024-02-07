@@ -75,7 +75,7 @@ async function updateArticleLists(category, searchKeyword) {
         <div class="topics-list">
           <a href="${pdflink}" class="article-link" data-article-id="${article.id}">
           <div class="topic-img">
-            <img src="../topic/img/${article.attributes.field_group_thumbnail}" alt="" width="220" height="130">
+            <img src="../topic/img/${article.attributes.field_group_thumbnail}" alt="" style="object-fit: cover; width:220px; height:130px;">
           </div>
           <div class="topic-desc">
             <div>
