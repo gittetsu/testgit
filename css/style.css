@@ -428,7 +428,7 @@ html[lang="en"] .top .sec-mv .mv-txt p {
 }
 
 .top .sec-topics .topics-slider .topics-txt .category {
-  margin-left: 10px;
+  display: inline-block;
   padding: 0px 8px;
   background-color: #048851;
   color: #ffffff;
