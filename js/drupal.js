@@ -153,10 +153,8 @@ async function updateGroupList() {
             </div>
             <div class="topics-txt">
               <p class="text-02">${article.attributes.title}</p>
-              <div class="d-flex">
                 <p class="date small-text">${article.attributes.field_date}</p>
                 <span class="category">${article.attributes.field_group_list}</span>
-              </div>
             </div>
           </a>
         </li>
@@ -170,10 +168,8 @@ async function updateGroupList() {
             </div>
             <div class="topics-txt">
               <p class="text-02">${article.attributes.title}</p>
-              <div class="d-flex">
                 <p class="date small-text">${article.attributes.field_date}</p>
                 <span class="category">${article.attributes.field_group_list}</span>
-              </div>
             </div>
           </a>
         </li>
@@ -187,10 +183,8 @@ async function updateGroupList() {
             </div>
             <div class="topics-txt">
               <p class="text-02">${article.attributes.title}</p>
-              <div class="d-flex">
                 <p class="date small-text">${article.attributes.field_date}</p>
                 <span class="category">${article.attributes.field_group_list}</span>
-              </div>
             </div>
           </a>
         </li>
