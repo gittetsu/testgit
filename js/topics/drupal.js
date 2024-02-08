@@ -72,15 +72,15 @@ async function updateArticleLists(category, searchKeyword) {
         pdflink = `/topic/article/index.html?id=${article.id}`;
         liElement.className = 'topics';
         liElement.innerHTML = `
-        <li class="topics-list">
+        <div class="topics-list">
           <a href="${pdflink}" class="article-link" data-article-id="${article.id}">
           <div class="topic-img">
-            <img src="../topic/img/${article.attributes.field_group_thumbnail}" alt="" width="220" height="130">
+            <img src="../topic/img/${article.attributes.field_group_thumbnail}" alt="" style="object-fit: cover; width:220px; aspect-ratio: 4/3">
           </div>
           <div class="topic-desc">
             <div>
               <span class="topic-date">${article.attributes.field_date}</span>
-              <span class="topic-cat">${article.attributes.field_group_list}</span>
+              <br><span class="topic-cat">${article.attributes.field_group_list}</span></br>
             </div>
             <p class="topic-txt" id="article-title${index + 1}">${article.attributes.title}</p>
           </div>
