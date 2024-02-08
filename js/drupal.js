@@ -1,6 +1,6 @@
 // JSON APIのベースURLを指定
-const apiUrl = 'https://d1vyjchtv8ee5.cloudfront.net/jsonapi/node/sugi_hd';
-// const apiUrl = 'https://d37m9cibsc5611.cloudfront.net/jsonapi/node/sugi_group';
+// const apiUrl = 'https://d1vyjchtv8ee5.cloudfront.net/jsonapi/node/sugi_hd';
+const apiUrl = 'https://d37m9cibsc5611.cloudfront.net/jsonapi/node/sugi_hd';
 
 // カテゴリーごとに記事を取得して表示
 async function updateArticleLists(category) {
@@ -79,17 +79,11 @@ async function updateNoticeList() {
     // 条件に応じて要素を取得
     const noticeSection = document.querySelector('.sec-notice');
 
-    // 条件が true の場合、要素を非表示にする
-    if (data2.data.length === 0) {
-      noticeSection.style.display = 'none';
-    } else {
-      // NOTICELIST用のリスト要素を取得
+    if (data2.data.length !== 0) {
       const noticeListElement = document.getElementById('noticelist');
-      // const noticeListElement = document.getElementById('li');
       if (noticeListElement) {
         noticeListElement.innerHTML = ''; // リストをクリア
         data2.data.forEach((article, index) => {
-          // const liElement2 = document.createElement('li');
           const liElement2 = document.createElement('noticelist');
           let pdflink = "";
           if (article.attributes.body === null) {
@@ -112,6 +106,7 @@ async function updateNoticeList() {
                 </li>
         `;
           noticeListElement.appendChild(liElement2);
+          noticeSection.style.display = 'block';
         });
       }
     }
