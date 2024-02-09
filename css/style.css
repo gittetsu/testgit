@@ -69,6 +69,7 @@
 
 /* sec-notice */
 .top .sec-notice {
+  display: none;
   margin-bottom: 100px;
 }
 
