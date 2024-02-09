@@ -1,5 +1,6 @@
 // JSON APIのベースURLを指定
 const apiUrl = 'https://d1vyjchtv8ee5.cloudfront.net/jsonapi/node/sugi_hd';
+// const apiUrl = 'https://d37m9cibsc5611.cloudfront.net/jsonapi/node/sugi_hd';
 
 // カテゴリーごとに記事を取得して表示
 async function updateArticleLists(category) {
@@ -78,17 +79,11 @@ async function updateNoticeList() {
     // 条件に応じて要素を取得
     const noticeSection = document.querySelector('.sec-notice');
 
-    // 条件が true の場合、要素を非表示にする
-    if (data2.data.length === 0) {
-      noticeSection.style.display = 'none';
-    } else {
-      // NOTICELIST用のリスト要素を取得
+    if (data2.data.length !== 0) {
       const noticeListElement = document.getElementById('noticelist');
-      // const noticeListElement = document.getElementById('li');
       if (noticeListElement) {
         noticeListElement.innerHTML = ''; // リストをクリア
         data2.data.forEach((article, index) => {
-          // const liElement2 = document.createElement('li');
           const liElement2 = document.createElement('noticelist');
           let pdflink = "";
           if (article.attributes.body === null) {
@@ -111,8 +106,87 @@ async function updateNoticeList() {
                 </li>
         `;
           noticeListElement.appendChild(liElement2);
+          noticeSection.style.display = 'block';
         });
       }
+    }
+  } catch (error) {
+    console.error('エラーが発生しました:', error);
+  }
+}
+
+async function updateGroupList() {
+  try {
+    // const groupUrl = 'https://d1vyjchtv8ee5.cloudfront.net/jsonapi/node/sugi_group';
+    // const groupUrl = 'https://d1vyjchtv8ee5.cloudfront.net/jsonapi/node/sugi_hd';
+    const groupUrl = 'https://d37m9cibsc5611.cloudfront.net/jsonapi/node/sugi_group';
+    console.log(groupUrl);
+
+    // JSON APIからデータを取得
+    const response3 = await fetch(`${groupUrl}?sort=-field_date,-changed&page[limit]=10`);
+    const data3 = await response3.json();
+    console.log(data3);
+
+    // 取得したデータから記事リストを生成
+    const groupListElement = document.getElementById('topics-slider');
+    if (groupListElement) {
+      groupListElement.innerHTML = ''; // リストをクリア
+      data3.data.forEach((article, index) => {
+        console.log(article);
+        console.log(index);
+        const liElement3 = document.createElement('li');
+        let pdflink = "";
+        pdflink = `/topic/article/index.html?id=${article.id}`;
+        // liElement.className = 'news-list';
+        liElement3.className = 'topics-item';
+        if (index == 2) {
+          liElement3.innerHTML = `
+          <li class="topics-item slick-slide id="lastClone"">
+          <a href="${pdflink}" class="topics-box" data-article-id="${article.id}>
+            <div class="topics-img">
+              <img src="/topic/img/${article.attributes.field_group_thumbnail}" alt="" style="object-fit: cover; aspect-ratio: 4/3;">
+            </div>
+            <div class="topics-txt">
+              <p class="text-02">${article.attributes.title}</p>
+                <p class="date small-text">${article.attributes.field_date}</p>
+                <span class="category">${article.attributes.field_group_list}</span>
+            </div>
+          </a>
+        </li>
+        `;
+        } else if (index == 7) {
+          liElement3.innerHTML = `
+          <li class="topics-item slick-slide id="firstClone"">
+          <a href="${pdflink}" class="topics-box" data-article-id="${article.id}>
+            <div class="topics-img">
+              <img src="/topic/img/${article.attributes.field_group_thumbnail}" alt="" style="object-fit: cover; aspect-ratio: 4/3;">
+            </div>
+            <div class="topics-txt">
+              <p class="text-02">${article.attributes.title}</p>
+                <p class="date small-text">${article.attributes.field_date}</p>
+                <span class="category">${article.attributes.field_group_list}</span>
+            </div>
+          </a>
+        </li>
+        `;
+        } else {
+          liElement3.innerHTML = `
+          <li class="topics-item slick-slide">
+          <a href="${pdflink}" class="topics-box" data-article-id="${article.id}>
+            <div class="topics-img">
+              <img src="/topic/img/${article.attributes.field_group_thumbnail}" alt="" style="object-fit: cover; aspect-ratio: 4/3">
+            </div>
+            <div class="topics-txt">
+              <p class="text-02">${article.attributes.title}</p>
+                <p class="date small-text">${article.attributes.field_date}</p>
+                <span class="category">${article.attributes.field_group_list}</span>
+            </div>
+          </a>
+        </li>
+        `;
+        }
+        groupListElement.appendChild(liElement3);
+      });
     }
   } catch (error) {
     console.error('エラーが発生しました:', error);
@@ -132,4 +206,5 @@ tabLinks.forEach(link => {
 window.addEventListener('load', () => {
   updateArticleLists('all'); // デフォルトは 'all' カテゴリー
   updateNoticeList(); // NOTICELISTの記事を表示
+  // updateGroupList(); // Grouptopicsの記事を表示
 });

@@ -167,12 +167,12 @@
   left: 19.5%;
 }
 
-/*tab-gp for command-out*/
-/* .search-panel .search-gp {
+/* tab-gp for command-out*/
+.search-panel .search-gp {
   margin-bottom: 30px;
   padding-bottom: 30px;
   border-bottom: 1px solid #e0e0e0;
-} */
+}
 
 .search-panel .tab-gp {
   justify-content: flex-start;
