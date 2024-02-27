@@ -2441,7 +2441,7 @@ footer .page-top:hover img {
 
   .sugi-holding-header .dropdown .sub-menu .list-gp .business-gp-wrap {
     width: 100%;
-    display: block;
+    display: none;
     padding-left: 21px;
   }
 
@@ -3455,7 +3455,7 @@ footer .page-top:hover img {
 
   .sugi-holding-header .dropdown .sub-menu .list-gp .business-gp-wrap {
     width: 100%;
-    display: block;
+    display: none;
     padding-left: 21px;
   }
 
