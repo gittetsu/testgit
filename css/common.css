@@ -436,7 +436,7 @@ h6.common-sub-ttl {
 }
 
 .sugi-holding-header .nav-menu-list li {
-  margin-right: 22px;
+  margin-right: 20px;
   padding-bottom: 27px;
   font-size: 0.875rem;
 }
@@ -505,10 +505,17 @@ h6.common-sub-ttl {
 .sugi-holding-header .sub-menu-list .other-link span {
   display: inline-block;
   position: relative;
-  padding-right: 25px;
+  padding: 0 25px 0 10px;
+  font-weight: 400;
 }
 
-.sugi-holding-header .sub-menu-list .other-link span:after {
+.sugi-holding-header .sub-menu-list .other-link span::before {
+  position: absolute;
+  content: '\002D\0020';
+  left: 0;
+}
+
+.sugi-holding-header .sub-menu-list .other-link span::after {
   position: absolute;
   top: 5px;
   right: 0;
@@ -584,13 +591,28 @@ h6.common-sub-ttl {
   padding-left: 2.8%;
 }
 
-.sugi-holding-header .dropdown .sub-menu .list-gp .business-gp {
+.sugi-holding-header .dropdown.business .sub-menu .list-gp {
+  justify-content: space-between;
+}
+
+.sugi-holding-header .dropdown .sub-menu .list-gp  .business-gp-wrap {
+  width: 76%;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  width: 190px;
-  margin-right: 2%;
+  flex-wrap: wrap;
+}
+
+.sugi-holding-header .dropdown .sub-menu .list-gp .business-gp {
+  width: 31%;
+  margin-right: 1%;
   letter-spacing: 0px;
+}
+
+.sugi-holding-header .dropdown .sub-menu .list-gp .business-gp:nth-child(-n+3) {
+  margin-bottom: 30px;
+}
+
+.sugi-holding-header .dropdown .sub-menu .list-gp .business-gp:nth-child(3n) {
+  margin-right: 0;
 }
 
 .sugi-holding-header .dropdown .sub-menu .list-gp .site-gp {
@@ -654,6 +676,11 @@ h6.common-sub-ttl {
   padding-bottom: 0;
 }
 
+.sugi-holding-header .dropdown.business .sub-menu .list-gp ul {
+  width: 20%;
+  margin-right: 0;
+}
+
 .sugi-holding-header .dropdown .sub-menu .list-gp ul {
   margin-right: 26px;
 }
@@ -663,7 +690,6 @@ h6.common-sub-ttl {
 }
 
 .sugi-holding-header .dropdown .sub-menu .list-gp .sub-ttl {
-  padding-bottom: 15px;
   font-size: 0.875rem;
 }
 
@@ -2409,6 +2435,16 @@ footer .page-top:hover img {
     width: 100%;
   }
 
+  .sugi-holding-header .dropdown .sub-menu .list-gp .business-gp:nth-child(-n+3) {
+    margin-bottom: 0;
+  }
+
+  .sugi-holding-header .dropdown .sub-menu .list-gp .business-gp-wrap {
+    width: 100%;
+    display: none;
+    padding-left: 21px;
+  }
+
   .sugi-holding-header .dropdown .sub-menu .list-gp ul li a {
     border: unset;
     color: #fff;
@@ -2424,6 +2460,10 @@ footer .page-top:hover img {
   .sugi-holding-header .dropdown .sub-menu .sub-menu-list {
     display: block;
     padding: 0 0 0 12px;
+  }
+
+  .sugi-holding-header .dropdown.business .sub-menu .list-gp ul {
+    width: 100%;
   }
 
   .sugi-holding-header .dropdown .sub-menu .list-gp ul {
@@ -2509,8 +2549,9 @@ footer .page-top:hover img {
   }
 
   .sugi-holding-header .dropdown .sub-menu .list-gp .business-gp a.other-link {
-    margin: 0;
-    padding: 0 0 21px 7px;
+    margin: 0 0 21px;
+    padding: 0 0 0 7px;
+    display: block;
   }
 
   .sugi-holding-header .sub-menu-list .other-link span:after {
@@ -2602,7 +2643,6 @@ footer .page-top:hover img {
     background: url('/img/common/ico_down_arrow.svg') no-repeat center/cover;
     content: '';
     transform: rotate(180deg) translate(-50%, -50%);
-    ;
   }
 
   .sugi-holding-header .nav-menu-list li.dropdown.show .dropdown-list .click-arrow::after {
@@ -3354,6 +3394,10 @@ footer .page-top:hover img {
     padding: 0 0 0 12px;
   }
 
+  .sugi-holding-header .dropdown.business .sub-menu .list-gp ul {
+    width: 100%;
+  }
+
   .sugi-holding-header .dropdown .sub-menu .list-gp ul {
     margin-right: 0;
   }
@@ -3405,6 +3449,16 @@ footer .page-top:hover img {
     padding: 0 5px;
   }
 
+  .sugi-holding-header .dropdown .sub-menu .list-gp .business-gp:nth-child(-n+3) {
+    margin-bottom: 0;
+  }
+
+  .sugi-holding-header .dropdown .sub-menu .list-gp .business-gp-wrap {
+    width: 100%;
+    display: none;
+    padding-left: 21px;
+  }
+
   .sugi-holding-header .sub-menu-list .other-link span:after {
     top: 5px;
     right: 10px;
@@ -3425,8 +3479,9 @@ footer .page-top:hover img {
   }
 
   .sugi-holding-header .dropdown .sub-menu .list-gp .business-gp a.other-link {
-    margin: 0;
-    padding-bottom: 21px;
+    display: block;
+    margin: 0 0 21px;
+    padding-bottom: 0;
   }
 
   .sugi-holding-header .dropdown .sub-menu .list-gp ul li a::after {

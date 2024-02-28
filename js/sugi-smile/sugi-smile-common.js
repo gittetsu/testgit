@@ -1,4 +1,4 @@
-function commonload() {
+function commonloadSmile() {
     /* Toggle Menu Button */
     var toggleBtn = document.querySelector(".toggle-btn");
     var toggleNav = document.querySelector(".toggle-nav");
