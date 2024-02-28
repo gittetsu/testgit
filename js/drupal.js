@@ -206,5 +206,5 @@ tabLinks.forEach(link => {
 window.addEventListener('load', () => {
   updateArticleLists('all'); // デフォルトは 'all' カテゴリー
   updateNoticeList(); // NOTICELISTの記事を表示
-  updateGroupList(); // Grouptopicsの記事を表示
+  // updateGroupList(); // Grouptopicsの記事を表示
 });
