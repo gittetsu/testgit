@@ -75,6 +75,10 @@
   vertical-align: baseline;
 } 
 
+.border-tbl td:first-child {
+  width: 275px;
+}
+
 .border-tbl td span {
   border-bottom: 2px solid;
   font-weight: 700;
