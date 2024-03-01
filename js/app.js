@@ -165,7 +165,7 @@ function updateImages() {
 }
 
 // Notice List height 
-function noticeHeight(){
+function noticeHeight() {
     const noticeList = document.querySelector('.notice-list');
     const noticeItem = document.querySelectorAll('.notice-list .notice-item:nth-child(-n+5)');
     // Calculate the total height of the selected items
@@ -176,6 +176,72 @@ function noticeHeight(){
 // Call the noticeHeight function when the page loads
 window.addEventListener("resize", noticeHeight);
 window.addEventListener('load', noticeHeight);
+
+// Tab Select 
+const mobile = window.matchMedia('max-width: 767.9px');
+const selectText = document.querySelector('.select p');
+const openTab = document.querySelector('.tab-nav.open');
+function tab() {
+    const tabs = document.querySelectorAll('.tab-nav');
+    tabs.forEach((tab) => {
+        tab.addEventListener("click", function () {
+            // Remove the "open" class from all tabs
+            tabs.forEach(otherTab => otherTab.classList.remove('open'));
+            // Add the "open" class to the clicked tab
+            this.classList.add('open');
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabContents.forEach(tabContent => {
+                tabContent.style.display = 'none';
+            });
+            // Show the selected tab content
+            const selectedTabId = tab.getAttribute("data-tab-target").substring(1); // Remove the '#' from the href
+            const selectedTabContent = document.getElementById(selectedTabId);
+
+            if (selectedTabContent) {
+                selectedTabContent.style.display = 'block';
+            }
+            selectText.innerHTML = this.innerHTML;
+            function selectTab() {
+                select.classList.remove('open');
+                if (!(select.classList.contains('open'))) {
+                    if (window.innerWidth <= 767.9) {
+                        tablist.style.height = 0;
+                    } else {
+                        tablist.style.height = 'auto';
+                    }
+                }
+            }
+            function handleSelect() {
+                if (window.innerWidth <= 767.9) {
+                    selectTab();
+                } else {
+                    tablist.style.height = 'auto';
+                }
+            } handleSelect();
+            window.addEventListener('resize', handleSelect);
+
+        });
+        if (openTab) {
+            selectText.innerHTML = openTab.innerHTML;
+        }
+    });
+}tab();
+
+const select = document.querySelector('.select');
+const tablist = document.querySelector('.tab-nav-list');
+const icon = document.querySelector('.arrow-icon');
+icon.addEventListener('click', function () {
+    this.parentElement.classList.toggle('open');
+    if (select.classList.contains('open')) {
+        tablist.style.height = calculateMaxHeight(tablist) + 'px';
+    } else {
+        tablist.style.height = 0;
+    }
+});
+function calculateMaxHeight(element) {
+    var contentHeight = element.scrollHeight
+    return contentHeight
+}
 
 //progress bar slider for top page
 // const crouselSlide = document.querySelector(".topics-slider");
