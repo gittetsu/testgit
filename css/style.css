@@ -1044,10 +1044,10 @@ html[lang="en"] .count-txtblk {
 .tab-nav-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   align-items: flex-start;
   width: 97.3%;
   margin: 68px auto 50px;
-  justify-content: center;
 }
 
 .tab-nav {
@@ -1055,6 +1055,7 @@ html[lang="en"] .count-txtblk {
   padding: 10px 20px;
   border: 1px solid #dddddd;
   background-color: #fff;
+  color: #000;
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 0.875rem;
   font-weight: 400;
