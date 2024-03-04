@@ -659,7 +659,7 @@ function commonload() {
     }
 
     /*header calculate*/
-    function headerHeigt() {
+    function headerHeight() {
         var holding = document.querySelector(".sugi-holding-header");
         var smile = document.querySelector('.sugi-smile-header')
         var header = document.querySelector('header');
@@ -692,7 +692,110 @@ function commonload() {
             element.style.paddingTop = mediaQuery.matches ? headerHeight : 0;
         });
     }
-    headerHeigt();
+    headerHeight();
 
-    window.addEventListener('resize', headerHeigt);
+    window.addEventListener('resize', headerHeight);
+
+    /* Cookies Settings */
+    
+    const popup = document.createElement('div');
+    popup.className = 'cookie-popup';
+    const title = document.createElement('h2');
+    title.className = 'title';
+    title.innerText = '個人情報の取り扱いについて';
+    const para = document.createElement('p');
+    para.innerText = '本ウェブサイトでは、より良いサイト体験の提供、アクセス履歴に基づく広告、統計、集計等の目的で、Cookie、タグ等の技術を使用します。「同意する」ボタンをクリックすることで、上記の目的のためにCookieを使用すること、また、皆様のデータを提供先や委託先と共有することに同意いただいたものとみなします。お客様がCookieを拒否または削除したい場合は、インターネットブラウザのヘルプ、サポート情報等をご参照ください。';
+    const btnlist = document.createElement('div');
+    btnlist.className = 'btn-list';
+    const accept = document.createElement('button');
+    accept.classList.add('accept-btn', 'js-close');
+    accept.innerText = '同意する';
+    accept.onclick = acceptCookies;
+    const reject = document.createElement('button');
+    reject.classList.add('reject-btn', 'js-close');
+    reject.innerText = '同意しない';
+    reject.onclick = rejectCookies;
+    btnlist.append(reject, accept);
+    popup.append(title, para, btnlist);
+
+    function createCookiesBanner() {
+        bodyElement.style.overflow = 'hidden';
+        bodyElement.style.position = 'fixed';
+        document.body.appendChild(popup);
+    }
+
+    // Function to handle cookie acceptance
+    function acceptCookies() {
+        SetCookie(expire);
+        PopupClose();
+    }
+
+    // Function to handle cookie rejection
+    function rejectCookies() {
+        sessionStorage.setItem('Reject-Flag', true);
+        DeleteAllCookie();
+        PopupClose();
+    }
+
+    // 1. Check Member-Reject-Flag
+    let rejectFlag = sessionStorage.getItem('Reject-Flag');
+    console.log({ rejectFlag });
+
+    // Get cookie data
+    const cookieData = document.cookie;
+    console.log({ cookieData });
+
+
+    // 2. Check Member-Accept-Flag
+    let acceptFlag = false;
+
+    const cookieDataList = cookieData.split('; '); // Note that "'; '" => Half-width spaces are also required to divide neatly!
+    console.log({ cookieDataList });
+
+    for (const cookie of cookieDataList) {
+        const cookieSplit = cookie.split('=');
+        console.log({ cookieSplit });
+        if (cookieSplit[0] == 'robotama-cookie') acceptFlag = true;
+    }
+    console.log({ acceptFlag });
+
+    // 3. If the condition is cleared, display the Popup in the center of the screen
+    if (rejectFlag || acceptFlag) {
+        console.log('Reject or Accept済み-User');
+    } else {
+        console.log('初回-User or Settion切れ-User');
+        PopupDisplay();
+    }
+
+    //Function to display Popup
+    function PopupDisplay() {
+        window.onload = createCookiesBanner();
+    }
+
+    //Function to close Popup
+    function PopupClose() {
+        bodyElement.style.overflow = 'auto';
+        bodyElement.style.position = 'relative';
+        popup.style.display = 'none';
+    }
+
+    // Set expiration date (days)
+    const expire = 31;
+    // 1. Cookie-Set-Function => Argument is expiration date (days)
+    function SetCookie(expire) {
+        const current = new Date();
+        expire = current.getTime() + expire * 24 * 3600 * 1000;
+        // CookieにDataをSetする
+        document.cookie = `robotama-cookie=robotama-read; expire=${expire}`;
+    }
+
+    //Function to delete all cookies when cookies are rejected
+    function DeleteAllCookie() {
+        const maxAgeZero = 'max-age=0';
+        for (const cookie of cookieDataList) {
+            const cookieSplit = cookie.split('=');
+            document.cookie = `${cookieSplit[0]}=; ${maxAgeZero}`;
+        }
+    }
+
 }
