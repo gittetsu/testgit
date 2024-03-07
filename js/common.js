@@ -260,6 +260,8 @@ function commonload() {
             } else {
                 offset = 150;
             }
+        } else {
+            offset = document.querySelector('.sugi-holding-header').offsetHeight;
         }
         const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - offset; // Include current
         const startPosition = window.pageYOffset;
@@ -659,7 +661,7 @@ function commonload() {
     }
 
     /*header calculate*/
-    function headerHeigt() {
+    function headerHeight() {
         var holding = document.querySelector(".sugi-holding-header");
         var smile = document.querySelector('.sugi-smile-header')
         var header = document.querySelector('header');
@@ -686,13 +688,43 @@ function commonload() {
         }
 
         contentElements.forEach(function (element) {
-            element.style.marginTop = mediaQuery.matches ? headerHeight : 0;
+            element.style.marginTop = headerHeight;
         });
         content.forEach(function (element) {
-            element.style.paddingTop = mediaQuery.matches ? headerHeight : 0;
+            element.style.paddingTop = headerHeight;
+        });
+
+        const allheader = document.querySelectorAll('header');
+        allheader.forEach(function (header) {
+            if (!(header.classList.contains('sugi-smile-header'))) {
+                headerScroll();
+            }
+        })
+    }
+    headerHeight();
+    window.addEventListener('resize', headerHeight);
+
+    /* Header Scroll */
+    function headerScroll() {
+        var currentPosition = 0;
+        var header = document.querySelector('header');
+        window.addEventListener('scroll', function () {
+            if (window.scrollY <= 0) {
+                header.classList.remove('scroll-down');
+                header.classList.remove('scroll-up');
+            } else {    
+                if (window.scrollY < currentPosition) {
+                    if (currentPosition - window.scrollY > 0) {
+                        header.classList.add('scroll-up');
+                        header.classList.remove('scroll-down');
+                    }    
+                } else {
+                    if (window.scrollY > 0) {
+                        header.classList.add('scroll-down');
+                    }
+                }
+            }
+            currentPosition = window.scrollY;
         });
     }
-    headerHeigt();
-
-    window.addEventListener('resize', headerHeigt);
 }
