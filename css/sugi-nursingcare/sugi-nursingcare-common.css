@@ -3,6 +3,15 @@ body {
 }
 
 /* header */
+.sugi-nursing-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  transition: top 1s cubic-bezier(0.55, 0.085, 0, 0.99);
+}
+
 .sugi-nursing-header .header-inner {
   display: flex;
   position: relative;
@@ -627,7 +636,7 @@ ul.service-list li.service-list-item .service-txtblk {
   width: 37.3%;
 }
 
-.ft-consultation-bnr .consultation-text span{
+.ft-consultation-bnr .consultation-text span {
   letter-spacing: 0.1px;
 }
 
@@ -785,12 +794,6 @@ footer.ft-nursing-care .page-top img {
 
 /*I-pad*/
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  .sugi-nursing-header{
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 99;
-  }
 
   .common-nursing-button:hover {
     background-color: #e6172c;
@@ -828,6 +831,11 @@ footer.ft-nursing-care .page-top img {
     width: 100%;
   }
 
+  .sugi-nursing-header.scroll-up {
+    background: none;
+  }
+
+  .sugi-nursing-header.scroll-up .header-inner,
   .sugi-nursing-header .header-inner {
     position: relative;
     width: 100%;
@@ -979,13 +987,6 @@ footer.ft-nursing-care .page-top img {
 
 @media only screen and (max-width: 767.9px) {
 
-  .sugi-nursing-header{
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 99;
-  }
-
   /* header */
   .sugi-nursing-header .header-blk {
     justify-content: space-between;
@@ -1000,6 +1001,7 @@ footer.ft-nursing-care .page-top img {
     max-width: 181px;
   }
 
+  .sugi-nursing-header.scroll-up .header-inner,
   .sugi-nursing-header .header-inner {
     position: relative;
     width: 100%;
@@ -1380,7 +1382,7 @@ footer.ft-nursing-care .page-top img {
     margin-bottom: 10px;
   }
 
-  .cmm-nursing-tab-btn .arrow{
+  .cmm-nursing-tab-btn .arrow {
     top: 20px;
   }
 
