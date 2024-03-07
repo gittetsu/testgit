@@ -334,6 +334,21 @@ h6.common-sub-ttl {
 }
 
 /* header*/
+.sugi-holding-header {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  top: 0;
+  left: 0;
+  margin: 0 auto;
+  background-color: #fff;
+  transition: top 1s cubic-bezier(0.55, 0.085, 0, 0.99);
+}
+
+.sugi-holding-header.scroll-down {
+  top: -100%;
+}
+
 .sugi-holding-header .header-inner {
   display: flex;
   position: relative;
@@ -505,11 +520,15 @@ h6.common-sub-ttl {
 .sugi-holding-header .sub-menu-list .other-link span {
   display: inline-block;
   position: relative;
-  padding: 0 25px 0 10px;
+  padding: 0 25px 0 0;
   font-weight: 400;
 }
 
-.sugi-holding-header .sub-menu-list .other-link span::before {
+.sugi-holding-header .sub-menu-list .business-gp-wrap .other-link span {
+  padding-left: 10px;
+}
+
+.sugi-holding-header .sub-menu-list .business-gp-wrap .other-link span::before {
   position: absolute;
   content: '\002D\0020';
   left: 0;
@@ -2316,14 +2335,6 @@ footer .page-top:hover img {
   }
 
   /*header*/
-  .sugi-holding-header {
-    position: fixed;
-    top: 0;
-    z-index: 5;
-    width: 100%;
-    background-color: #fff;
-  }
-
   .sugi-holding-header .header-inner {
     align-items: center;
     width: 100%;
@@ -3261,14 +3272,6 @@ footer .page-top:hover img {
   }
 
   /*header*/
-  .sugi-holding-header {
-    position: fixed;
-    top: 0;
-    z-index: 5;
-    width: 100%;
-    background-color: #fff;
-  }
-
   .sugi-holding-header .header-inner {
     position: relative;
     align-items: center;
