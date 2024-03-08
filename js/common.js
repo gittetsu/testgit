@@ -260,9 +260,7 @@ function commonload() {
             } else {
                 offset = 150;
             }
-        } else {
-            offset = document.querySelector('.sugi-holding-header').offsetHeight;
-        }
+        } 
         const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - offset; // Include current
         const startPosition = window.pageYOffset;
         const distance = targetPosition - startPosition;
