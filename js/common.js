@@ -697,23 +697,39 @@ function commonload() {
     window.addEventListener('resize', headerHeight);
 
     /* Cookies Settings */
-    
+    const isEng = document.documentElement.lang === "en";
     const popup = document.createElement('div');
     popup.className = 'cookie-popup';
     const title = document.createElement('h2');
     title.className = 'title';
-    title.innerText = '個人情報の取り扱いについて';
+    if (isEng) {
+        title.innerText = 'Handling of Personal Information';
+    } else {
+        title.innerText = '個人情報の取り扱いについて';
+    }    
     const para = document.createElement('p');
-    para.innerText = '本ウェブサイトでは、より良いサイト体験の提供、アクセス履歴に基づく広告、統計、集計等の目的で、Cookie、タグ等の技術を使用します。「同意する」ボタンをクリックすることで、上記の目的のためにCookieを使用すること、また、皆様のデータを提供先や委託先と共有することに同意いただいたものとみなします。お客様がCookieを拒否または削除したい場合は、インターネットブラウザのヘルプ、サポート情報等をご参照ください。';
+    if (isEng) {
+        para.innerText = `This website uses cookies, tags, and other technologies for such purposes as providing a better site experience, advertising based on access history, compiling data, and preparing statistics. By clicking the "I agree" button, you consent to the use of cookies for the above purposes and to the sharing of your data with our partners and contractors.If you wish to reject or delete cookies, please refer to your Internet browser's help, support information, etc.`;
+    } else {
+        para.innerText = '本ウェブサイトでは、より良いサイト体験の提供、アクセス履歴に基づく広告、統計、集計等の目的で、Cookie、タグ等の技術を使用します。「同意する」ボタンをクリックすることで、上記の目的のためにCookieを使用すること、また、皆様のデータを提供先や委託先と共有することに同意いただいたものとみなします。お客様がCookieを拒否または削除したい場合は、インターネットブラウザのヘルプ、サポート情報等をご参照ください。';
+    }
     const btnlist = document.createElement('div');
     btnlist.className = 'btn-list';
     const accept = document.createElement('button');
     accept.classList.add('accept-btn', 'js-close');
-    accept.innerText = '同意する';
+    if (isEng) {
+        accept.innerText = 'I agree'
+    } else {
+        accept.innerText = '同意する';
+    }    
     accept.onclick = acceptCookies;
     const reject = document.createElement('button');
     reject.classList.add('reject-btn', 'js-close');
-    reject.innerText = '同意しない';
+    if (isEng) {
+        reject.innerText = 'I disagree';
+    } else {
+        reject.innerText = '同意しない';
+    }    
     reject.onclick = rejectCookies;
     btnlist.append(reject, accept);
     popup.append(title, para, btnlist);
@@ -748,7 +764,6 @@ function commonload() {
 
     // 2. Check Member-Accept-Flag
     let acceptFlag = false;
-
     const cookieDataList = cookieData.split('; '); // Note that "'; '" => Half-width spaces are also required to divide neatly!
     console.log({ cookieDataList });
 
@@ -761,9 +776,9 @@ function commonload() {
 
     // 3. If the condition is cleared, display the Popup in the center of the screen
     if (rejectFlag || acceptFlag) {
-        console.log('Reject or Accept済み-User');
+        console.log('Reject or Accepted-User');
     } else {
-        console.log('初回-User or Settion切れ-User');
+        console.log('First time User or Session expired User');
         PopupDisplay();
     }
 
