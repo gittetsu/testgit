@@ -2327,7 +2327,7 @@ html[lang="en"] .count-txtblk {
   }
 
   .tab-nav:last-child {
-    margin-right: 0;
+    border: none;
   }
 
   .tab-contents {
