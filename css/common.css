@@ -2321,6 +2321,17 @@ footer .page-top:hover img {
 
 /* Cookies */
 
+.cookie-consent {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  height: 100%;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
 .cookie-popup {
 	position: fixed;
 	right: 0;

@@ -723,6 +723,8 @@ function commonload() {
 
     /* Cookies Settings */
     const isEng = document.documentElement.lang === "en";
+    const consent = document.createElement('div');
+    consent.className = 'cookie-consent';
     const popup = document.createElement('div');
     popup.className = 'cookie-popup';
     const title = document.createElement('h2');
@@ -758,11 +760,12 @@ function commonload() {
     reject.onclick = rejectCookies;
     btnlist.append(reject, accept);
     popup.append(title, para, btnlist);
+    consent.append(popup);
 
     function createCookiesBanner() {
         bodyElement.style.overflow = 'hidden';
         bodyElement.style.position = 'fixed';
-        document.body.appendChild(popup);
+        document.body.appendChild(consent);
     }
 
     // Function to handle cookie acceptance
@@ -794,7 +797,7 @@ function commonload() {
     function PopupClose() {
         bodyElement.style.overflow = 'auto';
         bodyElement.style.position = 'relative';
-        popup.style.display = 'none';
+        consent.style.display = 'none';
     }
 
     function setCookie(name, value, days) {
