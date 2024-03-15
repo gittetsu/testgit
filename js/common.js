@@ -755,30 +755,25 @@ function commonload() {
 
     // 1. Check Member-Reject-Flag
     let rejectFlag = sessionStorage.getItem('Reject-Flag');
-    console.log({ rejectFlag });
 
     // Get cookie data
     const cookieData = document.cookie;
-    console.log({ cookieData });
 
 
     // 2. Check Member-Accept-Flag
     let acceptFlag = false;
     const cookieDataList = cookieData.split('; '); // Note that "'; '" => Half-width spaces are also required to divide neatly!
-    console.log({ cookieDataList });
 
     for (const cookie of cookieDataList) {
         const cookieSplit = cookie.split('=');
-        console.log({ cookieSplit });
         if (cookieSplit[0] == 'robotama-cookie') acceptFlag = true;
     }
-    console.log({ acceptFlag });
 
     // 3. If the condition is cleared, display the Popup in the center of the screen
     if (rejectFlag || acceptFlag) {
-        console.log('Reject or Accepted-User');
+        //Reject or Accepted-User
     } else {
-        console.log('First time User or Session expired User');
+        //First time User or Session expired User
         PopupDisplay();
     }
 
