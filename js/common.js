@@ -253,12 +253,16 @@ function commonload() {
     });
     function smoothScrollTo(targetElement) {
         let offset = 0;
+        const isSidebar = document.querySelector('.js-sidebar');
         const mediaQuery = window.matchMedia('(max-width: 1024.9px)');
         if (mediaQuery.matches) {
-            if (currentUrl.endsWith("/company/business/#group")) {
-                offset = 70;
+            if (isSidebar) {
+                offset = document.querySelector('header').offsetHeight + isSidebar.offsetHeight;
             } else {
-                offset = 150;
+                offset = document.querySelector('header').offsetHeight;
+            }
+            if (document.querySelector('header').classList.contains('sugi-smile-header')) { // if sugi-smile
+                offset = 0;
             }
         }
         const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - offset; // Include current
@@ -282,22 +286,13 @@ function commonload() {
     }
 
     /* Anchor Link in different pages */
-    document.querySelectorAll('a.js-other').forEach(function (anchor) {
-        anchor.addEventListener('click', function (event) {
-            if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') &&
-                location.hostname === this.hostname) {
-                event.preventDefault();
-                smoothScrollTo(document.getElementById(this.hash.substring(1)));
-            }
-        });
-    });
     setTimeout(function () {
         if (location.hash) {
             window.scrollTo(0, 0);
             var target = location.hash.substring(1);
             smoothScrollTo(document.getElementById(target));
         }
-    }, 1);
+    }, 1);    
 
     /* scrollTop*/
     let topBtn = document.getElementById('scrollTop')
