@@ -695,7 +695,7 @@ header.scroll-up .header-inner {
 }
 
 .sugi-holding-header .dropdown .sub-menu .list-gp li .sub-menu-detail li a::before {
-  background: unset;
+  content: none;
 }
 
 .sugi-holding-header .dropdown .sub-menu .list-gp ul li .sub-menu-detail li {
@@ -2606,6 +2606,16 @@ footer .page-top:hover img {
     margin-right: 0;
   }
 
+  .sugi-holding-header .sub-menu-list .site-gp .other-link span {
+    padding-left: 10px;
+  }
+
+  .sugi-holding-header .sub-menu-list .site-gp .other-link span::before {
+    position: absolute;
+    left: 0;
+    content: '\002D\0020';
+  }
+
   .sugi-holding-header .nav-menu.active .nav-menu-list {
     height: 100vh;
     overflow-y: scroll;
@@ -3560,6 +3570,16 @@ footer .page-top:hover img {
     width: 100%;
     margin-right: 0;
     padding: 0 5px;
+  }
+  
+  .sugi-holding-header .sub-menu-list .site-gp .other-link span {
+    padding-left: 10px;
+  }
+
+  .sugi-holding-header .sub-menu-list .site-gp .other-link span::before {
+    position: absolute;
+    left: 0;
+    content: '\002D\0020';
   }
 
   .sugi-holding-header .dropdown .sub-menu .list-gp .business-gp:nth-child(-n+3) {
