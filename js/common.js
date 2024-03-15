@@ -706,7 +706,7 @@ function commonload() {
         title.innerText = 'Handling of Personal Information';
     } else {
         title.innerText = '個人情報の取り扱いについて';
-    }    
+    }
     const para = document.createElement('p');
     if (isEng) {
         para.innerText = `This website uses cookies, tags, and other technologies for such purposes as providing a better site experience, advertising based on access history, compiling data, and preparing statistics. By clicking the "I agree" button, you consent to the use of cookies for the above purposes and to the sharing of your data with our partners and contractors.If you wish to reject or delete cookies, please refer to your Internet browser's help, support information, etc.`;
@@ -721,7 +721,7 @@ function commonload() {
         accept.innerText = 'I agree'
     } else {
         accept.innerText = '同意する';
-    }    
+    }
     accept.onclick = acceptCookies;
     const reject = document.createElement('button');
     reject.classList.add('reject-btn', 'js-close');
@@ -729,7 +729,7 @@ function commonload() {
         reject.innerText = 'I disagree';
     } else {
         reject.innerText = '同意しない';
-    }    
+    }
     reject.onclick = rejectCookies;
     btnlist.append(reject, accept);
     popup.append(title, para, btnlist);
@@ -742,45 +742,26 @@ function commonload() {
 
     // Function to handle cookie acceptance
     function acceptCookies() {
-        SetCookie(expire);
+        setCookie('cookieConsent', 'accepted', 30);
         PopupClose();
     }
 
     // Function to handle cookie rejection
     function rejectCookies() {
         sessionStorage.setItem('Reject-Flag', true);
-        DeleteAllCookie();
+        setCookie('cookieConsent', 'rejected', 30);
         PopupClose();
     }
 
-    // 1. Check Member-Reject-Flag
-    let rejectFlag = sessionStorage.getItem('Reject-Flag');
-
-    // Get cookie data
-    const cookieData = document.cookie;
-
-
-    // 2. Check Member-Accept-Flag
-    let acceptFlag = false;
-    const cookieDataList = cookieData.split('; '); // Note that "'; '" => Half-width spaces are also required to divide neatly!
-
-    for (const cookie of cookieDataList) {
-        const cookieSplit = cookie.split('=');
-        if (cookieSplit[0] == 'robotama-cookie') acceptFlag = true;
-    }
-
-    // 3. If the condition is cleared, display the Popup in the center of the screen
-    if (rejectFlag || acceptFlag) {
-        //Reject or Accepted-User
-    } else {
-        //First time User or Session expired User
-        PopupDisplay();
+    var cookieConsent = getCookie('cookieConsent');
+    if (cookieConsent === 'accepted' || cookieConsent === 'rejected') {
+        PopupClose();
     }
 
     //Function to display Popup
     function PopupDisplay() {
         window.onload = createCookiesBanner();
-    }
+    } PopupDisplay();
 
     //Function to close Popup
     function PopupClose() {
@@ -789,23 +770,25 @@ function commonload() {
         popup.style.display = 'none';
     }
 
-    // Set expiration date (days)
-    const expire = 31;
-    // 1. Cookie-Set-Function => Argument is expiration date (days)
-    function SetCookie(expire) {
-        const current = new Date();
-        expire = current.getTime() + expire * 24 * 3600 * 1000;
-        // CookieにDataをSetする
-        document.cookie = `robotama-cookie=robotama-read; expire=${expire}`;
+    function setCookie(name, value, days) {
+        var expires = "";
+        if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + (value || "") + expires + "; path=/";
     }
 
-    //Function to delete all cookies when cookies are rejected
-    function DeleteAllCookie() {
-        const maxAgeZero = 'max-age=0';
-        for (const cookie of cookieDataList) {
-            const cookieSplit = cookie.split('=');
-            document.cookie = `${cookieSplit[0]}=; ${maxAgeZero}`;
+    function getCookie(name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
         }
+        return null;
     }
 
 }
