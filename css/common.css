@@ -511,8 +511,8 @@ h6.common-sub-ttl {
 
 .sugi-holding-header .sub-menu-list .other-link span::before {
   position: absolute;
-  content: '\002D\0020';
   left: 0;
+  content: '\002D\0020';
 }
 
 .sugi-holding-header .sub-menu-list .other-link span::after {
@@ -596,9 +596,9 @@ h6.common-sub-ttl {
 }
 
 .sugi-holding-header .dropdown .sub-menu .list-gp  .business-gp-wrap {
-  width: 76%;
   display: flex;
   flex-wrap: wrap;
+  width: 76%;
 }
 
 .sugi-holding-header .dropdown .sub-menu .list-gp .business-gp {
@@ -2496,8 +2496,8 @@ footer .page-top:hover img {
   }
 
   .sugi-holding-header .dropdown .sub-menu .list-gp .business-gp-wrap {
-    width: 100%;
     display: none;
+    width: 100%;
     padding-left: 21px;
   }
 
@@ -2575,7 +2575,7 @@ footer .page-top:hover img {
     margin-right: 0;
   }
 
-   .sugi-holding-header .nav-menu.active .nav-menu-list {
+  .sugi-holding-header .nav-menu.active .nav-menu-list {
     height: 100vh;
     overflow-y: scroll;
   }
@@ -2605,9 +2605,9 @@ footer .page-top:hover img {
   }
 
   .sugi-holding-header .dropdown .sub-menu .list-gp .business-gp a.other-link {
+    display: block;
     margin: 0 0 21px;
     padding: 0 0 0 7px;
-    display: block;
   }
 
   .sugi-holding-header .sub-menu-list .other-link span:after {
@@ -2618,6 +2618,27 @@ footer .page-top:hover img {
     display: block;
     padding: 24px 20px;
     color: #fff;
+  }
+
+  .sugi-holding-header .nav-menu-list li.lang {
+    text-align: right;
+  }  
+
+  .sugi-holding-header .nav-menu-list li.lang span {
+    display: inline-block;
+    position: relative;
+    padding-left: 28px;
+  }
+
+  .sugi-holding-header .nav-menu-list li.lang span::before {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    background: url('/img/common/ico_internet_white.png') no-repeat center/contain;
+    content: '';
+    transform: translateY(-50%);
   }
 
   .sugi-holding-header .nav-menu-list li.dropdown a {
@@ -3510,8 +3531,8 @@ footer .page-top:hover img {
   }
 
   .sugi-holding-header .dropdown .sub-menu .list-gp .business-gp-wrap {
-    width: 100%;
     display: none;
+    width: 100%;
     padding-left: 21px;
   }
 
@@ -3575,6 +3596,27 @@ footer .page-top:hover img {
     position: relative;
     padding: 24px 20px;
     color: #fff;
+  }  
+
+  .sugi-holding-header .nav-menu-list li.lang {
+    text-align: right;
+  }  
+
+  .sugi-holding-header .nav-menu-list li.lang span {
+    display: inline-block;
+    position: relative;
+    padding-left: 28px;
+  }
+
+  .sugi-holding-header .nav-menu-list li.lang span::before {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    background: url('/img/common/ico_internet_white.png') no-repeat center/contain;
+    content: '';
+    transform: translateY(-50%);
   }
 
   .sugi-holding-header .nav-menu-list li.dropdown a {
