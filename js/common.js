@@ -260,7 +260,7 @@ function commonload() {
             } else {
                 offset = 150;
             }
-        } 
+        }
         const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - offset; // Include current
         const startPosition = window.pageYOffset;
         const distance = targetPosition - startPosition;
@@ -710,12 +710,12 @@ function commonload() {
             if (window.scrollY <= 0) {
                 header.classList.remove('scroll-down');
                 header.classList.remove('scroll-up');
-            } else {    
+            } else {
                 if (window.scrollY < currentPosition) {
                     if (currentPosition - window.scrollY > 0) {
                         header.classList.add('scroll-up');
                         header.classList.remove('scroll-down');
-                    }    
+                    }
                 } else {
                     if (window.scrollY > 0) {
                         header.classList.add('scroll-down');
@@ -725,4 +725,102 @@ function commonload() {
             currentPosition = window.scrollY;
         });
     }
+
+    /* Cookies Settings */
+    const isEng = document.documentElement.lang === "en";
+    const popup = document.createElement('div');
+    popup.className = 'cookie-popup';
+    const title = document.createElement('h2');
+    title.className = 'title';
+    if (isEng) {
+        title.innerText = 'Handling of Personal Information';
+    } else {
+        title.innerText = '個人情報の取り扱いについて';
+    }
+    const para = document.createElement('p');
+    if (isEng) {
+        para.innerText = `This website uses cookies, tags, and other technologies for such purposes as providing a better site experience, advertising based on access history, compiling data, and preparing statistics. By clicking the "I agree" button, you consent to the use of cookies for the above purposes and to the sharing of your data with our partners and contractors.If you wish to reject or delete cookies, please refer to your Internet browser's help, support information, etc.`;
+    } else {
+        para.innerText = '本ウェブサイトでは、より良いサイト体験の提供、アクセス履歴に基づく広告、統計、集計等の目的で、Cookie、タグ等の技術を使用します。「同意する」ボタンをクリックすることで、上記の目的のためにCookieを使用すること、また、皆様のデータを提供先や委託先と共有することに同意いただいたものとみなします。お客様がCookieを拒否または削除したい場合は、インターネットブラウザのヘルプ、サポート情報等をご参照ください。';
+    }
+    const btnlist = document.createElement('div');
+    btnlist.className = 'btn-list';
+    const accept = document.createElement('button');
+    accept.classList.add('accept-btn', 'js-close');
+    if (isEng) {
+        accept.innerText = 'I agree'
+    } else {
+        accept.innerText = '同意する';
+    }
+    accept.onclick = acceptCookies;
+    const reject = document.createElement('button');
+    reject.classList.add('reject-btn', 'js-close');
+    if (isEng) {
+        reject.innerText = 'I disagree';
+    } else {
+        reject.innerText = '同意しない';
+    }
+    reject.onclick = rejectCookies;
+    btnlist.append(reject, accept);
+    popup.append(title, para, btnlist);
+
+    function createCookiesBanner() {
+        bodyElement.style.overflow = 'hidden';
+        bodyElement.style.position = 'fixed';
+        document.body.appendChild(popup);
+    }
+
+    // Function to handle cookie acceptance
+    function acceptCookies() {
+        setCookie('cookieConsent', 'accepted', 30);
+        PopupClose();
+    }
+
+    // Function to handle cookie rejection
+    function rejectCookies() {
+        sessionStorage.setItem('Reject-Flag', true);
+        setCookie('cookieConsent', 'rejected', 30);
+        PopupClose();
+    }
+
+    var cookieConsent = getCookie('cookieConsent');
+    if (cookieConsent === 'accepted' || cookieConsent === 'rejected') {
+        PopupClose();
+    } else {
+        PopupDisplay();
+    }
+
+    //Function to display Popup
+    function PopupDisplay() {
+        window.onload = createCookiesBanner();
+    }
+
+    //Function to close Popup
+    function PopupClose() {
+        bodyElement.style.overflow = 'auto';
+        bodyElement.style.position = 'relative';
+        popup.style.display = 'none';
+    }
+
+    function setCookie(name, value, days) {
+        var expires = "";
+        if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + (value || "") + expires + "; path=/";
+    }
+
+    function getCookie(name) {
+        var cName = name + "=";
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+            if (c.indexOf(cName) == 0) return c.substring(cName.length, c.length);
+        }
+        return null;
+    }
+
 }
