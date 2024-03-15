@@ -253,12 +253,16 @@ function commonload() {
     });
     function smoothScrollTo(targetElement) {
         let offset = 0;
+        const isSidebar = document.querySelector('.js-sidebar');
         const mediaQuery = window.matchMedia('(max-width: 1024.9px)');
         if (mediaQuery.matches) {
-            if (currentUrl.endsWith("/company/business/#group")) {
-                offset = 70;
+            if (isSidebar) {
+                offset = document.querySelector('header').offsetHeight + isSidebar.offsetHeight;
             } else {
-                offset = 150;
+                offset = document.querySelector('header').offsetHeight;
+            }
+            if (document.querySelector('header').classList.contains('sugi-smile-header')) { // if sugi-smile
+                offset = 0;
             }
         }
         const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - offset; // Include current
@@ -282,22 +286,13 @@ function commonload() {
     }
 
     /* Anchor Link in different pages */
-    document.querySelectorAll('a.js-other').forEach(function (anchor) {
-        anchor.addEventListener('click', function (event) {
-            if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') &&
-                location.hostname === this.hostname) {
-                event.preventDefault();
-                smoothScrollTo(document.getElementById(this.hash.substring(1)));
-            }
-        });
-    });
     setTimeout(function () {
         if (location.hash) {
             window.scrollTo(0, 0);
             var target = location.hash.substring(1);
             smoothScrollTo(document.getElementById(target));
         }
-    }, 1);
+    }, 1);    
 
     /* scrollTop*/
     let topBtn = document.getElementById('scrollTop')
@@ -686,15 +681,45 @@ function commonload() {
         }
 
         contentElements.forEach(function (element) {
-            element.style.marginTop = mediaQuery.matches ? headerHeight : 0;
+            element.style.marginTop = headerHeight;
         });
         content.forEach(function (element) {
-            element.style.paddingTop = mediaQuery.matches ? headerHeight : 0;
+            element.style.paddingTop = headerHeight;
         });
+
+        const allheader = document.querySelectorAll('header');
+        allheader.forEach(function (header) {
+            if (!(header.classList.contains('sugi-smile-header'))) {
+                headerScroll();
+            }
+        })
     }
     headerHeight();
-
     window.addEventListener('resize', headerHeight);
+
+    /* Header Scroll */
+    function headerScroll() {
+        var currentPosition = 0;
+        var header = document.querySelector('header');
+        window.addEventListener('scroll', function () {
+            if (window.scrollY <= 0) {
+                header.classList.remove('scroll-down');
+                header.classList.remove('scroll-up');
+            } else {
+                if (window.scrollY < currentPosition) {
+                    if (currentPosition - window.scrollY > 0) {
+                        header.classList.add('scroll-up');
+                        header.classList.remove('scroll-down');
+                    }
+                } else {
+                    if (window.scrollY > 0) {
+                        header.classList.add('scroll-down');
+                    }
+                }
+            }
+            currentPosition = window.scrollY;
+        });
+    }
 
     /* Cookies Settings */
     const isEng = document.documentElement.lang === "en";
@@ -756,12 +781,14 @@ function commonload() {
     var cookieConsent = getCookie('cookieConsent');
     if (cookieConsent === 'accepted' || cookieConsent === 'rejected') {
         PopupClose();
+    } else {
+        PopupDisplay();
     }
 
     //Function to display Popup
     function PopupDisplay() {
         window.onload = createCookiesBanner();
-    } PopupDisplay();
+    }
 
     //Function to close Popup
     function PopupClose() {
@@ -781,12 +808,12 @@ function commonload() {
     }
 
     function getCookie(name) {
-        var nameEQ = name + "=";
+        var cName = name + "=";
         var ca = document.cookie.split(';');
         for (var i = 0; i < ca.length; i++) {
             var c = ca[i];
             while (c.charAt(0) == ' ') c = c.substring(1, c.length);
-            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+            if (c.indexOf(cName) == 0) return c.substring(cName.length, c.length);
         }
         return null;
     }
