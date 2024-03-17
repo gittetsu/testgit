@@ -1,6 +1,5 @@
-
-
-const apiUrl = 'https://d1vyjchtv8ee5.cloudfront.net/jsonapi/node/sugi_hd';
+const apiUrl = 'https://d37m9cibsc5611.cloudfront.net/jsonapi/node/sugi_hd';
+const fileApiUrl = 'https://d37m9cibsc5611.cloudfront.net/jsonapi/file/file';
 
 // ページング関連の変数
 let currentPage = 1;
@@ -49,6 +48,8 @@ async function updateArticleLists(category, searchKeyword) {
 
     const response = await fetch(`${apiUrl}?sort=-field_date,-changed${filter}&page[limit]=20&page[offset]=${(pageNumber * 20)}&filter[title][condition][path]=title&filter[title][condition][operator]=CONTAINS&filter[title][condition][value]=${searchKeyword}&${noticefilter}`);
     const data = await response.json();
+    console.log(data);
+
 
     // ページの最初を示すボタンの要素を取得
     const nextPageButton = document.querySelector('.cmn-pager-next');
@@ -66,17 +67,21 @@ async function updateArticleLists(category, searchKeyword) {
     const ulElement = document.getElementById("all");
     if (ulElement) {
       ulElement.innerHTML = ''; // リストをクリア
-      data.data.forEach((article, index) => {
-        const liElement = document.createElement('li');
+      for (const article of data.data) {
         let pdflink = "";
-        if (article.attributes.body === null) {
-          // 条件1: bodyがnullの場合、PDFへ遷移
-          if (article.attributes.field_pdf.value) {
-            pdflink = `/pdf/${article.attributes.field_pdf.value}" target="_blank`;
-          }
-        } else {
-          // 条件2: bodyがnullでない場合、記事へ遷移
+        let pdfName = ""; // PDFファイル名を初期化
+
+        // bodyがnullでない場合、またはPDF関連データが存在しない場合、通常の記事リンクを使用
+        if (article.attributes.body !== null || !article.relationships.field_fail_test || !article.relationships.field_fail_test.data) {
           pdflink = `/news/article?id=${article.id}`;
+        } else {
+          // bodyがnullで、かつPDF関連データが存在する場合、PDFのリンクと名前を取得
+          const fileId = article.relationships.field_fail_test.data.id; // PDFのIDを取得
+          const fileResponse = await fetch(`${fileApiUrl}/${fileId}`);
+          const fileData = await fileResponse.json();
+          pdfName = fileData.data.attributes.filename; // PDFのファイル名を取得
+          pdflink = fileData.data.attributes.uri.url; // PDFのURLを取得
+          console.log(fileData);
         }
         liElement.className = 'news-list';
         if (article.attributes.body === null) {
@@ -87,7 +92,7 @@ async function updateArticleLists(category, searchKeyword) {
                 <span class="news-date">${article.attributes.field_date}</span>
                 <span class="news-info">${article.attributes.field_list}</span>
               </div>
-              <p class="newslist-desc pdf" id="article-title${index + 1}">${article.attributes.title}</p>
+              <p class="newslist-desc pdf" id="article-title">${article.attributes.title}</p>
             </a>
           </div>
           `;
@@ -99,13 +104,13 @@ async function updateArticleLists(category, searchKeyword) {
                 <span class="news-date">${article.attributes.field_date}</span>
                 <span class="news-info">${article.attributes.field_list}</span>
               </div>
-              <p class="newslist-desc text-02" id="article-title${index + 1}">${article.attributes.title}</p>
+              <p class="newslist-desc text-02" id="article-title">${article.attributes.title}</p>
             </a>
           </div>
           `;
         }
         ulElement.appendChild(liElement);
-      });
+      };
     }
   } catch (error) {
     console.error('エラーが発生しました:', error);

@@ -2,7 +2,8 @@ document.addEventListener('DOMContentLoaded', function () {
     // URLからIDを取得
     const urlParams = new URLSearchParams(window.location.search);
     const articleId = urlParams.get('id');
-    const apiUrl = `https://d1vyjchtv8ee5.cloudfront.net/jsonapi/node/sugi_hd/${articleId}`;
+    const apiUrl = `https://d37m9cibsc5611.cloudfront.net/jsonapi/node/sugi_hd/${articleId}`;
+    const fileApiUrl = 'https://d37m9cibsc5611.cloudfront.net/jsonapi/file/file';
 
     // 日付フォーマット変更
     function formatDate(dateString) {
@@ -14,49 +15,50 @@ document.addEventListener('DOMContentLoaded', function () {
     // APIから本文データを取得する関数
     async function fetchArticleBody() {
         try {
-            // JSON APIからデータを取得します
             const response = await fetch(apiUrl);
             const data = await response.json();
             console.log(data);
 
-            // article-body要素に本文を挿入
-            const articleBody = data.data.attributes.body.value;
-            const articleBodyElement = document.getElementById('article-body');
-            articleBodyElement.innerHTML = articleBody;
+            const inputtext = data.data.attributes.body.value;
+            let replacementMap = {
+                '/sites/default/files/inline-images/': '../../topic/img/',
+                'width="': 'style="margin-bottom:40px; width: ',
+                'data-align="right"': 'class="align-right"',
+                'data-align="left"': 'class="align-left"',
+                'data-align="center"': 'class="align-center"',
+            };
+            let resulttext = inputtext.replace(
+                new RegExp(Object.keys(replacementMap).join("|"), "g"),
+                match => replacementMap[match]
+            );
 
-            // article-date要素に本文を挿入
+            document.getElementById('article-body').innerHTML = resulttext;
+
             const articleDate = formatDate(data.data.attributes.field_date);
-            const articleDateElement = document.getElementById('article-date');
-            articleDateElement.innerHTML = articleDate;
+            document.getElementById('article-date').innerHTML = articleDate;
 
-            // article-title要素に本文を挿入
             const articleTitle = data.data.attributes.title;
-            const articleTitleElement = document.getElementById('article-title');
-            articleTitleElement.innerHTML = articleTitle;
+            document.getElementById('article-title').innerHTML = articleTitle;
+            document.getElementById('article-title2').innerHTML = articleTitle;
 
-            const articleTitle2 = data.data.attributes.title;
-            const articleTitleElement2 = document.getElementById('article-title2');
-            articleTitleElement2.innerHTML = articleTitle2;
-
-            // article-company要素に本文を挿入
             const articleCompany = data.data.attributes.field_company;
-            const articleCompanyElement = document.getElementById('article-company');
-            articleCompanyElement.innerHTML = articleCompany;
+            document.getElementById('article-company').innerHTML = articleCompany;
 
-            // article-category要素に本文を挿入
             const articleList = data.data.attributes.field_list;
-            const articleListElement = document.getElementById('article-list');
-            articleListElement.innerHTML = articleList;
+            document.getElementById('article-list').innerHTML = articleList;
 
-            // PDFリンクを設定
+            // PDFの処理
+            const pdfField = data.data.relationships.field_fail_test.data;
             const pdfLink = document.getElementById('pdf-link');
-
-            if (data.data.attributes.field_pdf.value) {
+            if (pdfField) {
+                const pdfResponse = await fetch(`${fileApiUrl}/${pdfField.id}`);
+                const pdfData = await pdfResponse.json();
+                console.log(pdfData);
+                const pdfFilename = pdfData.data.attributes.field_fail_test;
+                const pdfFileUrl = pdfData.data.attributes.uri.url;
                 pdfLink.style.display = 'inline'; // PDFリンクを表示
-                pdfLink.href = `/pdf/${data.data.attributes.field_pdf.value}`;
-                // article-pdf要素に本文を挿入
-                const articlePdfElement = document.getElementById('article-pdf');
-                articlePdfElement.innerHTML = `https://www.sugi-hd.co.jp/pdf/${data.data.attributes.field_pdf.value}`;
+                pdfLink.href = pdfFileUrl; // この部分はPDFファイルの実際のURLに置き換える
+                document.getElementById('article-pdf').innerHTML = pdfFilename; // PDFファイル名を表示
             } else {
                 pdfLink.style.display = 'none'; // PDFリンクを非表示
             }
@@ -65,6 +67,5 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    // ページ読み込み時に記事本文を更新
     fetchArticleBody();
 });
