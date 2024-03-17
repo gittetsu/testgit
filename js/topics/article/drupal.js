@@ -33,7 +33,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 new RegExp(Object.keys(replacementMap).join("|"), "g"),
                 match => replacementMap[match]
             );
-            console.log(resulttext);
 
             // const articleBody = data.data.attributes.body.value;
             const articleBodyElement = document.getElementById('article-body');
