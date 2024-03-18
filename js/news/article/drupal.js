@@ -25,10 +25,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 'data-align="right"': 'class="align-right"',
                 'data-align="left"': 'class="align-left"',
                 'data-align="center"': 'class="align-center"',
-                'h2': 'h2 class="notice-ttl"',
-                'h3': 'h3 class="notice-ttl"',
-                'h4': 'h4 class="notice-ttl"',
-                'h5': 'h5 class="notice-ttl"',
+                'h2': 'h2 class="common-ttl"',
+                'h3': 'h3 class="common-ttl"',
+                'h4': 'h4 class="common-ttl"',
+                'h5': 'h5 class="common-ttl"',
             };
             let resulttext = inputtext.replace(
                 new RegExp(Object.keys(replacementMap).join("|"), "g"),
