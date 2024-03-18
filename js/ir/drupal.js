@@ -45,7 +45,6 @@ async function updateArticleTitles() {
                 if (article.attributes.field_pdf && article.attributes.field_pdf.value) {
                     pdflink = `/pdf/${article.attributes.field_pdf.value}" target="_blank`;
                 }
-                console.log(pdflink);
             }
             const liElement = document.createElement('li');
             liElement.className = 'news-list';

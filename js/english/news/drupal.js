@@ -85,7 +85,6 @@ async function updateArticleLists(category, searchKeyword) {
           if (article.attributes.field_pdf && article.attributes.field_pdf.value) {
             pdflink = `/pdf/${article.attributes.field_pdf.value}" target="_blank`;
           }
-          console.log(pdflink);
         }
         liElement.className = 'news-list';
         if (article.attributes.body === null) {
