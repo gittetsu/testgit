@@ -61,6 +61,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
             if (data.data.attributes.field_pdf && data.data.attributes.field_pdf.value) {
                 pdflink = `/pdf/${data.data.attributes.field_pdf.value}" target="_blank`;
+                pdfName = data.data.attributes.field_pdf.value
             }
 
             // PDFリンクを設定
@@ -71,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 pdfLink.href = pdflink;
                 // article-pdf要素に本文を挿入
                 const articlePdfElement = document.getElementById('article-pdf');
-                articlePdfElement.innerHTML = pdflink;
+                articlePdfElement.innerHTML = pdfName;
             } else {
                 pdfLink.style.display = 'none'; // PDFリンクを非表示
             }
