@@ -50,14 +50,14 @@ document.addEventListener('DOMContentLoaded', function () {
             // PDFの処理
             let pdflink = "";
             let pdfName = "";
-            if (article.relationships.field_upload.data && article.relationships.field_upload.data.id) {
+            if (data.data.relationships.field_upload.data && data.data.relationships.field_upload.data.id) {
                 const fileId = article.relationships.field_upload.data.id; // PDFのIDを取得
                 const fileResponse = await fetch(`${fileApiUrl}/${fileId}`);
                 const fileData = await fileResponse.json();
                 pdfName = fileData.data.attributes.filename; // PDFのファイル名を取得
                 pdflink = `/pdf/${pdfName}" target="_blank`;
             }
-            if (article.attributes.field_pdf && article.attributes.field_pdf.value) {
+            if (data.data.attributes.field_pdf && data.data.attributes.field_pdf.value) {
                 pdflink = `/pdf/${article.attributes.field_pdf.value}" target="_blank`;
             }
 
