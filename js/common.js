@@ -736,7 +736,7 @@ function commonload() {
     }
     const para = document.createElement('p');
     if (isEng) {
-        para.innerText = `This website uses cookies, tags, and other technologies for such purposes as providing a better site experience, advertising based on access history, compiling data, and preparing statistics. By clicking the "I agree" button, you consent to the use of cookies for the above purposes and to the sharing of your data with our partners and contractors.If you wish to reject or delete cookies, please refer to your Internet browser's help, support information, etc.`;
+        para.innerText = `This website uses cookies, tags, and other technologies for such purposes as providing a better site experience, advertising based on access history, compiling data, and preparing statistics. By clicking the "I agree" button, you consent to the use of cookies for the above purposes and to the sharing of your data with our partners and contractors. If you wish to reject or delete cookies, please refer to your Internet browser's help, support information, etc.`;
     } else {
         para.innerText = '本ウェブサイトでは、より良いサイト体験の提供、アクセス履歴に基づく広告、統計、集計等の目的で、Cookie、タグ等の技術を使用します。「同意する」ボタンをクリックすることで、上記の目的のためにCookieを使用すること、また、皆様のデータを提供先や委託先と共有することに同意いただいたものとみなします。お客様がCookieを拒否または削除したい場合は、インターネットブラウザのヘルプ、サポート情報等をご参照ください。';
     }
