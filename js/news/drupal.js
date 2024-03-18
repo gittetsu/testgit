@@ -77,8 +77,8 @@ async function updateArticleLists(category, searchKeyword) {
           pdflink = `/news/article?id=${article.id}`;
         } else {
           // bodyがnullで、かつPDF関連データが存在する場合、PDFのリンクと名前を取得
-          if (article.relationships.field_fail_test.data && article.relationships.field_fail_test.data.id) {
-            const fileId = article.relationships.field_fail_test.data.id; // PDFのIDを取得
+          if (article.relationships.field_upload.data && article.relationships.field_upload.data.id) {
+            const fileId = article.relationships.field_upload.data.id; // PDFのIDを取得
             const fileResponse = await fetch(`${fileApiUrl}/${fileId}`);
             const fileData = await fileResponse.json();
             pdfName = fileData.data.attributes.filename; // PDFのファイル名を取得
