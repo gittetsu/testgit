@@ -1,5 +1,6 @@
 // JSON APIのエンドポイントURLを指定
 const apiUrl = 'https://d1vyjchtv8ee5.cloudfront.net/jsonapi/node/sugi_hd_en?sort=-field_date&filter[field_en_list]=IR&page[limit]=5';
+const fileApiUrl = 'https://d1vyjchtv8ee5.cloudfront.net/jsonapi/file/file';
 
 // 日付フォーマット変更
 function formatDate(dateString) {
@@ -26,11 +27,27 @@ async function updateArticleTitles() {
         // ul要素を取得
         const ulElement = document.getElementById('all');
 
-
-        
         // 記事リストを生成
-        data.data.forEach((article, index) => {
-            // sortedData.forEach((article, index) => {
+        for (const article of data.data) {
+            let pdflink = "";
+            let pdfName = ""; // PDFファイル名を初期化
+            // bodyがnullでない場合、またはPDF関連データが存在しない場合、通常の記事リンクを使用
+            if (article.attributes.body !== null) {
+                pdflink = `/news/article?id=${article.id}`;
+            } else {
+                // bodyがnullで、かつPDF関連データが存在する場合、PDFのリンクと名前を取得
+                if (article.relationships.field_upload.data && article.relationships.field_upload.data.id) {
+                    const fileId = article.relationships.field_upload.data.id; // PDFのIDを取得
+                    const fileResponse = await fetch(`${fileApiUrl}/${fileId}`);
+                    const fileData = await fileResponse.json();
+                    pdfName = fileData.data.attributes.filename; // PDFのファイル名を取得
+                    pdflink = `/pdf/${pdfName}" target="_blank`;
+                }
+                if (article.attributes.field_pdf && article.attributes.field_pdf.value) {
+                    pdflink = `/pdf/${article.attributes.field_pdf.value}" target="_blank`;
+                }
+                console.log(pdflink);
+            }
             const liElement = document.createElement('li');
             liElement.className = 'news-list';
             if (article.attributes.body === null) {
@@ -59,7 +76,7 @@ async function updateArticleTitles() {
                     	`;
             }
             ulElement.appendChild(liElement);
-        });
+        };
     } catch (error) {
         console.error('エラーが発生しました:', error);
     }
@@ -152,7 +169,7 @@ window.addEventListener('load', updateArticleTitles);
 //                         	<div class="newslist-header">
 //                             		<span class="news-date">${formatDate(article.attributes.field_date)}</span>
 //                             		<div>
-//                                 		<span class="news-sugi">${article.attributes.field_company}</span> 
+//                                 		<span class="news-sugi">${article.attributes.field_company}</span>
 // 		                                <span class="news-info">${article.attributes.field_list}</span>
 //                 		        </div>
 //                         	</div>
