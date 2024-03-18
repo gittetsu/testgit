@@ -20,28 +20,49 @@ async function updateArticleLists(category) {
         let pdfName = ""; // PDFファイル名を初期化
 
         // bodyがnullでない場合、またはPDF関連データが存在しない場合、通常の記事リンクを使用
-        if (article.attributes.body !== null || !article.relationships.field_fail_test || !article.relationships.field_fail_test.data) {
+        if (article.attributes.body !== null) {
           pdflink = `/news/article?id=${article.id}`;
         } else {
           // bodyがnullで、かつPDF関連データが存在する場合、PDFのリンクと名前を取得
-          const fileId = article.relationships.field_fail_test.data.id; // PDFのIDを取得
-          const fileResponse = await fetch(`${fileApiUrl}/${fileId}`);
-          const fileData = await fileResponse.json();
-          pdfName = fileData.data.attributes.filename; // PDFのファイル名を取得
-          pdflink = fileData.data.attributes.uri.url; // PDFのURLを取得
-          console.log(fileData);
+          if(article.relationships.field_fail_test.data && article.relationships.field_fail_test.data.id){
+            const fileId = article.relationships.field_fail_test.data.id; // PDFのIDを取得
+            const fileResponse = await fetch(`${fileApiUrl}/${fileId}`);
+            const fileData = await fileResponse.json();
+            pdfName = fileData.data.attributes.filename; // PDFのファイル名を取得
+            pdflink = `/pdf/${pdfName}" target="_blank`;
+          }
+          if(article.attributes.field_pdf && article.attributes.field_pdf.value){
+            pdflink = `/pdf/${article.attributes.field_pdf.value}" target="_blank`;
+          }
+          console.log(pdflink);
         }
 
         // 記事リストのHTMLを生成
         const liElement = document.createElement('li');
         liElement.className = 'news-list';
-        liElement.innerHTML = `
+        if (article.attributes.body === null) {
+          liElement.innerHTML = `
           <div class="new-common-list">
             <a href="${pdflink}" class="article-link" data-article-id="${article.id}">
               <div class="cat-blk">
                 <p class="date small-text">${article.attributes.field_date}</p>
                 <ul>
-                  <li class="small-text">スギホールディングス</li>
+                  <li class="small-text">スギホールディングス</li> 
+                  <li class="small-text">${article.attributes.field_list}</li>
+                </ul>
+              </div>
+              <p class="newslist-desc pdf" id="article-title">${article.attributes.title}</p>
+            </a>
+          </div>
+        `;
+        } else {
+          liElement.innerHTML = `
+          <div class="new-common-list">
+            <a href="${pdflink}" class="article-link" data-article-id="${article.id}">
+              <div class="cat-blk">
+                <p class="date small-text">${article.attributes.field_date}</p>
+                <ul>
+                  <li class="small-text">スギホールディングス</li> 
                   <li class="small-text">${article.attributes.field_list}</li>
                 </ul>
               </div>
@@ -49,8 +70,9 @@ async function updateArticleLists(category) {
             </a>
           </div>
         `;
+        }
         ulElement.appendChild(liElement);
-      }
+      };
     }
   } catch (error) {
     console.error('エラーが発生しました:', error);
