@@ -48,16 +48,16 @@ document.addEventListener('DOMContentLoaded', function () {
             document.getElementById('article-list').innerHTML = articleList;
 
             // PDFの処理
-            const pdfField = data.data.relationships.field_fail_test.data;
+            const pdfField = data.data.relationships.field_upload.data;
             const pdfLink = document.getElementById('pdf-link');
             if (pdfField) {
                 const pdfResponse = await fetch(`${fileApiUrl}/${pdfField.id}`);
                 const pdfData = await pdfResponse.json();
                 console.log(pdfData);
-                const pdfFilename = pdfData.data.attributes.field_fail_test;
+                const pdfFilename = pdfData.data.attributes.field_upload;
                 const pdfFileUrl = pdfData.data.attributes.uri.url;
                 pdfLink.style.display = 'inline'; // PDFリンクを表示
-                pdfLink.href = pdfFileUrl; // この部分はPDFファイルの実際のURLに置き換える
+                pdfLink.href = pdfFileUrl;
                 document.getElementById('article-pdf').innerHTML = pdfFilename; // PDFファイル名を表示
             } else {
                 pdfLink.style.display = 'none'; // PDFリンクを非表示
