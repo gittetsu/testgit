@@ -48,17 +48,28 @@ document.addEventListener('DOMContentLoaded', function () {
             document.getElementById('article-list').innerHTML = articleList;
 
             // PDFの処理
-            const pdfField = data.data.relationships.field_upload.data;
+            let pdflink = "";
+            let pdfName = "";
+            if (article.relationships.field_upload.data && article.relationships.field_upload.data.id) {
+                const fileId = article.relationships.field_upload.data.id; // PDFのIDを取得
+                const fileResponse = await fetch(`${fileApiUrl}/${fileId}`);
+                const fileData = await fileResponse.json();
+                pdfName = fileData.data.attributes.filename; // PDFのファイル名を取得
+                pdflink = `/pdf/${pdfName}" target="_blank`;
+            }
+            if (article.attributes.field_pdf && article.attributes.field_pdf.value) {
+                pdflink = `/pdf/${article.attributes.field_pdf.value}" target="_blank`;
+            }
+
+            // PDFリンクを設定
             const pdfLink = document.getElementById('pdf-link');
-            if (pdfField) {
-                const pdfResponse = await fetch(`${fileApiUrl}/${pdfField.id}`);
-                const pdfData = await pdfResponse.json();
-                console.log(pdfData);
-                const pdfFilename = pdfData.data.attributes.field_upload;
-                const pdfFileUrl = pdfData.data.attributes.uri.url;
+
+            if (pdflink != "") {
                 pdfLink.style.display = 'inline'; // PDFリンクを表示
-                pdfLink.href = pdfFileUrl;
-                document.getElementById('article-pdf').innerHTML = pdfFilename; // PDFファイル名を表示
+                pdfLink.href = pdflink;
+                // article-pdf要素に本文を挿入
+                const articlePdfElement = document.getElementById('article-pdf');
+                articlePdfElement.innerHTML = pdflink;
             } else {
                 pdfLink.style.display = 'none'; // PDFリンクを非表示
             }
