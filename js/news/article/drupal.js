@@ -51,14 +51,14 @@ document.addEventListener('DOMContentLoaded', function () {
             let pdflink = "";
             let pdfName = "";
             if (data.data.relationships.field_upload.data && data.data.relationships.field_upload.data.id) {
-                const fileId = article.relationships.field_upload.data.id; // PDFのIDを取得
+                const fileId = data.data.relationships.field_upload.data.id; // PDFのIDを取得
                 const fileResponse = await fetch(`${fileApiUrl}/${fileId}`);
                 const fileData = await fileResponse.json();
                 pdfName = fileData.data.attributes.filename; // PDFのファイル名を取得
                 pdflink = `/pdf/${pdfName}" target="_blank`;
             }
             if (data.data.attributes.field_pdf && data.data.attributes.field_pdf.value) {
-                pdflink = `/pdf/${article.attributes.field_pdf.value}" target="_blank`;
+                pdflink = `/pdf/${data.data.attributes.field_pdf.value}" target="_blank`;
             }
 
             // PDFリンクを設定
