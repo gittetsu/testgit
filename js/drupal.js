@@ -10,7 +10,6 @@ async function updateArticleLists(category) {
 
     const response = await fetch(`${apiUrl}?sort=-field_date,-changed${filter}&page[limit]=5&${noticefilter}`);
     const data = await response.json();
-    console.log(data);
 
     const ulElement = document.getElementById(category);
     if (ulElement) {
@@ -34,7 +33,6 @@ async function updateArticleLists(category) {
           if(article.attributes.field_pdf && article.attributes.field_pdf.value){
             pdflink = `/pdf/${article.attributes.field_pdf.value}" target="_blank`;
           }
-          console.log(pdflink);
         }
 
         // 記事リストのHTMLを生成
@@ -128,20 +126,16 @@ async function updateNoticeList() {
 async function updateGroupList() {
   try {
     const groupUrl = 'https://d37m9cibsc5611.cloudfront.net/jsonapi/node/sugi_group';
-    console.log(groupUrl);
 
     // JSON APIからデータを取得
     const response3 = await fetch(`${groupUrl}?sort=-field_date,-changed&page[limit]=10`);
     const data3 = await response3.json();
-    console.log(data3);
 
     // 取得したデータから記事リストを生成
     const groupListElement = document.getElementById('topics-slider');
     if (groupListElement) {
       groupListElement.innerHTML = ''; // リストをクリア
       data3.data.forEach((article, index) => {
-        console.log(article);
-        console.log(index);
         const liElement3 = document.createElement('li');
         let pdflink = "";
         pdflink = `/topic/article/index.html?id=${article.id}`;

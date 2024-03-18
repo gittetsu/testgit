@@ -48,8 +48,6 @@ async function updateArticleLists(category, searchKeyword) {
 
     const response = await fetch(`${apiUrl}?sort=-field_date,-changed${filter}&page[limit]=20&page[offset]=${(pageNumber * 20)}&filter[title][condition][path]=title&filter[title][condition][operator]=CONTAINS&filter[title][condition][value]=${searchKeyword}&${noticefilter}`);
     const data = await response.json();
-    console.log(data);
-
 
     // ページの最初を示すボタンの要素を取得
     const nextPageButton = document.querySelector('.cmn-pager-next');
@@ -87,7 +85,6 @@ async function updateArticleLists(category, searchKeyword) {
           if (article.attributes.field_pdf && article.attributes.field_pdf.value) {
             pdflink = `/pdf/${article.attributes.field_pdf.value}" target="_blank`;
           }
-          console.log(pdflink);
         }
         liElement.className = 'news-list';
         if (article.attributes.body === null) {

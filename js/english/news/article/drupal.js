@@ -18,7 +18,6 @@ document.addEventListener('DOMContentLoaded', function () {
             // JSON APIからデータを取得します
             const response = await fetch(apiUrl);
             const data = await response.json();
-            console.log(data);
 
             const inputtext = data.data.attributes.body.value;
             let replacementMap = {
@@ -57,11 +56,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 const fileResponse = await fetch(`${fileApiUrl}/${fileId}`);
                 const fileData = await fileResponse.json();
                 pdfName = fileData.data.attributes.filename; // PDFのファイル名を取得
-                pdflink = `/pdf/${pdfName}" target="_blank`;
+                pdflink = `/pdf/${pdfName}`;
             }
             if (data.data.attributes.field_pdf && data.data.attributes.field_pdf.value) {
-                pdflink = `/pdf/${data.data.attributes.field_pdf.value}" target="_blank`;
                 pdfName = data.data.attributes.field_pdf.value
+                pdflink = `/pdf/${data.data.attributes.field_pdf.value}`;
             }
 
             // PDFリンクを設定
