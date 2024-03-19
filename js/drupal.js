@@ -1,6 +1,6 @@
-// const apiUrl = 'https://d1vyjchtv8ee5.cloudfront.net/jsonapi/node/sugi_hd';
-const apiUrl = 'https://d1vyjchtv8ee5.cloudfront.net/jsonapi/node/sugi_hd';
-const fileApiUrl = 'https://d1vyjchtv8ee5.cloudfront.net/jsonapi/file/file';
+// const apiUrl = 'https://d37m9cibsc5611.cloudfront.net/jsonapi/node/sugi_hd';
+const apiUrl = 'https://d37m9cibsc5611.cloudfront.net/jsonapi/node/sugi_hd';
+const fileApiUrl = 'https://d37m9cibsc5611.cloudfront.net/jsonapi/file/file';
 
 // カテゴリーごとに記事を取得して表示
 async function updateArticleLists(category) {
@@ -125,7 +125,7 @@ async function updateNoticeList() {
 
 async function updateGroupList() {
   try {
-    const groupUrl = 'https://d1vyjchtv8ee5.cloudfront.net/jsonapi/node/sugi_group';
+    const groupUrl = 'https://d37m9cibsc5611.cloudfront.net/jsonapi/node/sugi_group';
 
     // JSON APIからデータを取得
     const response3 = await fetch(`${groupUrl}?sort=-field_date,-changed&page[limit]=10`);
