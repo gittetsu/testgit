@@ -86,6 +86,16 @@
   font-weight: 700;
 }
 
+.sugi-medical-header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: #fff;
+  transition: top 1s cubic-bezier(0.55, 0.085, 0, 0.99);
+}
+
 .sugi-medical-header .header-inner {
   display: flex;
   justify-content: space-between;
@@ -370,14 +380,8 @@ footer.ft-medical .page-top:hover img {
 
 /*I-pad*/
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  .sugi-medical-header {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 99;
-    background-color: #fff;
-  }
 
+  .sugi-medical-header.scroll-up .header-inner,
   .sugi-medical-header .header-inner {
     width: 100%;
     padding: 10px 10px 10px 20px;
@@ -529,14 +533,6 @@ footer.ft-medical .page-top:hover img {
     letter-spacing: 2px;
   }
 
-  .sugi-medical-header {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 99;
-    background-color: #fff;
-  }
-
   /* sec-medical-bnr */
   .sec-medical-bnr {
     margin-bottom: 40px;
@@ -571,6 +567,7 @@ footer.ft-medical .page-top:hover img {
     max-width: 137px;
   }
 
+  .sugi-medical-header.scroll-up .header-inner,
   .sugi-medical-header .header-inner {
     width: 100%;
     padding: 10px 10px 10px 20px;
