@@ -1055,6 +1055,7 @@ html[lang="en"] .count-txtblk {
   padding: 10px 20px;
   border: 1px solid #dddddd;
   background-color: #fff;
+  color: #000;
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 0.875rem;
   font-weight: 400;
@@ -2399,7 +2400,7 @@ html[lang="en"] .count-txtblk {
   }
 
   .tab-nav:last-child {
-    margin-right: 0;
+    border: none;
   }
 
   .tab-contents {

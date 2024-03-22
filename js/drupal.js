@@ -1,34 +1,42 @@
-// JSON APIのベースURLを指定
+// const apiUrl = 'https://d1vyjchtv8ee5.cloudfront.net/jsonapi/node/sugi_hd';
 const apiUrl = 'https://d1vyjchtv8ee5.cloudfront.net/jsonapi/node/sugi_hd';
-// const apiUrl = 'https://d37m9cibsc5611.cloudfront.net/jsonapi/node/sugi_hd';
+const fileApiUrl = 'https://d1vyjchtv8ee5.cloudfront.net/jsonapi/file/file';
 
 // カテゴリーごとに記事を取得して表示
 async function updateArticleLists(category) {
   try {
-    // カテゴリーごとのフィルター条件を設定
     const filter = category === 'all' ? '' : `&filter[field_list]=${category}`;
-    const noticefilter = 'filter[ex1][condition][path]=field_notice&filter[ex1][condition][operator]=IN&filter[ex1][condition][value][1]=1&filter[ex1][condition][value][2]=3'
+    const noticefilter = 'filter[ex1][condition][path]=field_notice&filter[ex1][condition][operator]=IN&filter[ex1][condition][value][1]=1&filter[ex1][condition][value][2]=3';
 
-    // JSON APIからデータを取得
     const response = await fetch(`${apiUrl}?sort=-field_date,-changed${filter}&page[limit]=5&${noticefilter}`);
     const data = await response.json();
 
-    // 取得したデータから記事リストを生成
     const ulElement = document.getElementById(category);
     if (ulElement) {
       ulElement.innerHTML = ''; // リストをクリア
-      data.data.forEach((article, index) => {
-        const liElement = document.createElement('li');
+      for (const article of data.data) {
         let pdflink = "";
-        if (article.attributes.body === null) {
-          // 条件1: bodyがnullの場合、PDFへ遷移
-          if (article.attributes.field_pdf.value) {
+        let pdfName = ""; // PDFファイル名を初期化
+
+        // bodyがnullでない場合、またはPDF関連データが存在しない場合、通常の記事リンクを使用
+        if (article.attributes.body !== null) {
+          pdflink = `/news/article?id=${article.id}`;
+        } else {
+          // bodyがnullで、かつPDF関連データが存在する場合、PDFのリンクと名前を取得
+          if(article.relationships.field_upload.data && article.relationships.field_upload.data.id){
+            const fileId = article.relationships.field_upload.data.id; // PDFのIDを取得
+            const fileResponse = await fetch(`${fileApiUrl}/${fileId}`);
+            const fileData = await fileResponse.json();
+            pdfName = fileData.data.attributes.filename; // PDFのファイル名を取得
+            pdflink = `/pdf/${pdfName}" target="_blank`;
+          }
+          if(article.attributes.field_pdf && article.attributes.field_pdf.value){
             pdflink = `/pdf/${article.attributes.field_pdf.value}" target="_blank`;
           }
-        } else {
-          // 条件2: bodyがnullでない場合、記事へ遷移
-          pdflink = `/news/article?id=${article.id}`;
         }
+
+        // 記事リストのHTMLを生成
+        const liElement = document.createElement('li');
         liElement.className = 'news-list';
         if (article.attributes.body === null) {
           liElement.innerHTML = `
@@ -41,7 +49,7 @@ async function updateArticleLists(category) {
                   <li class="small-text">${article.attributes.field_list}</li>
                 </ul>
               </div>
-              <p class="newslist-desc pdf" id="article-title${index + 1}">${article.attributes.title}</p>
+              <p class="newslist-desc pdf" id="article-title">${article.attributes.title}</p>
             </a>
           </div>
         `;
@@ -56,13 +64,13 @@ async function updateArticleLists(category) {
                   <li class="small-text">${article.attributes.field_list}</li>
                 </ul>
               </div>
-              <p class="newslist-desc text-02" id="article-title${index + 1}">${article.attributes.title}</p>
+              <p class="newslist-desc text-02" id="article-title">${article.attributes.title}</p>
             </a>
           </div>
         `;
         }
         ulElement.appendChild(liElement);
-      });
+      };
     }
   } catch (error) {
     console.error('エラーが発生しました:', error);
@@ -117,23 +125,17 @@ async function updateNoticeList() {
 
 async function updateGroupList() {
   try {
-    // const groupUrl = 'https://d1vyjchtv8ee5.cloudfront.net/jsonapi/node/sugi_group';
-    // const groupUrl = 'https://d1vyjchtv8ee5.cloudfront.net/jsonapi/node/sugi_hd';
-    const groupUrl = 'https://d37m9cibsc5611.cloudfront.net/jsonapi/node/sugi_group';
-    console.log(groupUrl);
+    const groupUrl = 'https://d1vyjchtv8ee5.cloudfront.net/jsonapi/node/sugi_group';
 
     // JSON APIからデータを取得
     const response3 = await fetch(`${groupUrl}?sort=-field_date,-changed&page[limit]=10`);
     const data3 = await response3.json();
-    console.log(data3);
 
     // 取得したデータから記事リストを生成
     const groupListElement = document.getElementById('topics-slider');
     if (groupListElement) {
       groupListElement.innerHTML = ''; // リストをクリア
       data3.data.forEach((article, index) => {
-        console.log(article);
-        console.log(index);
         const liElement3 = document.createElement('li');
         let pdflink = "";
         pdflink = `/topic/article/index.html?id=${article.id}`;

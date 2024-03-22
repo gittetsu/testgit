@@ -1,6 +1,5 @@
-
-
 const apiUrl = 'https://d1vyjchtv8ee5.cloudfront.net/jsonapi/node/sugi_hd_en';
+const fileApiUrl = 'https://d1vyjchtv8ee5.cloudfront.net/jsonapi/file/file';
 
 // ページング関連の変数
 let currentPage = 1;
@@ -66,17 +65,26 @@ async function updateArticleLists(category, searchKeyword) {
     const ulElement = document.getElementById("all");
     if (ulElement) {
       ulElement.innerHTML = ''; // リストをクリア
-      data.data.forEach((article, index) => {
-        const liElement = document.createElement('li');
+      for (const article of data.data) {
         let pdflink = "";
-        if (article.attributes.body === null) {
-          // 条件1: bodyがnullの場合、PDFへ遷移
-          if (article.attributes.field_pdf.value) {
+        let pdfName = ""; // PDFファイル名を初期化
+        const liElement = document.createElement('li');
+
+        // bodyがnullでない場合、またはPDF関連データが存在しない場合、通常の記事リンクを使用
+        if (article.attributes.body !== null) {
+          pdflink = `english/news/article?id=${article.id}`;
+        } else {
+          // bodyがnullで、かつPDF関連データが存在する場合、PDFのリンクと名前を取得
+          if (article.relationships.field_upload.data && article.relationships.field_upload.data.id) {
+            const fileId = article.relationships.field_upload.data.id; // PDFのIDを取得
+            const fileResponse = await fetch(`${fileApiUrl}/${fileId}`);
+            const fileData = await fileResponse.json();
+            pdfName = fileData.data.attributes.filename; // PDFのファイル名を取得
+            pdflink = `/pdf/${pdfName}" target="_blank`;
+          }
+          if (article.attributes.field_pdf && article.attributes.field_pdf.value) {
             pdflink = `/pdf/${article.attributes.field_pdf.value}" target="_blank`;
           }
-        } else {
-          // 条件2: bodyがnullでない場合、記事へ遷移
-          pdflink = `/news/article?id=${article.id}`;
         }
         liElement.className = 'news-list';
         if (article.attributes.body === null) {
@@ -87,7 +95,7 @@ async function updateArticleLists(category, searchKeyword) {
                 <span class="news-date">${article.attributes.field_date}</span>
                 <span class="news-info">${article.attributes.field_en_list}</span>
               </div>
-              <p class="newslist-desc pdf" id="article-title${index + 1}">${article.attributes.title}</p>
+              <p class="newslist-desc pdf" id="article-title">${article.attributes.title}</p>
             </a>
           </li>
           `;
@@ -99,13 +107,13 @@ async function updateArticleLists(category, searchKeyword) {
                 <span class="news-date">${article.attributes.field_date}</span>
                 <span class="news-info">${article.attributes.field_en_list}</span>
               </div>
-              <p class="newslist-desc text-02" id="article-title${index + 1}">${article.attributes.title}</p>
+              <p class="newslist-desc text-02" id="article-title">${article.attributes.title}</p>
             </a>
           </li>
           `;
         }
         ulElement.appendChild(liElement);
-      });
+      };
     }
   } catch (error) {
     console.error('エラーが発生しました:', error);
