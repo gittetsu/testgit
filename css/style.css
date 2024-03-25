@@ -2513,6 +2513,7 @@ html[lang="en"] .count-txtblk {
     border-width: 2px;
     border: none;
     justify-content: space-between;
+    z-index: 3;
   }
 
   .report-btn .arrow {
