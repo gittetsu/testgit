@@ -251,6 +251,16 @@ function commonload() {
             history.replaceState(null, null, '#' + targetId);
         });
     });
+
+    /* Smooth Anchor Link in different pages */
+    setTimeout(function () {
+        if (location.hash) {
+            window.scrollTo(0, 0);
+            var target = location.hash.substring(1);
+            smoothScrollTo(document.getElementById(target));
+        }
+    }, 1);
+
     function smoothScrollTo(targetElement) {
         let offset = 0;
         const isSidebar = document.querySelector('.js-sidebar');
@@ -283,16 +293,7 @@ function commonload() {
         }
 
         requestAnimationFrame(scrollStep);
-    }
-
-    /* Anchor Link in different pages */
-    setTimeout(function () {
-        if (location.hash) {
-            window.scrollTo(0, 0);
-            var target = location.hash.substring(1);
-            smoothScrollTo(document.getElementById(target));
-        }
-    }, 1);    
+    }  
 
     /* scrollTop*/
     let topBtn = document.getElementById('scrollTop')
