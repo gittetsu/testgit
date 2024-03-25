@@ -640,6 +640,7 @@ html[lang="en"] .top .sec-mv .mv-txt p {
   line-height: 1.3;
   font-size: 0.875rem;
   font-weight: 400;
+  margin-top: 10px;
 }
 
 .number-gp-blk .pharmacy-gp-blk {
@@ -767,6 +768,7 @@ html[lang="en"] .top .icon-common {
 .gp-circle {
   position: relative;
   margin-top: -36%;
+  padding-bottom: 50%;
 }
 
 .gp-circle-caption {
@@ -776,10 +778,16 @@ html[lang="en"] .top .icon-common {
   font-weight: 700;
 }
 
-.count-txtblk {
-  display: flex;
+.count-data {  
   position: absolute;
   top: 43px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.count-txtblk {
+  display: flex;
   justify-content: center;
   align-items: baseline;
   width: 100%;
@@ -2041,7 +2049,6 @@ html[lang="en"] .count-txtblk {
   }
 
   .update-time {
-    padding-top: 13px;
     font-size: 0.75rem;
   }
 
@@ -2081,13 +2088,21 @@ html[lang="en"] .count-txtblk {
   .gp-circle-item {
     width: 47.8%;
     margin-right: 4.4%;
-    margin-bottom: 9px;
+    margin-bottom: 20px;
     max-width: 160px;
     min-height: 160px;
   }
 
   .gp-circle-item:nth-child(2n) {
     margin-right: 0;
+  }
+
+  .gp-circle-item:nth-child(3n) {
+    margin-right: 4.4%;
+  }
+
+  .gp-circle-item:nth-child(odd):last-child .update-time{
+    white-space: nowrap;
   }
 
   .top .icon-common {
@@ -2139,6 +2154,7 @@ html[lang="en"] .count-txtblk {
 
   .gp-circle {
     margin-top: -26%;
+    padding-bottom: 0;
   }
 
   .gp-circle-caption {
@@ -2150,8 +2166,11 @@ html[lang="en"] .count-txtblk {
     font-size: 0.875rem;
   }
 
-  .count-txtblk {
+  .count-data {
     position: unset;
+  }
+
+  .count-txtblk {
     line-height: 1.1;
     font-size: 2.5rem;
     letter-spacing: 1px;
