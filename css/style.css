@@ -260,10 +260,6 @@ html[lang="en"] .top .sec-mv .mv-txt p {
   margin-left: 0;
 }
 
-.top .sec-news .tab-list {
-  align-items: flex-start;
-}
-
 .top .sec-news .tab-list .tab-left {
   width: 23.7%;
 }
