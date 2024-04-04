@@ -4669,4 +4669,10 @@ footer .page-top:hover img {
   footer .page-top {
     bottom: 10px;
   }
+  
+  /* news-list no data */
+  .no-data {
+    top: unset;
+    transform: none;
+  }
 }
