@@ -115,7 +115,7 @@
   letter-spacing: 0;
 }
 
-.ir-calendar a.calendar-link {
+.ir-calendar .calendar-link {
   padding: 3% 0;
   text-align: center;
   height: auto;
@@ -142,7 +142,7 @@
   border-radius: 100%;
 }
 
-.ir-calendar .calendar-link:hover span::before {
+.ir-calendar>a:hover span::before {
   background-color: #048851;
   background-image: url('/img/common/ico_arrow_white.svg'); 
 }
@@ -237,7 +237,7 @@
     font-size: 1.5rem;
   }
   
-  .ir-calendar .calendar-link:hover span::before {
+  .ir-calendar>a:hover span::before {
     background-color: #fff;
     background-image: url('/img/common/ico_arrow_green.svg'); 
   }
@@ -311,7 +311,7 @@
     letter-spacing: 1px;
   }
   
-  .ir-calendar a.calendar-link {
+  .ir-calendar .calendar-link {
     padding: 16px 0;
   }
   
@@ -319,7 +319,7 @@
     font-size: 0.875rem;
   }
   
-  .ir-calendar .calendar-link:hover span::before {
+  .ir-calendar>a:hover span::before {
     background-color: #fff;
     background-image: url('/img/common/ico_arrow_green.svg'); 
   }
