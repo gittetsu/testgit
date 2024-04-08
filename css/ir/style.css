@@ -71,6 +71,81 @@
   background: url('/img/common/ico_arrow_green.svg') no-repeat center/contain;
 }
 
+.sec-growthstrategy .img-list-detail a ,
+.sec-growthstrategy .img-list-detail img {
+  height: 100%;
+}
+
+.ir-calendar {
+  border: 1px solid #e6e6e6;
+}
+
+.ir-calendar .calendar-info {
+  padding: 4% 6.5%;
+  background-color: #f0f8f3;
+  font-weight: 700;
+}
+
+.ir-calendar .plan-info {
+  display: flex;
+  align-items: center;
+}
+
+.plan-info .future-plan {
+  position: relative;
+  padding-left: 40px;
+  background: url('/img/ir/ico_calendar.svg') no-repeat center left/24px;
+  font-size: 1.375rem;
+  letter-spacing: 0;
+}
+
+.plan-info .schedule-date {
+  margin-left: 40px;
+  color: #048851;
+  font-size: 1rem;
+  border-bottom: 1px solid;
+}
+
+.ir-calendar .result-ttl {
+  padding: 5% 0 7%;
+  font-size: 1.875rem;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0;
+}
+
+.ir-calendar a.calendar-link {
+  padding: 3% 0;
+  text-align: center;
+  height: auto;
+}
+
+.ir-calendar .calendar-link span {
+  position: relative;
+  padding-left: 30px;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.ir-calendar .calendar-link span::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  padding: 8px;
+  border: 1px solid #e6e6e6;
+  background:  #ffffff url('/img/common/ico_arrow_green.svg') no-repeat center;
+  content: '';
+  transform: translateY(-50%);
+  border-radius: 100%;
+}
+
+.ir-calendar .calendar-link:hover span::before {
+  background-color: #048851;
+  background-image: url('/img/common/ico_arrow_white.svg'); 
+}
+
 /* sec-performance */
 
 .sec-performance.bg-gray {
@@ -95,8 +170,8 @@
   display: inline-block;
   padding: 2.8px 12px;
   border: 1px solid #000;
-  border-radius: 4px;
   font-size: 0.875rem;
+  border-radius: 4px;
 }
 
 .sec-performance .highlights li .text-04 {
@@ -142,6 +217,30 @@
     height: 8px;
     background: url(/img/common/ico_arrow_white.svg) no-repeat center/cover;
   }
+  
+  .ir-calendar .calendar-info {
+    padding: 4% 6.5%;
+  }
+  
+  .plan-info .future-plan {
+    padding-left: 30px;
+    font-size: 1.2rem;
+  }
+  
+  .plan-info .schedule-date {
+    margin-left: 40px;
+    font-size: 0.8rem;
+  }
+  
+  .ir-calendar .result-ttl {
+    padding: 5% 0 7%;
+    font-size: 1.5rem;
+  }
+  
+  .ir-calendar .calendar-link:hover span::before {
+    background-color: #fff;
+    background-image: url('/img/common/ico_arrow_green.svg'); 
+  }
 }
 
 /* sp */
@@ -183,6 +282,46 @@
     width: 8px;
     height: 8px;
     background: url(/img/common/ico_arrow_white.svg) no-repeat center/cover;
+  }
+  
+  .ir-calendar .calendar-info {
+    padding: 5% 7.5%;
+  }
+  
+  .ir-calendar .plan-info {
+    justify-content: space-between;
+  }
+  
+  .plan-info .future-plan {
+    padding-left: 20px;
+    background-size: 12px;
+    font-size: 0.875rem;
+    letter-spacing: 1px;
+  }
+  
+  .plan-info .schedule-date {
+    margin-left: 0;
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
+  }
+  
+  .ir-calendar .result-ttl {
+    padding: 4% 0;
+    font-size: 1rem;
+    letter-spacing: 1px;
+  }
+  
+  .ir-calendar a.calendar-link {
+    padding: 16px 0;
+  }
+  
+  .ir-calendar .calendar-link span {
+    font-size: 0.875rem;
+  }
+  
+  .ir-calendar .calendar-link:hover span::before {
+    background-color: #fff;
+    background-image: url('/img/common/ico_arrow_green.svg'); 
   }
 
   .sec-performance .highlights li .text-04.tag,
