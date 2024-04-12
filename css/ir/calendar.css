@@ -83,6 +83,14 @@
   font-size: 1rem;
 }
 
+html[lang='en'] .table.w-500 {
+  width: 75%;
+}
+
+html[lang='en'] .table th:first-child {
+  min-width: 200px;
+}
+
 /*I-pad*/
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .table.w-500 {
@@ -98,6 +106,10 @@
     width: 49.5%;
     margin-right: 1%;
     margin-bottom: 55px;
+  }
+
+  html[lang='en'] .quater-item {
+    margin-bottom: 75px;
   }
 
 	.quater-item:nth-child(2n) {
@@ -133,4 +145,8 @@
 	.month-list .pin::after {
 		height: 12px;
 	}
+
+  html[lang='en'] .table.w-500 {
+    width: 100%;
+  }
 }
