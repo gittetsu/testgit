@@ -63,32 +63,37 @@ async function updateArticleLists(category, searchKeyword) {
 
     // 取得したデータから記事リストを生成
     const ulElement = document.getElementById("all");
-    if (ulElement) {
-      ulElement.innerHTML = ''; // リストをクリア
-      for (const article of data.data) {
-        let pdflink = "";
-        let pdfName = ""; // PDFファイル名を初期化
-        const liElement = document.createElement('li');
+    const noDataElement = document.querySelector('.no-data');
+    if (data.data.length === 0) {
+      noDataElement.style.display = 'block';
+    } else {
+      noDataElement.style.display = 'none';
+      if (ulElement) {
+        ulElement.innerHTML = ''; // リストをクリア
+        for (const article of data.data) {
+          let pdflink = "";
+          let pdfName = ""; // PDFファイル名を初期化
+          const liElement = document.createElement('li');
 
-        // bodyがnullでない場合、またはPDF関連データが存在しない場合、通常の記事リンクを使用
-        if (article.attributes.body !== null) {
-          pdflink = `/news/article?id=${article.id}`;
-        } else {
-          // bodyがnullで、かつPDF関連データが存在する場合、PDFのリンクと名前を取得
-          if (article.relationships.field_upload.data && article.relationships.field_upload.data.id) {
-            const fileId = article.relationships.field_upload.data.id; // PDFのIDを取得
-            const fileResponse = await fetch(`${fileApiUrl}/${fileId}`);
-            const fileData = await fileResponse.json();
-            pdfName = fileData.data.attributes.filename; // PDFのファイル名を取得
-            pdflink = `/pdf/${pdfName}" target="_blank`;
+          // bodyがnullでない場合、またはPDF関連データが存在しない場合、通常の記事リンクを使用
+          if (article.attributes.body !== null) {
+            pdflink = `/news/article?id=${article.id}`;
+          } else {
+            // bodyがnullで、かつPDF関連データが存在する場合、PDFのリンクと名前を取得
+            if (article.relationships.field_upload.data && article.relationships.field_upload.data.id) {
+              const fileId = article.relationships.field_upload.data.id; // PDFのIDを取得
+              const fileResponse = await fetch(`${fileApiUrl}/${fileId}`);
+              const fileData = await fileResponse.json();
+              pdfName = fileData.data.attributes.filename; // PDFのファイル名を取得
+              pdflink = `/pdf/${pdfName}" target="_blank`;
+            }
+            if (article.attributes.field_pdf && article.attributes.field_pdf.value) {
+              pdflink = `/pdf/${article.attributes.field_pdf.value}" target="_blank`;
+            }
           }
-          if (article.attributes.field_pdf && article.attributes.field_pdf.value) {
-            pdflink = `/pdf/${article.attributes.field_pdf.value}" target="_blank`;
-          }
-        }
-        liElement.className = 'news-list';
-        if (article.attributes.body === null) {
-          liElement.innerHTML = `
+          liElement.className = 'news-list';
+          if (article.attributes.body === null) {
+            liElement.innerHTML = `
           <div class="news-list">
             <a href="${pdflink}" class="article-link" data-article-id="${article.id}">
               <div class="newslist-header">
@@ -99,8 +104,8 @@ async function updateArticleLists(category, searchKeyword) {
             </a>
           </div>
           `;
-        } else {
-          liElement.innerHTML = `
+          } else {
+            liElement.innerHTML = `
           <div class="news-list">
             <a href="${pdflink}" class="article-link" data-article-id="${article.id}">
               <div class="newslist-header">
@@ -111,9 +116,10 @@ async function updateArticleLists(category, searchKeyword) {
             </a>
           </div>
           `;
-        }
-        ulElement.appendChild(liElement);
-      };
+          }
+          ulElement.appendChild(liElement);
+        };
+      }
     }
   } catch (error) {
     console.error('エラーが発生しました:', error);

@@ -10,27 +10,31 @@ async function updateArticleLists(category) {
     // JSON APIからデータを取得
     const response = await fetch(`${apiUrl}?sort=-field_date${filter}&page[limit]=5`);
     const data = await response.json();
-    console.log(data);
 
     // 取得したデータから記事リストを生成
     const ulElement = document.getElementById(category.replace("#", ""));
-    if (ulElement) {
-      ulElement.innerHTML = ''; // リストをクリア
+    const noDataElement = document.querySelector('.no-data');
+    if (data.data.length === 0) {
+      noDataElement.style.display = 'block';
+    } else {
+      noDataElement.style.display = 'none';
+      if (ulElement) {
+        ulElement.innerHTML = ''; // リストをクリア
 
-      data.data.forEach((article, index) => {
-        const liElement = document.createElement('li');
-        let pdflink = "";
-        if (article.attributes.body === null) {
-          // 条件1: bodyがnullの場合、PDFへ遷移
-          if (article.attributes.field_pdf.value) {
-            pdflink = `/pdf/${article.attributes.field_pdf.value}" target="_blank`;
+        data.data.forEach((article, index) => {
+          const liElement = document.createElement('li');
+          let pdflink = "";
+          if (article.attributes.body === null) {
+            // 条件1: bodyがnullの場合、PDFへ遷移
+            if (article.attributes.field_pdf.value) {
+              pdflink = `/pdf/${article.attributes.field_pdf.value}" target="_blank`;
+            }
+          } else {
+            // 条件2: bodyがnullでない場合、記事へ遷移
+            pdflink = `/sugi-medical/news/article.html?id=${article.id}`;
           }
-        } else {
-          // 条件2: bodyがnullでない場合、記事へ遷移
-          pdflink = `/sugi-medical/news/article.html?id=${article.id}`;
-        }
-        liElement.className = 'news-list';
-        liElement.innerHTML = `
+          liElement.className = 'news-list';
+          liElement.innerHTML = `
           <li class="new-common-list">
             <a href="${pdflink}" class="article-link" data-article-id="${article.id}">
               <div class="cat-blk">
@@ -43,8 +47,9 @@ async function updateArticleLists(category) {
             </a>
           </li>
         `;
-        ulElement.appendChild(liElement);
-      });
+          ulElement.appendChild(liElement);
+        });
+      }
     }
   } catch (error) {
     console.error('エラーが発生しました:', error);
