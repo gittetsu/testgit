@@ -2323,6 +2323,18 @@ footer .page-top:hover img {
   color: #fff;
 }
 
+/* news-list no data */
+.no-data {
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 30px 0;
+  display: none;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 /* Cookies */
 
 .cookie-consent {
@@ -4660,5 +4672,11 @@ footer .page-top:hover img {
 
   footer .page-top {
     bottom: 10px;
+  }
+  
+  /* news-list no data */
+  .no-data {
+    top: unset;
+    transform: none;
   }
 }
