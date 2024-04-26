@@ -14,7 +14,7 @@
   margin-right: 3.6%;
 }
 
-.ir-library .link-gp li:nth-child(3),
+.ir-library .link-gp li:nth-child(3n),
 .ir-library .link-gp li:last-child{
   margin-right: 0;
 }
