@@ -10,4 +10,9 @@
 
 .sec-eco-indicators .table tr td, .table tr th {
 	padding: 11.6px 13px;
+	min-width: 80px;
+}
+
+.sec-eco-indicators .table tr th:first-child {
+	min-width: 203px;
 }
