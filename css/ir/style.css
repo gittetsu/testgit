@@ -88,7 +88,7 @@
 
 .ir-calendar .plan-info {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .plan-info .future-plan {
