@@ -302,7 +302,7 @@
   font-weight: 700;
 }
 
-.common-smile-ttl h2 {
+.common-smile-ttl h1 {
   position: relative;
   line-height: 1.45;
   padding-bottom: 32px;
@@ -311,7 +311,7 @@
   font-weight: 700;
 }
 
-.common-smile-ttl h2::after {
+.common-smile-ttl h1::after {
   position: absolute;
   right: 0;
   bottom: 0;
@@ -593,7 +593,7 @@ footer.sugi-smile-footer .ft-nav ul li a:hover {
   }
 
   /* Common Smile Title */
-  .common-smile-ttl h2 {
+  .common-smile-ttl h1 {
     font-size: 2rem;
   }
 
