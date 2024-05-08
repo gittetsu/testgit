@@ -62,7 +62,7 @@
 .top .mv-blk .mv-slider {
   position: relative;
   padding: 34.7% 0 34.7% 0;
-  background-image: url('/img/sugi-medical/img_mv_bg_01.png');
+  background-image: url('/img/sugi-medical/img_mv_bg_01_v2.png');
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
@@ -601,7 +601,7 @@
 
   .top .mv-blk .mv-slider {
     padding: 86.6% 0 86.7% 0;
-    background-image: url('/img/sugi-medical/img_mv_bg_01_sp.png');
+    background-image: url('/img/sugi-medical/img_mv_bg_01_sp_v2.png');
   }
   
   .top .mv-blk .mv-txt {
