@@ -31,7 +31,7 @@
   margin-bottom: 56px;
 }
 
-.sec-nurcare-gp h3.common-nursing-subttl {
+.sec-nurcare-gp .common-nursing-subttl {
   margin: 63px 0 56px;
 }
 
@@ -105,7 +105,7 @@
   max-width: 170px;
 }
 
-.sec-nurcare-recruit h3.common-nursing-subttl {
+.sec-nurcare-recruit .common-nursing-subttl {
   margin-bottom: 56px;
   color: #fff;
 }
@@ -156,7 +156,7 @@
   padding-bottom: 56px;
 }
 
-.sec-nurcare-consult h3.common-nursing-subttl {
+.sec-nurcare-consult .common-nursing-subttl {
   margin: 120px 0 0;
 }
 
@@ -182,7 +182,7 @@
     margin: 20px 0 0;
   }
 
-  .sec-nurcare-gp h3.common-nursing-subttl {
+  .sec-nurcare-gp .common-nursing-subttl {
     margin-top: 0;
   }
 
@@ -217,7 +217,7 @@
     max-width: 85px;
   }
 
-  .sec-nurcare-recruit h3.common-nursing-subttl {
+  .sec-nurcare-recruit .common-nursing-subttl {
     margin-bottom: 45px;
   }
 
@@ -262,7 +262,7 @@
     padding-bottom: 30px;
   }
 
-  .sec-nurcare-consult h3.common-nursing-subttl {
+  .sec-nurcare-consult .common-nursing-subttl {
     margin: 80px 0 0;
   }
 }

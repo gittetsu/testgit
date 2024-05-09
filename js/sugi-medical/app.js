@@ -2,13 +2,13 @@
 var i = 0; // Start from the first image
 var slideTime = 3000; // 3 seconds
 var pcImages = [
-	'/img/sugi-medical/img_mv_bg_01.png',
-	'/img/sugi-medical/img_mv_bg_02.png'
+	'/img/sugi-medical/img_mv_bg_01_v2.png',
+	'/img/sugi-medical/img_mv_bg_02_v2.png'
 ];
 
 var spImages = [
-	'/img/sugi-medical/img_mv_bg_01_sp.png',
-	'/img/sugi-medical/img_mv_bg_02_sp.png'
+	'/img/sugi-medical/img_mv_bg_01_sp_v2.png',
+	'/img/sugi-medical/img_mv_bg_02_sp_v2.png'
 ];
 
 var slideTimeout;
