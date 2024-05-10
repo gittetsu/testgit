@@ -416,7 +416,7 @@ ul.nursing-newslist-blk li .nursing-news-list:hover::after {
   text-align: left;
 }
 
-.sec-dev-service h3.common-nursing-subttl {
+.sec-dev-service .common-nursing-subttl {
   color: #fff;
 }
 
@@ -782,7 +782,7 @@ ul.nursing-newslist-blk li .nursing-news-list:hover::after {
     transform: translate(0, 0) rotate(90deg);
   }
 
-  .sec-dev-service h3.common-nursing-subttl {
+  .sec-dev-service .common-nursing-subttl {
     line-height: 1.5;
     padding-bottom: 24px;
     font-size: 1.25rem;

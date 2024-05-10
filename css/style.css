@@ -178,7 +178,7 @@ html[lang="en"] .top .notice-ttl {
   -webkit-box-orient: vertical;
 }
 
-.top .sec-mv .mv-txt h2 {
+.top .sec-mv .mv-txt h1 {
   line-height: 1.2;
   color: #048851;
   font-size: 2.813rem;
@@ -186,11 +186,11 @@ html[lang="en"] .top .notice-ttl {
   letter-spacing: 1px;
 }
 
-html[lang="en"] .top .sec-mv .mv-txt h2 {
+html[lang="en"] .top .sec-mv .mv-txt h1 {
   font-size: 1.875rem;
 }
 
-.top .sec-mv .mv-txt h2 span {
+.top .sec-mv .mv-txt h1 span {
   display: block;
   margin-bottom: 8px;
   padding: 3px 2px 10px 10px;
@@ -199,7 +199,7 @@ html[lang="en"] .top .sec-mv .mv-txt h2 {
   border-radius: 4px;
 }
 
-html[lang="en"] .top .sec-mv .mv-txt h2 span:first-child {
+html[lang="en"] .top .sec-mv .mv-txt h1 span:first-child {
   width: fit-content;
   padding: 3px 10px 10px;
 }
@@ -1270,7 +1270,7 @@ html[lang="en"] .count-txtblk {
     top: 30%;
   }
 
-  .top .sec-mv .mv-txt h2 {
+  .top .sec-mv .mv-txt h1 {
     font-size: 1.8rem;
   }
 
@@ -1279,7 +1279,7 @@ html[lang="en"] .count-txtblk {
     font-size: 1.1rem;
   }
 
-  html[lang="en"] .top .sec-mv .mv-txt h2 {
+  html[lang="en"] .top .sec-mv .mv-txt h1 {
     font-size: 1.25rem;
   }
 
@@ -1609,19 +1609,19 @@ html[lang="en"] .count-txtblk {
     bottom: 60px;
   }
 
-  html[lang="en"] .top .sec-mv .mv-txt h2 span {
+  html[lang="en"] .top .sec-mv .mv-txt h1 span {
     width: fit-content;
     padding: 3px 10px 10px;
   }
 
-  .top .sec-mv .mv-txt h2 {
+  .top .sec-mv .mv-txt h1 {
     margin-left: 5.3%;
     font-size: 1.563rem;
     letter-spacing: 0.7px;
   }
 
 
-  html[lang="en"] .top .sec-mv .mv-txt h2 {
+  html[lang="en"] .top .sec-mv .mv-txt h1 {
     font-size: 1.4rem;
   }
 
@@ -1630,7 +1630,7 @@ html[lang="en"] .count-txtblk {
     letter-spacing: 1.5px;
   }
 
-  .top .sec-mv .mv-txt h2 span {
+  .top .sec-mv .mv-txt h1 span {
     margin-bottom: 6px;
     padding: 8px 0px 8px 10px;
   }
@@ -2548,12 +2548,12 @@ html[lang="en"] .count-txtblk {
 @media only screen and (max-width: 374.9px) {
 
   /* sec-mv */
-  .top .sec-mv .mv-txt h2 {
+  .top .sec-mv .mv-txt h1 {
     margin-left: 2.5%;
     font-size: 1.375rem;
   }
 
-  html[lang="en"] .top .sec-mv .mv-txt h2 {
+  html[lang="en"] .top .sec-mv .mv-txt h1 {
     font-size: 1.25rem;
   }
 

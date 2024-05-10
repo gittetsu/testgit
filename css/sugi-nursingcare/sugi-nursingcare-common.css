@@ -144,7 +144,7 @@ body {
   border-radius: 50%;
 }
 
-.common-nursing-ttl h2,
+.common-nursing-ttl h1,
 .common-nursing-ttl h4 {
   padding-top: 18px;
   color: #292726;
@@ -153,7 +153,7 @@ body {
   text-transform: uppercase;
 }
 
-.common-nursing-ttl h2 {
+.common-nursing-ttl h1 {
   line-height: 1;
   font-size: 4rem;
 }
@@ -184,7 +184,7 @@ body {
   border-radius: 4px;
 }
 
-h2.common-nursing-subttl {
+.common-nursing-subttl.lg-ttl {
   line-height: 1.45;
   padding-bottom: 27px;
   color: #292726;
@@ -192,7 +192,7 @@ h2.common-nursing-subttl {
 }
 
 
-h3.common-nursing-subttl {
+.common-nursing-subttl {
   line-height: 1.8;
   padding-bottom: 29px;
   color: #000;
@@ -1195,7 +1195,7 @@ footer.ft-nursing-care .page-top img {
 
   /* common-nursing-ttl */
 
-  .common-nursing-ttl h2 {
+  .common-nursing-ttl h1 {
     font-size: 2.5rem;
   }
 
@@ -1205,14 +1205,13 @@ footer.ft-nursing-care .page-top img {
 
   /* common-nursing-subttl */
 
-  h2.common-nursing-subttl {
+  .common-nursing-subttl.lg-ttl {
     line-height: 1.6;
     padding-bottom: 24px;
     font-size: 1.25rem;
   }
 
-
-  h3.common-nursing-subttl {
+  .common-nursing-subttl {
     line-height: 1.4;
     padding-bottom: 24px;
     font-size: 1.5rem;
