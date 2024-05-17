@@ -1,7 +1,8 @@
 // JSON APIのエンドポイントURLを指定
 const apiUrl = 'https://d1vyjchtv8ee5.cloudfront.net/jsonapi/node/sugi_hd?sort=-field_date&filter[field_list]=IR情報&page[limit]=5';
 const fileApiUrl = 'https://d1vyjchtv8ee5.cloudfront.net/jsonapi/file/file';
-const announcementUrl = 'https://d1vyjchtv8ee5.cloudfront.net/jsonapi/node/ir_announcement/837780a3-a0a0-42cd-9b9c-479493e51d2b';
+// const announcementUrl = 'https://d1vyjchtv8ee5.cloudfront.net/jsonapi/node/ir_announcement/837780a3-a0a0-42cd-9b9c-479493e51d2b';
+const announcementUrl = 'https://d37m9cibsc5611.cloudfront.net/jsonapi/node/ir_announcement/837780a3-a0a0-42cd-9b9c-479493e51d2b';
 
 // 日付フォーマット変更
 function formatDate(dateString) {
