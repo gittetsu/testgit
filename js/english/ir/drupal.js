@@ -1,6 +1,8 @@
 // JSON APIのエンドポイントURLを指定
 const apiUrl = 'https://d1vyjchtv8ee5.cloudfront.net/jsonapi/node/sugi_hd_en?sort=-field_date&filter[field_en_list]=IR&page[limit]=5';
 const fileApiUrl = 'https://d1vyjchtv8ee5.cloudfront.net/jsonapi/file/file';
+// const announcementUrl = 'https://d1vyjchtv8ee5.cloudfront.net/jsonapi/node/ir_announcement/837780a3-a0a0-42cd-9b9c-479493e51d2b';
+const announcementUrl = 'https://d37m9cibsc5611.cloudfront.net/jsonapi/node/ir_announcement/837780a3-a0a0-42cd-9b9c-479493e51d2b';
 
 // 日付フォーマット変更
 function formatDate(dateString) {
@@ -112,5 +114,21 @@ document.addEventListener('click', event => {
     }
 });
 
+async function updateAnnouncement() {
+    try {
+        // JSON APIからデータを取得
+        const announcementresponse = await fetch(announcementUrl);
+        const announcementdata = await announcementresponse.json();
+        const announcementdate = announcementdata.data.attributes.field_ir_announcement_date_en;
+        const announcementbody = announcementdata.data.attributes.field_ir_announcement_body_en;
+
+        document.getElementById('announcement_date').innerHTML = announcementdate;
+        document.getElementById('announcement_body').innerHTML = announcementbody;
+    } catch (error) {
+        console.error('エラーが発生しました:', error);
+    }
+}
+
 // ページ読み込み時に記事タイトルを更新
 window.addEventListener('load', updateArticleTitles);
+window.addEventListener('load', updateAnnouncement);
