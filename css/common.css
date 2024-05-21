@@ -2402,6 +2402,21 @@ footer .page-top:hover img {
 	background-color: #ebebeb;
 }
 
+/* Float Layout */
+.clearfix::after {
+  clear: both;
+  display: table;
+  content: "";
+}
+
+.f-left {
+  float: left;
+}
+
+.f-right {
+  float: right;
+}
+
 /*I-pad*/
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .media {
