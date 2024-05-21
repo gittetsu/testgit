@@ -21,3 +21,20 @@
 .sec-skill-matrix .w-18 {
 	width: 18%;
 }
+
+.sec-skill-matrix .table .pc-scroll-table {
+	min-width: 1210px;
+}
+
+/* sec-executive-officer */
+.sec-executive-officer ol li {
+	list-style-type: decimal;
+}
+
+.sec-executive-officer ol {
+	padding-left: 35px;
+}
+
+.sec-executive-officer .officer-data {
+	padding-left: 10px;
+}
