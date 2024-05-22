@@ -59,6 +59,10 @@
   font-size: 1.375rem;
 }
 
+.side-w350.f-left {
+  margin-right: 31px;
+}
+
 @media only screen and (max-width: 767.9px) {
   .about-director {
     position: unset;
@@ -76,5 +80,9 @@
   }
   #response-policy h3.common-ttl {
     letter-spacing: 1.8px;
-}
+  }
+
+  .side-w350.f-left {
+    margin-right: 0;
+  }
 }
