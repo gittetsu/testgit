@@ -169,7 +169,7 @@ function noticeHeight() {
     const noticeList = document.querySelector('.notice-list');
     const noticeItem = document.querySelectorAll('.notice-list .notice-item:nth-child(-n+5)');
     // Calculate the total height of the selected items
-    const totalHeight = Array.from(noticeItem).reduce((sum, item) => sum + item.offsetHeight + parseInt(window.getComputedStyle(item).marginBottom), 0);
+    const totalHeight = Array.from(noticeItem).reduce((sum, item) => sum + item.offsetHeight +20+ parseInt(window.getComputedStyle(item).marginBottom), 0);
     noticeList.style.maxHeight = totalHeight + 'px';
 } noticeHeight();
 
