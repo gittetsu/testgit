@@ -1,7 +1,5 @@
-// const apiUrl = 'https://d1vyjchtv8ee5.cloudfront.net/jsonapi/node/sugi_hd_en';
-// const fileApiUrl = 'https://d1vyjchtv8ee5.cloudfront.net/jsonapi/file/file';
-const apiUrl = 'https://d37m9cibsc5611.cloudfront.net/jsonapi/node/sugi_hd_en';
-const fileApiUrl = 'https://d37m9cibsc5611.cloudfront.net/jsonapi/file/file';
+const apiUrl = 'https://d1vyjchtv8ee5.cloudfront.net/jsonapi/node/sugi_hd_en';
+const fileApiUrl = 'https://d1vyjchtv8ee5.cloudfront.net/jsonapi/file/file';
 
 async function updateArticleLists(category) {
   try {
@@ -25,7 +23,7 @@ async function updateArticleLists(category) {
 
           // bodyがnullでない場合、またはPDF関連データが存在しない場合、通常の記事リンクを使用
           if (article.attributes.body !== null) {
-            pdflink = `english/news/article?id=${article.id}`;
+            pdflink = `/english/news/article?id=${article.id}`;
           } else {
             // bodyがnullで、かつPDF関連データが存在する場合、PDFのリンクと名前を取得
             if (article.relationships.field_upload.data && article.relationships.field_upload.data.id) {
@@ -111,7 +109,7 @@ async function updateNoticeList() {
             }
           } else {
             // 条件2: bodyがnullでない場合、記事へ遷移
-            pdflink = `/news/article?id=${article.id}`;
+            pdflink = `/english/news/article?id=${article.id}`;
           }
           liElement2.className = 'notice-list';
           liElement2.innerHTML = `
