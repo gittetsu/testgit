@@ -1,8 +1,6 @@
-// const apiUrl = 'https://d1vyjchtv8ee5.cloudfront.net/jsonapi/node/sugi_hd';
-// const fileApiUrl = 'https://d1vyjchtv8ee5.cloudfront.net/jsonapi/file/file';
-const apiUrl = 'https://d37m9cibsc5611.cloudfront.net/jsonapi/node/sugi_hd';
-const fileApiUrl = 'https://d37m9cibsc5611.cloudfront.net/jsonapi/file/file';
-// カテゴリーごとに記事を取得して表示
+const apiUrl = 'https://d1vyjchtv8ee5.cloudfront.net/jsonapi/node/sugi_hd';
+const fileApiUrl = 'https://d1vyjchtv8ee5.cloudfront.net/jsonapi/file/file';
+
 async function updateArticleLists(category) {
   try {
     const filter = category === 'all' ? '' : `&filter[field_list]=${category}`;
