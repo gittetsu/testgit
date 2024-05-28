@@ -1,6 +1,6 @@
 // const apiUrl = 'https://d1vyjchtv8ee5.cloudfront.net/jsonapi/node/sugi_hd_en';
 // const fileApiUrl = 'https://d1vyjchtv8ee5.cloudfront.net/jsonapi/file/file';
-const apiUrl = 'https://d37m9cibsc5611.cloudfront.net/jsonapi/node/sugi_hd';
+const apiUrl = 'https://d37m9cibsc5611.cloudfront.net/jsonapi/node/sugi_hd_en';
 const fileApiUrl = 'https://d37m9cibsc5611.cloudfront.net/jsonapi/file/file';
 
 async function updateArticleLists(category) {
