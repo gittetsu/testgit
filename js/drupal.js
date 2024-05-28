@@ -1,7 +1,6 @@
 const apiUrl = 'https://d1vyjchtv8ee5.cloudfront.net/jsonapi/node/sugi_hd';
 const fileApiUrl = 'https://d1vyjchtv8ee5.cloudfront.net/jsonapi/file/file';
 
-// カテゴリーごとに記事を取得して表示
 async function updateArticleLists(category) {
   try {
     const filter = category === 'all' ? '' : `&filter[field_list]=${category}`;
@@ -108,8 +107,7 @@ async function updateNoticeList() {
             // 条件2: bodyがnullでない場合、記事へ遷移
             pdflink = `/news/article?id=${article.id}`;
           }
-          // liElement2.className = 'notice-list';
-          liElement2.className = 'notice-list-item';
+          liElement2.className = 'notice-list';
           liElement2.innerHTML = `
                 <li class="notice-item">
                 <a href="${pdflink}">
@@ -121,6 +119,7 @@ async function updateNoticeList() {
           noticeListElement.appendChild(liElement2);
           noticeSection.style.display = 'block';
         });
+        noticeHeight();
       }
     }
   } catch (error) {
@@ -144,7 +143,6 @@ async function updateGroupList() {
         const liElement3 = document.createElement('li');
         let pdflink = "";
         pdflink = `/topic/article/index.html?id=${article.id}`;
-        // liElement.className = 'news-list';
         liElement3.className = 'topics-item';
         if (index == 2) {
           liElement3.innerHTML = `
