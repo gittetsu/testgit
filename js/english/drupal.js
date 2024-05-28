@@ -23,7 +23,7 @@ async function updateArticleLists(category) {
 
           // bodyがnullでない場合、またはPDF関連データが存在しない場合、通常の記事リンクを使用
           if (article.attributes.body !== null) {
-            pdflink = `english/news/article?id=${article.id}`;
+            pdflink = `/english/news/article?id=${article.id}`;
           } else {
             // bodyがnullで、かつPDF関連データが存在する場合、PDFのリンクと名前を取得
             if (article.relationships.field_upload.data && article.relationships.field_upload.data.id) {
@@ -109,7 +109,7 @@ async function updateNoticeList() {
             }
           } else {
             // 条件2: bodyがnullでない場合、記事へ遷移
-            pdflink = `english/news/article?id=${article.id}`;
+            pdflink = `/english/news/article?id=${article.id}`;
           }
           liElement2.className = 'notice-list';
           liElement2.innerHTML = `
