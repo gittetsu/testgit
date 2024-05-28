@@ -123,6 +123,7 @@ async function updateNoticeList() {
                 </li>
         `;
           noticeListElement.appendChild(liElement2);
+          noticeSection.style.display = 'block';
         });
         noticeHeight();
       }
