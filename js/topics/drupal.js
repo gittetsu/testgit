@@ -1,6 +1,6 @@
 
 
-// const apiUrl = 'https://d1vyjchtv8ee5.cloudfront.net/jsonapi/node/sugi_group';
+// const apiUrl = 'https://d37m9cibsc5611.cloudfront.net/jsonapi/node/sugi_group';
 const apiUrl = 'https://d37m9cibsc5611.cloudfront.net/jsonapi/node/sugi_group';
 
 // ページング関連の変数
