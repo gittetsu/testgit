@@ -34,3 +34,7 @@
 .active[data-tab-content] {
   display: block;
 }
+
+.privacy-table {
+  min-width: 1100px;
+}
