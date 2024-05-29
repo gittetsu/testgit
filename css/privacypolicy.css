@@ -38,3 +38,8 @@
 .privacy-table {
   min-width: 1100px;
 }
+
+.tbl-ttl {
+  display: inline-block;
+  border-bottom: 1px solid;
+}
