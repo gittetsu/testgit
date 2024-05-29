@@ -83,4 +83,4 @@ function redirectPdf() {
 			window.location.href = pdfFile;
 		})
 	})
-} setTimeout("redirectPdf()", 100);
+} setTimeout("redirectPdf()", 1000);
