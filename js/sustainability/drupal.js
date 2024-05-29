@@ -1,5 +1,5 @@
 // JSON APIのエンドポイントURLを指定
-const apiUrl = 'https://d1vyjchtv8ee5.cloudfront.net/jsonapi/node/sugi_hd?sort=-field_date&filter[field_list]=サステナビリティ&page[limit]=5';
+const apiUrl = 'https://d37m9cibsc5611.cloudfront.net/jsonapi/node/sugi_hd?sort=-field_date&filter[field_list]=サステナビリティ&page[limit]=5';
 
 // 日付フォーマット変更
 function formatDate(dateString) {
