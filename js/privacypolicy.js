@@ -73,3 +73,11 @@ document.addEventListener("DOMContentLoaded", function() {
     window.scrollTo(0, 0);
   }, 50); // Adjust the delay as needed
 });
+// Redirect to pdf file 
+function redirectPdf() {
+	const redirect = document.querySelector('.js-redirect');
+	redirect.addEventListener('click', function (e) {
+		e.preventDefault();
+		window.location.href = '/pdf/privacypolicy/groupcompany-list.pdf';
+	})
+}setTimeout("redirectPdf()", 100);
