@@ -75,9 +75,12 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 // Redirect to pdf file 
 function redirectPdf() {
-	const redirect = document.querySelector('.js-redirect');
-	redirect.addEventListener('click', function (e) {
-		e.preventDefault();
-		window.location.href = '/pdf/privacypolicy/groupcompany-list.pdf';
+	const redirects = document.querySelectorAll('.js-redirect');
+	redirects.forEach(redirect => {
+		redirect.addEventListener('click', function (e) {
+			e.preventDefault();
+			const pdfFile = this.getAttribute('data-pdf'); // Get the PDF file from data attribute
+			window.location.href = pdfFile;
+		})
 	})
-}setTimeout("redirectPdf()", 100);
+} setTimeout("redirectPdf()", 100);
