@@ -2451,6 +2451,10 @@ footer .page-top:hover img {
   header.scroll-up {
     box-shadow: none;
   }
+  
+  .sugi-holding-header {
+    transition: none;
+  }
 
   .sugi-holding-header.scroll-up .header-inner ,
   .sugi-holding-header .header-inner {
@@ -3424,13 +3428,17 @@ footer .page-top:hover img {
     font-size: 0.875rem;
   }
 
-  /*header*/
+  /*header*/  
   header.scroll-down {
     top: 0;
   }
 
   header.scroll-up {
     box-shadow: none;
+  }
+  
+  .sugi-holding-header {
+    transition: none;
   }
 
   .sugi-holding-header.scroll-up .header-inner ,
