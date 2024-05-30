@@ -43,11 +43,3 @@
   display: inline-block;
   border-bottom: 1px solid;
 }
-
-.order-list-gp li .subttl-num {
-  margin-right: 10px;
-}
-
-.order-list-subgp li p:not(.order-list-subttl) {
-  padding-left: 40px;
-}
