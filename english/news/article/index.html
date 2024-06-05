@@ -35,7 +35,7 @@
 					<a href="/english/">TOP</a>
 				</li>
 				<li><a href="/english/news/">News Release</a></li>
-				<li>記事タイトルが入ります。</li>
+				<div id="article-title"></div>
 			</ul>
 		</div>
 	</div><!-- /.breadcrumb -->
@@ -52,7 +52,7 @@
 				</h2>
 				<!-- <h3 class="common-ttl">小見出し1</h3> -->
 				<p class="mb-40">
-					<div id="article-body"></div>
+				<div id="article-body"></div>
 				</p>
 				<!-- <div class="d-flex reverse">
 					<p class="w-560">
@@ -63,9 +63,14 @@
 					</div>
 				</div> -->
 			</div>
-			<div class="ref-link mb-60">
+			<!-- <div class="ref-link mb-60">
 				<a href="#" target="_blank"><span class="ref">参考</span><span id="article-pdf"></span></a>
+			</div> -->
+			<div class="ref-link mb-60">
+				<a href="/pdf/" id="pdf-link" target="_blank"><span class="ref">参考</span><span
+						id="article-pdf"></span><span id="article-pdf"></span></a>
 			</div>
+
 			<!-- <div class="article-txt01 mb-60">
 				<h3 class="common-ttl">小見出し1</h3>
 				<p>
@@ -91,6 +96,7 @@
 	<footer data-include="/english/include/footer.html"></footer>
 	<script src="/js/load.js"></script>
 	<script src="/js/common.js"></script>
+	<script src="/js/english/news/article/drupal.js"></script>
 </body>
 
 </html>
