@@ -206,8 +206,9 @@ ol {
 }
 
 .ref {
+  display: inline-block;
   margin-right: 5px;
-  padding: 1px 0;
+  padding: 1px 5px;
   background-color: #048851;
   color: #fff;
   font-size: 0.875rem;
@@ -2451,6 +2452,10 @@ footer .page-top:hover img {
   header.scroll-up {
     box-shadow: none;
   }
+  
+  .sugi-holding-header {
+    transition: none;
+  }
 
   .sugi-holding-header.scroll-up .header-inner ,
   .sugi-holding-header .header-inner {
@@ -3361,9 +3366,9 @@ footer .page-top:hover img {
   }
 
   .ref {
-    width: 42px;
+    min-width: 42px;
     margin-right: 5px;
-    padding: 1.6px 0px;
+    padding: 1.6px 5px;
     font-size: 0.75rem;
   }
 
@@ -3424,13 +3429,17 @@ footer .page-top:hover img {
     font-size: 0.875rem;
   }
 
-  /*header*/
+  /*header*/  
   header.scroll-down {
     top: 0;
   }
 
   header.scroll-up {
     box-shadow: none;
+  }
+  
+  .sugi-holding-header {
+    transition: none;
   }
 
   .sugi-holding-header.scroll-up .header-inner ,

@@ -293,7 +293,7 @@ function commonload() {
         }
 
         requestAnimationFrame(scrollStep);
-    }  
+    }
 
     /* scrollTop*/
     let topBtn = document.getElementById('scrollTop')
@@ -659,33 +659,24 @@ function commonload() {
         var holding = document.querySelector(".sugi-holding-header");
         var smile = document.querySelector('.sugi-smile-header')
         var header = document.querySelector('header');
-        var contentElements = document.querySelectorAll('.sec-mv, .cmn-banner, .sidebar , .ttl-bg, .top, .sec-medical-bnr');
+        var contentElements = document.querySelectorAll('.sec-mv, .cmn-banner,.ttl-bg, .top, .sec-medical-bnr');
         var content = document.querySelectorAll('.main-nursing-care, .sec-nursecare-company, .sec-nurcare-gp,.sec-nurcare-contact, .sec-nurcare-complete, .sec-nurcare-confirm')
-        var headerHeight = header.offsetHeight + 'px';
-        var bodyElement = document.body;
-        if (holding) {
-            if (element) {
-                var sideNav = document.querySelector('.js-sidebar');
-                var sideNavHeight = sideNav.offsetHeight + 'px';
-                if (header && sideNav) {
-                    var headerHeight = parseInt(header.offsetHeight);
-                    var sideNavHeight = parseInt(sideNav.offsetHeight);
-                    var totalHeight = headerHeight + sideNavHeight;
-                    var totalHeightResult = totalHeight + 'px';
-                    bodyElement.style.paddingTop = mediaQuery.matches ? totalHeightResult : 0;
-                }
-            }
-
-        }
-        else {
-            bodyElement.style.paddingTop = 0;
-        }
-
+        var headerHeight = header.offsetHeight;
+        var sideNav = document.querySelector('.js-sidebar');
         contentElements.forEach(function (element) {
-            element.style.marginTop = headerHeight;
+            element.style.marginTop = headerHeight + 'px';
+            // Header Margin under 1024 exists sidebar in holding pages
+            if ((window.innerWidth <= 1024) && sideNav && holding) {
+                const nav = sideNav.offsetHeight;
+                element.style.marginTop = (headerHeight + nav) + 'px';
+            }
         });
+        //sidebar top under 1024 exists sidebar in smile pages
+        if ((window.innerWidth <= 1024) && sideNav && smile) {
+            sideNav.style.top = headerHeight + 'px';
+        }
         content.forEach(function (element) {
-            element.style.paddingTop = headerHeight;
+            element.style.paddingTop = headerHeight + 'px';
         });
 
         const allheader = document.querySelectorAll('header');
