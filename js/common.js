@@ -676,7 +676,7 @@ function commonload() {
             sideNav.style.top = headerHeight + 'px';
         }
         content.forEach(function (element) {
-            element.style.paddingTop = headerHeight;
+            element.style.paddingTop = headerHeight + 'px';
         });
 
         const allheader = document.querySelectorAll('header');
