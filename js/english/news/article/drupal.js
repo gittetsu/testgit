@@ -38,19 +38,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
             document.getElementById('article-body').innerHTML = resulttext;
 
-            // article-date要素に本文を挿入
             const articleDate = formatDate(data.data.attributes.field_date);
-            const articleDateElement = document.getElementById('article-date');
-            articleDateElement.innerHTML = articleDate;
+            document.getElementById('article-date').innerHTML = articleDate;
 
-            // article-title要素に本文を挿入
             const articleTitle = data.data.attributes.title;
-            const articleTitleElement = document.getElementById('article-title');
-            articleTitleElement.innerHTML = articleTitle;
+            document.getElementById('article-title').innerHTML = articleTitle;
+            document.getElementById('article-title2').innerHTML = articleTitle;
 
-            const articleTitle2 = data.data.attributes.title;
-            const articleTitleElement2 = document.getElementById('article-title2');
-            articleTitleElement2.innerHTML = articleTitle2;
+            const articleCompany = "Sugi";
+            document.getElementById('article-company').innerHTML = articleCompany;
+
+            const articleList = data.data.attributes.field_en_list;
+            document.getElementById('article-list').innerHTML = articleList;
+
 
             // PDFの処理
             let pdflink = "";
