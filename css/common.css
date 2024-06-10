@@ -2418,6 +2418,12 @@ footer .page-top:hover img {
   float: right;
 }
 
+/* Column Count */
+.column-count {
+  column-count: 2;
+  column-gap: 3%;
+}
+
 /*I-pad*/
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .media {
@@ -2510,7 +2516,6 @@ footer .page-top:hover img {
     -webkit-transition: 0.3s ease-in-out;
     -moz-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out;
-    border-radius: 3px;
     border-radius: 3px;
   }
 
@@ -4612,6 +4617,12 @@ footer .page-top:hover img {
 
   .cmn-pagination .cmn-pager a:hover img {
     filter: unset;
+  }
+
+  /* Column Count */
+  .column-count {
+    column-count: 1;
+    column-gap: 0;
   }
 
   /* footer */
