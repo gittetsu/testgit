@@ -60,6 +60,11 @@
   margin: 0 0 0 43%;
 }
 
+html[lang="ja"] .recycle-plastic-table .percent-img {
+  width: 60%;
+  margin-left: 36%;
+}
+
 
 .water-usage-box {
   width: 100%;
