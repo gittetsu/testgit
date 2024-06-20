@@ -134,6 +134,10 @@ ol {
   font-weight: 700;
 }
 
+.center {
+  text-align: center;
+}
+
 /*link*/
 .link {
   color: #048851;
@@ -1307,6 +1311,14 @@ header.scroll-up .header-inner {
   padding: 30px;
   background-color: #f4f4f4;
   border-radius: 5px;
+}
+
+/*Pattern with border color */
+
+.border-blk {
+	padding: 30px;
+	border-radius: 5px;
+	border: 2px solid #048851;
 }
 
 /*Pattern with background color no sidebar */
