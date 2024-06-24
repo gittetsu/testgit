@@ -9,6 +9,10 @@
 /* counter-measure */
 .work-engagement .counter-measure ul .list-bg {
   margin-bottom: 10px;
+  padding: 10px;
+}
+
+.counter-bg {
   padding: 30px;
   background-color: #e5f3ed;
   border-radius: 5px;
@@ -58,6 +62,11 @@
   /* sec-result */
   .result .img-blk {
     width: 100%;
+  }
+
+  /* counter-measure */
+  .work-engagement .counter-measure ul .list-bg {
+    padding: 0;
   }
 
   /* sec-engagement */
