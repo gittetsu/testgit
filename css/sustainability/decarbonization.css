@@ -37,6 +37,16 @@
   margin-top: 10px;
 }
 
+.sec-renewable .common-ttl.img-ttl {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sec-renewable .common-ttl.img-ttl span {
+  display: inline-block;
+  margin-top: -10px;
+}
+
 /* sec-promo */
 
 .sec-promo .table tr th {
