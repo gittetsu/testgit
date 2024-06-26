@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+.brand-levels .level-item {
+  display: flex;
+  flex-direction: column;
+  width: 31%;
+	overflow: hidden;
+  border: 2px solid;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.brand-levels .level-item .level-ttl {
+  padding: 10px;
+  color: #fff;
+	font-weight: 700;
+}
+
+.brand-levels .level-item:nth-child(1) {
+  background-color: #45b97c;
+  border-color: #45b97c;
+}
+
+.brand-levels .level-item:nth-child(2) {
+  background-color: #d0e184;
+  border-color: #d0e184;
+}
+
+.brand-levels .level-item:nth-child(3) {
+  background-color: #a4d178;
+  border-color: #a4d178;
+}
+
+.brand-levels .level-item:nth-child(2) .level-ttl {
+  color: #008a4b;
+}
+
+.brand-levels .level-item .level-text {
+	height: 100%;
+  padding: 10px;
+  background-color: #fff;
+}
