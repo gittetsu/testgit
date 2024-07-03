@@ -73,14 +73,3 @@ document.addEventListener("DOMContentLoaded", function() {
     window.scrollTo(0, 0);
   }, 50); // Adjust the delay as needed
 });
-// Redirect to pdf file 
-function redirectPdf() {
-	const redirects = document.querySelectorAll('.js-redirect');
-	redirects.forEach(redirect => {
-		redirect.addEventListener('click', function (e) {
-			e.preventDefault();
-			const pdfFile = this.getAttribute('data-pdf'); // Get the PDF file from data attribute
-			window.location.href = pdfFile;
-		})
-	})
-} redirectPdf();
