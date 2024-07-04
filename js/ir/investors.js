@@ -20,7 +20,7 @@ tabs.forEach(tab => {
 });
 
 const currentPath = window.location.href.split('/').slice(5);
-if(currentPath == "" || currentPath == "#fiscal-year-2023" || currentPath == "#fiscal-year-2024") {
+if(currentPath == "" || currentPath == "#fiscal-year-2024" || currentPath == "#fiscal-year-2025") {
 	document.addEventListener("DOMContentLoaded", function() {
 		setTimeout(function() {
 			window.scrollTo(0, 0);
@@ -37,13 +37,13 @@ document.addEventListener("DOMContentLoaded", function (e) {
 	})
 	if (window.location.hash) {
 		let hash = decodeURIComponent(window.location.hash.trim());
-		if (hash == "#fiscal-year-2024") {
-			var tabTitle = document.body.querySelector('[data-tab-target="#fiscal-year-2024"]')
+		if (hash == "#fiscal-year-2025") {
+			var tabTitle = document.body.querySelector('[data-tab-target="#fiscal-year-2025"]')
 			tabTitle.setAttribute('class','active');
 			const target = document.querySelector(tabTitle.dataset.tabTarget)
 			target.classList.add('active');
 		} else {
-			var tabTitle = document.body.querySelector('[data-tab-target="#fiscal-year-2023"]')
+			var tabTitle = document.body.querySelector('[data-tab-target="#fiscal-year-2024"]')
 			tabTitle.setAttribute('class','active');
 			const target = document.querySelector(tabTitle.dataset.tabTarget)
 			target.classList.add('active');
@@ -51,9 +51,9 @@ document.addEventListener("DOMContentLoaded", function (e) {
 	}
   else{
     var currentRoute = window.location.pathname;
-    var newUrl = currentRoute + "#fiscal-year-2023";
+    var newUrl = currentRoute + "#fiscal-year-2024";
     history.pushState(null, null, newUrl);
-    var tablTitle = document.body.querySelector('[data-tab-target="#fiscal-year-2023"]')
+    var tablTitle = document.body.querySelector('[data-tab-target="#fiscal-year-2024"]')
 		tablTitle.setAttribute('class','active');
 		const target = document.querySelector(tablTitle.dataset.tabTarget)
 		target.classList.add('active');
