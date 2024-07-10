@@ -57,27 +57,27 @@
 			<div class="area-blk mb-sp-40">
 				<ul class="area-list">
 					<li><span class="text-04 text-bg pink">関西エリア</span>
-						<p class="fsize-40 text-01"><div id="store_kansai"></div><span class="text-04">店舗</span></p>
+						<p class="fsize-40 text-01"><span id="store_kansai"></span><span class="text-04">店舗</span></p>
 					</li>
 					<li><span class="text-04 text-bg orange">北陸・信州エリア</span>
-						<p class="fsize-40 text-01"><div id="store_hokuriku"></div><span class="text-04">店舗</span></p>
+						<p class="fsize-40 text-01"><span id="store_hokuriku"></span><span class="text-04">店舗</span></p>
 					</li>
 					<li><span class="text-04 text-bg green">中部エリア</span>
-						<p class="fsize-40 text-01"><div id="store_chubu"></div><span class="text-04">店舗</span></p>
+						<p class="fsize-40 text-01"><span id="store_chubu"></span><span class="text-04">店舗</span></p>
 					</li>
 					<li><span class="text-04 text-bg cyan">関東エリア</span>
-						<p class="fsize-40 text-01"><div id="store_kanto"></div><span class="text-04">店舗</span></p>
+						<p class="fsize-40 text-01"><span id="store_kanto"></span><span class="text-04">店舗</span></p>
 					</li>
 					<li><span class="text-04 text-bg purple">北海道・東北エリア</span>
-						<p class="fsize-40 text-01"><div id="store_tohoku"></div><span class="text-04">店舗</span></p>
+						<p class="fsize-40 text-01"><span id="store_tohoku"></span><span class="text-04">店舗</span></p>
 					</li>
 				</ul>
 				<div class="group-total">
 					<div class="stock-icon">
 						<img src="/img/company/ico_stock.png" alt="stock">
 					</div>
-					<p class="text-02 group-total-ttl">グループ合計<br><span><div id="store_total"></div></span></p>
-					<p class="fsize-55 text-01"><div id="store_total"></div><span class="text-04">店舗</span></p>
+					<p class="text-02 group-total-ttl">グループ合計<br><span id="store_update_date"></span></p>
+					<p class="fsize-55 text-01"><span id="store_total"></span><span class="text-04">店舗</span></p>
 
 				</div>
 			</div>
@@ -89,7 +89,9 @@
 			</div>
 		</section>
 		<!--/.sec-total-stores-->
-		<section class="sec-number-area mb-150"><div id="store_body"></div></section>
+		<section class="sec-number-area mb-150">
+			<div id="store_body"></div>
+		</section>
 		<!--/.sec-number-area-->
 	</div>
 	<div data-include="/component/com-info-footer-nav.html"></div>
