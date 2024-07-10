@@ -1,4 +1,4 @@
-const monthlyUrl = 'https://d37m9cibsc5611.cloudfront.net/jsonapi/node/store/91ceef80-e508-423a-856f-d29bf4bd7196';
+const monthlyUrl = 'https://d1vyjchtv8ee5.cloudfront.net/jsonapi/node/store/9b0f8918-aaac-4142-a507-09a348fb7c88';
 
 async function updateMonthly() {
     try {
@@ -10,6 +10,8 @@ async function updateMonthly() {
         const chubu = monthlydata.data.attributes.field_chubu;
         const kanto = monthlydata.data.attributes.field_kanto;
         const tohoku = monthlydata.data.attributes.field_tohoku;
+        const total = monthlydata.data.attributes.field_total;
+        const update_date = monthlydata.data.attributes.field_update_date;
 
         const inputtext = monthlydata.data.attributes.body.value;
         let replacementMap = {
@@ -30,7 +32,8 @@ async function updateMonthly() {
         document.getElementById('store_chubu').innerHTML = chubu;
         document.getElementById('store_kanto').innerHTML = kanto;
         document.getElementById('store_tohoku').innerHTML = tohoku;
-        document.getElementById('store_total').innerHTML = parseInt(kansai) + parseInt(hokuriku) + parseInt(chubu) + parseInt(kanto) + parseInt(tohoku);
+        document.getElementById('store_total').innerHTML = total;
+        document.getElementById('store_update_date').innerHTML = update_date;
     } catch (error) {
         console.error('エラーが発生しました:', error);
     }

@@ -1,4 +1,4 @@
-const monthlyUrl = 'https://d37m9cibsc5611.cloudfront.net/jsonapi/node/ir_monthly_report_en/5fb32baa-1fce-4461-afd2-f4d2a7370343';
+const monthlyUrl = 'https://d1vyjchtv8ee5.cloudfront.net/jsonapi/node/ir_monthly_report_en/9148e76a-2375-486f-be72-04781538109c';
 
 async function updateMonthly() {
     try {
