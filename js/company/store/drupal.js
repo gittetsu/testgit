@@ -24,8 +24,6 @@ async function updateMonthly() {
             match => replacementMap[match]
         );
 
-        console.log(resulttext);
-
         document.getElementById('store_body').innerHTML = resulttext;
         document.getElementById('store_kansai').innerHTML = kansai;
         document.getElementById('store_hokuriku').innerHTML = hokuriku;
