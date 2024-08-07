@@ -11,7 +11,6 @@ async function updateMonthly() {
         const kanto = monthlydata.data.attributes.field_kanto;
         const tohoku = monthlydata.data.attributes.field_tohoku;
         const total = monthlydata.data.attributes.field_total;
-        const update_date = monthlydata.data.attributes.field_update_date;
 
         const inputtext = monthlydata.data.attributes.body.value;
         let replacementMap = {
@@ -69,7 +68,21 @@ async function updateMonthly() {
             match => replacementMap[match]
         );
 
-        console.log(resulttext);
+        const update_date_org = monthlydata.data.attributes.field_update_date;
+        let replacementMap2 = {
+            '2024年6月末現在':'As of the end of June 2024',
+            '2024年7月末現在':'As of the end of July 2024',
+            '2024年8月末現在':'As of the end of August 2024',
+            '2024年9月末現在':'As of the end of September 2024',
+            '2024年10月末現在':'As of the end of October 2024',
+            '2024年11月末現在':'As of the end of November 2024',
+            '2024年12月末現在':'As of the end of December 2024',
+        };
+
+        let update_date = update_date_org.replace(
+            new RegExp(Object.keys(replacementMap2).join("|"), "g"),
+            match => replacementMap2[match]
+        );
 
         document.getElementById('store_body').innerHTML = resulttext;
         document.getElementById('store_kansai').innerHTML = kansai;
