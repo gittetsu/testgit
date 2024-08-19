@@ -18,11 +18,15 @@
   margin: 0 3.8% 4.478% 0;
 }
 
-.sec-training .img-list-gp li:nth-child(3n+0) {
+.sec-training .img-list-gp-en li {
+  margin: 0 3.8% 0 0;
+}
+
+.sec-training .img-list-gp li:nth-child(3n + 0) {
   margin-right: 0;
 }
 
-.sec-training .img-list-gp li:nth-last-child(-n+3) {
+.sec-training .img-list-gp li:nth-last-child(-n + 3) {
   margin-bottom: 0;
 }
 
@@ -36,7 +40,7 @@
 
 .sec-promo .interview .caption-ttl {
   color: #048851;
-  font-family: 'Figtree';
+  font-family: "Figtree";
   font-weight: 700;
 }
 
@@ -64,11 +68,11 @@
     margin-right: 0;
   }
 
-  .sec-training .img-list-gp li:nth-last-child(-n+3) {
+  .sec-training .img-list-gp li:nth-last-child(-n + 3) {
     margin-bottom: 4.478%;
   }
 
-  .sec-training .img-list-gp li:nth-last-child(-n+2) {
+  .sec-training .img-list-gp li:nth-last-child(-n + 2) {
     margin-bottom: 0;
   }
 }

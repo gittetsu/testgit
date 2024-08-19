@@ -138,6 +138,10 @@ ol {
   text-align: center;
 }
 
+.break-word {
+  word-break: break-word;
+}
+
 /*link*/
 .link {
   color: #048851;
