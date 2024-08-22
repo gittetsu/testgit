@@ -4,7 +4,7 @@
 .sec-medical-bnr {
   margin-bottom: 80px;
   padding: 95px 0;
-  background: url('/img/common/sugi-medical/img_banner_bg.png')no-repeat right/cover;
+  background: url("/img/common/sugi-medical/img_banner_bg.png") no-repeat right/cover;
 }
 
 .sec-medical-bnr .inner {
@@ -40,7 +40,7 @@
   z-index: -1;
   line-height: 1;
   color: #89c733;
-  font-family: 'Niconne';
+  font-family: "Niconne";
   font-size: 7.5rem;
   font-weight: 400;
   letter-spacing: -6px;
@@ -59,19 +59,19 @@
   font-weight: 700;
 }
 
-.sec-medical-bnr .medical-breadcrumb li+li {
+.sec-medical-bnr .medical-breadcrumb li + li {
   position: relative;
   margin-left: 20px;
   padding-left: 20px;
 }
 
-.sec-medical-bnr .medical-breadcrumb li+li::before {
+.sec-medical-bnr .medical-breadcrumb li + li::before {
   position: absolute;
   top: 11px;
   left: -5px;
   width: 6px;
   height: 6px;
-  content: '';
+  content: "";
   transform: rotate(-45deg);
   border-bottom: 1px solid #fff;
   border-right: 1px solid #fff;
@@ -147,7 +147,7 @@
   left: 0;
   width: 18px;
   height: 12px;
-  background: url('/img/common/sugi-medical/ico_email.svg')no-repeat center/contain;
+  background: url("/img/common/sugi-medical/ico_email.svg") no-repeat center/contain;
   content: "";
   transform: translateY(-50%);
 }
@@ -155,12 +155,12 @@
 .sugi-medical-header .nav-menu-list li a:hover,
 .sugi-medical-header .nav-menu-list li a.visible {
   color: #7fbe26;
-  transition: all .2s;
+  transition: all 0.2s;
 }
 
 .sugi-medical-header .nav-menu-list .contact a:hover::before,
 .sugi-medical-header .nav-menu-list .contact a.visible::before {
-  transition: all .2s;
+  transition: all 0.2s;
   filter: invert(60%) sepia(87%) saturate(410%) hue-rotate(43deg) brightness(100%) contrast(82%);
 }
 
@@ -198,10 +198,88 @@
   right: 20px;
   width: 12px;
   height: 12px;
-  background: url('/img/sugi-medical/ico_arrow_right.svg') no-repeat center/cover;
-  content: '';
+  background: url("/img/sugi-medical/ico_arrow_right.svg") no-repeat center/cover;
+  content: "";
   transform: rotate(0deg);
   border-radius: unset;
+}
+
+.common-line-btn {
+  display: inline-block;
+  position: relative;
+  padding: 16px 57px 16px 20px;
+  border: 2px solid #7fbe26;
+  background-color: #fff;
+  color: #7fbe26;
+  font-weight: 700;
+  text-align: left;
+  border-radius: 5px;
+}
+
+.common-line-btn:hover {
+  background-color: #7fbe26;
+  color: #fff;
+  transition: all 0.2s;
+}
+
+.common-line-btn:hover:after {
+  filter: invert(50%) sepia(200%) saturate(0) hue-rotate(0) brightness(180%) contrast(180%);
+}
+
+.common-line-btn:after {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  width: 12px;
+  height: 12px;
+  background: url("/img/common/sugi-medical/ico_arrow_right.svg") no-repeat center/contain;
+  content: "";
+  transform: translateY(-50%);
+}
+
+.common-btn-download {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+  border: 2px solid transparent;
+  box-shadow: inset 0px 3px 6px #00000029;
+  background: transparent linear-gradient(66deg, #048851 0%, #7fbe26 100%) 0% 0% no-repeat padding-box;
+  color: #fff;
+  font-weight: 700;
+  text-align: left;
+  letter-spacing: 1.6px;
+  border-radius: 5px;
+  width: fit-content;
+}
+
+.common-btn-download:hover {
+  border: 2px solid #048851;
+  box-shadow: none;
+  background: none;
+  background-color: #fff;
+  color: #048851;
+}
+
+.common-btn-download:hover:before {
+  filter: invert(80%) sepia(98%) saturate(6150%) hue-rotate(152deg) brightness(95%) contrast(97%);
+}
+
+.common-btn-download:before {
+  width: 24px;
+  height: 24px;
+  background: url("/img/sugi-medical/ico_download.svg") no-repeat center/cover;
+  content: "";
+}
+
+.common-btn-download .btn-text {
+  font-size: 1rem;
+  font-weight: 700;
+}
+.common-btn-download .btn-size {
+  font-size: 0.875rem;
+  font-weight: 400;
 }
 
 h3.common-medical-ttl {
@@ -211,7 +289,7 @@ h3.common-medical-ttl {
   font-weight: 700;
   letter-spacing: 2.2px;
   border-bottom: none;
-  border-left: 3px solid #7FBE26;
+  border-left: 3px solid #7fbe26;
 }
 
 .external-btn {
@@ -244,8 +322,8 @@ h3.common-medical-ttl {
   right: 20px;
   width: 100%;
   height: 14px;
-  background: url('/img/sugi-medical/ico_external_link.svg') no-repeat center/cover;
-  content: '';
+  background: url("/img/sugi-medical/ico_external_link.svg") no-repeat center/cover;
+  content: "";
   max-width: 14px;
 }
 
@@ -306,7 +384,7 @@ h3.common-medical-ttl {
 .sec-medical-contact .ft-contact .email-us-btn:hover {
   background-color: #7fbe26;
   color: #fff;
-  transition: all .2s;
+  transition: all 0.2s;
 }
 
 .sec-medical-contact .ft-contact .email-us-btn::after {
@@ -315,7 +393,7 @@ h3.common-medical-ttl {
   right: 30px;
   width: 12px;
   height: 12px;
-  background: url('/img/common/sugi-medical/ico_arrow_right.svg')no-repeat center/contain;
+  background: url("/img/common/sugi-medical/ico_arrow_right.svg") no-repeat center/contain;
   content: "";
   transform: translateY(-50%);
 }
@@ -332,7 +410,7 @@ footer.ft-medical .ft-nav {
 .ft-medical .ft-blk .lt-ft-blk .nav-list li a:hover,
 .ft-medical .ft-blk .lt-ft-blk .nav-list li a.visible {
   color: #7fbe26;
-  transition: all .2s;
+  transition: all 0.2s;
 }
 
 .ft-medical .ft-blk .lt-ft-blk .sub-nav-list li a:hover {
@@ -360,7 +438,7 @@ footer.ft-medical .ft-blk .sub-nav-list .sugi-holding-link::after {
   right: 6px;
   width: 14px;
   height: 14px;
-  background: url('/img/common/sugi-medical/ico_external.svg')no-repeat center/contain;
+  background: url("/img/common/sugi-medical/ico_external.svg") no-repeat center/contain;
   content: "";
   transform: translateY(-50%);
   filter: invert(56%) sepia(83%) saturate(378%) hue-rotate(43deg) brightness(99%) contrast(97%);
@@ -380,7 +458,6 @@ footer.ft-medical .page-top:hover img {
 
 /*I-pad*/
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-
   .sugi-medical-header.scroll-up .header-inner,
   .sugi-medical-header .header-inner {
     width: 100%;
@@ -408,7 +485,7 @@ footer.ft-medical .page-top:hover img {
 
   .sugi-medical-header .nav-menu-list li {
     margin-right: 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.30);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   }
 
   .sugi-medical-header .nav-menu-list li:last-child {
@@ -425,17 +502,17 @@ footer.ft-medical .page-top:hover img {
     color: #fff;
   }
 
-  .sugi-medical-header .nav-menu-list>li>a {
+  .sugi-medical-header .nav-menu-list > li > a {
     position: relative;
   }
 
-  .sugi-medical-header .nav-menu-list>li>a::after {
+  .sugi-medical-header .nav-menu-list > li > a::after {
     position: absolute;
     top: 50%;
     right: 20px;
     width: 20px;
     height: 20px;
-    background: url('/img/common/sugi-medical/ico_nav_link_arr.png')no-repeat center/contain;
+    background: url("/img/common/sugi-medical/ico_nav_link_arr.png") no-repeat center/contain;
     content: "";
     transform: translateY(-50%);
   }
@@ -468,7 +545,7 @@ footer.ft-medical .page-top:hover img {
     right: 23px;
     width: 14px;
     height: 14px;
-    background: url('/img/common/sugi-medical/ico_external.svg')no-repeat center/contain;
+    background: url("/img/common/sugi-medical/ico_external.svg") no-repeat center/contain;
     content: "";
     transform: translateY(-50%);
   }
@@ -523,7 +600,6 @@ footer.ft-medical .page-top:hover img {
 }
 
 @media only screen and (max-width: 767.9px) {
-
   h3.common-ttl {
     font-size: 1.25rem;
   }
@@ -559,7 +635,7 @@ footer.ft-medical .page-top:hover img {
     height: 135px;
   }
 
-  .sec-medical-bnr .medical-breadcrumb li+li::before {
+  .sec-medical-bnr .medical-breadcrumb li + li::before {
     top: 8px;
   }
 
@@ -594,7 +670,7 @@ footer.ft-medical .page-top:hover img {
 
   .sugi-medical-header .nav-menu-list li {
     margin-right: 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.30);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   }
 
   .sugi-medical-header .nav-menu-list li:last-child {
@@ -611,17 +687,17 @@ footer.ft-medical .page-top:hover img {
     color: #fff;
   }
 
-  .sugi-medical-header .nav-menu-list>li>a {
+  .sugi-medical-header .nav-menu-list > li > a {
     position: relative;
   }
 
-  .sugi-medical-header .nav-menu-list>li>a::after {
+  .sugi-medical-header .nav-menu-list > li > a::after {
     position: absolute;
     top: 50%;
     right: 20px;
     width: 20px;
     height: 20px;
-    background: url('/img/common/sugi-medical/ico_nav_link_arr.png')no-repeat center/contain;
+    background: url("/img/common/sugi-medical/ico_nav_link_arr.png") no-repeat center/contain;
     content: "";
     transform: translateY(-50%);
   }
@@ -654,7 +730,7 @@ footer.ft-medical .page-top:hover img {
     right: 23px;
     width: 14px;
     height: 14px;
-    background: url('/img/common/sugi-medical/ico_external.svg')no-repeat center/contain;
+    background: url("/img/common/sugi-medical/ico_external.svg") no-repeat center/contain;
     content: "";
     transform: translateY(-50%);
   }
@@ -686,6 +762,25 @@ footer.ft-medical .page-top:hover img {
   .common-btn:hover:after,
   .external-btn:hover:after {
     filter: unset;
+  }
+
+  .common-line-btn {
+    padding: 17px 59px 17px 20px;
+    font-size: 1rem;
+    letter-spacing: 1.4px;
+  }
+
+  .common-line-btn:hover {
+    background-color: #fff;
+    color: #7fbe26;
+  }
+
+  .common-line-btn:hover:after {
+    filter: none;
+  }
+
+  .common-btn-download {
+    width: 100%;
   }
 
   .external-btn {
