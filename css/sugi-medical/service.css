@@ -4,7 +4,7 @@
 
 /* sec-medi-service */
 
-.sec-medi-service .service-list .list-item .w-430 {
+.sec-medi-service .service-list .w-430 {
   width: 39.091%;
 }
 
@@ -46,7 +46,7 @@
   width: 32px;
   height: 29px;
   margin: 0 auto;
-  content: '';
+  content: "";
   transform: translatey(-50%);
 }
 
@@ -56,6 +56,10 @@
 
 .sec-medi-service .service-list .list-item .service-ico.pharmacies::before {
   background: url(/img/sugi-medical/ico_pharma_service.svg) no-repeat center/100% 100%;
+}
+
+.sec-medi-service .service-list .list-item .service-ico.book::before {
+  background: url(/img/sugi-medical/ico_book.svg) no-repeat center/100% 100%;
 }
 
 .sec-medi-service .service-list .list-item .medical-menu .sub-ttl {
@@ -89,6 +93,168 @@
   margin-bottom: 100px;
 }
 
+.neo-logo {
+  width: 300px;
+}
+
+.sec-medi-service .service-list .d-flex {
+  flex-wrap: nowrap;
+  gap: 40px;
+}
+
+.sec-medi-service .service-list .neo-ttl {
+  font-family: "Noto Serif JP", serif;
+  margin-bottom: 10px;
+  font-size: 1.875rem;
+  font-weight: 700;
+}
+
+.sec-medi-service .service-list .neo-sub-ttl {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.sec-medi-service .service-list .neo-sub-ttl span {
+  display: block;
+  font-family: "Noto Serif JP", serif;
+  font-size: 0.875rem;
+}
+
+.sec-medi-service .neo-author {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.sec-medi-service .neo-author span {
+  display: block;
+  font-size: 0.75rem;
+}
+
+.sec-medi-service .neo-flex {
+  flex-wrap: nowrap;
+  justify-content: start;
+  gap: 1.5rem;
+}
+
+.sec-medi-service .service-list .neo-new-buttons {
+  gap: 20px 40px;
+  justify-content: start;
+  flex-wrap: wrap;
+}
+
+.sec-medi-service .neo-bgnumber {
+  justify-content: start;
+  gap: 2.4rem;
+}
+
+.sec-medi-service .neo-bgnumber-item {
+  width: calc((100% - 2.4rem * 3) / 4);
+  min-width: 230px;
+}
+
+.sec-medi-service .neo-bgnumber h3 {
+  font-family: "Noto Serif JP", serif;
+  line-height: 1.2;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.sec-medi-service .neo-bgnumber h3 span {
+  display: block;
+  font-size: 1.25rem;
+}
+
+.neo-detail {
+  position: relative;
+  z-index: 2;
+  padding: 96px 0;
+}
+
+.neo-detail > * {
+  position: relative;
+  z-index: 2;
+}
+
+.neo-detail::before {
+  content: "";
+  position: absolute;
+  width: 100vw;
+  height: 100%;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  background-color: #f2f9e9;
+  z-index: 1;
+}
+
+.neo-detail h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #048851;
+}
+
+.neo-detail-item {
+  background-color: #fff;
+  display: flex;
+  align-items: start;
+  padding: 40px;
+  gap: 40px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.neo-detail-item:not(:last-of-type) {
+  margin-bottom: 24px;
+}
+
+.neo-detail-item:last-of-type {
+  margin-bottom: 80px;
+}
+
+.neo-detail-item h3 {
+  font-size: 1.875rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.neo-detail-item h3 span {
+  display: block;
+  font-size: 1.5rem;
+  margin-top: 16px;
+}
+
+.neo-detail-item p {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 2.125;
+  margin-top: 24px;
+}
+
+.neo-detail-img {
+  width: 36%;
+}
+
+.neo-detail--doctor-hand {
+  width: 213px;
+}
+
+.neo-detail--very-human {
+  width: 470px;
+}
+
+.neo-detail--interview {
+  width: 133px;
+}
+
+.neo-detail--landscape {
+  width: 216px;
+}
+
+.neo-detail--professor {
+  width: 199px;
+}
+
 /* sp */
 
 @media only screen and (max-width: 767.9px) {
@@ -101,7 +267,7 @@
     padding-bottom: 40px;
   }
 
-  .sec-medi-service .service-list .list-item .w-430 {
+  .sec-medi-service .service-list .w-430 {
     width: 100%;
   }
 
@@ -140,5 +306,127 @@
   .sec-medi-service .note {
     margin-bottom: 80px;
     font-size: 1rem;
+  }
+
+  .neo-logo {
+    width: 60%;
+  }
+
+  .neo-btn {
+    width: 100%;
+    font-size: 0.875rem;
+    padding: 17px 28px 17px 16px;
+  }
+
+  .neo-btn::after {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .sec-medi-service .service-list .w-430 {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .sec-medi-service .service-list .d-flex {
+    flex-wrap: wrap;
+  }
+
+  .sec-medi-service .service-list .neo-ttl {
+    margin-bottom: 25px;
+    font-size: 1.5rem;
+  }
+
+  .sec-medi-service .neo-bgnumber-item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .sec-medi-service .neo-bgnumber-item .center {
+    text-align: left;
+  }
+
+  .sec-medi-service .neo-bgnumber-item .common-line-btn {
+    padding: 10px 20px;
+    width: 100%;
+    max-width: 204px;
+  }
+
+  .sec-medi-service .neo-bgnumber-item img {
+    width: 29%;
+  }
+
+  .sec-medi-service .neo-bgnumber-item > div {
+    flex: 1;
+  }
+
+  .sec-medi-service .neo-bgnumber h3 {
+    line-height: 1.2;
+    font-size: 1rem;
+    letter-spacing: 0;
+  }
+
+  .sec-medi-service .neo-bgnumber h3 span {
+    display: block;
+    font-family: "Noto Serif JP", serif;
+    font-size: 1.25rem;
+  }
+
+  .neo-detail {
+    padding: 40px 0;
+  }
+
+  .neo-detail h2 {
+    font-size: 2rem;
+  }
+
+  .neo-detail-item {
+    flex-direction: column;
+    padding: 16px 16px 28px;
+    gap: 16px;
+    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.1);
+  }
+
+  .neo-detail-item:last-of-type {
+    margin-bottom: 40px;
+  }
+
+  .neo-detail-item h3 {
+    font-size: 1.5rem;
+  }
+
+  .neo-detail-item h3 span {
+    font-size: 1.25rem;
+  }
+
+  .neo-detail-item p {
+    margin-top: 16px;
+  }
+
+  .neo-detail-img {
+    width: 100%;
+  }
+
+  .neo-detail--doctor-hand {
+    width: 128px;
+  }
+
+  .neo-detail--very-human {
+    width: 100%;
+  }
+
+  .neo-detail--interview {
+    width: 80px;
+  }
+
+  .neo-detail--landscape {
+    width: 130px;
+  }
+
+  .neo-detail--professor {
+    width: 120px;
   }
 }
