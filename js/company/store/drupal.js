@@ -1,4 +1,4 @@
-const monthlyUrl = 'https://d1vyjchtv8ee5.cloudfront.net/jsonapi/node/ir_announcement/6a9f9206-de7c-4ac3-952d-1ca7912f9b6a';
+const monthlyUrl = 'https://d1vyjchtv8ee5.cloudfront.net/jsonapi/node/store/9b0f8918-aaac-4142-a507-09a348fb7c88';
 
 async function updateMonthly() {
     try {
