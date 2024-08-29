@@ -125,7 +125,7 @@ async function updateMonthly() {
         document.getElementById('store_kanto').innerHTML = kanto;
         document.getElementById('store_tohoku').innerHTML = tohoku;
         document.getElementById('store_chugoku').innerHTML = chugoku;
-        document.getElementById('store_kyushu').innerHTML = kyushu;
+        document.getElementById('store_kyusyu').innerHTML = kyushu;
         document.getElementById('store_tokai').innerHTML = tokai;
         document.getElementById('store_kinki').innerHTML = kinki;
         document.getElementById('store_total').innerHTML = total;
