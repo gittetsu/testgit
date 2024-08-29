@@ -43,7 +43,10 @@ html[lang="en"] .area-blk .area-list li {
 html[lang="en"] .area-blk .area-list .text-bg {
   margin: 0;
   width: 100%;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
 }
 
 .area-blk .area-list .text-bg {
