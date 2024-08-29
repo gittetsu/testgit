@@ -6,13 +6,16 @@ async function updateMonthly() {
         // JSON APIからデータを取得
         const monthlyresponse = await fetch(monthlyUrl);
         const monthlydata = await monthlyresponse.json();
-        const kansai = monthlydata.data.attributes.field_kansai;
+        // const kansai = monthlydata.data.attributes.field_kansai;
         const hokuriku = monthlydata.data.attributes.field_hokuriku;
-        const chubu = monthlydata.data.attributes.field_chubu;
+        // const chubu = monthlydata.data.attributes.field_chubu;
         const kanto = monthlydata.data.attributes.field_kanto;
         const tohoku = monthlydata.data.attributes.field_tohoku;
         const total = monthlydata.data.attributes.field_total;
-        const update_date = monthlydata.data.attributes.field_update_date;
+        const chugoku = monthlydata.data.attributes.field_chugoku;
+        const kyushu = monthlydata.data.attributes.field_kyusyu;
+        const tokai = monthlydata.data.attributes.field_tokai;
+        const kinki = monthlydata.data.attributes.field_kinki;
 
         const inputtext = monthlydata.data.attributes.body.value;
         let replacementMap = {
@@ -26,11 +29,15 @@ async function updateMonthly() {
         );
 
         document.getElementById('store_body').innerHTML = resulttext;
-        document.getElementById('store_kansai').innerHTML = kansai;
+        // document.getElementById('store_kansai').innerHTML = kansai;
         document.getElementById('store_hokuriku').innerHTML = hokuriku;
-        document.getElementById('store_chubu').innerHTML = chubu;
+        // document.getElementById('store_chubu').innerHTML = chubu;
         document.getElementById('store_kanto').innerHTML = kanto;
         document.getElementById('store_tohoku').innerHTML = tohoku;
+        document.getElementById('store_chugoku').innerHTML = chugoku;
+        document.getElementById('store_kyushu').innerHTML = kyushu;
+        document.getElementById('store_tokai').innerHTML = tokai;
+        document.getElementById('store_kinki').innerHTML = kinki;
         document.getElementById('store_total').innerHTML = total;
         document.getElementById('store_update_date').innerHTML = update_date;
     } catch (error) {
