@@ -13,9 +13,10 @@ async function updateMonthly() {
         const tohoku = monthlydata.data.attributes.field_tohoku;
         const total = monthlydata.data.attributes.field_total;
         const chugoku = monthlydata.data.attributes.field_chugoku;
-        const kyushu = monthlydata.data.attributes.field_kyusyu;
+        const kyushu = monthlydata.data.attributes.field_kyushu;
         const tokai = monthlydata.data.attributes.field_tokai;
         const kinki = monthlydata.data.attributes.field_kinki;
+        const update_date = monthlydata.data.attributes.field_update_date;
 
         const inputtext = monthlydata.data.attributes.body.value;
         let replacementMap = {
@@ -35,7 +36,7 @@ async function updateMonthly() {
         document.getElementById('store_kanto').innerHTML = kanto;
         document.getElementById('store_tohoku').innerHTML = tohoku;
         document.getElementById('store_chugoku').innerHTML = chugoku;
-        document.getElementById('store_kyusyu').innerHTML = kyushu;
+        document.getElementById('store_kyushu').innerHTML = kyushu;
         document.getElementById('store_tokai').innerHTML = tokai;
         document.getElementById('store_kinki').innerHTML = kinki;
         document.getElementById('store_total').innerHTML = total;
