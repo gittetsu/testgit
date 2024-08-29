@@ -13,7 +13,7 @@ async function updateMonthly() {
         const tohoku = monthlydata.data.attributes.field_tohoku;
         const total = monthlydata.data.attributes.field_total;
         const chugoku = monthlydata.data.attributes.field_chugoku;
-        const kyushu = monthlydata.data.attributes.field_kyusyu;
+        const kyushu = monthlydata.data.attributes.field_kyushu;
         const tokai = monthlydata.data.attributes.field_tokai;
         const kinki = monthlydata.data.attributes.field_kinki;
 
@@ -34,15 +34,16 @@ async function updateMonthly() {
             '在宅実施店舗':'Stores providing home-visit services',
             'その他':'Other',
             '合計':'Total',
-            '関東':'Kanto',
-            '中部':'Chubu',
             '北陸・信州エリア':'Hokuriku & Shinshu areas',
-            '関西':'Kansai',
-            '北陸':'Hokuriku',
             '北海道・東北エリア':'Hokkaido & Tohoku areas',
             '中国・四国エリア':'Chugoku & Shikoku areas',
             '九州・沖縄エリア':'Kyushu & Okinawa areas',
+            '関東':'Kanto',
+            '中部':'Chubu',
+            '関西':'Kansai',
+            '北陸':'Hokuriku',
             '東海':'Tokai',
+            '近畿':'Kinki',
             'エリア':' area',
             '茨城':'Ibaraki',
             '栃木':'Tochigi',
@@ -90,6 +91,7 @@ async function updateMonthly() {
             '秋田':'Akita',
             '山形':'Yamagata',
             '福島':'Fukushima',
+            '北海道':'Hokkaido',
             'ジャパン':'Japan',
             '店舗</p>':'</p>',
             '店舗</h':' stores</h',
@@ -125,7 +127,7 @@ async function updateMonthly() {
         document.getElementById('store_kanto').innerHTML = kanto;
         document.getElementById('store_tohoku').innerHTML = tohoku;
         document.getElementById('store_chugoku').innerHTML = chugoku;
-        document.getElementById('store_kyusyu').innerHTML = kyushu;
+        document.getElementById('store_kyushu').innerHTML = kyushu;
         document.getElementById('store_tokai').innerHTML = tokai;
         document.getElementById('store_kinki').innerHTML = kinki;
         document.getElementById('store_total').innerHTML = total;
