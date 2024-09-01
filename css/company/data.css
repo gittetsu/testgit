@@ -94,7 +94,7 @@
   width: 8px;
   height: 8px;
   background-color: #048851;
-  content: "";
+  content: '';
   transform: translateY(-50%);
   border-radius: 50%;
 }
@@ -148,11 +148,7 @@
 .employee-info-blk .company-emp-amt .company-store-network01 {
   position: relative;
   z-index: -2;
-  margin-top: -90px;
-}
-
-.employee-info-blk-en .company-emp-amt .company-store-network01 {
-  margin-top: 0px;
+  margin-top: -41px;
 }
 
 .employee-info-blk .company-emp-amt {
@@ -163,8 +159,6 @@
 .company-store-network02 {
   width: 34%;
   max-width: 270px;
-  display: grid;
-  place-items: center;
 }
 
 .store-area-img01 {
@@ -172,8 +166,7 @@
   max-width: 570px;
 }
 
-.company-num-storeimg img,
-.dispensing-preapre-img img {
+.company-num-storeimg img,.dispensing-preapre-img img{
   max-width: 80px;
 }
 
@@ -325,6 +318,7 @@
 }
 
 @media only screen and (max-width: 767.9px) {
+
   .cmm-partner-boxlist .pc-none {
     display: flex !important;
   }
@@ -409,13 +403,13 @@
   }
 
   .employee-info-blk .company-emp-number {
-    margin-bottom: 15px;
+    margin-bottom: 6px;
   }
 
   .company-num-storeimg {
     position: absolute;
-    right: 25px;
-    margin-top: -15px;
+    right: 23px;
+    margin-top: -42px;
   }
 
   .cmm-emp-total-number {
@@ -478,10 +472,6 @@
   .cmm-partner-box .partner-box-inner span {
     padding-top: 4px;
     padding-bottom: 4px;
-  }
-
-  .company-emp-number-en.d-flex {
-    flex-direction: column;
   }
 
   .company-emp-number .company-store-num {
@@ -622,9 +612,11 @@
     width: 50%;
   }
 
+
   .health-env-list .partner-sec-row .partner-work-env .goal-emp-blk .cmm-capital-taxo {
     padding: 3px 8px;
   }
+
 
   .sale-dispensing-box .dispensing-preapre-img {
     position: unset;
