@@ -8,7 +8,7 @@
   width: 39.091%;
 }
 
-.sec-medi-service .service-list .w-620 {
+.sec-medi-service .service-list .list-item .w-620 {
   width: 56.364%;
 }
 
@@ -148,7 +148,7 @@
   gap: 2.4rem;
 }
 
-.neo-bgnumber-item {
+.sec-medi-service .neo-bgnumber-item {
   width: calc((100% - 2.4rem * 3) / 4);
   min-width: 230px;
 }
@@ -159,10 +159,6 @@
   font-size: 1rem;
   font-weight: 700;
   letter-spacing: 0;
-}
-
-.neo-index .neo-backnumber-item--latest {
-  display: none;
 }
 
 .sec-medi-service .neo-bgnumber h3 span {
@@ -247,18 +243,6 @@
   width: 470px;
 }
 
-.neo-detail--very-human-yellow {
-  width: 327px;
-}
-
-.neo-detail--very-human-pink {
-  width: 112px;
-}
-
-.neo-detail--very-human-pink-l {
-  width: 315px;
-}
-
 .neo-detail--interview {
   width: 133px;
 }
@@ -269,14 +253,6 @@
 
 .neo-detail--professor {
   width: 199px;
-}
-
-.neo-detail--chiki {
-  width: 306px;
-}
-
-.neo-detail--pharmacy {
-  width: 440px;
 }
 
 /* sp */
@@ -295,7 +271,7 @@
     width: 100%;
   }
 
-  .sec-medi-service .service-list .w-620 {
+  .sec-medi-service .service-list .list-item .w-620 {
     width: 100%;
   }
 
@@ -362,7 +338,7 @@
     font-size: 1.5rem;
   }
 
-  .neo-bgnumber-item {
+  .sec-medi-service .neo-bgnumber-item {
     width: 100%;
     display: flex;
     align-items: center;
@@ -442,18 +418,6 @@
     width: 100%;
   }
 
-  .neo-detail--very-human-yellow {
-    width: 196px;
-  }
-
-  .neo-detail--very-human-pink {
-    width: 112px;
-  }
-
-  .neo-detail--very-human-pink-l {
-    width: 189px;
-  }
-
   .neo-detail--interview {
     width: 80px;
   }
@@ -464,13 +428,5 @@
 
   .neo-detail--professor {
     width: 120px;
-  }
-
-  .neo-detail--chiki {
-    width: 183px;
-  }
-
-  .neo-detail--pharmacy {
-    width: 100%;
   }
 }
