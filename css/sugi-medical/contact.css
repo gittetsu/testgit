@@ -130,6 +130,7 @@
 .input-container .any {
   line-height: 1.5;
   margin-right: 10px;
+  margin-top: 5px;
   padding: 3px 6px;
   font-size: 0.75rem;
   border-radius: 3px;
@@ -307,6 +308,10 @@
   display: none;
 }
 
+.contact-form .common-btn {
+  font-size: 16px;
+}
+
 /*I-pad*/
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .contact-ttl {
@@ -350,6 +355,11 @@
     flex-wrap: wrap;
     padding: 20px;
     border-top: 1px solid #e6e6e6;
+  }
+
+  .input-container .required,
+  .input-container .any {
+    margin-top: 0;
   }
 
   .input {
