@@ -17,6 +17,9 @@ var isPhone = false;
 var isReplySelect = false;
 var ishandleAgreement = false;
 const isEngish = document.documentElement.lang === "en";
+const form = document.getElementById("contact-form");
+
+form.addEventListener("submit", submitForm);
 
 /*keyup Hiragana Check*/
 var firstName = document.getElementById("firstname");
