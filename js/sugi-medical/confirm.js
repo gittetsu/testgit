@@ -7,6 +7,9 @@ const formSubmitted = sessionStorage.getItem("mediFormSubmitted");
 // Check the form is english or not
 const isEngish = document.documentElement.lang === "en";
 
+const form = document.getElementById("confirm-form");
+const confirmBtn = document.getElementById("confirm-btn");
+
 if (!formSubmitted) {
   // If the form was not submitted, redirect the user back to the contact page
   if (isEngish) {
@@ -15,6 +18,8 @@ if (!formSubmitted) {
     window.location.href = "/sugi-medical/contact/";
   }
 }
+
+confirmBtn.addEventListener("click", confirmSubmission);
 
 // Check if formData is not null
 if (formData) {
@@ -55,4 +60,6 @@ function confirmSubmission() {
 
   // Set the flag to indicate form confirmation
   sessionStorage.setItem("mediFormConfirmed", "true");
+
+  form.submit();
 }
