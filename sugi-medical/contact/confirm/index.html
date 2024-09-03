@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6J4J0MJHHH"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-6J4J0MJHHH');
+  </script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+  <meta name="description" content="FIXME">
+  <meta property="og:image" content="/img/sugi-medical/img_ogp.jpg">
+  <title>お問い合わせ | スギメディカル</title>
+  <link rel="shortcut icon" href="/img/sugi-medical/favicon.ico">
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/common.css">
+  <link rel="stylesheet" href="/css/sugi-medical/sugi-medical-common.css">
+  <link rel="stylesheet" href="/css/sugi-medical/contact.css">
+  <link rel="stylesheet" href="/css/sugi-medical/confirm.css">
+</head>
+
+<body>
+  <header data-include="/include/medical-header.html"></header>
+  <section class="sec-medical-bnr">
+    <div class="inner">
+      <h1 class="main-header-ttl">お問い合わせ<span>Contact</span></h1>
+      <ul class="medical-breadcrumb">
+        <li><a href="/sugi-medical/">TOP</a></li>
+        <li>お問い合わせ</li>
+      </ul>
+    </div>
+  </section>
+  <!--/.sec-medical-bnr-->
+  <div class="inner">
+    <section class="sec-medi-contact">
+      <h3 class="common-medical-ttl common-ttl mb-sp-30">
+        下記の内容で宜しければ、「送信する」ボタンを押してください。
+      </h3>
+      <form id="confirm-form" class="confirm-form" action="https://hyperform.jp/api/IdagZKDG" method="post">
+        <div class="input-container">
+          <p class="form-label">お名前</p>
+          <div class="input-box">
+            <input type="text" class="confirm-input" id="name" name="name" readonly>
+          </div>
+        </div>
+        <div class="input-container">
+          <p class="form-label">フリガナ</p>
+          <div class="input-box">
+            <input type="text" class="confirm-input" id="furiname" name="furiname" readonly>
+          </div>
+        </div>
+        <div class="input-container">
+          <p class="form-label">電話番号</p>
+          <div class="input-box">
+            <input type="text" class="confirm-input" id="phone" name="phone" readonly>
+          </div>
+        </div>
+        <div class="input-container">
+          <p class="form-label">メールアドレス</p>
+          <div class="input-box">
+            <input type="text" class="confirm-input" id="email" name="email" readonly>
+          </div>
+        </div>
+        <div class="input-container">
+          <p class="form-label">企業名</p>
+          <div class="input-box">
+            <input type="text" class="confirm-input" id="company" name="company" readonly>
+          </div>
+        </div>
+        <div class="input-container">
+          <p class="form-label">お問い合わせ内容</p>
+          <div class="input-box">
+            <input type="text" class="confirm-input" id="desc" name="desc" readonly>
+          </div>
+        </div>
+        <div class="input-container">
+          <p class="form-label">お問い合わせに<br class="pc">対する回答方法</p>
+          <div class="input-box">
+            <input type="text" class="confirm-input" id="reply" name="reply" readonly>
+          </div>
+        </div>
+        <div class="input-container mb-40">
+          <p class="form-label">個人情報の取扱いへの同意</p>
+          <div class="input-box">
+            <input type="text" class="confirm-input" id="agreement" name="agreement" readonly>
+          </div>
+        </div>
+        <div class="center mb-100">
+          <button type="submit" class="common-btn" onclick="confirmSubmission()"><span class="btn-text">送信する</span></button>
+        </div>
+      </form>
+    </section><!-- /.sec-medi-service -->
+  </div><!-- /.inner -->
+  <section class="sec-medical-contact">
+    <div class="contact-ttl-blk pc">
+      <h3>サービスに関するご質問やご不明点、ご相談などお気軽にお問い合わせください。</h3>
+    </div>
+    <div class="bg-gray">
+      <div class="inner">
+        <div class="ft-contact">
+          <div class="contact-border">
+            <div class="mail-icon">
+              <img src="/img/common/sugi-medical/ico_mail.png" alt="mail">
+            </div>
+            <p class="small-text">サービスに関するご質問やご不明点などお気軽にご相談ください</p>
+          </div>
+          <a href="https://business.form-mailer.jp/lp/891a076a174019" class="email-us-btn" target="_blank">メールでお問い合わせ</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--/.sec-medical-contact-->
+  <footer data-include="/include/medical-footer.html"></footer>
+  <script src="/js/load.js"></script>
+  <script src="/js/common.js"></script>
+  <script src="/js/sugi-medical/confirm.js"></script>
+</body>
+
+</html>
