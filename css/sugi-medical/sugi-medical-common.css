@@ -194,13 +194,13 @@
 
 .common-btn:after {
   position: absolute;
-  top: 26px;
+  top: 50%;
   right: 20px;
   width: 12px;
   height: 12px;
   background: url("/img/sugi-medical/ico_arrow_right.svg") no-repeat center/cover;
   content: "";
-  transform: rotate(0deg);
+  transform: rotate(0deg) translateY(-50%);
   border-radius: unset;
 }
 
