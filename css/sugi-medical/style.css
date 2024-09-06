@@ -104,6 +104,10 @@
   background-color: #7fbe26;
 }
 
+.top .top-banner__link {
+  width: calc((100% - 16px) / 2);
+}
+
 /* sec-news */
 
 .top .sec-news {
@@ -618,6 +622,10 @@
     left: 0;
     justify-content: center;
     margin: 0 auto;
+  }
+
+  .top .top-banner__link {
+    width: 100%;
   }
 
   /* sec-news */
