@@ -628,6 +628,10 @@
     width: 100%;
   }
 
+  .top .top-banner__link:last-child {
+    margin-top: 16px;
+  }
+
   /* sec-news */
   .top .sec-news {
     margin-bottom: 40px;
