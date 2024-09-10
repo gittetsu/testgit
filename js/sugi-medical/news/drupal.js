@@ -1,5 +1,3 @@
-
-
 const apiUrl = 'https://d1vyjchtv8ee5.cloudfront.net/jsonapi/node/sugi_medical';
 
 // ページング関連の変数

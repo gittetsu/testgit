@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+.confirm-form .form-label {
+  margin-top: 0;
+}
+
+.confirm-form .input-container {
+  padding: 24px 0;
+}
+
+.confirm-form .input-container:last-of-type {
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.confirm-form .input-container .confirm-input {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
+
+.confirm-form .cmn-btn {
+  margin-top: 60px;
+}
+
+/*I-pad*/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+}
+
+/* Mobile */
+
+@media only screen and (max-width: 767.9px) {
+  .confirm-form .form-label {
+    margin-bottom: 5px;
+  }
+
+  .confirm-form .cmn-btn {
+    margin-top: 50px;
+  }
+}

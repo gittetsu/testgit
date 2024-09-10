@@ -40,16 +40,30 @@ document.addEventListener('DOMContentLoaded', function () {
                 articleTitleElement2.innerHTML = articleTitle2;
             }
 
-            // PDFリンクを設定
-            const pdfLink = document.getElementById('ref-link');
-            // pdfLink.href = `/pdf/${data.data.attributes.field_pdf.value}`;
+            // PDFの処理
+            let pdflink = "";
+            let pdfName = "";
+            if (data.data.relationships.field_upload.data && data.data.relationships.field_upload.data.id) {
+                const fileId = data.data.relationships.field_upload.data.id; // PDFのIDを取得
+                const fileResponse = await fetch(`${fileApiUrl}/${fileId}`);
+                const fileData = await fileResponse.json();
+                pdfName = fileData.data.attributes.filename; // PDFのファイル名を取得
+                pdflink = `/pdf/${pdfName}`;
+            }
+            if (data.data.attributes.field_pdf && data.data.attributes.field_pdf.value) {
+                pdfName = data.data.attributes.field_pdf.value
+                pdflink = `/pdf/${data.data.attributes.field_pdf.value}`;
+            }
 
-            if (data.data.attributes.field_pdf) {
+            // PDFリンクを設定
+            const pdfLink = document.getElementById('pdf-link');
+
+            if (pdflink != "") {
                 pdfLink.style.display = 'inline'; // PDFリンクを表示
-                pdfLink.href = `/pdf/${data.data.attributes.field_pdf.value}`;
+                pdfLink.href = pdflink;
                 // article-pdf要素に本文を挿入
                 const articlePdfElement = document.getElementById('article-pdf');
-                articlePdfElement.innerHTML = `https://www.sugi-hd.co.jp/pdf/${data.data.attributes.field_pdf.value}`;
+                articlePdfElement.innerHTML = pdfName;
             } else {
                 pdfLink.style.display = 'none'; // PDFリンクを非表示
             }
