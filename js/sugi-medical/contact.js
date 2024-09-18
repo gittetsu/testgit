@@ -273,6 +273,9 @@ function submitForm(e) {
     const furifirst = document.getElementById("furifirstname").value;
     const furilast = document.getElementById("furilastname").value;
     const companyName = document.getElementById("companyName").value;
+    const department = document.getElementById("department").value;
+    const post = document.getElementById("post").value;
+    const occupation = document.getElementById("occupation").value;
     const phoneNumber = document.getElementById("phoneNumber").value + "-" + document.getElementById("phoneNoFirst").value + "-" + document.getElementById("phoneNoLast").value;
     const mailAddress = document.getElementById("mailAddress").value;
     const contactDesc = document.getElementById("contactDescription").value;
@@ -287,6 +290,9 @@ function submitForm(e) {
       furifirst: encodeURIComponent(furifirst),
       furilast: encodeURIComponent(furilast),
       companyName: encodeURIComponent(companyName),
+      department: encodeURIComponent(department),
+      post: encodeURIComponent(post),
+      occupation: encodeURIComponent(occupation),
       phoneNumber: encodeURIComponent(phoneNumber),
       mailAddress: encodeURIComponent(mailAddress),
       contactDesc: encodeURIComponent(contactDesc),
