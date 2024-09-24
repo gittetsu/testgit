@@ -1798,6 +1798,38 @@ header.scroll-up .header-inner {
   border-radius: 50%;
 }
 
+.common-button:has(.down-arrow) {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  padding: 18px 32px;
+  gap: 28px;
+}
+
+.common-button .down-arrow {
+  display: inline-block;
+  position: relative;
+  width: 26px;
+  padding: 13px;
+  border: 1px solid transparent;
+  background: #048851;
+  border-radius: 3px;
+}
+
+.common-button .down-arrow::after {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 11px;
+  height: 8px;
+  background: url(/img/common/ico_accor-uparrow.svg) no-repeat center / contain;
+  content: "";
+  transform: translate(-50%, -50%);
+}
+
 .common-button:hover,
 .common-button.active {
   background-color: #048851;
@@ -1814,6 +1846,10 @@ header.scroll-up .header-inner {
   border-radius: 50%;
 }
 
+.common-button:hover .down-arrow {
+  background-color: #fff;
+}
+
 .common-button:hover .arrow::after,
 .common-button.active .arrow:after {
   position: absolute;
@@ -1825,6 +1861,10 @@ header.scroll-up .header-inner {
   content: "";
   transform: translate(50%, -50%) rotate(90deg);
   border-radius: unset;
+}
+
+.common-button:hover .down-arrow::after {
+  filter: invert(65%) sepia(18%) saturate(2496%) hue-rotate(109deg) brightness(93%) contrast(97%);
 }
 
 .back-button {
