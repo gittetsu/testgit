@@ -3208,14 +3208,6 @@ footer .page-top:hover img {
     filter: invert(100%) sepia(300%) saturate(0) hue-rotate(0) brightness(100%) contrast(180%);
   }
 
-  .common-button:hover .down-arrow {
-    background-color: #048851;
-  }
-
-  .common-button:hover .down-arrow::after {
-    filter: none;
-  }
-
   .cmn-pagination .cmn-pager-num a:not(.active):hover {
     background-color: #f4f4f4;
     color: #048851;
@@ -4598,14 +4590,6 @@ footer .page-top:hover img {
   .common-button.active .arrow::after {
     top: 50%;
     filter: invert(100%) sepia(300%) saturate(0) hue-rotate(0) brightness(100%) contrast(180%);
-  }
-
-  .common-button:hover .down-arrow {
-    background-color: #048851;
-  }
-
-  .common-button:hover .down-arrow::after {
-    filter: none;
   }
 
   .external-button {
