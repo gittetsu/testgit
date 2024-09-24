@@ -1733,6 +1733,7 @@ header.scroll-up .header-inner {
   color: #048851;
   font-weight: 700;
   border-radius: 100px;
+  font-family: inherit;
 }
 
 .external-button {
