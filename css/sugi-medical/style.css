@@ -460,6 +460,7 @@
   width: 100%;
   aspect-ratio: 500 / 250;
   object-fit: cover;
+  border-radius: 4px;
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1200px) {
