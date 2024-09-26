@@ -248,7 +248,16 @@ function commonload() {
             if (targetElement) {
                 smoothScrollTo(targetElement);
             }
-            history.replaceState(null, null, '#' + targetId);
+      history.replaceState(null, null, "#" + targetId);
+    });
+  });
+
+  document.querySelectorAll("a.js-anchor").forEach(function (anchor) {
+    anchor.addEventListener("click", function (event) {
+      if (location.pathname.replace(/^\//, "") === this.pathname.replace(/^\//, "") && location.hostname === this.hostname) {
+        event.preventDefault();
+        smoothScrollTo(document.getElementById(this.hash.substring(1)));
+      }
         });
     });
 
@@ -257,9 +266,11 @@ function commonload() {
         if (location.hash) {
             window.scrollTo(0, 0);
             var target = location.hash.substring(1);
+      setTimeout(function () {
             smoothScrollTo(document.getElementById(target));
+      }, 300);
         }
-    }, 1);
+  }, 10);
 
     function smoothScrollTo(targetElement) {
         let offset = 0;
@@ -429,18 +440,28 @@ function commonload() {
         }
     })
 
-    var subMenuLists = document.querySelectorAll('.sub-menu-list li a:not(.other-link),.sugi-holding-header .nav-footer-list li a,.sugi-holding-footer .ft-nav li a');
-    subMenuLists.forEach(function (subMenuList) {
-        subMenuList.addEventListener('click', function () {
-            hamburger.classList.remove('active')
-            navMenu.classList.remove('active')
-            bodyElement.style.overflow = 'auto'
-            bodyElement.style.position = 'relative'
-            var hrefValue = subMenuList.href;
-            window.location.href = hrefValue;
-            location.reload();
-        })
+  var subMenuLists = document.querySelectorAll(".sub-menu-list li a:not(.other-link),.sugi-holding-header .nav-footer-list li a,.sugi-holding-footer .ft-nav li a");
+  subMenuLists.forEach(function (subMenuList) {
+    subMenuList.addEventListener("click", function () {
+      hamburger.classList.remove("active");
+      navMenu.classList.remove("active");
+      bodyElement.style.overflow = "auto";
+      bodyElement.style.position = "relative";
+      var hrefValue = subMenuList.href;
+      window.location.href = hrefValue;
+      location.reload();
     });
+  });
+
+  var medicalMenuLists = document.querySelectorAll(".sugi-medical-header .nav-menu-list li");
+  medicalMenuLists.forEach(function (medicalMenuList) {
+    medicalMenuList.addEventListener("click", function () {
+      hamburger.classList.remove("active");
+      navMenu.classList.remove("active");
+      bodyElement.style.overflow = "auto";
+      bodyElement.style.position = "relative";
+    });
+  });
 
     function calculateMaxHeight(element) {
         var contentHeight = element.scrollHeight
