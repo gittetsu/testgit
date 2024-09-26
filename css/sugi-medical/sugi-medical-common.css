@@ -407,7 +407,12 @@ footer.ft-medical .ft-nav {
   background-color: #7fbe26;
 }
 
+.ft-medical .ft-blk .lt-ft-blk .nav-list li a.visible.js-anchor {
+  color: #000;
+}
+
 .ft-medical .ft-blk .lt-ft-blk .nav-list li a:hover,
+.ft-medical .ft-blk .lt-ft-blk .nav-list li a.js-anchor:hover,
 .ft-medical .ft-blk .lt-ft-blk .nav-list li a.visible {
   color: #7fbe26;
   transition: all 0.2s;
