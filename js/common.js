@@ -286,9 +286,6 @@ function commonload() {
                 offset = 0;
             }
         }
-    if (document.querySelector("header").classList.contains("sugi-medical-header")) {
-      offset = 85;
-    }
         const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - offset; // Include current
         const startPosition = window.pageYOffset;
         const distance = targetPosition - startPosition;
