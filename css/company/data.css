@@ -67,7 +67,7 @@
 
 .employee-info-blk .company-emp-number {
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
   margin-bottom: 6px;
   flex-wrap: nowrap;
 }
@@ -94,7 +94,7 @@
   width: 8px;
   height: 8px;
   background-color: #048851;
-  content: '';
+  content: "";
   transform: translateY(-50%);
   border-radius: 50%;
 }
@@ -145,20 +145,16 @@
   margin-left: 0;
 }
 
-.employee-info-blk .company-emp-amt .company-store-network01 {
-  position: relative;
-  z-index: -2;
-  margin-top: -41px;
-}
-
 .employee-info-blk .company-emp-amt {
-  width: 65.5%;
+  width: 50%;
   max-width: 524px;
 }
 
 .company-store-network02 {
-  width: 34%;
-  max-width: 270px;
+  width: 50%;
+  max-width: 400px;
+  display: grid;
+  place-items: center;
 }
 
 .store-area-img01 {
@@ -166,7 +162,8 @@
   max-width: 570px;
 }
 
-.company-num-storeimg img,.dispensing-preapre-img img{
+.company-num-storeimg img,
+.dispensing-preapre-img img {
   max-width: 80px;
 }
 
@@ -318,7 +315,6 @@
 }
 
 @media only screen and (max-width: 767.9px) {
-
   .cmm-partner-boxlist .pc-none {
     display: flex !important;
   }
@@ -403,13 +399,7 @@
   }
 
   .employee-info-blk .company-emp-number {
-    margin-bottom: 6px;
-  }
-
-  .company-num-storeimg {
-    position: absolute;
-    right: 23px;
-    margin-top: -42px;
+    margin-bottom: 15px;
   }
 
   .cmm-emp-total-number {
@@ -474,16 +464,16 @@
     padding-bottom: 4px;
   }
 
+  .company-emp-number-en.d-flex {
+    flex-direction: column;
+  }
+
   .company-emp-number .company-store-num {
     margin: 0 9px 0 16px;
   }
 
   .company-emp-number .company-store-num .cmm-emp-total-number {
     text-align: left;
-  }
-
-  .employee-info-blk .company-emp-amt .company-store-network01 {
-    margin-top: 0;
   }
 
   .employee-info-blk .company-emp-amt {
@@ -612,11 +602,9 @@
     width: 50%;
   }
 
-
   .health-env-list .partner-sec-row .partner-work-env .goal-emp-blk .cmm-capital-taxo {
     padding: 3px 8px;
   }
-
 
   .sale-dispensing-box .dispensing-preapre-img {
     position: unset;
