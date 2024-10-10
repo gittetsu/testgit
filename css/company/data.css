@@ -162,6 +162,11 @@
   max-width: 570px;
 }
 
+.company-num-storeimg img,
+.dispensing-preapre-img img {
+  max-width: 80px;
+}
+
 .store-area-img02 {
   width: 25%;
   max-width: 200px;
