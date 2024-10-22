@@ -412,6 +412,10 @@
 
 /* website-gp */
 
+.top .sec-medical-gp .website-gp ul {
+  margin-bottom: 60px;
+}
+
 .top .sec-medical-gp .website-gp ul li {
   padding: 60px 3%;
   width: 50%;
@@ -450,6 +454,11 @@
   margin: 40px 0 60px;
   letter-spacing: 0;
   flex: 1;
+}
+
+.top .sec-medical-gp .btn-gp--center {
+  display: flex;
+  justify-content: center;
 }
 
 .website-gp .d-flex {
@@ -829,6 +838,10 @@
   }
 
   /* website-gp */
+
+  .top .sec-medical-gp .website-gp ul {
+    margin-bottom: 7px;
+  }
 
   .top .sec-medical-gp .website-gp ul {
     margin-top: 20px;
