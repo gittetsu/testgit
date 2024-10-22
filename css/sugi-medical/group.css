@@ -17,6 +17,8 @@
 
 .group__img {
   width: 100%;
+  height: auto;
+  aspect-ratio: 28600 /8537;
 }
 
 .group__name {
