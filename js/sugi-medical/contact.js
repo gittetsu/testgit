@@ -278,7 +278,7 @@ function submitForm(e) {
     const occupation = document.getElementById("occupation").value;
     const phoneNumber = document.getElementById("phoneNumber").value + "-" + document.getElementById("phoneNoFirst").value + "-" + document.getElementById("phoneNoLast").value;
     const mailAddress = document.getElementById("mailAddress").value;
-    const contactDesc = document.getElementById("contactDescription").value;
+    const contactDesc = document.getElementById("contactDescription").value.replace(/\n/g, "%0A");
     const replySelects = document.querySelectorAll('input[name="reply"]:checked');
     const replySelect = Array.from(replySelects)
       .map((reply) => reply.value)
