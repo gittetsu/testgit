@@ -16,6 +16,9 @@
   padding: 0;
   background-color: transparent;
   border: none;
+  field-sizing: content;
+  min-height: min-content;
+  height: auto;
 }
 
 .confirm-form .cmn-btn {

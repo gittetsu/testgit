@@ -31,7 +31,7 @@ if (formData) {
   const occupation = formData.occupation ? decodeURIComponent(formData.occupation) : "";
   const phone = formData.phoneNumber ? decodeURIComponent(formData.phoneNumber) : "";
   const email = decodeURIComponent(formData.mailAddress);
-  const desc = decodeURIComponent(formData.contactDesc);
+  const desc = decodeURIComponent(formData.contactDesc).replace(/%0A/g, "\n");
   const reply = decodeURIComponent(formData.replySelect);
   const agreement = decodeURIComponent(formData.agreementChk);
 
