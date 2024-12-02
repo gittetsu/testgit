@@ -112,9 +112,10 @@
 
 .sec-medi-service .service-list .neo-ttl {
   font-family: "Noto Serif JP", serif;
-  margin-bottom: 10px;
+  margin-bottom: 24px;
   font-size: 1.875rem;
   font-weight: 700;
+  line-height: 1.2;
 }
 
 .sec-medi-service .service-list .neo-sub-ttl {
