@@ -4,12 +4,20 @@
 
 /* sec-medi-service */
 
+.sec-medi-service .service-list .w-340 {
+  width: 30.909%;
+}
+
 .sec-medi-service .service-list .w-430 {
   width: 39.091%;
 }
 
 .sec-medi-service .service-list .w-620 {
   width: 56.364%;
+}
+
+.sec-medi-service .service-list .w-720 {
+  width: 65.454%;
 }
 
 .sec-medi-service .service-list .list-item {
@@ -104,20 +112,24 @@
 
 .sec-medi-service .service-list .neo-ttl {
   font-family: "Noto Serif JP", serif;
-  margin-bottom: 10px;
+  margin-bottom: 24px;
   font-size: 1.875rem;
   font-weight: 700;
+  line-height: 1.2;
 }
 
 .sec-medi-service .service-list .neo-sub-ttl {
   font-size: 1.25rem;
   font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 8px;
 }
 
 .sec-medi-service .service-list .neo-sub-ttl span {
   display: block;
   font-family: "Noto Serif JP", serif;
   font-size: 0.875rem;
+  margin-bottom: 8px;
 }
 
 .sec-medi-service .neo-author {
@@ -279,6 +291,10 @@
   width: 440px;
 }
 
+.neo-detail--nursing-school {
+  width: 120px;
+}
+
 /* sp */
 
 @media only screen and (max-width: 767.9px) {
@@ -291,11 +307,10 @@
     padding-bottom: 40px;
   }
 
-  .sec-medi-service .service-list .w-430 {
-    width: 100%;
-  }
-
-  .sec-medi-service .service-list .w-620 {
+  .sec-medi-service .service-list .w-340,
+  .sec-medi-service .service-list .w-430,
+  .sec-medi-service .service-list .w-620,
+  .sec-medi-service .service-list .w-720 {
     width: 100%;
   }
 
@@ -379,7 +394,7 @@
     max-width: 204px;
   }
 
-  .sec-medi-service .neo-bgnumber-item img {
+  .sec-medi-service .neo-bgnumber-item .neo-bgnumber-img {
     width: 29%;
   }
 
@@ -472,5 +487,9 @@
 
   .neo-detail--pharmacy {
     width: 100%;
+  }
+
+  .neo-detail--nursing-school {
+    width: 120px;
   }
 }
