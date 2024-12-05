@@ -60,7 +60,7 @@
   left: 0;
   margin: 0 auto;
   background-color: #048851;
-  content: '';
+  content: "";
 }
 
 .month-list .pin::before {
@@ -74,6 +74,11 @@
   height: 20px;
 }
 
+.month-list .pin--left {
+  left: -35%;
+  right: auto;
+}
+
 .month-list li:nth-child(even) .pin {
   left: -35%;
 }
@@ -83,11 +88,11 @@
   font-size: 1rem;
 }
 
-html[lang='en'] .table.w-500 {
+html[lang="en"] .table.w-500 {
   width: 75%;
 }
 
-html[lang='en'] .table th:first-child {
+html[lang="en"] .table th:first-child {
   min-width: 200px;
 }
 
@@ -100,7 +105,6 @@ html[lang='en'] .table th:first-child {
 
 /* Sp */
 @media only screen and (max-width: 767.9px) {
-
   /* quarter */
   .quater-item {
     width: 49.5%;
@@ -108,45 +112,45 @@ html[lang='en'] .table th:first-child {
     margin-bottom: 55px;
   }
 
-  html[lang='en'] .quater-item {
+  html[lang="en"] .quater-item {
     margin-bottom: 75px;
   }
 
-	.quater-item:nth-child(2n) {
-		margin-right: 0;
-	}
-	
-	.quater-ttl {
-		font-size: 0.75rem;
-		letter-spacing: 0;
-		padding: 2px 0;
-	}
-	
-	.month-list li {
-		font-size: 1rem;
-	}
-	
-	.month-list li span {
-		font-size: 0.75rem;
-	}
-	
-	.month-list .pin {
-		width: 110%;
-		top: 110%;
-		padding-top: 15px;
-		font-size: 0.625rem;
-	}
-	
-	.month-list .pin::before {
-		width: 4px;
-		height: 4px;
-	}
-	
-	.month-list .pin::after {
-		height: 12px;
-	}
+  .quater-item:nth-child(2n) {
+    margin-right: 0;
+  }
 
-  html[lang='en'] .table.w-500 {
+  .quater-ttl {
+    font-size: 0.75rem;
+    letter-spacing: 0;
+    padding: 2px 0;
+  }
+
+  .month-list li {
+    font-size: 1rem;
+  }
+
+  .month-list li span {
+    font-size: 0.75rem;
+  }
+
+  .month-list .pin {
+    width: 110%;
+    top: 110%;
+    padding-top: 15px;
+    font-size: 0.625rem;
+  }
+
+  .month-list .pin::before {
+    width: 4px;
+    height: 4px;
+  }
+
+  .month-list .pin::after {
+    height: 12px;
+  }
+
+  html[lang="en"] .table.w-500 {
     width: 100%;
   }
 }
