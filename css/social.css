@@ -74,6 +74,10 @@ html[lang="en"] .unorder-list li {
   gap: 18px 0;
 }
 
+html[lang="en"] .medias__item-links {
+  margin-left: 15px;
+}
+
 .medias__link {
   display: flex;
   gap: 8px;
@@ -116,5 +120,8 @@ html[lang="en"] .unorder-list li {
   .medias__item-links {
     width: 100%;
     margin-top: 12px;
+  }
+  html[lang="en"] .medias__item-links {
+    margin-left: 0;
   }
 }
