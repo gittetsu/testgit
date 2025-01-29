@@ -106,6 +106,7 @@
 
 .top .top-banner {
   justify-content: center;
+  gap: 16px;
 }
 
 .top .top-banner__link {
