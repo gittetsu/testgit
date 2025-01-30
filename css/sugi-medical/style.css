@@ -113,6 +113,10 @@
   width: calc((100% - 16px) / 2);
 }
 
+.top .top-banner__link--border {
+  border: 1px solid #dcdcdc;
+}
+
 /* sec-news */
 
 .top .sec-news {
