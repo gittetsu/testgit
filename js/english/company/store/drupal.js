@@ -28,6 +28,7 @@ async function updateMonthly() {
             '2024年10月末現在':'As of the end of October 2024',
             '2024年11月末現在':'As of the end of November 2024',
             '2024年12月末現在':'As of the end of December 2024',
+            '2025年1月末現在':'As of the end of January 2025',
             'エリア別拠点数':'Number of Stores by area',
             'スギ薬局':'SUGI Pharmacy',
             '調剤薬局':'Dispensing pharmacy',
@@ -44,6 +45,7 @@ async function updateMonthly() {
             '北陸':'Hokuriku',
             '東海':'Tokai',
             '近畿':'Kinki',
+            '九州':'Kyushu',
             'エリア':' area',
             '茨城':'Ibaraki',
             '栃木':'Tochigi',
@@ -113,6 +115,7 @@ async function updateMonthly() {
             '2024年10月末現在':'As of the end of October 2024',
             '2024年11月末現在':'As of the end of November 2024',
             '2024年12月末現在':'As of the end of December 2024',
+            '2025年1月末現在':'As of the end of January 2025',
         };
 
         let update_date = update_date_org.replace(
