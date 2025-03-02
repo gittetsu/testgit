@@ -31,6 +31,7 @@ async function updateMonthly() {
             '2025年1月末現在':'As of the end of January 2025',
             'エリア別拠点数':'Number of Stores by area',
             'スギ薬局':'SUGI Pharmacy',
+            '阪神調剤事業':'Hanshin Dispensing',
             '調剤薬局':'Dispensing pharmacy',
             '在宅実施店舗':'Stores providing home-visit services',
             'その他':'Other',
