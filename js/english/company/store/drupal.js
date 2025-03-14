@@ -29,6 +29,11 @@ async function updateMonthly() {
             '2024年11月末現在':'As of the end of November 2024',
             '2024年12月末現在':'As of the end of December 2024',
             '2025年1月末現在':'As of the end of January 2025',
+            '2025年2月末現在':'As of the end of February 2025',
+            '2025年3月末現在':'As of the end of March 2025',
+            '2025年4月末現在':'As of the end of April 2025',
+            '2025年5月末現在':'As of the end of May 2025',
+            '2025年6月末現在':'As of the end of June 2025',
             'エリア別拠点数':'Number of Stores by area',
             'スギ薬局':'SUGI Pharmacy',
             '阪神調剤事業':'Hanshin Dispensing',
@@ -117,6 +122,11 @@ async function updateMonthly() {
             '2024年11月末現在':'As of the end of November 2024',
             '2024年12月末現在':'As of the end of December 2024',
             '2025年1月末現在':'As of the end of January 2025',
+            '2025年2月末現在':'As of the end of February 2025',
+            '2025年3月末現在':'As of the end of March 2025',
+            '2025年4月末現在':'As of the end of April 2025',
+            '2025年5月末現在':'As of the end of May 2025',
+            '2025年6月末現在':'As of the end of June 2025',
         };
 
         let update_date = update_date_org.replace(
